@@ -13,34 +13,42 @@ h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 8vw, 6.5rem
 .page-desc { font-size: 0.88rem; color: rgba(255,255,255,0.6); line-height: 1.7; max-width: 380px; animation: fadeUp 0.5s ease both 0.36s; }
 
 /* ── Featured slop ──────────────────────── */
-.featured-slop { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--border); text-decoration: none; color: inherit; transition: background 0.3s ease; }
+/* 0.8fr 1.2fr makes the image smaller and gives text more room. Max-height 70vh keeps it compact. */
+.featured-slop { display: grid; grid-template-columns: 0.8fr 1.2fr; border-bottom: 1px solid var(--border); text-decoration: none; color: inherit; transition: background 0.3s ease; max-height: 70vh; }
 .featured-slop:hover { background: rgba(255,255,255,0.02); }
 .featured-slop:hover .featured-image img { transform: scale(1.04); }
 
+/* Image panel */
 .featured-image { position: relative; overflow: hidden; border-right: 1px solid var(--border); aspect-ratio: 1 / 1; height: 100%; }
 .featured-image img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.7s cubic-bezier(0.22,1,0.36,1); }
 .featured-badge { position: absolute; top: 24px; left: 24px; font-size: 0.6rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bg); background: var(--text); padding: 6px 12px; }
 
-/* Content panel — flex-start pushes text to the top left */
-.featured-content { display: flex; flex-direction: column; justify-content: flex-start; padding: 60px 32px 40px 24px; height: 100%; }
-.featured-eyebrow { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 24px; display: flex; align-items: center; gap: 10px; }
+/* Content panel - centered vertically for better balance on desktop */
+.featured-content { display: flex; flex-direction: column; justify-content: center; padding: 40px 40px; height: 100%; max-height: 70vh; overflow-y: auto; }
+.featured-eyebrow { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
 .featured-eyebrow::before { content: '✦'; font-size: 0.5rem; }
-
-/* Title drastically increased */
-.featured-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 7vw, 7rem); font-weight: 400; line-height: 0.88; letter-spacing: 0.01em; color: var(--text); text-transform: uppercase; margin-bottom: 24px; }
-
-/* Description increased and brightened */
-.featured-desc { font-size: 1.1rem; color: rgba(255,255,255,0.75); line-height: 1.5; max-width: 90%; margin-bottom: 32px; }
-.featured-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 32px; }
-.featured-tag { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--border); padding: 6px 12px; }
-
-/* CTA increased */
-.featured-cta { display: inline-flex; align-items: center; gap: 12px; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text); align-self: flex-start; padding-bottom: 4px; border-bottom: 1px solid rgba(255,255,255,0.3); transition: border-color 0.2s ease, gap 0.2s ease; }
+.featured-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.4rem, 4vw, 4.5rem); font-weight: 400; line-height: 0.92; letter-spacing: 0.01em; color: var(--text); text-transform: uppercase; margin-bottom: 20px; }
+.featured-desc { font-size: 1rem; color: rgba(255,255,255,0.75); line-height: 1.5; max-width: 90%; margin-bottom: 28px; }
+.featured-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 28px; }
+.featured-tag { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--border); padding: 6px 12px; }
+.featured-cta { display: inline-flex; align-items: center; gap: 12px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text); align-self: flex-start; padding-bottom: 4px; border-bottom: 1px solid rgba(255,255,255,0.3); transition: border-color 0.2s ease, gap 0.2s ease; }
 .featured-slop:hover .featured-cta { border-color: var(--text); gap: 18px; }
 .featured-cta svg { width: 14px; height: 14px; flex-shrink: 0; }
+.featured-date { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border); }
 
-/* margin-top: auto pushes the date to the very bottom of the column */
-.featured-date { font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: auto; padding-top: 28px; border-top: 1px solid var(--border); }
+/* Desktop overrides to prevent giant square images and overlap */
+@media (min-width: 901px) {
+  .featured-image { aspect-ratio: auto; max-height: 70vh; }
+}
+
+/* ── Responsive (Mobile) ─────────────────── */
+@media (max-width: 900px) {
+  .page-title { padding: 84px 24px 32px; flex-direction: column; align-items: flex-start; gap: 24px; }
+  .featured-slop { grid-template-columns: 1fr; max-height: none; }
+  .featured-image { aspect-ratio: 1 / 1; height: auto; max-height: none; border-right: none; border-bottom: 1px solid var(--border); }
+  .featured-content { height: auto; max-height: none; padding: 36px 24px 48px; justify-content: flex-start; }
+  .archive-header { padding: 24px 24px 20px; }
+}
 
 /* ── Archive section header ─────────────── */
 .archive-header { display: flex; align-items: center; justify-content: space-between; padding: 32px 40px 24px; border-bottom: 1px solid var(--border); }
