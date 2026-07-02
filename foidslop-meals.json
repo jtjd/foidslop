@@ -1,0 +1,3344 @@
+{
+  "generated": "2026-06-25T00:00:00.000Z",
+  "count": 100,
+  "about": "100 foidslop meal entries inspired by the girl dinner trend. Each meal is a low effort, high satisfaction solo plate. Use photo_search to find reference images for your own photography.",
+  "meals": [
+    {
+      "id": 1,
+      "name": "The OG Girl Dinner",
+      "slug": "og-girl-dinner",
+      "description": "Bread, butter, sharp cheese, grapes, and pickles. The medieval peasant plate that started it all.",
+      "tags": ["No Cook", "Classic", "Cheese"],
+      "prep": "3m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "2 slices", "name": "sourdough or crusty bread" },
+        { "amount": "2 tbsp", "name": "salted butter, room temperature" },
+        { "amount": "60g", "name": "sharp cheddar or aged gouda, sliced" },
+        { "amount": "1 small bunch", "name": "red grapes" },
+        { "amount": "a few", "name": "cornichons or dill pickles" },
+        { "amount": "optional", "name": "glass of red wine" }
+      ],
+      "steps": [
+        {
+          "name": "Arrange",
+          "text": "Lay the 2 slices of sourdough on a wooden board. Slather them thickly with the 2 tablespoons of room temperature butter so it melts into the bread. Slice the 60g of sharp cheddar or aged gouda and lay it alongside the bread. Add a small bunch of red grapes and a few cornichons or dill pickles to fill the gaps. There are no rules here, just arrange by color and texture and enjoy the contrast of creamy butter, sharp cheese, and briny pickles."
+        }
+      ],
+      "notes": "The original Olivia Maher TikTok that started the whole trend. Use the best butter you can find because it matters here.",
+      "photo_search": "rustic wooden board with sliced sourdough, thick slabs of butter, sharp cheddar, red grapes, and dill pickles"
+    },
+    {
+      "id": 2,
+      "name": "Whipped Feta with Hot Honey and Walnuts",
+      "slug": "whipped-feta-hot-honey-walnuts",
+      "description": "Creamy, salty, sweet, and crunchy. Four textures in one bowl with zero cooking required.",
+      "tags": ["No Cook", "Cheese", "Sweet-Savory"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Mediterranean",
+      "category": "Dip",
+      "ingredients": [
+        { "amount": "150g", "name": "feta cheese, crumbled" },
+        { "amount": "2 tbsp", "name": "cream cheese" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "1 tbsp", "name": "hot honey" },
+        { "amount": "handful", "name": "toasted walnuts, roughly chopped" },
+        { "amount": "to serve", "name": "crackers or crusty bread" }
+      ],
+      "steps": [
+        {
+          "name": "Whip",
+          "text": "Add the 150g of crumbled feta and 2 tablespoons of cream cheese to a food processor. Blend for a full 2 minutes, scraping down the sides halfway, until the mixture is completely smooth and fluffy. If it feels too stiff, add a tiny splash of water to loosen it."
+        },
+        {
+          "name": "Plate",
+          "text": "Spoon the whipped feta into a shallow bowl and use the back of a spoon to create a deep swirl in the center. Drizzle 1 tablespoon of olive oil and 1 tablespoon of hot honey directly into the swirl. Scatter a handful of roughly chopped toasted walnuts over the top so they fall into the crevices. Serve immediately with crackers or crusty bread."
+        }
+      ],
+      "notes": "No food processor? Mash with a fork and beat vigorously. Less smooth but still excellent.",
+      "photo_search": "ceramic bowl of whipped feta drizzled with hot honey and scattered with toasted walnuts, served with crackers"
+    },
+    {
+      "id": 3,
+      "name": "Chilli Crisp Noodles with Soft-Boiled Egg",
+      "slug": "chilli-crisp-noodles-soft-boiled-egg",
+      "description": "Six minute noodles that taste like you ordered them from a really good spot.",
+      "tags": ["Noodles", "Spicy", "Quick"],
+      "prep": "2m",
+      "cook": "8m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Chinese-Inspired",
+      "category": "Noodles",
+      "ingredients": [
+        { "amount": "1 portion", "name": "dried noodles (ramen, soba, or rice noodles)" },
+        { "amount": "1 large", "name": "egg" },
+        { "amount": "1.5 tbsp", "name": "chilli crisp oil" },
+        { "amount": "1 tbsp", "name": "soy sauce" },
+        { "amount": "1 tsp", "name": "sesame oil" },
+        { "amount": "1 tsp", "name": "rice vinegar" },
+        { "amount": "2", "name": "spring onions, thinly sliced" }
+      ],
+      "steps": [
+        {
+          "name": "Soft boil egg",
+          "text": "Bring a small pot of water to a rolling boil. Gently lower the 1 large egg into the water and set a timer for exactly 6.5 minutes for a perfectly jammy yolk. Transfer the egg immediately to an ice water bath to stop the cooking process, then peel it under cold running water."
+        },
+        {
+          "name": "Cook noodles",
+          "text": "Boil the 1 portion of dried noodles in the same pot according to the package until chewy. While they cook, whisk the 1.5 tbsp chilli crisp, 1 tbsp soy sauce, 1 tsp sesame oil, and 1 tsp rice vinegar together in the bottom of your serving bowl."
+        },
+        {
+          "name": "Combine",
+          "text": "Drain the noodles and add them directly to the sauce bowl. Toss vigorously with tongs until every strand is coated in the spicy oil. Halve the soft boiled egg and place it on top of the noodles, letting the yolk run slightly. Scatter the 2 thinly sliced spring onions over the top and eat right away while piping hot."
+        }
+      ],
+      "notes": "Fly By Jing chilli crisp is worth the upgrade over Lao Gan Ma. Add peanut butter for a satay vibe.",
+      "photo_search": "bowl of noodles in red chilli crisp oil topped with a halved soft boiled egg and spring onions"
+    },
+    {
+      "id": 4,
+      "name": "Baked Feta Pasta",
+      "slug": "baked-feta-pasta",
+      "description": "The TikTok pasta that broke the internet. Roasted tomatoes, melted feta, done.",
+      "tags": ["Pasta", "Viral", "Vegetarian"],
+      "prep": "5m",
+      "cook": "35m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Mediterranean",
+      "category": "Pasta",
+      "ingredients": [
+        { "amount": "200g", "name": "cherry tomatoes" },
+        { "amount": "100g", "name": "block feta cheese" },
+        { "amount": "3 tbsp", "name": "olive oil" },
+        { "amount": "3 cloves", "name": "garlic, unpeeled and smashed" },
+        { "amount": "100g", "name": "pasta (rigatoni or penne)" },
+        { "amount": "handful", "name": "fresh basil" },
+        { "amount": "to taste", "name": "salt, black pepper, chilli flakes" }
+      ],
+      "steps": [
+        {
+          "name": "Roast",
+          "text": "Preheat your oven to 400F/200C. Place the 200g of cherry tomatoes and 3 cloves of smashed, unpeeled garlic in the center of a baking dish. Nestle the 100g block of feta right in the middle. Pour 3 tablespoons of olive oil over the tomatoes and feta, and sprinkle with chilli flakes. Roast for 35 minutes until the tomatoes burst and release their juices, and the feta turns golden on top."
+        },
+        {
+          "name": "Cook pasta",
+          "text": "While the feta roasts, boil the 100g of pasta in heavily salted water until al dente. Before draining, scoop out a full cup of the starchy pasta water and set it aside."
+        },
+        {
+          "name": "Combine",
+          "text": "Remove the baking dish from the oven. Squeeze the soft roasted garlic out of its skins and mash it into the melted feta with a fork. Add the drained pasta and a splash of the reserved pasta water. Stir everything together vigorously until the cheese and tomato juices emulsify into a glossy, silky sauce. Top with a handful of torn fresh basil."
+        }
+      ],
+      "notes": "Use the best quality block feta you can find. Pre crumbled will not melt the same way.",
+      "photo_search": "baked pasta with melted feta and burst cherry tomatoes in a ceramic casserole dish"
+    },
+    {
+      "id": 5,
+      "name": "Cottage Cheese and Everything Bagel Plate",
+      "slug": "cottage-cheese-everything-bagel-plate",
+      "description": "High protein, zero effort. Cottage cheese elevated by one seasoning that does all the work.",
+      "tags": ["High Protein", "No Cook", "Quick"],
+      "prep": "2m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "1 cup", "name": "full fat cottage cheese" },
+        { "amount": "1 tsp", "name": "everything bagel seasoning" },
+        { "amount": "drizzle", "name": "olive oil" },
+        { "amount": "handful", "name": "cherry tomatoes, halved" },
+        { "amount": "to serve", "name": "crackers or cucumber slices" }
+      ],
+      "steps": [
+        {
+          "name": "Plate",
+          "text": "Scoop the 1 cup of full fat cottage cheese into a wide, shallow bowl. Use the back of a spoon to create a deep divot in the center of the cheese. Pour a generous drizzle of good olive oil directly into the divot. Shower the top with 1 teaspoon of everything bagel seasoning so the seeds fall into the oil and cheese. Arrange a handful of halved cherry tomatoes around the edges and serve with crackers or cucumber slices for scooping."
+        }
+      ],
+      "notes": "Add chilli crisp instead of olive oil for a spicy upgrade. Trader Joe's Everything But The Bagel seasoning is the move.",
+      "photo_search": "bowl of cottage cheese topped with everything bagel seasoning, olive oil, cherry tomatoes, and crackers"
+    },
+    {
+      "id": 6,
+      "name": "Tinned Sardines on Buttered Toast",
+      "slug": "tinned-sardines-buttered-toast",
+      "description": "Briny, rich, and done in two minutes. The girl dinner for people with great taste.",
+      "tags": ["Tinned Fish", "Toast", "Quick"],
+      "prep": "3m",
+      "cook": "2m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "European",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "1 tin", "name": "quality sardines in olive oil" },
+        { "amount": "2 slices", "name": "sourdough, toasted" },
+        { "amount": "1 tbsp", "name": "salted butter" },
+        { "amount": "1/2", "name": "lemon, for squeezing" },
+        { "amount": "to taste", "name": "flaky sea salt, black pepper, hot sauce" },
+        { "amount": "optional", "name": "dijon mustard and sliced cornichons" }
+      ],
+      "steps": [
+        {
+          "name": "Toast and butter",
+          "text": "Toast the 2 slices of sourdough until they are deeply golden and crisp. While the bread is still piping hot, spread 1 tablespoon of salted butter generously over the surface so it melts deep into the crumbs."
+        },
+        {
+          "name": "Top",
+          "text": "Open the tin of sardines and lay them in a single layer over the buttered toast. Squeeze the juice of half a lemon directly over the fish. Add flaky sea salt, black pepper, and your favorite hot sauce. If you are using dijon mustard and sliced cornichons, smear the mustard on the bread before adding the sardines, and place the cornichons on top for a briny crunch."
+        }
+      ],
+      "notes": "Brand matters enormously. A good tin of sardines in olive oil is a completely different thing from the cheap supermarket version.",
+      "photo_search": "sourdough toast heavily buttered and topped with sardines, lemon wedges, and black pepper"
+    },
+    {
+      "id": 7,
+      "name": "Burrata with Peach and Prosciutto",
+      "slug": "burrata-peach-prosciutto",
+      "description": "Sweet peach, salty prosciutto, creamy burrata. Summer on a plate with no cooking required.",
+      "tags": ["No Cook", "Fancy", "Cheese"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "1 ball", "name": "fresh burrata" },
+        { "amount": "1", "name": "ripe peach, sliced" },
+        { "amount": "3 slices", "name": "prosciutto di Parma" },
+        { "amount": "drizzle", "name": "good olive oil" },
+        { "amount": "drizzle", "name": "balsamic glaze" },
+        { "amount": "handful", "name": "fresh basil leaves" },
+        { "amount": "to taste", "name": "flaky salt and black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Plate",
+          "text": "Place the 1 ball of fresh burrata in the center of a beautiful plate. Slice the 1 ripe peach and arrange the slices around the burrata. Drape the 3 slices of prosciutto di Parma over the peaches. Tuck a handful of fresh basil leaves into the gaps. Just before eating, tear the burrata open so the creamy center spills out. Finish with a drizzle of good olive oil, a swirl of balsamic glaze, and a pinch of flaky salt."
+        }
+      ],
+      "notes": "Tear the burrata open at the table so the cream spills out. Only works with ripe, in season peaches.",
+      "photo_search": "plate with burrata, sliced peaches, prosciutto, balsamic glaze, and fresh basil"
+    },
+    {
+      "id": 8,
+      "name": "Smoked Salmon Plate with Cream Cheese and Capers",
+      "slug": "smoked-salmon-cream-cheese-capers",
+      "description": "Deli style but make it dinner. Everything a bagel would be without the bagel.",
+      "tags": ["Salmon", "No Cook", "Fancy"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Scandinavian",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "80g", "name": "smoked salmon slices" },
+        { "amount": "3 tbsp", "name": "cream cheese or creme fraiche" },
+        { "amount": "1 tbsp", "name": "capers" },
+        { "amount": "1/4", "name": "red onion, very thinly sliced" },
+        { "amount": "handful", "name": "crackers or rye crispbreads" },
+        { "amount": "1/4", "name": "lemon, for squeezing" },
+        { "amount": "few sprigs", "name": "fresh dill" }
+      ],
+      "steps": [
+        {
+          "name": "Arrange",
+          "text": "Lay the 80g of smoked salmon slices on one side of a plate. Put the 3 tablespoons of cream cheese in a small bowl on the opposite side. Scatter 1 tablespoon of capers and the very thinly sliced red onion over the salmon. Add a handful of rye crackers, a few sprigs of fresh dill, and a lemon wedge for squeezing. Build little cracker sandwiches as you eat."
+        }
+      ],
+      "notes": "Let red onion soak in a splash of lemon juice for 10 minutes to mellow the bite.",
+      "photo_search": "plate of smoked salmon, cream cheese bowl, capers, red onion, rye crackers, and dill"
+    },
+    {
+      "id": 9,
+      "name": "Avocado Toast with Everything Bagel and Chilli Flakes",
+      "slug": "avocado-toast-everything-bagel-chilli",
+      "description": "Yes it is basic. Yes it is still perfect. The seasoning and chilli flakes make it.",
+      "tags": ["Toast", "Vegetarian", "Quick"],
+      "prep": "5m",
+      "cook": "3m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "1 large", "name": "ripe avocado" },
+        { "amount": "2 slices", "name": "thick sourdough, toasted" },
+        { "amount": "1 tsp", "name": "everything bagel seasoning" },
+        { "amount": "pinch", "name": "chilli flakes" },
+        { "amount": "squeeze", "name": "lemon or lime juice" },
+        { "amount": "to taste", "name": "flaky salt" }
+      ],
+      "steps": [
+        {
+          "name": "Toast",
+          "text": "Toast the 2 slices of thick sourdough until deeply golden and crisp."
+        },
+        {
+          "name": "Mash and top",
+          "text": "Halve the 1 large ripe avocado, remove the pit, and scoop the flesh directly onto the hot toast. Use a fork to mash it roughly right on the bread. Immediately squeeze fresh lemon or lime juice over the avocado to prevent browning. Shower with 1 teaspoon of everything bagel seasoning, a pinch of chilli flakes, and a sprinkle of flaky salt."
+        }
+      ],
+      "notes": "Top with a fried or poached egg for protein. Pomegranate seeds add great texture.",
+      "photo_search": "sourdough toast topped with mashed avocado, everything bagel seasoning, and chilli flakes"
+    },
+    {
+      "id": 10,
+      "name": "Hummus Plate with Warm Pita and Toppings",
+      "slug": "hummus-plate-warm-pita-toppings",
+      "description": "A good hummus plate hits different when the pita is warm and the toppings are thoughtful.",
+      "tags": ["Vegetarian", "No Cook", "Mediterranean"],
+      "prep": "5m",
+      "cook": "3m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Middle Eastern",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "1/2 cup", "name": "good store bought hummus" },
+        { "amount": "1", "name": "pita bread, warmed" },
+        { "amount": "drizzle", "name": "olive oil" },
+        { "amount": "1/4 tsp", "name": "smoked paprika" },
+        { "amount": "handful", "name": "cherry tomatoes, halved" },
+        { "amount": "handful", "name": "cucumber, sliced" },
+        { "amount": "handful", "name": "olives" },
+        { "amount": "optional", "name": "za'atar, pine nuts, fresh parsley" }
+      ],
+      "steps": [
+        {
+          "name": "Warm pita",
+          "text": "Place the 1 pita bread directly over a gas flame or in a dry pan for about 30 seconds per side until it puffs up and gets charred in spots."
+        },
+        {
+          "name": "Build the plate",
+          "text": "Spoon the 1/2 cup of hummus into a bowl and use the back of a spoon to create a deep swirl in the center. Drizzle generously with olive oil and dust with 1/4 teaspoon of smoked paprika. Arrange the halved cherry tomatoes, sliced cucumber, and olives around the hummus. Tear the warm pita into wedges and serve alongside for dipping."
+        }
+      ],
+      "notes": "Sabra is fine but Ithaca or Oren's Hummus will genuinely change the dish.",
+      "photo_search": "bowl of hummus swirled with olive oil and paprika, served with warm pita, cucumbers, and olives"
+    },
+    {
+      "id": 11,
+      "name": "Lazy Mac and Cheese",
+      "slug": "lazy-mac-and-cheese",
+      "description": "Kraft in a pot, made correctly. Extra butter, black pepper, and no apologies.",
+      "tags": ["Comfort", "Quick", "Classic"],
+      "prep": "2m",
+      "cook": "10m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Pasta",
+      "ingredients": [
+        { "amount": "1 box", "name": "Kraft mac and cheese or Annie's" },
+        { "amount": "2 tbsp", "name": "salted butter (more than the box says)" },
+        { "amount": "splash", "name": "whole milk" },
+        { "amount": "generous", "name": "freshly ground black pepper" },
+        { "amount": "optional", "name": "hot sauce, extra shredded cheese, breadcrumbs" }
+      ],
+      "steps": [
+        {
+          "name": "Cook",
+          "text": "Boil the pasta from the 1 box of mac and cheese according to the package instructions. Drain the pasta, but leave about a tablespoon of the starchy cooking water in the pot to help the sauce bind."
+        },
+        {
+          "name": "Make it better",
+          "text": "Return the pot to very low heat. Add 2 tablespoons of salted butter (more than the box recommends), the cheese powder, and just a small splash of whole milk. Stir vigorously until the butter and powder melt into a glossy sauce that coats every noodle. Finish with a very generous grinding of black pepper to cut the richness."
+        }
+      ],
+      "notes": "The secret is extra butter and less milk than the box says. Top with butter toasted breadcrumbs if you want to feel fancy.",
+      "photo_search": "bowl of creamy macaroni and cheese topped with freshly ground black pepper"
+    },
+    {
+      "id": 12,
+      "name": "Grilled Cheese Dipped in Tomato Soup",
+      "slug": "grilled-cheese-tomato-soup",
+      "description": "The ultimate comfort duo. Golden buttery bread, melted cheese, silky soup for dunking.",
+      "tags": ["Comfort", "Warm", "Classic"],
+      "prep": "5m",
+      "cook": "15m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Soup",
+      "ingredients": [
+        { "amount": "2 slices", "name": "thick white or sourdough bread" },
+        { "amount": "2 tbsp", "name": "salted butter, softened" },
+        { "amount": "60g", "name": "American cheese or sharp cheddar, sliced" },
+        { "amount": "1 can", "name": "good tomato soup (Rao's or Campbell's)" },
+        { "amount": "optional", "name": "splash of cream stirred into soup" }
+      ],
+      "steps": [
+        {
+          "name": "Heat soup",
+          "text": "Pour the 1 can of tomato soup into a small saucepan over medium heat. Stir in a splash of cream if you want it extra rich. Keep it warm while you make the sandwich."
+        },
+        {
+          "name": "Grill the cheese",
+          "text": "Spread the 2 tablespoons of softened butter evenly on the outside of both slices of bread. Place the 60g of sliced cheese between the unbuttered sides. Heat a pan over medium low heat. Cook the sandwich for 3 to 4 minutes per side, pressing down gently with a spatula, until both sides are deeply golden and the cheese is completely melted."
+        },
+        {
+          "name": "Dip",
+          "text": "Cut the grilled cheese in half diagonally. Ladle the hot soup into a mug or bowl. Dunk the sandwich directly into the soup and eat immediately."
+        }
+      ],
+      "notes": "Medium low heat is the key to grilled cheese. Patience gives you an even golden crust without burnt bread.",
+      "photo_search": "grilled cheese sandwich cut in half, served with a bowl of tomato soup for dipping"
+    },
+    {
+      "id": 13,
+      "name": "Charcuterie Snack Plate for One",
+      "slug": "charcuterie-snack-plate-for-one",
+      "description": "All the hits of a charcuterie board scaled down to a solo dinner plate.",
+      "tags": ["No Cook", "Classic", "Cheese"],
+      "prep": "8m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "European",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "30g", "name": "salami or prosciutto, sliced" },
+        { "amount": "30g", "name": "aged cheddar or manchego, sliced or cubed" },
+        { "amount": "handful", "name": "crackers (variety if possible)" },
+        { "amount": "1 tbsp", "name": "whole grain or dijon mustard" },
+        { "amount": "handful", "name": "grapes or sliced apple" },
+        { "amount": "handful", "name": "olives" },
+        { "amount": "optional", "name": "cornichons, honeycomb, nuts" }
+      ],
+      "steps": [
+        {
+          "name": "Arrange",
+          "text": "Fan the 30g of salami or prosciutto out on one side of a plate. Place the 30g of sliced or cubed aged cheddar on the opposite side. Fill the middle with a handful of crackers. Add a small bowl with 1 tablespoon of mustard, and scatter handfuls of grapes, olives, and cornichons in the gaps so everything is easy to reach. Leave some white space on the plate so it does not look crowded."
+        }
+      ],
+      "notes": "Odd numbers look better. Three types of element minimum. Do not crowd. Leave some white space on the plate.",
+      "photo_search": "small wooden board with folded salami, sliced cheddar, crackers, grapes, olives, and mustard"
+    },
+    {
+      "id": 14,
+      "name": "Butter Noodles with Parmesan and Black Pepper",
+      "slug": "butter-noodles-parmesan-black-pepper",
+      "description": "Cacio e pepe's lazy cousin. Butter, parmesan, pepper, done in 10 minutes.",
+      "tags": ["Pasta", "Comfort", "Quick"],
+      "prep": "2m",
+      "cook": "10m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian-American",
+      "category": "Pasta",
+      "ingredients": [
+        { "amount": "100g", "name": "spaghetti or linguine" },
+        { "amount": "3 tbsp", "name": "salted butter" },
+        { "amount": "40g", "name": "parmesan, finely grated" },
+        { "amount": "1 tsp", "name": "coarsely ground black pepper" },
+        { "amount": "splash", "name": "pasta cooking water" }
+      ],
+      "steps": [
+        {
+          "name": "Cook pasta",
+          "text": "Boil the 100g of spaghetti in heavily salted water until al dente. Before draining, scoop out a large mug of the starchy pasta water and set it aside."
+        },
+        {
+          "name": "Butter and toss",
+          "text": "Return the drained pasta to the pot off the heat. Add the 3 tablespoons of salted butter and a splash of the reserved pasta water. Toss vigorously with tongs until the butter emulsifies with the starch and coats every strand. Add the 40g of finely grated parmesan and more pasta water, tossing again until you have a silky sauce."
+        },
+        {
+          "name": "Season",
+          "text": "Finish with 1 teaspoon of coarsely ground black pepper and top with extra parmesan."
+        }
+      ],
+      "notes": "The pasta water is the secret. The starch helps the butter create a silky sauce that clings to the noodles.",
+      "photo_search": "bowl of spaghetti tossed in butter and parmesan with coarsely ground black pepper"
+    },
+    {
+      "id": 15,
+      "name": "Scrambled Eggs with Cream Cheese and Chives",
+      "slug": "scrambled-eggs-cream-cheese-chives",
+      "description": "Low and slow eggs with cream cheese folded in. The softest, richest scramble.",
+      "tags": ["Eggs", "Quick", "Comfort"],
+      "prep": "2m",
+      "cook": "8m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Eggs",
+      "ingredients": [
+        { "amount": "3 large", "name": "eggs" },
+        { "amount": "1 tbsp", "name": "cream cheese" },
+        { "amount": "1 tbsp", "name": "salted butter" },
+        { "amount": "small bunch", "name": "fresh chives, snipped" },
+        { "amount": "to taste", "name": "salt and black pepper" },
+        { "amount": "to serve", "name": "toast or crackers" }
+      ],
+      "steps": [
+        {
+          "name": "Whisk",
+          "text": "Crack the 3 large eggs into a bowl and beat them thoroughly with a pinch of salt until completely uniform."
+        },
+        {
+          "name": "Low and slow",
+          "text": "Melt 1 tablespoon of salted butter in a small non stick pan over the absolute lowest heat. Pour in the eggs and stir constantly with a rubber spatula, scraping the bottom and sides to form soft curds. This should take 5 to 7 minutes. Do not rush it."
+        },
+        {
+          "name": "Finish",
+          "text": "When the eggs are just barely set and still look slightly wet, remove the pan from the heat. Fold in 1 tablespoon of cream cheese so it melts from the residual heat. Top with a small bunch of snipped fresh chives and black pepper."
+        }
+      ],
+      "notes": "Keep it low and slow and keep it moving. Taking it off the heat early is not optional.",
+      "photo_search": "plate of soft scrambled eggs with cream cheese and chives, served with toast"
+    },
+    {
+      "id": 16,
+      "name": "Brie with Jam and Apple on a Board",
+      "slug": "brie-jam-apple-board",
+      "description": "Ripe brie, sharp jam, crisp apple slices. The girl dinner that feels like a French picnic.",
+      "tags": ["No Cook", "Cheese", "Fancy"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "French",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "1 wedge", "name": "ripe brie or camembert" },
+        { "amount": "1 tbsp", "name": "fig jam or raspberry jam" },
+        { "amount": "1/2", "name": "crisp apple (Granny Smith or Honeycrisp), thinly sliced" },
+        { "amount": "handful", "name": "crackers or water biscuits" },
+        { "amount": "optional", "name": "walnuts, honey" }
+      ],
+      "steps": [
+        {
+          "name": "Arrange",
+          "text": "Place the 1 wedge of ripe brie on a small board. Spoon 1 tablespoon of fig or raspberry jam right alongside it. Thinly slice half of a crisp apple and fan the slices out on the board. Add a handful of water biscuits. Drizzle honey over the brie and add walnuts if you want extra crunch."
+        }
+      ],
+      "notes": "Let the brie sit at room temperature for 30 minutes first. Cold brie is a tragedy.",
+      "photo_search": "small wooden board with a wedge of brie, fig jam, apple slices, and water crackers"
+    },
+    {
+      "id": 17,
+      "name": "Greek Salad with Chickpeas",
+      "slug": "greek-salad-chickpeas",
+      "description": "The most refreshing no cook dinner. Salty, crunchy, and genuinely satisfying.",
+      "tags": ["Salad", "Vegetarian", "No Cook"],
+      "prep": "8m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Greek",
+      "category": "Salad",
+      "ingredients": [
+        { "amount": "1/2 can", "name": "chickpeas, drained and rinsed" },
+        { "amount": "1/2", "name": "cucumber, chunked" },
+        { "amount": "handful", "name": "cherry tomatoes, halved" },
+        { "amount": "1/4", "name": "red onion, thinly sliced" },
+        { "amount": "handful", "name": "kalamata olives" },
+        { "amount": "50g", "name": "feta cheese, crumbled" },
+        { "amount": "2 tbsp", "name": "olive oil" },
+        { "amount": "1 tbsp", "name": "red wine vinegar" },
+        { "amount": "1/2 tsp", "name": "dried oregano" }
+      ],
+      "steps": [
+        {
+          "name": "Toss",
+          "text": "Combine the half can of drained chickpeas, chunked cucumber, halved cherry tomatoes, and thinly sliced red onion in a bowl. Drizzle with 2 tablespoons of olive oil, 1 tablespoon of red wine vinegar, and half a teaspoon of dried oregano. Season with salt and pepper and let it sit for 10 minutes so the tomatoes release their juices. Top with 50g of crumbled feta just before eating."
+        }
+      ],
+      "notes": "Let it sit for 10 minutes after dressing. The tomatoes release juice that becomes the best extra dressing.",
+      "photo_search": "bowl of chunky cucumber, cherry tomatoes, chickpeas, olives, and crumbled feta"
+    },
+    {
+      "id": 18,
+      "name": "Loaded Baked Potato",
+      "slug": "loaded-baked-potato",
+      "description": "A whole meal in a potato skin. Sour cream, cheese, chives, the works.",
+      "tags": ["Comfort", "Filling", "Classic"],
+      "prep": "5m",
+      "cook": "50m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "1 large", "name": "russet potato" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "3 tbsp", "name": "sour cream" },
+        { "amount": "40g", "name": "sharp cheddar, shredded" },
+        { "amount": "small bunch", "name": "chives, chopped" },
+        { "amount": "to taste", "name": "salt, butter, black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Bake",
+          "text": "Preheat your oven to 425F/220C. Rub the 1 large russet potato with 1 tablespoon of olive oil and a generous pinch of salt. Pierce it several times with a fork. Bake directly on the oven rack for 45 to 50 minutes until the skin is crispy and the inside is soft when squeezed."
+        },
+        {
+          "name": "Load",
+          "text": "Split the potato open with a knife and push the ends together to puff up the fluffy inside. Add a pat of butter, then pile on 3 tablespoons of sour cream, 40g of shredded cheddar, a small bunch of chopped chives, and black pepper."
+        }
+      ],
+      "notes": "The key is rubbing with oil and salt and not wrapping in foil. Foil steams rather than bakes and ruins the skin.",
+      "photo_search": "baked potato split open and loaded with sour cream, cheddar, chives, and butter"
+    },
+    {
+      "id": 19,
+      "name": "Fruit and Yogurt Bowl with Honey and Granola",
+      "slug": "fruit-yogurt-honey-granola",
+      "description": "Breakfast as dinner is always valid. Greek yogurt, fruit, honey, crunch.",
+      "tags": ["Healthy", "No Cook", "Sweet"],
+      "prep": "3m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Bowl",
+      "ingredients": [
+        { "amount": "1 cup", "name": "thick Greek yogurt (full fat)" },
+        { "amount": "1/4 cup", "name": "granola" },
+        { "amount": "handful", "name": "mixed berries or sliced strawberries" },
+        { "amount": "1 tbsp", "name": "honey" },
+        { "amount": "optional", "name": "banana slices, nut butter, chia seeds" }
+      ],
+      "steps": [
+        {
+          "name": "Layer",
+          "text": "Spoon the 1 cup of thick full fat Greek yogurt into a bowl. Top with a handful of mixed berries and a quarter cup of granola for crunch. Drizzle 1 tablespoon of honey generously over the top. Add banana slices or a spoonful of nut butter if you want to make it more filling."
+        }
+      ],
+      "notes": "Full fat Greek yogurt is non negotiable. It is thick enough to hold toppings and rich enough to feel like a proper meal.",
+      "photo_search": "bowl of thick Greek yogurt topped with granola, mixed berries, and a drizzle of honey"
+    },
+    {
+      "id": 20,
+      "name": "Soft Pretzel with Beer Cheese Dip",
+      "slug": "soft-pretzel-beer-cheese-dip",
+      "description": "Warm soft pretzels and a quick melted cheese sauce. Salty, satisfying, no real effort.",
+      "tags": ["Snack", "Comfort", "Dip"],
+      "prep": "3m",
+      "cook": "10m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "2-3", "name": "soft pretzels, frozen or store bought, warmed" },
+        { "amount": "60g", "name": "sharp cheddar, shredded" },
+        { "amount": "1 tbsp", "name": "butter" },
+        { "amount": "1 tsp", "name": "flour" },
+        { "amount": "1/4 cup", "name": "beer or milk" },
+        { "amount": "1 tsp", "name": "dijon mustard" }
+      ],
+      "steps": [
+        {
+          "name": "Make cheese sauce",
+          "text": "Melt 1 tablespoon of butter in a small saucepan over medium heat. Whisk in 1 teaspoon of flour to make a roux and cook for 1 minute. Slowly whisk in a quarter cup of beer or milk until smooth. Add 60g of shredded sharp cheddar and 1 teaspoon of dijon mustard, stirring continuously until the cheese is completely melted and glossy."
+        },
+        {
+          "name": "Serve",
+          "text": "Warm the 2 to 3 soft pretzels according to the package instructions. Dip them straight into the pot of warm cheese sauce."
+        }
+      ],
+      "notes": "A splash of hot sauce in the cheese sauce makes it noticeably better.",
+      "photo_search": "basket of warm soft pretzels served with a bowl of melted beer cheese dip"
+    },
+    {
+      "id": 21,
+      "name": "Pickles and Cheese Board",
+      "slug": "pickles-cheese-board",
+      "description": "For when the jar of pickles IS the meal. Paired with aged cheese and crackers.",
+      "tags": ["No Cook", "Cheese", "Classic"],
+      "prep": "3m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "a few", "name": "dill pickles or cornichons" },
+        { "amount": "60g", "name": "sharp aged cheddar" },
+        { "amount": "handful", "name": "crackers" },
+        { "amount": "optional", "name": "sliced salami, mustard" }
+      ],
+      "steps": [
+        {
+          "name": "Plate it",
+          "text": "Arrange a few dill pickles, 60g of sharp aged cheddar, and a handful of crackers on a plate. If using salami and mustard, add them to the mix. The joy is in the simplicity, so just lay it out and eat."
+        }
+      ],
+      "notes": "Claussen dill pickles, aged white cheddar, Triscuits. That is the holy trinity.",
+      "photo_search": "plate of dill pickles, sharp cheddar slices, and crackers"
+    },
+    {
+      "id": 22,
+      "name": "Instant Ramen Upgraded",
+      "slug": "instant-ramen-upgraded",
+      "description": "Start with a 50 cent packet, finish with something that actually tastes good.",
+      "tags": ["Noodles", "Quick", "Comfort"],
+      "prep": "3m",
+      "cook": "5m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Korean-Inspired",
+      "category": "Noodles",
+      "ingredients": [
+        { "amount": "1 packet", "name": "instant ramen (Shin Ramyun or Maruchan)" },
+        { "amount": "1 large", "name": "egg" },
+        { "amount": "1 tbsp", "name": "butter" },
+        { "amount": "1 tsp", "name": "sesame oil" },
+        { "amount": "1 tsp", "name": "soy sauce" },
+        { "amount": "optional", "name": "frozen corn, spring onion, sesame seeds, chilli crisp" }
+      ],
+      "steps": [
+        {
+          "name": "Cook",
+          "text": "Cook the 1 packet of instant ramen according to the package instructions, but use slightly less water than recommended to keep the broth concentrated and flavorful."
+        },
+        {
+          "name": "Upgrade",
+          "text": "In the last 2 minutes of cooking, crack the 1 large egg directly into the bubbling broth. Remove from heat and stir in 1 tablespoon of butter, 1 teaspoon of sesame oil, and 1 teaspoon of soy sauce. Top with spring onions, sesame seeds, and chilli crisp."
+        }
+      ],
+      "notes": "Butter and sesame oil are the key upgrades. The egg is non negotiable.",
+      "photo_search": "bowl of ramen with an egg, butter, spring onions, sesame seeds, and chilli crisp"
+    },
+    {
+      "id": 23,
+      "name": "Caprese with Good Olive Oil",
+      "slug": "caprese-good-olive-oil",
+      "description": "Three ingredients, zero cooking. Entirely dependent on quality. Get good tomatoes.",
+      "tags": ["No Cook", "Italian", "Vegetarian"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Salad",
+      "ingredients": [
+        { "amount": "2 large", "name": "ripe heirloom or vine tomatoes, sliced" },
+        { "amount": "125g", "name": "fresh mozzarella, sliced" },
+        { "amount": "handful", "name": "fresh basil leaves" },
+        { "amount": "2 tbsp", "name": "excellent olive oil" },
+        { "amount": "to taste", "name": "flaky sea salt and black pepper" },
+        { "amount": "optional", "name": "balsamic reduction" }
+      ],
+      "steps": [
+        {
+          "name": "Slice and alternate",
+          "text": "Slice the 2 large ripe tomatoes and 125g of fresh mozzarella into thick rounds. Alternate them on a plate, tucking fresh basil leaves between them."
+        },
+        {
+          "name": "Dress",
+          "text": "Drizzle generously with 2 tablespoons of excellent olive oil. Season aggressively with flaky sea salt and black pepper. Add a balsamic reduction if you like."
+        }
+      ],
+      "notes": "This is either transcendent or boring depending entirely on ingredient quality. Buy the best tomatoes you can find.",
+      "photo_search": "plate of alternating heirloom tomato and mozzarella slices with fresh basil and olive oil"
+    },
+    {
+      "id": 24,
+      "name": "Stovetop Popcorn Dinner",
+      "slug": "stovetop-popcorn-dinner",
+      "description": "A bit unhinged but completely valid. Stovetop popcorn with real butter and fancy seasoning.",
+      "tags": ["Snack", "No Cook", "Classic"],
+      "prep": "2m",
+      "cook": "5m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "1/4 cup", "name": "popcorn kernels" },
+        { "amount": "2 tbsp", "name": "neutral oil" },
+        { "amount": "2 tbsp", "name": "salted butter, melted" },
+        { "amount": "to taste", "name": "flaky salt" },
+        { "amount": "choice of", "name": "nutritional yeast, parmesan, tajin, everything bagel, or chilli lime seasoning" }
+      ],
+      "steps": [
+        {
+          "name": "Pop",
+          "text": "Heat 2 tablespoons of neutral oil in a large pot over medium high. Add 3 test kernels and cover. When they pop, add the rest of the kernels, cover, and shake the pot every 30 seconds until popping slows."
+        },
+        {
+          "name": "Season",
+          "text": "Transfer to a bowl, immediately toss with 2 tablespoons of melted butter, flaky salt, and your seasoning of choice so it sticks to the hot kernels."
+        }
+      ],
+      "notes": "Stovetop popcorn is infinitely superior to microwave. Nutritional yeast plus salt is the underrated combination.",
+      "photo_search": "large bowl of stovetop popcorn dusted with seasoning and melted butter"
+    },
+    {
+      "id": 25,
+      "name": "Ricotta Toast with Honey and Pistachios",
+      "slug": "ricotta-toast-honey-pistachios",
+      "description": "Creamy, crunchy, sweet. The toast that makes breakfast for dinner feel indulgent.",
+      "tags": ["Toast", "Sweet-Savory", "Quick"],
+      "prep": "5m",
+      "cook": "3m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian-American",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "2 slices", "name": "thick sourdough or country bread, toasted" },
+        { "amount": "4 tbsp", "name": "whole milk ricotta" },
+        { "amount": "1 tbsp", "name": "good honey" },
+        { "amount": "2 tbsp", "name": "shelled pistachios, roughly chopped" },
+        { "amount": "pinch", "name": "flaky salt" },
+        { "amount": "optional", "name": "lemon zest, fresh thyme" }
+      ],
+      "steps": [
+        {
+          "name": "Toast",
+          "text": "Toast the 2 slices of thick sourdough until deeply golden."
+        },
+        {
+          "name": "Top",
+          "text": "Spread a generous layer of 4 tablespoons of whole milk ricotta on each slice. Drizzle with 1 tablespoon of good honey, scatter 2 tablespoons of roughly chopped pistachios, and finish with a pinch of flaky salt. Add lemon zest or fresh thyme for extra flavor."
+        }
+      ],
+      "notes": "The ricotta needs to be full fat and ideally fresh. Whip it with a fork first for a fluffier texture.",
+      "photo_search": "sourdough toast spread with ricotta, drizzled with honey, and topped with pistachios"
+    },
+    {
+      "id": 26,
+      "name": "Brie and Raspberry Quesadilla",
+      "slug": "brie-raspberry-quesadilla",
+      "description": "Sweet savory quesadilla that sounds wrong but is absolutely right.",
+      "tags": ["Quick", "Sweet-Savory", "Cheese"],
+      "prep": "3m",
+      "cook": "5m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Fusion",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "1 large", "name": "flour tortilla" },
+        { "amount": "60g", "name": "brie, thinly sliced" },
+        { "amount": "1 tbsp", "name": "raspberry jam" },
+        { "amount": "1 tsp", "name": "butter" },
+        { "amount": "optional", "name": "prosciutto, arugula, dijon mustard" }
+      ],
+      "steps": [
+        {
+          "name": "Build",
+          "text": "Spread 1 tablespoon of raspberry jam on one half of the 1 large flour tortilla. Lay 60g of thinly sliced brie on top and fold it over."
+        },
+        {
+          "name": "Cook",
+          "text": "Melt 1 teaspoon of butter in a pan over medium heat. Cook the quesadilla for 2 to 3 minutes per side, pressing down with a spatula, until golden and the brie is fully melted. Cut and eat immediately."
+        }
+      ],
+      "notes": "Add a thin layer of dijon on the jam side for a more grown up sweet savory balance.",
+      "photo_search": "golden crispy quesadilla cut in half, showing melted brie and raspberry jam inside"
+    },
+    {
+      "id": 27,
+      "name": "Mezze Plate",
+      "slug": "mezze-plate",
+      "description": "Hummus, tabbouleh, olives, pita. The Middle Eastern answer to the girl dinner snack plate.",
+      "tags": ["Mediterranean", "No Cook", "Vegetarian"],
+      "prep": "10m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Middle Eastern",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "1/3 cup", "name": "hummus" },
+        { "amount": "1/3 cup", "name": "store bought tabbouleh" },
+        { "amount": "handful", "name": "mixed olives" },
+        { "amount": "50g", "name": "feta, cubed" },
+        { "amount": "handful", "name": "cucumber, sliced" },
+        { "amount": "1", "name": "pita, warmed and torn" },
+        { "amount": "drizzle", "name": "olive oil" }
+      ],
+      "steps": [
+        {
+          "name": "Arrange",
+          "text": "Group the 1/3 cup of hummus, 1/3 cup of tabbouleh, mixed olives, and 50g of cubed feta in separate sections of a large plate or small board. Swirl a spoon through the hummus and drizzle it with olive oil. Serve the warmed, torn pita alongside for building bites."
+        }
+      ],
+      "notes": "Store bought shortcuts are completely valid. Good supermarket hummus and tabbouleh are excellent.",
+      "photo_search": "mezze plate with hummus, tabbouleh, olives, feta, sliced cucumber, and torn pita"
+    },
+    {
+      "id": 28,
+      "name": "Fried Egg on Toast with Hot Sauce",
+      "slug": "fried-egg-toast-hot-sauce",
+      "description": "A perfectly fried egg with crispy lacy edges on buttered toast. Never gets old.",
+      "tags": ["Eggs", "Quick", "Comfort"],
+      "prep": "2m",
+      "cook": "5m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Eggs",
+      "ingredients": [
+        { "amount": "2 large", "name": "eggs" },
+        { "amount": "1 tbsp", "name": "butter or olive oil" },
+        { "amount": "2 slices", "name": "sourdough, toasted and buttered" },
+        { "amount": "to taste", "name": "flaky salt, black pepper, hot sauce (Crystal or Cholula)" }
+      ],
+      "steps": [
+        {
+          "name": "Fry the eggs",
+          "text": "Heat 1 tablespoon of butter in a small pan over medium high heat until foamy and just starting to brown. Crack the 2 large eggs into the pan and season immediately. Let the whites set and the edges go lacy and crispy while the yolk stays runny, about 2 to 3 minutes."
+        },
+        {
+          "name": "Serve",
+          "text": "Slide the eggs onto buttered sourdough and add hot sauce. Eat immediately."
+        }
+      ],
+      "notes": "High heat and enough fat is what creates the crispy, lacy white edges. Do not be shy.",
+      "photo_search": "sourdough toast topped with fried eggs with crispy edges, drizzled with hot sauce"
+    },
+    {
+      "id": 29,
+      "name": "Antipasto Plate",
+      "slug": "antipasto-plate",
+      "description": "Italian store bought excellence arranged beautifully. Artichoke hearts, salami, olives, marinated things.",
+      "tags": ["No Cook", "Italian", "Cheese"],
+      "prep": "8m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "30g", "name": "salami or capicola" },
+        { "amount": "handful", "name": "marinated artichoke hearts" },
+        { "amount": "handful", "name": "olives (Castelvetrano or Cerignola)" },
+        { "amount": "30g", "name": "fresh mozzarella balls (bocconcini)" },
+        { "amount": "handful", "name": "roasted red peppers from a jar" },
+        { "amount": "drizzle", "name": "olive oil" },
+        { "amount": "to serve", "name": "focaccia or ciabatta" }
+      ],
+      "steps": [
+        {
+          "name": "Arrange",
+          "text": "Lay out the 30g of salami, marinated artichoke hearts, olives, and mozzarella balls on a plate. Add the roasted red peppers and drizzle everything lightly with olive oil. Tear off pieces of focaccia or ciabatta to eat alongside."
+        }
+      ],
+      "notes": "Castelvetrano olives are buttery and mild. Perfect for those who do not love super briny olives.",
+      "photo_search": "plate of salami, marinated artichoke hearts, olives, mozzarella balls, and roasted peppers"
+    },
+    {
+      "id": 30,
+      "name": "Brown Butter Gnocchi with Sage",
+      "slug": "brown-butter-gnocchi-sage",
+      "description": "Pillowy store bought gnocchi in nutty brown butter with crispy sage. Ready in 10 minutes.",
+      "tags": ["Pasta", "Quick", "Comfort"],
+      "prep": "2m",
+      "cook": "10m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Pasta",
+      "ingredients": [
+        { "amount": "250g", "name": "store bought potato gnocchi" },
+        { "amount": "3 tbsp", "name": "salted butter" },
+        { "amount": "6-8 leaves", "name": "fresh sage" },
+        { "amount": "30g", "name": "parmesan, grated" },
+        { "amount": "to taste", "name": "salt, black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Cook gnocchi",
+          "text": "Boil the 250g of gnocchi in salted water until they float, about 2 to 3 minutes, then drain."
+        },
+        {
+          "name": "Brown butter",
+          "text": "In the same pan, melt the 3 tablespoons of salted butter over medium heat. Add the 6 to 8 fresh sage leaves. Cook until the butter turns golden brown and smells nutty, about 3 to 4 minutes."
+        },
+        {
+          "name": "Toss",
+          "text": "Toss the gnocchi in the brown butter to coat. Top with 30g of grated parmesan and black pepper."
+        }
+      ],
+      "notes": "Watch the butter carefully once it starts foaming. It goes from golden to burnt very fast.",
+      "photo_search": "bowl of potato gnocchi in brown butter sauce with crispy sage leaves and parmesan"
+    },
+    {
+      "id": 31,
+      "name": "Classic Cheese Quesadilla",
+      "slug": "classic-cheese-quesadilla",
+      "description": "The comfort food that requires no recipe. Just cheese, a tortilla, and heat.",
+      "tags": ["Quick", "Comfort", "Cheese"],
+      "prep": "2m",
+      "cook": "5m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Mexican-American",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "1 large", "name": "flour tortilla" },
+        { "amount": "80g", "name": "Oaxacan cheese or Monterey Jack, shredded" },
+        { "amount": "1 tbsp", "name": "salsa" },
+        { "amount": "2 tbsp", "name": "sour cream" }
+      ],
+      "steps": [
+        {
+          "name": "Fill",
+          "text": "Scatter the 80g of shredded cheese over one half of the 1 large flour tortilla and fold it over."
+        },
+        {
+          "name": "Cook",
+          "text": "Heat a dry pan over medium heat. Cook the quesadilla for 2 to 3 minutes per side until golden and the cheese is fully melted. Slice into wedges and serve with 1 tablespoon of salsa and 2 tablespoons of sour cream."
+        }
+      ],
+      "notes": "The most underrated move is a light smear of refried beans before the cheese.",
+      "photo_search": "golden crispy cheese quesadilla served with salsa and sour cream"
+    },
+    {
+      "id": 32,
+      "name": "Cucumber Cream Cheese Bites",
+      "slug": "cucumber-cream-cheese-bites",
+      "description": "Refreshing, crunchy little bites. A snack that feels like an appetizer.",
+      "tags": ["No Cook", "Healthy", "Snack"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "1 large", "name": "English cucumber, sliced into thick rounds" },
+        { "amount": "3 tbsp", "name": "cream cheese or whipped cream cheese" },
+        { "amount": "1 tsp", "name": "everything bagel seasoning" },
+        { "amount": "optional", "name": "smoked salmon, capers, or sliced radish on top" }
+      ],
+      "steps": [
+        {
+          "name": "Top",
+          "text": "Slice the 1 large English cucumber into thick rounds. Spread a small dollop of cream cheese on each round. Dust with 1 teaspoon of everything bagel seasoning. Top with smoked salmon, capers, or sliced radish if you want to make them fancy."
+        }
+      ],
+      "notes": "Make these when you want something crunchy and satisfying with zero effort.",
+      "photo_search": "cucumber rounds topped with cream cheese, everything bagel seasoning, and smoked salmon"
+    },
+    {
+      "id": 33,
+      "name": "Crispy Spiced Chickpea and Feta Bowl",
+      "slug": "crispy-chickpea-feta-bowl",
+      "description": "Crispy spiced chickpeas over lemony yogurt with feta and herbs. Deeply satisfying.",
+      "tags": ["Vegetarian", "Bowl", "Protein"],
+      "prep": "5m",
+      "cook": "25m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Mediterranean",
+      "category": "Bowl",
+      "ingredients": [
+        { "amount": "1 can", "name": "chickpeas, drained, rinsed, and dried" },
+        { "amount": "1.5 tbsp", "name": "olive oil" },
+        { "amount": "1 tsp", "name": "smoked paprika" },
+        { "amount": "1/2 tsp", "name": "cumin" },
+        { "amount": "1/2 cup", "name": "Greek yogurt" },
+        { "amount": "50g", "name": "feta, crumbled" },
+        { "amount": "squeeze", "name": "lemon juice" },
+        { "amount": "handful", "name": "fresh mint or parsley" }
+      ],
+      "steps": [
+        {
+          "name": "Roast chickpeas",
+          "text": "Toss the 1 can of dried chickpeas with 1.5 tablespoons of olive oil, 1 teaspoon of smoked paprika, 1/2 teaspoon of cumin, and salt. Spread on a baking sheet and roast at 425F/220C for 20 to 25 minutes until deeply golden and crispy."
+        },
+        {
+          "name": "Build bowl",
+          "text": "Spoon 1/2 cup of Greek yogurt into a bowl, season with lemon juice and salt. Top with the roasted chickpeas, 50g of crumbled feta, and fresh herbs."
+        }
+      ],
+      "notes": "Drying the chickpeas thoroughly before roasting is what makes them crispy rather than chewy.",
+      "photo_search": "bowl of lemony yogurt topped with crispy spiced chickpeas, feta, and fresh herbs"
+    },
+    {
+      "id": 34,
+      "name": "Peanut Butter Sesame Noodles",
+      "slug": "peanut-butter-sesame-noodles",
+      "description": "Sesame peanut sauce over noodles. The most satisfying thing you can make in 15 minutes.",
+      "tags": ["Noodles", "Quick", "Comfort"],
+      "prep": "5m",
+      "cook": "10m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Asian-Inspired",
+      "category": "Noodles",
+      "ingredients": [
+        { "amount": "100g", "name": "soba noodles or spaghetti" },
+        { "amount": "2 tbsp", "name": "peanut butter, smooth" },
+        { "amount": "1 tbsp", "name": "soy sauce" },
+        { "amount": "1 tbsp", "name": "rice vinegar" },
+        { "amount": "1 tsp", "name": "sesame oil" },
+        { "amount": "1 tsp", "name": "honey or maple syrup" },
+        { "amount": "1-2 tsp", "name": "sriracha" },
+        { "amount": "to garnish", "name": "spring onion, sesame seeds, cucumber ribbons" }
+      ],
+      "steps": [
+        {
+          "name": "Make sauce",
+          "text": "Whisk the 2 tablespoons of peanut butter, 1 tablespoon of soy sauce, 1 tablespoon of rice vinegar, 1 teaspoon of sesame oil, 1 teaspoon of honey, and sriracha. Thin with warm water until it is pourable."
+        },
+        {
+          "name": "Cook and toss",
+          "text": "Boil the 100g of noodles per package, drain, and toss immediately with the sauce. Top with spring onions, sesame seeds, and cucumber ribbons."
+        }
+      ],
+      "notes": "Natural peanut butter works best. The sauce keeps refrigerated for a week. Make double.",
+      "photo_search": "bowl of soba noodles in peanut sesame sauce, topped with spring onions and cucumber ribbons"
+    },
+    {
+      "id": 35,
+      "name": "Guacamole and Tortilla Chips",
+      "slug": "guacamole-tortilla-chips",
+      "description": "Homemade guacamole in five minutes. Because you deserve better than the tub.",
+      "tags": ["No Cook", "Snack", "Mexican"],
+      "prep": "8m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Mexican",
+      "category": "Dip",
+      "ingredients": [
+        { "amount": "1 large", "name": "ripe avocado" },
+        { "amount": "1/4", "name": "lime, juiced" },
+        { "amount": "2 tbsp", "name": "red onion, finely diced" },
+        { "amount": "1 tbsp", "name": "jalapeño, minced (optional)" },
+        { "amount": "small handful", "name": "fresh cilantro, chopped" },
+        { "amount": "to taste", "name": "salt" },
+        { "amount": "to serve", "name": "tortilla chips" }
+      ],
+      "steps": [
+        {
+          "name": "Mash",
+          "text": "Halve the 1 large ripe avocado, remove the pit, and scoop the flesh into a bowl. Mash with a fork to your preferred texture."
+        },
+        {
+          "name": "Season",
+          "text": "Add the juice of 1/4 lime, 2 tablespoons of finely diced red onion, 1 tablespoon of minced jalapeño, cilantro, and a generous pinch of salt. Taste and adjust, then serve immediately with tortilla chips."
+        }
+      ],
+      "notes": "The lime juice both flavors the guac and prevents browning. Add it before anything else.",
+      "photo_search": "rustic bowl of chunky guacamole served with tortilla chips"
+    },
+    {
+      "id": 36,
+      "name": "Sleepy Girl Mocktail",
+      "slug": "sleepy-girl-mocktail",
+      "description": "The viral tart cherry and magnesium drink that took over TikTok. For winding down.",
+      "tags": ["Drink", "Viral", "No Cook"],
+      "prep": "2m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Drink",
+      "ingredients": [
+        { "amount": "1/2 cup", "name": "100% pure tart cherry juice" },
+        { "amount": "1 scoop", "name": "magnesium powder (Natural Calm or similar)" },
+        { "amount": "to top", "name": "sparkling water or prebiotic soda (Olipop, Poppi)" },
+        { "amount": "optional", "name": "ice, lime wedge" }
+      ],
+      "steps": [
+        {
+          "name": "Mix",
+          "text": "Fill a glass with ice. Pour in 1/2 cup of tart cherry juice and stir in 1 scoop of magnesium powder until completely dissolved. Top with sparkling water or prebiotic soda. Garnish with a lime wedge."
+        }
+      ],
+      "notes": "Best drunk 30 to 60 minutes before bed. The combo of tart cherry and magnesium is the whole point.",
+      "photo_search": "glass of iced tart cherry juice mixed with sparkling water, garnished with lime"
+    },
+    {
+      "id": 37,
+      "name": "Cold Sesame Noodles",
+      "slug": "cold-sesame-noodles",
+      "description": "Room temperature noodles in a nutty, gingery sauce. Better cold than hot.",
+      "tags": ["Noodles", "No Cook", "Refreshing"],
+      "prep": "10m",
+      "cook": "8m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Chinese-Inspired",
+      "category": "Noodles",
+      "ingredients": [
+        { "amount": "100g", "name": "Chinese egg noodles or spaghetti" },
+        { "amount": "2 tbsp", "name": "tahini or sesame paste" },
+        { "amount": "1 tbsp", "name": "soy sauce" },
+        { "amount": "1 tbsp", "name": "rice vinegar" },
+        { "amount": "1 tsp", "name": "fresh ginger, grated" },
+        { "amount": "1 tsp", "name": "sesame oil" },
+        { "amount": "to garnish", "name": "shredded cucumber, sesame seeds, spring onion, chilli oil" }
+      ],
+      "steps": [
+        {
+          "name": "Cook and cool",
+          "text": "Boil the 100g of noodles per package, then rinse under cold water until completely cool. Drain well."
+        },
+        {
+          "name": "Sauce and toss",
+          "text": "Whisk the 2 tablespoons of tahini, 1 tablespoon of soy, 1 tablespoon of rice vinegar, 1 teaspoon of grated ginger, and 1 teaspoon of sesame oil. Thin with water until silky. Toss the cold noodles with the sauce. Top with shredded cucumber, spring onions, sesame seeds, and a swirl of chilli oil."
+        }
+      ],
+      "notes": "Make extra sauce. It also works as a dressing for any vegetable.",
+      "photo_search": "bowl of cold noodles in dark sesame sauce, topped with cucumber, spring onions, and chilli oil"
+    },
+    {
+      "id": 38,
+      "name": "Prosciutto and Melon",
+      "slug": "prosciutto-melon",
+      "description": "The Italian classic that needs no recipe. Sweet cantaloupe and salty prosciutto.",
+      "tags": ["No Cook", "Italian", "Fancy"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "1/4", "name": "ripe cantaloupe melon, sliced" },
+        { "amount": "3-4 slices", "name": "prosciutto di Parma" },
+        { "amount": "drizzle", "name": "olive oil" },
+        { "amount": "to taste", "name": "black pepper and flaky salt" },
+        { "amount": "optional", "name": "fresh mint, arugula" }
+      ],
+      "steps": [
+        {
+          "name": "Plate",
+          "text": "Lay the 1/4 sliced ripe cantaloupe on a plate. Drape the 3 to 4 slices of prosciutto over each slice. Drizzle with olive oil, add black pepper and flaky salt. Add fresh mint or arugula if using."
+        }
+      ],
+      "notes": "Only works with truly ripe, fragrant melon. If the melon is not sweet, this dish is pointless.",
+      "photo_search": "plate of cantaloupe melon slices wrapped in prosciutto, garnished with black pepper"
+    },
+    {
+      "id": 39,
+      "name": "Spinach Artichoke Dip with Pita Chips",
+      "slug": "spinach-artichoke-dip-pita-chips",
+      "description": "Warm, cheesy, bubbly dip made in 20 minutes. The shareable girl dinner.",
+      "tags": ["Dip", "Warm", "Cheese"],
+      "prep": "5m",
+      "cook": "20m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Dip",
+      "ingredients": [
+        { "amount": "1/2 cup", "name": "frozen spinach, thawed and squeezed dry" },
+        { "amount": "1/2 cup", "name": "marinated artichoke hearts, drained and chopped" },
+        { "amount": "100g", "name": "cream cheese, softened" },
+        { "amount": "3 tbsp", "name": "sour cream or Greek yogurt" },
+        { "amount": "40g", "name": "parmesan or mozzarella, grated" },
+        { "amount": "1 clove", "name": "garlic, minced" },
+        { "amount": "to serve", "name": "pita chips or crackers" }
+      ],
+      "steps": [
+        {
+          "name": "Mix",
+          "text": "Combine the 1/2 cup of thawed and squeezed spinach, 1/2 cup of chopped artichoke hearts, 100g of cream cheese, 3 tablespoons of sour cream, 40g of grated parmesan, and 1 clove of minced garlic in an oven safe dish. Stir to combine."
+        },
+        {
+          "name": "Bake",
+          "text": "Bake at 375F/190C for 20 minutes until bubbly and golden. Broil for 2 minutes for extra color."
+        },
+        {
+          "name": "Dip",
+          "text": "Serve hot with pita chips."
+        }
+      ],
+      "notes": "Squeezing every drop of water from the spinach is essential. Otherwise the dip gets watery.",
+      "photo_search": "bubbling golden spinach and artichoke dip served with pita chips"
+    },
+    {
+      "id": 40,
+      "name": "Lox Plate on Cucumber",
+      "slug": "lox-plate-cucumber",
+      "description": "Low carb smoked salmon moment. All the lox flavors, no bagel required.",
+      "tags": ["No Cook", "Healthy", "Salmon"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Scandinavian",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "1 large", "name": "English cucumber, sliced into thick rounds" },
+        { "amount": "80g", "name": "smoked salmon (lox)" },
+        { "amount": "3 tbsp", "name": "cream cheese or labneh" },
+        { "amount": "1 tbsp", "name": "capers" },
+        { "amount": "1/4", "name": "red onion, paper thin slices" },
+        { "amount": "few sprigs", "name": "dill" }
+      ],
+      "steps": [
+        {
+          "name": "Build bites",
+          "text": "Slice the 1 large English cucumber into thick rounds. Spread 3 tablespoons of cream cheese on each round. Top with a small piece of the 80g of lox, 1 tablespoon of capers, a paper thin slice of red onion, and a sprig of dill."
+        }
+      ],
+      "notes": "These also work beautifully on endive leaves for a more elegant presentation.",
+      "photo_search": "cucumber rounds topped with cream cheese, smoked salmon, capers, red onion, and dill"
+    },
+    {
+      "id": 41,
+      "name": "Adult Lunchable Plate",
+      "slug": "adult-lunchable-plate",
+      "description": "Exactly what you think. Crackers, deli meat, cheese, grapes, a little candy if you want.",
+      "tags": ["No Cook", "Snack", "Nostalgic"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "handful", "name": "Ritz or Triscuit crackers" },
+        { "amount": "3-4 slices", "name": "deli turkey or ham" },
+        { "amount": "40g", "name": "mild cheddar, sliced or cubed" },
+        { "amount": "handful", "name": "red grapes" },
+        { "amount": "optional", "name": "baby carrots, apple slices, a few M&Ms" }
+      ],
+      "steps": [
+        {
+          "name": "Separate and plate",
+          "text": "Keep everything in distinct piles on a plate. Put the handful of crackers on one side, 3 to 4 slices of deli turkey on another, and 40g of cubed cheddar in the middle. Add grapes, baby carrots, or apple slices in the gaps. No mixing required."
+        }
+      ],
+      "notes": "The joy is in the separateness. You eat each thing on its own or build your own stack.",
+      "photo_search": "plate with distinct piles of crackers, deli turkey, cheddar cheese, and red grapes"
+    },
+    {
+      "id": 42,
+      "name": "Garlic Parmesan Toast",
+      "slug": "garlic-parmesan-toast",
+      "description": "The simplest, most satisfying thing. Crispy garlic toast with melted parmesan.",
+      "tags": ["Toast", "Comfort", "Quick"],
+      "prep": "3m",
+      "cook": "8m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian-American",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "2 slices", "name": "thick crusty bread" },
+        { "amount": "2 tbsp", "name": "salted butter, softened" },
+        { "amount": "2 cloves", "name": "garlic, minced or pressed" },
+        { "amount": "3 tbsp", "name": "parmesan, finely grated" },
+        { "amount": "optional", "name": "fresh parsley, chilli flakes" }
+      ],
+      "steps": [
+        {
+          "name": "Make garlic butter",
+          "text": "Mix the 2 tablespoons of softened butter, 2 cloves of minced garlic, and 3 tablespoons of grated parmesan until combined."
+        },
+        {
+          "name": "Toast",
+          "text": "Spread the mixture thickly on 2 slices of crusty bread. Broil for 3 to 4 minutes until the edges are golden and the parmesan is crispy. Add fresh parsley and chilli flakes."
+        }
+      ],
+      "notes": "Broiling rather than baking gives you the best crispy outside, soft inside texture.",
+      "photo_search": "toasted crusty bread topped with melted garlic butter and crispy parmesan"
+    },
+    {
+      "id": 43,
+      "name": "Cherry Tomato and Mozzarella Pasta",
+      "slug": "cherry-tomato-mozzarella-pasta",
+      "description": "Fresh blistered tomato sauce with torn mozzarella that melts into hot pasta. Summer simplicity.",
+      "tags": ["Pasta", "Vegetarian", "Quick"],
+      "prep": "5m",
+      "cook": "15m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Pasta",
+      "ingredients": [
+        { "amount": "100g", "name": "pasta (rigatoni or fusilli)" },
+        { "amount": "200g", "name": "cherry tomatoes" },
+        { "amount": "2 tbsp", "name": "olive oil" },
+        { "amount": "2 cloves", "name": "garlic, sliced" },
+        { "amount": "80g", "name": "fresh mozzarella, torn" },
+        { "amount": "handful", "name": "fresh basil" },
+        { "amount": "to taste", "name": "salt, pepper, chilli flakes" }
+      ],
+      "steps": [
+        {
+          "name": "Blister tomatoes",
+          "text": "Heat 2 tablespoons of olive oil over high heat. Add the 200g of cherry tomatoes and let them blister and burst, about 5 minutes. Add 2 cloves of sliced garlic and chilli flakes, cooking 1 minute."
+        },
+        {
+          "name": "Cook pasta",
+          "text": "Boil the 100g of pasta in well salted water until al dente, saving a splash of pasta water."
+        },
+        {
+          "name": "Combine",
+          "text": "Toss the pasta with the tomatoes and a splash of pasta water. Remove from heat. Add 80g of torn mozzarella and basil. The residual heat melts the cheese."
+        }
+      ],
+      "notes": "Tearing the mozzarella rather than slicing gives you irregular melty pockets throughout the pasta.",
+      "photo_search": "bowl of rigatoni pasta with blistered cherry tomatoes, torn mozzarella, and fresh basil"
+    },
+    {
+      "id": 44,
+      "name": "Edamame with Garlic Butter and Chilli",
+      "slug": "edamame-garlic-butter-chilli",
+      "description": "Steamed edamame tossed in garlic butter with chilli. Simple, high protein snack dinner.",
+      "tags": ["Healthy", "Quick", "Snack"],
+      "prep": "2m",
+      "cook": "5m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Japanese-Inspired",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "1 cup", "name": "frozen edamame in pods" },
+        { "amount": "1 tbsp", "name": "salted butter" },
+        { "amount": "1 clove", "name": "garlic, minced" },
+        { "amount": "pinch", "name": "chilli flakes" },
+        { "amount": "to taste", "name": "flaky sea salt" }
+      ],
+      "steps": [
+        {
+          "name": "Cook edamame",
+          "text": "Microwave or boil the 1 cup of edamame pods until hot, then drain."
+        },
+        {
+          "name": "Toss",
+          "text": "Melt 1 tablespoon of butter in a pan, add 1 clove of minced garlic and a pinch of chilli flakes for 30 seconds. Toss the edamame in the garlic butter and season with flaky sea salt."
+        }
+      ],
+      "notes": "Eat by popping the beans directly into your mouth from the pod. The tactile experience is part of it.",
+      "photo_search": "bowl of edamame pods tossed in garlic butter, chilli flakes, and flaky sea salt"
+    },
+    {
+      "id": 45,
+      "name": "Elevated Canned Tomato Soup",
+      "slug": "elevated-canned-tomato-soup",
+      "description": "Good canned tomato bisque made significantly better with cream, butter, and basil oil.",
+      "tags": ["Comfort", "Quick", "Warm"],
+      "prep": "2m",
+      "cook": "8m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Soup",
+      "ingredients": [
+        { "amount": "1 can", "name": "quality tomato soup or bisque (Rao's or Amy's)" },
+        { "amount": "2 tbsp", "name": "heavy cream" },
+        { "amount": "1 tbsp", "name": "butter" },
+        { "amount": "drizzle", "name": "basil oil or good olive oil" },
+        { "amount": "to top", "name": "crackers or croutons, flaky salt" }
+      ],
+      "steps": [
+        {
+          "name": "Heat and enrich",
+          "text": "Warm the 1 can of tomato soup in a saucepan over medium heat. Stir in 2 tablespoons of heavy cream and 1 tablespoon of butter until completely melted and incorporated."
+        },
+        {
+          "name": "Serve",
+          "text": "Pour into a mug or bowl, drizzle with basil oil, and add crackers or croutons with flaky salt."
+        }
+      ],
+      "notes": "The cream and butter addition sounds minor but genuinely transforms any canned soup.",
+      "photo_search": "mug of creamy tomato soup topped with croutons and a drizzle of olive oil"
+    },
+    {
+      "id": 46,
+      "name": "Tuna Salad on Crackers",
+      "slug": "tuna-salad-crackers",
+      "description": "A proper tuna salad. Mayo, celery, dijon, capers. Scooped onto crackers.",
+      "tags": ["No Cook", "Quick", "Protein"],
+      "prep": "8m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "1 can", "name": "quality tuna in olive oil (Wild Planet or Ortiz)" },
+        { "amount": "2 tbsp", "name": "mayonnaise" },
+        { "amount": "1 stalk", "name": "celery, finely diced" },
+        { "amount": "1 tsp", "name": "dijon mustard" },
+        { "amount": "1 tbsp", "name": "capers, roughly chopped" },
+        { "amount": "squeeze", "name": "lemon juice" },
+        { "amount": "to serve", "name": "Ritz or Triscuit crackers" }
+      ],
+      "steps": [
+        {
+          "name": "Mix",
+          "text": "Drain the 1 can of tuna and combine with 2 tablespoons of mayo, 1 finely diced celery stalk, 1 teaspoon of dijon, 1 tablespoon of chopped capers, and lemon juice. Season with black pepper and mix well. Taste and adjust."
+        },
+        {
+          "name": "Plate",
+          "text": "Serve alongside a pile of crackers for scooping."
+        }
+      ],
+      "notes": "Quality tuna makes a huge difference. Ortiz in olive oil is in a completely different league from generic supermarket tuna.",
+      "photo_search": "bowl of tuna salad with celery and capers, served alongside a pile of crackers"
+    },
+    {
+      "id": 47,
+      "name": "Goat Cheese Toast with Honey and Walnuts",
+      "slug": "goat-cheese-honey-walnut-toast",
+      "description": "Tangy goat cheese on toasted bread with honey. Easy, satisfying, and kind of impressive.",
+      "tags": ["Toast", "Cheese", "Sweet-Savory"],
+      "prep": "3m",
+      "cook": "3m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "French-Inspired",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "2 slices", "name": "sourdough, toasted" },
+        { "amount": "60g", "name": "soft goat cheese (chevre)" },
+        { "amount": "1 tbsp", "name": "good honey" },
+        { "amount": "2 tbsp", "name": "walnuts or pecans, toasted" },
+        { "amount": "optional", "name": "sliced figs or pears, fresh thyme" }
+      ],
+      "steps": [
+        {
+          "name": "Spread",
+          "text": "Spread 60g of soft goat cheese generously on the 2 slices of toasted sourdough."
+        },
+        {
+          "name": "Top",
+          "text": "Drizzle with 1 tablespoon of good honey, scatter 2 tablespoons of toasted walnuts, and add fresh thyme if using."
+        }
+      ],
+      "notes": "Room temperature goat cheese spreads much more easily than cold. The combination of honey and goat cheese is very nearly perfect.",
+      "photo_search": "sourdough toast spread with goat cheese, drizzled with honey, and topped with walnuts"
+    },
+    {
+      "id": 48,
+      "name": "Shakshuka for One",
+      "slug": "shakshuka-for-one",
+      "description": "Eggs poached in spiced tomato sauce. A dramatic, satisfying pan dinner.",
+      "tags": ["Eggs", "Spicy", "Warm"],
+      "prep": "5m",
+      "cook": "20m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "North African",
+      "category": "Eggs",
+      "ingredients": [
+        { "amount": "1 can", "name": "diced tomatoes (400g)" },
+        { "amount": "1/2", "name": "onion, diced" },
+        { "amount": "2 cloves", "name": "garlic, minced" },
+        { "amount": "1 tsp", "name": "cumin" },
+        { "amount": "1 tsp", "name": "smoked paprika" },
+        { "amount": "1/2 tsp", "name": "chilli flakes" },
+        { "amount": "2 large", "name": "eggs" },
+        { "amount": "to serve", "name": "crusty bread, feta, fresh parsley" }
+      ],
+      "steps": [
+        {
+          "name": "Build sauce",
+          "text": "Saute the half diced onion in olive oil until soft, 5 minutes. Add 2 cloves of minced garlic, 1 teaspoon of cumin, 1 teaspoon of smoked paprika, and half a teaspoon of chilli flakes, cooking 1 minute. Pour in the 1 can of diced tomatoes and simmer 10 minutes until thickened. Season generously."
+        },
+        {
+          "name": "Add eggs",
+          "text": "Make wells in the sauce with a spoon. Crack the 2 large eggs into the wells. Cover and cook 5 to 7 minutes until whites are set but yolks runny."
+        },
+        {
+          "name": "Serve",
+          "text": "Top with feta and parsley. Eat directly from the pan with crusty bread for dipping."
+        }
+      ],
+      "notes": "Serve directly from the pan. It looks dramatic and saves a dish.",
+      "photo_search": "cast iron skillet of shakshuka with eggs poached in spiced tomato sauce, topped with feta"
+    },
+    {
+      "id": 49,
+      "name": "Cacio e Pepe",
+      "slug": "cacio-e-pepe",
+      "description": "Only three ingredients but requires technique. Cheese, pepper, and pasta water do everything.",
+      "tags": ["Pasta", "Italian", "Quick"],
+      "prep": "2m",
+      "cook": "12m",
+      "serves": "1",
+      "difficulty": "Mid",
+      "cuisine": "Italian",
+      "category": "Pasta",
+      "ingredients": [
+        { "amount": "100g", "name": "spaghetti or tonnarelli" },
+        { "amount": "50g", "name": "Pecorino Romano, finely grated" },
+        { "amount": "20g", "name": "Parmigiano-Reggiano, finely grated" },
+        { "amount": "1.5 tsp", "name": "coarsely cracked black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Toast pepper",
+          "text": "Toast 1.5 teaspoons of cracked pepper in a dry pan until fragrant. Boil 100g of pasta in salted water until 2 minutes before done, saving a cup of water."
+        },
+        {
+          "name": "Make sauce",
+          "text": "Transfer pasta to the pepper pan over medium heat, adding pasta water gradually. Remove from heat, add 50g of pecorino and 20g of parmesan, and toss vigorously until emulsified into a silky sauce."
+        }
+      ],
+      "notes": "Taking the pan off heat before adding cheese prevents it from seizing. The pasta water emulsion is the entire technique.",
+      "photo_search": "bowl of spaghetti in a silky black pepper and pecorino sauce"
+    },
+    {
+      "id": 50,
+      "name": "Tinned Fish Board",
+      "slug": "tinned-fish-board",
+      "description": "The elevated pantry dinner. Sardines, smoked oysters, arranged on a board with all the accompaniments.",
+      "tags": ["Tinned Fish", "No Cook", "Fancy"],
+      "prep": "10m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "European",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "1 tin", "name": "sardines in olive oil" },
+        { "amount": "1 tin", "name": "smoked oysters or mussels" },
+        { "amount": "handful", "name": "Ritz crackers or rye crispbreads" },
+        { "amount": "2 tbsp", "name": "creme fraiche or cream cheese" },
+        { "amount": "1 tbsp", "name": "dijon mustard" },
+        { "amount": "handful", "name": "cornichons and capers" },
+        { "amount": "1/4", "name": "lemon" },
+        { "amount": "optional", "name": "hot sauce, sliced radishes" }
+      ],
+      "steps": [
+        {
+          "name": "Open and arrange",
+          "text": "Open the 1 tin of sardines and 1 tin of smoked oysters and place them directly on a board. Arrange crackers, 2 tablespoons of creme fraiche, 1 tablespoon of dijon mustard, cornichons, and capers around them. Add a lemon wedge."
+        }
+      ],
+      "notes": "The open tins are part of the aesthetic. Place them directly on the board. Fishwife and Ortiz are the top brands.",
+      "photo_search": "wooden board with open tins of sardines and oysters, crackers, cornichons, and mustard"
+    },
+    {
+      "id": 51,
+      "name": "Avocado and Egg Salad Lettuce Cups",
+      "slug": "avocado-egg-salad-lettuce-cups",
+      "description": "Creamy mashed avocado and chopped egg in crisp lettuce. Fresh, filling, no bread needed.",
+      "tags": ["Healthy", "No Cook", "Eggs"],
+      "prep": "10m",
+      "cook": "8m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Salad",
+      "ingredients": [
+        { "amount": "2 large", "name": "eggs, hard boiled and chopped" },
+        { "amount": "1", "name": "ripe avocado, mashed" },
+        { "amount": "1 tsp", "name": "dijon mustard" },
+        { "amount": "squeeze", "name": "lemon juice" },
+        { "amount": "2 stalks", "name": "celery, finely diced" },
+        { "amount": "4-6 leaves", "name": "butter lettuce or romaine" },
+        { "amount": "to taste", "name": "salt, pepper, paprika" }
+      ],
+      "steps": [
+        {
+          "name": "Make filling",
+          "text": "Combine 1 mashed ripe avocado, 2 chopped hard boiled eggs, 1 teaspoon of dijon, lemon juice, and 2 finely diced celery stalks. Season well."
+        },
+        {
+          "name": "Fill cups",
+          "text": "Spoon the mixture into 4 to 6 crisp butter lettuce leaves and dust with paprika."
+        }
+      ],
+      "notes": "No mayo needed. The avocado does all the creamy work.",
+      "photo_search": "crisp lettuce leaves filled with creamy avocado and chopped egg salad, dusted with paprika"
+    },
+    {
+      "id": 52,
+      "name": "Kimchi Butter Ramen",
+      "slug": "kimchi-butter-ramen",
+      "description": "Shin Ramyun with kimchi, butter, and a soft egg. The Korean midnight snack elevated.",
+      "tags": ["Noodles", "Korean", "Spicy"],
+      "prep": "3m",
+      "cook": "6m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Korean",
+      "category": "Noodles",
+      "ingredients": [
+        { "amount": "1 packet", "name": "Shin Ramyun or Samyang noodles" },
+        { "amount": "1/4 cup", "name": "kimchi, roughly chopped" },
+        { "amount": "1 tbsp", "name": "butter" },
+        { "amount": "1 large", "name": "egg" },
+        { "amount": "1 tbsp", "name": "kimchi juice from the jar" },
+        { "amount": "to garnish", "name": "spring onion, sesame seeds, nori strips" }
+      ],
+      "steps": [
+        {
+          "name": "Cook noodles",
+          "text": "Cook the 1 packet of noodles per instructions. In the last minute, add 1/4 cup of chopped kimchi and 1 tablespoon of kimchi juice."
+        },
+        {
+          "name": "Finish",
+          "text": "Stir in 1 tablespoon of butter until melted. Fry or poach the 1 large egg separately. Top the noodles with the egg, spring onions, and sesame seeds."
+        }
+      ],
+      "notes": "Aged kimchi (the sour stuff in the back of the fridge) works best. Its fermented tang cuts through the richness.",
+      "photo_search": "bowl of ramen with kimchi, butter, an egg, and spring onions"
+    },
+    {
+      "id": 53,
+      "name": "Medjool Dates with Almond Butter and Flaky Salt",
+      "slug": "medjool-dates-almond-butter-salt",
+      "description": "Nature's candy stuffed with almond butter. The sweet salty snack that feels indulgent.",
+      "tags": ["Sweet", "No Cook", "Snack"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Middle Eastern",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "4-5", "name": "Medjool dates, pitted" },
+        { "amount": "2 tbsp", "name": "almond butter, smooth and natural" },
+        { "amount": "pinch", "name": "flaky sea salt" },
+        { "amount": "optional", "name": "dark chocolate drizzle, toasted almonds inside" }
+      ],
+      "steps": [
+        {
+          "name": "Stuff",
+          "text": "Slice the 4 to 5 Medjool dates lengthways and remove the pits. Fill each with a spoonful of 2 tablespoons of almond butter. Pinch closed slightly."
+        },
+        {
+          "name": "Finish",
+          "text": "Arrange on a plate, sprinkle with flaky sea salt, and drizzle with dark chocolate if using."
+        }
+      ],
+      "notes": "The viral date bark trend started here. These also freeze well for a cold caramel like snack.",
+      "photo_search": "plate of Medjool dates stuffed with almond butter and sprinkled with flaky sea salt"
+    },
+    {
+      "id": 54,
+      "name": "Sheet Pan Nachos",
+      "slug": "sheet-pan-nachos",
+      "description": "Maximum chip to topping ratio achieved by spreading everything on one tray.",
+      "tags": ["Comfort", "Snack", "Cheese"],
+      "prep": "5m",
+      "cook": "12m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Mexican-American",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "2 large handfuls", "name": "tortilla chips" },
+        { "amount": "80g", "name": "Monterey Jack or cheddar, shredded" },
+        { "amount": "1/4 can", "name": "black beans, drained" },
+        { "amount": "2 tbsp", "name": "pickled jalapenos" },
+        { "amount": "to serve", "name": "sour cream, salsa, guacamole, hot sauce" }
+      ],
+      "steps": [
+        {
+          "name": "Layer",
+          "text": "Spread 2 large handfuls of tortilla chips in a single layer on a baking sheet. Scatter 1/4 can of drained black beans, 2 tablespoons of pickled jalapenos, and 80g of shredded cheese over every chip."
+        },
+        {
+          "name": "Bake",
+          "text": "Bake at 400F/200C for 8 to 12 minutes until melted."
+        },
+        {
+          "name": "Top and eat",
+          "text": "Add cold sour cream and salsa. Eat directly from the tray."
+        }
+      ],
+      "notes": "Eat straight from the sheet pan. It keeps them crispy and saves a dish.",
+      "photo_search": "sheet pan of tortilla chips loaded with melted cheese, jalapenos, and black beans"
+    },
+    {
+      "id": 55,
+      "name": "Miso Soup with Tofu and Noodles",
+      "slug": "miso-soup-tofu-noodles",
+      "description": "Warm, savory, deeply comforting. A proper miso broth with noodles and soft tofu.",
+      "tags": ["Soup", "Warm", "Japanese"],
+      "prep": "5m",
+      "cook": "10m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Japanese",
+      "category": "Soup",
+      "ingredients": [
+        { "amount": "2 cups", "name": "water or dashi stock" },
+        { "amount": "2 tbsp", "name": "white miso paste" },
+        { "amount": "100g", "name": "silken tofu, cubed" },
+        { "amount": "1 portion", "name": "thin noodles (somen or ramen)" },
+        { "amount": "1 tsp", "name": "soy sauce" },
+        { "amount": "1 tsp", "name": "sesame oil" },
+        { "amount": "to garnish", "name": "spring onion, nori, sesame seeds" }
+      ],
+      "steps": [
+        {
+          "name": "Make broth",
+          "text": "Heat 2 cups of water to just below boiling. Whisk in 2 tablespoons of miso paste until dissolved. Add 1 teaspoon of soy sauce and 1 teaspoon of sesame oil."
+        },
+        {
+          "name": "Add and serve",
+          "text": "Cook 1 portion of noodles separately and add to a bowl. Ladle the hot broth over, add 100g of cubed silken tofu, spring onions, nori, and sesame seeds."
+        }
+      ],
+      "notes": "Never boil miso. Add it at the very end off the heat for best flavor.",
+      "photo_search": "bowl of miso soup with silken tofu, noodles, spring onions, and nori"
+    },
+    {
+      "id": 56,
+      "name": "Hot Honey Butter Toast",
+      "slug": "hot-honey-butter-toast",
+      "description": "The most minimal toast possible. Just good bread, real butter, and hot honey.",
+      "tags": ["Toast", "Sweet-Savory", "Quick"],
+      "prep": "2m",
+      "cook": "3m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "2 slices", "name": "thick white bread or brioche, toasted" },
+        { "amount": "2 tbsp", "name": "salted butter, room temperature" },
+        { "amount": "1 tbsp", "name": "hot honey (Mike's Hot Honey or homemade)" },
+        { "amount": "pinch", "name": "flaky salt" }
+      ],
+      "steps": [
+        {
+          "name": "Toast and butter",
+          "text": "Toast 2 slices of bread until golden. Spread 2 tablespoons of butter generously while still hot so it melts in."
+        },
+        {
+          "name": "Drizzle",
+          "text": "Drizzle 1 tablespoon of hot honey over the buttery toast and add a pinch of flaky salt."
+        }
+      ],
+      "notes": "This sounds too simple to be a meal. It is not.",
+      "photo_search": "thick toast heavily buttered and drizzled with hot honey and flaky salt"
+    },
+    {
+      "id": 57,
+      "name": "Loaded Sweet Potato with Black Beans",
+      "slug": "loaded-sweet-potato-black-beans",
+      "description": "Baked sweet potato with black beans, avocado, and lime crema. A whole satisfying meal.",
+      "tags": ["Vegetarian", "Filling", "Bowl"],
+      "prep": "5m",
+      "cook": "50m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Mexican-Inspired",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "1 large", "name": "sweet potato" },
+        { "amount": "1/2 can", "name": "black beans, drained and warmed" },
+        { "amount": "1/2", "name": "avocado, sliced" },
+        { "amount": "2 tbsp", "name": "sour cream or Greek yogurt" },
+        { "amount": "squeeze", "name": "lime juice" },
+        { "amount": "handful", "name": "fresh cilantro" },
+        { "amount": "to taste", "name": "salt, hot sauce, cumin" }
+      ],
+      "steps": [
+        {
+          "name": "Bake potato",
+          "text": "Rub 1 large sweet potato with oil and salt, pierce it, and bake at 425F/220C for 45 to 50 minutes until soft."
+        },
+        {
+          "name": "Load",
+          "text": "Split it open, fluff the inside, and top with 1/2 can of warmed black beans, half a sliced avocado, lime seasoned sour cream, and cilantro."
+        }
+      ],
+      "notes": "Season the inside of the potato with salt and a pat of butter before adding toppings.",
+      "photo_search": "baked sweet potato split open and loaded with black beans, avocado, and lime crema"
+    },
+    {
+      "id": 58,
+      "name": "Caramelized Onion Dip with Ridged Chips",
+      "slug": "caramelized-onion-dip-ridged-chips",
+      "description": "Caramelized onion dip made from scratch. Vastly superior to the packet kind.",
+      "tags": ["Dip", "Comfort", "Snack"],
+      "prep": "5m",
+      "cook": "35m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Dip",
+      "ingredients": [
+        { "amount": "2", "name": "yellow onions, thinly sliced" },
+        { "amount": "2 tbsp", "name": "butter" },
+        { "amount": "1/2 cup", "name": "sour cream" },
+        { "amount": "2 tbsp", "name": "cream cheese, softened" },
+        { "amount": "1 tsp", "name": "garlic powder" },
+        { "amount": "to taste", "name": "salt, black pepper, Worcestershire sauce" },
+        { "amount": "to serve", "name": "ridged potato chips (Ruffles)" }
+      ],
+      "steps": [
+        {
+          "name": "Caramelize onions",
+          "text": "Cook 2 thinly sliced yellow onions in 2 tablespoons of butter with salt over low heat for 30 minutes, stirring occasionally, until deep golden and jammy. Let cool."
+        },
+        {
+          "name": "Make dip",
+          "text": "Mix 1/2 cup of sour cream, 2 tablespoons of cream cheese, 1 teaspoon of garlic powder, and Worcestershire. Fold in the cooled onions and season."
+        },
+        {
+          "name": "Serve",
+          "text": "Serve with ridged chips. The dip is better after an hour in the fridge."
+        }
+      ],
+      "notes": "You cannot rush caramelized onions. Low and slow for 30 minutes minimum.",
+      "photo_search": "bowl of creamy caramelized onion dip served with ridged potato chips"
+    },
+    {
+      "id": 59,
+      "name": "Spaghetti Aglio e Olio",
+      "slug": "spaghetti-aglio-e-olio",
+      "description": "Spaghetti with garlic, olive oil, chilli, and parsley. Italian simplicity at its finest.",
+      "tags": ["Pasta", "Italian", "Quick"],
+      "prep": "3m",
+      "cook": "15m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Pasta",
+      "ingredients": [
+        { "amount": "100g", "name": "spaghetti" },
+        { "amount": "4 cloves", "name": "garlic, very thinly sliced" },
+        { "amount": "3 tbsp", "name": "good olive oil" },
+        { "amount": "1/2 tsp", "name": "chilli flakes" },
+        { "amount": "large handful", "name": "fresh flat leaf parsley, roughly chopped" },
+        { "amount": "to taste", "name": "salt and black pepper" },
+        { "amount": "optional", "name": "parmesan, butter toasted breadcrumbs" }
+      ],
+      "steps": [
+        {
+          "name": "Cook pasta",
+          "text": "Boil 100g of spaghetti in well salted water until al dente, saving a cup of water."
+        },
+        {
+          "name": "Toast garlic",
+          "text": "Warm 3 tablespoons of olive oil in a pan over medium heat. Add 4 cloves of sliced garlic and cook slowly until golden. Add 1/2 teaspoon of chilli flakes."
+        },
+        {
+          "name": "Combine",
+          "text": "Add drained pasta and a splash of pasta water. Toss vigorously until emulsified. Add a large handful of parsley and toss again."
+        }
+      ],
+      "notes": "Garlic must be sliced and toasted slowly to golden. Never brown or it becomes bitter.",
+      "photo_search": "bowl of spaghetti in garlic and olive oil with chilli flakes and fresh parsley"
+    },
+    {
+      "id": 60,
+      "name": "Savory Cottage Cheese Bowl",
+      "slug": "savory-cottage-cheese-bowl",
+      "description": "The viral protein bowl. Cottage cheese as the base for a savory, satisfying dinner.",
+      "tags": ["High Protein", "Healthy", "Quick"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Bowl",
+      "ingredients": [
+        { "amount": "1 cup", "name": "full fat cottage cheese" },
+        { "amount": "1/2", "name": "cucumber, diced" },
+        { "amount": "handful", "name": "cherry tomatoes, halved" },
+        { "amount": "2 tbsp", "name": "everything bagel seasoning" },
+        { "amount": "drizzle", "name": "olive oil or chilli crisp" },
+        { "amount": "optional", "name": "sliced avocado, pickled jalapenos, fresh herbs" }
+      ],
+      "steps": [
+        {
+          "name": "Bowl it",
+          "text": "Scoop 1 cup of cottage cheese into a wide bowl. Arrange half a diced cucumber and a handful of halved cherry tomatoes on top. Season with 2 tablespoons of everything bagel seasoning, drizzle with olive oil or chilli crisp."
+        }
+      ],
+      "notes": "Good Cultures or Kalona Supernatural cottage cheese are notably better than generic brands.",
+      "photo_search": "bowl of cottage cheese topped with diced cucumbers, cherry tomatoes, and everything bagel seasoning"
+    },
+    {
+      "id": 61,
+      "name": "Panzanella",
+      "slug": "panzanella",
+      "description": "Tuscan bread salad. Stale bread soaked in the juices of very ripe tomatoes.",
+      "tags": ["Salad", "Italian", "Vegetarian"],
+      "prep": "15m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Salad",
+      "ingredients": [
+        { "amount": "2 thick slices", "name": "day old sourdough, torn into chunks" },
+        { "amount": "2 large", "name": "very ripe tomatoes, chunked" },
+        { "amount": "1/4", "name": "red onion, thinly sliced" },
+        { "amount": "handful", "name": "fresh basil" },
+        { "amount": "2 tbsp", "name": "excellent olive oil" },
+        { "amount": "1 tbsp", "name": "red wine vinegar" },
+        { "amount": "to taste", "name": "flaky salt and black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Salt tomatoes",
+          "text": "Season 2 chunked tomatoes generously with salt and let sit 10 minutes. They will release juices."
+        },
+        {
+          "name": "Soak bread",
+          "text": "Toss 2 slices of torn sourdough, 1/4 thinly sliced red onion, 2 tablespoons of olive oil, and 1 tablespoon of red wine vinegar with the tomatoes. Let sit 5 to 10 minutes so the bread absorbs the juices."
+        },
+        {
+          "name": "Finish",
+          "text": "Add a handful of fresh basil, toss, and serve at room temperature."
+        }
+      ],
+      "notes": "This only works with stale bread and peak season tomatoes. Both requirements are non negotiable.",
+      "photo_search": "rustic bowl of panzanella salad with torn sourdough, juicy tomatoes, red onion, and basil"
+    },
+    {
+      "id": 62,
+      "name": "Matcha Latte and Banana with Peanut Butter",
+      "slug": "matcha-latte-banana-peanut-butter",
+      "description": "The girl dinner that is just a drink and a banana with nut butter. Deeply valid.",
+      "tags": ["Drink", "Sweet", "No Cook"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Japanese-Inspired",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "1 tsp", "name": "ceremonial grade matcha powder" },
+        { "amount": "2 oz", "name": "hot water (175F/80C, not boiling)" },
+        { "amount": "6 oz", "name": "oat milk, frothed or heated" },
+        { "amount": "1 tsp", "name": "honey or maple syrup (optional)" },
+        { "amount": "1", "name": "banana" },
+        { "amount": "2 tbsp", "name": "peanut or almond butter for dipping" }
+      ],
+      "steps": [
+        {
+          "name": "Make matcha",
+          "text": "Sift 1 teaspoon of matcha into a mug, add 2 oz of hot water, and whisk vigorously until frothy. Pour in 6 oz of warm frothed oat milk."
+        },
+        {
+          "name": "Add oat milk",
+          "text": "Serve with 1 banana and 2 tablespoons of peanut butter for dipping."
+        }
+      ],
+      "notes": "Ceremonial grade matcha is not a luxury. It is the only kind that tastes good when made simply.",
+      "photo_search": "mug of frothy green matcha latte served with a banana and a side of peanut butter"
+    },
+    {
+      "id": 63,
+      "name": "White Bean Dip with Lemon and Rosemary",
+      "slug": "white-bean-dip-lemon-rosemary",
+      "description": "Blended white beans with olive oil and lemon. A more interesting alternative to hummus.",
+      "tags": ["Dip", "Vegetarian", "Mediterranean"],
+      "prep": "8m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Mediterranean",
+      "category": "Dip",
+      "ingredients": [
+        { "amount": "1 can", "name": "cannellini or butter beans, drained" },
+        { "amount": "3 tbsp", "name": "good olive oil" },
+        { "amount": "1", "name": "lemon, juiced and zested" },
+        { "amount": "1 sprig", "name": "fresh rosemary or 1/2 tsp dried" },
+        { "amount": "1 clove", "name": "garlic" },
+        { "amount": "to serve", "name": "crackers, crudites, warm pita" }
+      ],
+      "steps": [
+        {
+          "name": "Blend",
+          "text": "Blend 1 can of drained beans, 3 tablespoons of olive oil, the juice and zest of 1 lemon, 1 sprig of rosemary, and 1 clove of garlic until completely smooth. Season well with salt."
+        },
+        {
+          "name": "Serve",
+          "text": "Spread in a bowl, drizzle with more olive oil, and serve with crackers."
+        }
+      ],
+      "notes": "This also works brilliantly spread thickly on toast and topped with roasted cherry tomatoes.",
+      "photo_search": "bowl of creamy white bean dip with olive oil, lemon, and rosemary, served with crackers"
+    },
+    {
+      "id": 64,
+      "name": "Egg Yolk Garlic Pasta",
+      "slug": "egg-yolk-garlic-pasta",
+      "description": "Garlic pasta finished with an egg yolk. A solo carbonara for when you cannot be bothered.",
+      "tags": ["Pasta", "Eggs", "Quick"],
+      "prep": "3m",
+      "cook": "12m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Pasta",
+      "ingredients": [
+        { "amount": "100g", "name": "spaghetti" },
+        { "amount": "3 cloves", "name": "garlic, thinly sliced" },
+        { "amount": "2 tbsp", "name": "olive oil" },
+        { "amount": "1", "name": "egg yolk" },
+        { "amount": "30g", "name": "parmesan, grated" },
+        { "amount": "to taste", "name": "salt, black pepper, chilli flakes" }
+      ],
+      "steps": [
+        {
+          "name": "Cook pasta and garlic",
+          "text": "Boil 100g of pasta in salted water. Toast 3 cloves of sliced garlic in 2 tablespoons of olive oil until golden, saving pasta water."
+        },
+        {
+          "name": "Combine",
+          "text": "Toss hot pasta with the oil and a splash of pasta water off heat. Let cool slightly, then add 1 egg yolk and toss rapidly to create a creamy sauce."
+        },
+        {
+          "name": "Finish",
+          "text": "Add 30g of grated parmesan, toss, and season with chilli flakes and black pepper."
+        }
+      ],
+      "notes": "Letting the pasta cool very slightly before adding the yolk is what prevents scrambled eggs.",
+      "photo_search": "bowl of spaghetti in a creamy garlic sauce with grated parmesan and chilli flakes"
+    },
+      {
+      "id": 65,
+      "name": "4th of July Burrata Plate",
+      "slug": "4th-of-july-burrata-plate",
+      "description": "Red, white, and blue on a plate. Creamy burrata, sweet strawberries, and blueberries for a festive, no cook girl dinner.",
+      "tags": [
+        "No Cook",
+        "Fancy",
+        "Holiday"
+      ],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Snack Plate",
+      "ingredients": [
+        {
+          "amount": "1 ball",
+          "name": "fresh burrata"
+        },
+        {
+          "amount": "1/2 cup",
+          "name": "strawberries, hulled and halved"
+        },
+        {
+          "amount": "1/4 cup",
+          "name": "fresh blueberries"
+        },
+        {
+          "amount": "handful",
+          "name": "crackers or toasted baguette slices"
+        },
+        {
+          "amount": "drizzle",
+          "name": "balsamic glaze"
+        },
+        {
+          "amount": "drizzle",
+          "name": "good olive oil"
+        },
+        {
+          "amount": "to taste",
+          "name": "flaky sea salt and black pepper"
+        },
+        {
+          "amount": "optional",
+          "name": "fresh mint or basil leaves"
+        }
+      ],
+      "steps": [
+        {
+          "name": "Arrange",
+          "text": "Place the burrata in the center of a plate. Arrange the halved strawberries and blueberries around it in distinct sections to emphasize the red, white, and blue colors. Tuck in fresh mint or basil leaves if using."
+        },
+        {
+          "name": "Dress and Serve",
+          "text": "Drizzle the burrata and fruit generously with olive oil and balsamic glaze. Season with flaky sea salt and black pepper. Serve immediately with crackers or toasted baguette for scooping."
+        }
+      ],
+      "notes": "The ultimate 4th of July girl dinner. No cooking, just aesthetic snacking. Use fresh, in-season berries for the best flavor and sweetness.",
+      "photo_search": "dark moody plate with burrata, fresh strawberries, blueberries, balsamic glaze, and crackers overhead flatlay food photography"
+    },
+    {
+      "id": 66,
+      "name": "Stracciatella with Olive Oil and Grilled Bread",
+      "slug": "stracciatella-olive-oil-grilled-bread",
+      "description": "Creamy stracciatella drizzled with olive oil and black pepper. The simplest luxury.",
+      "tags": ["No Cook", "Italian", "Fancy"],
+      "prep": "3m",
+      "cook": "3m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "80g", "name": "stracciatella or burrata cream" },
+        { "amount": "2 tbsp", "name": "excellent extra virgin olive oil" },
+        { "amount": "to taste", "name": "flaky sea salt and cracked black pepper" },
+        { "amount": "to serve", "name": "toasted sourdough or grilled bread" },
+        { "amount": "optional", "name": "chilli oil, honey, fresh herbs, or lemon zest" }
+      ],
+      "steps": [
+        {
+          "name": "Serve",
+          "text": "Spoon 80g of stracciatella onto a plate. Drizzle generously with 2 tablespoons of excellent olive oil and season with flaky salt and cracked black pepper. Serve alongside toasted sourdough for scooping."
+        }
+      ],
+      "notes": "Stracciatella is the creamy filling from burrata. Many Italian delis sell it separately.",
+      "photo_search": "plate of creamy stracciatella cheese drizzled with olive oil, served with grilled bread"
+    },
+    {
+      "id": 67,
+      "name": "Frittata for One",
+      "slug": "frittata-for-one",
+      "description": "Open face Italian omelette with whatever is in the fridge. Elegant and effortless.",
+      "tags": ["Eggs", "Versatile", "Quick"],
+      "prep": "5m",
+      "cook": "12m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Eggs",
+      "ingredients": [
+        { "amount": "3 large", "name": "eggs" },
+        { "amount": "2 tbsp", "name": "whole milk or cream" },
+        { "amount": "30g", "name": "parmesan or pecorino, grated" },
+        { "amount": "1 tbsp", "name": "olive oil or butter" },
+        { "amount": "choice of fillings", "name": "sliced cherry tomatoes, sauteed spinach, leftover potato, herbs, cheese" },
+        { "amount": "to taste", "name": "salt and black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Beat eggs",
+          "text": "Whisk 3 large eggs with 2 tablespoons of milk, 30g of grated parmesan, salt, and pepper."
+        },
+        {
+          "name": "Cook",
+          "text": "Heat 1 tablespoon of oil in an oven safe pan, add fillings, and pour in the eggs. Cook over medium heat until edges set."
+        },
+        {
+          "name": "Finish under broiler",
+          "text": "Transfer pan to broiler for 2 to 3 minutes until golden and just set. Slice and serve from the pan."
+        }
+      ],
+      "notes": "Unlike an omelette, a frittata is never folded. It is finished under the broiler and sliced like a pizza.",
+      "photo_search": "small skillet frittata with cherry tomatoes and herbs, sliced and golden"
+    },
+    {
+      "id": 68,
+      "name": "Labneh with Za'atar and Olive Oil",
+      "slug": "labneh-zaatar-olive-oil",
+      "description": "Strained yogurt cheese with za'atar and olive oil. The Middle Eastern answer to cream cheese.",
+      "tags": ["No Cook", "Mediterranean", "Cheese"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Lebanese",
+      "category": "Dip",
+      "ingredients": [
+        { "amount": "1/2 cup", "name": "labneh or thick Greek yogurt" },
+        { "amount": "1 tbsp", "name": "za'atar spice blend" },
+        { "amount": "2 tbsp", "name": "good olive oil" },
+        { "amount": "to serve", "name": "warm pita, radishes, cucumber, olives" },
+        { "amount": "optional", "name": "sliced tomatoes, mint" }
+      ],
+      "steps": [
+        {
+          "name": "Plate",
+          "text": "Spread 1/2 cup of labneh in a wide bowl. Drizzle with 2 tablespoons of olive oil and dust heavily with 1 tablespoon of za'atar. Serve with warm pita, radishes, and cucumber."
+        }
+      ],
+      "notes": "Za'atar is a blend of dried thyme, sesame seeds, sumac, and salt. Find it at any Middle Eastern grocery.",
+      "photo_search": "bowl of labneh drizzled with olive oil and dusted with za'atar, served with pita"
+    },
+    {
+      "id": 69,
+      "name": "Pasta e Fagioli",
+      "slug": "pasta-e-fagioli",
+      "description": "Italian peasant soup. Pasta and white beans in a rich tomato rosemary broth.",
+      "tags": ["Soup", "Italian", "Comfort"],
+      "prep": "5m",
+      "cook": "25m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Soup",
+      "ingredients": [
+        { "amount": "1 can", "name": "cannellini beans, drained" },
+        { "amount": "1/2 can", "name": "crushed tomatoes" },
+        { "amount": "1 cup", "name": "chicken or vegetable broth" },
+        { "amount": "50g", "name": "small pasta (ditalini or small shells)" },
+        { "amount": "2 cloves", "name": "garlic, minced" },
+        { "amount": "1 sprig", "name": "fresh rosemary" },
+        { "amount": "2 tbsp", "name": "olive oil" },
+        { "amount": "to serve", "name": "parmesan rind in pot, extra olive oil, grated parmesan" }
+      ],
+      "steps": [
+        {
+          "name": "Build base",
+          "text": "Saute 2 cloves of minced garlic in 2 tablespoons of olive oil until golden. Add 1/2 can of crushed tomatoes, 1 cup of broth, 1 sprig of rosemary, and a parmesan rind. Simmer 10 minutes."
+        },
+        {
+          "name": "Add beans and pasta",
+          "text": "Add half of the 1 can of beans whole and mash the rest to thicken. Add 50g of small pasta and cook until tender."
+        },
+        {
+          "name": "Serve",
+          "text": "Ladle into a bowl, drizzle with oil, and add grated parmesan."
+        }
+      ],
+      "notes": "Adding a parmesan rind to the pot while it simmers adds incredible depth to the broth.",
+      "photo_search": "bowl of pasta e fagioli soup with white beans, small pasta, and a drizzle of olive oil"
+    },
+    {
+      "id": 70,
+      "name": "Homemade Crunchwrap",
+      "slug": "homemade-crunchwrap",
+      "description": "Flour tortilla folded around all the Taco Bell fixings. The ultimate comfort DIY.",
+      "tags": ["Comfort", "Mexican", "Filling"],
+      "prep": "10m",
+      "cook": "10m",
+      "serves": "1",
+      "difficulty": "Mid",
+      "cuisine": "Mexican-American",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "1 large (12 inch)", "name": "flour tortilla" },
+        { "amount": "2 tbsp", "name": "sour cream" },
+        { "amount": "1/4 cup", "name": "seasoned ground beef or black beans" },
+        { "amount": "handful", "name": "shredded cheddar" },
+        { "amount": "handful", "name": "shredded lettuce" },
+        { "amount": "2 tbsp", "name": "pico de gallo or salsa" },
+        { "amount": "1", "name": "tostada shell or large round tortilla chip" }
+      ],
+      "steps": [
+        {
+          "name": "Layer",
+          "text": "Spread 2 tablespoons of sour cream, 1/4 cup of beef or beans, a handful of cheese, 1 tostada, a handful of lettuce, and 2 tablespoons of salsa in the center of a large tortilla."
+        },
+        {
+          "name": "Fold",
+          "text": "Fold the edges up in pleats all the way around. Press flat."
+        },
+        {
+          "name": "Toast",
+          "text": "Cook in a dry pan seam side down over medium heat, pressing down, until golden and sealed."
+        }
+      ],
+      "notes": "The tostada in the middle is the key structural element. It gives you that crunchy layer.",
+      "photo_search": "golden crispy crunchwrap cut in half to show layers of beef, cheese, and lettuce"
+    },
+    {
+      "id": 71,
+      "name": "Prosciutto and Fig Toast",
+      "slug": "prosciutto-fig-toast",
+      "description": "Salty cured meat and sweet figs on ricotta toast. A two minute fancy moment.",
+      "tags": ["Toast", "Fancy", "Sweet-Savory"],
+      "prep": "5m",
+      "cook": "3m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "2 slices", "name": "sourdough, toasted" },
+        { "amount": "3 tbsp", "name": "whole milk ricotta" },
+        { "amount": "2 slices", "name": "prosciutto" },
+        { "amount": "2", "name": "fresh or dried figs, halved or sliced" },
+        { "amount": "drizzle", "name": "honey or balsamic glaze" },
+        { "amount": "to taste", "name": "flaky salt and black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Top",
+          "text": "Spread 3 tablespoons of ricotta on toasted sourdough. Layer 2 slices of prosciutto and sliced figs. Drizzle with honey or balsamic glaze and season with flaky salt and pepper."
+        }
+      ],
+      "notes": "Fresh figs in season are extraordinary here. Out of season, good dried figs or fig jam both work.",
+      "photo_search": "sourdough toast spread with ricotta, topped with prosciutto, figs, and a honey drizzle"
+    },
+    {
+      "id": 72,
+      "name": "Anchovy Butter Toast",
+      "slug": "anchovy-butter-toast",
+      "description": "For the umami obsessed. Anchovies mashed into butter on very good toast.",
+      "tags": ["Toast", "Umami", "Fancy"],
+      "prep": "5m",
+      "cook": "3m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "French",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "3-4", "name": "oil packed anchovy fillets" },
+        { "amount": "2 tbsp", "name": "salted butter, room temperature" },
+        { "amount": "2 slices", "name": "sourdough, toasted" },
+        { "amount": "squeeze", "name": "lemon" },
+        { "amount": "optional", "name": "sliced radish, fresh parsley, soft boiled egg" }
+      ],
+      "steps": [
+        {
+          "name": "Make anchovy butter",
+          "text": "Mash 3 to 4 anchovy fillets and 2 tablespoons of butter with a fork until combined, adding a squeeze of lemon."
+        },
+        {
+          "name": "Spread",
+          "text": "Spread generously on hot toast. Top with sliced radishes and parsley if using."
+        }
+      ],
+      "notes": "Anchovies in butter lose their fishiness and become pure savory depth. Anyone who thinks they do not like anchovies usually likes this.",
+      "photo_search": "sourdough toast spread with anchovy butter, topped with sliced radishes and lemon"
+    },
+    {
+      "id": 73,
+      "name": "Stuffed Bell Pepper with Rice and Feta",
+      "slug": "stuffed-bell-pepper-rice-feta",
+      "description": "Two halves of roasted bell pepper filled with herby rice and feta. Easy solo dinner.",
+      "tags": ["Vegetarian", "Filling", "Baked"],
+      "prep": "10m",
+      "cook": "35m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Mediterranean",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "1 large", "name": "bell pepper, halved and seeded" },
+        { "amount": "1/2 cup", "name": "cooked rice" },
+        { "amount": "50g", "name": "feta, crumbled" },
+        { "amount": "handful", "name": "cherry tomatoes, halved" },
+        { "amount": "2 tbsp", "name": "olive oil" },
+        { "amount": "handful", "name": "fresh herbs (parsley, mint, or dill)" },
+        { "amount": "to taste", "name": "salt, pepper, dried oregano" }
+      ],
+      "steps": [
+        {
+          "name": "Roast pepper",
+          "text": "Brush 1 halved bell pepper with 2 tablespoons of oil and roast at 400F/200C for 15 minutes to soften."
+        },
+        {
+          "name": "Make filling",
+          "text": "Mix 1/2 cup of cooked rice, 50g of crumbled feta, a handful of tomatoes, herbs, and a drizzle of olive oil. Season well."
+        },
+        {
+          "name": "Fill and finish",
+          "text": "Fill the peppers with rice mixture and bake another 15 to 20 minutes until golden."
+        }
+      ],
+      "notes": "Any leftover rice works perfectly here. Great meal to make when you have rice from the night before.",
+      "photo_search": "baked bell pepper halves stuffed with herby rice, feta, and cherry tomatoes"
+    },
+    {
+      "id": 74,
+      "name": "Carbonara for One",
+      "slug": "carbonara-for-one",
+      "description": "True carbonara. No cream, just eggs, guanciale, and pecorino. Perfect.",
+      "tags": ["Pasta", "Italian", "Mid"],
+      "prep": "5m",
+      "cook": "15m",
+      "serves": "1",
+      "difficulty": "Mid",
+      "cuisine": "Italian",
+      "category": "Pasta",
+      "ingredients": [
+        { "amount": "100g", "name": "spaghetti or rigatoni" },
+        { "amount": "50g", "name": "guanciale or pancetta, cubed" },
+        { "amount": "1 large", "name": "egg plus 1 egg yolk" },
+        { "amount": "30g", "name": "Pecorino Romano, finely grated" },
+        { "amount": "20g", "name": "Parmigiano-Reggiano, finely grated" },
+        { "amount": "generous", "name": "coarsely cracked black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Render guanciale",
+          "text": "Cook 50g of guanciale in a cold pan over medium heat until fat renders and edges crisp. Remove from heat."
+        },
+        {
+          "name": "Make sauce",
+          "text": "Whisk 1 egg, 1 yolk, 30g of pecorino, and 20g of parmesan together with generous black pepper."
+        },
+        {
+          "name": "Combine carefully",
+          "text": "Add hot pasta to the guanciale pan off heat. Add egg mixture, tossing rapidly, adding pasta water gradually until silky."
+        }
+      ],
+      "notes": "The pan must be off heat before adding eggs. One degree too hot and you have scrambled egg pasta.",
+      "photo_search": "bowl of spaghetti carbonara with crispy guanciale and a heavy dusting of black pepper"
+    },
+    {
+      "id": 75,
+      "name": "Everything Bagel Salmon Bites",
+      "slug": "everything-bagel-salmon-bites",
+      "description": "All the vibes of a bagel and lox without the bagel. Refreshing, salty, quick.",
+      "tags": ["No Cook", "Salmon", "Quick"],
+      "prep": "8m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "1 large", "name": "English cucumber, cut into thick rounds" },
+        { "amount": "2 tbsp", "name": "cream cheese" },
+        { "amount": "60g", "name": "smoked salmon" },
+        { "amount": "1 tbsp", "name": "everything bagel seasoning" },
+        { "amount": "optional", "name": "capers, dill, micro greens, lemon zest" }
+      ],
+      "steps": [
+        {
+          "name": "Top",
+          "text": "Spread 2 tablespoons of cream cheese on thick cucumber rounds. Top with 60g of smoked salmon and dust with 1 tablespoon of everything bagel seasoning. Add capers or dill."
+        }
+      ],
+      "notes": "These are also great on endive spears for a slightly more elegant bite.",
+      "photo_search": "cucumber rounds topped with cream cheese, smoked salmon, and everything bagel seasoning"
+    },
+    {
+      "id": 76,
+      "name": "Creamy Mushroom Toast with Thyme",
+      "slug": "creamy-mushroom-toast-thyme",
+      "description": "Sauteed mushrooms in garlic and thyme, splashed with cream, on thick buttered toast.",
+      "tags": ["Toast", "Vegetarian", "Comfort"],
+      "prep": "5m",
+      "cook": "12m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "British-Inspired",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "200g", "name": "mixed mushrooms (cremini, shiitake, oyster)" },
+        { "amount": "2 cloves", "name": "garlic, minced" },
+        { "amount": "1 tbsp butter plus 1 tbsp", "name": "olive oil" },
+        { "amount": "2 sprigs", "name": "fresh thyme or 1/2 tsp dried" },
+        { "amount": "3 tbsp", "name": "heavy cream" },
+        { "amount": "2 slices", "name": "thick sourdough, toasted and buttered" },
+        { "amount": "to taste", "name": "salt, black pepper, lemon juice" }
+      ],
+      "steps": [
+        {
+          "name": "Saute mushrooms",
+          "text": "Saute 200g of mushrooms in 1 tbsp butter and 1 tbsp oil without stirring until browned. Add 2 cloves of minced garlic and 2 sprigs of thyme, then 3 tablespoons of cream to reduce."
+        },
+        {
+          "name": "Add aromatics and cream",
+          "text": "Season with salt, pepper, and a squeeze of lemon. Spoon over buttered sourdough."
+        }
+      ],
+      "notes": "Do not stir mushrooms immediately. Letting them brown first is what creates the deep savory flavor.",
+      "photo_search": "sourdough toast piled high with mushrooms in a creamy garlic thyme sauce"
+    },
+    {
+      "id": 77,
+      "name": "Crispy Fried Rice",
+      "slug": "crispy-fried-rice",
+      "description": "Day old rice fried until crispy with soy, egg, and sesame. The solo dinner staple.",
+      "tags": ["Rice", "Quick", "Comfort"],
+      "prep": "3m",
+      "cook": "10m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Asian-Inspired",
+      "category": "Rice",
+      "ingredients": [
+        { "amount": "1 cup", "name": "day old cooked rice, cold" },
+        { "amount": "2 large", "name": "eggs" },
+        { "amount": "2 tbsp", "name": "neutral oil" },
+        { "amount": "2 tsp", "name": "soy sauce" },
+        { "amount": "1 tsp", "name": "sesame oil" },
+        { "amount": "2", "name": "spring onions, sliced" },
+        { "amount": "optional", "name": "frozen peas, chilli crisp, leftover protein" }
+      ],
+      "steps": [
+        {
+          "name": "Fry rice",
+          "text": "Press 1 cup of cold rice into a hot pan with 2 tbsp oil and let it crisp without stirring. Push aside, scramble 2 eggs, and fold through."
+        },
+        {
+          "name": "Add eggs",
+          "text": "Add 2 tsp soy sauce, toss, and finish with 1 tsp sesame oil and 2 sliced spring onions."
+        }
+      ],
+      "notes": "Cold day old rice is non negotiable. Fresh rice is too wet and will steam instead of fry.",
+      "photo_search": "plate of crispy fried rice with scrambled egg and spring onions"
+    },
+    {
+      "id": 78,
+      "name": "Seasonal Fruit and Cheese Plate",
+      "slug": "seasonal-fruit-cheese-plate",
+      "description": "Seasonal fruit with a few good cheeses. The no effort elegant dinner.",
+      "tags": ["No Cook", "Cheese", "Fruit"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "European",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "1 wedge", "name": "aged cheddar or manchego" },
+        { "amount": "1 wedge", "name": "brie or camembert" },
+        { "amount": "handful", "name": "seasonal fruit (grapes, sliced pear, figs, or berries)" },
+        { "amount": "handful", "name": "marcona almonds or candied walnuts" },
+        { "amount": "drizzle", "name": "honey" },
+        { "amount": "to serve", "name": "crackers" }
+      ],
+      "steps": [
+        {
+          "name": "Arrange",
+          "text": "Place 1 wedge of aged cheddar and 1 wedge of brie on opposite ends of a board. Fill the gaps with seasonal fruit, nuts, and crackers. Drizzle honey over the soft cheese."
+        }
+      ],
+      "notes": "Let all cheeses come to room temperature for 30 minutes before eating. Cold cheese is a waste of good cheese.",
+      "photo_search": "wooden board with aged cheddar, brie, grapes, figs, and crackers, drizzled with honey"
+    },
+    {
+      "id": 79,
+      "name": "10-Minute Freezer Fried Rice",
+      "slug": "ten-minute-freezer-fried-rice",
+      "description": "Using entirely freezer ingredients. Frozen rice, vegetables, egg. Dinner in 10 minutes flat.",
+      "tags": ["Quick", "Pantry", "Rice"],
+      "prep": "2m",
+      "cook": "10m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Asian-Inspired",
+      "category": "Rice",
+      "ingredients": [
+        { "amount": "1 pouch", "name": "microwave or frozen cooked rice" },
+        { "amount": "1/2 cup", "name": "frozen mixed vegetables (peas, carrots, corn, edamame)" },
+        { "amount": "2 large", "name": "eggs" },
+        { "amount": "2 tsp", "name": "soy sauce" },
+        { "amount": "1 tsp", "name": "sesame oil" },
+        { "amount": "1 tbsp", "name": "neutral oil" },
+        { "amount": "to taste", "name": "chilli crisp, sriracha, spring onion" }
+      ],
+      "steps": [
+        {
+          "name": "Fry everything",
+          "text": "Fry 1 pouch of rice and 1/2 cup of frozen vegetables in 1 tbsp hot oil until crispy. Push aside, scramble 2 eggs, and fold through."
+        },
+        {
+          "name": "Season",
+          "text": "Add 2 tsp soy sauce, toss, and finish with 1 tsp sesame oil and chilli crisp."
+        }
+      ],
+      "notes": "Microwave pouches of rice work surprisingly well for fried rice because they are already slightly dried.",
+      "photo_search": "plate of fried rice with mixed vegetables, egg, and a drizzle of chilli crisp"
+    },
+    {
+      "id": 80,
+      "name": "Pan Con Tomate",
+      "slug": "pan-con-tomate",
+      "description": "The Catalan classic. Ripe tomato rubbed directly onto garlicky toasted bread.",
+      "tags": ["Toast", "No Cook", "Spanish"],
+      "prep": "3m",
+      "cook": "3m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Spanish",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "2 slices", "name": "thick sourdough or ciabatta, toasted" },
+        { "amount": "1 clove", "name": "garlic, halved" },
+        { "amount": "1 large", "name": "very ripe tomato, halved" },
+        { "amount": "2 tbsp", "name": "excellent olive oil" },
+        { "amount": "to taste", "name": "flaky sea salt" }
+      ],
+      "steps": [
+        {
+          "name": "Rub",
+          "text": "Rub 1 halved garlic clove firmly over 2 slices of hot toast. Rub 1 halved tomato over the toast, squeezing gently to stain the bread red."
+        },
+        {
+          "name": "Finish",
+          "text": "Drizzle with 2 tablespoons of olive oil and flaky salt."
+        }
+      ],
+      "notes": "The tomato must be very ripe and the bread must be hot. This is one of the great simple pleasures of eating.",
+      "photo_search": "toasted sourdough rubbed with tomato and garlic, drizzled with olive oil and flaky salt"
+    },
+    {
+      "id": 81,
+      "name": "Blistered Padron Peppers",
+      "slug": "blistered-padron-peppers",
+      "description": "Fried green Spanish peppers with flaky salt. Most are mild, some are brutally hot.",
+      "tags": ["Spanish", "Snack", "Quick"],
+      "prep": "2m",
+      "cook": "6m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Spanish",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "150g", "name": "Padron or shishito peppers" },
+        { "amount": "2 tbsp", "name": "olive oil" },
+        { "amount": "generous", "name": "flaky sea salt" }
+      ],
+      "steps": [
+        {
+          "name": "Blister",
+          "text": "Heat 2 tablespoons of oil until smoking. Add 150g of peppers in a single layer and char on one side without stirring. Toss and cook until blistered."
+        },
+        {
+          "name": "Serve",
+          "text": "Pile on a plate with flaky salt. Eat immediately by the stem."
+        }
+      ],
+      "notes": "Russian roulette included. 1 in 10 Padron peppers is genuinely spicy. That is part of the fun.",
+      "photo_search": "cast iron pan of blistered green padron peppers dusted heavily with flaky sea salt"
+    },
+    {
+      "id": 82,
+      "name": "Pita Pizza",
+      "slug": "pita-pizza",
+      "description": "A 10 minute pizza using pita bread as the base. Crispy, melty, endlessly customizable.",
+      "tags": ["Quick", "Comfort", "Pizza"],
+      "prep": "3m",
+      "cook": "10m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian-American",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "1 large", "name": "pita bread" },
+        { "amount": "3 tbsp", "name": "marinara or pizza sauce" },
+        { "amount": "60g", "name": "mozzarella, shredded or torn" },
+        { "amount": "toppings of choice", "name": "sliced salami, fresh basil, olives, jarred peppers" },
+        { "amount": "drizzle", "name": "olive oil and chilli flakes to finish" }
+      ],
+      "steps": [
+        {
+          "name": "Assemble",
+          "text": "Spread 3 tablespoons of sauce on 1 large pita, add 60g of cheese and toppings."
+        },
+        {
+          "name": "Bake",
+          "text": "Bake directly on the oven rack at 425F/220C for 8 to 10 minutes until crispy."
+        },
+        {
+          "name": "Finish",
+          "text": "Drizzle with olive oil and chilli flakes. Eat immediately."
+        }
+      ],
+      "notes": "Putting the pita directly on the oven rack makes the bottom incredibly crispy.",
+      "photo_search": "crispy pita bread pizza with melted mozzarella, tomato sauce, and basil"
+    },
+    {
+      "id": 83,
+      "name": "Warm Olives with Orange and Herbs",
+      "slug": "warm-olives-orange-herbs",
+      "description": "Olives gently warmed in olive oil with citrus and herbs. A 5 minute pot of wonder.",
+      "tags": ["No Cook", "Mediterranean", "Snack"],
+      "prep": "3m",
+      "cook": "5m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Mediterranean",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "1 cup", "name": "mixed olives (Castelvetrano, Kalamata, Cerignola)" },
+        { "amount": "3 tbsp", "name": "olive oil" },
+        { "amount": "2 strips", "name": "orange peel" },
+        { "amount": "1 sprig", "name": "fresh rosemary or thyme" },
+        { "amount": "1 clove", "name": "garlic, smashed" },
+        { "amount": "pinch", "name": "chilli flakes" },
+        { "amount": "to serve", "name": "crusty bread" }
+      ],
+      "steps": [
+        {
+          "name": "Warm",
+          "text": "Combine 1 cup of olives, 3 tablespoons of olive oil, 2 strips of orange peel, 1 sprig of rosemary, 1 clove of garlic, and chilli flakes in a pan. Warm gently over low heat for 5 minutes."
+        },
+        {
+          "name": "Serve",
+          "text": "Pour into a bowl with all the oil. Serve with crusty bread for dipping in the oil."
+        }
+      ],
+      "notes": "The flavored oil at the bottom is the best part. Make sure you have bread for it.",
+      "photo_search": "bowl of warm mixed olives in olive oil with orange peel and rosemary, served with bread"
+    },
+    {
+      "id": 84,
+      "name": "Creamy Tuscan White Beans",
+      "slug": "creamy-tuscan-white-beans",
+      "description": "Butter beans simmered in garlic, tomatoes, and spinach. Italian pantry perfection.",
+      "tags": ["Vegetarian", "Italian", "Pantry"],
+      "prep": "3m",
+      "cook": "15m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "1 can", "name": "butter beans or cannellini, drained" },
+        { "amount": "3 cloves", "name": "garlic, sliced" },
+        { "amount": "handful", "name": "cherry tomatoes" },
+        { "amount": "handful", "name": "baby spinach or kale" },
+        { "amount": "2 tbsp", "name": "olive oil" },
+        { "amount": "splash", "name": "white wine or vegetable broth" },
+        { "amount": "to serve", "name": "crusty bread and parmesan" }
+      ],
+      "steps": [
+        {
+          "name": "Build",
+          "text": "Saute 3 cloves of sliced garlic in 2 tablespoons of oil, add a handful of tomatoes until they burst. Add 1 can of beans and a splash of wine, simmering and mashing some beans to thicken."
+        },
+        {
+          "name": "Add beans",
+          "text": "Stir in a handful of spinach until wilted. Season. Drizzle with more oil. Serve with bread and parmesan."
+        }
+      ],
+      "notes": "Lightly mashing some of the beans is what makes the sauce creamy without adding any cream.",
+      "photo_search": "skillet of creamy Tuscan white beans with tomatoes, spinach, and garlic, served with bread"
+    },
+    {
+      "id": 85,
+      "name": "Silky Egg Drop Soup",
+      "slug": "silky-egg-drop-soup",
+      "description": "Better than takeout. Silky egg ribbons in a gingery, savory broth.",
+      "tags": ["Soup", "Quick", "Chinese"],
+      "prep": "3m",
+      "cook": "8m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Chinese",
+      "category": "Soup",
+      "ingredients": [
+        { "amount": "1.5 cups", "name": "good chicken broth" },
+        { "amount": "1 tsp", "name": "fresh ginger, grated" },
+        { "amount": "1 tsp", "name": "soy sauce" },
+        { "amount": "1 tsp", "name": "sesame oil" },
+        { "amount": "1 tsp cornstarch mixed with", "name": "1 tbsp water" },
+        { "amount": "2 large", "name": "eggs, beaten" },
+        { "amount": "to garnish", "name": "spring onion, white pepper, sesame seeds" }
+      ],
+      "steps": [
+        {
+          "name": "Build broth",
+          "text": "Simmer 1.5 cups of broth with 1 tsp ginger, 1 tsp soy, and 1 tsp sesame oil. Add 1 tsp cornstarch mixture to thicken."
+        },
+        {
+          "name": "Add eggs",
+          "text": "Slowly pour 2 beaten eggs in a thin stream while stirring gently to form ribbons."
+        },
+        {
+          "name": "Serve",
+          "text": "Top with spring onions, white pepper, and sesame seeds."
+        }
+      ],
+      "notes": "Pour the eggs in very slowly and stir very gently. Fast movement creates bits rather than ribbons.",
+      "photo_search": "bowl of silky egg drop soup with spring onions and sesame seeds"
+    },
+    {
+      "id": 86,
+      "name": "Roasted Tomato and Burrata Toast",
+      "slug": "roasted-tomato-burrata-toast",
+      "description": "Slow roasted sweet tomatoes with creamy burrata on grilled bread. The best toast.",
+      "tags": ["Toast", "Fancy", "Italian"],
+      "prep": "5m",
+      "cook": "25m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "200g", "name": "cherry tomatoes" },
+        { "amount": "3 tbsp", "name": "olive oil" },
+        { "amount": "1 clove", "name": "garlic, minced" },
+        { "amount": "2 slices", "name": "thick sourdough, grilled or toasted" },
+        { "amount": "1 small ball", "name": "burrata" },
+        { "amount": "handful", "name": "fresh basil" },
+        { "amount": "to taste", "name": "flaky salt, black pepper, balsamic glaze" }
+      ],
+      "steps": [
+        {
+          "name": "Roast tomatoes",
+          "text": "Toss 200g of tomatoes with 3 tablespoons of oil, 1 clove of minced garlic, salt, and pepper. Roast at 400F/200C for 25 minutes until jammy."
+        },
+        {
+          "name": "Assemble",
+          "text": "Top 2 slices of grilled bread with 1 torn ball of burrata. Spoon warm roasted tomatoes and all their juices over the top. Add basil, balsamic, and salt."
+        }
+      ],
+      "notes": "The tomato juices and olive oil are the sauce. Make sure you get all of it out of the roasting pan.",
+      "photo_search": "grilled sourdough topped with torn burrata, roasted tomatoes, basil, and balsamic glaze"
+    },
+    {
+      "id": 87,
+      "name": "Spicy Tuna Crispy Rice",
+      "slug": "spicy-tuna-crispy-rice",
+      "description": "Sushi grade tuna, sesame spiced and piled onto shatteringly crispy pan fried rice cakes.",
+      "tags": ["Japanese", "Spicy", "Mid"],
+      "prep": "15m",
+      "cook": "10m",
+      "serves": "1",
+      "difficulty": "Mid",
+      "cuisine": "Japanese-Peruvian",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "150g", "name": "sushi grade tuna, finely diced" },
+        { "amount": "1 tbsp", "name": "soy sauce" },
+        { "amount": "1 tbsp", "name": "sriracha mayo" },
+        { "amount": "1 tsp", "name": "sesame oil" },
+        { "amount": "1 cup", "name": "cold cooked sushi rice" },
+        { "amount": "neutral oil", "name": "for frying" },
+        { "amount": "to garnish", "name": "spring onion, sesame seeds, avocado, jalapeno" }
+      ],
+      "steps": [
+        {
+          "name": "Season tuna",
+          "text": "Mix 150g of diced tuna with 1 tbsp soy, 1 tbsp sriracha mayo, and 1 tsp sesame oil. Toss gently and refrigerate."
+        },
+        {
+          "name": "Form rice cakes",
+          "text": "Press 1 cup of cold rice flat and cut into rectangles with a wet knife."
+        },
+        {
+          "name": "Fry",
+          "text": "Fry rice cakes in oil until golden and crispy. Drain on paper towel."
+        },
+        {
+          "name": "Top",
+          "text": "Spoon tuna onto each rice cake. Garnish with spring onion, sesame, avocado, and jalapeno."
+        }
+      ],
+      "notes": "The rice must be cold and slightly dried. Day old fridge rice works best.",
+      "photo_search": "crispy fried rice cakes topped with spicy diced tuna, avocado, and jalapeno"
+    },
+    {
+      "id": 88,
+      "name": "Takis with Chamoy and Lime",
+      "slug": "takis-chamoy-lime",
+      "description": "Hot chips drizzled with chamoy and lime. The chaotic snack dinner that TikTok loves.",
+      "tags": ["Snack", "Spicy", "Viral"],
+      "prep": "3m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Mexican-American",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "1 bag", "name": "Takis Fuego or Flamin Hot Cheetos" },
+        { "amount": "2 tbsp", "name": "chamoy sauce" },
+        { "amount": "1", "name": "lime, juiced" },
+        { "amount": "pinch", "name": "Tajin seasoning" },
+        { "amount": "optional", "name": "cucumber sticks, mango slices, jicama" }
+      ],
+      "steps": [
+        {
+          "name": "Plate",
+          "text": "Pour 1 bag of chips into a bowl. Drizzle with 2 tablespoons of chamoy, squeeze 1 lime over, and dust with Tajin. Add fresh fruit and vegetables on the side if using."
+        }
+      ],
+      "notes": "Adding fruit alongside the chips makes it a significantly more balanced and interesting meal. Mango and cucumber are ideal.",
+      "photo_search": "plate of Takis chips drizzled with chamoy, lime juice, and Tajin seasoning"
+    },
+    {
+      "id": 89,
+      "name": "Overnight Oats as Dinner",
+      "slug": "overnight-oats-as-dinner",
+      "description": "The reverse breakfast dinner. Prepared oats with toppings eaten at any hour.",
+      "tags": ["Sweet", "No Cook", "Healthy"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Bowl",
+      "ingredients": [
+        { "amount": "1/2 cup", "name": "rolled oats" },
+        { "amount": "1/2 cup", "name": "milk or oat milk" },
+        { "amount": "1/4 cup", "name": "Greek yogurt" },
+        { "amount": "1 tbsp", "name": "chia seeds" },
+        { "amount": "1 tbsp", "name": "maple syrup or honey" },
+        { "amount": "toppings", "name": "berries, banana, granola, nut butter, coconut flakes" }
+      ],
+      "steps": [
+        {
+          "name": "Mix",
+          "text": "Combine 1/2 cup of oats, 1/2 cup of milk, 1/4 cup of yogurt, 1 tbsp chia seeds, and 1 tbsp sweetener in a jar. Stir well, cover, and refrigerate overnight."
+        },
+        {
+          "name": "Top",
+          "text": "When ready to eat, add toppings. Thin with a splash of milk if needed."
+        }
+      ],
+      "notes": "Works as a make ahead dinner too. Prep in the afternoon and eat in the evening.",
+      "photo_search": "jar of overnight oats topped with berries, chia seeds, and a drizzle of nut butter"
+    },
+    {
+      "id": 90,
+      "name": "Creamed Spinach on Toast",
+      "slug": "creamed-spinach-toast",
+      "description": "Classic steakhouse creamed spinach reduced down to a solo toast topping. Rich and ridiculous.",
+      "tags": ["Toast", "Vegetarian", "Comfort"],
+      "prep": "3m",
+      "cook": "12m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "200g", "name": "baby spinach" },
+        { "amount": "2 tbsp", "name": "butter" },
+        { "amount": "1 clove", "name": "garlic, minced" },
+        { "amount": "3 tbsp", "name": "heavy cream or creme fraiche" },
+        { "amount": "30g", "name": "parmesan, grated" },
+        { "amount": "pinch", "name": "nutmeg" },
+        { "amount": "2 slices", "name": "sourdough, toasted and buttered" }
+      ],
+      "steps": [
+        {
+          "name": "Wilt spinach",
+          "text": "Wilt 200g of spinach in 2 tbsp butter with 1 clove of minced garlic. Add 3 tbsp cream, 30g parmesan, and a pinch of nutmeg until thickened."
+        },
+        {
+          "name": "Cream",
+          "text": "Pile onto 2 slices of buttered sourdough toast."
+        }
+      ],
+      "notes": "Squeeze out excess liquid from the wilted spinach before adding cream to prevent a watery sauce.",
+      "photo_search": "sourdough toast topped with rich creamed spinach and parmesan"
+    },
+    {
+      "id": 91,
+      "name": "Mango with Tajin and Lime",
+      "slug": "mango-tajin-lime",
+      "description": "Sweet ripe mango sliced and dusted with Tajin and lime. The refreshing solo dessert dinner.",
+      "tags": ["Fruit", "No Cook", "Sweet-Savory"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Mexican",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "1 large", "name": "ripe mango, sliced" },
+        { "amount": "1 tsp", "name": "Tajin seasoning" },
+        { "amount": "1/2", "name": "lime, juiced" },
+        { "amount": "optional", "name": "chamoy drizzle, chilli flakes, fresh mint" }
+      ],
+      "steps": [
+        {
+          "name": "Slice",
+          "text": "Cut 1 large mango flesh into slices or cubes."
+        },
+        {
+          "name": "Season",
+          "text": "Arrange on a plate. Squeeze half a lime over, dust generously with 1 tsp Tajin. Drizzle with chamoy if using."
+        }
+      ],
+      "notes": "The mango must be ripe. Under ripe mango with chilli is just confusing.",
+      "photo_search": "plate of fresh mango slices dusted with Tajin and lime juice"
+    },
+    {
+      "id": 92,
+      "name": "Solo Charcuterie Board with Wine",
+      "slug": "solo-charcuterie-board-wine",
+      "description": "A proper small board built for one, with wine. This is aspirational solo dining.",
+      "tags": ["No Cook", "Cheese", "Fancy"],
+      "prep": "10m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "French",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "30g", "name": "prosciutto or coppa" },
+        { "amount": "30g", "name": "soppressata or salami" },
+        { "amount": "40g", "name": "aged manchego or comte" },
+        { "amount": "40g", "name": "soft triple cream brie" },
+        { "amount": "handful", "name": "Castelvetrano olives" },
+        { "amount": "handful", "name": "grapes and fresh figs" },
+        { "amount": "1 tbsp", "name": "marcona almonds" },
+        { "amount": "handful", "name": "crackers or toasted baguette slices" },
+        { "amount": "1 glass", "name": "good red or white wine" }
+      ],
+      "steps": [
+        {
+          "name": "Build the board",
+          "text": "Place 40g of manchego and 40g of brie at opposite corners of a board. Fold 30g of prosciutto and 30g of salami and fill gaps with olives, fruit, and 1 tbsp of nuts. Add crackers and pour a glass of wine."
+        },
+        {
+          "name": "Eat slowly",
+          "text": "Graze. This is a meal. Take your time."
+        }
+      ],
+      "notes": "Never rush a board. The whole point is that you eat slowly and enjoy it.",
+      "photo_search": "small wooden board with prosciutto, manchego, brie, olives, grapes, and a glass of wine"
+    },
+    {
+      "id": 93,
+      "name": "Honey Garlic Butter Shrimp",
+      "slug": "honey-garlic-butter-shrimp",
+      "description": "Shrimp cooked in 5 minutes in a sticky honey garlic butter. Eat with bread or rice.",
+      "tags": ["Seafood", "Quick", "Sweet-Savory"],
+      "prep": "5m",
+      "cook": "8m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "150g", "name": "raw shrimp or prawns, peeled and deveined" },
+        { "amount": "3 cloves", "name": "garlic, minced" },
+        { "amount": "2 tbsp", "name": "butter" },
+        { "amount": "1 tbsp", "name": "honey" },
+        { "amount": "1 tbsp", "name": "soy sauce" },
+        { "amount": "squeeze", "name": "lemon juice" },
+        { "amount": "to serve", "name": "crusty bread, rice, or noodles" }
+      ],
+      "steps": [
+        {
+          "name": "Season shrimp",
+          "text": "Pat 150g of shrimp dry and season with salt and pepper."
+        },
+        {
+          "name": "Cook",
+          "text": "Sear in 2 tbsp butter with 3 cloves of minced garlic. Add 1 tbsp honey and 1 tbsp soy sauce, tossing until glazed. Squeeze lemon over and serve with bread."
+        }
+      ],
+      "notes": "Patting shrimp completely dry before cooking is what lets them sear rather than steam.",
+      "photo_search": "skillet of shrimp in a sticky honey garlic butter sauce with lemon"
+    },
+    {
+      "id": 94,
+      "name": "Smoked Oyster Toast",
+      "slug": "smoked-oyster-toast",
+      "description": "A tin of smoked oysters on buttered rye toast with hot sauce. Deeply underrated girl dinner.",
+      "tags": ["Tinned Fish", "Toast", "Umami"],
+      "prep": "3m",
+      "cook": "3m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "1 tin", "name": "smoked oysters in oil" },
+        { "amount": "2 slices", "name": "sourdough or rye, toasted" },
+        { "amount": "2 tbsp", "name": "salted butter" },
+        { "amount": "to taste", "name": "hot sauce, lemon juice, cracked pepper" },
+        { "amount": "optional", "name": "cream cheese, thinly sliced shallot" }
+      ],
+      "steps": [
+        {
+          "name": "Toast and butter",
+          "text": "Toast 2 slices of bread until deeply golden. Butter generously with 2 tbsp of butter."
+        },
+        {
+          "name": "Top",
+          "text": "Lay 1 tin of smoked oysters on toast. Add hot sauce, a squeeze of lemon, and black pepper. Add cream cheese and shallot if using."
+        }
+      ],
+      "notes": "Crown Prince or Rugen Fisch are reliable smoked oyster brands. Serve with wine for the full experience.",
+      "photo_search": "rye toast heavily buttered and topped with smoked oysters, hot sauce, and lemon"
+    },
+    {
+      "id": 95,
+      "name": "Roasted Beet and Goat Cheese Salad",
+      "slug": "roasted-beet-goat-cheese-salad",
+      "description": "Earthy roasted beets, tangy goat cheese, and candied walnuts. Classic bistro salad.",
+      "tags": ["Salad", "Vegetarian", "Fancy"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "French-Inspired",
+      "category": "Salad",
+      "ingredients": [
+        { "amount": "1 pack", "name": "pre cooked beets (vacuum packed, not pickled), sliced" },
+        { "amount": "2 tbsp", "name": "soft goat cheese" },
+        { "amount": "2 handfuls", "name": "arugula or mixed greens" },
+        { "amount": "handful", "name": "candied walnuts" },
+        { "amount": "1 tbsp", "name": "balsamic vinegar" },
+        { "amount": "2 tbsp", "name": "olive oil" },
+        { "amount": "1 tsp", "name": "dijon mustard" }
+      ],
+      "steps": [
+        {
+          "name": "Make dressing",
+          "text": "Whisk together 1 tbsp balsamic, 2 tbsp olive oil, and 1 tsp dijon. Season."
+        },
+        {
+          "name": "Assemble",
+          "text": "Dress 2 handfuls of arugula lightly and arrange with 1 pack of sliced beets, 2 tbsp of crumbled goat cheese, and a handful of candied walnuts."
+        }
+      ],
+      "notes": "Pre roasted vacuum packed beets are a completely valid shortcut and nearly as good as roasting your own.",
+      "photo_search": "plate of arugula, sliced roasted beets, crumbled goat cheese, and candied walnuts"
+    },
+    {
+      "id": 96,
+      "name": "Tteokbokki",
+      "slug": "tteokbokki",
+      "description": "Korean rice cakes in spicy sweet gochujang sauce. The ultimate comfort street food.",
+      "tags": ["Korean", "Spicy", "Comfort"],
+      "prep": "5m",
+      "cook": "15m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Korean",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "200g", "name": "cylindrical rice cakes (tteok), fresh or frozen" },
+        { "amount": "2 tbsp", "name": "gochujang (Korean chilli paste)" },
+        { "amount": "1 tbsp", "name": "soy sauce" },
+        { "amount": "1 tbsp", "name": "sugar or honey" },
+        { "amount": "1 cup", "name": "water or anchovy broth" },
+        { "amount": "optional", "name": "fish cake slices, boiled egg, spring onion, sesame seeds" }
+      ],
+      "steps": [
+        {
+          "name": "Make sauce",
+          "text": "Combine 2 tbsp gochujang, 1 tbsp soy, and 1 tbsp sugar in a pan with 1 cup of water. Stir over medium heat until combined."
+        },
+        {
+          "name": "Cook rice cakes",
+          "text": "Add 200g of rice cakes and simmer 8 to 10 minutes until soft and the sauce reduces to a thick glaze."
+        },
+        {
+          "name": "Serve",
+          "text": "Plate and top with spring onions and sesame seeds."
+        }
+      ],
+      "notes": "Soak frozen rice cakes in cold water for 20 minutes before cooking to soften them.",
+      "photo_search": "bowl of tteokbokki rice cakes in a thick red gochujang sauce with spring onions"
+    },
+    {
+      "id": 97,
+      "name": "Tahini and Honey Toast",
+      "slug": "tahini-honey-toast",
+      "description": "Nutty tahini with honey and sesame seeds. A two ingredient toast that is weirdly addictive.",
+      "tags": ["Toast", "Sweet-Savory", "Quick"],
+      "prep": "2m",
+      "cook": "3m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Middle Eastern",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "2 slices", "name": "good bread, toasted" },
+        { "amount": "2 tbsp", "name": "tahini, well stirred" },
+        { "amount": "1 tbsp", "name": "honey" },
+        { "amount": "pinch", "name": "flaky salt" },
+        { "amount": "optional", "name": "sesame seeds, banana slices, cinnamon" }
+      ],
+      "steps": [
+        {
+          "name": "Toast",
+          "text": "Toast 2 slices of bread to a deep golden color."
+        },
+        {
+          "name": "Top",
+          "text": "Spread 2 tbsp of tahini generously while bread is hot. Drizzle 1 tbsp honey over the top. Finish with a pinch of flaky salt and sesame seeds."
+        }
+      ],
+      "notes": "Good tahini is essential. It should be pourable and smell nutty. If it tastes bitter it is a bad batch.",
+      "photo_search": "toasted bread spread with tahini, drizzled with honey, and sprinkled with sesame seeds"
+    },
+    {
+      "id": 98,
+      "name": "Store-Bought Pork Belly Bao",
+      "slug": "store-bought-pork-belly-bao",
+      "description": "Using supermarket char siu pork belly and frozen steamed buns. Restaurant at home.",
+      "tags": ["Asian", "Comfort", "Quick"],
+      "prep": "5m",
+      "cook": "10m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Taiwanese",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "2-3", "name": "frozen steamed bao buns" },
+        { "amount": "100g", "name": "store bought char siu or roast pork belly, sliced" },
+        { "amount": "2 tbsp", "name": "hoisin sauce" },
+        { "amount": "handful", "name": "pickled daikon or cucumber ribbons" },
+        { "amount": "handful", "name": "fresh cilantro" },
+        { "amount": "1 tsp", "name": "sriracha (optional)" }
+      ],
+      "steps": [
+        {
+          "name": "Steam buns",
+          "text": "Steam 2 to 3 frozen bao buns until fluffy."
+        },
+        {
+          "name": "Warm pork",
+          "text": "Warm 100g of pork belly slices in a hot pan until edges caramelize."
+        },
+        {
+          "name": "Build",
+          "text": "Open bao, spread 2 tbsp hoisin inside, add pork, pickled vegetables, cilantro, and 1 tsp sriracha."
+        }
+      ],
+      "notes": "Frozen bao buns are available at most Asian supermarkets and steam back to perfect in minutes.",
+      "photo_search": "fluffy steamed bao buns filled with pork belly, hoisin sauce, and cucumber"
+    },
+    {
+      "id": 99,
+      "name": "Olive Oil Cake with Macerated Berries",
+      "slug": "olive-oil-cake-macerated-berries",
+      "description": "A slice of Italian olive oil cake with macerated berries as dinner. Acceptable and right.",
+      "tags": ["Sweet", "Italian", "Dessert Dinner"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "1 generous slice", "name": "olive oil cake, bakery or homemade" },
+        { "amount": "1 cup", "name": "mixed berries (strawberries, blueberries, raspberries)" },
+        { "amount": "1 tsp", "name": "sugar" },
+        { "amount": "1 tsp", "name": "lemon juice" },
+        { "amount": "optional", "name": "whipped cream, mascarpone, or vanilla yogurt" }
+      ],
+      "steps": [
+        {
+          "name": "Macerate berries",
+          "text": "Toss 1 cup of berries with 1 tsp sugar and 1 tsp lemon juice for 10 minutes until they release their juice."
+        },
+        {
+          "name": "Plate",
+          "text": "Serve 1 slice of cake alongside or topped with macerated berries and cream if using."
+        }
+      ],
+      "notes": "Olive oil cake from a good Italian bakery is one of the great things. If you cannot find it, it is also very easy to make.",
+      "photo_search": "plate with a slice of olive oil cake topped with juicy macerated berries"
+    },
+    {
+      "id": 100,
+      "name": "Butter Lettuce with Champagne Vinaigrette",
+      "slug": "butter-lettuce-champagne-vinaigrette",
+      "description": "The lightest, most elegant salad. Butter lettuce with a bright, acidic champagne dressing.",
+      "tags": ["Salad", "Fancy", "Light"],
+      "prep": "8m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "French",
+      "category": "Salad",
+      "ingredients": [
+        { "amount": "1 head", "name": "butter lettuce, leaves separated" },
+        { "amount": "1 tbsp", "name": "champagne or white wine vinegar" },
+        { "amount": "1 tsp", "name": "dijon mustard" },
+        { "amount": "1 small clove", "name": "garlic, minced" },
+        { "amount": "3 tbsp", "name": "excellent olive oil" },
+        { "amount": "to taste", "name": "salt and white pepper" },
+        { "amount": "optional", "name": "shaved parmesan, toasted hazelnuts, sliced radish" }
+      ],
+      "steps": [
+        {
+          "name": "Make vinaigrette",
+          "text": "Whisk 1 tbsp vinegar, 1 tsp dijon, and 1 clove of minced garlic together. Slowly stream in 3 tbsp olive oil until emulsified. Season with salt and white pepper."
+        },
+        {
+          "name": "Dress and serve",
+          "text": "Gently toss 1 head of butter lettuce leaves with just enough dressing to coat lightly. Plate immediately and add parmesan or hazelnuts."
+        }
+      ],
+      "notes": "Underdress rather than overdress. Butter lettuce wilts quickly. Add dressing at the very last second before serving.",
+      "photo_search": "elegant bowl of butter lettuce lightly coated in champagne vinaigrette with shaved parmesan"
+    }
+  ]
+}

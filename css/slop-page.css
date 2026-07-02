@@ -1,0 +1,135 @@
+/* ══════════════════════════════════════════
+ *  slop-page.css — foidslop
+ *  Individual slop meal pages (slug.html)
+ *  Requires global.css to be loaded first.
+ * ══════════════════════════════════════════ */
+
+/* ── Slop header ────────────────────────── */
+.slop-header { padding: 100px 40px 0; }
+.slop-eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; display: flex; align-items: center; gap: 14px; }
+.slop-eyebrow::before { content: '✦'; font-size: 0.6rem; color: var(--muted); }
+.slop-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 9vw, 8rem); font-weight: 400; line-height: 0.9; letter-spacing: 0.01em; color: var(--text); text-transform: uppercase; margin-bottom: 20px; }
+.slop-meta { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+.slop-date { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.slop-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.slop-tag { font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--border); padding: 4px 10px; }
+
+/* ── Body layout ────────────────────────── */
+/* Removed sticky. Grid now stretches both columns to match height perfectly. */
+.slop-body { display: grid; grid-template-columns: 0.8fr 1.2fr; border-bottom: 1px solid var(--border); align-items: stretch; }
+
+/* ── Image panel ────────────────────────── */
+.slop-image-panel { position: relative; overflow: hidden; border-right: 1px solid var(--border); height: 100%; min-height: 600px; background: var(--surface); }
+.slop-image-panel img { width: 100%; height: 100%; object-fit: cover; display: block; position: absolute; top: 0; left: 0; transition: transform 0.7s cubic-bezier(0.22,1,0.36,1); }
+.slop-image-panel:hover img { transform: scale(1.03); }
+.slop-image-caption { position: absolute; bottom: 20px; left: 20px; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); background: rgba(5,5,7,0.7); backdrop-filter: blur(10px); padding: 6px 12px; z-index: 2; }
+
+/* ── Content panel ──────────────────────── */
+.slop-content { padding: 48px 56px 80px; display: flex; flex-direction: column; }
+.slop-desc { font-size: 1rem; color: rgba(255,255,255,0.7); line-height: 1.75; margin-bottom: 48px; max-width: 560px; }
+
+/* ── Section labels ─────────────────────── */
+.section-label { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; padding-top: 40px; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 10px; }
+.section-label:first-of-type { border-top: none; padding-top: 0; }
+.section-label::before { content: '✦'; font-size: 0.5rem; }
+
+/* ── Stats ──────────────────────────────── */
+.slop-stats { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--border); margin-bottom: 48px; }
+.slop-stat { padding: 16px 20px; border-right: 1px solid var(--border); }
+.slop-stat:last-child { border-right: none; }
+.slop-stat-label { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.slop-stat-value { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: var(--text); line-height: 1; }
+
+/* ── Ingredients ────────────────────────── */
+.ingredients-list { list-style: none; margin-bottom: 48px; }
+.ingredient-item { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: 13px 0; border-bottom: 1px solid var(--border); }
+.ingredient-item:first-child { border-top: 1px solid var(--border); }
+.ingredient-name { font-size: 0.88rem; color: rgba(255,255,255,0.85); line-height: 1.5; flex: 1; }
+.ingredient-amount { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.04em; white-space: nowrap; flex-shrink: 0; }
+.ingredient-link { font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; transition: color 0.2s ease, border-color 0.2s ease; white-space: nowrap; flex-shrink: 0; }
+.ingredient-link:hover { color: var(--text); border-color: rgba(255,255,255,0.4); }
+.ingredient-link::before { content: '↗ '; font-size: 0.55rem; }
+
+/* ── Steps ──────────────────────────────── */
+.steps-list { list-style: none; margin-bottom: 48px; }
+.step-item { display: grid; grid-template-columns: 48px 1fr; border-bottom: 1px solid var(--border); }
+.step-item:first-child { border-top: 1px solid var(--border); }
+.step-number { font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; color: rgba(255,255,255,0.08); line-height: 1; padding: 20px 0; }
+.step-content { padding: 22px 0 22px 24px; border-left: 1px solid var(--border); }
+.step-name { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.step-text { font-size: 0.88rem; color: rgba(255,255,255,0.7); line-height: 1.7; }
+
+/* ── Notes ──────────────────────────────── */
+.slop-notes { background: var(--surface); border: 1px solid var(--border); padding: 24px 28px; margin-bottom: 48px; }
+.slop-notes-label { font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+.slop-notes p { font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.7; }
+
+/* ── Share Button ───────────────────────── */
+.slop-share { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); }
+.share-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: none; border: 1px solid var(--border);
+  color: var(--muted); padding: 10px 20px;
+  font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em;
+  text-transform: uppercase; cursor: pointer; transition: all 0.2s ease;
+}
+.share-btn:hover { color: var(--text); border-color: var(--text); }
+.share-btn.copied { color: #4CAF50; border-color: #4CAF50; }
+
+/* ── Affiliate disclaimer ───────────────── */
+.affiliate-note { font-size: 0.65rem; color: var(--muted); line-height: 1.6; padding: 20px 40px 28px; border-bottom: 1px solid var(--border); }
+
+/* ── Prev / Next nav ────────────────────── */
+.slop-nav { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--border); }
+.slop-nav-item { padding: 28px 40px; text-decoration: none; display: flex; flex-direction: column; gap: 6px; transition: background 0.2s ease; }
+.slop-nav-item:hover { background: rgba(255,255,255,0.03); }
+.slop-nav-item + .slop-nav-item { border-left: 1px solid var(--border); }
+.slop-nav-dir { font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.slop-nav-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: var(--text); line-height: 1; }
+.slop-nav-date { font-size: 0.62rem; color: var(--muted); letter-spacing: 0.06em; }
+.slop-nav-item.next { text-align: right; }
+
+/* ── Print Stylesheet ───────────────────── */
+@media print {
+  header.site-header, footer, .slop-nav, .slop-share, .bg-layer,
+  .slop-tags, .slop-stats, .affiliate-note, script, style, noscript {
+    display: none !important;
+  }
+  body { background: #fff !important; color: #000 !important; }
+  .slop-body { display: block !important; grid-template-columns: 1fr !important; }
+  .slop-image-panel { position: relative !important; top: 0 !important; height: auto !important; max-width: 400px; margin-bottom: 20px; border-right: none !important; }
+  .slop-image-panel img { position: relative !important; max-width: 100%; height: auto; }
+  .slop-content { padding: 0 !important; min-height: 0 !important; }
+  .slop-title, .section-label, .step-name, .ingredient-name, .step-text, .ingredient-amount {
+    color: #000 !important;
+  }
+  .ingredients-list, .steps-list { border-color: #ccc !important; }
+  .step-item, .ingredient-item { border-color: #eee !important; }
+  .slop-notes { border-color: #ccc !important; background: #f9f9f9 !important; }
+  @page { margin: 1in; }
+}
+
+/* ── Responsive ─────────────────────────── */
+@media (max-width: 900px) {
+  .slop-header { padding: 84px 24px 0; }
+  .slop-body { display: block; /* Stack instead of grid */ }
+  .slop-image-panel { position: relative; top: 0; height: 60vw; min-height: 280px; border-right: none; border-bottom: 1px solid var(--border); }
+  .slop-image-panel img { position: relative; }
+  .slop-content { padding: 36px 24px 60px; min-height: 0; }
+  .slop-stats { grid-template-columns: repeat(2, 1fr); }
+  .slop-stat:nth-child(2) { border-right: none; }
+  .slop-stat:nth-child(3), .slop-stat:nth-child(4) { border-top: 1px solid var(--border); }
+  .slop-stat:nth-child(4) { border-right: none; }
+  .slop-nav { grid-template-columns: 1fr; }
+  .slop-nav-item + .slop-nav-item { border-left: none; border-top: 1px solid var(--border); }
+  .slop-nav-item.next { text-align: left; }
+  .affiliate-note { padding: 16px 24px 24px; }
+}
+
+@media (max-width: 640px) {
+  .slop-title { font-size: clamp(3rem, 14vw, 5rem); }
+  .slop-content { padding: 28px 20px 48px; }
+  .step-item { grid-template-columns: 36px 1fr; }
+  .step-number { font-size: 2rem; }
+  .step-content { padding: 18px 0 18px 16px; }
+}
