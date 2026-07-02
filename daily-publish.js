@@ -41,6 +41,33 @@ function updateHomepage(slug, mealName, description) {
     fs.writeFileSync(HOME_FILE, html, 'utf8');
 }
 
+function updatePrevNextNav(prevSlugToUpdate, newSlug, newMealName, newPrettyDate) {
+    const prevFile = path.join(SLOP_DIR, `${prevSlugToUpdate}.html`);
+    if (!fs.existsSync(prevFile)) return;
+    let html = fs.readFileSync(prevFile, 'utf8');
+    // Matches any next-nav block (whether it has a real link or a placeholder)
+    const nextPlaceholderRe = /<a href="[^"]*" class="slop-nav-item next"[^>]*>[\s\S]*?<\/a>/;
+    const newNextBlock = `<a href="./${newSlug}.html" class="slop-nav-item next" aria-label="Next slop: ${escHtml(newMealName)}">\n    <span class="slop-nav-dir">Next Slop →</span>\n    <span class="slop-nav-name">${escHtml(newMealName)}</span>\n    <span class="slop-nav-date">${escHtml(newPrettyDate)}</span>\n  </a>`;
+    if (nextPlaceholderRe.test(html)) {
+        html = html.replace(nextPlaceholderRe, newNextBlock);
+        fs.writeFileSync(prevFile, html, 'utf8');
+        console.log(`  ✔ Updated next-nav on ${prevSlugToUpdate}.html`);
+    }
+}
+
+function resetNextNav(currentSlug) {
+    const currentFile = path.join(SLOP_DIR, `${currentSlug}.html`);
+    if (!fs.existsSync(currentFile)) return;
+    let html = fs.readFileSync(currentFile, 'utf8');
+    const nextLinkRe = /<a href="[^"]*" class="slop-nav-item next"[^>]*>[\s\S]*?<\/a>/;
+    const placeholderBlock = `<a href="#" class="slop-nav-item next" aria-label="No next slop yet" id="next-nav">\n    <span class="slop-nav-dir">Next Slop →</span>\n    <span class="slop-nav-name">—</span>\n    <span class="slop-nav-date">Check back tomorrow</span>\n  </a>`;
+    if (nextLinkRe.test(html)) {
+        html = html.replace(nextLinkRe, placeholderBlock);
+        fs.writeFileSync(currentFile, html, 'utf8');
+        console.log(`  ✔ Reset next-nav on ${currentSlug}.html to placeholder`);
+    }
+}
+
 // --- Main Logic ---
 const args = process.argv.slice(2);
 let setSlug = null;
@@ -65,24 +92,19 @@ const meals = db.meals || db;
 let targetIndex = -1;
 
 if (setSlug) {
-    // Manual override mode: feature this EXACT recipe
     targetIndex = meals.findIndex(m => m.slug === setSlug);
     console.log(`Manual override: Setting current meal to ${setSlug}`);
 } else {
-    // Automatic daily mode: read _redirects to find current meal
     let currentSlug = null;
     if (fs.existsSync(REDIRECTS_FILE)) {
         const content = fs.readFileSync(REDIRECTS_FILE, 'utf8');
         const match = content.match(/\/slop\/today\s+\/slop\/([^\s]+)\.html/);
         if (match) currentSlug = match[1];
     }
-
     let currentIndex = meals.findIndex(m => m.slug === currentSlug);
     if (currentIndex === -1) currentIndex = 0;
-
-    // Advance to the NEXT meal
     targetIndex = currentIndex + 1;
-    if (targetIndex >= meals.length) targetIndex = 0; // Loop back to 0
+    if (targetIndex >= meals.length) targetIndex = 0;
 }
 
 const todaysMeal = meals[targetIndex];
@@ -99,7 +121,13 @@ const dateObj = new Date();
 // 1. Update Homepage
 updateHomepage(todaysMeal.slug, todaysMeal.name, todaysMeal.description);
 
-// 2. Update Redirects
+// 2. Update Prev/Next Navs
+resetNextNav(todaysMeal.slug);
+if (meals[targetIndex - 1]) {
+    updatePrevNextNav(meals[targetIndex - 1].slug, todaysMeal.slug, todaysMeal.name, prettyDate(dateObj));
+}
+
+// 3. Update Redirects
 let lines = [];
 if (fs.existsSync(REDIRECTS_FILE)) {
     lines = fs.readFileSync(REDIRECTS_FILE, 'utf8').split('\n').filter(l => l.trim() && !l.startsWith('/slop/today'));
@@ -107,34 +135,22 @@ if (fs.existsSync(REDIRECTS_FILE)) {
 lines.unshift(`/slop/today  /slop/${todaysMeal.slug}.html  301`);
 fs.writeFileSync(REDIRECTS_FILE, lines.join('\n') + '\n');
 
-// 3. Rebuild Archive Dynamically
+// 4. Rebuild Archive Dynamically
 if (fs.existsSync(INDEX_FILE)) {
     let html = fs.readFileSync(INDEX_FILE, 'utf8');
-
     const articleRegex = /<article class="archive-card[\s\S]*?<\/article>/g;
     let existingCards = html.match(articleRegex) || [];
-
-    // Remove todaysMeal if it somehow exists already to prevent dupes
     existingCards = existingCards.filter(card => !card.includes(`href="./${todaysMeal.slug}.html"`));
-
-    // Create the new card for today
     const newCardHTML = buildArchiveCard(todaysMeal.slug, todaysMeal.name, shortDate(dateObj), todaysMeal.tags);
-
-    // Create a list of valid slugs (meals 0 to targetIndex) to filter out future meals
     const validSlugs = new Set(meals.slice(0, targetIndex + 1).map(m => m.slug));
-
-    // Filter out future cards
     let keptCards = existingCards.filter(card => {
         const match = card.match(/href="\.\/([^\s]+)\.html"/);
         return match && validSlugs.has(match[1]);
     });
-
-    // Prepend the new card for today
     let finalCards = [newCardHTML].concat(keptCards);
     const newCardsHTML = '\n    ' + finalCards.join('\n\n    ') + '\n  ';
     html = html.replace(/(<section class="archive-grid"[^>]*>)[\s\S]*?(<\/section>)/, `$1${newCardsHTML}$2`);
 
-    // Update the featured block on the archive page
     const featuredTagsHTML = todaysMeal.tags.map(t => `        <span class="featured-tag">${escHtml(t)}</span>`).join('\n');
     const words = todaysMeal.name.split(' ');
     const titleLine1 = words.slice(0, -1).join(' ');
@@ -155,7 +171,6 @@ if (fs.existsSync(INDEX_FILE)) {
 
     const totalCards = finalCards.length;
     html = html.replace(/(<span class="archive-count"[^>]*>)[^<]*(<\/span>)/, `$1${totalCards} recipe${totalCards !== 1 ? 's' : ''}$2`);
-
     fs.writeFileSync(INDEX_FILE, html, 'utf8');
 }
 
