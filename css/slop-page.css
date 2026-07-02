@@ -15,12 +15,13 @@
 .slop-tag { font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--border); padding: 4px 10px; }
 
 /* ── Body layout ────────────────────────── */
-/* Removed sticky. Grid now stretches both columns to match height perfectly. */
-.slop-body { display: grid; grid-template-columns: 0.8fr 1.2fr; border-bottom: 1px solid var(--border); align-items: stretch; }
+/* align-items: start is crucial to allow the image to be sticky without stretching to the bottom of the page */
+.slop-body { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--border); align-items: start; }
 
 /* ── Image panel ────────────────────────── */
-.slop-image-panel { position: relative; overflow: hidden; border-right: 1px solid var(--border); height: 100%; min-height: 600px; background: var(--surface); }
-.slop-image-panel img { width: 100%; height: 100%; object-fit: cover; display: block; position: absolute; top: 0; left: 0; transition: transform 0.7s cubic-bezier(0.22,1,0.36,1); }
+/* Sticky on desktop, perfectly square to prevent any cropping of your 1:1 images */
+.slop-image-panel { position: sticky; top: 73px; aspect-ratio: 1 / 1; overflow: hidden; border-right: 1px solid var(--border); align-self: start; background: var(--surface); }
+.slop-image-panel img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.7s cubic-bezier(0.22,1,0.36,1); }
 .slop-image-panel:hover img { transform: scale(1.03); }
 .slop-image-caption { position: absolute; bottom: 20px; left: 20px; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); background: rgba(5,5,7,0.7); backdrop-filter: blur(10px); padding: 6px 12px; z-index: 2; }
 
@@ -97,7 +98,7 @@
   }
   body { background: #fff !important; color: #000 !important; }
   .slop-body { display: block !important; grid-template-columns: 1fr !important; }
-  .slop-image-panel { position: relative !important; top: 0 !important; height: auto !important; max-width: 400px; margin-bottom: 20px; border-right: none !important; }
+  .slop-image-panel { position: relative !important; top: 0 !important; height: auto !important; max-width: 400px; margin-bottom: 20px; border-right: none !important; aspect-ratio: auto; }
   .slop-image-panel img { position: relative !important; max-width: 100%; height: auto; }
   .slop-content { padding: 0 !important; min-height: 0 !important; }
   .slop-title, .section-label, .step-name, .ingredient-name, .step-text, .ingredient-amount {
@@ -113,7 +114,7 @@
 @media (max-width: 900px) {
   .slop-header { padding: 84px 24px 0; }
   .slop-body { display: block; /* Stack instead of grid */ }
-  .slop-image-panel { position: relative; top: 0; height: 60vw; min-height: 280px; border-right: none; border-bottom: 1px solid var(--border); }
+  .slop-image-panel { position: relative; top: 0; aspect-ratio: 1 / 1; height: auto; border-right: none; border-bottom: 1px solid var(--border); }
   .slop-image-panel img { position: relative; }
   .slop-content { padding: 36px 24px 60px; min-height: 0; }
   .slop-stats { grid-template-columns: repeat(2, 1fr); }
