@@ -1,16 +1,304 @@
 {
-  "generated_at": "2026-07-01T23:23:52.384Z",
+  "generated_at": "2026-07-02T03:05:52.260Z",
   "model": "krea2_turbo_fp8_scaled.safetensors",
-  "start_date": "2026-07-01",
-  "count": 1,
+  "start_date": "2026-07-02",
+  "count": 37,
   "entries": [
     {
-      "id": 63,
-      "name": "White Bean Dip with Lemon and Rosemary",
-      "date_file": "2026-07-01.jpg",
-      "slug_file": "white-bean-dip-lemon-rosemary.jpg",
-      "prompt": "bowl of creamy white bean dip with olive oil, lemon, and rosemary, served with crackers, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
-      "photo_search": "bowl of creamy white bean dip with olive oil, lemon, and rosemary, served with crackers"
+      "id": 64,
+      "name": "Egg Yolk Garlic Pasta",
+      "date_file": "2026-07-02.jpg",
+      "slug_file": "egg-yolk-garlic-pasta.jpg",
+      "prompt": "bowl of spaghetti in a creamy garlic sauce with grated parmesan and chilli flakes, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "bowl of spaghetti in a creamy garlic sauce with grated parmesan and chilli flakes"
+    },
+    {
+      "id": 65,
+      "name": "4th of July Burrata Plate",
+      "date_file": "2026-07-03.jpg",
+      "slug_file": "4th-of-july-burrata-plate.jpg",
+      "prompt": "dark moody plate with burrata, fresh strawberries, blueberries, balsamic glaze, and crackers overhead flatlay food photography, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "dark moody plate with burrata, fresh strawberries, blueberries, balsamic glaze, and crackers overhead flatlay food photography"
+    },
+    {
+      "id": 66,
+      "name": "Stracciatella with Olive Oil and Grilled Bread",
+      "date_file": "2026-07-04.jpg",
+      "slug_file": "stracciatella-olive-oil-grilled-bread.jpg",
+      "prompt": "plate of creamy stracciatella cheese drizzled with olive oil, served with grilled bread, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "plate of creamy stracciatella cheese drizzled with olive oil, served with grilled bread"
+    },
+    {
+      "id": 67,
+      "name": "Frittata for One",
+      "date_file": "2026-07-05.jpg",
+      "slug_file": "frittata-for-one.jpg",
+      "prompt": "small skillet frittata with cherry tomatoes and herbs, sliced and golden, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "small skillet frittata with cherry tomatoes and herbs, sliced and golden"
+    },
+    {
+      "id": 68,
+      "name": "Labneh with Za'atar and Olive Oil",
+      "date_file": "2026-07-06.jpg",
+      "slug_file": "labneh-zaatar-olive-oil.jpg",
+      "prompt": "bowl of labneh drizzled with olive oil and dusted with za'atar, served with pita, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "bowl of labneh drizzled with olive oil and dusted with za'atar, served with pita"
+    },
+    {
+      "id": 69,
+      "name": "Pasta e Fagioli",
+      "date_file": "2026-07-07.jpg",
+      "slug_file": "pasta-e-fagioli.jpg",
+      "prompt": "bowl of pasta e fagioli soup with white beans, small pasta, and a drizzle of olive oil, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "bowl of pasta e fagioli soup with white beans, small pasta, and a drizzle of olive oil"
+    },
+    {
+      "id": 70,
+      "name": "Homemade Crunchwrap",
+      "date_file": "2026-07-08.jpg",
+      "slug_file": "homemade-crunchwrap.jpg",
+      "prompt": "golden crispy crunchwrap cut in half to show layers of beef, cheese, and lettuce, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "golden crispy crunchwrap cut in half to show layers of beef, cheese, and lettuce"
+    },
+    {
+      "id": 71,
+      "name": "Prosciutto and Fig Toast",
+      "date_file": "2026-07-09.jpg",
+      "slug_file": "prosciutto-fig-toast.jpg",
+      "prompt": "sourdough toast spread with ricotta, topped with prosciutto, figs, and a honey drizzle, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "sourdough toast spread with ricotta, topped with prosciutto, figs, and a honey drizzle"
+    },
+    {
+      "id": 72,
+      "name": "Anchovy Butter Toast",
+      "date_file": "2026-07-10.jpg",
+      "slug_file": "anchovy-butter-toast.jpg",
+      "prompt": "sourdough toast spread with anchovy butter, topped with sliced radishes and lemon, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "sourdough toast spread with anchovy butter, topped with sliced radishes and lemon"
+    },
+    {
+      "id": 73,
+      "name": "Stuffed Bell Pepper with Rice and Feta",
+      "date_file": "2026-07-11.jpg",
+      "slug_file": "stuffed-bell-pepper-rice-feta.jpg",
+      "prompt": "baked bell pepper halves stuffed with herby rice, feta, and cherry tomatoes, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "baked bell pepper halves stuffed with herby rice, feta, and cherry tomatoes"
+    },
+    {
+      "id": 74,
+      "name": "Carbonara for One",
+      "date_file": "2026-07-12.jpg",
+      "slug_file": "carbonara-for-one.jpg",
+      "prompt": "bowl of spaghetti carbonara with crispy guanciale and a heavy dusting of black pepper, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "bowl of spaghetti carbonara with crispy guanciale and a heavy dusting of black pepper"
+    },
+    {
+      "id": 75,
+      "name": "Everything Bagel Salmon Bites",
+      "date_file": "2026-07-13.jpg",
+      "slug_file": "everything-bagel-salmon-bites.jpg",
+      "prompt": "cucumber rounds topped with cream cheese, smoked salmon, and everything bagel seasoning, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "cucumber rounds topped with cream cheese, smoked salmon, and everything bagel seasoning"
+    },
+    {
+      "id": 76,
+      "name": "Creamy Mushroom Toast with Thyme",
+      "date_file": "2026-07-14.jpg",
+      "slug_file": "creamy-mushroom-toast-thyme.jpg",
+      "prompt": "sourdough toast piled high with mushrooms in a creamy garlic thyme sauce, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "sourdough toast piled high with mushrooms in a creamy garlic thyme sauce"
+    },
+    {
+      "id": 77,
+      "name": "Crispy Fried Rice",
+      "date_file": "2026-07-15.jpg",
+      "slug_file": "crispy-fried-rice.jpg",
+      "prompt": "plate of crispy fried rice with scrambled egg and spring onions, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "plate of crispy fried rice with scrambled egg and spring onions"
+    },
+    {
+      "id": 78,
+      "name": "Seasonal Fruit and Cheese Plate",
+      "date_file": "2026-07-16.jpg",
+      "slug_file": "seasonal-fruit-cheese-plate.jpg",
+      "prompt": "wooden board with aged cheddar, brie, grapes, figs, and crackers, drizzled with honey, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "wooden board with aged cheddar, brie, grapes, figs, and crackers, drizzled with honey"
+    },
+    {
+      "id": 79,
+      "name": "10-Minute Freezer Fried Rice",
+      "date_file": "2026-07-17.jpg",
+      "slug_file": "ten-minute-freezer-fried-rice.jpg",
+      "prompt": "plate of fried rice with mixed vegetables, egg, and a drizzle of chilli crisp, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "plate of fried rice with mixed vegetables, egg, and a drizzle of chilli crisp"
+    },
+    {
+      "id": 80,
+      "name": "Pan Con Tomate",
+      "date_file": "2026-07-18.jpg",
+      "slug_file": "pan-con-tomate.jpg",
+      "prompt": "toasted sourdough rubbed with tomato and garlic, drizzled with olive oil and flaky salt, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "toasted sourdough rubbed with tomato and garlic, drizzled with olive oil and flaky salt"
+    },
+    {
+      "id": 81,
+      "name": "Blistered Padron Peppers",
+      "date_file": "2026-07-19.jpg",
+      "slug_file": "blistered-padron-peppers.jpg",
+      "prompt": "cast iron pan of blistered green padron peppers dusted heavily with flaky sea salt, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "cast iron pan of blistered green padron peppers dusted heavily with flaky sea salt"
+    },
+    {
+      "id": 82,
+      "name": "Pita Pizza",
+      "date_file": "2026-07-20.jpg",
+      "slug_file": "pita-pizza.jpg",
+      "prompt": "crispy pita bread pizza with melted mozzarella, tomato sauce, and basil, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "crispy pita bread pizza with melted mozzarella, tomato sauce, and basil"
+    },
+    {
+      "id": 83,
+      "name": "Warm Olives with Orange and Herbs",
+      "date_file": "2026-07-21.jpg",
+      "slug_file": "warm-olives-orange-herbs.jpg",
+      "prompt": "bowl of warm mixed olives in olive oil with orange peel and rosemary, served with bread, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "bowl of warm mixed olives in olive oil with orange peel and rosemary, served with bread"
+    },
+    {
+      "id": 84,
+      "name": "Creamy Tuscan White Beans",
+      "date_file": "2026-07-22.jpg",
+      "slug_file": "creamy-tuscan-white-beans.jpg",
+      "prompt": "skillet of creamy Tuscan white beans with tomatoes, spinach, and garlic, served with bread, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "skillet of creamy Tuscan white beans with tomatoes, spinach, and garlic, served with bread"
+    },
+    {
+      "id": 85,
+      "name": "Silky Egg Drop Soup",
+      "date_file": "2026-07-23.jpg",
+      "slug_file": "silky-egg-drop-soup.jpg",
+      "prompt": "bowl of silky egg drop soup with spring onions and sesame seeds, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "bowl of silky egg drop soup with spring onions and sesame seeds"
+    },
+    {
+      "id": 86,
+      "name": "Roasted Tomato and Burrata Toast",
+      "date_file": "2026-07-24.jpg",
+      "slug_file": "roasted-tomato-burrata-toast.jpg",
+      "prompt": "grilled sourdough topped with torn burrata, roasted tomatoes, basil, and balsamic glaze, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "grilled sourdough topped with torn burrata, roasted tomatoes, basil, and balsamic glaze"
+    },
+    {
+      "id": 87,
+      "name": "Spicy Tuna Crispy Rice",
+      "date_file": "2026-07-25.jpg",
+      "slug_file": "spicy-tuna-crispy-rice.jpg",
+      "prompt": "crispy fried rice cakes topped with spicy diced tuna, avocado, and jalapeno, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "crispy fried rice cakes topped with spicy diced tuna, avocado, and jalapeno"
+    },
+    {
+      "id": 88,
+      "name": "Takis with Chamoy and Lime",
+      "date_file": "2026-07-26.jpg",
+      "slug_file": "takis-chamoy-lime.jpg",
+      "prompt": "plate of Takis chips drizzled with chamoy, lime juice, and Tajin seasoning, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "plate of Takis chips drizzled with chamoy, lime juice, and Tajin seasoning"
+    },
+    {
+      "id": 89,
+      "name": "Overnight Oats as Dinner",
+      "date_file": "2026-07-27.jpg",
+      "slug_file": "overnight-oats-as-dinner.jpg",
+      "prompt": "jar of overnight oats topped with berries, chia seeds, and a drizzle of nut butter, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "jar of overnight oats topped with berries, chia seeds, and a drizzle of nut butter"
+    },
+    {
+      "id": 90,
+      "name": "Creamed Spinach on Toast",
+      "date_file": "2026-07-28.jpg",
+      "slug_file": "creamed-spinach-toast.jpg",
+      "prompt": "sourdough toast topped with rich creamed spinach and parmesan, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "sourdough toast topped with rich creamed spinach and parmesan"
+    },
+    {
+      "id": 91,
+      "name": "Mango with Tajin and Lime",
+      "date_file": "2026-07-29.jpg",
+      "slug_file": "mango-tajin-lime.jpg",
+      "prompt": "plate of fresh mango slices dusted with Tajin and lime juice, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "plate of fresh mango slices dusted with Tajin and lime juice"
+    },
+    {
+      "id": 92,
+      "name": "Solo Charcuterie Board with Wine",
+      "date_file": "2026-07-30.jpg",
+      "slug_file": "solo-charcuterie-board-wine.jpg",
+      "prompt": "small wooden board with prosciutto, manchego, brie, olives, grapes, and a glass of wine, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "small wooden board with prosciutto, manchego, brie, olives, grapes, and a glass of wine"
+    },
+    {
+      "id": 93,
+      "name": "Honey Garlic Butter Shrimp",
+      "date_file": "2026-07-31.jpg",
+      "slug_file": "honey-garlic-butter-shrimp.jpg",
+      "prompt": "skillet of shrimp in a sticky honey garlic butter sauce with lemon, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "skillet of shrimp in a sticky honey garlic butter sauce with lemon"
+    },
+    {
+      "id": 94,
+      "name": "Smoked Oyster Toast",
+      "date_file": "2026-08-01.jpg",
+      "slug_file": "smoked-oyster-toast.jpg",
+      "prompt": "rye toast heavily buttered and topped with smoked oysters, hot sauce, and lemon, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "rye toast heavily buttered and topped with smoked oysters, hot sauce, and lemon"
+    },
+    {
+      "id": 95,
+      "name": "Roasted Beet and Goat Cheese Salad",
+      "date_file": "2026-08-02.jpg",
+      "slug_file": "roasted-beet-goat-cheese-salad.jpg",
+      "prompt": "plate of arugula, sliced roasted beets, crumbled goat cheese, and candied walnuts, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "plate of arugula, sliced roasted beets, crumbled goat cheese, and candied walnuts"
+    },
+    {
+      "id": 96,
+      "name": "Tteokbokki",
+      "date_file": "2026-08-03.jpg",
+      "slug_file": "tteokbokki.jpg",
+      "prompt": "bowl of tteokbokki rice cakes in a thick red gochujang sauce with spring onions, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "bowl of tteokbokki rice cakes in a thick red gochujang sauce with spring onions"
+    },
+    {
+      "id": 97,
+      "name": "Tahini and Honey Toast",
+      "date_file": "2026-08-04.jpg",
+      "slug_file": "tahini-honey-toast.jpg",
+      "prompt": "toasted bread spread with tahini, drizzled with honey, and sprinkled with sesame seeds, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "toasted bread spread with tahini, drizzled with honey, and sprinkled with sesame seeds"
+    },
+    {
+      "id": 98,
+      "name": "Store-Bought Pork Belly Bao",
+      "date_file": "2026-08-05.jpg",
+      "slug_file": "store-bought-pork-belly-bao.jpg",
+      "prompt": "fluffy steamed bao buns filled with pork belly, hoisin sauce, and cucumber, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "fluffy steamed bao buns filled with pork belly, hoisin sauce, and cucumber"
+    },
+    {
+      "id": 99,
+      "name": "Olive Oil Cake with Macerated Berries",
+      "date_file": "2026-08-06.jpg",
+      "slug_file": "olive-oil-cake-macerated-berries.jpg",
+      "prompt": "plate with a slice of olive oil cake topped with juicy macerated berries, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "plate with a slice of olive oil cake topped with juicy macerated berries"
+    },
+    {
+      "id": 100,
+      "name": "Butter Lettuce with Champagne Vinaigrette",
+      "date_file": "2026-08-07.jpg",
+      "slug_file": "butter-lettuce-champagne-vinaigrette.jpg",
+      "prompt": "elegant bowl of butter lettuce lightly coated in champagne vinaigrette with shaved parmesan, professional food photography, dark moody aesthetic, dramatic side lighting, dark slate or black background, shallow depth of field, high resolution, editorial food styling, rustic textures, cinematic color grade, hyperrealistic",
+      "photo_search": "elegant bowl of butter lettuce lightly coated in champagne vinaigrette with shaved parmesan"
     }
   ]
 }

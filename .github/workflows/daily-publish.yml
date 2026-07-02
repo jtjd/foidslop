@@ -1,0 +1,37 @@
+name: Daily Slop Publish
+
+on:
+  schedule:
+    # Runs at 04:01 UTC every day (which is 12:01 AM EDT)
+    - cron: '1 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write # REQUIRED for the bot to push commits
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Run daily publish script
+        run: node daily-publish.js
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add index.html slop/archive.html _redirects
+          if ! git diff --staged --quiet; then
+            git commit -m "Daily Slop Update: $(date +'%Y-%m-%d')"
+            git push
+          else
+            echo "No changes to commit."
+          fi
