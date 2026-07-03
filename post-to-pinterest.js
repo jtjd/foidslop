@@ -54,7 +54,7 @@ const payload = {
 
 console.log(`Pinning ${meal.name} to Pinterest...`);
 
-fetch('https://api.pinterest.com/v5/pins', {
+fetch('https://api-sandbox.pinterest.com/v5/pins', {
     method: 'POST',
     headers: {
         'Authorization': `Bearer ${PINTEREST_TOKEN}`,
