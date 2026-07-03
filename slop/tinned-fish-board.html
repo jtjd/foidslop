@@ -252,31 +252,38 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+  // ── Bulletproof Share Button Logic ──
   const shareBtn = document.getElementById('copy-link-btn');
   if (shareBtn) {
     shareBtn.addEventListener('click', async () => {
-      const shareData = {
-        title: document.title,
-        text: 'Check out this foidslop recipe!',
-        url: window.location.href
-      };
+      const url = window.location.href;
+      // Detect if user is on a mobile device to use the native OS share sheet
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
       try {
-        if (navigator.share) {
-          await navigator.share(shareData);
+        if (isMobile && navigator.share) {
+          // Use mobile native share sheet (only URL, no text appending)
+          await navigator.share({
+            title: document.title,
+            url: url
+          });
         } else {
-          await navigator.clipboard.writeText(window.location.href);
+          // Desktop fallback: instantly copy clean URL
+          await navigator.clipboard.writeText(url);
           const textSpan = shareBtn.querySelector('span');
-          const originalText = textSpan.innerText;
           textSpan.innerText = 'Link Copied!';
           shareBtn.classList.add('copied');
           setTimeout(() => {
-            textSpan.innerText = originalText;
+            textSpan.innerText = 'Share Recipe';
             shareBtn.classList.remove('copied');
           }, 2000);
         }
       } catch (err) {
-        console.log('Share canceled');
+        // If mobile user cancels the share sheet, do nothing.
+        // If desktop copy fails, log error.
+        if (err.name !== 'AbortError') {
+          console.error('Share failed:', err);
+        }
       }
     });
   }
