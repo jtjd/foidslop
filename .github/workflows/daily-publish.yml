@@ -24,6 +24,12 @@ jobs:
       - name: Run daily publish script
         run: node daily-publish.js
 
+      - name: Post to Pinterest
+        env:
+          PINTEREST_TOKEN: ${{ secrets.PINTEREST_TOKEN }}
+          PINTEREST_BOARD_ID: ${{ secrets.PINTEREST_BOARD_ID }}
+        run: node post-to-pinterest.js
+
       - name: Commit and push changes
         run: |
           git config --global user.name "GitHub Actions"
