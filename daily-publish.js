@@ -45,7 +45,6 @@ function updatePrevNextNav(prevSlugToUpdate, newSlug, newMealName, newPrettyDate
     const prevFile = path.join(SLOP_DIR, `${prevSlugToUpdate}.html`);
     if (!fs.existsSync(prevFile)) return;
     let html = fs.readFileSync(prevFile, 'utf8');
-    // Matches any next-nav block (whether it has a real link or a placeholder)
     const nextPlaceholderRe = /<a href="[^"]*" class="slop-nav-item next"[^>]*>[\s\S]*?<\/a>/;
     const newNextBlock = `<a href="./${newSlug}.html" class="slop-nav-item next" aria-label="Next slop: ${escHtml(newMealName)}">\n    <span class="slop-nav-dir">Next Slop →</span>\n    <span class="slop-nav-name">${escHtml(newMealName)}</span>\n    <span class="slop-nav-date">${escHtml(newPrettyDate)}</span>\n  </a>`;
     if (nextPlaceholderRe.test(html)) {

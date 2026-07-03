@@ -107,7 +107,7 @@
   <!-- ══════════════════════════════
        ARCHIVE GRID
   ══════════════════════════════ -->
-   <div class="archive-header">
+  <div class="archive-header">
     <span class="archive-label">Past Slops</span>
     <span class="archive-count" id="archive-count">64 recipes</span>
   </div>
@@ -1289,6 +1289,13 @@
   </div>
 </footer>
 
+<!-- Back to Top Button -->
+<button id="back-to-top" aria-label="Back to top">
+  <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M6 10V2M2 6l4-4 4 4"/>
+  </svg>
+</button>
+
 <script>
   // Set copyright year
   document.getElementById('year').textContent = new Date().getFullYear();
@@ -1397,13 +1404,11 @@
     loadMoreBtn.addEventListener('click', () => {
       for (let i = 0; i < itemsPerPage; i++) {
         if (cards[currentlyVisible]) {
-          // Reset display to empty string so it inherits CSS correctly
           cards[currentlyVisible].style.display = '';
           currentlyVisible++;
         }
       }
 
-      // Re-trigger animation for newly shown cards
       const newCardObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -1420,6 +1425,22 @@
       if (currentlyVisible >= cards.length) {
         loadMoreContainer.style.display = 'none';
       }
+    });
+  }
+
+  // ── Back to Top Logic ──
+  const backToTopBtn = document.getElementById('back-to-top');
+  if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    }, { passive: true });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 </script>

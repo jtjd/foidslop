@@ -29,13 +29,13 @@ h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 8vw, 6.5rem
   position: relative;
   overflow: hidden;
   border-right: 1px solid var(--border);
-  height: 100%; /* Fill the 600px */
+  height: 100%;
 }
 .featured-image img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Crop image to fit the 600px box */
+  object-fit: cover;
   object-position: center;
   transition: transform 0.7s cubic-bezier(0.22,1,0.36,1);
 }
@@ -47,7 +47,7 @@ h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 8vw, 6.5rem
   justify-content: center;
   padding: 40px;
   height: 100%;
-  overflow-y: auto; /* Scroll internally if text is too long */
+  overflow-y: auto;
 }
 .featured-eyebrow { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
 .featured-eyebrow::before { content: '✦'; font-size: 0.5rem; }
@@ -151,10 +151,46 @@ h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 8vw, 6.5rem
 }
 .load-more-btn:hover { color: var(--text); border-color: var(--text); }
 
+/* ── Back to Top Button ─────────────────── */
+#back-to-top {
+position: fixed;
+bottom: 24px;
+right: 24px;
+width: 40px;
+height: 40px;
+background: rgba(10, 10, 13, 0.8);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border: 1px solid var(--border);
+color: var(--muted);
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+opacity: 0;
+transform: translateY(20px);
+pointer-events: none;
+transition: opacity 0.3s ease, transform 0.3s ease, color 0.2s ease, border-color 0.2s ease;
+z-index: 40;
+}
+#back-to-top.visible {
+opacity: 1;
+transform: translateY(0);
+pointer-events: auto;
+}
+#back-to-top:hover {
+color: var(--text);
+border-color: var(--text);
+}
+#back-to-top svg {
+width: 14px;
+height: 14px;
+}
+
 /* ── Responsive (Tablet & Mobile) ────────── */
 @media (max-width: 1024px) {
   .page-title { padding: 84px 24px 32px; flex-direction: column; align-items: flex-start; gap: 24px; }
-  .featured-slop { grid-template-columns: 1fr; height: auto; /* Stack on tablet to prevent overlap */ }
+  .featured-slop { grid-template-columns: 1fr; height: auto; }
   .featured-image { aspect-ratio: 1 / 1; height: auto; border-right: none; border-bottom: 1px solid var(--border); }
   .featured-content { height: auto; padding: 36px 24px 48px; justify-content: flex-start; overflow-y: visible; }
   .archive-header { padding: 24px 24px 20px; }
