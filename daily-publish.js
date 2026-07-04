@@ -21,9 +21,19 @@ function buildArchiveCard(slug, mealName, shortDateStr, tags) {
     return `    <article class="archive-card reveal">\n      <a href="./${slug}.html" aria-label="Read recipe: ${escHtml(mealName)}">\n        <div class="archive-card-img">\n          <img src="img/${slug}.jpg" alt="${escHtml(mealName)}" width="600" height="450" loading="lazy">\n        </div>\n        <div class="archive-card-body">\n          <p class="archive-card-name">${escHtml(mealName)}</p>\n          <div class="archive-card-meta">\n            <span class="archive-card-date">${escHtml(shortDateStr)}</span>\n            <div class="archive-card-tags">\n${tagHTML}\n            </div>\n          </div>\n        </div>\n      </a>\n    </article>`;
 }
 
-function updateHomepage(slug, mealName, description) {
+function buildRecentCard(slug, mealName, dateStr) {
+    return `<div class="scroll-card"><a href="slop/${slug}.html" aria-label="Read recipe: ${escHtml(mealName)}"><div class="scroll-card-img"><img src="slop/img/${slug}.jpg" alt="${escHtml(mealName)}" width="400" height="400" loading="lazy"></div><div class="scroll-card-info"><div class="scroll-card-name">${escHtml(mealName)}</div><div class="scroll-card-price">${escHtml(dateStr)}</div></div></a></div>`;
+}
+
+function updateHomepage(todaysMeal, meals, targetIndex) {
     if (!fs.existsSync(HOME_FILE)) return;
     let html = fs.readFileSync(HOME_FILE, 'utf8');
+
+    const slug = todaysMeal.slug;
+    const mealName = todaysMeal.name;
+    const description = todaysMeal.description;
+
+    // Update Hero SOTD
     html = html
     .replace(/(<a href="slop\/)([^"]+)(\.html" class="hero-sotd")/, `$1${slug}$3`)
     .replace(/(class="hero-sotd" id="sotd-link" aria-label="Today's slop: )[^"]+(")/, `$1${escHtml(mealName)}$2`)
@@ -38,6 +48,30 @@ function updateHomepage(slug, mealName, description) {
     .replace(/(class="hero-sotd-banner-image">[\s\S]*?alt=")([^"]+)(")/, `$1${escHtml(mealName)}$3`)
     .replace(/(class="hero-sotd-banner-text">[\s\S]*?<p class="hero-sotd-name">)[^<]+(<\/p>)/, `$1${escHtml(mealName)}$2`)
     .replace(/(class="hero-sotd-banner-text">[\s\S]*?<p class="hero-sotd-desc">)[^<]+(<\/p>)/, `$1${escHtml(description.slice(0, 100))}$2`);
+
+    // Update Daily Slop Section (Full Width)
+    const counterStr = `${String(todaysMeal.id).padStart(3, '0')}`;
+    html = html.replace(/(<h2 class="slop-counter-number"[^>]*>)[^<]*(<\/h2>)/, `$1${counterStr}$2`);
+    html = html.replace(/(<h3 class="slop-counter-title"[^>]*>)[^<]*(<\/h3>)/, `$1${escHtml(mealName)}$2`);
+    html = html.replace(/(<p class="slop-counter-desc"[^>]*>)[^<]*(<\/p>)/, `$1${escHtml(description.slice(0, 150))}$2`);
+    html = html.replace(/(<a href="slop\/)([^"]+)(\.html" class="daily-slop-img-link" id="slop-counter-img-link")/, `$1${slug}$3`);
+    html = html.replace(/(<img src="slop\/img\/)([^"]+)(\.jpg" id="slop-counter-img")/, `$1${slug}$3`);
+    html = html.replace(/(id="slop-counter-img" alt=")([^"]+)(")/, `$1${escHtml(mealName)}$3`);
+    html = html.replace(/(<a href="slop\/)([^"]+)(\.html" class="btn-shop daily-slop-btn" id="slop-counter-link")/, `$1${slug}$3`);
+
+    // Update Recently Eaten Carousel using bulletproof markers (15 items)
+    let recentCards = [];
+    for (let i = 15; i >= 1; i--) {
+        let idx = targetIndex - i;
+        if (idx < 0) idx = meals.length + idx;
+        const m = meals[idx];
+        let d = new Date();
+        d.setDate(d.getDate() - i);
+        recentCards.push(buildRecentCard(m.slug, m.name, shortDate(d)));
+    }
+    const recentHTML = recentCards.join('\n      ');
+    html = html.replace(/(<!-- RECENTLY_EATEN_START -->)[\s\S]*?(<!-- RECENTLY_EATEN_END -->)/, `$1\n      ${recentHTML}\n      $2`);
+
     fs.writeFileSync(HOME_FILE, html, 'utf8');
 }
 
@@ -118,7 +152,7 @@ console.log(`Updating site to feature: ${todaysMeal.name} (${todaysMeal.slug})`)
 const dateObj = new Date();
 
 // 1. Update Homepage
-updateHomepage(todaysMeal.slug, todaysMeal.name, todaysMeal.description);
+updateHomepage(todaysMeal, meals, targetIndex);
 
 // 2. Update Prev/Next Navs
 resetNextNav(todaysMeal.slug);

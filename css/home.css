@@ -36,7 +36,84 @@ h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(5.5rem, 9vw, 10rem)
 .hero-top-overlay { display: none; }
 .hero-bottom-mobile { display: none; }
 
-/* ── Scroll section ─────────────────────── */
+/* ── Daily Slop Section (Full Width) ─────── */
+.daily-slop-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--border);
+  min-height: 600px;
+}
+.daily-slop-img-link {
+  display: block;
+  overflow: hidden;
+  border-right: 1px solid var(--border);
+}
+.daily-slop-img-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.22,1,0.36,1);
+}
+.daily-slop-img-link:hover img {
+  transform: scale(1.04);
+}
+.daily-slop-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 80px;
+}
+.daily-slop-inner {
+  max-width: 500px;
+}
+.daily-slop-eyebrow {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.daily-slop-eyebrow::before { content: '✦'; font-size: 0.5rem; }
+
+.slop-counter-number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(5rem, 12vw, 8rem);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: 0.01em;
+  color: rgba(255,255,255,0.1); /* Ghost text effect */
+  margin-bottom: 16px;
+}
+.slop-counter-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 400;
+  line-height: 0.95;
+  color: var(--text);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.slop-counter-desc {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+.daily-slop-btn {
+  background: var(--text);
+  color: var(--bg);
+  border: none;
+  text-decoration: none;
+}
+.daily-slop-btn:hover {
+  opacity: 0.85;
+}
+
+/* ── Scroll section (Merch & Recently Eaten) ─────────────────────── */
 .scroll-section { border-bottom: 1px solid var(--border); }
 .scroll-header { display: flex; align-items: center; justify-content: space-between; padding: 32px 40px 20px; }
 .scroll-title { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
@@ -73,6 +150,11 @@ h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(5.5rem, 9vw, 10rem)
 .scroll-card-cta .cta-text { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.4rem, 8vw, 3.2rem); font-weight: 400; line-height: 0.9; letter-spacing: 0.01em; color: var(--text); text-transform: uppercase; text-align: left; }
 .scroll-card-cta .cta-text em { font-style: normal; color: transparent; -webkit-text-stroke: 1.2px rgba(255,255,255,0.3); display: block; }
 .scroll-card-cta-info { width: calc(100% + 48px); margin: 16px -24px -24px; padding: 16px 24px; border-top: 1px solid var(--border); box-sizing: border-box; }
+
+/* Make Recently Eaten cards square */
+#recently-eaten-track .scroll-card-img {
+aspect-ratio: 1 / 1;
+}
 
 /* ── Manifesto ───────────────────────────── */
 .manifesto { padding: 120px 40px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: center; min-height: 50vh; }
@@ -111,7 +193,7 @@ h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(5.5rem, 9vw, 10rem)
 /* ── SOTD desktop teaser ────────────────── */
 .hero-sotd {
   display: grid;
-  grid-template-columns: 120px 1fr; /* Increased image from 72px to 120px */
+  grid-template-columns: 120px 1fr;
   gap: 20px;
   align-items: center;
   text-decoration: none;
@@ -119,7 +201,7 @@ h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(5.5rem, 9vw, 10rem)
   border: 1px solid var(--border);
   margin-top: 32px;
   transition: opacity 0.2s ease, background 0.2s ease;
-  background: var(--surface); /* Adds a subtle card background to make it pop */
+  background: var(--surface);
 }
 .hero-sotd:hover { opacity: 1; background: rgba(255,255,255,0.03); }
 .hero-sotd:hover .hero-sotd-overlay { opacity: 1; }
@@ -148,7 +230,7 @@ h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(5.5rem, 9vw, 10rem)
   justify-content: center;
   opacity: 0;
   transition: opacity 0.25s ease;
-  font-size: 0.6rem; /* Bumped up from 0.5rem for readability */
+  font-size: 0.6rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text);
@@ -194,7 +276,7 @@ h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(5.5rem, 9vw, 10rem)
 
 /* ── SOTD mobile banner ─────────────────── */
 .hero-sotd-banner {
-  display: none; /* shown only on mobile */
+  display: none;
   align-items: center;
   gap: 14px;
   text-decoration: none;
@@ -209,7 +291,7 @@ h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(5.5rem, 9vw, 10rem)
 
 .hero-sotd-banner-image {
   width: 52px;
-  height: 52px; /* Changed from 64px to make it a perfect 1:1 square */
+  height: 52px;
   flex-shrink: 0;
   overflow: hidden;
 }
@@ -227,7 +309,6 @@ h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(5.5rem, 9vw, 10rem)
   flex: 1;
   min-width: 0;
 }
-/* reuses .hero-sotd-eyebrow, .hero-sotd-name, .hero-sotd-desc */
 .hero-sotd-banner-arrow {
   font-size: 1rem;
   color: var(--muted);
@@ -257,11 +338,25 @@ h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(5.5rem, 9vw, 10rem)
 @media (max-width: 768px) {
   .keyword-section { padding: 28px 24px; }
   .scroll-nav { display: none; }
+  .daily-slop-section {
+    grid-template-columns: 1fr;
+    min-height: unset;
+  }
+  .daily-slop-img-link {
+    aspect-ratio: 1 / 1;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .daily-slop-content {
+    padding: 40px 24px;
+  }
+  .daily-slop-inner {
+    max-width: 100%;
+  }
 }
 
 /* ── Show/hide per breakpoint ───────────── */
 @media (max-width: 1024px) {
-  /* mobile banner visible, desktop sotd hidden */
   .hero-sotd        { display: none !important; }
   .hero-sotd-banner { display: flex; }
 }

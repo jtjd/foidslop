@@ -6,9 +6,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Pinterest Verify -->
-<meta name="p:domain_verify" content="7bdfbfde1745ec62bc759913fcc45642"/>
-
 <!-- Favicons -->
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -315,10 +312,68 @@
   </a>
 </section>
 
+<!-- NEW: Full-Width Daily Slop Section -->
+<section class="daily-slop-section reveal" aria-label="Daily Slop Feature">
+  <a href="slop/egg-yolk-garlic-pasta.html" class="daily-slop-img-link" id="slop-counter-img-link">
+    <img src="slop/img/egg-yolk-garlic-pasta.jpg" id="slop-counter-img" alt="Egg Yolk Garlic Pasta" width="900" height="900" loading="lazy">
+  </a>
+  <div class="daily-slop-content">
+    <div class="daily-slop-inner">
+      <span class="daily-slop-eyebrow">Daily Slop</span>
+      <h2 class="slop-counter-number" id="slop-counter-num">064</h2>
+      <h3 class="slop-counter-title" id="slop-counter-title">Egg Yolk Garlic Pasta</h3>
+      <p class="slop-counter-desc" id="slop-counter-desc">Garlic pasta finished with an egg yolk. A solo carbonara for when you cannot be bothered.</p>
+      <a href="slop/egg-yolk-garlic-pasta.html" class="btn-shop daily-slop-btn" id="slop-counter-link">
+        Read the Recipe
+        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M2 6h8M6 2l4 4-4 4"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- NEW: Recently Eaten Carousel -->
+<section class="scroll-section reveal" aria-label="Recently eaten slops">
+  <div class="scroll-header">
+    <span class="scroll-title">Recently Eaten</span>
+    <div class="scroll-nav">
+      <button class="scroll-nav-btn" id="scroll-prev-eaten" aria-label="Scroll left">
+        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M7 2L3 6l4 4"/>
+        </svg>
+      </button>
+      <button class="scroll-nav-btn" id="scroll-next-eaten" aria-label="Scroll right">
+        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 2l4 4-4 4"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="scroll-track" id="recently-eaten-track">
+    <!-- RECENTLY_EATEN_START -->
+      <div class="scroll-card"><a href="slop/cacio-e-pepe.html" aria-label="Read recipe: Cacio e Pepe"><div class="scroll-card-img"><img src="slop/img/cacio-e-pepe.jpg" alt="Cacio e Pepe" width="400" height="400" loading="lazy"></div><div class="scroll-card-info"><div class="scroll-card-name">Cacio e Pepe</div><div class="scroll-card-price">Jun 18, 2026</div></div></a></div>
+      <div class="scroll-card"><a href="slop/tinned-fish-board.html" aria-label="Read recipe: Tinned Fish Board"><div class="scroll-card-img"><img src="slop/img/tinned-fish-board.jpg" alt="Tinned Fish Board" width="400" height="400" loading="lazy"></div><div class="scroll-card-info"><div class="scroll-card-name">Tinned Fish Board</div><div class="scroll-card-price">Jun 19, 2026</div></div></a></div>
+      <div class="scroll-card"><a href="slop/avocado-egg-salad-lettuce-cups.html" aria-label="Read recipe: Avocado and Egg Salad Lettuce Cups"><div class="scroll-card-img"><img src="slop/img/avocado-egg-salad-lettuce-cups.jpg" alt="Avocado and Egg Salad Lettuce Cups" width="400" height="400" loading="lazy"></div><div class="scroll-card-info"><div class="scroll-card-name">Avocado and Egg Salad Lettuce Cups</div><div class="scroll-card-price">Jun 20, 2026</div></div></a></div>
+      <div class="scroll-card"><a href="slop/kimchi-butter-ramen.html" aria-label="Read recipe: Kimchi Butter Ramen"><div class="scroll-card-img"><img src="slop/img/kimchi-butter-ramen.jpg" alt="Kimchi Butter Ramen" width="400" height="400" loading="lazy"></div><div class="scroll-card-info"><div class="scroll-card-name">Kimchi Butter Ramen</div><div class="scroll-card-price">Jun 21, 2026</div></div></a></div>
+      <div class="scroll-card"><a href="slop/medjool-dates-almond-butter-salt.html" aria-label="Read recipe: Medjool Dates with Almond Butter and Flaky Salt"><div class="scroll-card-img"><img src="slop/img/medjool-dates-almond-butter-salt.jpg" alt="Medjool Dates with Almond Butter and Flaky Salt" width="400" height="400" loading="lazy"></div><div class="scroll-card-info"><div class="scroll-card-name">Medjool Dates with Almond Butter and Flaky Salt</div><div class="scroll-card-price">Jun 22, 2026</div></div></a></div>
+      <div class="scroll-card"><a href="slop/sheet-pan-nachos.html" aria-label="Read recipe: Sheet Pan Nachos"><div class="scroll-card-img"><img src="slop/img/sheet-pan-nachos.jpg" alt="Sheet Pan Nachos" width="400" height="400" loading="lazy"></div><div class="scroll-card-info"><div class="scroll-card-name">Sheet Pan Nachos</div><div class="scroll-card-price">Jun 23, 2026</div></div></a></div>
+      <div class="scroll-card"><a href="slop/miso-soup-tofu-noodles.html" aria-label="Read recipe: Miso Soup with Tofu and Noodles"><div class="scroll-card-img"><img src="slop/img/miso-soup-tofu-noodles.jpg" alt="Miso Soup with Tofu and Noodles" width="400" height="400" loading="lazy"></div><div class="scroll-card-info"><div class="scroll-card-name">Miso Soup with Tofu and Noodles</div><div class="scroll-card-price">Jun 24, 2026</div></div></a></div>
+      <div class="scroll-card"><a href="slop/hot-honey-butter-toast.html" aria-label="Read recipe: Hot Honey Butter Toast"><div class="scroll-card-img"><img src="slop/img/hot-honey-butter-toast.jpg" alt="Hot Honey Butter Toast" width="400" height="400" loading="lazy"></div><div class="scroll-card-info"><div class="scroll-card-name">Hot Honey Butter Toast</div><div class="scroll-card-price">Jun 25, 2026</div></div></a></div>
+      <div class="scroll-card"><a href="slop/loaded-sweet-potato-black-beans.html" aria-label="Read recipe: Loaded Sweet Potato with Black Beans"><div class="scroll-card-img"><img src="slop/img/loaded-sweet-potato-black-beans.jpg" alt="Loaded Sweet Potato with Black Beans" width="400" height="400" loading="lazy"></div><div class="scroll-card-info"><div class="scroll-card-name">Loaded Sweet Potato with Black Beans</div><div class="scroll-card-price">Jun 26, 2026</div></div></a></div>
+      <div class="scroll-card"><a href="slop/caramelized-onion-dip-ridged-chips.html" aria-label="Read recipe: Caramelized Onion Dip with Ridged Chips"><div class="scroll-card-img"><img src="slop/img/caramelized-onion-dip-ridged-chips.jpg" alt="Caramelized Onion Dip with Ridged Chips" width="400" height="400" loading="lazy"></div><div class="scroll-card-info"><div class="scroll-card-name">Caramelized Onion Dip with Ridged Chips</div><div class="scroll-card-price">Jun 27, 2026</div></div></a></div>
+      <div class="scroll-card"><a href="slop/spaghetti-aglio-e-olio.html" aria-label="Read recipe: Spaghetti Aglio e Olio"><div class="scroll-card-img"><img src="slop/img/spaghetti-aglio-e-olio.jpg" alt="Spaghetti Aglio e Olio" width="400" height="400" loading="lazy"></div><div class="scroll-card-info"><div class="scroll-card-name">Spaghetti Aglio e Olio</div><div class="scroll-card-price">Jun 28, 2026</div></div></a></div>
+      <div class="scroll-card"><a href="slop/savory-cottage-cheese-bowl.html" aria-label="Read recipe: Savory Cottage Cheese Bowl"><div class="scroll-card-img"><img src="slop/img/savory-cottage-cheese-bowl.jpg" alt="Savory Cottage Cheese Bowl" width="400" height="400" loading="lazy"></div><div class="scroll-card-info"><div class="scroll-card-name">Savory Cottage Cheese Bowl</div><div class="scroll-card-price">Jun 29, 2026</div></div></a></div>
+      <div class="scroll-card"><a href="slop/panzanella.html" aria-label="Read recipe: Panzanella"><div class="scroll-card-img"><img src="slop/img/panzanella.jpg" alt="Panzanella" width="400" height="400" loading="lazy"></div><div class="scroll-card-info"><div class="scroll-card-name">Panzanella</div><div class="scroll-card-price">Jun 30, 2026</div></div></a></div>
+      <div class="scroll-card"><a href="slop/matcha-latte-banana-peanut-butter.html" aria-label="Read recipe: Matcha Latte and Banana with Peanut Butter"><div class="scroll-card-img"><img src="slop/img/matcha-latte-banana-peanut-butter.jpg" alt="Matcha Latte and Banana with Peanut Butter" width="400" height="400" loading="lazy"></div><div class="scroll-card-info"><div class="scroll-card-name">Matcha Latte and Banana with Peanut Butter</div><div class="scroll-card-price">Jul 1, 2026</div></div></a></div>
+      <div class="scroll-card"><a href="slop/white-bean-dip-lemon-rosemary.html" aria-label="Read recipe: White Bean Dip with Lemon and Rosemary"><div class="scroll-card-img"><img src="slop/img/white-bean-dip-lemon-rosemary.jpg" alt="White Bean Dip with Lemon and Rosemary" width="400" height="400" loading="lazy"></div><div class="scroll-card-info"><div class="scroll-card-name">White Bean Dip with Lemon and Rosemary</div><div class="scroll-card-price">Jul 2, 2026</div></div></a></div>
+      <!-- RECENTLY_EATEN_END -->
+  </div>
+</section>
+
 <section class="scroll-section reveal" aria-label="Featured products">
   <div class="scroll-header">
     <span class="scroll-title">DJT Nippon Collection</span>
-    <!-- Replaced text hint with functional arrow buttons -->
     <div class="scroll-nav">
       <button class="scroll-nav-btn" id="scroll-prev" aria-label="Scroll left">
         <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -491,21 +546,27 @@
   document.querySelectorAll('.reveal, .reveal-clip').forEach(el => observer.observe(el));
 
   // 4. Merch Carousel Navigation
-  const scrollTrack = document.querySelector('.scroll-track');
+  const scrollTrack = document.querySelector('#scroll-track');
   const scrollPrev = document.getElementById('scroll-prev');
   const scrollNext = document.getElementById('scroll-next');
   const scrollAmount = 316; // 300px card + 16px gap
 
   if (scrollTrack && scrollPrev && scrollNext) {
-    scrollPrev.addEventListener('click', () => {
-      scrollTrack.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-    });
-    scrollNext.addEventListener('click', () => {
-      scrollTrack.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    });
+    scrollPrev.addEventListener('click', () => scrollTrack.scrollBy({ left: -scrollAmount, behavior: 'smooth' }));
+    scrollNext.addEventListener('click', () => scrollTrack.scrollBy({ left: scrollAmount, behavior: 'smooth' }));
   }
 
-  // 5. Mobile hamburger menu
+  // 5. Recently Eaten Carousel Navigation
+  const scrollTrackEaten = document.querySelector('#recently-eaten-track');
+  const scrollPrevEaten = document.getElementById('scroll-prev-eaten');
+  const scrollNextEaten = document.getElementById('scroll-next-eaten');
+
+  if (scrollTrackEaten && scrollPrevEaten && scrollNextEaten) {
+    scrollPrevEaten.addEventListener('click', () => scrollTrackEaten.scrollBy({ left: -scrollAmount, behavior: 'smooth' }));
+    scrollNextEaten.addEventListener('click', () => scrollTrackEaten.scrollBy({ left: scrollAmount, behavior: 'smooth' }));
+  }
+
+  // 6. Mobile hamburger menu
   const hamburger = document.getElementById('nav-hamburger');
   const dropdown  = document.getElementById('nav-dropdown');
   if (hamburger && dropdown) {
@@ -517,7 +578,6 @@
       hamburger.classList.toggle('open', !isOpen);
       dropdown.classList.toggle('open', !isOpen);
     });
-    // Close on outside click
     document.addEventListener('click', (e) => {
       if (!header.contains(e.target)) {
         hamburger.setAttribute('aria-expanded', 'false');
@@ -527,7 +587,6 @@
         dropdown.classList.remove('open');
       }
     });
-    // Close on link click
     dropdown.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         hamburger.setAttribute('aria-expanded', 'false');
