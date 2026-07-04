@@ -41,11 +41,16 @@ h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(5.5rem, 9vw, 10rem)
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-bottom: 1px solid var(--border);
-  min-height: 600px;
+  margin-top: 80px; /* Added padding/space above */
+  margin-bottom: 80px; /* Added padding/space below */
+  height: 50vh; /* Half the screen height on desktop */
+  min-height: 400px; /* Prevent it from collapsing too much on short screens */
+  max-height: 550px; /* Cap it so it doesn't get massive on tall screens */
 }
 .daily-slop-img-link {
   display: block;
   overflow: hidden;
+  height: 100%;
   border-right: 1px solid var(--border);
 }
 .daily-slop-img-link img {
@@ -61,7 +66,9 @@ h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(5.5rem, 9vw, 10rem)
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 60px 80px;
+  padding: 40px 60px; /* Slightly reduced padding */
+  height: 100%;
+  overflow-y: auto; /* Scroll internally if text is too long for 50vh */
 }
 .daily-slop-inner {
   max-width: 500px;
@@ -81,27 +88,27 @@ h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(5.5rem, 9vw, 10rem)
 
 .slop-counter-number {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(5rem, 12vw, 8rem);
+  font-size: clamp(4rem, 8vw, 6rem); /* Sized down slightly to fit 50vh better */
   font-weight: 400;
   line-height: 0.9;
   letter-spacing: 0.01em;
   color: rgba(255,255,255,0.1); /* Ghost text effect */
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 .slop-counter-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
   font-weight: 400;
   line-height: 0.95;
   color: var(--text);
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 .slop-counter-desc {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--muted);
   line-height: 1.6;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 .daily-slop-btn {
   background: var(--text);
@@ -338,20 +345,32 @@ aspect-ratio: 1 / 1;
 @media (max-width: 768px) {
   .keyword-section { padding: 28px 24px; }
   .scroll-nav { display: none; }
+
+  /* Mobile adjustments for Daily Slop Section */
   .daily-slop-section {
     grid-template-columns: 1fr;
+    height: auto;
     min-height: unset;
+    max-height: unset;
+    margin-top: 40px; /* Reduced space on mobile */
+    margin-bottom: 40px;
   }
   .daily-slop-img-link {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 16 / 9; /* Shorter image on mobile */
+    height: auto;
     border-right: none;
     border-bottom: 1px solid var(--border);
   }
   .daily-slop-content {
-    padding: 40px 24px;
+    padding: 32px 24px;
+    height: auto;
+    overflow-y: visible;
   }
-  .daily-slop-inner {
-    max-width: 100%;
+  .slop-counter-number {
+    font-size: clamp(3.5rem, 15vw, 5rem); /* Smaller ghost number on mobile */
+  }
+  .slop-counter-title {
+    font-size: clamp(2rem, 8vw, 3rem);
   }
 }
 
