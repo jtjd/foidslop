@@ -14,6 +14,19 @@ function escHtml(str) { return String(str).replace(/&/g, '&amp;').replace(/</g, 
 function prettyDate(d) { return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }); }
 function shortDate(d) { return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }); }
 
+// Reads the date directly from the generated HTML file to ensure perfect sync
+function getMealDate(slug) {
+    const filePath = path.join(SLOP_DIR, `${slug}.html`);
+    if (!fs.existsSync(filePath)) return new Date(); // Fallback to today if HTML doesn't exist
+    const html = fs.readFileSync(filePath, 'utf8');
+    const dateMatch = html.match(/Slop of the Day — ([^<]+)</);
+    if (dateMatch && dateMatch[1]) {
+        const dateObj = new Date(dateMatch[1].trim());
+        if (!isNaN(dateObj.getTime())) return dateObj;
+    }
+    return new Date(); // Fallback
+}
+
 function buildArchiveCard(slug, mealName, shortDateStr, tags) {
     const firstTag = tags[0] || '';
     const secondTag = tags[1] || '';
@@ -25,7 +38,7 @@ function buildRecentCard(slug, mealName, dateStr) {
     return `<div class="scroll-card"><a href="slop/${slug}.html" aria-label="Read recipe: ${escHtml(mealName)}"><div class="scroll-card-img"><img src="slop/img/${slug}.jpg" alt="${escHtml(mealName)}" width="400" height="400" loading="lazy"></div><div class="scroll-card-info"><div class="scroll-card-name">${escHtml(mealName)}</div><div class="scroll-card-price">${escHtml(dateStr)}</div></div></a></div>`;
 }
 
-function updateHomepage(todaysMeal, meals, targetIndex) {
+function updateHomepage(todaysMeal, meals, targetIndex, dateObj) {
     if (!fs.existsSync(HOME_FILE)) return;
     let html = fs.readFileSync(HOME_FILE, 'utf8');
 
@@ -60,14 +73,16 @@ function updateHomepage(todaysMeal, meals, targetIndex) {
     html = html.replace(/(<a href="slop\/)([^"]+)(\.html" class="btn-shop daily-slop-btn" id="slop-counter-link")/, `$1${slug}$3`);
 
     // Update Recently Eaten Carousel using bulletproof markers (15 items)
+    // FIX: Removed wrap-around logic so it doesn't show future meals on early days
     let recentCards = [];
     for (let i = 15; i >= 1; i--) {
         let idx = targetIndex - i;
-        if (idx < 0) idx = meals.length + idx;
-        const m = meals[idx];
-        let d = new Date();
-        d.setDate(d.getDate() - i);
-        recentCards.push(buildRecentCard(m.slug, m.name, shortDate(d)));
+        if (idx >= 0) {
+            const m = meals[idx];
+            let d = new Date(dateObj);
+            d.setDate(d.getDate() - i);
+            recentCards.push(buildRecentCard(m.slug, m.name, shortDate(d)));
+        }
     }
     const recentHTML = recentCards.join('\n      ');
     html = html.replace(/(<!-- RECENTLY_EATEN_START -->)[\s\S]*?(<!-- RECENTLY_EATEN_END -->)/, `$1\n      ${recentHTML}\n      $2`);
@@ -149,14 +164,17 @@ if (!todaysMeal) {
 
 console.log(`Updating site to feature: ${todaysMeal.name} (${todaysMeal.slug})`);
 
-const dateObj = new Date();
+// Get the exact date from the generated HTML file to keep everything in sync
+const dateObj = getMealDate(todaysMeal.slug);
+console.log(`Using date: ${prettyDate(dateObj)} (synced from HTML file)`);
 
 // 1. Update Homepage
-updateHomepage(todaysMeal, meals, targetIndex);
+updateHomepage(todaysMeal, meals, targetIndex, dateObj);
 
 // 2. Update Prev/Next Navs
 resetNextNav(todaysMeal.slug);
 if (meals[targetIndex - 1]) {
+    // We pass the prettyDate of the current meal so the previous page knows when the next one is "scheduled"
     updatePrevNextNav(meals[targetIndex - 1].slug, todaysMeal.slug, todaysMeal.name, prettyDate(dateObj));
 }
 
@@ -168,22 +186,23 @@ if (fs.existsSync(REDIRECTS_FILE)) {
 lines.unshift(`/slop/today  /slop/${todaysMeal.slug}.html  301`);
 fs.writeFileSync(REDIRECTS_FILE, lines.join('\n') + '\n');
 
-// 4. Rebuild Archive Dynamically
+// 4. Rebuild Archive Dynamically (Generates ALL cards up to targetIndex from scratch)
 if (fs.existsSync(INDEX_FILE)) {
     let html = fs.readFileSync(INDEX_FILE, 'utf8');
-    const articleRegex = /<article class="archive-card[\s\S]*?<\/article>/g;
-    let existingCards = html.match(articleRegex) || [];
-    existingCards = existingCards.filter(card => !card.includes(`href="./${todaysMeal.slug}.html"`));
-    const newCardHTML = buildArchiveCard(todaysMeal.slug, todaysMeal.name, shortDate(dateObj), todaysMeal.tags);
-    const validSlugs = new Set(meals.slice(0, targetIndex + 1).map(m => m.slug));
-    let keptCards = existingCards.filter(card => {
-        const match = card.match(/href="\.\/([^\s]+)\.html"/);
-        return match && validSlugs.has(match[1]);
-    });
-    let finalCards = [newCardHTML].concat(keptCards);
-    const newCardsHTML = '\n    ' + finalCards.join('\n\n    ') + '\n  ';
+
+    // Generate cards for ALL meals up to the current target index
+    let allArchiveCards = [];
+    for (let i = targetIndex; i >= 0; i--) {
+        const m = meals[i];
+        // Read the date from the generated HTML file for this specific meal
+        const mDate = getMealDate(m.slug);
+        allArchiveCards.push(buildArchiveCard(m.slug, m.name, shortDate(mDate), m.tags));
+    }
+
+    const newCardsHTML = '\n    ' + allArchiveCards.join('\n\n    ') + '\n  ';
     html = html.replace(/(<section class="archive-grid"[^>]*>)[\s\S]*?(<\/section>)/, `$1${newCardsHTML}$2`);
 
+    // Update the featured block on the archive page
     const featuredTagsHTML = todaysMeal.tags.map(t => `        <span class="featured-tag">${escHtml(t)}</span>`).join('\n');
     const words = todaysMeal.name.split(' ');
     const titleLine1 = words.slice(0, -1).join(' ');
@@ -202,7 +221,7 @@ if (fs.existsSync(INDEX_FILE)) {
     .replace(/(<p class="featured-date">Published )[^<]+(<\/p>)/, `$1${escHtml(prettyDate(dateObj))}$2`)
     .replace(/(<a href="\.\/)([^"]+)(\.html" class="nav-link" id="sotd-link">)/, `$1${todaysMeal.slug}$3`);
 
-    const totalCards = finalCards.length;
+    const totalCards = allArchiveCards.length;
     html = html.replace(/(<span class="archive-count"[^>]*>)[^<]*(<\/span>)/, `$1${totalCards} recipe${totalCards !== 1 ? 's' : ''}$2`);
     fs.writeFileSync(INDEX_FILE, html, 'utf8');
 }

@@ -1,7 +1,7 @@
 {
   "generated": "2026-06-25T00:00:00.000Z",
-  "count": 100,
-  "about": "100 foidslop meal entries inspired by the girl dinner trend. Each meal is a low effort, high satisfaction solo plate. Use photo_search to find reference images for your own photography.",
+  "count": 200,
+  "about": "200 foidslop meal entries inspired by the girl dinner trend. Each meal is a low effort, high satisfaction solo plate. Use photo_search to find reference images for your own photography.",
   "meals": [
     {
       "id": 1,
@@ -3339,6 +3339,3285 @@
       ],
       "notes": "Underdress rather than overdress. Butter lettuce wilts quickly. Add dressing at the very last second before serving.",
       "photo_search": "elegant bowl of butter lettuce lightly coated in champagne vinaigrette with shaved parmesan"
+    },
+    {
+      "id": 101,
+      "name": "Whipped Ricotta with Cherry Tomato Confit",
+      "slug": "whipped-ricotta-cherry-tomato-confit",
+      "description": "Silky whipped ricotta topped with sweet, blistered cherry tomatoes in olive oil.",
+      "tags": ["No Cook", "Cheese", "Fancy"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Dip",
+      "ingredients": [
+        { "amount": "1/2 cup", "name": "whole milk ricotta" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "1/4 cup", "name": "cherry tomato confit or blistered tomatoes" },
+        { "amount": "to taste", "name": "flaky sea salt, black pepper, fresh basil" },
+        { "amount": "to serve", "name": "crackers or toasted baguette" }
+      ],
+      "steps": [
+        {
+          "name": "Whip",
+          "text": "Add 1/2 cup of ricotta and 1 tbsp olive oil to a food processor or bowl. Whip until completely smooth and fluffy, about 2 minutes."
+        },
+        {
+          "name": "Plate",
+          "text": "Spoon the whipped ricotta into a shallow bowl. Top with 1/4 cup of cherry tomato confit, letting the oil pool slightly. Season with flaky salt, black pepper, and fresh basil. Serve with crackers."
+        }
+      ],
+      "notes": "If you do not have tomato confit, just halve some cherry tomatoes and toss them with a little olive oil and salt.",
+      "photo_search": "bowl of creamy white whipped ricotta topped with bright red blistered cherry tomatoes and basil"
+    },
+    {
+      "id": 102,
+      "name": "Smoked Trout and Apple Plate",
+      "slug": "smoked-trout-apple-plate",
+      "description": "Smoky trout flaked over crisp apple slices with a mustard dressing.",
+      "tags": ["No Cook", "Fancy", "Protein"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "French-Inspired",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "1 tin", "name": "smoked trout" },
+        { "amount": "1", "name": "crisp apple, cored and sliced" },
+        { "amount": "1 tbsp", "name": "dijon mustard" },
+        { "amount": "1 tsp", "name": "honey" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "squeeze", "name": "lemon juice" }
+      ],
+      "steps": [
+        {
+          "name": "Make dressing",
+          "text": "Whisk together 1 tbsp dijon, 1 tsp honey, 1 tbsp olive oil, and a squeeze of lemon juice."
+        },
+        {
+          "name": "Plate",
+          "text": "Arrange the apple slices on a plate. Flake the smoked trout over the apples. Drizzle with the honey mustard dressing."
+        }
+      ],
+      "notes": "Smoked trout is usually found in tins near the smoked salmon. It is cheaper and very flavorful.",
+      "photo_search": "plate of sliced green apples topped with flaked smoked trout and a honey mustard drizzle"
+    },
+    {
+      "id": 103,
+      "name": "Udon Noodles in Mentsuyu with Spinach",
+      "slug": "udon-noodles-mentsuyu-spinach",
+      "description": "Chewy udon noodles in a savory Japanese dipping broth with tender spinach.",
+      "tags": ["Noodles", "Quick", "Japanese"],
+      "prep": "2m",
+      "cook": "8m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Japanese",
+      "category": "Noodles",
+      "ingredients": [
+        { "amount": "1 pack", "name": "frozen udon noodles" },
+        { "amount": "1/4 cup", "name": "mentsuyu (Japanese noodle sauce)" },
+        { "amount": "1/2 cup", "name": "water" },
+        { "amount": "1 handful", "name": "baby spinach" },
+        { "amount": "1", "name": "spring onion, sliced" },
+        { "amount": "optional", "name": "bonito flakes, sesame seeds, chili oil" }
+      ],
+      "steps": [
+        {
+          "name": "Make broth",
+          "text": "In a small pot, combine 1/4 cup mentsuyu and 1/2 cup water. Bring to a gentle simmer."
+        },
+        {
+          "name": "Cook noodles",
+          "text": "Boil the frozen udon according to package directions. In the last 30 seconds, drop in the handful of spinach to wilt. Drain well."
+        },
+        {
+          "name": "Serve",
+          "text": "Place the hot noodles and spinach in a deep bowl. Pour the hot broth over the top. Garnish with spring onions and optional toppings."
+        }
+      ],
+      "notes": "Mentsuyu is a concentrated Japanese soup base found in bottles at Asian markets. It is a pantry staple for fast meals.",
+      "photo_search": "deep bowl of udon noodles in clear broth with wilted spinach and spring onions"
+    },
+    {
+      "id": 104,
+      "name": "Garlic Confit Bread",
+      "slug": "garlic-confit-bread",
+      "description": "Crisp toast smeared with soft, sweet garlic confit and flaky salt.",
+      "tags": ["Toast", "Fancy", "Quick"],
+      "prep": "2m",
+      "cook": "3m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "French",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "2 slices", "name": "thick sourdough" },
+        { "amount": "4 cloves", "name": "garlic confit cloves" },
+        { "amount": "1 tbsp", "name": "garlic confit oil (or olive oil)" },
+        { "amount": "pinch", "name": "flaky sea salt" },
+        { "amount": "optional", "name": "fresh thyme, shaved parmesan" }
+      ],
+      "steps": [
+        {
+          "name": "Toast",
+          "text": "Toast the sourdough until deeply golden and crisp."
+        },
+        {
+          "name": "Smear",
+          "text": "While the toast is hot, drizzle with the garlic confit oil. Use a fork to smash the soft garlic confit cloves directly onto the bread. Sprinkle with flaky salt and fresh thyme."
+        }
+      ],
+      "notes": "Garlic confit is made by slowly poaching peeled garlic cloves in olive oil over very low heat until golden and soft. Make a big batch and keep it in the fridge.",
+      "photo_search": "sourdough toast smeared with soft golden garlic confit and sprinkled with flaky sea salt"
+    },
+    {
+      "id": 105,
+      "name": "Cottage Cheese with Peaches and Hot Honey",
+      "slug": "cottage-cheese-peaches-hot-honey",
+      "description": "A sweet and spicy protein bowl. Creamy cottage cheese, ripe peaches, and a kick of hot honey.",
+      "tags": ["High Protein", "Sweet-Savory", "Quick"],
+      "prep": "3m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Bowl",
+      "ingredients": [
+        { "amount": "1 cup", "name": "full fat cottage cheese" },
+        { "amount": "1", "name": "ripe peach, sliced" },
+        { "amount": "1 tbsp", "name": "hot honey" },
+        { "amount": "pinch", "name": "flaky sea salt" },
+        { "amount": "optional", "name": "toasted almonds, mint leaves" }
+      ],
+      "steps": [
+        {
+          "name": "Assemble",
+          "text": "Scoop the cottage cheese into a bowl. Arrange the sliced peaches on top. Drizzle generously with hot honey and sprinkle with flaky salt and almonds."
+        }
+      ],
+      "notes": "The combination of sweet peaches, spicy honey, and creamy cheese is unexpectedly perfect.",
+      "photo_search": "bowl of cottage cheese topped with sliced peaches, hot honey, and almonds"
+    },
+    {
+      "id": 106,
+      "name": "Tinned Mussels in Escabeche on Crackers",
+      "slug": "tinned-mussels-escabeche-crackers",
+      "description": "Briny mussels in a tangy vinegar sauce piled onto crisp crackers.",
+      "tags": ["Tinned Fish", "No Cook", "Fancy"],
+      "prep": "2m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Spanish",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "1 tin", "name": "mussels in escabeche" },
+        { "amount": "handful", "name": "rustic crackers" },
+        { "amount": "squeeze", "name": "lemon juice" },
+        { "amount": "to taste", "name": "flaky sea salt, cracked black pepper" },
+        { "amount": "optional", "name": "fresh parsley, sliced red onion" }
+      ],
+      "steps": [
+        {
+          "name": "Plate",
+          "text": "Open the tin of mussels. Arrange the crackers on a plate. Place the mussels on the crackers and spoon a little of the escabeche sauce over the top. Squeeze lemon juice over and season."
+        }
+      ],
+      "notes": "Escabeche is a tangy marinade of vinegar, paprika, and oil. It cuts the richness of the mussels perfectly.",
+      "photo_search": "rustic crackers topped with tinned mussels in a golden escabeche sauce and parsley"
+    },
+    {
+      "id": 107,
+      "name": "Prosciutto Wrapped Melon with Mint",
+      "slug": "prosciutto-wrapped-melon-mint",
+      "description": "The classic appetizer, upgraded with fresh mint for a bright finish.",
+      "tags": ["No Cook", "Fancy", "Quick"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "1/4", "name": "cantaloupe melon, cut into wedges" },
+        { "amount": "4 slices", "name": "prosciutto" },
+        { "amount": "handful", "name": "fresh mint leaves" },
+        { "amount": "drizzle", "name": "balsamic glaze" }
+      ],
+      "steps": [
+        {
+          "name": "Wrap",
+          "text": "Wrap each melon wedge with a slice of prosciutto. Arrange on a plate. Tuck fresh mint leaves between the wedges. Drizzle with balsamic glaze."
+        }
+      ],
+      "notes": "The mint makes this feel like a spa day rather than a lazy dinner.",
+      "photo_search": "plate of cantaloupe wedges wrapped in prosciutto with fresh mint and balsamic glaze"
+    },
+    {
+      "id": 108,
+      "name": "Cream Cheese and Jelly Toast",
+      "slug": "cream-cheese-jelly-toast",
+      "description": "A childhood favorite, elevated with good bread and fancy jelly.",
+      "tags": ["Toast", "Sweet", "Quick"],
+      "prep": "3m",
+      "cook": "2m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "2 slices", "name": "thick brioche or sourdough, toasted" },
+        { "amount": "3 tbsp", "name": "whipped cream cheese" },
+        { "amount": "2 tbsp", "name": "high quality fruit preserves (fig, raspberry, or blackberry)" },
+        { "amount": "pinch", "name": "flaky sea salt" }
+      ],
+      "steps": [
+        {
+          "name": "Spread",
+          "text": "Toast the bread until golden. Spread a thick layer of cream cheese on each slice. Top with a generous spoonful of preserves. Sprinkle with flaky salt."
+        }
+      ],
+      "notes": "The flaky salt cuts the sweetness and makes the fruit flavor pop.",
+      "photo_search": "toasted brioche spread with cream cheese and dark raspberry preserves"
+    },
+    {
+      "id": 109,
+      "name": "Hummus and Crispy Chickpea Bowl",
+      "slug": "hummus-crispy-chickpea-bowl",
+      "description": "Creamy hummus topped with crunchy, spiced roasted chickpeas for textural contrast.",
+      "tags": ["Vegetarian", "Bowl", "Protein"],
+      "prep": "5m",
+      "cook": "25m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Middle Eastern",
+      "category": "Bowl",
+      "ingredients": [
+        { "amount": "1/2 cup", "name": "hummus" },
+        { "amount": "1/2 can", "name": "chickpeas, drained and dried" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "1 tsp", "name": "cumin" },
+        { "amount": "1/2 tsp", "name": "smoked paprika" },
+        { "amount": "to taste", "name": "salt" },
+        { "amount": "to garnish", "name": "fresh parsley, olive oil" }
+      ],
+      "steps": [
+        {
+          "name": "Roast chickpeas",
+          "text": "Toss the dried chickpeas with olive oil, cumin, paprika, and salt. Roast at 400F/200C for 20-25 minutes until crispy."
+        },
+        {
+          "name": "Assemble",
+          "text": "Spoon the hummus into a bowl. Top with the warm crispy chickpeas. Drizzle with olive oil and sprinkle with parsley."
+        }
+      ],
+      "notes": "Make sure the chickpeas are completely dry before roasting so they crisp up instead of steaming.",
+      "photo_search": "bowl of hummus topped with crispy roasted chickpeas, olive oil, and parsley"
+    },
+    {
+      "id": 110,
+      "name": "Spicy Vodka Pasta",
+      "slug": "spicy-vodka-pasta",
+      "description": "The viral Gigi Hadid pasta. Creamy, spicy, and ready in 20 minutes.",
+      "tags": ["Pasta", "Viral", "Spicy"],
+      "prep": "5m",
+      "cook": "20m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian-American",
+      "category": "Pasta",
+      "ingredients": [
+        { "amount": "100g", "name": "pasta (penne or rigatoni)" },
+        { "amount": "2 tbsp", "name": "butter" },
+        { "amount": "2 tbsp", "name": "tomato paste" },
+        { "amount": "1 tbsp", "name": "vodka (optional)" },
+        { "amount": "1/4 cup", "name": "heavy cream" },
+        { "amount": "1 tsp", "name": "chilli flakes" },
+        { "amount": "30g", "name": "parmesan, grated" },
+        { "amount": "to taste", "name": "salt, black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Make sauce",
+          "text": "Melt butter in a pan. Add tomato paste and chilli flakes, cooking for 2 minutes. Deglaze with vodka. Stir in heavy cream and parmesan until smooth."
+        },
+        {
+          "name": "Cook pasta",
+          "text": "Boil pasta in salted water until al dente. Reserve a splash of pasta water."
+        },
+        {
+          "name": "Combine",
+          "text": "Toss the drained pasta in the sauce, adding pasta water to loosen if needed. Season and serve."
+        }
+      ],
+      "notes": "The vodka is optional but it helps release flavors in the tomato paste that are alcohol soluble.",
+      "photo_search": "bowl of penne pasta in a bright red, creamy spicy vodka sauce"
+    },
+    {
+      "id": 111,
+      "name": "Tuna Melt in a Pita",
+      "slug": "tuna-melt-pita",
+      "description": "A gooey tuna melt stuffed inside a pita pocket and toasted in a pan.",
+      "tags": ["Quick", "Comfort", "Sandwich"],
+      "prep": "5m",
+      "cook": "8m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "1", "name": "pita bread" },
+        { "amount": "1 can", "name": "tuna, drained" },
+        { "amount": "2 tbsp", "name": "mayonnaise" },
+        { "amount": "1 tbsp", "name": "dijon mustard" },
+        { "amount": "40g", "name": "sharp cheddar, shredded" },
+        { "amount": "1 tbsp", "name": "butter" }
+      ],
+      "steps": [
+        {
+          "name": "Mix",
+          "text": "In a bowl, mix the drained tuna with mayo, dijon, and shredded cheese."
+        },
+        {
+          "name": "Stuff and toast",
+          "text": "Stuff the tuna mixture into the pita pocket. Butter the outside of the pita. Cook in a pan over medium heat for 3-4 minutes per side until golden and the cheese is melted."
+        }
+      ],
+      "notes": "Using a pita means no filling falls out when you flip it. It is the superior tuna melt vessel.",
+      "photo_search": "golden toasted pita bread cut open to reveal melted cheesy tuna salad inside"
+    },
+    {
+      "id": 112,
+      "name": "Tomato Soup with Grilled Cheese Croutons",
+      "slug": "tomato-soup-grilled-cheese-croutons",
+      "description": "Elevated canned tomato soup topped with cubed, crispy grilled cheese.",
+      "tags": ["Soup", "Comfort", "Quick"],
+      "prep": "5m",
+      "cook": "10m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Soup",
+      "ingredients": [
+        { "amount": "1 can", "name": "good tomato soup" },
+        { "amount": "1 slice", "name": "thick bread" },
+        { "amount": "1 tbsp", "name": "butter" },
+        { "amount": "30g", "name": "cheddar cheese" },
+        { "amount": "splash", "name": "heavy cream" }
+      ],
+      "steps": [
+        {
+          "name": "Make grilled cheese",
+          "text": "Butter the outside of the bread. Place cheese inside. Cook in a pan over medium heat until golden on both sides and cheese is melted. Cut into bite-sized cubes."
+        },
+        {
+          "name": "Heat soup",
+          "text": "Warm the tomato soup in a saucepan. Stir in a splash of heavy cream."
+        },
+        {
+          "name": "Serve",
+          "text": "Pour the soup into a bowl. Top with the grilled cheese croutons right before eating so they stay crunchy."
+        }
+      ],
+      "notes": "This is the fun cousin of the classic tomato soup and grilled cheese combo.",
+      "photo_search": "bowl of creamy tomato soup topped with golden crispy grilled cheese croutons"
+    },
+    {
+      "id": 113,
+      "name": "Brie and Prosciutto Grilled Cheese",
+      "slug": "brie-prosciutto-grilled-cheese",
+      "description": "An elevated grilled cheese with melted brie and salty prosciutto.",
+      "tags": ["Comfort", "Fancy", "Sandwich"],
+      "prep": "5m",
+      "cook": "8m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian-American",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "2 slices", "name": "thick sourdough" },
+        { "amount": "2 tbsp", "name": "butter, softened" },
+        { "amount": "60g", "name": "brie, sliced" },
+        { "amount": "2 slices", "name": "prosciutto" },
+        { "amount": "1 tsp", "name": "fig jam (optional)" }
+      ],
+      "steps": [
+        {
+          "name": "Build",
+          "text": "Butter the outside of the bread. Place brie, prosciutto, and fig jam between the unbuttered sides."
+        },
+        {
+          "name": "Cook",
+          "text": "Cook in a pan over medium-low heat for 3-4 minutes per side until golden and the brie is fully melted."
+        }
+      ],
+      "notes": "The fig jam adds a sweet element that pairs perfectly with the salty prosciutto.",
+      "photo_search": "golden grilled cheese sandwich cut in half, showing melted brie and prosciutto"
+    },
+    {
+      "id": 114,
+      "name": "Soba Noodles with Sesame Soy Dressing",
+      "slug": "soba-noodles-sesame-soy",
+      "description": "Cold buckwheat noodles in a nutty, savory dressing. Light but satisfying.",
+      "tags": ["Noodles", "Healthy", "Quick"],
+      "prep": "5m",
+      "cook": "8m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Japanese",
+      "category": "Noodles",
+      "ingredients": [
+        { "amount": "100g", "name": "soba noodles" },
+        { "amount": "2 tbsp", "name": "soy sauce" },
+        { "amount": "1 tbsp", "name": "rice vinegar" },
+        { "amount": "1 tbsp", "name": "sesame oil" },
+        { "amount": "1 tsp", "name": "sugar" },
+        { "amount": "to garnish", "name": "sesame seeds, spring onion" }
+      ],
+      "steps": [
+        {
+          "name": "Cook noodles",
+          "text": "Boil soba noodles according to package. Drain and rinse under cold water until completely cool."
+        },
+        {
+          "name": "Dress",
+          "text": "Whisk soy sauce, rice vinegar, sesame oil, and sugar. Toss the cold noodles in the dressing. Top with sesame seeds and spring onions."
+        }
+      ],
+      "notes": "Rinsing soba noodles thoroughly removes excess starch and gives them a perfect chewy texture.",
+      "photo_search": "bowl of cold soba noodles in a dark sesame soy sauce with sesame seeds"
+    },
+    {
+      "id": 115,
+      "name": "Baked Eggs in Avocado",
+      "slug": "baked-eggs-avocado",
+      "description": "An egg baked right inside an avocado half. A viral, high-protein breakfast-for-dinner.",
+      "tags": ["Eggs", "Healthy", "Viral"],
+      "prep": "5m",
+      "cook": "15m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Eggs",
+      "ingredients": [
+        { "amount": "1", "name": "large avocado" },
+        { "amount": "2", "name": "small eggs" },
+        { "amount": "to taste", "name": "salt, pepper, chilli flakes" },
+        { "amount": "optional", "name": "everything bagel seasoning, hot sauce" }
+      ],
+      "steps": [
+        {
+          "name": "Prep",
+          "text": "Preheat oven to 425F/220C. Halve the avocado and remove the pit. Scoop out a little extra flesh to make the hole bigger. Place the avocado halves in a baking dish to keep them stable."
+        },
+        {
+          "name": "Bake",
+          "text": "Crack an egg into each avocado hole. Season with salt, pepper, and chilli flakes. Bake for 15 minutes until the egg whites are set."
+        }
+      ],
+      "notes": "Use small eggs or the whites will overflow. You can also crack the egg into a cup first and pour it in.",
+      "photo_search": "baked avocado halves filled with cooked eggs and sprinkled with chilli flakes"
+    },
+    {
+      "id": 116,
+      "name": "Fig and Gorgonzola Flatbread",
+      "slug": "fig-gorgonzola-flatbread",
+      "description": "Sweet figs and sharp gorgonzola melted on a crispy flatbread.",
+      "tags": ["Quick", "Fancy", "Pizza"],
+      "prep": "5m",
+      "cook": "10m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "1", "name": "naan or flatbread" },
+        { "amount": "40g", "name": "gorgonzola, crumbled" },
+        { "amount": "3", "name": "fresh figs, sliced" },
+        { "amount": "1 tbsp", "name": "honey" },
+        { "amount": "handful", "name": "arugula" }
+      ],
+      "steps": [
+        {
+          "name": "Assemble",
+          "text": "Place the flatbread on a baking sheet. Top with crumbled gorgonzola and sliced figs."
+        },
+        {
+          "name": "Bake",
+          "text": "Bake at 400F/200C for 8-10 minutes until the cheese is melted and the crust is crispy."
+        },
+        {
+          "name": "Finish",
+          "text": "Drizzle with honey and top with a handful of fresh arugula."
+        }
+      ],
+      "notes": "The peppery arugula cuts the richness of the gorgonzola perfectly.",
+      "photo_search": "crispy flatbread topped with melted gorgonzola, sliced figs, honey, and arugula"
+    },
+    {
+      "id": 117,
+      "name": "Cucumber and Feta Salad with Dill",
+      "slug": "cucumber-feta-salad-dill",
+      "description": "A cool, crunchy cucumber salad with briny feta and fresh dill.",
+      "tags": ["Salad", "No Cook", "Quick"],
+      "prep": "10m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Greek",
+      "category": "Salad",
+      "ingredients": [
+        { "amount": "1", "name": "English cucumber, sliced" },
+        { "amount": "50g", "name": "feta cheese, crumbled" },
+        { "amount": "1 tbsp", "name": "red wine vinegar" },
+        { "amount": "2 tbsp", "name": "olive oil" },
+        { "amount": "handful", "name": "fresh dill, chopped" },
+        { "amount": "to taste", "name": "salt, black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Toss",
+          "text": "Slice the cucumber into thin rounds. Toss with crumbled feta, red wine vinegar, olive oil, and chopped dill. Season with salt and pepper. Let sit for 5 minutes for flavors to meld."
+        }
+      ],
+      "notes": "This is even better if you let it sit in the fridge for 30 minutes. The cucumbers release their water and create a light dressing.",
+      "photo_search": "bowl of sliced cucumbers, crumbled feta, and fresh dill in a light vinaigrette"
+    },
+    {
+      "id": 118,
+      "name": "Baked Sweet Potato with Marshmallows and Pecans",
+      "slug": "baked-sweet-potato-marshmallows-pecans",
+      "description": "A dessert-like dinner. A sweet potato baked until soft, then topped with marshmallows and pecans.",
+      "tags": ["Sweet", "Comfort", "Classic"],
+      "prep": "5m",
+      "cook": "50m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "1 large", "name": "sweet potato" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "1/4 cup", "name": "mini marshmallows" },
+        { "amount": "2 tbsp", "name": "toasted pecans, chopped" },
+        { "amount": "1 tbsp", "name": "butter" },
+        { "amount": "to taste", "name": "salt, cinnamon" }
+      ],
+      "steps": [
+        {
+          "name": "Bake",
+          "text": "Preheat oven to 425F/220C. Rub the sweet potato with oil and salt. Pierce with a fork. Bake for 45-50 minutes until soft."
+        },
+        {
+          "name": "Top",
+          "text": "Split the potato open. Add butter, cinnamon, marshmallows, and pecans. Return to the oven for 2-3 minutes until the marshmallows are toasted."
+        }
+      ],
+      "notes": "This is essentially a Thanksgiving side dish masquerading as a solo dinner.",
+      "photo_search": "baked sweet potato split open and topped with toasted marshmallows and pecans"
+    },
+    {
+      "id": 119,
+      "name": "Dark Chocolate and Almond Butter Banana Bites",
+      "slug": "dark-chocolate-almond-butter-banana-bites",
+      "description": "Slices of banana topped with almond butter and dark chocolate chips.",
+      "tags": ["Sweet", "No Cook", "Snack"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "1", "name": "banana, sliced into rounds" },
+        { "amount": "2 tbsp", "name": "almond butter" },
+        { "amount": "1 tbsp", "name": "dark chocolate chips" },
+        { "amount": "pinch", "name": "flaky sea salt" }
+      ],
+      "steps": [
+        {
+          "name": "Assemble",
+          "text": "Slice the banana into thick rounds. Spread a small dollop of almond butter on each slice. Press a dark chocolate chip into the almond butter. Sprinkle with flaky salt."
+        }
+      ],
+      "notes": "The flaky salt is crucial. It makes the chocolate taste more chocolatey.",
+      "photo_search": "plate of banana slices topped with almond butter and dark chocolate chips"
+    },
+    {
+      "id": 120,
+      "name": "Cheddar and Apple Quesadilla",
+      "slug": "cheddar-apple-quesadilla",
+      "description": "A sweet and savory quesadilla with sharp cheddar and crisp apple slices.",
+      "tags": ["Quick", "Sweet-Savory", "Cheese"],
+      "prep": "3m",
+      "cook": "5m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Fusion",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "1 large", "name": "flour tortilla" },
+        { "amount": "60g", "name": "sharp cheddar, shredded" },
+        { "amount": "1/2", "name": "crisp apple, thinly sliced" },
+        { "amount": "1 tsp", "name": "butter" },
+        { "amount": "optional", "name": "honey or dijon mustard" }
+      ],
+      "steps": [
+        {
+          "name": "Build",
+          "text": "Sprinkle half the cheddar on one half of the tortilla. Top with apple slices and the rest of the cheddar. Fold over."
+        },
+        {
+          "name": "Cook",
+          "text": "Melt butter in a pan. Cook the quesadilla for 2-3 minutes per side until golden and the cheese is melted. Slice and serve with honey or dijon."
+        }
+      ],
+      "notes": "This sounds weird but it is essentially a grilled cheese with apple, which is a classic combo.",
+      "photo_search": "golden quesadilla cut in half, showing melted cheddar and apple slices"
+    },
+    {
+      "id": 121,
+      "name": "Muhammara Dip with Pita",
+      "slug": "muhammara-dip-pita",
+      "description": "A spicy, smoky roasted red pepper and walnut dip. Better than hummus.",
+      "tags": ["Dip", "Vegetarian", "Mediterranean"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Lebanese",
+      "category": "Dip",
+      "ingredients": [
+        { "amount": "1/2 cup", "name": "store-bought muhammara" },
+        { "amount": "1", "name": "pita bread, warmed and torn" },
+        { "amount": "drizzle", "name": "olive oil" },
+        { "amount": "optional", "name": "walnuts, fresh mint" }
+      ],
+      "steps": [
+        {
+          "name": "Plate",
+          "text": "Spoon the muhammara into a shallow bowl. Drizzle with olive oil. Serve with torn warm pita. Scatter with walnuts and mint if desired."
+        }
+      ],
+      "notes": "Muhammara is made with roasted red peppers, walnuts, and pomegranate molasses. It is tangy and deeply flavorful.",
+      "photo_search": "bowl of dark red muhammara dip swirled with olive oil and served with pita"
+    },
+    {
+      "id": 122,
+      "name": "Spicy Tuna Bowl with Brown Rice",
+      "slug": "spicy-tuna-bowl-brown-rice",
+      "description": "Sushi grade tuna tossed in spicy mayo over warm brown rice.",
+      "tags": ["Japanese", "Spicy", "Bowl"],
+      "prep": "10m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Japanese-Inspired",
+      "category": "Bowl",
+      "ingredients": [
+        { "amount": "1 cup", "name": "cooked brown rice" },
+        { "amount": "100g", "name": "sushi grade tuna, cubed" },
+        { "amount": "1 tbsp", "name": "soy sauce" },
+        { "amount": "1 tbsp", "name": "sriracha mayo" },
+        { "amount": "1 tsp", "name": "sesame oil" },
+        { "amount": "to garnish", "name": "sesame seeds, spring onion, avocado" }
+      ],
+      "steps": [
+        {
+          "name": "Season tuna",
+          "text": "In a bowl, toss the cubed tuna with soy sauce, sriracha mayo, and sesame oil."
+        },
+        {
+          "name": "Assemble",
+          "text": "Place the warm brown rice in a bowl. Top with the spicy tuna. Garnish with sesame seeds, spring onions, and avocado slices."
+        }
+      ],
+      "notes": "Brown rice adds a nutty flavor and extra fiber. Make sure it is still warm when you assemble the bowl.",
+      "photo_search": "bowl of brown rice topped with spicy diced tuna, avocado, and sesame seeds"
+    },
+    {
+      "id": 123,
+      "name": "Cottage Cheese and Tuna Salad",
+      "slug": "cottage-cheese-tuna-salad",
+      "description": "A high protein, no mayo tuna salad using cottage cheese for creaminess.",
+      "tags": ["High Protein", "No Cook", "Quick"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "1 can", "name": "tuna, drained" },
+        { "amount": "1/2 cup", "name": "cottage cheese" },
+        { "amount": "1 stalk", "name": "celery, finely diced" },
+        { "amount": "1 tsp", "name": "dijon mustard" },
+        { "amount": "squeeze", "name": "lemon juice" },
+        { "amount": "to taste", "name": "salt, black pepper" },
+        { "amount": "to serve", "name": "crackers or cucumber slices" }
+      ],
+      "steps": [
+        {
+          "name": "Mix",
+          "text": "In a bowl, combine the drained tuna, cottage cheese, diced celery, dijon, and lemon juice. Mix well. Season with salt and pepper."
+        },
+        {
+          "name": "Serve",
+          "text": "Serve with crackers or cucumber slices for scooping."
+        }
+      ],
+      "notes": "The cottage cheese makes it incredibly creamy without the heaviness of mayo.",
+      "photo_search": "bowl of creamy tuna salad made with cottage cheese, served with crackers"
+    },
+    {
+      "id": 124,
+      "name": "White Bean and Tuna Salad",
+      "slug": "white-bean-tuna-salad",
+      "description": "A Mediterranean style tuna salad with white beans, red onion, and herbs.",
+      "tags": ["No Cook", "Protein", "Mediterranean"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Salad",
+      "ingredients": [
+        { "amount": "1 can", "name": "tuna in olive oil, drained" },
+        { "amount": "1/2 can", "name": "cannellini beans, rinsed" },
+        { "amount": "1/4", "name": "red onion, thinly sliced" },
+        { "amount": "1 tbsp", "name": "red wine vinegar" },
+        { "amount": "2 tbsp", "name": "olive oil" },
+        { "amount": "handful", "name": "fresh parsley, chopped" },
+        { "amount": "to taste", "name": "salt, black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Toss",
+          "text": "In a bowl, combine the tuna, cannellini beans, and red onion. Dress with red wine vinegar and olive oil. Add parsley and season generously."
+        }
+      ],
+      "notes": "Let this sit for 10 minutes before eating. The beans will absorb the dressing.",
+      "photo_search": "bowl of tuna, white beans, red onion, and parsley in a light vinaigrette"
+    },
+    {
+      "id": 125,
+      "name": "Caprese Stuffed Avocado",
+      "slug": "caprese-stuffed-avocado",
+      "description": "An avocado half stuffed with a fresh mozzarella and tomato salad.",
+      "tags": ["No Cook", "Vegetarian", "Quick"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian-American",
+      "category": "Salad",
+      "ingredients": [
+        { "amount": "1", "name": "ripe avocado" },
+        { "amount": "1/2 cup", "name": "cherry tomatoes, halved" },
+        { "amount": "50g", "name": "fresh mozzarella balls (bocconcini)" },
+        { "amount": "handful", "name": "fresh basil" },
+        { "amount": "1 tbsp", "name": "balsamic glaze" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "to taste", "name": "flaky salt, black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Prep avocado",
+          "text": "Halve the avocado and remove the pit. Scoop out a little flesh to make the hole bigger."
+        },
+        {
+          "name": "Stuff",
+          "text": "Toss the tomatoes, mozzarella, and basil with olive oil. Spoon the mixture into the avocado halves. Drizzle with balsamic glaze and season."
+        }
+      ],
+      "notes": "This is a great low carb alternative to caprese on bread.",
+      "photo_search": "avocado half stuffed with cherry tomatoes, mozzarella, and basil"
+    },
+    {
+      "id": 126,
+      "name": "Gnocchi with Pesto and Cherry Tomatoes",
+      "slug": "gnocchi-pesto-cherry-tomatoes",
+      "description": "Pillowy potato gnocchi tossed in basil pesto with burst cherry tomatoes.",
+      "tags": ["Pasta", "Vegetarian", "Quick"],
+      "prep": "2m",
+      "cook": "10m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Pasta",
+      "ingredients": [
+        { "amount": "250g", "name": "store-bought potato gnocchi" },
+        { "amount": "1/4 cup", "name": "basil pesto" },
+        { "amount": "1 cup", "name": "cherry tomatoes" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "30g", "name": "parmesan, grated" },
+        { "amount": "to taste", "name": "salt, black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Cook gnocchi",
+          "text": "Boil gnocchi in salted water until they float. Drain."
+        },
+        {
+          "name": "Blister tomatoes",
+          "text": "In the same pot, heat olive oil over high heat. Add cherry tomatoes and cook until they burst, about 3 minutes."
+        },
+        {
+          "name": "Combine",
+          "text": "Add the gnocchi back to the pot. Stir in the pesto. Top with parmesan and black pepper."
+        }
+      ],
+      "notes": "Using store-bought pesto is fine, but a little fresh lemon juice brightens it up.",
+      "photo_search": "bowl of potato gnocchi in green pesto with burst red cherry tomatoes"
+    },
+    {
+      "id": 127,
+      "name": "Quesadilla with Sweet Potato and Black Beans",
+      "slug": "quesadilla-sweet-potato-black-beans",
+      "description": "A hearty vegetarian quesadilla filled with mashed sweet potato and beans.",
+      "tags": ["Vegetarian", "Filling", "Quick"],
+      "prep": "5m",
+      "cook": "10m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Mexican-Inspired",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "1 large", "name": "flour tortilla" },
+        { "amount": "1/2 cup", "name": "mashed cooked sweet potato" },
+        { "amount": "1/4 can", "name": "black beans, drained" },
+        { "amount": "40g", "name": "Monterey Jack cheese, shredded" },
+        { "amount": "1 tsp", "name": "cumin" },
+        { "amount": "to serve", "name": "sour cream, salsa" }
+      ],
+      "steps": [
+        {
+          "name": "Build",
+          "text": "Spread the mashed sweet potato on one half of the tortilla. Top with black beans, cumin, and cheese. Fold over."
+        },
+        {
+          "name": "Cook",
+          "text": "Cook in a dry pan over medium heat for 2-3 minutes per side until golden and the cheese is melted. Serve with sour cream and salsa."
+        }
+      ],
+      "notes": "You can use leftover baked sweet potato or microwave one for 5 minutes.",
+      "photo_search": "golden quesadilla cut open to reveal sweet potato, black beans, and melted cheese"
+    },
+    {
+      "id": 128,
+      "name": "Zucchini Noodles with Pesto",
+      "slug": "zucchini-noodles-pesto",
+      "description": "A light, low carb dinner. Spiralized zucchini tossed in basil pesto.",
+      "tags": ["Healthy", "Low Carb", "Quick"],
+      "prep": "5m",
+      "cook": "5m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Pasta",
+      "ingredients": [
+        { "amount": "2", "name": "zucchini, spiralized or julienned" },
+        { "amount": "1/4 cup", "name": "basil pesto" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "1 clove", "name": "garlic, minced" },
+        { "amount": "30g", "name": "parmesan, grated" },
+        { "amount": "optional", "name": "cherry tomatoes, grilled chicken" }
+      ],
+      "steps": [
+        {
+          "name": "Saute zucchini",
+          "text": "Heat olive oil in a pan. Add garlic and cook for 30 seconds. Add zucchini noodles and toss for 2-3 minutes until just wilted but still crunchy."
+        },
+        {
+          "name": "Dress",
+          "text": "Remove from heat. Toss with pesto. Top with parmesan and any optional additions."
+        }
+      ],
+      "notes": "Do not overcook the zucchini or it will become mushy and release too much water.",
+      "photo_search": "bowl of green zucchini noodles tossed in pesto with parmesan"
+    },
+    {
+      "id": 129,
+      "name": "Antipasto Skewers",
+      "slug": "antipasto-skewers",
+      "description": "All the flavors of an antipasto plate, threaded onto skewers for easy eating.",
+      "tags": ["No Cook", "Fancy", "Snack"],
+      "prep": "10m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "4-5", "name": "small skewers" },
+        { "amount": "handful", "name": "tortellini, cooked" },
+        { "amount": "handful", "name": "salami slices" },
+        { "amount": "handful", "name": "marinated mozzarella balls" },
+        { "amount": "handful", "name": "olives" },
+        { "amount": "handful", "name": "artichoke hearts" },
+        { "amount": "handful", "name": "cherry tomatoes" }
+      ],
+      "steps": [
+        {
+          "name": "Thread",
+          "text": "Thread the ingredients onto the skewers in any order you like. Arrange on a plate and drizzle with a little of the marinade from the mozzarella."
+        }
+      ],
+      "notes": "These are perfect for eating while standing in the kitchen.",
+      "photo_search": "small skewers threaded with salami, mozzarella, olives, and cherry tomatoes"
+    },
+    {
+      "id": 130,
+      "name": "Mochi and Matcha Tea",
+      "slug": "mochi-matcha-tea",
+      "description": "A sweet Japanese snack of chewy mochi served with a frothy matcha latte.",
+      "tags": ["Sweet", "Drink", "No Cook"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Japanese",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "3-4", "name": "mochi pieces (strawberry or matcha flavor)" },
+        { "amount": "1 tsp", "name": "ceremonial grade matcha powder" },
+        { "amount": "2 oz", "name": "hot water (175F/80C)" },
+        { "amount": "6 oz", "name": "oat milk, frothed" },
+        { "amount": "1 tsp", "name": "honey (optional)" }
+      ],
+      "steps": [
+        {
+          "name": "Make matcha",
+          "text": "Sift matcha into a mug. Add hot water and whisk until frothy. Pour in warm frothed oat milk and sweeten with honey if desired."
+        },
+        {
+          "name": "Serve",
+          "text": "Arrange the mochi on a small plate. Serve alongside the matcha latte."
+        }
+      ],
+      "notes": "Mochi can be found in the freezer section of Asian markets or specialty grocers.",
+      "photo_search": "matcha latte in a mug next to a plate of colorful mochi pieces"
+    },
+    {
+      "id": 131,
+      "name": "Butter Mochi Bites",
+      "slug": "butter-mochi-bites",
+      "description": "Sweet, chewy Hawaiian butter mochi cubes. A dense, satisfying treat.",
+      "tags": ["Sweet", "Dessert Dinner", "Baked"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Hawaiian",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "4-5", "name": "butter mochi bites (store-bought or homemade)" },
+        { "amount": "optional", "name": "fresh berries, vanilla ice cream" }
+      ],
+      "steps": [
+        {
+          "name": "Serve",
+          "text": "If they are not fresh, microwave the mochi bites for 10 seconds to soften. Serve with berries or ice cream if desired."
+        }
+      ],
+      "notes": "Butter mochi is made with coconut milk and glutinous rice flour. It is dense and incredibly buttery.",
+      "photo_search": "plate of golden butter mochi cubes dusted with powdered sugar"
+    },
+    {
+      "id": 132,
+      "name": "Smoked Salmon and Cream Cheese Cucumber Rolls",
+      "slug": "smoked-salmon-cream-cheese-cucumber-rolls",
+      "description": "Thin ribbons of cucumber wrapped around smoked salmon and cream cheese.",
+      "tags": ["No Cook", "Fancy", "Salmon"],
+      "prep": "10m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Mid",
+      "cuisine": "Scandinavian",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "1", "name": "English cucumber" },
+        { "amount": "60g", "name": "smoked salmon" },
+        { "amount": "3 tbsp", "name": "whipped cream cheese" },
+        { "amount": "1 tsp", "name": "dijon mustard" },
+        { "amount": "few sprigs", "name": "fresh dill" }
+      ],
+      "steps": [
+        {
+          "name": "Prep cucumber",
+          "text": "Use a vegetable peeler to slice the cucumber into long, thin ribbons."
+        },
+        {
+          "name": "Roll",
+          "text": "Mix cream cheese with dijon. Spread a thin layer on a cucumber ribbon. Add a piece of smoked salmon and a sprig of dill. Roll up tightly."
+        }
+      ],
+      "notes": "If the cucumber breaks, just use shorter ribbons. They still taste amazing.",
+      "photo_search": "plate of cucumber ribbons rolled up with smoked salmon and cream cheese"
+    },
+    {
+      "id": 133,
+      "name": "Peanut Butter and Pickle Sandwich",
+      "slug": "peanut-butter-pickle-sandwich",
+      "description": "The viral sweet, salty, and sour sandwich. Do not knock it until you try it.",
+      "tags": ["Quick", "Viral", "Comfort"],
+      "prep": "3m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Sandwich",
+      "ingredients": [
+        { "amount": "2 slices", "name": "soft white bread" },
+        { "amount": "2 tbsp", "name": "creamy peanut butter" },
+        { "amount": "handful", "name": "dill pickle slices" }
+      ],
+      "steps": [
+        {
+          "name": "Build",
+          "text": "Spread peanut butter generously on both slices of bread. Layer pickle slices on one side. Close the sandwich and press down gently."
+        }
+      ],
+      "notes": "The crunch of the pickle against the creamy peanut butter is the whole point.",
+      "photo_search": "white bread sandwich cut open to reveal peanut butter and dill pickle slices"
+    },
+    {
+      "id": 134,
+      "name": "Olive Oil and Orange Salad",
+      "slug": "olive-oil-orange-salad",
+      "description": "Sliced oranges dressed with olive oil, salt, and black pepper. A Sicilian classic.",
+      "tags": ["No Cook", "Healthy", "Light"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Salad",
+      "ingredients": [
+        { "amount": "2", "name": "oranges" },
+        { "amount": "2 tbsp", "name": "excellent olive oil" },
+        { "amount": "to taste", "name": "flaky sea salt, black pepper" },
+        { "amount": "optional", "name": "thinly sliced red onion, black olives, fennel" }
+      ],
+      "steps": [
+        {
+          "name": "Slice oranges",
+          "text": "Peel the oranges and slice them into thin rounds. Arrange on a plate."
+        },
+        {
+          "name": "Dress",
+          "text": "Drizzle generously with olive oil. Season with flaky salt and black pepper. Add red onion or olives if using."
+        }
+      ],
+      "notes": "This is a refreshing palate cleanser of a meal. Use blood oranges if they are in season.",
+      "photo_search": "plate of sliced oranges dressed with olive oil and black pepper"
+    },
+    {
+      "id": 135,
+      "name": "Baked Feta with Honey and Sesame",
+      "slug": "baked-feta-honey-sesame",
+      "description": "A block of feta baked until soft, then drenched in honey and sesame seeds.",
+      "tags": ["Fancy", "Sweet-Savory", "Cheese"],
+      "prep": "2m",
+      "cook": "15m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Greek",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "100g", "name": "block feta cheese" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "2 tbsp", "name": "honey" },
+        { "amount": "1 tsp", "name": "sesame seeds" },
+        { "amount": "to serve", "name": "warm pita or crusty bread" }
+      ],
+      "steps": [
+        {
+          "name": "Bake",
+          "text": "Preheat oven to 400F/200C. Place the feta in a small baking dish. Drizzle with olive oil. Bake for 15 minutes until soft and golden on top."
+        },
+        {
+          "name": "Dress",
+          "text": "Remove from oven. Immediately drizzle with honey and sprinkle with sesame seeds. Serve with warm pita."
+        }
+      ],
+      "notes": "The contrast of the salty, warm cheese with the sweet honey is incredible.",
+      "photo_search": "small baking dish with warm baked feta drizzled with honey and sesame seeds"
+    },
+    {
+      "id": 136,
+      "name": "Chia Pudding with Coconut and Mango",
+      "slug": "chia-pudding-coconut-mango",
+      "description": "A tropical, healthy dessert-for-dinner. Creamy chia pudding with sweet mango.",
+      "tags": ["Healthy", "Sweet", "No Cook"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Tropical",
+      "category": "Bowl",
+      "ingredients": [
+        { "amount": "3 tbsp", "name": "chia seeds" },
+        { "amount": "1/2 cup", "name": "coconut milk" },
+        { "amount": "1 tbsp", "name": "maple syrup" },
+        { "amount": "1/2", "name": "ripe mango, diced" },
+        { "amount": "optional", "name": "toasted coconut flakes, lime zest" }
+      ],
+      "steps": [
+        {
+          "name": "Mix",
+          "text": "In a jar, combine chia seeds, coconut milk, and maple syrup. Stir well. Let sit for 5 minutes, then stir again. Refrigerate for at least 2 hours until thick."
+        },
+        {
+          "name": "Top",
+          "text": "Spoon the thickened chia pudding into a bowl. Top with diced mango, coconut flakes, and lime zest."
+        }
+      ],
+      "notes": "Make this in the morning so it is ready for dinner. It keeps for up to 3 days in the fridge.",
+      "photo_search": "glass of layered chia pudding with coconut milk and bright yellow mango"
+    },
+    {
+      "id": 137,
+      "name": "Kimchi and Cheese Quesadilla",
+      "slug": "kimchi-cheese-quesadilla",
+      "description": "A fusion quesadilla with melted cheese and tangy, spicy kimchi.",
+      "tags": ["Fusion", "Spicy", "Quick"],
+      "prep": "3m",
+      "cook": "5m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Korean-Mexican",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "1 large", "name": "flour tortilla" },
+        { "amount": "60g", "name": "Monterey Jack cheese, shredded" },
+        { "amount": "1/4 cup", "name": "kimchi, roughly chopped" },
+        { "amount": "1 tsp", "name": "butter" },
+        { "amount": "to serve", "name": "sour cream, sriracha" }
+      ],
+      "steps": [
+        {
+          "name": "Build",
+          "text": "Sprinkle half the cheese on one half of the tortilla. Top with chopped kimchi and the rest of the cheese. Fold over."
+        },
+        {
+          "name": "Cook",
+          "text": "Melt butter in a pan. Cook the quesadilla for 2-3 minutes per side until golden and the cheese is melted. Serve with sour cream and sriracha."
+        }
+      ],
+      "notes": "Squeeze the kimchi a little before chopping so the quesadilla does not get soggy.",
+      "photo_search": "golden quesadilla cut open to reveal melted cheese and red kimchi"
+    },
+    {
+      "id": 138,
+      "name": "Spicy Ramen with Egg and Spinach",
+      "slug": "spicy-ramen-egg-spinach",
+      "description": "Upgraded instant ramen with wilted spinach and a soft boiled egg.",
+      "tags": ["Noodles", "Quick", "Comfort"],
+      "prep": "2m",
+      "cook": "8m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Japanese-Inspired",
+      "category": "Noodles",
+      "ingredients": [
+        { "amount": "1 packet", "name": "spicy instant ramen (Shin Ramyun)" },
+        { "amount": "1 large", "name": "egg" },
+        { "amount": "1 handful", "name": "baby spinach" },
+        { "amount": "1 tsp", "name": "sesame oil" },
+        { "amount": "to garnish", "name": "spring onion, sesame seeds" }
+      ],
+      "steps": [
+        {
+          "name": "Cook egg",
+          "text": "Soft boil the egg for 6.5 minutes. Peel and set aside."
+        },
+        {
+          "name": "Cook ramen",
+          "text": "Cook the ramen according to package directions. In the last 30 seconds, stir in the spinach until wilted. Remove from heat and stir in sesame oil."
+        },
+        {
+          "name": "Serve",
+          "text": "Pour into a bowl. Halve the egg and place on top. Garnish with spring onions and sesame seeds."
+        }
+      ],
+      "notes": "Adding sesame oil at the end gives it a rich, nutty flavor that instant ramen lacks.",
+      "photo_search": "bowl of spicy red ramen with spinach, a halved soft boiled egg, and sesame seeds"
+    },
+    {
+      "id": 139,
+      "name": "Watermelon and Feta Salad",
+      "slug": "watermelon-feta-salad",
+      "description": "Juicy watermelon cubes with salty feta and fresh mint.",
+      "tags": ["Salad", "No Cook", "Summer"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Greek",
+      "category": "Salad",
+      "ingredients": [
+        { "amount": "2 cups", "name": "watermelon, cubed" },
+        { "amount": "50g", "name": "feta cheese, cubed" },
+        { "amount": "handful", "name": "fresh mint leaves" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "squeeze", "name": "lime juice" },
+        { "amount": "to taste", "name": "flaky sea salt, black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Toss",
+          "text": "In a bowl, gently toss the watermelon cubes with feta and mint. Drizzle with olive oil and lime juice. Season with flaky salt and pepper."
+        }
+      ],
+      "notes": "Do not toss too hard or the watermelon will break down and get mushy.",
+      "photo_search": "bowl of bright red watermelon cubes with white feta and green mint"
+    },
+    {
+      "id": 140,
+      "name": "Cottage Cheese Pancakes (Syrniki)",
+      "slug": "cottage-cheese-pancakes",
+      "description": "Russian style cottage cheese pancakes. Crispy on the outside, creamy inside.",
+      "tags": ["Sweet", "Comfort", "Breakfast"],
+      "prep": "10m",
+      "cook": "10m",
+      "serves": "1",
+      "difficulty": "Mid",
+      "cuisine": "Russian",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "1 cup", "name": "cottage cheese" },
+        { "amount": "1", "name": "egg" },
+        { "amount": "2 tbsp", "name": "flour" },
+        { "amount": "1 tbsp", "name": "sugar" },
+        { "amount": "1 tsp", "name": "vanilla extract" },
+        { "amount": "1 tbsp", "name": "butter" },
+        { "amount": "to serve", "name": "sour cream, jam" }
+      ],
+      "steps": [
+        {
+          "name": "Mix",
+          "text": "In a bowl, mix cottage cheese, egg, flour, sugar, and vanilla until a sticky dough forms."
+        },
+        {
+          "name": "Fry",
+          "text": "Heat butter in a pan. Scoop spoonfuls of the dough into the pan. Flatten slightly. Cook for 2-3 minutes per side until golden."
+        },
+        {
+          "name": "Serve",
+          "text": "Serve hot with sour cream and jam."
+        }
+      ],
+      "notes": "These are called syrniki. They are a staple Russian breakfast or dessert.",
+      "photo_search": "plate of golden cottage cheese pancakes served with sour cream and berry jam"
+    },
+    {
+      "id": 141,
+      "name": "Apple and Cheddar Toast",
+      "slug": "apple-cheddar-toast",
+      "description": "Toasted bread with sharp cheddar and crisp apple slices. A Fall classic.",
+      "tags": ["Toast", "Sweet-Savory", "Quick"],
+      "prep": "3m",
+      "cook": "3m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "2 slices", "name": "sourdough, toasted" },
+        { "amount": "40g", "name": "sharp cheddar, sliced" },
+        { "amount": "1/2", "name": "crisp apple, thinly sliced" },
+        { "amount": "drizzle", "name": "honey" },
+        { "amount": "pinch", "name": "flaky sea salt" }
+      ],
+      "steps": [
+        {
+          "name": "Assemble",
+          "text": "Place cheddar slices on the toasted bread. Top with apple slices. Drizzle with honey and sprinkle with flaky salt."
+        },
+        {
+          "name": "Melt",
+          "text": "Place under the broiler for 1-2 minutes until the cheese is just melted."
+        }
+      ],
+      "notes": "The combination of apple and cheddar is a New England tradition for a reason.",
+      "photo_search": "toasted sourdough with melted cheddar, apple slices, and honey"
+    },
+    {
+      "id": 142,
+      "name": "Paneer Tikka Skewers",
+      "slug": "paneer-tikka-skewers",
+      "description": "Spiced, grilled paneer cheese on skewers. A restaurant style Indian appetizer.",
+      "tags": ["Indian", "Vegetarian", "Fancy"],
+      "prep": "10m",
+      "cook": "10m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Indian",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "100g", "name": "paneer, cubed" },
+        { "amount": "1/4 cup", "name": "tikka masala marinade (store-bought)" },
+        { "amount": "1/2", "name": "bell pepper, cubed" },
+        { "amount": "1/2", "name": "onion, cubed" },
+        { "amount": "1 tbsp", "name": "oil" }
+      ],
+      "steps": [
+        {
+          "name": "Marinate",
+          "text": "Toss the paneer cubes in the tikka masala marinade. Let sit for 10 minutes."
+        },
+        {
+          "name": "Skewer",
+          "text": "Thread the paneer, bell pepper, and onion onto skewers."
+        },
+        {
+          "name": "Cook",
+          "text": "Heat oil in a pan. Cook the skewers for 2-3 minutes per side until the paneer is golden and the vegetables are charred."
+        }
+      ],
+      "notes": "Paneer is a firm Indian cheese that does not melt. It is perfect for grilling.",
+      "photo_search": "skewers of grilled golden paneer cubes with charred peppers and onions"
+    },
+    {
+      "id": 143,
+      "name": "Miso Glazed Eggplant",
+      "slug": "miso-glazed-eggplant",
+      "description": "Soft, custardy eggplant broiled with a sweet and savory miso glaze.",
+      "tags": ["Japanese", "Vegetarian", "Fancy"],
+      "prep": "5m",
+      "cook": "15m",
+      "serves": "1",
+      "difficulty": "Mid",
+      "cuisine": "Japanese",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "1 large", "name": "eggplant" },
+        { "amount": "2 tbsp", "name": "white miso paste" },
+        { "amount": "1 tbsp", "name": "sake or water" },
+        { "amount": "1 tbsp", "name": "sugar" },
+        { "amount": "1 tsp", "name": "soy sauce" },
+        { "amount": "1 tbsp", "name": "oil" }
+      ],
+      "steps": [
+        {
+          "name": "Prep eggplant",
+          "text": "Halve the eggplant lengthwise. Score the flesh in a crosshatch pattern. Brush with oil."
+        },
+        {
+          "name": "Cook",
+          "text": "Flesh side down, cook in a pan over medium heat for 5-7 minutes until soft. Flip over."
+        },
+        {
+          "name": "Glaze",
+          "text": "Mix miso, sake, sugar, and soy sauce. Spread on the flesh side. Place under the broiler for 2-3 minutes until bubbly and golden."
+        }
+      ],
+      "notes": "Scoring the eggplant helps it cook evenly and absorb the glaze.",
+      "photo_search": "eggplant halves with a golden bubbly miso glaze, scored in a crosshatch"
+    },
+    {
+      "id": 144,
+      "name": "Tofu and Peanut Sauce Bowl",
+      "slug": "tofu-peanut-sauce-bowl",
+      "description": "Crispy pan fried tofu over rice with a rich, spicy peanut sauce.",
+      "tags": ["Vegetarian", "Bowl", "Protein"],
+      "prep": "5m",
+      "cook": "15m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Thai-Inspired",
+      "category": "Bowl",
+      "ingredients": [
+        { "amount": "1/2 block", "name": "firm tofu, cubed" },
+        { "amount": "1 cup", "name": "cooked rice" },
+        { "amount": "2 tbsp", "name": "peanut butter" },
+        { "amount": "1 tbsp", "name": "soy sauce" },
+        { "amount": "1 tbsp", "name": "rice vinegar" },
+        { "amount": "1 tsp", "name": "sriracha" },
+        { "amount": "1 tbsp", "name": "oil" },
+        { "amount": "to garnish", "name": "sesame seeds, spring onion" }
+      ],
+      "steps": [
+        {
+          "name": "Fry tofu",
+          "text": "Press the tofu to remove water. Cube and fry in hot oil until golden and crispy on all sides."
+        },
+        {
+          "name": "Make sauce",
+          "text": "Whisk peanut butter, soy sauce, rice vinegar, sriracha, and a splash of warm water until smooth."
+        },
+        {
+          "name": "Assemble",
+          "text": "Place rice in a bowl. Top with crispy tofu. Drizzle with peanut sauce. Garnish with sesame seeds and spring onions."
+        }
+      ],
+      "notes": "Pressing the tofu is crucial for getting it crispy. Use a clean towel to squeeze the water out.",
+      "photo_search": "bowl of rice topped with golden crispy tofu cubes and peanut sauce"
+    },
+    {
+      "id": 145,
+      "name": "Baked Camembert with Pears",
+      "slug": "baked-camembert-pears",
+      "description": "A wheel of camembert baked until molten, served with crisp pear slices.",
+      "tags": ["Fancy", "Cheese", "Warm"],
+      "prep": "5m",
+      "cook": "15m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "French",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "1 wheel", "name": "camembert cheese" },
+        { "amount": "1", "name": "ripe pear, sliced" },
+        { "amount": "handful", "name": "walnuts" },
+        { "amount": "1 tbsp", "name": "honey" },
+        { "amount": "to serve", "name": "crusty bread or crackers" }
+      ],
+      "steps": [
+        {
+          "name": "Bake",
+          "text": "Preheat oven to 375F/190C. Place the camembert in a small baking dish. Bake for 12-15 minutes until the center is molten."
+        },
+        {
+          "name": "Serve",
+          "text": "Transfer to a plate. Arrange pear slices, walnuts, and bread around it. Drizzle the cheese with honey."
+        }
+      ],
+      "notes": "Score the top of the camembert with a knife before baking so it is easy to open.",
+      "photo_search": "baking dish with molten baked camembert drizzled with honey and surrounded by pears"
+    },
+    {
+      "id": 146,
+      "name": "Caprese Quesadilla",
+      "slug": "caprese-quesadilla",
+      "description": "Melted mozzarella, tomatoes, and basil stuffed inside a crispy tortilla.",
+      "tags": ["Quick", "Italian-Mexican", "Vegetarian"],
+      "prep": "5m",
+      "cook": "5m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Fusion",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "1 large", "name": "flour tortilla" },
+        { "amount": "60g", "name": "fresh mozzarella, torn" },
+        { "amount": "handful", "name": "cherry tomatoes, halved" },
+        { "amount": "handful", "name": "fresh basil leaves" },
+        { "amount": "1 tsp", "name": "butter" },
+        { "amount": "to serve", "name": "balsamic glaze" }
+      ],
+      "steps": [
+        {
+          "name": "Build",
+          "text": "Place mozzarella, tomatoes, and basil on one half of the tortilla. Fold over."
+        },
+        {
+          "name": "Cook",
+          "text": "Melt butter in a pan. Cook the quesadilla for 2-3 minutes per side until golden and the cheese is melted. Slice and drizzle with balsamic glaze."
+        }
+      ],
+      "notes": "Make sure to drain the mozzarella well so the quesadilla does not get soggy.",
+      "photo_search": "golden quesadilla cut open to reveal melted mozzarella, tomatoes, and basil"
+    },
+    {
+      "id": 147,
+      "name": "Smashed Pea and Ricotta Toast",
+      "slug": "smashed-pea-ricotta-toast",
+      "description": "Bright green smashed peas over creamy ricotta on sourdough toast.",
+      "tags": ["Toast", "Vegetarian", "Spring"],
+      "prep": "5m",
+      "cook": "5m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Australian",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "2 slices", "name": "sourdough, toasted" },
+        { "amount": "1/2 cup", "name": "frozen peas" },
+        { "amount": "1/4 cup", "name": "ricotta cheese" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "squeeze", "name": "lemon juice" },
+        { "amount": "to taste", "name": "salt, black pepper, mint leaves" }
+      ],
+      "steps": [
+        {
+          "name": "Cook peas",
+          "text": "Boil or microwave the peas until tender. Mash roughly with a fork. Mix with olive oil, lemon juice, salt, and pepper."
+        },
+        {
+          "name": "Assemble",
+          "text": "Spread ricotta on the toast. Top with the smashed peas. Garnish with fresh mint leaves."
+        }
+      ],
+      "notes": "This is a classic Australian cafe breakfast. It is fresh and vibrant.",
+      "photo_search": "sourdough toast spread with white ricotta and topped with bright green smashed peas"
+    },
+    {
+      "id": 148,
+      "name": "Tuna and White Bean Bruschetta",
+      "slug": "tuna-white-bean-bruschetta",
+      "description": "Toasted bread topped with a Tuscan style tuna and white bean salad.",
+      "tags": ["Italian", "Protein", "Quick"],
+      "prep": "5m",
+      "cook": "5m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "2 slices", "name": "crusty bread" },
+        { "amount": "1 can", "name": "tuna in olive oil, drained" },
+        { "amount": "1/2 can", "name": "cannellini beans, rinsed" },
+        { "amount": "1 tbsp", "name": "red onion, finely diced" },
+        { "amount": "1 tbsp", "name": "red wine vinegar" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "handful", "name": "fresh parsley" }
+      ],
+      "steps": [
+        {
+          "name": "Make topping",
+          "text": "In a bowl, combine tuna, beans, red onion, vinegar, olive oil, and parsley. Season with salt and pepper."
+        },
+        {
+          "name": "Toast",
+          "text": "Toast the bread until golden. Spoon the tuna mixture generously over the top."
+        }
+      ],
+      "notes": "Using tuna packed in olive oil is essential for the authentic Tuscan flavor.",
+      "photo_search": "toasted crusty bread topped with tuna, white beans, and parsley"
+    },
+    {
+      "id": 149,
+      "name": "Sweet Potato Toast with Almond Butter",
+      "slug": "sweet-potato-toast-almond-butter",
+      "description": "Slices of sweet potato toasted and topped with almond butter and banana.",
+      "tags": ["Healthy", "Sweet", "Low Carb"],
+      "prep": "2m",
+      "cook": "10m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "1", "name": "sweet potato" },
+        { "amount": "2 tbsp", "name": "almond butter" },
+        { "amount": "1/2", "name": "banana, sliced" },
+        { "amount": "1 tsp", "name": "honey" },
+        { "amount": "pinch", "name": "cinnamon" }
+      ],
+      "steps": [
+        {
+          "name": "Toast sweet potato",
+          "text": "Slice the sweet potato lengthwise into 1/4 inch thick slices. Toast in a toaster on high setting twice, or until tender."
+        },
+        {
+          "name": "Top",
+          "text": "Spread almond butter on the sweet potato toasts. Top with banana slices, a drizzle of honey, and a sprinkle of cinnamon."
+        }
+      ],
+      "notes": "This is a great gluten free alternative to traditional toast.",
+      "photo_search": "slices of toasted sweet potato topped with almond butter, banana, and cinnamon"
+    },
+    {
+      "id": 150,
+      "name": "Spaghetti Squash with Marinara",
+      "slug": "spaghetti-squash-marinara",
+      "description": "Roasted spaghetti squash strands tossed in a rich marinara sauce.",
+      "tags": ["Healthy", "Vegetarian", "Low Carb"],
+      "prep": "5m",
+      "cook": "40m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian-American",
+      "category": "Pasta",
+      "ingredients": [
+        { "amount": "1", "name": "spaghetti squash" },
+        { "amount": "1/2 cup", "name": "marinara sauce" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "30g", "name": "parmesan, grated" },
+        { "amount": "to taste", "name": "salt, black pepper, chilli flakes" },
+        { "amount": "optional", "name": "fresh basil" }
+      ],
+      "steps": [
+        {
+          "name": "Roast squash",
+          "text": "Preheat oven to 400F/200C. Halve the squash and scoop out seeds. Rub with olive oil, salt, and pepper. Roast face down for 35-40 minutes until tender."
+        },
+        {
+          "name": "Scrape",
+          "text": "Use a fork to scrape the flesh into spaghetti like strands."
+        },
+        {
+          "name": "Sauce",
+          "text": "Toss the strands with warm marinara sauce. Top with parmesan, chilli flakes, and basil."
+        }
+      ],
+      "notes": "Do not overcook the squash or it will become mushy and lose its stringy texture.",
+      "photo_search": "bowl of spaghetti squash strands in red marinara sauce with parmesan"
+    },
+    {
+      "id": 151,
+      "name": "Tuna and White Bean Salad",
+      "slug": "tuna-white-bean-salad",
+      "description": "A protein packed Mediterranean salad with tuna, white beans, and red onion.",
+      "tags": ["No Cook", "High Protein", "Mediterranean"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Salad",
+      "ingredients": [
+        { "amount": "1 can", "name": "tuna in olive oil, drained" },
+        { "amount": "1/2 can", "name": "cannellini beans, rinsed" },
+        { "amount": "1/4", "name": "red onion, thinly sliced" },
+        { "amount": "1 tbsp", "name": "red wine vinegar" },
+        { "amount": "2 tbsp", "name": "olive oil" },
+        { "amount": "handful", "name": "fresh parsley, chopped" },
+        { "amount": "to taste", "name": "salt, black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Combine",
+          "text": "In a bowl, gently combine the tuna, cannellini beans, and red onion."
+        },
+        {
+          "name": "Dress",
+          "text": "Drizzle with red wine vinegar and olive oil. Add parsley and season generously with salt and pepper. Let sit for 5 minutes."
+        }
+      ],
+      "notes": "Letting it sit for a few minutes allows the beans to absorb the dressing.",
+      "photo_search": "bowl of tuna, white beans, red onion, and parsley in a light vinaigrette"
+    },
+    {
+      "id": 152,
+      "name": "Cottage Cheese and Peach Bowl",
+      "slug": "cottage-cheese-peach-bowl",
+      "description": "A sweet and protein rich bowl of cottage cheese topped with ripe peaches.",
+      "tags": ["High Protein", "Sweet", "Quick"],
+      "prep": "3m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Bowl",
+      "ingredients": [
+        { "amount": "1 cup", "name": "full fat cottage cheese" },
+        { "amount": "1", "name": "ripe peach, sliced" },
+        { "amount": "1 tbsp", "name": "honey" },
+        { "amount": "pinch", "name": "cinnamon" },
+        { "amount": "optional", "name": "toasted almonds, chia seeds" }
+      ],
+      "steps": [
+        {
+          "name": "Assemble",
+          "text": "Scoop the cottage cheese into a bowl. Arrange the peach slices on top. Drizzle with honey, sprinkle with cinnamon, and add almonds if using."
+        }
+      ],
+      "notes": "Using a ripe, in season peach makes this feel like a dessert.",
+      "photo_search": "bowl of cottage cheese topped with sliced peaches, honey, and cinnamon"
+    },
+    {
+      "id": 153,
+      "name": "Smoked Salmon and Avocado Toast",
+      "slug": "smoked-salmon-avocado-toast",
+      "description": "Creamy avocado and salty smoked salmon on crusty sourdough.",
+      "tags": ["Toast", "Salmon", "Quick"],
+      "prep": "5m",
+      "cook": "3m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "2 slices", "name": "sourdough, toasted" },
+        { "amount": "1/2", "name": "ripe avocado" },
+        { "amount": "60g", "name": "smoked salmon" },
+        { "amount": "squeeze", "name": "lemon juice" },
+        { "amount": "1 tsp", "name": "everything bagel seasoning" },
+        { "amount": "optional", "name": "capers, fresh dill" }
+      ],
+      "steps": [
+        {
+          "name": "Mash",
+          "text": "Mash the avocado onto the toasted sourdough. Squeeze with lemon juice."
+        },
+        {
+          "name": "Top",
+          "text": "Drape the smoked salmon over the avocado. Sprinkle with everything bagel seasoning. Add capers and dill if using."
+        }
+      ],
+      "notes": "The everything bagel seasoning ties the avocado and salmon together perfectly.",
+      "photo_search": "sourdough toast topped with mashed avocado, smoked salmon, and capers"
+    },
+    {
+      "id": 154,
+      "name": "Tomato Basil Soup with Grilled Cheese",
+      "slug": "tomato-basil-soup-grilled-cheese",
+      "description": "The classic comfort combo. A creamy tomato basil soup with a crispy grilled cheese.",
+      "tags": ["Soup", "Comfort", "Classic"],
+      "prep": "5m",
+      "cook": "15m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Soup",
+      "ingredients": [
+        { "amount": "1 can", "name": "tomato basil soup" },
+        { "amount": "2 slices", "name": "white bread" },
+        { "amount": "2 tbsp", "name": "butter" },
+        { "amount": "40g", "name": "American cheese" },
+        { "amount": "splash", "name": "heavy cream" }
+      ],
+      "steps": [
+        {
+          "name": "Heat soup",
+          "text": "Pour the soup into a saucepan. Stir in a splash of heavy cream and heat until warm."
+        },
+        {
+          "name": "Make sandwich",
+          "text": "Butter the outside of the bread. Place cheese inside. Cook in a pan over medium heat until golden and the cheese is melted."
+        }
+      ],
+      "notes": "Use American cheese for the ultimate melt. It is the best cheese for grilled cheese.",
+      "photo_search": "bowl of tomato soup next to a golden grilled cheese sandwich"
+    },
+    {
+      "id": 155,
+      "name": "Pesto and Tomato Pasta",
+      "slug": "pesto-tomato-pasta",
+      "description": "A vibrant green pesto pasta with burst cherry tomatoes.",
+      "tags": ["Pasta", "Vegetarian", "Quick"],
+      "prep": "5m",
+      "cook": "15m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Pasta",
+      "ingredients": [
+        { "amount": "100g", "name": "pasta" },
+        { "amount": "1/4 cup", "name": "basil pesto" },
+        { "amount": "1 cup", "name": "cherry tomatoes" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "30g", "name": "parmesan, grated" },
+        { "amount": "to taste", "name": "salt, black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Cook pasta",
+          "text": "Boil pasta in salted water until al dente. Reserve a splash of pasta water."
+        },
+        {
+          "name": "Blister tomatoes",
+          "text": "Heat olive oil in a pan. Add tomatoes and cook until they burst, about 5 minutes."
+        },
+        {
+          "name": "Combine",
+          "text": "Toss the pasta with the pesto and tomatoes, adding pasta water to loosen. Top with parmesan."
+        }
+      ],
+      "notes": "Adding a squeeze of lemon juice at the end brightens up the pesto.",
+      "photo_search": "bowl of green pesto pasta with bright red burst cherry tomatoes"
+    },
+    {
+      "id": 156,
+      "name": "Mushroom and Swiss Quesadilla",
+      "slug": "mushroom-swiss-quesadilla",
+      "description": "Earth mushrooms and nutty Swiss cheese melted in a crispy tortilla.",
+      "tags": ["Quick", "Vegetarian", "Comfort"],
+      "prep": "5m",
+      "cook": "10m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Mexican-American",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "1 large", "name": "flour tortilla" },
+        { "amount": "1 cup", "name": "mushrooms, sliced" },
+        { "amount": "40g", "name": "Swiss cheese, shredded" },
+        { "amount": "1 tbsp", "name": "butter" },
+        { "amount": "1 clove", "name": "garlic, minced" }
+      ],
+      "steps": [
+        {
+          "name": "Cook mushrooms",
+          "text": "Melt butter in a pan. Add mushrooms and garlic. Cook until browned and liquid has evaporated."
+        },
+        {
+          "name": "Build and cook",
+          "text": "Place cheese and mushrooms on one half of the tortilla. Fold over. Cook in the same pan for 2-3 minutes per side until golden and the cheese is melted."
+        }
+      ],
+      "notes": "Swiss cheese has a great melting quality and pairs perfectly with mushrooms.",
+      "photo_search": "golden quesadilla cut open to reveal melted Swiss cheese and brown mushrooms"
+    },
+    {
+      "id": 157,
+      "name": "Black Bean and Corn Salsa with Chips",
+      "slug": "black-bean-corn-salsa-chips",
+      "description": "A fresh, zesty salsa with black beans, corn, and lime.",
+      "tags": ["No Cook", "Vegetarian", "Quick"],
+      "prep": "10m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Mexican",
+      "category": "Dip",
+      "ingredients": [
+        { "amount": "1/2 can", "name": "black beans, rinsed" },
+        { "amount": "1/2 cup", "name": "corn (canned, frozen, or fresh)" },
+        { "amount": "1/4", "name": "red onion, finely diced" },
+        { "amount": "1", "name": "jalapeño, minced" },
+        { "amount": "handful", "name": "fresh cilantro, chopped" },
+        { "amount": "1", "name": "lime, juiced" },
+        { "amount": "to taste", "name": "salt" },
+        { "amount": "to serve", "name": "tortilla chips" }
+      ],
+      "steps": [
+        {
+          "name": "Mix",
+          "text": "In a bowl, combine the black beans, corn, red onion, jalapeño, and cilantro."
+        },
+        {
+          "name": "Dress",
+          "text": "Squeeze the lime juice over the top. Season with salt and stir to combine. Serve with tortilla chips."
+        }
+      ],
+      "notes": "This salsa is even better the next day after the flavors have melded.",
+      "photo_search": "bowl of colorful black bean and corn salsa with tortilla chips"
+    },
+    {
+      "id": 158,
+      "name": "Baked Apple with Cinnamon and Walnuts",
+      "slug": "baked-apple-cinnamon-walnuts",
+      "description": "A warm, soft baked apple topped with crunchy walnuts and cinnamon.",
+      "tags": ["Sweet", "Comfort", "Healthy"],
+      "prep": "5m",
+      "cook": "30m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "1 large", "name": "apple (Honeycrisp or Fuji)" },
+        { "amount": "1 tbsp", "name": "butter" },
+        { "amount": "1 tbsp", "name": "brown sugar" },
+        { "amount": "1/2 tsp", "name": "cinnamon" },
+        { "amount": "handful", "name": "walnuts, chopped" },
+        { "amount": "optional", "name": "vanilla ice cream" }
+      ],
+      "steps": [
+        {
+          "name": "Prep apple",
+          "text": "Core the apple, leaving the bottom intact. Place in a baking dish."
+        },
+        {
+          "name": "Stuff and bake",
+          "text": "Fill the center with butter, brown sugar, cinnamon, and walnuts. Bake at 375F/190C for 30 minutes until soft. Serve with ice cream if desired."
+        }
+      ],
+      "notes": "This smells like a pie baking in the oven but is much healthier.",
+      "photo_search": "baked apple split open and filled with melted butter, cinnamon, and walnuts"
+    },
+    {
+      "id": 159,
+      "name": "Tuna and Olive Pasta",
+      "slug": "tuna-olive-pasta",
+      "description": "A salty, briny pasta with tuna, olives, and capers.",
+      "tags": ["Pasta", "Quick", "Protein"],
+      "prep": "5m",
+      "cook": "15m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Pasta",
+      "ingredients": [
+        { "amount": "100g", "name": "spaghetti" },
+        { "amount": "1 can", "name": "tuna in olive oil, drained" },
+        { "amount": "handful", "name": "kalamata olives, pitted" },
+        { "amount": "1 tbsp", "name": "capers" },
+        { "amount": "2 cloves", "name": "garlic, minced" },
+        { "amount": "2 tbsp", "name": "olive oil" },
+        { "amount": "handful", "name": "fresh parsley" }
+      ],
+      "steps": [
+        {
+          "name": "Cook pasta",
+          "text": "Boil spaghetti in salted water until al dente. Reserve a splash of pasta water."
+        },
+        {
+          "name": "Make sauce",
+          "text": "Heat olive oil in a pan. Add garlic and cook for 1 minute. Add tuna, olives, and capers. Cook for 2 minutes to warm through."
+        },
+        {
+          "name": "Combine",
+          "text": "Toss the pasta with the sauce, adding pasta water to loosen. Top with parsley."
+        }
+      ],
+      "notes": "This is a variation of pasta puttanesca with tuna instead of anchovies.",
+      "photo_search": "bowl of spaghetti with tuna, black olives, and capers"
+    },
+    {
+      "id": 160,
+      "name": "Cottage Cheese and Berry Bowl",
+      "slug": "cottage-cheese-berry-bowl",
+      "description": "A simple, high protein bowl of cottage cheese topped with mixed berries.",
+      "tags": ["High Protein", "Sweet", "Quick"],
+      "prep": "2m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Bowl",
+      "ingredients": [
+        { "amount": "1 cup", "name": "full fat cottage cheese" },
+        { "amount": "handful", "name": "mixed berries (strawberries, blueberries, raspberries)" },
+        { "amount": "1 tbsp", "name": "honey" },
+        { "amount": "optional", "name": "granola, chia seeds" }
+      ],
+      "steps": [
+        {
+          "name": "Assemble",
+          "text": "Scoop the cottage cheese into a bowl. Top with berries and drizzle with honey. Add granola for crunch."
+        }
+      ],
+      "notes": "Using full fat cottage cheese makes this feel rich and creamy.",
+      "photo_search": "bowl of cottage cheese topped with mixed berries and honey"
+    },
+    {
+      "id": 161,
+      "name": "Brie and Cranberry Sauce Toast",
+      "slug": "brie-cranberry-sauce-toast",
+      "description": "Creamy brie melted on toast with sweet and tart cranberry sauce.",
+      "tags": ["Toast", "Sweet-Savory", "Quick"],
+      "prep": "3m",
+      "cook": "3m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "2 slices", "name": "sourdough, toasted" },
+        { "amount": "40g", "name": "brie, sliced" },
+        { "amount": "2 tbsp", "name": "cranberry sauce (canned or homemade)" },
+        { "amount": "pinch", "name": "flaky sea salt" }
+      ],
+      "steps": [
+        {
+          "name": "Assemble",
+          "text": "Place brie slices on the toast. Top with cranberry sauce."
+        },
+        {
+          "name": "Melt",
+          "text": "Place under the broiler for 1-2 minutes until the brie is just melted. Sprinkle with flaky salt."
+        }
+      ],
+      "notes": "This is the perfect way to use up leftover cranberry sauce from Thanksgiving.",
+      "photo_search": "toasted sourdough with melted brie and red cranberry sauce"
+    },
+    {
+      "id": 162,
+      "name": "Avocado and Black Bean Quesadilla",
+      "slug": "avocado-black-bean-quesadilla",
+      "description": "A hearty vegetarian quesadilla with mashed avocado and black beans.",
+      "tags": ["Vegetarian", "Quick", "Filling"],
+      "prep": "5m",
+      "cook": "5m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Mexican-American",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "1 large", "name": "flour tortilla" },
+        { "amount": "1/2", "name": "avocado, mashed" },
+        { "amount": "1/4 can", "name": "black beans, drained" },
+        { "amount": "40g", "name": "Monterey Jack cheese, shredded" },
+        { "amount": "1 tsp", "name": "cumin" },
+        { "amount": "to serve", "name": "salsa, sour cream" }
+      ],
+      "steps": [
+        {
+          "name": "Build",
+          "text": "Spread mashed avocado on one half of the tortilla. Top with black beans, cumin, and cheese. Fold over."
+        },
+        {
+          "name": "Cook",
+          "text": "Cook in a dry pan over medium heat for 2-3 minutes per side until golden and the cheese is melted. Serve with salsa and sour cream."
+        }
+      ],
+      "notes": "Mashing the avocado first ensures it stays inside the quesadilla when you flip it.",
+      "photo_search": "golden quesadilla cut open to reveal avocado, black beans, and melted cheese"
+    },
+    {
+      "id": 163,
+      "name": "Spicy Peanut Noodles with Cucumber",
+      "slug": "spicy-peanut-noodles-cucumber",
+      "description": "Cold noodles in a spicy peanut sauce with crisp cucumber ribbons.",
+      "tags": ["Noodles", "Spicy", "Quick"],
+      "prep": "5m",
+      "cook": "10m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Asian-Inspired",
+      "category": "Noodles",
+      "ingredients": [
+        { "amount": "100g", "name": "soba or ramen noodles" },
+        { "amount": "2 tbsp", "name": "peanut butter" },
+        { "amount": "1 tbsp", "name": "soy sauce" },
+        { "amount": "1 tbsp", "name": "rice vinegar" },
+        { "amount": "1 tsp", "name": "sesame oil" },
+        { "amount": "1 tsp", "name": "sriracha" },
+        { "amount": "1/2", "name": "cucumber, shaved into ribbons" },
+        { "amount": "to garnish", "name": "sesame seeds, spring onion" }
+      ],
+      "steps": [
+        {
+          "name": "Cook noodles",
+          "text": "Boil noodles according to package. Drain and rinse under cold water."
+        },
+        {
+          "name": "Make sauce",
+          "text": "Whisk peanut butter, soy sauce, rice vinegar, sesame oil, and sriracha. Thin with warm water until pourable."
+        },
+        {
+          "name": "Toss",
+          "text": "Toss the cold noodles with the sauce. Top with cucumber ribbons, sesame seeds, and spring onions."
+        }
+      ],
+      "notes": "The crisp cucumber cools down the spicy peanut sauce perfectly.",
+      "photo_search": "bowl of cold noodles in spicy peanut sauce with cucumber ribbons"
+    },
+    {
+      "id": 164,
+      "name": "Tomato and Mozzarella Panini",
+      "slug": "tomato-mozzarella-panini",
+      "description": "A warm, pressed sandwich with melted mozzarella and ripe tomatoes.",
+      "tags": ["Quick", "Comfort", "Sandwich"],
+      "prep": "3m",
+      "cook": "5m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "2 slices", "name": "crusty bread" },
+        { "amount": "40g", "name": "fresh mozzarella, sliced" },
+        { "amount": "handful", "name": "cherry tomatoes, sliced" },
+        { "amount": "handful", "name": "fresh basil" },
+        { "amount": "1 tbsp", "name": "butter" },
+        { "amount": "to serve", "name": "balsamic glaze" }
+      ],
+      "steps": [
+        {
+          "name": "Build",
+          "text": "Butter the outside of the bread. Place mozzarella, tomatoes, and basil between the unbuttered sides."
+        },
+        {
+          "name": "Press",
+          "text": "Cook in a pan over medium heat, pressing down with a spatula or heavy lid, for 3-4 minutes per side until golden and the cheese is melted. Drizzle with balsamic glaze."
+        }
+      ],
+      "notes": "If you do not have a panini press, a heavy pan on top of the sandwich works perfectly.",
+      "photo_search": "golden pressed panini cut in half, showing melted mozzarella and tomatoes"
+    },
+    {
+      "id": 165,
+      "name": "Hummus and Roasted Red Pepper Wrap",
+      "slug": "hummus-roasted-red-pepper-wrap",
+      "description": "A quick vegetarian wrap with creamy hummus and tangy roasted red peppers.",
+      "tags": ["No Cook", "Vegetarian", "Quick"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Mediterranean",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "1", "name": "large flour tortilla" },
+        { "amount": "1/4 cup", "name": "hummus" },
+        { "amount": "handful", "name": "roasted red peppers from a jar, sliced" },
+        { "amount": "handful", "name": "arugula or spinach" },
+        { "amount": "1 tbsp", "name": "feta cheese, crumbled" }
+      ],
+      "steps": [
+        {
+          "name": "Build",
+          "text": "Spread the hummus over the tortilla. Top with roasted red peppers, greens, and feta."
+        },
+        {
+          "name": "Roll",
+          "text": "Roll the tortilla up tightly. Slice in half."
+        }
+      ],
+      "notes": "You can toast this in a pan for a minute per side to make it warm and crispy.",
+      "photo_search": "cut wrap showing hummus, roasted red peppers, and greens"
+    },
+    {
+      "id": 166,
+      "name": "Baked Potato with Chili",
+      "slug": "baked-potato-chili",
+      "description": "A classic loaded baked potato topped with warm chili and cheese.",
+      "tags": ["Comfort", "Filling", "Classic"],
+      "prep": "5m",
+      "cook": "50m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "1 large", "name": "russet potato" },
+        { "amount": "1/2 cup", "name": "leftover or canned chili" },
+        { "amount": "40g", "name": "sharp cheddar, shredded" },
+        { "amount": "2 tbsp", "name": "sour cream" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "to taste", "name": "salt, black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Bake potato",
+          "text": "Rub the potato with olive oil and salt. Pierce with a fork. Bake at 425F/220C for 45-50 minutes until soft."
+        },
+        {
+          "name": "Heat chili",
+          "text": "Warm the chili in a saucepan."
+        },
+        {
+          "name": "Load",
+          "text": "Split the potato open. Top with warm chili, cheddar, sour cream, and black pepper."
+        }
+      ],
+      "notes": "This is a great way to use up leftover chili. The potato acts as an edible bowl.",
+      "photo_search": "baked potato split open and loaded with chili, cheese, and sour cream"
+    },
+    {
+      "id": 167,
+      "name": "Cantaloupe and Prosciutto Plate",
+      "slug": "cantaloupe-prosciutto-plate",
+      "description": "Sweet cantaloupe wrapped in salty prosciutto with a balsamic drizzle.",
+      "tags": ["No Cook", "Fancy", "Quick"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "1/4", "name": "cantaloupe, sliced" },
+        { "amount": "3 slices", "name": "prosciutto" },
+        { "amount": "drizzle", "name": "balsamic glaze" },
+        { "amount": "handful", "name": "fresh mint" }
+      ],
+      "steps": [
+        {
+          "name": "Wrap",
+          "text": "Wrap each cantaloupe slice with a piece of prosciutto. Arrange on a plate."
+        },
+        {
+          "name": "Dress",
+          "text": "Drizzle with balsamic glaze and garnish with fresh mint."
+        }
+      ],
+      "notes": "Make sure the cantaloupe is ripe and sweet for the best flavor contrast.",
+      "photo_search": "plate of cantaloupe wrapped in prosciutto with balsamic glaze and mint"
+    },
+    {
+      "id": 168,
+      "name": "Cheese and Crackers with Apple",
+      "slug": "cheese-crackers-apple",
+      "description": "A simple, classic snack plate with cheese, crackers, and crisp apple.",
+      "tags": ["No Cook", "Classic", "Quick"],
+      "prep": "3m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "40g", "name": "sharp cheddar, sliced" },
+        { "amount": "handful", "name": "crackers" },
+        { "amount": "1/2", "name": "crisp apple, sliced" },
+        { "amount": "optional", "name": "honey, mustard" }
+      ],
+      "steps": [
+        {
+          "name": "Plate",
+          "text": "Arrange the cheese, crackers, and apple slices on a plate. Drizzle with honey or add mustard if desired."
+        }
+      ],
+      "notes": "The combination of sharp cheese and sweet apple is timeless.",
+      "photo_search": "plate of cheddar slices, crackers, and apple slices"
+    },
+    {
+      "id": 169,
+      "name": "Tofu Scramble with Spinach",
+      "slug": "tofu-scramble-spinach",
+      "description": "A vegan alternative to scrambled eggs, with soft tofu and wilted spinach.",
+      "tags": ["Vegan", "Healthy", "Quick"],
+      "prep": "5m",
+      "cook": "10m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Vegan",
+      "category": "Eggs",
+      "ingredients": [
+        { "amount": "1/2 block", "name": "soft tofu" },
+        { "amount": "1 handful", "name": "baby spinach" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "1/2 tsp", "name": "turmeric" },
+        { "amount": "1 tbsp", "name": "nutritional yeast" },
+        { "amount": "1 tsp", "name": "soy sauce" },
+        { "amount": "to taste", "name": "salt, black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Cook",
+          "text": "Heat olive oil in a pan. Crumble the tofu into the pan. Add turmeric, nutritional yeast, and soy sauce. Cook for 3-4 minutes."
+        },
+        {
+          "name": "Add spinach",
+          "text": "Stir in the spinach and cook until wilted, about 1 minute. Season with salt and pepper."
+        }
+      ],
+      "notes": "The turmeric gives it a yellow color, and the nutritional yeast adds a cheesy flavor.",
+      "photo_search": "plate of yellow tofu scramble with wilted spinach"
+    },
+    {
+      "id": 170,
+      "name": "Smoked Salmon and Cream Cheese Bagel",
+      "slug": "smoked-salmon-cream-cheese-bagel",
+      "description": "The classic deli bagel with smoked salmon, cream cheese, and capers.",
+      "tags": ["Salmon", "Classic", "Quick"],
+      "prep": "5m",
+      "cook": "3m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Sandwich",
+      "ingredients": [
+        { "amount": "1", "name": "everything bagel" },
+        { "amount": "2 tbsp", "name": "cream cheese" },
+        { "amount": "60g", "name": "smoked salmon" },
+        { "amount": "1 tbsp", "name": "capers" },
+        { "amount": "1/4", "name": "red onion, thinly sliced" },
+        { "amount": "optional", "name": "fresh dill, tomato slices" }
+      ],
+      "steps": [
+        {
+          "name": "Toast",
+          "text": "Slice and toast the bagel."
+        },
+        {
+          "name": "Build",
+          "text": "Spread cream cheese on both halves. Top with smoked salmon, capers, red onion, dill, and tomato."
+        }
+      ],
+      "notes": "Using an everything bagel means you do not need any extra seasoning.",
+      "photo_search": "toasted everything bagel with cream cheese, smoked salmon, and capers"
+    },
+    {
+      "id": 171,
+      "name": "Cheddar and Chive Biscuits",
+      "slug": "cheddar-chive-biscuits",
+      "description": "Warm, flaky biscuits studded with sharp cheddar and fresh chives.",
+      "tags": ["Comfort", "Baked", "Quick"],
+      "prep": "10m",
+      "cook": "15m",
+      "serves": "1",
+      "difficulty": "Mid",
+      "cuisine": "American",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "1 cup", "name": "flour" },
+        { "amount": "1 tbsp", "name": "baking powder" },
+        { "amount": "1/4 tsp", "name": "salt" },
+        { "amount": "1/4 cup", "name": "cold butter, cubed" },
+        { "amount": "1/2 cup", "name": "milk" },
+        { "amount": "40g", "name": "sharp cheddar, shredded" },
+        { "amount": "handful", "name": "fresh chives, chopped" }
+      ],
+      "steps": [
+        {
+          "name": "Mix dry",
+          "text": "In a bowl, whisk together flour, baking powder, and salt. Cut in the cold butter until it resembles coarse crumbs."
+        },
+        {
+          "name": "Add wet",
+          "text": "Stir in the milk, cheddar, and chives until just combined."
+        },
+        {
+          "name": "Bake",
+          "text": "Drop spoonfuls onto a baking sheet. Bake at 400F/200C for 12-15 minutes until golden."
+        }
+      ],
+      "notes": "Do not overmix the dough or the biscuits will be tough.",
+      "photo_search": "basket of warm golden cheddar and chive biscuits"
+    },
+    {
+      "id": 172,
+      "name": "Tuna and Olive Tapenade Toast",
+      "slug": "tuna-olive-tapenade-toast",
+      "description": "Toasted bread topped with tuna and a salty olive tapenade.",
+      "tags": ["Toast", "No Cook", "Protein"],
+      "prep": "5m",
+      "cook": "2m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "French",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "2 slices", "name": "crusty bread" },
+        { "amount": "1 can", "name": "tuna, drained" },
+        { "amount": "2 tbsp", "name": "olive tapenade" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "squeeze", "name": "lemon juice" },
+        { "amount": "optional", "name": "fresh parsley" }
+      ],
+      "steps": [
+        {
+          "name": "Mix",
+          "text": "In a bowl, mix the drained tuna with olive oil and lemon juice."
+        },
+        {
+          "name": "Assemble",
+          "text": "Toast the bread. Spread with olive tapenade. Top with the tuna mixture and parsley."
+        }
+      ],
+      "notes": "Olive tapenade is a briny paste made from olives, capers, and anchovies. It is a pantry staple.",
+      "photo_search": "toasted crusty bread topped with tuna and dark olive tapenade"
+    },
+    {
+      "id": 173,
+      "name": "Burrata and Tomato Pasta",
+      "slug": "burrata-tomato-pasta",
+      "description": "Hot pasta tossed with burst tomatoes, topped with a ball of creamy burrata.",
+      "tags": ["Pasta", "Fancy", "Vegetarian"],
+      "prep": "5m",
+      "cook": "15m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Pasta",
+      "ingredients": [
+        { "amount": "100g", "name": "pasta" },
+        { "amount": "1 cup", "name": "cherry tomatoes" },
+        { "amount": "1 ball", "name": "fresh burrata" },
+        { "amount": "2 tbsp", "name": "olive oil" },
+        { "amount": "2 cloves", "name": "garlic, minced" },
+        { "amount": "handful", "name": "fresh basil" },
+        { "amount": "to taste", "name": "salt, chilli flakes" }
+      ],
+      "steps": [
+        {
+          "name": "Cook pasta",
+          "text": "Boil pasta in salted water until al dente."
+        },
+        {
+          "name": "Blister tomatoes",
+          "text": "Heat olive oil in a pan. Add garlic and tomatoes. Cook until tomatoes burst, about 5 minutes."
+        },
+        {
+          "name": "Combine",
+          "text": "Toss the pasta with the tomatoes. Place in a bowl. Tear the burrata over the top. Add basil, salt, and chilli flakes."
+        }
+      ],
+      "notes": "The heat from the pasta will soften the burrata, creating a rich sauce.",
+      "photo_search": "bowl of pasta with burst tomatoes and a ball of creamy burrata on top"
+    },
+    {
+      "id": 174,
+      "name": "Cottage Cheese and Tomato Plate",
+      "slug": "cottage-cheese-tomato-plate",
+      "description": "A cool, creamy plate of cottage cheese with juicy tomato slices.",
+      "tags": ["No Cook", "High Protein", "Quick"],
+      "prep": "3m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "1 cup", "name": "full fat cottage cheese" },
+        { "amount": "1 large", "name": "ripe tomato, sliced" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "1 tsp", "name": "dried oregano" },
+        { "amount": "to taste", "name": "flaky sea salt, black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Plate",
+          "text": "Scoop the cottage cheese onto a plate. Arrange the tomato slices around it. Drizzle with olive oil and sprinkle with oregano, salt, and pepper."
+        }
+      ],
+      "notes": "Use the best tomatoes you can find. This is all about simple, fresh ingredients.",
+      "photo_search": "plate of cottage cheese with sliced tomatoes, olive oil, and oregano"
+    },
+    {
+      "id": 175,
+      "name": "Peanut Butter and Banana Toast",
+      "slug": "peanut-butter-banana-toast",
+      "description": "A classic, energy boosting toast with peanut butter and banana slices.",
+      "tags": ["Toast", "Sweet", "Quick"],
+      "prep": "3m",
+      "cook": "2m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "2 slices", "name": "whole wheat bread, toasted" },
+        { "amount": "2 tbsp", "name": "peanut butter" },
+        { "amount": "1", "name": "banana, sliced" },
+        { "amount": "1 tsp", "name": "honey" },
+        { "amount": "pinch", "name": "cinnamon" }
+      ],
+      "steps": [
+        {
+          "name": "Spread",
+          "text": "Spread peanut butter on the toast. Top with banana slices. Drizzle with honey and sprinkle with cinnamon."
+        }
+      ],
+      "notes": "This is a great pre or post workout meal.",
+      "photo_search": "toasted whole wheat bread with peanut butter, banana slices, and honey"
+    },
+    {
+      "id": 176,
+      "name": "Spinach and Feta Scramble",
+      "slug": "spinach-feta-scramble",
+      "description": "Fluffy scrambled eggs with wilted spinach and salty feta.",
+      "tags": ["Eggs", "Quick", "Comfort"],
+      "prep": "5m",
+      "cook": "8m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Greek-Inspired",
+      "category": "Eggs",
+      "ingredients": [
+        { "amount": "3 large", "name": "eggs" },
+        { "amount": "1 handful", "name": "baby spinach" },
+        { "amount": "30g", "name": "feta cheese, crumbled" },
+        { "amount": "1 tbsp", "name": "butter" },
+        { "amount": "to taste", "name": "salt, black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Whisk",
+          "text": "Whisk the eggs with a pinch of salt."
+        },
+        {
+          "name": "Cook",
+          "text": "Melt butter in a pan over low heat. Pour in the eggs. Stir constantly with a spatula. When almost set, fold in the spinach and feta."
+        }
+      ],
+      "notes": "Cooking the eggs low and slow makes them incredibly creamy.",
+      "photo_search": "plate of creamy scrambled eggs with spinach and feta"
+    },
+    {
+      "id": 177,
+      "name": "Mushroom and Spinach Quesadilla",
+      "slug": "mushroom-spinach-quesadilla",
+      "description": "A vegetarian quesadilla filled with earthy mushrooms, spinach, and cheese.",
+      "tags": ["Vegetarian", "Quick", "Comfort"],
+      "prep": "5m",
+      "cook": "10m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Mexican-American",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "1 large", "name": "flour tortilla" },
+        { "amount": "1 cup", "name": "mushrooms, sliced" },
+        { "amount": "1 handful", "name": "baby spinach" },
+        { "amount": "40g", "name": "Monterey Jack cheese, shredded" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "1 clove", "name": "garlic, minced" }
+      ],
+      "steps": [
+        {
+          "name": "Cook filling",
+          "text": "Heat oil in a pan. Add mushrooms and cook until browned. Add garlic and spinach. Cook until spinach wilts."
+        },
+        {
+          "name": "Build and cook",
+          "text": "Place cheese and the mushroom mixture on one half of the tortilla. Fold over. Cook in the pan for 2-3 minutes per side until golden."
+        }
+      ],
+      "notes": "Make sure to drain any excess liquid from the filling so the quesadilla does not get soggy.",
+      "photo_search": "golden quesadilla cut open to reveal mushrooms, spinach, and melted cheese"
+    },
+    {
+      "id": 178,
+      "name": "Tinned Sardines with Lemon and Crackers",
+      "slug": "tinned-sardines-lemon-crackers",
+      "description": "High quality sardines served with lemon wedges and crisp crackers.",
+      "tags": ["Tinned Fish", "No Cook", "Fancy"],
+      "prep": "2m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "European",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "1 tin", "name": "quality sardines in olive oil" },
+        { "amount": "handful", "name": "rustic crackers" },
+        { "amount": "1/2", "name": "lemon, cut into wedges" },
+        { "amount": "to taste", "name": "flaky sea salt, black pepper" },
+        { "amount": "optional", "name": "hot sauce, fresh parsley" }
+      ],
+      "steps": [
+        {
+          "name": "Plate",
+          "text": "Arrange the sardines on a plate with the crackers and lemon wedges. Season with flaky salt and pepper."
+        }
+      ],
+      "notes": "Invest in good quality sardines. They are a completely different experience than cheap ones.",
+      "photo_search": "plate of tinned sardines with lemon wedges and rustic crackers"
+    },
+    {
+      "id": 179,
+      "name": "Avocado and Egg Toast",
+      "slug": "avocado-egg-toast",
+      "description": "Mashed avocado on toast, topped with a fried or poached egg.",
+      "tags": ["Toast", "Eggs", "Quick"],
+      "prep": "5m",
+      "cook": "5m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "2 slices", "name": "sourdough, toasted" },
+        { "amount": "1/2", "name": "ripe avocado" },
+        { "amount": "2", "name": "eggs" },
+        { "amount": "1 tbsp", "name": "butter or oil" },
+        { "amount": "squeeze", "name": "lemon juice" },
+        { "amount": "to taste", "name": "flaky salt, chilli flakes" }
+      ],
+      "steps": [
+        {
+          "name": "Mash",
+          "text": "Mash the avocado onto the toast. Squeeze with lemon juice."
+        },
+        {
+          "name": "Fry eggs",
+          "text": "Heat butter in a pan. Fry the eggs until the whites are set and the yolks are runny."
+        },
+        {
+          "name": "Top",
+          "text": "Place the eggs on top of the avocado toast. Sprinkle with flaky salt and chilli flakes."
+        }
+      ],
+      "notes": "The runny yolk mixing with the avocado is the best part.",
+      "photo_search": "sourdough toast with avocado and fried eggs with runny yolks"
+    },
+    {
+      "id": 180,
+      "name": "Mozzarella and Tomato Skewers",
+      "slug": "mozzarella-tomato-skewers",
+      "description": "Caprese salad on a stick. Fresh mozzarella, tomatoes, and basil.",
+      "tags": ["No Cook", "Fancy", "Quick"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "handful", "name": "bocconcini (small mozzarella balls)" },
+        { "amount": "handful", "name": "cherry tomatoes" },
+        { "amount": "handful", "name": "fresh basil leaves" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "1 tbsp", "name": "balsamic glaze" },
+        { "amount": "to taste", "name": "flaky sea salt, black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Thread",
+          "text": "Thread the mozzarella, tomatoes, and basil onto small skewers. Drizzle with olive oil and balsamic glaze. Season."
+        }
+      ],
+      "notes": "These are perfect for eating while standing in the kitchen.",
+      "photo_search": "small skewers with mozzarella balls, cherry tomatoes, and basil"
+    },
+    {
+      "id": 181,
+      "name": "Cheddar and Broccoli Baked Potato",
+      "slug": "cheddar-broccoli-baked-potato",
+      "description": "A classic baked potato loaded with steamed broccoli and melted cheddar.",
+      "tags": ["Comfort", "Filling", "Classic"],
+      "prep": "5m",
+      "cook": "50m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "1 large", "name": "russet potato" },
+        { "amount": "1 cup", "name": "broccoli florets" },
+        { "amount": "40g", "name": "sharp cheddar, shredded" },
+        { "amount": "2 tbsp", "name": "sour cream" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "to taste", "name": "salt, black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Bake potato",
+          "text": "Rub the potato with oil and salt. Pierce with a fork. Bake at 425F/220C for 45-50 minutes until soft."
+        },
+        {
+          "name": "Steam broccoli",
+          "text": "Steam the broccoli until tender, about 4-5 minutes."
+        },
+        {
+          "name": "Load",
+          "text": "Split the potato open. Top with broccoli, cheddar, sour cream, and black pepper."
+        }
+      ],
+      "notes": "The heat from the potato will melt the cheese perfectly.",
+      "photo_search": "baked potato split open and loaded with broccoli, cheddar, and sour cream"
+    },
+    {
+      "id": 182,
+      "name": "Pesto and Mozzarella Panini",
+      "slug": "pesto-mozzarella-panini",
+      "description": "A warm, pressed sandwich with pesto, fresh mozzarella, and tomatoes.",
+      "tags": ["Quick", "Comfort", "Sandwich"],
+      "prep": "3m",
+      "cook": "5m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "2 slices", "name": "crusty bread" },
+        { "amount": "2 tbsp", "name": "basil pesto" },
+        { "amount": "40g", "name": "fresh mozzarella, sliced" },
+        { "amount": "handful", "name": "cherry tomatoes, sliced" },
+        { "amount": "1 tbsp", "name": "butter" }
+      ],
+      "steps": [
+        {
+          "name": "Build",
+          "text": "Butter the outside of the bread. Spread pesto on the inside. Top with mozzarella and tomatoes."
+        },
+        {
+          "name": "Press",
+          "text": "Cook in a pan over medium heat, pressing down with a heavy lid, for 3-4 minutes per side until golden and the cheese is melted."
+        }
+      ],
+      "notes": "Using a panini press is ideal, but a heavy pan works fine.",
+      "photo_search": "golden pressed panini with melted mozzarella, pesto, and tomatoes"
+    },
+    {
+      "id": 183,
+      "name": "Cottage Cheese and Pineapple Bowl",
+      "slug": "cottage-cheese-pineapple-bowl",
+      "description": "A retro, sweet and savory bowl of cottage cheese with pineapple chunks.",
+      "tags": ["High Protein", "Sweet", "Quick"],
+      "prep": "3m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Bowl",
+      "ingredients": [
+        { "amount": "1 cup", "name": "full fat cottage cheese" },
+        { "amount": "1/2 cup", "name": "pineapple chunks (fresh or canned)" },
+        { "amount": "1 tbsp", "name": "honey" },
+        { "amount": "optional", "name": "toasted coconut flakes" }
+      ],
+      "steps": [
+        {
+          "name": "Assemble",
+          "text": "Scoop the cottage cheese into a bowl. Top with pineapple chunks and drizzle with honey. Add coconut flakes if using."
+        }
+      ],
+      "notes": "This is a retro diet classic for a reason. It is refreshing and satisfying.",
+      "photo_search": "bowl of cottage cheese with pineapple chunks and honey"
+    },
+    {
+      "id": 184,
+      "name": "Tuna and Sweet Corn Salad",
+      "slug": "tuna-sweet-corn-salad",
+      "description": "A quick, protein packed salad with tuna, sweet corn, and red onion.",
+      "tags": ["No Cook", "High Protein", "Quick"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "British",
+      "category": "Salad",
+      "ingredients": [
+        { "amount": "1 can", "name": "tuna, drained" },
+        { "amount": "1/2 cup", "name": "canned sweet corn, drained" },
+        { "amount": "1/4", "name": "red onion, finely diced" },
+        { "amount": "2 tbsp", "name": "mayonnaise" },
+        { "amount": "1 tsp", "name": "dijon mustard" },
+        { "amount": "squeeze", "name": "lemon juice" },
+        { "amount": "to taste", "name": "salt, black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Mix",
+          "text": "In a bowl, combine the tuna, sweet corn, and red onion."
+        },
+        {
+          "name": "Dress",
+          "text": "Mix in the mayonnaise, dijon, and lemon juice. Season with salt and pepper."
+        }
+      ],
+      "notes": "This is a classic British baked potato topping, but it is great on its own.",
+      "photo_search": "bowl of tuna and sweet corn salad with mayonnaise"
+    },
+    {
+      "id": 185,
+      "name": "Baked Ricotta with Honey and Thyme",
+      "slug": "baked-ricotta-honey-thyme",
+      "description": "A warm, golden baked ricotta round drizzled with honey and thyme.",
+      "tags": ["Fancy", "Cheese", "Warm"],
+      "prep": "2m",
+      "cook": "20m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "1 cup", "name": "ricotta cheese" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "2 tbsp", "name": "honey" },
+        { "amount": "1 tsp", "name": "fresh thyme leaves" },
+        { "amount": "to taste", "name": "flaky sea salt, black pepper" },
+        { "amount": "to serve", "name": "crackers or crusty bread" }
+      ],
+      "steps": [
+        {
+          "name": "Bake",
+          "text": "Preheat oven to 375F/190C. Place the ricotta in a small baking dish. Drizzle with olive oil. Bake for 20 minutes until golden on top."
+        },
+        {
+          "name": "Dress",
+          "text": "Remove from oven. Drizzle with honey and sprinkle with thyme, salt, and pepper. Serve with crackers."
+        }
+      ],
+      "notes": "Baking ricotta changes its texture completely. It becomes warm and slightly firm.",
+      "photo_search": "small baking dish with golden baked ricotta drizzled with honey and thyme"
+    },
+    {
+      "id": 186,
+      "name": "Avocado and Black Bean Salad",
+      "slug": "avocado-black-bean-salad",
+      "description": "A fresh, zesty salad with avocado, black beans, and lime dressing.",
+      "tags": ["No Cook", "Vegetarian", "Healthy"],
+      "prep": "10m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Mexican-Inspired",
+      "category": "Salad",
+      "ingredients": [
+        { "amount": "1", "name": "avocado, diced" },
+        { "amount": "1/2 can", "name": "black beans, rinsed" },
+        { "amount": "1/4", "name": "red onion, finely diced" },
+        { "amount": "handful", "name": "fresh cilantro, chopped" },
+        { "amount": "1", "name": "lime, juiced" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "to taste", "name": "salt, black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Combine",
+          "text": "In a bowl, gently combine the avocado, black beans, red onion, and cilantro."
+        },
+        {
+          "name": "Dress",
+          "text": "Drizzle with lime juice and olive oil. Season with salt and pepper. Toss gently to avoid mashing the avocado."
+        }
+      ],
+      "notes": "This is great on its own, or scoop it up with tortilla chips.",
+      "photo_search": "bowl of diced avocado, black beans, red onion, and cilantro"
+    },
+    {
+      "id": 187,
+      "name": "Spicy Tuna and Avocado Bowl",
+      "slug": "spicy-tuna-avocado-bowl",
+      "description": "Diced tuna in spicy mayo over a bed of rice with avocado.",
+      "tags": ["Japanese", "Spicy", "Bowl"],
+      "prep": "10m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Japanese-Inspired",
+      "category": "Bowl",
+      "ingredients": [
+        { "amount": "1 cup", "name": "cooked sushi rice" },
+        { "amount": "100g", "name": "sushi grade tuna, diced" },
+        { "amount": "1/2", "name": "avocado, sliced" },
+        { "amount": "1 tbsp", "name": "soy sauce" },
+        { "amount": "1 tbsp", "name": "sriracha mayo" },
+        { "amount": "1 tsp", "name": "sesame oil" },
+        { "amount": "to garnish", "name": "sesame seeds, spring onion" }
+      ],
+      "steps": [
+        {
+          "name": "Season tuna",
+          "text": "In a bowl, toss the diced tuna with soy sauce, sriracha mayo, and sesame oil."
+        },
+        {
+          "name": "Assemble",
+          "text": "Place the rice in a bowl. Top with the spicy tuna and avocado slices. Garnish with sesame seeds and spring onions."
+        }
+      ],
+      "notes": "Make sure the rice is seasoned with a little rice vinegar for authentic flavor.",
+      "photo_search": "bowl of rice topped with spicy diced tuna, avocado, and sesame seeds"
+    },
+    {
+      "id": 188,
+      "name": "Mushroom and Thyme Omelette",
+      "slug": "mushroom-thyme-omelette",
+      "description": "A fluffy folded omelette filled with savory mushrooms and thyme.",
+      "tags": ["Eggs", "Quick", "Comfort"],
+      "prep": "5m",
+      "cook": "10m",
+      "serves": "1",
+      "difficulty": "Mid",
+      "cuisine": "French",
+      "category": "Eggs",
+      "ingredients": [
+        { "amount": "3 large", "name": "eggs" },
+        { "amount": "1 cup", "name": "mushrooms, sliced" },
+        { "amount": "1 tsp", "name": "fresh thyme leaves" },
+        { "amount": "1 tbsp", "name": "butter" },
+        { "amount": "30g", "name": "gruyere or swiss cheese, shredded" },
+        { "amount": "to taste", "name": "salt, black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Cook mushrooms",
+          "text": "Melt half the butter in a pan. Add mushrooms and thyme. Cook until browned. Set aside."
+        },
+        {
+          "name": "Make omelette",
+          "text": "Whisk the eggs with salt and pepper. Melt the rest of the butter in the pan. Pour in the eggs. When the edges set, add the mushrooms and cheese. Fold over and serve."
+        }
+      ],
+      "notes": "Cook the omelette over medium-low heat for a soft, creamy texture.",
+      "photo_search": "folded omelette on a plate, filled with brown mushrooms and melted cheese"
+    },
+    {
+      "id": 189,
+      "name": "Caprese Stuffed Portobello",
+      "slug": "caprese-stuffed-portobello",
+      "description": "A large portobello mushroom cap baked with mozzarella and tomatoes.",
+      "tags": ["Vegetarian", "Fancy", "Baked"],
+      "prep": "5m",
+      "cook": "15m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "1 large", "name": "portobello mushroom cap" },
+        { "amount": "40g", "name": "fresh mozzarella, torn" },
+        { "amount": "handful", "name": "cherry tomatoes, halved" },
+        { "amount": "handful", "name": "fresh basil" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "1 tbsp", "name": "balsamic glaze" },
+        { "amount": "to taste", "name": "salt, black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Prep",
+          "text": "Preheat oven to 400F/200C. Brush the mushroom cap with olive oil and season with salt."
+        },
+        {
+          "name": "Stuff and bake",
+          "text": "Place the mozzarella and tomatoes inside the mushroom cap. Bake for 12-15 minutes until the mushroom is tender and the cheese is melted."
+        },
+        {
+          "name": "Finish",
+          "text": "Top with fresh basil and a drizzle of balsamic glaze."
+        }
+      ],
+      "notes": "Remove the gills from the mushroom cap to make more room for the filling.",
+      "photo_search": "baked portobello mushroom cap stuffed with melted mozzarella and tomatoes"
+    },
+    {
+      "id": 190,
+      "name": "Tuna and White Bean Bruschetta",
+      "slug": "tuna-white-bean-bruschetta",
+      "description": "Toasted bread topped with a Tuscan style tuna and white bean salad.",
+      "tags": ["Italian", "Protein", "Quick"],
+      "prep": "5m",
+      "cook": "5m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "2 slices", "name": "crusty bread" },
+        { "amount": "1 can", "name": "tuna in olive oil, drained" },
+        { "amount": "1/2 can", "name": "cannellini beans, rinsed" },
+        { "amount": "1 tbsp", "name": "red onion, finely diced" },
+        { "amount": "1 tbsp", "name": "red wine vinegar" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "handful", "name": "fresh parsley" }
+      ],
+      "steps": [
+        {
+          "name": "Make topping",
+          "text": "In a bowl, combine tuna, beans, red onion, vinegar, olive oil, and parsley. Season with salt and pepper."
+        },
+        {
+          "name": "Toast",
+          "text": "Toast the bread until golden. Spoon the tuna mixture generously over the top."
+        }
+      ],
+      "notes": "Using tuna packed in olive oil is essential for the authentic Tuscan flavor.",
+      "photo_search": "toasted crusty bread topped with tuna, white beans, and parsley"
+    },
+    {
+      "id": 191,
+      "name": "Spicy Peanut Butter Noodles",
+      "slug": "spicy-peanut-butter-noodles",
+      "description": "A 15 minute noodle dish with a creamy, spicy peanut butter sauce.",
+      "tags": ["Noodles", "Spicy", "Quick"],
+      "prep": "5m",
+      "cook": "10m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Asian-Inspired",
+      "category": "Noodles",
+      "ingredients": [
+        { "amount": "100g", "name": "ramen or soba noodles" },
+        { "amount": "3 tbsp", "name": "peanut butter" },
+        { "amount": "2 tbsp", "name": "soy sauce" },
+        { "amount": "1 tbsp", "name": "rice vinegar" },
+        { "amount": "1 tbsp", "name": "sugar or honey" },
+        { "amount": "1 tbsp", "name": "sriracha" },
+        { "amount": "1 tbsp", "name": "oil" },
+        { "amount": "to garnish", "name": "spring onion, sesame seeds" }
+      ],
+      "steps": [
+        {
+          "name": "Cook noodles",
+          "text": "Boil noodles according to package. Drain."
+        },
+        {
+          "name": "Make sauce",
+          "text": "In a bowl, whisk peanut butter, soy sauce, rice vinegar, sugar, and sriracha. Thin with warm water until pourable."
+        },
+        {
+          "name": "Toss",
+          "text": "Toss the hot noodles in the sauce. Top with spring onions and sesame seeds."
+        }
+      ],
+      "notes": "Natural peanut butter works best. Adjust the sriracha to your spice preference.",
+      "photo_search": "bowl of noodles in a dark, spicy peanut sauce with sesame seeds"
+    },
+    {
+      "id": 192,
+      "name": "Caprese Salad with Balsamic Glaze",
+      "slug": "caprese-salad-balsamic-glaze",
+      "description": "The classic Italian salad of tomatoes, mozzarella, and basil.",
+      "tags": ["No Cook", "Italian", "Vegetarian"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Salad",
+      "ingredients": [
+        { "amount": "2", "name": "large ripe tomatoes, sliced" },
+        { "amount": "125g", "name": "fresh mozzarella, sliced" },
+        { "amount": "handful", "name": "fresh basil leaves" },
+        { "amount": "2 tbsp", "name": "olive oil" },
+        { "amount": "1 tbsp", "name": "balsamic glaze" },
+        { "amount": "to taste", "name": "flaky sea salt, black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Arrange",
+          "text": "Alternate slices of tomato and mozzarella on a plate. Tuck basil leaves between them."
+        },
+        {
+          "name": "Dress",
+          "text": "Drizzle with olive oil and balsamic glaze. Season with flaky salt and pepper."
+        }
+      ],
+      "notes": "This dish is entirely dependent on the quality of the tomatoes. Use the best you can find.",
+      "photo_search": "plate of alternating tomato and mozzarella slices with basil and balsamic glaze"
+    },
+    {
+      "id": 193,
+      "name": "Cheddar and Bacon Quesadilla",
+      "slug": "cheddar-bacon-quesadilla",
+      "description": "A crispy quesadilla filled with sharp cheddar and crispy bacon.",
+      "tags": ["Quick", "Comfort", "Cheese"],
+      "prep": "5m",
+      "cook": "10m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Mexican-American",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "1 large", "name": "flour tortilla" },
+        { "amount": "60g", "name": "sharp cheddar, shredded" },
+        { "amount": "2 slices", "name": "bacon, cooked and crumbled" },
+        { "amount": "1 tsp", "name": "butter" },
+        { "amount": "to serve", "name": "sour cream, salsa" }
+      ],
+      "steps": [
+        {
+          "name": "Build",
+          "text": "Sprinkle half the cheddar on one half of the tortilla. Top with crumbled bacon and the rest of the cheddar. Fold over."
+        },
+        {
+          "name": "Cook",
+          "text": "Melt butter in a pan. Cook the quesadilla for 2-3 minutes per side until golden and the cheese is melted. Serve with sour cream and salsa."
+        }
+      ],
+      "notes": "Cook the bacon ahead of time so it is ready to go.",
+      "photo_search": "golden quesadilla cut open to reveal melted cheddar and crispy bacon"
+    },
+    {
+      "id": 194,
+      "name": "Tuna and Egg Salad Plate",
+      "slug": "tuna-egg-salad-plate",
+      "description": "A protein packed plate with tuna salad, hard boiled eggs, and crackers.",
+      "tags": ["High Protein", "No Cook", "Quick"],
+      "prep": "10m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Snack Plate",
+      "ingredients": [
+        { "amount": "1 can", "name": "tuna, drained" },
+        { "amount": "2", "name": "hard boiled eggs, chopped" },
+        { "amount": "2 tbsp", "name": "mayonnaise" },
+        { "amount": "1 tsp", "name": "dijon mustard" },
+        { "amount": "1 tbsp", "name": "capers" },
+        { "amount": "handful", "name": "crackers" },
+        { "amount": "to taste", "name": "salt, black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Mix",
+          "text": "In a bowl, combine the tuna, chopped eggs, mayo, dijon, and capers. Season with salt and pepper."
+        },
+        {
+          "name": "Serve",
+          "text": "Serve alongside a pile of crackers."
+        }
+      ],
+      "notes": "This is a great way to use up leftover hard boiled eggs.",
+      "photo_search": "bowl of tuna and egg salad with capers, served with crackers"
+    },
+    {
+      "id": 195,
+      "name": "Avocado and Mango Salad",
+      "slug": "avocado-mango-salad",
+      "description": "A tropical, sweet and savory salad with avocado, mango, and lime.",
+      "tags": ["Salad", "No Cook", "Healthy"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Tropical",
+      "category": "Salad",
+      "ingredients": [
+        { "amount": "1", "name": "avocado, diced" },
+        { "amount": "1/2", "name": "ripe mango, diced" },
+        { "amount": "1 tbsp", "name": "red onion, finely diced" },
+        { "amount": "handful", "name": "fresh cilantro" },
+        { "amount": "1", "name": "lime, juiced" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "to taste", "name": "salt, black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Combine",
+          "text": "In a bowl, gently combine the avocado, mango, and red onion."
+        },
+        {
+          "name": "Dress",
+          "text": "Add cilantro, lime juice, and olive oil. Toss gently and season with salt and pepper."
+        }
+      ],
+      "notes": "This is incredibly refreshing on a hot day. Serve with chips or on its own.",
+      "photo_search": "bowl of diced avocado, mango, and red onion with cilantro"
+    },
+    {
+      "id": 196,
+      "name": "Spicy Ramen with Tofu",
+      "slug": "spicy-ramen-tofu",
+      "description": "Upgraded instant ramen with crispy pan fried tofu and bok choy.",
+      "tags": ["Noodles", "Vegan", "Spicy"],
+      "prep": "5m",
+      "cook": "15m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Japanese-Inspired",
+      "category": "Noodles",
+      "ingredients": [
+        { "amount": "1 packet", "name": "spicy instant ramen" },
+        { "amount": "1/2 block", "name": "firm tofu, cubed" },
+        { "amount": "1", "name": "baby bok choy, halved" },
+        { "amount": "1 tbsp", "name": "soy sauce" },
+        { "amount": "1 tbsp", "name": "oil" },
+        { "amount": "1 tsp", "name": "sesame oil" },
+        { "amount": "to garnish", "name": "sesame seeds, spring onion" }
+      ],
+      "steps": [
+        {
+          "name": "Fry tofu",
+          "text": "Press the tofu and cube it. Fry in hot oil until golden and crispy. Toss with soy sauce."
+        },
+        {
+          "name": "Cook ramen",
+          "text": "Cook the ramen according to package directions. In the last minute, add the bok choy to wilt."
+        },
+        {
+          "name": "Serve",
+          "text": "Pour the ramen and broth into a bowl. Top with the crispy tofu, sesame oil, and garnishes."
+        }
+      ],
+      "notes": "Pressing the tofu is key to getting it crispy. Use a clean towel to squeeze the water out.",
+      "photo_search": "bowl of spicy ramen with crispy tofu cubes and bok choy"
+    },
+    {
+      "id": 197,
+      "name": "Baked Sweet Potato with Black Beans and Salsa",
+      "slug": "baked-sweet-potato-black-beans-salsa",
+      "description": "A loaded sweet potato with black beans, salsa, and avocado.",
+      "tags": ["Vegetarian", "Filling", "Healthy"],
+      "prep": "5m",
+      "cook": "50m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Mexican-Inspired",
+      "category": "Main",
+      "ingredients": [
+        { "amount": "1 large", "name": "sweet potato" },
+        { "amount": "1/2 can", "name": "black beans, drained" },
+        { "amount": "2 tbsp", "name": "salsa" },
+        { "amount": "1/2", "name": "avocado, sliced" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "to taste", "name": "salt, black pepper, cumin" }
+      ],
+      "steps": [
+        {
+          "name": "Bake potato",
+          "text": "Rub the sweet potato with oil and salt. Pierce with a fork. Bake at 425F/220C for 45-50 minutes until soft."
+        },
+        {
+          "name": "Warm beans",
+          "text": "Warm the black beans in a pan with a pinch of cumin."
+        },
+        {
+          "name": "Load",
+          "text": "Split the potato open. Top with warm beans, salsa, and avocado slices."
+        }
+      ],
+      "notes": "The sweetness of the potato pairs perfectly with the savory, spicy beans.",
+      "photo_search": "baked sweet potato split open and loaded with black beans, salsa, and avocado"
+    },
+    {
+      "id": 198,
+      "name": "Cottage Cheese and Tomato Toast",
+      "slug": "cottage-cheese-tomato-toast",
+      "description": "Cottage cheese spread on toast with sliced tomatoes and black pepper.",
+      "tags": ["Toast", "High Protein", "Quick"],
+      "prep": "3m",
+      "cook": "2m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Toast",
+      "ingredients": [
+        { "amount": "2 slices", "name": "whole wheat bread, toasted" },
+        { "amount": "1/2 cup", "name": "cottage cheese" },
+        { "amount": "1 large", "name": "ripe tomato, sliced" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "to taste", "name": "flaky sea salt, black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Spread",
+          "text": "Spread the cottage cheese on the toast. Top with tomato slices. Drizzle with olive oil and season."
+        }
+      ],
+      "notes": "Use a really good tomato for this. It makes all the difference.",
+      "photo_search": "toasted whole wheat bread with cottage cheese, sliced tomatoes, and black pepper"
+    },
+    {
+      "id": 199,
+      "name": "Pesto and Tomato Skewers",
+      "slug": "pesto-tomato-skewers",
+      "description": "Cherry tomatoes and mozzarella balls on skewers, drizzled with pesto.",
+      "tags": ["No Cook", "Fancy", "Quick"],
+      "prep": "5m",
+      "cook": "0m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "Italian",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "handful", "name": "cherry tomatoes" },
+        { "amount": "handful", "name": "bocconcini (small mozzarella balls)" },
+        { "amount": "2 tbsp", "name": "basil pesto" },
+        { "amount": "1 tbsp", "name": "olive oil" },
+        { "amount": "to taste", "name": "flaky sea salt, black pepper" }
+      ],
+      "steps": [
+        {
+          "name": "Thread",
+          "text": "Thread the tomatoes and mozzarella balls onto small skewers."
+        },
+        {
+          "name": "Dress",
+          "text": "Drizzle with pesto and olive oil. Season with salt and pepper."
+        }
+      ],
+      "notes": "These are a great, mess free way to eat caprese salad.",
+      "photo_search": "small skewers with cherry tomatoes and mozzarella balls, drizzled with green pesto"
+    },
+    {
+      "id": 200,
+      "name": "Baked Apple with Oats",
+      "slug": "baked-apple-oats",
+      "description": "A warm, comforting baked apple filled with oats and cinnamon.",
+      "tags": ["Sweet", "Comfort", "Healthy"],
+      "prep": "5m",
+      "cook": "30m",
+      "serves": "1",
+      "difficulty": "Easy",
+      "cuisine": "American",
+      "category": "Snack",
+      "ingredients": [
+        { "amount": "1 large", "name": "apple" },
+        { "amount": "1/4 cup", "name": "rolled oats" },
+        { "amount": "1 tbsp", "name": "brown sugar" },
+        { "amount": "1/2 tsp", "name": "cinnamon" },
+        { "amount": "1 tbsp", "name": "butter" },
+        { "amount": "2 tbsp", "name": "water" }
+      ],
+      "steps": [
+        {
+          "name": "Prep",
+          "text": "Core the apple, leaving the bottom intact. Place in a baking dish."
+        },
+        {
+          "name": "Stuff and bake",
+          "text": "Mix oats, brown sugar, and cinnamon. Fill the apple with the mixture. Top with butter. Pour water into the bottom of the dish. Bake at 375F/190C for 30 minutes until soft."
+        }
+      ],
+      "notes": "This is like a deconstructed apple crisp. Serve with yogurt or ice cream.",
+      "photo_search": "baked apple filled with oats, brown sugar, and cinnamon"
     }
   ]
 }
