@@ -212,3 +212,4 @@ height: 14px;
   .archive-card:nth-last-child(-n+2):nth-child(2n) { border-bottom: 1px solid var(--border); }
   .archive-card:last-child { border-bottom: none; }
 }
+
