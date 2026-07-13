@@ -217,7 +217,7 @@ function renderRecipe(meal, index) {
     canonical: recipeUrl(meal), image: imageUrl(meal), type: 'article', root: '../'
   })}
 <script type="application/ld+json">${jsonLd([schema, breadcrumb])}</script>
-<link rel="stylesheet" href="../css/slop-page.css"></head><body>
+<link rel="stylesheet" href="../css/slop-page.css?v=20260713-2"></head><body>
 <a href="#main" class="sr-only focusable">Skip to content</a>${header('../', meal.slug === current.slug ? 'today' : '')}
 <div class="slop-header"><p class="slop-eyebrow">Slop of the Day — ${prettyDate(date)}</p><h1 class="slop-title">${titleLines(meal.name)}</h1>
 <div class="slop-meta"><span class="slop-date">Published ${prettyDate(date)}</span><div class="slop-tags">${meal.tags.map(tag => `<span class="slop-tag">${esc(tag)}</span>`).join('')}</div></div></div>

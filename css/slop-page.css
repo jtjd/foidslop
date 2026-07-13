@@ -92,18 +92,34 @@
 .slop-notes-label { font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
 .slop-notes p { font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.7; }
 .recipe-trust { color: var(--muted); font-size: .72rem; line-height: 1.6; }
-.recipe-trust a { color: var(--text); }
+.recipe-trust a {
+  color: var(--muted);
+  font-size: .66rem;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+  transition: color .2s ease, border-color .2s ease;
+}
+.recipe-trust a:hover,
+.recipe-trust a:focus-visible { color: var(--text); border-color: var(--text); }
 
 /* ── Related recipes ───────────────────── */
 .related-recipes { padding: 64px 40px; border-bottom: 1px solid var(--border); }
 .related-recipes > .section-label { border: 0; margin-bottom: 12px; padding: 0; }
 .related-recipes h2 { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; font-weight: 400; margin-bottom: 28px; text-transform: uppercase; }
 .related-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; border: 1px solid var(--border); background: var(--border); }
-.related-card { background: var(--bg); min-width: 0; }
-.related-card a { color: var(--text); display: block; text-decoration: none; }
+.related-card { background: var(--bg); min-width: 0; overflow: hidden; }
+.related-card a { color: var(--text); display: block; height: 100%; text-decoration: none; transition: background .2s ease; }
 .related-card picture { display: block; }
-.related-card img { aspect-ratio: 1; display: block; height: auto; object-fit: cover; width: 100%; }
-.related-card span { display: block; font-family: 'Bebas Neue', sans-serif; font-size: 1.35rem; line-height: 1.05; padding: 18px; }
+.related-card img { aspect-ratio: 1; display: block; height: auto; object-fit: cover; width: 100%; transition: opacity .2s ease, transform .35s ease; }
+.related-card span { display: block; font-family: 'Bebas Neue', sans-serif; font-size: 1.35rem; letter-spacing: .01em; line-height: 1.05; padding: 18px; }
+.related-card a:hover,
+.related-card a:focus-visible { background: rgba(255,255,255,.035); }
+.related-card a:hover img,
+.related-card a:focus-visible img { opacity: .82; transform: scale(1.025); }
 
 /* ── Share Button ───────────────────────── */
 .slop-share { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); }
@@ -175,5 +191,8 @@
   .step-item { grid-template-columns: 36px 1fr; }
   .step-number { font-size: 2rem; }
   .step-content { padding: 18px 0 18px 16px; }
-  .related-grid { grid-template-columns: 1fr; }
+  .related-recipes { padding: 40px 20px; }
+  .related-recipes h2 { font-size: 2.5rem; }
+  .related-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .related-card span { font-size: 1.05rem; padding: 13px; }
 }
