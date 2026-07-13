@@ -10,7 +10,7 @@
 .page-eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; display: flex; align-items: center; gap: 14px; animation: fadeUp 0.5s ease both 0.2s; }
 .page-eyebrow::before { content: '✦'; font-size: 0.6rem; color: var(--muted); }
 h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 8vw, 6.5rem); font-weight: 400; line-height: 0.9; letter-spacing: 0.01em; color: var(--text); text-transform: uppercase; animation: fadeUp 0.5s ease both 0.28s; }
-.page-desc { font-size: 0.88rem; color: rgba(255,255,255,0.6); line-height: 1.7; max-width: 380px; animation: fadeUp 0.5s ease both 0.36s; }
+.page-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.7; max-width: 380px; animation: fadeUp 0.5s ease both 0.36s; }
 
 /* ── Featured slop ──────────────────────── */
 .featured-slop {
@@ -22,7 +22,7 @@ h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 8vw, 6.5rem
   transition: background 0.3s ease;
   height: 600px; /* Fixed height prevents overlap forever */
 }
-.featured-slop:hover { background: rgba(255,255,255,0.02); }
+.featured-slop:hover { background: color-mix(in srgb, var(--accent) 8%, var(--surface)); }
 .featured-slop:hover .featured-image img { transform: scale(1.04); }
 
 .featured-image {
@@ -52,10 +52,10 @@ h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 8vw, 6.5rem
 .featured-eyebrow { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
 .featured-eyebrow::before { content: '✦'; font-size: 0.5rem; }
 .featured-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.4rem, 4vw, 4.5rem); font-weight: 400; line-height: 0.92; letter-spacing: 0.01em; color: var(--text); text-transform: uppercase; margin-bottom: 20px; }
-.featured-desc { font-size: 1rem; color: rgba(255,255,255,0.75); line-height: 1.5; max-width: 90%; margin-bottom: 28px; }
+.featured-desc { font-size: 1rem; color: var(--muted); line-height: 1.5; max-width: 90%; margin-bottom: 28px; }
 .featured-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 28px; }
 .featured-tag { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--border); padding: 6px 12px; }
-.featured-cta { display: inline-flex; align-items: center; gap: 12px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text); align-self: flex-start; padding-bottom: 4px; border-bottom: 1px solid rgba(255,255,255,0.3); transition: border-color 0.2s ease, gap 0.2s ease; }
+.featured-cta { display: inline-flex; align-items: center; gap: 12px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text); align-self: flex-start; padding-bottom: 4px; border-bottom: 1px solid var(--accent); transition: border-color 0.2s ease, gap 0.2s ease; }
 .featured-slop:hover .featured-cta { border-color: var(--text); gap: 18px; }
 .featured-cta svg { width: 14px; height: 14px; flex-shrink: 0; }
 .featured-date { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border); }
@@ -67,7 +67,18 @@ h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 8vw, 6.5rem
 .archive-count { font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 
 /* ── Archive grid & Premium Cards ───────── */
+.archive-tools { border-bottom: 1px solid var(--border); padding: 26px 40px 30px; }
+.archive-search-label { color: var(--accent); display: block; font-size: .64rem; font-weight: 600; letter-spacing: .13em; margin-bottom: 10px; text-transform: uppercase; }
+.archive-search { appearance: none; background: var(--surface); border: 1px solid var(--border); border-radius: 0; color: var(--text); font: 500 1rem/1.2 Inter,sans-serif; max-width: 620px; padding: 14px 16px; width: 100%; }
+.archive-search::placeholder { color: var(--muted); }
+.archive-search:focus { border-color: var(--accent); outline: 2px solid transparent; }
+.archive-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.archive-filter { appearance: none; background: transparent; border: 1px solid var(--border); color: var(--muted); cursor: pointer; font: 600 .61rem/1 Inter,sans-serif; letter-spacing: .1em; padding: 9px 11px; text-transform: uppercase; }
+.archive-filter:hover,.archive-filter:focus-visible { border-color: var(--text); color: var(--text); }
+.archive-filter.active { background: var(--accent); border-color: var(--accent); color: var(--accent-contrast); }
+.archive-results { color: var(--muted); font-size: .68rem; letter-spacing: .08em; margin-top: 16px; text-transform: uppercase; }
 .archive-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--border); }
+.archive-card[hidden],.archive-empty[hidden],.archive-load-more[hidden] { display: none !important; }
 
 .archive-card {
   border-right: 1px solid var(--border);
@@ -77,7 +88,7 @@ h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 8vw, 6.5rem
   position: relative;
 }
 .archive-card:hover {
-  background: rgba(255,255,255,0.025);
+  background: color-mix(in srgb, var(--accent) 8%, var(--surface));
   transform: translateY(-6px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
   z-index: 10;
@@ -123,7 +134,7 @@ h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 8vw, 6.5rem
   transition: color 0.2s ease;
 }
 .archive-card:hover .archive-card-name {
-  color: #ffffff;
+  color: var(--text);
 }
 
 .archive-card-meta { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
@@ -134,7 +145,7 @@ h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 8vw, 6.5rem
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid var(--border);
   padding: 3px 7px;
 }
 
@@ -195,6 +206,7 @@ height: 14px;
   .featured-image { aspect-ratio: 1 / 1; height: auto; border-right: none; border-bottom: 1px solid var(--border); }
   .featured-content { height: auto; padding: 36px 24px 48px; justify-content: flex-start; overflow-y: visible; }
   .archive-header { padding: 24px 24px 20px; }
+  .archive-tools { padding: 24px; }
   .archive-grid { grid-template-columns: repeat(2, 1fr); }
   .archive-card:nth-child(3n) { border-right: 1px solid var(--border); }
   .archive-card:nth-child(2n) { border-right: none; }
@@ -206,6 +218,7 @@ height: 14px;
 }
 
 @media (max-width: 600px) {
+  .archive-tools { padding: 22px 20px; }
   .archive-grid { grid-template-columns: 1fr; }
   .archive-card { border-right: none; }
   .archive-card:nth-child(2n) { border-right: none; }

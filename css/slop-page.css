@@ -28,7 +28,7 @@
 
 /* ── Content panel ──────────────────────── */
 .slop-content { padding: 48px 56px 80px; display: flex; flex-direction: column; }
-.slop-desc { font-size: 1rem; color: rgba(255,255,255,0.7); line-height: 1.75; margin-bottom: 48px; max-width: 560px; }
+.slop-desc { font-size: 1rem; color: var(--muted); line-height: 1.75; margin-bottom: 48px; max-width: 560px; }
 
 /* ── Breadcrumbs ──────────────────────── */
 .breadcrumbs {
@@ -69,28 +69,36 @@
 .slop-stat-value { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: var(--text); line-height: 1; }
 
 /* ── Ingredients ────────────────────────── */
+.recipe-tools { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 0 0 30px; padding-top: 28px; border-top: 1px solid var(--border); }
+.recipe-tool { appearance: none; background: transparent; border: 1px solid var(--accent); color: var(--text); cursor: pointer; font: 600 .64rem/1 Inter, sans-serif; letter-spacing: .11em; padding: 11px 14px; text-transform: uppercase; transition: background .2s ease, color .2s ease; }
+.recipe-tool:hover,.recipe-tool:focus-visible { background: var(--accent); color: var(--accent-contrast); }
+.recipe-tool.copied { background: var(--text); border-color: var(--text); color: var(--bg); }
+.recipe-tool-status { color: var(--muted); font-size: .68rem; min-height: 1em; }
 .ingredients-list { list-style: none; margin-bottom: 48px; }
-.ingredient-item { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: 13px 0; border-bottom: 1px solid var(--border); }
+.ingredient-item { border-bottom: 1px solid var(--border); }
 .ingredient-item:first-child { border-top: 1px solid var(--border); }
-.ingredient-name { font-size: 0.88rem; color: rgba(255,255,255,0.85); line-height: 1.5; flex: 1; }
+.ingredient-item label { align-items: baseline; cursor: pointer; display: grid; gap: 12px; grid-template-columns: 18px minmax(0,1fr) auto; padding: 13px 0; }
+.ingredient-check { accent-color: var(--accent); height: 15px; margin: 3px 0 0; width: 15px; }
+.ingredient-check:checked ~ .ingredient-name,.ingredient-check:checked ~ .ingredient-amount { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--accent); }
+.ingredient-name { font-size: 0.88rem; color: var(--text); line-height: 1.5; flex: 1; }
 .ingredient-amount { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.04em; white-space: nowrap; flex-shrink: 0; }
 .ingredient-link { font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; transition: color 0.2s ease, border-color 0.2s ease; white-space: nowrap; flex-shrink: 0; }
-.ingredient-link:hover { color: var(--text); border-color: rgba(255,255,255,0.4); }
+.ingredient-link:hover { color: var(--text); border-color: var(--text); }
 .ingredient-link::before { content: '↗ '; font-size: 0.55rem; }
 
 /* ── Steps ──────────────────────────────── */
 .steps-list { list-style: none; margin-bottom: 48px; }
 .step-item { display: grid; grid-template-columns: 48px 1fr; border-bottom: 1px solid var(--border); }
 .step-item:first-child { border-top: 1px solid var(--border); }
-.step-number { font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; color: rgba(255,255,255,0.08); line-height: 1; padding: 20px 0; }
+.step-number { font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; color: var(--accent); opacity:.35; line-height: 1; padding: 20px 0; }
 .step-content { padding: 22px 0 22px 24px; border-left: 1px solid var(--border); }
 .step-name { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
-.step-text { font-size: 0.88rem; color: rgba(255,255,255,0.7); line-height: 1.7; }
+.step-text { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
 
 /* ── Notes ──────────────────────────────── */
 .slop-notes { background: var(--surface); border: 1px solid var(--border); padding: 24px 28px; margin-bottom: 48px; }
 .slop-notes-label { font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-.slop-notes p { font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.7; }
+.slop-notes p { font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
 .recipe-trust { color: var(--muted); font-size: .72rem; line-height: 1.6; }
 .recipe-trust a {
   color: var(--muted);
@@ -117,7 +125,7 @@
 .related-card img { aspect-ratio: 1; display: block; height: auto; object-fit: cover; width: 100%; transition: opacity .2s ease, transform .35s ease; }
 .related-card span { display: block; font-family: 'Bebas Neue', sans-serif; font-size: 1.35rem; letter-spacing: .01em; line-height: 1.05; padding: 18px; }
 .related-card a:hover,
-.related-card a:focus-visible { background: rgba(255,255,255,.035); }
+.related-card a:focus-visible { background: color-mix(in srgb, var(--accent) 8%, var(--surface)); }
 .related-card a:hover img,
 .related-card a:focus-visible img { opacity: .82; transform: scale(1.025); }
 
@@ -139,7 +147,7 @@
 /* ── Prev / Next nav ────────────────────── */
 .slop-nav { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--border); }
 .slop-nav-item { padding: 28px 40px; text-decoration: none; display: flex; flex-direction: column; gap: 6px; transition: background 0.2s ease; }
-.slop-nav-item:hover { background: rgba(255,255,255,0.03); }
+.slop-nav-item:hover { background: color-mix(in srgb, var(--accent) 8%, var(--bg)); }
 .slop-nav-item + .slop-nav-item { border-left: 1px solid var(--border); }
 .slop-nav-dir { font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
 .slop-nav-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: var(--text); line-height: 1; }
@@ -149,7 +157,7 @@
 /* ── Print Stylesheet ───────────────────── */
 @media print {
   header.site-header, footer, .slop-nav, .slop-share, .bg-layer,
-  .slop-tags, .slop-stats, .affiliate-note, script, style, noscript {
+  .slop-tags, .slop-stats, .affiliate-note, .recipe-tools, .ingredient-check, script, style, noscript {
     display: none !important;
   }
   body { background: #fff !important; color: #000 !important; }
@@ -162,6 +170,7 @@
   }
   .ingredients-list, .steps-list { border-color: #ccc !important; }
   .step-item, .ingredient-item { border-color: #eee !important; }
+  .ingredient-item label { grid-template-columns: 1fr auto !important; }
   .slop-notes { border-color: #ccc !important; background: #f9f9f9 !important; }
   @page { margin: 1in; }
 }

@@ -12,7 +12,7 @@ function walk(directory) {
     if (['.git', 'node_modules'].includes(entry.name)) continue;
     const full = path.join(directory, entry.name);
     if (entry.isDirectory()) walk(full);
-    else if (entry.name.endsWith('.html')) htmlFiles.push(full);
+    else if (entry.name.endsWith('.html') && !entry.name.startsWith('homepage-example')) htmlFiles.push(full);
   }
 }
 walk(ROOT);
@@ -68,7 +68,23 @@ for (const file of recipeFiles) {
   const jpeg = path.join(imageDirectory, `${slug}.jpg`);
   if (fs.existsSync(jpeg) && fs.readFileSync(jpeg).subarray(0, 2).toString('hex') !== 'ffd8') errors.push(`${file}: .jpg source is not JPEG data`);
 }
-if (!fs.existsSync(path.join(ROOT, 'og-image.jpg'))) errors.push('missing optimized og-image.jpg');
+if (!fs.existsSync(path.join(ROOT, 'og-image.png'))) errors.push('missing transparent og-image.png');
+
+const requiredCollections = ['pasta', 'toast', 'snack-plates', 'comfort-food', '15-minute'];
+for (const slug of requiredCollections) {
+  const file = path.join(ROOT, 'recipes', `${slug}.html`);
+  if (!fs.existsSync(file)) errors.push(`missing generated collection: recipes/${slug}.html`);
+  if (!locations.includes(`https://foidslop.com/recipes/${slug}`)) errors.push(`sitemap.xml: missing recipes/${slug}`);
+}
+const homepage = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+if (!homepage.includes('Latest foidslop recipes')) errors.push('index.html: missing latest recipe ItemList');
+if (homepage.includes('DJT Nippon Collection — foidslop')) errors.push('index.html: merchandise is still the primary ItemList');
+const archive = fs.readFileSync(path.join(ROOT, 'slop', 'archive.html'), 'utf8');
+if (!archive.includes('id="archive-search"') || !archive.includes('../archive.js')) errors.push('slop/archive.html: missing archive discovery controls');
+for (const file of recipeFiles) {
+  const html = fs.readFileSync(path.join(ROOT, 'slop', file), 'utf8');
+  if (!html.includes('id="copy-ingredients"') || !html.includes('../recipe-tools.js')) errors.push(`${file}: missing recipe tools`);
+}
 
 const redirects = fs.readFileSync(path.join(ROOT, '_redirects'), 'utf8');
 if (!/^\/slop\/today\s+\/slop\/[a-z0-9-]+\s+301/m.test(redirects)) errors.push('_redirects: missing clean /slop/today destination');

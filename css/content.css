@@ -32,7 +32,7 @@
 }
 .content-hero > p:last-child,
 .article-deck {
-  color: rgba(255,255,255,.72);
+  color: var(--muted);
   font-size: clamp(1rem, 2vw, 1.3rem);
   line-height: 1.75;
   max-width: 760px;
@@ -83,7 +83,7 @@
 }
 .article-page p:not(.content-eyebrow),
 .article-page li {
-  color: rgba(255,255,255,.7);
+  color: var(--muted);
   font-size: 1rem;
   line-height: 1.8;
 }

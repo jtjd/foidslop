@@ -38,7 +38,6 @@ for (const meal of published) {
   run([source, '-resize', '768x432^', '-gravity', 'center', '-extent', '768x432', '-strip', '-quality', '82', variants[3]]);
 }
 
-const socialSource = path.join(ROOT, 'og-image.png');
-const socialOutput = path.join(ROOT, 'og-image.jpg');
-if (!fs.existsSync(socialOutput) && fs.existsSync(socialSource)) run([socialSource, '-resize', '1200x630^', '-gravity', 'center', '-extent', '1200x630', '-strip', '-interlace', 'Plane', '-quality', '84', socialOutput]);
+const socialImage = path.join(ROOT, 'og-image.png');
+if (!fs.existsSync(socialImage)) throw new Error('Missing transparent og-image.png');
 console.log(`Optimized ${published.length} published recipe images through ${dateArg}.`);
