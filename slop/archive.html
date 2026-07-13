@@ -13,20 +13,20 @@
 
 <title>Slop Archive — foidslop Meals &amp; Recipes</title>
 <meta name="description" content="The foidslop archive — every slop of the day, past and present. Daily meal recipes with ingredients, method, and affiliate links. Slop for those like you.">
-<link rel="canonical" href="https://foidslop.com/slop/archive.html">
+<link rel="canonical" href="https://foidslop.com/slop/archive">
 
 <!-- Open Graph -->
 <meta property="og:title" content="Slop Archive — foidslop Meals &amp; Recipes">
 <meta property="og:description" content="Every foidslop meal, archived. Daily recipes with full ingredients and method.">
-<meta property="og:url" content="https://foidslop.com/slop/">
+<meta property="og:url" content="https://foidslop.com/slop/archive">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://foidslop.com/og-image.png">
+<meta property="og:image" content="https://foidslop.com/og-image.jpg">
 
 <!-- Twitter/X Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Slop Archive — foidslop Meals &amp; Recipes">
 <meta name="twitter:description" content="Every foidslop meal, archived. Daily recipes with full ingredients and method.">
-<meta name="twitter:image" content="https://foidslop.com/og-image.png">
+<meta name="twitter:image" content="https://foidslop.com/og-image.jpg">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,19 +38,471 @@
 <!-- Stylesheets -->
 <link rel="stylesheet" href="../css/global.css">
 <link rel="stylesheet" href="../css/slop-archive.css">
+<script id="archive-schema" type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "foidslop Recipe Archive",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "url": "https://foidslop.com/slop/carbonara-for-one",
+      "name": "Carbonara for One"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "url": "https://foidslop.com/slop/stuffed-bell-pepper-rice-feta",
+      "name": "Stuffed Bell Pepper with Rice and Feta"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "url": "https://foidslop.com/slop/anchovy-butter-toast",
+      "name": "Anchovy Butter Toast"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "url": "https://foidslop.com/slop/prosciutto-fig-toast",
+      "name": "Prosciutto and Fig Toast"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "url": "https://foidslop.com/slop/homemade-crunchwrap",
+      "name": "Homemade Crunchwrap"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "url": "https://foidslop.com/slop/pasta-e-fagioli",
+      "name": "Pasta e Fagioli"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "url": "https://foidslop.com/slop/labneh-zaatar-olive-oil",
+      "name": "Labneh with Za'atar and Olive Oil"
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "url": "https://foidslop.com/slop/frittata-for-one",
+      "name": "Frittata for One"
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "url": "https://foidslop.com/slop/stracciatella-olive-oil-grilled-bread",
+      "name": "Stracciatella with Olive Oil and Grilled Bread"
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "url": "https://foidslop.com/slop/4th-of-july-burrata-plate",
+      "name": "4th of July Burrata Plate"
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "url": "https://foidslop.com/slop/egg-yolk-garlic-pasta",
+      "name": "Egg Yolk Garlic Pasta"
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "url": "https://foidslop.com/slop/white-bean-dip-lemon-rosemary",
+      "name": "White Bean Dip with Lemon and Rosemary"
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "url": "https://foidslop.com/slop/matcha-latte-banana-peanut-butter",
+      "name": "Matcha Latte and Banana with Peanut Butter"
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "url": "https://foidslop.com/slop/panzanella",
+      "name": "Panzanella"
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "url": "https://foidslop.com/slop/savory-cottage-cheese-bowl",
+      "name": "Savory Cottage Cheese Bowl"
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "url": "https://foidslop.com/slop/spaghetti-aglio-e-olio",
+      "name": "Spaghetti Aglio e Olio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "url": "https://foidslop.com/slop/caramelized-onion-dip-ridged-chips",
+      "name": "Caramelized Onion Dip with Ridged Chips"
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "url": "https://foidslop.com/slop/loaded-sweet-potato-black-beans",
+      "name": "Loaded Sweet Potato with Black Beans"
+    },
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "url": "https://foidslop.com/slop/hot-honey-butter-toast",
+      "name": "Hot Honey Butter Toast"
+    },
+    {
+      "@type": "ListItem",
+      "position": 20,
+      "url": "https://foidslop.com/slop/miso-soup-tofu-noodles",
+      "name": "Miso Soup with Tofu and Noodles"
+    },
+    {
+      "@type": "ListItem",
+      "position": 21,
+      "url": "https://foidslop.com/slop/sheet-pan-nachos",
+      "name": "Sheet Pan Nachos"
+    },
+    {
+      "@type": "ListItem",
+      "position": 22,
+      "url": "https://foidslop.com/slop/medjool-dates-almond-butter-salt",
+      "name": "Medjool Dates with Almond Butter and Flaky Salt"
+    },
+    {
+      "@type": "ListItem",
+      "position": 23,
+      "url": "https://foidslop.com/slop/kimchi-butter-ramen",
+      "name": "Kimchi Butter Ramen"
+    },
+    {
+      "@type": "ListItem",
+      "position": 24,
+      "url": "https://foidslop.com/slop/avocado-egg-salad-lettuce-cups",
+      "name": "Avocado and Egg Salad Lettuce Cups"
+    },
+    {
+      "@type": "ListItem",
+      "position": 25,
+      "url": "https://foidslop.com/slop/tinned-fish-board",
+      "name": "Tinned Fish Board"
+    },
+    {
+      "@type": "ListItem",
+      "position": 26,
+      "url": "https://foidslop.com/slop/cacio-e-pepe",
+      "name": "Cacio e Pepe"
+    },
+    {
+      "@type": "ListItem",
+      "position": 27,
+      "url": "https://foidslop.com/slop/shakshuka-for-one",
+      "name": "Shakshuka for One"
+    },
+    {
+      "@type": "ListItem",
+      "position": 28,
+      "url": "https://foidslop.com/slop/goat-cheese-honey-walnut-toast",
+      "name": "Goat Cheese Toast with Honey and Walnuts"
+    },
+    {
+      "@type": "ListItem",
+      "position": 29,
+      "url": "https://foidslop.com/slop/tuna-salad-crackers",
+      "name": "Tuna Salad on Crackers"
+    },
+    {
+      "@type": "ListItem",
+      "position": 30,
+      "url": "https://foidslop.com/slop/elevated-canned-tomato-soup",
+      "name": "Elevated Canned Tomato Soup"
+    },
+    {
+      "@type": "ListItem",
+      "position": 31,
+      "url": "https://foidslop.com/slop/edamame-garlic-butter-chilli",
+      "name": "Edamame with Garlic Butter and Chilli"
+    },
+    {
+      "@type": "ListItem",
+      "position": 32,
+      "url": "https://foidslop.com/slop/cherry-tomato-mozzarella-pasta",
+      "name": "Cherry Tomato and Mozzarella Pasta"
+    },
+    {
+      "@type": "ListItem",
+      "position": 33,
+      "url": "https://foidslop.com/slop/garlic-parmesan-toast",
+      "name": "Garlic Parmesan Toast"
+    },
+    {
+      "@type": "ListItem",
+      "position": 34,
+      "url": "https://foidslop.com/slop/adult-lunchable-plate",
+      "name": "Adult Lunchable Plate"
+    },
+    {
+      "@type": "ListItem",
+      "position": 35,
+      "url": "https://foidslop.com/slop/lox-plate-cucumber",
+      "name": "Lox Plate on Cucumber"
+    },
+    {
+      "@type": "ListItem",
+      "position": 36,
+      "url": "https://foidslop.com/slop/spinach-artichoke-dip-pita-chips",
+      "name": "Spinach Artichoke Dip with Pita Chips"
+    },
+    {
+      "@type": "ListItem",
+      "position": 37,
+      "url": "https://foidslop.com/slop/prosciutto-melon",
+      "name": "Prosciutto and Melon"
+    },
+    {
+      "@type": "ListItem",
+      "position": 38,
+      "url": "https://foidslop.com/slop/cold-sesame-noodles",
+      "name": "Cold Sesame Noodles"
+    },
+    {
+      "@type": "ListItem",
+      "position": 39,
+      "url": "https://foidslop.com/slop/sleepy-girl-mocktail",
+      "name": "Sleepy Girl Mocktail"
+    },
+    {
+      "@type": "ListItem",
+      "position": 40,
+      "url": "https://foidslop.com/slop/guacamole-tortilla-chips",
+      "name": "Guacamole and Tortilla Chips"
+    },
+    {
+      "@type": "ListItem",
+      "position": 41,
+      "url": "https://foidslop.com/slop/peanut-butter-sesame-noodles",
+      "name": "Peanut Butter Sesame Noodles"
+    },
+    {
+      "@type": "ListItem",
+      "position": 42,
+      "url": "https://foidslop.com/slop/crispy-chickpea-feta-bowl",
+      "name": "Crispy Spiced Chickpea and Feta Bowl"
+    },
+    {
+      "@type": "ListItem",
+      "position": 43,
+      "url": "https://foidslop.com/slop/cucumber-cream-cheese-bites",
+      "name": "Cucumber Cream Cheese Bites"
+    },
+    {
+      "@type": "ListItem",
+      "position": 44,
+      "url": "https://foidslop.com/slop/classic-cheese-quesadilla",
+      "name": "Classic Cheese Quesadilla"
+    },
+    {
+      "@type": "ListItem",
+      "position": 45,
+      "url": "https://foidslop.com/slop/brown-butter-gnocchi-sage",
+      "name": "Brown Butter Gnocchi with Sage"
+    },
+    {
+      "@type": "ListItem",
+      "position": 46,
+      "url": "https://foidslop.com/slop/antipasto-plate",
+      "name": "Antipasto Plate"
+    },
+    {
+      "@type": "ListItem",
+      "position": 47,
+      "url": "https://foidslop.com/slop/fried-egg-toast-hot-sauce",
+      "name": "Fried Egg on Toast with Hot Sauce"
+    },
+    {
+      "@type": "ListItem",
+      "position": 48,
+      "url": "https://foidslop.com/slop/mezze-plate",
+      "name": "Mezze Plate"
+    },
+    {
+      "@type": "ListItem",
+      "position": 49,
+      "url": "https://foidslop.com/slop/brie-raspberry-quesadilla",
+      "name": "Brie and Raspberry Quesadilla"
+    },
+    {
+      "@type": "ListItem",
+      "position": 50,
+      "url": "https://foidslop.com/slop/ricotta-toast-honey-pistachios",
+      "name": "Ricotta Toast with Honey and Pistachios"
+    },
+    {
+      "@type": "ListItem",
+      "position": 51,
+      "url": "https://foidslop.com/slop/stovetop-popcorn-dinner",
+      "name": "Stovetop Popcorn Dinner"
+    },
+    {
+      "@type": "ListItem",
+      "position": 52,
+      "url": "https://foidslop.com/slop/caprese-good-olive-oil",
+      "name": "Caprese with Good Olive Oil"
+    },
+    {
+      "@type": "ListItem",
+      "position": 53,
+      "url": "https://foidslop.com/slop/instant-ramen-upgraded",
+      "name": "Instant Ramen Upgraded"
+    },
+    {
+      "@type": "ListItem",
+      "position": 54,
+      "url": "https://foidslop.com/slop/pickles-cheese-board",
+      "name": "Pickles and Cheese Board"
+    },
+    {
+      "@type": "ListItem",
+      "position": 55,
+      "url": "https://foidslop.com/slop/soft-pretzel-beer-cheese-dip",
+      "name": "Soft Pretzel with Beer Cheese Dip"
+    },
+    {
+      "@type": "ListItem",
+      "position": 56,
+      "url": "https://foidslop.com/slop/fruit-yogurt-honey-granola",
+      "name": "Fruit and Yogurt Bowl with Honey and Granola"
+    },
+    {
+      "@type": "ListItem",
+      "position": 57,
+      "url": "https://foidslop.com/slop/loaded-baked-potato",
+      "name": "Loaded Baked Potato"
+    },
+    {
+      "@type": "ListItem",
+      "position": 58,
+      "url": "https://foidslop.com/slop/greek-salad-chickpeas",
+      "name": "Greek Salad with Chickpeas"
+    },
+    {
+      "@type": "ListItem",
+      "position": 59,
+      "url": "https://foidslop.com/slop/brie-jam-apple-board",
+      "name": "Brie with Jam and Apple on a Board"
+    },
+    {
+      "@type": "ListItem",
+      "position": 60,
+      "url": "https://foidslop.com/slop/scrambled-eggs-cream-cheese-chives",
+      "name": "Scrambled Eggs with Cream Cheese and Chives"
+    },
+    {
+      "@type": "ListItem",
+      "position": 61,
+      "url": "https://foidslop.com/slop/butter-noodles-parmesan-black-pepper",
+      "name": "Butter Noodles with Parmesan and Black Pepper"
+    },
+    {
+      "@type": "ListItem",
+      "position": 62,
+      "url": "https://foidslop.com/slop/charcuterie-snack-plate-for-one",
+      "name": "Charcuterie Snack Plate for One"
+    },
+    {
+      "@type": "ListItem",
+      "position": 63,
+      "url": "https://foidslop.com/slop/grilled-cheese-tomato-soup",
+      "name": "Grilled Cheese Dipped in Tomato Soup"
+    },
+    {
+      "@type": "ListItem",
+      "position": 64,
+      "url": "https://foidslop.com/slop/lazy-mac-and-cheese",
+      "name": "Lazy Mac and Cheese"
+    },
+    {
+      "@type": "ListItem",
+      "position": 65,
+      "url": "https://foidslop.com/slop/hummus-plate-warm-pita-toppings",
+      "name": "Hummus Plate with Warm Pita and Toppings"
+    },
+    {
+      "@type": "ListItem",
+      "position": 66,
+      "url": "https://foidslop.com/slop/avocado-toast-everything-bagel-chilli",
+      "name": "Avocado Toast with Everything Bagel and Chilli Flakes"
+    },
+    {
+      "@type": "ListItem",
+      "position": 67,
+      "url": "https://foidslop.com/slop/smoked-salmon-cream-cheese-capers",
+      "name": "Smoked Salmon Plate with Cream Cheese and Capers"
+    },
+    {
+      "@type": "ListItem",
+      "position": 68,
+      "url": "https://foidslop.com/slop/burrata-peach-prosciutto",
+      "name": "Burrata with Peach and Prosciutto"
+    },
+    {
+      "@type": "ListItem",
+      "position": 69,
+      "url": "https://foidslop.com/slop/tinned-sardines-buttered-toast",
+      "name": "Tinned Sardines on Buttered Toast"
+    },
+    {
+      "@type": "ListItem",
+      "position": 70,
+      "url": "https://foidslop.com/slop/cottage-cheese-everything-bagel-plate",
+      "name": "Cottage Cheese and Everything Bagel Plate"
+    },
+    {
+      "@type": "ListItem",
+      "position": 71,
+      "url": "https://foidslop.com/slop/baked-feta-pasta",
+      "name": "Baked Feta Pasta"
+    },
+    {
+      "@type": "ListItem",
+      "position": 72,
+      "url": "https://foidslop.com/slop/chilli-crisp-noodles-soft-boiled-egg",
+      "name": "Chilli Crisp Noodles with Soft-Boiled Egg"
+    },
+    {
+      "@type": "ListItem",
+      "position": 73,
+      "url": "https://foidslop.com/slop/whipped-feta-hot-honey-walnuts",
+      "name": "Whipped Feta with Hot Honey and Walnuts"
+    },
+    {
+      "@type": "ListItem",
+      "position": 74,
+      "url": "https://foidslop.com/slop/og-girl-dinner",
+      "name": "The OG Girl Dinner"
+    }
+  ]
+}</script>
+<link rel="alternate" type="application/atom+xml" title="foidslop — Daily Recipes" href="https://foidslop.com/feed.xml">
 </head>
 <body>
 
 <a href="#main" class="sr-only focusable">Skip to content</a>
 
 <header class="site-header" id="site-header">
-  <a href="../index.html" aria-label="foidslop home">
+  <a href="../index" aria-label="foidslop home">
     <img src="../logo.webp" alt="foidslop" class="logo" width="120" height="30">
   </a>
   <div class="header-right">
-    <a href="../index.html" class="nav-link">Home</a>
-    <a href="./carbonara-for-one.html" class="nav-link" id="sotd-link">Slop of the Day</a>
-    <a href="./archive.html" class="nav-link active" aria-current="page">Slop Archive</a>
+    <a href="../index" class="nav-link">Home</a>
+    <a href="./carbonara-for-one" class="nav-link" id="sotd-link">Slop of the Day</a>
+    <a href="./archive" class="nav-link active" aria-current="page">Slop Archive</a>
     <a href="https://shop.foidslop.com/" target="_blank" rel="noopener noreferrer" class="header-cta">
       Shop Now
       <span class="sr-only">(opens in new tab)</span>
@@ -60,9 +512,9 @@
     </button>
   </div>
   <nav class="nav-dropdown" id="nav-dropdown" aria-label="Site navigation" aria-hidden="true">
-    <a href="../index.html" class="nav-dropdown-link">Home</a>
-    <a href="./2026-06-27.html" class="nav-dropdown-link" id="sotd-nav-dropdown">Slop of the Day</a>
-    <a href="./archive.html" class="nav-dropdown-link active">Slop Archive</a>
+    <a href="../index" class="nav-dropdown-link">Home</a>
+    <a href="./carbonara-for-one" class="nav-dropdown-link" id="sotd-nav-dropdown">Slop of the Day</a>
+    <a href="./archive" class="nav-dropdown-link active">Slop Archive</a>
     <a href="https://shop.foidslop.com/" class="nav-dropdown-link nav-dropdown-shop" target="_blank" rel="noopener noreferrer">Shop Now ↗</a>
   </nav>
 </header>
@@ -80,19 +532,19 @@
   <!-- ══════════════════════════════
        FEATURED — Latest slop
   ══════════════════════════════ -->
-  <a href="./carbonara-for-one.html" class="featured-slop reveal" aria-label="Read today's slop: Carbonara for One">
+  <a href="./carbonara-for-one" class="featured-slop reveal" aria-label="Read today's slop: Prosciutto and Fig Toast">
     <div class="featured-image reveal-clip">
-      <img src="img/carbonara-for-one.jpg" alt="Carbonara for One" width="900" height="1200" loading="eager" fetchpriority="high">
+      <img src="img/carbonara-for-one.jpg" alt="Photograph of bowl of spaghetti carbonara with crispy guanciale and a heavy dusting of black pepper" width="900" height="1200" loading="eager" fetchpriority="high">
       <span class="featured-badge" aria-label="Latest slop">Today's Slop</span>
     </div>
     <div class="featured-content">
       <p class="featured-eyebrow">July 13, 2026</p>
-      <h2 class="featured-title">Carbonara for<br>One.</h2>
+      <h2 class="featured-title">CARBONARA FOR<br>ONE.</h2>
       <p class="featured-desc">True carbonara. No cream, just eggs, guanciale, and pecorino. Perfect.</p>
       <div class="featured-tags">
-        <span class="featured-tag">Pasta</span>
-        <span class="featured-tag">Italian</span>
-        <span class="featured-tag">Mid</span>
+        <span class="featured-tag">Toast</span>
+        <span class="featured-tag">Fancy</span>
+        <span class="featured-tag">Sweet-Savory</span>
       </div>
       <span class="featured-cta" aria-hidden="true">
         Get the Recipe
@@ -113,1338 +565,81 @@
   </div>
 
   <section class="archive-grid" aria-label="Past slop archive" id="archive-grid">
-        <article class="archive-card reveal">
-      <a href="./carbonara-for-one.html" aria-label="Read recipe: Carbonara for One">
-        <div class="archive-card-img">
-          <img src="img/carbonara-for-one.jpg" alt="Carbonara for One" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Carbonara for One</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jul 13, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Pasta</span>
-              <span class="archive-card-tag">Italian</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./stuffed-bell-pepper-rice-feta.html" aria-label="Read recipe: Stuffed Bell Pepper with Rice and Feta">
-        <div class="archive-card-img">
-          <img src="img/stuffed-bell-pepper-rice-feta.jpg" alt="Stuffed Bell Pepper with Rice and Feta" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Stuffed Bell Pepper with Rice and Feta</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jul 12, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Vegetarian</span>
-              <span class="archive-card-tag">Filling</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./anchovy-butter-toast.html" aria-label="Read recipe: Anchovy Butter Toast">
-        <div class="archive-card-img">
-          <img src="img/anchovy-butter-toast.jpg" alt="Anchovy Butter Toast" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Anchovy Butter Toast</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jul 11, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Toast</span>
-              <span class="archive-card-tag">Umami</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./prosciutto-fig-toast.html" aria-label="Read recipe: Prosciutto and Fig Toast">
-        <div class="archive-card-img">
-          <img src="img/prosciutto-fig-toast.jpg" alt="Prosciutto and Fig Toast" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Prosciutto and Fig Toast</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jul 10, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Toast</span>
-              <span class="archive-card-tag">Fancy</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./homemade-crunchwrap.html" aria-label="Read recipe: Homemade Crunchwrap">
-        <div class="archive-card-img">
-          <img src="img/homemade-crunchwrap.jpg" alt="Homemade Crunchwrap" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Homemade Crunchwrap</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jul 9, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Comfort</span>
-              <span class="archive-card-tag">Mexican</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./pasta-e-fagioli.html" aria-label="Read recipe: Pasta e Fagioli">
-        <div class="archive-card-img">
-          <img src="img/pasta-e-fagioli.jpg" alt="Pasta e Fagioli" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Pasta e Fagioli</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jul 8, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Soup</span>
-              <span class="archive-card-tag">Italian</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./labneh-zaatar-olive-oil.html" aria-label="Read recipe: Labneh with Za'atar and Olive Oil">
-        <div class="archive-card-img">
-          <img src="img/labneh-zaatar-olive-oil.jpg" alt="Labneh with Za'atar and Olive Oil" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Labneh with Za'atar and Olive Oil</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jul 7, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">No Cook</span>
-              <span class="archive-card-tag">Mediterranean</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./frittata-for-one.html" aria-label="Read recipe: Frittata for One">
-        <div class="archive-card-img">
-          <img src="img/frittata-for-one.jpg" alt="Frittata for One" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Frittata for One</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jul 6, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Eggs</span>
-              <span class="archive-card-tag">Versatile</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./stracciatella-olive-oil-grilled-bread.html" aria-label="Read recipe: Stracciatella with Olive Oil and Grilled Bread">
-        <div class="archive-card-img">
-          <img src="img/stracciatella-olive-oil-grilled-bread.jpg" alt="Stracciatella with Olive Oil and Grilled Bread" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Stracciatella with Olive Oil and Grilled Bread</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jul 5, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">No Cook</span>
-              <span class="archive-card-tag">Italian</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./4th-of-july-burrata-plate.html" aria-label="Read recipe: 4th of July Burrata Plate">
-        <div class="archive-card-img">
-          <img src="img/4th-of-july-burrata-plate.jpg" alt="4th of July Burrata Plate" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">4th of July Burrata Plate</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jul 4, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">No Cook</span>
-              <span class="archive-card-tag">Fancy</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./egg-yolk-garlic-pasta.html" aria-label="Read recipe: Egg Yolk Garlic Pasta">
-        <div class="archive-card-img">
-          <img src="img/egg-yolk-garlic-pasta.jpg" alt="Egg Yolk Garlic Pasta" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Egg Yolk Garlic Pasta</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jul 3, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Pasta</span>
-              <span class="archive-card-tag">Eggs</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./white-bean-dip-lemon-rosemary.html" aria-label="Read recipe: White Bean Dip with Lemon and Rosemary">
-        <div class="archive-card-img">
-          <img src="img/white-bean-dip-lemon-rosemary.jpg" alt="White Bean Dip with Lemon and Rosemary" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">White Bean Dip with Lemon and Rosemary</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jul 2, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Dip</span>
-              <span class="archive-card-tag">Vegetarian</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./matcha-latte-banana-peanut-butter.html" aria-label="Read recipe: Matcha Latte and Banana with Peanut Butter">
-        <div class="archive-card-img">
-          <img src="img/matcha-latte-banana-peanut-butter.jpg" alt="Matcha Latte and Banana with Peanut Butter" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Matcha Latte and Banana with Peanut Butter</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jul 1, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Drink</span>
-              <span class="archive-card-tag">Sweet</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./panzanella.html" aria-label="Read recipe: Panzanella">
-        <div class="archive-card-img">
-          <img src="img/panzanella.jpg" alt="Panzanella" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Panzanella</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 30, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Salad</span>
-              <span class="archive-card-tag">Italian</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./savory-cottage-cheese-bowl.html" aria-label="Read recipe: Savory Cottage Cheese Bowl">
-        <div class="archive-card-img">
-          <img src="img/savory-cottage-cheese-bowl.jpg" alt="Savory Cottage Cheese Bowl" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Savory Cottage Cheese Bowl</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 29, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">High Protein</span>
-              <span class="archive-card-tag">Healthy</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./spaghetti-aglio-e-olio.html" aria-label="Read recipe: Spaghetti Aglio e Olio">
-        <div class="archive-card-img">
-          <img src="img/spaghetti-aglio-e-olio.jpg" alt="Spaghetti Aglio e Olio" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Spaghetti Aglio e Olio</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 28, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Pasta</span>
-              <span class="archive-card-tag">Italian</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./caramelized-onion-dip-ridged-chips.html" aria-label="Read recipe: Caramelized Onion Dip with Ridged Chips">
-        <div class="archive-card-img">
-          <img src="img/caramelized-onion-dip-ridged-chips.jpg" alt="Caramelized Onion Dip with Ridged Chips" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Caramelized Onion Dip with Ridged Chips</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 27, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Dip</span>
-              <span class="archive-card-tag">Comfort</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./loaded-sweet-potato-black-beans.html" aria-label="Read recipe: Loaded Sweet Potato with Black Beans">
-        <div class="archive-card-img">
-          <img src="img/loaded-sweet-potato-black-beans.jpg" alt="Loaded Sweet Potato with Black Beans" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Loaded Sweet Potato with Black Beans</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 26, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Vegetarian</span>
-              <span class="archive-card-tag">Filling</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./hot-honey-butter-toast.html" aria-label="Read recipe: Hot Honey Butter Toast">
-        <div class="archive-card-img">
-          <img src="img/hot-honey-butter-toast.jpg" alt="Hot Honey Butter Toast" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Hot Honey Butter Toast</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 25, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Toast</span>
-              <span class="archive-card-tag">Sweet-Savory</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./miso-soup-tofu-noodles.html" aria-label="Read recipe: Miso Soup with Tofu and Noodles">
-        <div class="archive-card-img">
-          <img src="img/miso-soup-tofu-noodles.jpg" alt="Miso Soup with Tofu and Noodles" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Miso Soup with Tofu and Noodles</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 24, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Soup</span>
-              <span class="archive-card-tag">Warm</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./sheet-pan-nachos.html" aria-label="Read recipe: Sheet Pan Nachos">
-        <div class="archive-card-img">
-          <img src="img/sheet-pan-nachos.jpg" alt="Sheet Pan Nachos" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Sheet Pan Nachos</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 23, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Comfort</span>
-              <span class="archive-card-tag">Snack</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./medjool-dates-almond-butter-salt.html" aria-label="Read recipe: Medjool Dates with Almond Butter and Flaky Salt">
-        <div class="archive-card-img">
-          <img src="img/medjool-dates-almond-butter-salt.jpg" alt="Medjool Dates with Almond Butter and Flaky Salt" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Medjool Dates with Almond Butter and Flaky Salt</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 22, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Sweet</span>
-              <span class="archive-card-tag">No Cook</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./kimchi-butter-ramen.html" aria-label="Read recipe: Kimchi Butter Ramen">
-        <div class="archive-card-img">
-          <img src="img/kimchi-butter-ramen.jpg" alt="Kimchi Butter Ramen" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Kimchi Butter Ramen</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 21, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Noodles</span>
-              <span class="archive-card-tag">Korean</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./avocado-egg-salad-lettuce-cups.html" aria-label="Read recipe: Avocado and Egg Salad Lettuce Cups">
-        <div class="archive-card-img">
-          <img src="img/avocado-egg-salad-lettuce-cups.jpg" alt="Avocado and Egg Salad Lettuce Cups" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Avocado and Egg Salad Lettuce Cups</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 20, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Healthy</span>
-              <span class="archive-card-tag">No Cook</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./tinned-fish-board.html" aria-label="Read recipe: Tinned Fish Board">
-        <div class="archive-card-img">
-          <img src="img/tinned-fish-board.jpg" alt="Tinned Fish Board" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Tinned Fish Board</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 19, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Tinned Fish</span>
-              <span class="archive-card-tag">No Cook</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./cacio-e-pepe.html" aria-label="Read recipe: Cacio e Pepe">
-        <div class="archive-card-img">
-          <img src="img/cacio-e-pepe.jpg" alt="Cacio e Pepe" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Cacio e Pepe</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 18, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Pasta</span>
-              <span class="archive-card-tag">Italian</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./shakshuka-for-one.html" aria-label="Read recipe: Shakshuka for One">
-        <div class="archive-card-img">
-          <img src="img/shakshuka-for-one.jpg" alt="Shakshuka for One" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Shakshuka for One</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 17, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Eggs</span>
-              <span class="archive-card-tag">Spicy</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./goat-cheese-honey-walnut-toast.html" aria-label="Read recipe: Goat Cheese Toast with Honey and Walnuts">
-        <div class="archive-card-img">
-          <img src="img/goat-cheese-honey-walnut-toast.jpg" alt="Goat Cheese Toast with Honey and Walnuts" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Goat Cheese Toast with Honey and Walnuts</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 16, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Toast</span>
-              <span class="archive-card-tag">Cheese</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./tuna-salad-crackers.html" aria-label="Read recipe: Tuna Salad on Crackers">
-        <div class="archive-card-img">
-          <img src="img/tuna-salad-crackers.jpg" alt="Tuna Salad on Crackers" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Tuna Salad on Crackers</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 15, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">No Cook</span>
-              <span class="archive-card-tag">Quick</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./elevated-canned-tomato-soup.html" aria-label="Read recipe: Elevated Canned Tomato Soup">
-        <div class="archive-card-img">
-          <img src="img/elevated-canned-tomato-soup.jpg" alt="Elevated Canned Tomato Soup" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Elevated Canned Tomato Soup</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 14, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Comfort</span>
-              <span class="archive-card-tag">Quick</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./edamame-garlic-butter-chilli.html" aria-label="Read recipe: Edamame with Garlic Butter and Chilli">
-        <div class="archive-card-img">
-          <img src="img/edamame-garlic-butter-chilli.jpg" alt="Edamame with Garlic Butter and Chilli" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Edamame with Garlic Butter and Chilli</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 13, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Healthy</span>
-              <span class="archive-card-tag">Quick</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./cherry-tomato-mozzarella-pasta.html" aria-label="Read recipe: Cherry Tomato and Mozzarella Pasta">
-        <div class="archive-card-img">
-          <img src="img/cherry-tomato-mozzarella-pasta.jpg" alt="Cherry Tomato and Mozzarella Pasta" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Cherry Tomato and Mozzarella Pasta</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 12, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Pasta</span>
-              <span class="archive-card-tag">Vegetarian</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./garlic-parmesan-toast.html" aria-label="Read recipe: Garlic Parmesan Toast">
-        <div class="archive-card-img">
-          <img src="img/garlic-parmesan-toast.jpg" alt="Garlic Parmesan Toast" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Garlic Parmesan Toast</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 11, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Toast</span>
-              <span class="archive-card-tag">Comfort</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./adult-lunchable-plate.html" aria-label="Read recipe: Adult Lunchable Plate">
-        <div class="archive-card-img">
-          <img src="img/adult-lunchable-plate.jpg" alt="Adult Lunchable Plate" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Adult Lunchable Plate</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 10, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">No Cook</span>
-              <span class="archive-card-tag">Snack</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./lox-plate-cucumber.html" aria-label="Read recipe: Lox Plate on Cucumber">
-        <div class="archive-card-img">
-          <img src="img/lox-plate-cucumber.jpg" alt="Lox Plate on Cucumber" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Lox Plate on Cucumber</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 9, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">No Cook</span>
-              <span class="archive-card-tag">Healthy</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./spinach-artichoke-dip-pita-chips.html" aria-label="Read recipe: Spinach Artichoke Dip with Pita Chips">
-        <div class="archive-card-img">
-          <img src="img/spinach-artichoke-dip-pita-chips.jpg" alt="Spinach Artichoke Dip with Pita Chips" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Spinach Artichoke Dip with Pita Chips</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 8, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Dip</span>
-              <span class="archive-card-tag">Warm</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./prosciutto-melon.html" aria-label="Read recipe: Prosciutto and Melon">
-        <div class="archive-card-img">
-          <img src="img/prosciutto-melon.jpg" alt="Prosciutto and Melon" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Prosciutto and Melon</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 7, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">No Cook</span>
-              <span class="archive-card-tag">Italian</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./cold-sesame-noodles.html" aria-label="Read recipe: Cold Sesame Noodles">
-        <div class="archive-card-img">
-          <img src="img/cold-sesame-noodles.jpg" alt="Cold Sesame Noodles" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Cold Sesame Noodles</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 6, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Noodles</span>
-              <span class="archive-card-tag">No Cook</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./sleepy-girl-mocktail.html" aria-label="Read recipe: Sleepy Girl Mocktail">
-        <div class="archive-card-img">
-          <img src="img/sleepy-girl-mocktail.jpg" alt="Sleepy Girl Mocktail" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Sleepy Girl Mocktail</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 5, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Drink</span>
-              <span class="archive-card-tag">Viral</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./guacamole-tortilla-chips.html" aria-label="Read recipe: Guacamole and Tortilla Chips">
-        <div class="archive-card-img">
-          <img src="img/guacamole-tortilla-chips.jpg" alt="Guacamole and Tortilla Chips" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Guacamole and Tortilla Chips</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 4, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">No Cook</span>
-              <span class="archive-card-tag">Snack</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./peanut-butter-sesame-noodles.html" aria-label="Read recipe: Peanut Butter Sesame Noodles">
-        <div class="archive-card-img">
-          <img src="img/peanut-butter-sesame-noodles.jpg" alt="Peanut Butter Sesame Noodles" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Peanut Butter Sesame Noodles</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 3, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Noodles</span>
-              <span class="archive-card-tag">Quick</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./crispy-chickpea-feta-bowl.html" aria-label="Read recipe: Crispy Spiced Chickpea and Feta Bowl">
-        <div class="archive-card-img">
-          <img src="img/crispy-chickpea-feta-bowl.jpg" alt="Crispy Spiced Chickpea and Feta Bowl" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Crispy Spiced Chickpea and Feta Bowl</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 2, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Vegetarian</span>
-              <span class="archive-card-tag">Bowl</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./cucumber-cream-cheese-bites.html" aria-label="Read recipe: Cucumber Cream Cheese Bites">
-        <div class="archive-card-img">
-          <img src="img/cucumber-cream-cheese-bites.jpg" alt="Cucumber Cream Cheese Bites" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Cucumber Cream Cheese Bites</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">Jun 1, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">No Cook</span>
-              <span class="archive-card-tag">Healthy</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./classic-cheese-quesadilla.html" aria-label="Read recipe: Classic Cheese Quesadilla">
-        <div class="archive-card-img">
-          <img src="img/classic-cheese-quesadilla.jpg" alt="Classic Cheese Quesadilla" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Classic Cheese Quesadilla</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 31, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Quick</span>
-              <span class="archive-card-tag">Comfort</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./brown-butter-gnocchi-sage.html" aria-label="Read recipe: Brown Butter Gnocchi with Sage">
-        <div class="archive-card-img">
-          <img src="img/brown-butter-gnocchi-sage.jpg" alt="Brown Butter Gnocchi with Sage" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Brown Butter Gnocchi with Sage</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 30, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Pasta</span>
-              <span class="archive-card-tag">Quick</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./antipasto-plate.html" aria-label="Read recipe: Antipasto Plate">
-        <div class="archive-card-img">
-          <img src="img/antipasto-plate.jpg" alt="Antipasto Plate" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Antipasto Plate</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 29, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">No Cook</span>
-              <span class="archive-card-tag">Italian</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./fried-egg-toast-hot-sauce.html" aria-label="Read recipe: Fried Egg on Toast with Hot Sauce">
-        <div class="archive-card-img">
-          <img src="img/fried-egg-toast-hot-sauce.jpg" alt="Fried Egg on Toast with Hot Sauce" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Fried Egg on Toast with Hot Sauce</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 28, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Eggs</span>
-              <span class="archive-card-tag">Quick</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./mezze-plate.html" aria-label="Read recipe: Mezze Plate">
-        <div class="archive-card-img">
-          <img src="img/mezze-plate.jpg" alt="Mezze Plate" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Mezze Plate</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 27, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Mediterranean</span>
-              <span class="archive-card-tag">No Cook</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./brie-raspberry-quesadilla.html" aria-label="Read recipe: Brie and Raspberry Quesadilla">
-        <div class="archive-card-img">
-          <img src="img/brie-raspberry-quesadilla.jpg" alt="Brie and Raspberry Quesadilla" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Brie and Raspberry Quesadilla</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 26, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Quick</span>
-              <span class="archive-card-tag">Sweet-Savory</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./ricotta-toast-honey-pistachios.html" aria-label="Read recipe: Ricotta Toast with Honey and Pistachios">
-        <div class="archive-card-img">
-          <img src="img/ricotta-toast-honey-pistachios.jpg" alt="Ricotta Toast with Honey and Pistachios" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Ricotta Toast with Honey and Pistachios</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 25, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Toast</span>
-              <span class="archive-card-tag">Sweet-Savory</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./stovetop-popcorn-dinner.html" aria-label="Read recipe: Stovetop Popcorn Dinner">
-        <div class="archive-card-img">
-          <img src="img/stovetop-popcorn-dinner.jpg" alt="Stovetop Popcorn Dinner" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Stovetop Popcorn Dinner</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 24, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Snack</span>
-              <span class="archive-card-tag">No Cook</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./caprese-good-olive-oil.html" aria-label="Read recipe: Caprese with Good Olive Oil">
-        <div class="archive-card-img">
-          <img src="img/caprese-good-olive-oil.jpg" alt="Caprese with Good Olive Oil" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Caprese with Good Olive Oil</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 23, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">No Cook</span>
-              <span class="archive-card-tag">Italian</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./instant-ramen-upgraded.html" aria-label="Read recipe: Instant Ramen Upgraded">
-        <div class="archive-card-img">
-          <img src="img/instant-ramen-upgraded.jpg" alt="Instant Ramen Upgraded" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Instant Ramen Upgraded</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 22, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Noodles</span>
-              <span class="archive-card-tag">Quick</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./pickles-cheese-board.html" aria-label="Read recipe: Pickles and Cheese Board">
-        <div class="archive-card-img">
-          <img src="img/pickles-cheese-board.jpg" alt="Pickles and Cheese Board" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Pickles and Cheese Board</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 21, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">No Cook</span>
-              <span class="archive-card-tag">Cheese</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./soft-pretzel-beer-cheese-dip.html" aria-label="Read recipe: Soft Pretzel with Beer Cheese Dip">
-        <div class="archive-card-img">
-          <img src="img/soft-pretzel-beer-cheese-dip.jpg" alt="Soft Pretzel with Beer Cheese Dip" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Soft Pretzel with Beer Cheese Dip</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 20, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Snack</span>
-              <span class="archive-card-tag">Comfort</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./fruit-yogurt-honey-granola.html" aria-label="Read recipe: Fruit and Yogurt Bowl with Honey and Granola">
-        <div class="archive-card-img">
-          <img src="img/fruit-yogurt-honey-granola.jpg" alt="Fruit and Yogurt Bowl with Honey and Granola" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Fruit and Yogurt Bowl with Honey and Granola</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 19, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Healthy</span>
-              <span class="archive-card-tag">No Cook</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./loaded-baked-potato.html" aria-label="Read recipe: Loaded Baked Potato">
-        <div class="archive-card-img">
-          <img src="img/loaded-baked-potato.jpg" alt="Loaded Baked Potato" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Loaded Baked Potato</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 18, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Comfort</span>
-              <span class="archive-card-tag">Filling</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./greek-salad-chickpeas.html" aria-label="Read recipe: Greek Salad with Chickpeas">
-        <div class="archive-card-img">
-          <img src="img/greek-salad-chickpeas.jpg" alt="Greek Salad with Chickpeas" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Greek Salad with Chickpeas</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 17, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Salad</span>
-              <span class="archive-card-tag">Vegetarian</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./brie-jam-apple-board.html" aria-label="Read recipe: Brie with Jam and Apple on a Board">
-        <div class="archive-card-img">
-          <img src="img/brie-jam-apple-board.jpg" alt="Brie with Jam and Apple on a Board" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Brie with Jam and Apple on a Board</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 16, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">No Cook</span>
-              <span class="archive-card-tag">Cheese</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./scrambled-eggs-cream-cheese-chives.html" aria-label="Read recipe: Scrambled Eggs with Cream Cheese and Chives">
-        <div class="archive-card-img">
-          <img src="img/scrambled-eggs-cream-cheese-chives.jpg" alt="Scrambled Eggs with Cream Cheese and Chives" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Scrambled Eggs with Cream Cheese and Chives</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 15, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Eggs</span>
-              <span class="archive-card-tag">Quick</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./butter-noodles-parmesan-black-pepper.html" aria-label="Read recipe: Butter Noodles with Parmesan and Black Pepper">
-        <div class="archive-card-img">
-          <img src="img/butter-noodles-parmesan-black-pepper.jpg" alt="Butter Noodles with Parmesan and Black Pepper" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Butter Noodles with Parmesan and Black Pepper</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 14, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Pasta</span>
-              <span class="archive-card-tag">Comfort</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./charcuterie-snack-plate-for-one.html" aria-label="Read recipe: Charcuterie Snack Plate for One">
-        <div class="archive-card-img">
-          <img src="img/charcuterie-snack-plate-for-one.jpg" alt="Charcuterie Snack Plate for One" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Charcuterie Snack Plate for One</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 13, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">No Cook</span>
-              <span class="archive-card-tag">Classic</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./grilled-cheese-tomato-soup.html" aria-label="Read recipe: Grilled Cheese Dipped in Tomato Soup">
-        <div class="archive-card-img">
-          <img src="img/grilled-cheese-tomato-soup.jpg" alt="Grilled Cheese Dipped in Tomato Soup" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Grilled Cheese Dipped in Tomato Soup</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 12, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Comfort</span>
-              <span class="archive-card-tag">Warm</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./lazy-mac-and-cheese.html" aria-label="Read recipe: Lazy Mac and Cheese">
-        <div class="archive-card-img">
-          <img src="img/lazy-mac-and-cheese.jpg" alt="Lazy Mac and Cheese" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Lazy Mac and Cheese</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 11, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Comfort</span>
-              <span class="archive-card-tag">Quick</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./hummus-plate-warm-pita-toppings.html" aria-label="Read recipe: Hummus Plate with Warm Pita and Toppings">
-        <div class="archive-card-img">
-          <img src="img/hummus-plate-warm-pita-toppings.jpg" alt="Hummus Plate with Warm Pita and Toppings" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Hummus Plate with Warm Pita and Toppings</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 10, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Vegetarian</span>
-              <span class="archive-card-tag">No Cook</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./avocado-toast-everything-bagel-chilli.html" aria-label="Read recipe: Avocado Toast with Everything Bagel and Chilli Flakes">
-        <div class="archive-card-img">
-          <img src="img/avocado-toast-everything-bagel-chilli.jpg" alt="Avocado Toast with Everything Bagel and Chilli Flakes" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Avocado Toast with Everything Bagel and Chilli Flakes</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 9, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Toast</span>
-              <span class="archive-card-tag">Vegetarian</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./smoked-salmon-cream-cheese-capers.html" aria-label="Read recipe: Smoked Salmon Plate with Cream Cheese and Capers">
-        <div class="archive-card-img">
-          <img src="img/smoked-salmon-cream-cheese-capers.jpg" alt="Smoked Salmon Plate with Cream Cheese and Capers" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Smoked Salmon Plate with Cream Cheese and Capers</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 8, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Salmon</span>
-              <span class="archive-card-tag">No Cook</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./burrata-peach-prosciutto.html" aria-label="Read recipe: Burrata with Peach and Prosciutto">
-        <div class="archive-card-img">
-          <img src="img/burrata-peach-prosciutto.jpg" alt="Burrata with Peach and Prosciutto" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Burrata with Peach and Prosciutto</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 7, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">No Cook</span>
-              <span class="archive-card-tag">Fancy</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./tinned-sardines-buttered-toast.html" aria-label="Read recipe: Tinned Sardines on Buttered Toast">
-        <div class="archive-card-img">
-          <img src="img/tinned-sardines-buttered-toast.jpg" alt="Tinned Sardines on Buttered Toast" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Tinned Sardines on Buttered Toast</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 6, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Tinned Fish</span>
-              <span class="archive-card-tag">Toast</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./cottage-cheese-everything-bagel-plate.html" aria-label="Read recipe: Cottage Cheese and Everything Bagel Plate">
-        <div class="archive-card-img">
-          <img src="img/cottage-cheese-everything-bagel-plate.jpg" alt="Cottage Cheese and Everything Bagel Plate" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Cottage Cheese and Everything Bagel Plate</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 5, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">High Protein</span>
-              <span class="archive-card-tag">No Cook</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./baked-feta-pasta.html" aria-label="Read recipe: Baked Feta Pasta">
-        <div class="archive-card-img">
-          <img src="img/baked-feta-pasta.jpg" alt="Baked Feta Pasta" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Baked Feta Pasta</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 4, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Pasta</span>
-              <span class="archive-card-tag">Viral</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./chilli-crisp-noodles-soft-boiled-egg.html" aria-label="Read recipe: Chilli Crisp Noodles with Soft-Boiled Egg">
-        <div class="archive-card-img">
-          <img src="img/chilli-crisp-noodles-soft-boiled-egg.jpg" alt="Chilli Crisp Noodles with Soft-Boiled Egg" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Chilli Crisp Noodles with Soft-Boiled Egg</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 3, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">Noodles</span>
-              <span class="archive-card-tag">Spicy</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./whipped-feta-hot-honey-walnuts.html" aria-label="Read recipe: Whipped Feta with Hot Honey and Walnuts">
-        <div class="archive-card-img">
-          <img src="img/whipped-feta-hot-honey-walnuts.jpg" alt="Whipped Feta with Hot Honey and Walnuts" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">Whipped Feta with Hot Honey and Walnuts</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 2, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">No Cook</span>
-              <span class="archive-card-tag">Cheese</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-
-        <article class="archive-card reveal">
-      <a href="./og-girl-dinner.html" aria-label="Read recipe: The OG Girl Dinner">
-        <div class="archive-card-img">
-          <img src="img/og-girl-dinner.jpg" alt="The OG Girl Dinner" width="600" height="450" loading="lazy">
-        </div>
-        <div class="archive-card-body">
-          <p class="archive-card-name">The OG Girl Dinner</p>
-          <div class="archive-card-meta">
-            <span class="archive-card-date">May 1, 2026</span>
-            <div class="archive-card-tags">
-              <span class="archive-card-tag">No Cook</span>
-              <span class="archive-card-tag">Classic</span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </article>
-  </section>
+<article class="archive-card reveal"><a href="./carbonara-for-one"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/carbonara-for-one-480.webp 480w, img/carbonara-for-one-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/carbonara-for-one.jpg" alt="Photograph of bowl of spaghetti carbonara with crispy guanciale and a heavy dusting of black pepper" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Carbonara for One</p><div class="archive-card-meta"><span class="archive-card-date">Jul 13, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Pasta</span><span class="archive-card-tag">Italian</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./stuffed-bell-pepper-rice-feta"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/stuffed-bell-pepper-rice-feta-480.webp 480w, img/stuffed-bell-pepper-rice-feta-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/stuffed-bell-pepper-rice-feta.jpg" alt="Photograph of baked bell pepper halves stuffed with herby rice, feta, and cherry tomatoes" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Stuffed Bell Pepper with Rice and Feta</p><div class="archive-card-meta"><span class="archive-card-date">Jul 12, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Vegetarian</span><span class="archive-card-tag">Filling</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./anchovy-butter-toast"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/anchovy-butter-toast-480.webp 480w, img/anchovy-butter-toast-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/anchovy-butter-toast.jpg" alt="Photograph of sourdough toast spread with anchovy butter, topped with sliced radishes and lemon" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Anchovy Butter Toast</p><div class="archive-card-meta"><span class="archive-card-date">Jul 11, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Toast</span><span class="archive-card-tag">Umami</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./prosciutto-fig-toast"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/prosciutto-fig-toast-480.webp 480w, img/prosciutto-fig-toast-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/prosciutto-fig-toast.jpg" alt="Photograph of sourdough toast spread with ricotta, topped with prosciutto, figs, and a honey drizzle" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Prosciutto and Fig Toast</p><div class="archive-card-meta"><span class="archive-card-date">Jul 10, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Toast</span><span class="archive-card-tag">Fancy</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./homemade-crunchwrap"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/homemade-crunchwrap-480.webp 480w, img/homemade-crunchwrap-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/homemade-crunchwrap.jpg" alt="Photograph of golden crispy crunchwrap cut in half to show layers of beef, cheese, and lettuce" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Homemade Crunchwrap</p><div class="archive-card-meta"><span class="archive-card-date">Jul 9, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Comfort</span><span class="archive-card-tag">Mexican</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./pasta-e-fagioli"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/pasta-e-fagioli-480.webp 480w, img/pasta-e-fagioli-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/pasta-e-fagioli.jpg" alt="Photograph of bowl of pasta e fagioli soup with white beans, small pasta, and a drizzle of olive oil" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Pasta e Fagioli</p><div class="archive-card-meta"><span class="archive-card-date">Jul 8, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Soup</span><span class="archive-card-tag">Italian</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./labneh-zaatar-olive-oil"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/labneh-zaatar-olive-oil-480.webp 480w, img/labneh-zaatar-olive-oil-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/labneh-zaatar-olive-oil.jpg" alt="Photograph of bowl of labneh drizzled with olive oil and dusted with za&#39;atar, served with pita" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Labneh with Za&#39;atar and Olive Oil</p><div class="archive-card-meta"><span class="archive-card-date">Jul 7, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">No Cook</span><span class="archive-card-tag">Mediterranean</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./frittata-for-one"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/frittata-for-one-480.webp 480w, img/frittata-for-one-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/frittata-for-one.jpg" alt="Photograph of small skillet frittata with cherry tomatoes and herbs, sliced and golden" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Frittata for One</p><div class="archive-card-meta"><span class="archive-card-date">Jul 6, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Eggs</span><span class="archive-card-tag">Versatile</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./stracciatella-olive-oil-grilled-bread"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/stracciatella-olive-oil-grilled-bread-480.webp 480w, img/stracciatella-olive-oil-grilled-bread-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/stracciatella-olive-oil-grilled-bread.jpg" alt="Photograph of plate of creamy stracciatella cheese drizzled with olive oil, served with grilled bread" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Stracciatella with Olive Oil and Grilled Bread</p><div class="archive-card-meta"><span class="archive-card-date">Jul 5, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">No Cook</span><span class="archive-card-tag">Italian</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./4th-of-july-burrata-plate"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/4th-of-july-burrata-plate-480.webp 480w, img/4th-of-july-burrata-plate-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/4th-of-july-burrata-plate.jpg" alt="Photograph of dark moody plate with burrata, fresh strawberries, blueberries, balsamic glaze, and crackers overhead flatlay food photography" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">4th of July Burrata Plate</p><div class="archive-card-meta"><span class="archive-card-date">Jul 4, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">No Cook</span><span class="archive-card-tag">Fancy</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./egg-yolk-garlic-pasta"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/egg-yolk-garlic-pasta-480.webp 480w, img/egg-yolk-garlic-pasta-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/egg-yolk-garlic-pasta.jpg" alt="Photograph of bowl of spaghetti in a creamy garlic sauce with grated parmesan and chilli flakes" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Egg Yolk Garlic Pasta</p><div class="archive-card-meta"><span class="archive-card-date">Jul 3, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Pasta</span><span class="archive-card-tag">Eggs</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./white-bean-dip-lemon-rosemary"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/white-bean-dip-lemon-rosemary-480.webp 480w, img/white-bean-dip-lemon-rosemary-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/white-bean-dip-lemon-rosemary.jpg" alt="Photograph of bowl of creamy white bean dip with olive oil, lemon, and rosemary, served with crackers" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">White Bean Dip with Lemon and Rosemary</p><div class="archive-card-meta"><span class="archive-card-date">Jul 2, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Dip</span><span class="archive-card-tag">Vegetarian</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./matcha-latte-banana-peanut-butter"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/matcha-latte-banana-peanut-butter-480.webp 480w, img/matcha-latte-banana-peanut-butter-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/matcha-latte-banana-peanut-butter.jpg" alt="Photograph of mug of frothy green matcha latte served with a banana and a side of peanut butter" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Matcha Latte and Banana with Peanut Butter</p><div class="archive-card-meta"><span class="archive-card-date">Jul 1, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Drink</span><span class="archive-card-tag">Sweet</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./panzanella"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/panzanella-480.webp 480w, img/panzanella-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/panzanella.jpg" alt="Photograph of rustic bowl of panzanella salad with torn sourdough, juicy tomatoes, red onion, and basil" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Panzanella</p><div class="archive-card-meta"><span class="archive-card-date">Jun 30, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Salad</span><span class="archive-card-tag">Italian</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./savory-cottage-cheese-bowl"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/savory-cottage-cheese-bowl-480.webp 480w, img/savory-cottage-cheese-bowl-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/savory-cottage-cheese-bowl.jpg" alt="Photograph of bowl of cottage cheese topped with diced cucumbers, cherry tomatoes, and everything bagel seasoning" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Savory Cottage Cheese Bowl</p><div class="archive-card-meta"><span class="archive-card-date">Jun 29, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">High Protein</span><span class="archive-card-tag">Healthy</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./spaghetti-aglio-e-olio"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/spaghetti-aglio-e-olio-480.webp 480w, img/spaghetti-aglio-e-olio-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/spaghetti-aglio-e-olio.jpg" alt="Photograph of bowl of spaghetti in garlic and olive oil with chilli flakes and fresh parsley" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Spaghetti Aglio e Olio</p><div class="archive-card-meta"><span class="archive-card-date">Jun 28, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Pasta</span><span class="archive-card-tag">Italian</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./caramelized-onion-dip-ridged-chips"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/caramelized-onion-dip-ridged-chips-480.webp 480w, img/caramelized-onion-dip-ridged-chips-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/caramelized-onion-dip-ridged-chips.jpg" alt="Photograph of bowl of creamy caramelized onion dip served with ridged potato chips" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Caramelized Onion Dip with Ridged Chips</p><div class="archive-card-meta"><span class="archive-card-date">Jun 27, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Dip</span><span class="archive-card-tag">Comfort</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./loaded-sweet-potato-black-beans"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/loaded-sweet-potato-black-beans-480.webp 480w, img/loaded-sweet-potato-black-beans-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/loaded-sweet-potato-black-beans.jpg" alt="Photograph of baked sweet potato split open and loaded with black beans, avocado, and lime crema" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Loaded Sweet Potato with Black Beans</p><div class="archive-card-meta"><span class="archive-card-date">Jun 26, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Vegetarian</span><span class="archive-card-tag">Filling</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./hot-honey-butter-toast"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/hot-honey-butter-toast-480.webp 480w, img/hot-honey-butter-toast-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/hot-honey-butter-toast.jpg" alt="Photograph of thick toast heavily buttered and drizzled with hot honey and flaky salt" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Hot Honey Butter Toast</p><div class="archive-card-meta"><span class="archive-card-date">Jun 25, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Toast</span><span class="archive-card-tag">Sweet-Savory</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./miso-soup-tofu-noodles"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/miso-soup-tofu-noodles-480.webp 480w, img/miso-soup-tofu-noodles-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/miso-soup-tofu-noodles.jpg" alt="Photograph of bowl of miso soup with silken tofu, noodles, spring onions, and nori" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Miso Soup with Tofu and Noodles</p><div class="archive-card-meta"><span class="archive-card-date">Jun 24, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Soup</span><span class="archive-card-tag">Warm</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./sheet-pan-nachos"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/sheet-pan-nachos-480.webp 480w, img/sheet-pan-nachos-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/sheet-pan-nachos.jpg" alt="Photograph of sheet pan of tortilla chips loaded with melted cheese, jalapenos, and black beans" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Sheet Pan Nachos</p><div class="archive-card-meta"><span class="archive-card-date">Jun 23, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Comfort</span><span class="archive-card-tag">Snack</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./medjool-dates-almond-butter-salt"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/medjool-dates-almond-butter-salt-480.webp 480w, img/medjool-dates-almond-butter-salt-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/medjool-dates-almond-butter-salt.jpg" alt="Photograph of plate of Medjool dates stuffed with almond butter and sprinkled with flaky sea salt" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Medjool Dates with Almond Butter and Flaky Salt</p><div class="archive-card-meta"><span class="archive-card-date">Jun 22, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Sweet</span><span class="archive-card-tag">No Cook</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./kimchi-butter-ramen"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/kimchi-butter-ramen-480.webp 480w, img/kimchi-butter-ramen-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/kimchi-butter-ramen.jpg" alt="Photograph of bowl of ramen with kimchi, butter, an egg, and spring onions" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Kimchi Butter Ramen</p><div class="archive-card-meta"><span class="archive-card-date">Jun 21, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Noodles</span><span class="archive-card-tag">Korean</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./avocado-egg-salad-lettuce-cups"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/avocado-egg-salad-lettuce-cups-480.webp 480w, img/avocado-egg-salad-lettuce-cups-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/avocado-egg-salad-lettuce-cups.jpg" alt="Photograph of crisp lettuce leaves filled with creamy avocado and chopped egg salad, dusted with paprika" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Avocado and Egg Salad Lettuce Cups</p><div class="archive-card-meta"><span class="archive-card-date">Jun 20, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Healthy</span><span class="archive-card-tag">No Cook</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./tinned-fish-board"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/tinned-fish-board-480.webp 480w, img/tinned-fish-board-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/tinned-fish-board.jpg" alt="Photograph of wooden board with open tins of sardines and oysters, crackers, cornichons, and mustard" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Tinned Fish Board</p><div class="archive-card-meta"><span class="archive-card-date">Jun 19, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Tinned Fish</span><span class="archive-card-tag">No Cook</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./cacio-e-pepe"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/cacio-e-pepe-480.webp 480w, img/cacio-e-pepe-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/cacio-e-pepe.jpg" alt="Photograph of bowl of spaghetti in a silky black pepper and pecorino sauce" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Cacio e Pepe</p><div class="archive-card-meta"><span class="archive-card-date">Jun 18, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Pasta</span><span class="archive-card-tag">Italian</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./shakshuka-for-one"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/shakshuka-for-one-480.webp 480w, img/shakshuka-for-one-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/shakshuka-for-one.jpg" alt="Photograph of cast iron skillet of shakshuka with eggs poached in spiced tomato sauce, topped with feta" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Shakshuka for One</p><div class="archive-card-meta"><span class="archive-card-date">Jun 17, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Eggs</span><span class="archive-card-tag">Spicy</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./goat-cheese-honey-walnut-toast"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/goat-cheese-honey-walnut-toast-480.webp 480w, img/goat-cheese-honey-walnut-toast-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/goat-cheese-honey-walnut-toast.jpg" alt="Photograph of sourdough toast spread with goat cheese, drizzled with honey, and topped with walnuts" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Goat Cheese Toast with Honey and Walnuts</p><div class="archive-card-meta"><span class="archive-card-date">Jun 16, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Toast</span><span class="archive-card-tag">Cheese</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./tuna-salad-crackers"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/tuna-salad-crackers-480.webp 480w, img/tuna-salad-crackers-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/tuna-salad-crackers.jpg" alt="Photograph of bowl of tuna salad with celery and capers, served alongside a pile of crackers" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Tuna Salad on Crackers</p><div class="archive-card-meta"><span class="archive-card-date">Jun 15, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">No Cook</span><span class="archive-card-tag">Quick</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./elevated-canned-tomato-soup"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/elevated-canned-tomato-soup-480.webp 480w, img/elevated-canned-tomato-soup-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/elevated-canned-tomato-soup.jpg" alt="Photograph of mug of creamy tomato soup topped with croutons and a drizzle of olive oil" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Elevated Canned Tomato Soup</p><div class="archive-card-meta"><span class="archive-card-date">Jun 14, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Comfort</span><span class="archive-card-tag">Quick</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./edamame-garlic-butter-chilli"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/edamame-garlic-butter-chilli-480.webp 480w, img/edamame-garlic-butter-chilli-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/edamame-garlic-butter-chilli.jpg" alt="Photograph of bowl of edamame pods tossed in garlic butter, chilli flakes, and flaky sea salt" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Edamame with Garlic Butter and Chilli</p><div class="archive-card-meta"><span class="archive-card-date">Jun 13, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Healthy</span><span class="archive-card-tag">Quick</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./cherry-tomato-mozzarella-pasta"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/cherry-tomato-mozzarella-pasta-480.webp 480w, img/cherry-tomato-mozzarella-pasta-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/cherry-tomato-mozzarella-pasta.jpg" alt="Photograph of bowl of rigatoni pasta with blistered cherry tomatoes, torn mozzarella, and fresh basil" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Cherry Tomato and Mozzarella Pasta</p><div class="archive-card-meta"><span class="archive-card-date">Jun 12, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Pasta</span><span class="archive-card-tag">Vegetarian</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./garlic-parmesan-toast"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/garlic-parmesan-toast-480.webp 480w, img/garlic-parmesan-toast-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/garlic-parmesan-toast.jpg" alt="Photograph of toasted crusty bread topped with melted garlic butter and crispy parmesan" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Garlic Parmesan Toast</p><div class="archive-card-meta"><span class="archive-card-date">Jun 11, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Toast</span><span class="archive-card-tag">Comfort</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./adult-lunchable-plate"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/adult-lunchable-plate-480.webp 480w, img/adult-lunchable-plate-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/adult-lunchable-plate.jpg" alt="Photograph of plate with distinct piles of crackers, deli turkey, cheddar cheese, and red grapes" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Adult Lunchable Plate</p><div class="archive-card-meta"><span class="archive-card-date">Jun 10, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">No Cook</span><span class="archive-card-tag">Snack</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./lox-plate-cucumber"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/lox-plate-cucumber-480.webp 480w, img/lox-plate-cucumber-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/lox-plate-cucumber.jpg" alt="Photograph of cucumber rounds topped with cream cheese, smoked salmon, capers, red onion, and dill" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Lox Plate on Cucumber</p><div class="archive-card-meta"><span class="archive-card-date">Jun 9, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">No Cook</span><span class="archive-card-tag">Healthy</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./spinach-artichoke-dip-pita-chips"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/spinach-artichoke-dip-pita-chips-480.webp 480w, img/spinach-artichoke-dip-pita-chips-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/spinach-artichoke-dip-pita-chips.jpg" alt="Photograph of bubbling golden spinach and artichoke dip served with pita chips" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Spinach Artichoke Dip with Pita Chips</p><div class="archive-card-meta"><span class="archive-card-date">Jun 8, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Dip</span><span class="archive-card-tag">Warm</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./prosciutto-melon"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/prosciutto-melon-480.webp 480w, img/prosciutto-melon-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/prosciutto-melon.jpg" alt="Photograph of plate of cantaloupe melon slices wrapped in prosciutto, garnished with black pepper" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Prosciutto and Melon</p><div class="archive-card-meta"><span class="archive-card-date">Jun 7, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">No Cook</span><span class="archive-card-tag">Italian</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./cold-sesame-noodles"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/cold-sesame-noodles-480.webp 480w, img/cold-sesame-noodles-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/cold-sesame-noodles.jpg" alt="Photograph of bowl of cold noodles in dark sesame sauce, topped with cucumber, spring onions, and chilli oil" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Cold Sesame Noodles</p><div class="archive-card-meta"><span class="archive-card-date">Jun 6, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Noodles</span><span class="archive-card-tag">No Cook</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./sleepy-girl-mocktail"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/sleepy-girl-mocktail-480.webp 480w, img/sleepy-girl-mocktail-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/sleepy-girl-mocktail.jpg" alt="Photograph of glass of iced tart cherry juice mixed with sparkling water, garnished with lime" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Sleepy Girl Mocktail</p><div class="archive-card-meta"><span class="archive-card-date">Jun 5, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Drink</span><span class="archive-card-tag">Viral</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./guacamole-tortilla-chips"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/guacamole-tortilla-chips-480.webp 480w, img/guacamole-tortilla-chips-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/guacamole-tortilla-chips.jpg" alt="Photograph of rustic bowl of chunky guacamole served with tortilla chips" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Guacamole and Tortilla Chips</p><div class="archive-card-meta"><span class="archive-card-date">Jun 4, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">No Cook</span><span class="archive-card-tag">Snack</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./peanut-butter-sesame-noodles"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/peanut-butter-sesame-noodles-480.webp 480w, img/peanut-butter-sesame-noodles-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/peanut-butter-sesame-noodles.jpg" alt="Photograph of bowl of soba noodles in peanut sesame sauce, topped with spring onions and cucumber ribbons" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Peanut Butter Sesame Noodles</p><div class="archive-card-meta"><span class="archive-card-date">Jun 3, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Noodles</span><span class="archive-card-tag">Quick</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./crispy-chickpea-feta-bowl"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/crispy-chickpea-feta-bowl-480.webp 480w, img/crispy-chickpea-feta-bowl-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/crispy-chickpea-feta-bowl.jpg" alt="Photograph of bowl of lemony yogurt topped with crispy spiced chickpeas, feta, and fresh herbs" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Crispy Spiced Chickpea and Feta Bowl</p><div class="archive-card-meta"><span class="archive-card-date">Jun 2, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Vegetarian</span><span class="archive-card-tag">Bowl</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./cucumber-cream-cheese-bites"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/cucumber-cream-cheese-bites-480.webp 480w, img/cucumber-cream-cheese-bites-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/cucumber-cream-cheese-bites.jpg" alt="Photograph of cucumber rounds topped with cream cheese, everything bagel seasoning, and smoked salmon" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Cucumber Cream Cheese Bites</p><div class="archive-card-meta"><span class="archive-card-date">Jun 1, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">No Cook</span><span class="archive-card-tag">Healthy</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./classic-cheese-quesadilla"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/classic-cheese-quesadilla-480.webp 480w, img/classic-cheese-quesadilla-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/classic-cheese-quesadilla.jpg" alt="Photograph of golden crispy cheese quesadilla served with salsa and sour cream" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Classic Cheese Quesadilla</p><div class="archive-card-meta"><span class="archive-card-date">May 31, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Quick</span><span class="archive-card-tag">Comfort</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./brown-butter-gnocchi-sage"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/brown-butter-gnocchi-sage-480.webp 480w, img/brown-butter-gnocchi-sage-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/brown-butter-gnocchi-sage.jpg" alt="Photograph of bowl of potato gnocchi in brown butter sauce with crispy sage leaves and parmesan" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Brown Butter Gnocchi with Sage</p><div class="archive-card-meta"><span class="archive-card-date">May 30, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Pasta</span><span class="archive-card-tag">Quick</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./antipasto-plate"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/antipasto-plate-480.webp 480w, img/antipasto-plate-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/antipasto-plate.jpg" alt="Photograph of plate of salami, marinated artichoke hearts, olives, mozzarella balls, and roasted peppers" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Antipasto Plate</p><div class="archive-card-meta"><span class="archive-card-date">May 29, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">No Cook</span><span class="archive-card-tag">Italian</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./fried-egg-toast-hot-sauce"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/fried-egg-toast-hot-sauce-480.webp 480w, img/fried-egg-toast-hot-sauce-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/fried-egg-toast-hot-sauce.jpg" alt="Photograph of sourdough toast topped with fried eggs with crispy edges, drizzled with hot sauce" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Fried Egg on Toast with Hot Sauce</p><div class="archive-card-meta"><span class="archive-card-date">May 28, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Eggs</span><span class="archive-card-tag">Quick</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./mezze-plate"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/mezze-plate-480.webp 480w, img/mezze-plate-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/mezze-plate.jpg" alt="Photograph of mezze plate with hummus, tabbouleh, olives, feta, sliced cucumber, and torn pita" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Mezze Plate</p><div class="archive-card-meta"><span class="archive-card-date">May 27, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Mediterranean</span><span class="archive-card-tag">No Cook</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./brie-raspberry-quesadilla"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/brie-raspberry-quesadilla-480.webp 480w, img/brie-raspberry-quesadilla-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/brie-raspberry-quesadilla.jpg" alt="Photograph of golden crispy quesadilla cut in half, showing melted brie and raspberry jam inside" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Brie and Raspberry Quesadilla</p><div class="archive-card-meta"><span class="archive-card-date">May 26, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Quick</span><span class="archive-card-tag">Sweet-Savory</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./ricotta-toast-honey-pistachios"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/ricotta-toast-honey-pistachios-480.webp 480w, img/ricotta-toast-honey-pistachios-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/ricotta-toast-honey-pistachios.jpg" alt="Photograph of sourdough toast spread with ricotta, drizzled with honey, and topped with pistachios" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Ricotta Toast with Honey and Pistachios</p><div class="archive-card-meta"><span class="archive-card-date">May 25, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Toast</span><span class="archive-card-tag">Sweet-Savory</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./stovetop-popcorn-dinner"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/stovetop-popcorn-dinner-480.webp 480w, img/stovetop-popcorn-dinner-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/stovetop-popcorn-dinner.jpg" alt="Photograph of large bowl of stovetop popcorn dusted with seasoning and melted butter" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Stovetop Popcorn Dinner</p><div class="archive-card-meta"><span class="archive-card-date">May 24, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Snack</span><span class="archive-card-tag">No Cook</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./caprese-good-olive-oil"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/caprese-good-olive-oil-480.webp 480w, img/caprese-good-olive-oil-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/caprese-good-olive-oil.jpg" alt="Photograph of plate of alternating heirloom tomato and mozzarella slices with fresh basil and olive oil" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Caprese with Good Olive Oil</p><div class="archive-card-meta"><span class="archive-card-date">May 23, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">No Cook</span><span class="archive-card-tag">Italian</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./instant-ramen-upgraded"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/instant-ramen-upgraded-480.webp 480w, img/instant-ramen-upgraded-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/instant-ramen-upgraded.jpg" alt="Photograph of bowl of ramen with an egg, butter, spring onions, sesame seeds, and chilli crisp" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Instant Ramen Upgraded</p><div class="archive-card-meta"><span class="archive-card-date">May 22, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Noodles</span><span class="archive-card-tag">Quick</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./pickles-cheese-board"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/pickles-cheese-board-480.webp 480w, img/pickles-cheese-board-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/pickles-cheese-board.jpg" alt="Photograph of plate of dill pickles, sharp cheddar slices, and crackers" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Pickles and Cheese Board</p><div class="archive-card-meta"><span class="archive-card-date">May 21, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">No Cook</span><span class="archive-card-tag">Cheese</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./soft-pretzel-beer-cheese-dip"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/soft-pretzel-beer-cheese-dip-480.webp 480w, img/soft-pretzel-beer-cheese-dip-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/soft-pretzel-beer-cheese-dip.jpg" alt="Photograph of basket of warm soft pretzels served with a bowl of melted beer cheese dip" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Soft Pretzel with Beer Cheese Dip</p><div class="archive-card-meta"><span class="archive-card-date">May 20, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Snack</span><span class="archive-card-tag">Comfort</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./fruit-yogurt-honey-granola"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/fruit-yogurt-honey-granola-480.webp 480w, img/fruit-yogurt-honey-granola-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/fruit-yogurt-honey-granola.jpg" alt="Photograph of bowl of thick Greek yogurt topped with granola, mixed berries, and a drizzle of honey" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Fruit and Yogurt Bowl with Honey and Granola</p><div class="archive-card-meta"><span class="archive-card-date">May 19, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Healthy</span><span class="archive-card-tag">No Cook</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./loaded-baked-potato"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/loaded-baked-potato-480.webp 480w, img/loaded-baked-potato-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/loaded-baked-potato.jpg" alt="Photograph of baked potato split open and loaded with sour cream, cheddar, chives, and butter" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Loaded Baked Potato</p><div class="archive-card-meta"><span class="archive-card-date">May 18, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Comfort</span><span class="archive-card-tag">Filling</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./greek-salad-chickpeas"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/greek-salad-chickpeas-480.webp 480w, img/greek-salad-chickpeas-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/greek-salad-chickpeas.jpg" alt="Photograph of bowl of chunky cucumber, cherry tomatoes, chickpeas, olives, and crumbled feta" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Greek Salad with Chickpeas</p><div class="archive-card-meta"><span class="archive-card-date">May 17, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Salad</span><span class="archive-card-tag">Vegetarian</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./brie-jam-apple-board"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/brie-jam-apple-board-480.webp 480w, img/brie-jam-apple-board-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/brie-jam-apple-board.jpg" alt="Photograph of small wooden board with a wedge of brie, fig jam, apple slices, and water crackers" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Brie with Jam and Apple on a Board</p><div class="archive-card-meta"><span class="archive-card-date">May 16, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">No Cook</span><span class="archive-card-tag">Cheese</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./scrambled-eggs-cream-cheese-chives"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/scrambled-eggs-cream-cheese-chives-480.webp 480w, img/scrambled-eggs-cream-cheese-chives-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/scrambled-eggs-cream-cheese-chives.jpg" alt="Photograph of plate of soft scrambled eggs with cream cheese and chives, served with toast" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Scrambled Eggs with Cream Cheese and Chives</p><div class="archive-card-meta"><span class="archive-card-date">May 15, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Eggs</span><span class="archive-card-tag">Quick</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./butter-noodles-parmesan-black-pepper"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/butter-noodles-parmesan-black-pepper-480.webp 480w, img/butter-noodles-parmesan-black-pepper-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/butter-noodles-parmesan-black-pepper.jpg" alt="Photograph of bowl of spaghetti tossed in butter and parmesan with coarsely ground black pepper" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Butter Noodles with Parmesan and Black Pepper</p><div class="archive-card-meta"><span class="archive-card-date">May 14, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Pasta</span><span class="archive-card-tag">Comfort</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./charcuterie-snack-plate-for-one"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/charcuterie-snack-plate-for-one-480.webp 480w, img/charcuterie-snack-plate-for-one-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/charcuterie-snack-plate-for-one.jpg" alt="Photograph of small wooden board with folded salami, sliced cheddar, crackers, grapes, olives, and mustard" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Charcuterie Snack Plate for One</p><div class="archive-card-meta"><span class="archive-card-date">May 13, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">No Cook</span><span class="archive-card-tag">Classic</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./grilled-cheese-tomato-soup"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/grilled-cheese-tomato-soup-480.webp 480w, img/grilled-cheese-tomato-soup-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/grilled-cheese-tomato-soup.jpg" alt="Photograph of grilled cheese sandwich cut in half, served with a bowl of tomato soup for dipping" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Grilled Cheese Dipped in Tomato Soup</p><div class="archive-card-meta"><span class="archive-card-date">May 12, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Comfort</span><span class="archive-card-tag">Warm</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./lazy-mac-and-cheese"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/lazy-mac-and-cheese-480.webp 480w, img/lazy-mac-and-cheese-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/lazy-mac-and-cheese.jpg" alt="Photograph of bowl of creamy macaroni and cheese topped with freshly ground black pepper" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Lazy Mac and Cheese</p><div class="archive-card-meta"><span class="archive-card-date">May 11, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Comfort</span><span class="archive-card-tag">Quick</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./hummus-plate-warm-pita-toppings"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/hummus-plate-warm-pita-toppings-480.webp 480w, img/hummus-plate-warm-pita-toppings-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/hummus-plate-warm-pita-toppings.jpg" alt="Photograph of bowl of hummus swirled with olive oil and paprika, served with warm pita, cucumbers, and olives" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Hummus Plate with Warm Pita and Toppings</p><div class="archive-card-meta"><span class="archive-card-date">May 10, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Vegetarian</span><span class="archive-card-tag">No Cook</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./avocado-toast-everything-bagel-chilli"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/avocado-toast-everything-bagel-chilli-480.webp 480w, img/avocado-toast-everything-bagel-chilli-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/avocado-toast-everything-bagel-chilli.jpg" alt="Photograph of sourdough toast topped with mashed avocado, everything bagel seasoning, and chilli flakes" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Avocado Toast with Everything Bagel and Chilli Flakes</p><div class="archive-card-meta"><span class="archive-card-date">May 9, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Toast</span><span class="archive-card-tag">Vegetarian</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./smoked-salmon-cream-cheese-capers"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/smoked-salmon-cream-cheese-capers-480.webp 480w, img/smoked-salmon-cream-cheese-capers-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/smoked-salmon-cream-cheese-capers.jpg" alt="Photograph of plate of smoked salmon, cream cheese bowl, capers, red onion, rye crackers, and dill" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Smoked Salmon Plate with Cream Cheese and Capers</p><div class="archive-card-meta"><span class="archive-card-date">May 8, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Salmon</span><span class="archive-card-tag">No Cook</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./burrata-peach-prosciutto"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/burrata-peach-prosciutto-480.webp 480w, img/burrata-peach-prosciutto-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/burrata-peach-prosciutto.jpg" alt="Photograph of plate with burrata, sliced peaches, prosciutto, balsamic glaze, and fresh basil" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Burrata with Peach and Prosciutto</p><div class="archive-card-meta"><span class="archive-card-date">May 7, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">No Cook</span><span class="archive-card-tag">Fancy</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./tinned-sardines-buttered-toast"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/tinned-sardines-buttered-toast-480.webp 480w, img/tinned-sardines-buttered-toast-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/tinned-sardines-buttered-toast.jpg" alt="Photograph of sourdough toast heavily buttered and topped with sardines, lemon wedges, and black pepper" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Tinned Sardines on Buttered Toast</p><div class="archive-card-meta"><span class="archive-card-date">May 6, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Tinned Fish</span><span class="archive-card-tag">Toast</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./cottage-cheese-everything-bagel-plate"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/cottage-cheese-everything-bagel-plate-480.webp 480w, img/cottage-cheese-everything-bagel-plate-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/cottage-cheese-everything-bagel-plate.jpg" alt="Photograph of bowl of cottage cheese topped with everything bagel seasoning, olive oil, cherry tomatoes, and crackers" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Cottage Cheese and Everything Bagel Plate</p><div class="archive-card-meta"><span class="archive-card-date">May 5, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">High Protein</span><span class="archive-card-tag">No Cook</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./baked-feta-pasta"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/baked-feta-pasta-480.webp 480w, img/baked-feta-pasta-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/baked-feta-pasta.jpg" alt="Photograph of baked pasta with melted feta and burst cherry tomatoes in a ceramic casserole dish" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Baked Feta Pasta</p><div class="archive-card-meta"><span class="archive-card-date">May 4, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Pasta</span><span class="archive-card-tag">Viral</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./chilli-crisp-noodles-soft-boiled-egg"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/chilli-crisp-noodles-soft-boiled-egg-480.webp 480w, img/chilli-crisp-noodles-soft-boiled-egg-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/chilli-crisp-noodles-soft-boiled-egg.jpg" alt="Photograph of bowl of noodles in red chilli crisp oil topped with a halved soft boiled egg and spring onions" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Chilli Crisp Noodles with Soft-Boiled Egg</p><div class="archive-card-meta"><span class="archive-card-date">May 3, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">Noodles</span><span class="archive-card-tag">Spicy</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./whipped-feta-hot-honey-walnuts"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/whipped-feta-hot-honey-walnuts-480.webp 480w, img/whipped-feta-hot-honey-walnuts-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/whipped-feta-hot-honey-walnuts.jpg" alt="Photograph of ceramic bowl of whipped feta drizzled with hot honey and scattered with toasted walnuts, served with crackers" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">Whipped Feta with Hot Honey and Walnuts</p><div class="archive-card-meta"><span class="archive-card-date">May 2, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">No Cook</span><span class="archive-card-tag">Cheese</span></div></div></div></a></article>
+<article class="archive-card reveal"><a href="./og-girl-dinner"><div class="archive-card-img"><picture><source type="image/webp" srcset="img/og-girl-dinner-480.webp 480w, img/og-girl-dinner-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/og-girl-dinner.jpg" alt="Photograph of rustic wooden board with sliced sourdough, thick slabs of butter, sharp cheddar, red grapes, and dill pickles" width="600" height="600" loading="lazy"></picture></div><div class="archive-card-body"><p class="archive-card-name">The OG Girl Dinner</p><div class="archive-card-meta"><span class="archive-card-date">May 1, 2026</span><div class="archive-card-tags"><span class="archive-card-tag">No Cook</span><span class="archive-card-tag">Classic</span></div></div></div></a></article>
+</section>
 
   <!-- Load More Button -->
   <div class="archive-load-more" id="archive-load-more" style="display: none;">
@@ -1464,7 +659,7 @@
     <nav class="footer-links" aria-label="Footer navigation">
       <a href="https://shop.foidslop.com/" target="_blank" rel="noopener noreferrer">Shop<span class="sr-only"> (opens in new tab)</span></a>
       <span class="footer-dot" aria-hidden="true"></span>
-      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../privacy">Privacy Policy</a>
     </nav>
   </div>
 </footer>

@@ -1,0 +1,100 @@
+.content-page,
+.article-page {
+  padding: 132px 40px 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.content-hero,
+.article-page {
+  max-width: 880px;
+}
+
+.content-hero { margin-bottom: 52px; }
+.content-eyebrow {
+  color: var(--muted);
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .15em;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+.content-hero h1,
+.article-page h1 {
+  color: var(--text);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 400;
+  letter-spacing: .01em;
+  line-height: .9;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+}
+.content-hero > p:last-child,
+.article-deck {
+  color: rgba(255,255,255,.72);
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  line-height: 1.75;
+  max-width: 760px;
+}
+.content-grid,
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+.related-card { background: var(--bg); min-width: 0; }
+.related-card a { color: var(--text); display: block; text-decoration: none; }
+.related-card picture { display: block; }
+.related-card img { aspect-ratio: 1; display: block; object-fit: cover; width: 100%; height: auto; }
+.related-card span {
+  display: block;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.35rem;
+  line-height: 1.05;
+  padding: 18px;
+}
+.hub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 48px;
+}
+.hub-links a,
+.article-cta a {
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: .7rem;
+  letter-spacing: .1em;
+  padding: 10px 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.article-page h2 {
+  color: var(--text);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: .03em;
+  margin: 56px 0 12px;
+  text-transform: uppercase;
+}
+.article-page p:not(.content-eyebrow),
+.article-page li {
+  color: rgba(255,255,255,.7);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.article-page ul { margin: 18px 0 0 24px; }
+.article-page .article-cta { margin-top: 48px; }
+.article-cta a { display: inline-block; margin: 5px; }
+
+@media (max-width: 960px) {
+  .content-grid, .related-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .content-page, .article-page { padding: 104px 20px 56px; }
+  .content-grid, .related-grid { grid-template-columns: 1fr; }
+}
