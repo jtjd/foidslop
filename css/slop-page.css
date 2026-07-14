@@ -7,7 +7,7 @@
 /* ── Slop header ────────────────────────── */
 .slop-header { padding: 100px 40px 0; }
 .slop-eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; display: flex; align-items: center; gap: 14px; }
-.slop-eyebrow::before { content: '✦'; font-size: 0.6rem; color: var(--muted); }
+.slop-eyebrow::before { content: '✦︎'; font-size: 0.6rem; color: var(--muted); }
 .slop-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 9vw, 8rem); font-weight: 400; line-height: 0.9; letter-spacing: 0.01em; color: var(--text); text-transform: uppercase; margin-bottom: 20px; }
 .slop-meta { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
 .slop-date { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
@@ -59,7 +59,7 @@
 /* ── Section labels ─────────────────────── */
 .section-label { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; padding-top: 40px; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 10px; }
 .section-label:first-of-type { border-top: none; padding-top: 0; }
-.section-label::before { content: '✦'; font-size: 0.5rem; }
+.section-label::before { content: '✦︎'; font-size: 0.5rem; }
 
 /* ── Stats ──────────────────────────────── */
 .slop-stats { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--border); margin-bottom: 48px; }
@@ -73,7 +73,7 @@
 .recipe-tool { appearance: none; align-items: center; background: var(--surface); border: 0; color: var(--text); cursor: pointer; display: flex; font: 700 .66rem/1 Arial,sans-serif; justify-content: space-between; letter-spacing: .12em; min-height: 48px; padding: 14px 16px; text-align: left; text-transform: uppercase; transition: background .2s ease,color .2s ease; }
 .recipe-tool + .recipe-tool { border-left: 1px solid var(--border); }
 .recipe-tool::after { color: var(--accent); font-family: Arial Black,Arial,sans-serif; font-size: .9rem; }
-#print-recipe::after { content: '↗'; }
+#print-recipe::after { content: '↗︎'; }
 #copy-ingredients::after { content: '+'; }
 .recipe-tool:hover,.recipe-tool:focus-visible { background: var(--accent); color: var(--accent-contrast); }
 .recipe-tool:hover::after,.recipe-tool:focus-visible::after { color: var(--accent-contrast); }
@@ -97,7 +97,7 @@
 .ingredient-amount { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.04em; white-space: nowrap; flex-shrink: 0; }
 .ingredient-link { font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; transition: color 0.2s ease, border-color 0.2s ease; white-space: nowrap; flex-shrink: 0; }
 .ingredient-link:hover { color: var(--text); border-color: var(--text); }
-.ingredient-link::before { content: '↗ '; font-size: 0.55rem; }
+.ingredient-link::before { content: '↗︎ '; font-size: 0.55rem; }
 
 /* ── Steps ──────────────────────────────── */
 .steps-list { list-style: none; margin-bottom: 48px; }
