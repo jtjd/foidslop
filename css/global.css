@@ -50,6 +50,7 @@ body {
   color: var(--text);
   min-height: 100vh;
   overflow-x: clip;
+  font-variant-emoji: text;
 }
 .bg-layer {
   position: fixed; inset: 0;
@@ -137,6 +138,15 @@ footer { padding: 24px 40px; border-top: 1px solid var(--border); }
 .footer-links a:hover, .footer-links a.active { color: var(--text); }
 .footer-dot { width: 2px; height: 2px; border-radius: 50%; background: var(--border); flex-shrink: 0; }
 
+/* Keep decorative glyphs in text presentation instead of platform emoji. */
+.page-eyebrow::before, .hero-eyebrow::before, .daily-slop-eyebrow::before,
+.split-eyebrow::before, .slop-eyebrow::before, .section-label::before,
+.archive-label::before, .featured-eyebrow::before, .zine-kicker::before,
+.zine-label::before, .ingredient-link::before, #print-recipe::after {
+  font-family: Arial, sans-serif;
+  font-variant-emoji: text;
+}
+
 /* ── Hamburger button (global) ──────────── */
 .nav-hamburger {
   display: none;
@@ -213,6 +223,15 @@ footer { padding: 24px 40px; border-top: 1px solid var(--border); }
   .footer-inner { justify-content: center; text-align: center; }
   .footer-copy { width: 100%; text-align: center; }
   .footer-links { justify-content: center; }
+}
+
+@media (max-width: 600px) {
+  footer { padding: 20px 16px; }
+  .footer-inner { display: block; }
+  .footer-copy { display: block; margin-bottom: 14px; }
+  .footer-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 16px; justify-items: center; }
+  .footer-links a { min-width: 0; text-align: center; }
+  .footer-dot { display: none; }
 }
 
 @media (min-width: 1025px) {
