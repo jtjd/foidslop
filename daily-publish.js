@@ -137,7 +137,7 @@ fs.writeFileSync(DB_FILE, `${JSON.stringify(db, null, 2)}\n`);
 
 function commonHead({ title, description, canonical, image = `${BASE_URL}/og-image.png`, type = 'website', root = '' }) {
   return `
-<script src="${root}cookie-consent.js" data-ga-id="G-VT527DETQ2"></script>
+<script src="${root}cookie-consent.js?v=20260713-4" data-ga-id="G-VT527DETQ2"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="${root}favicon.ico">
