@@ -77,10 +77,12 @@ const meals = (db.meals || db).slice().sort((a, b) => a.id - b.id);
 let dateOverride = null;
 let setOverride = null;
 let validateOnly = false;
+let feedsOnly = false;
 for (let i = 2; i < process.argv.length; i += 1) {
   if (process.argv[i] === '--date') dateOverride = process.argv[++i];
   else if (process.argv[i] === '--set') setOverride = process.argv[++i];
   else if (process.argv[i] === '--check') validateOnly = true;
+  else if (process.argv[i] === '--feeds-only') feedsOnly = true;
 }
 
 const today = dateOverride || newYorkDate();
@@ -123,6 +125,12 @@ function validate() {
 validate();
 if (validateOnly) {
   console.log(`Validated ${meals.length} meals; ${published.length} published through ${today}.`);
+  process.exit(0);
+}
+if (feedsOnly) {
+  buildFeed();
+  buildPinterestFeed();
+  console.log(`Built feeds for ${published.length} published recipes through ${today}.`);
   process.exit(0);
 }
 fs.writeFileSync(DB_FILE, `${JSON.stringify(db, null, 2)}\n`);
@@ -426,6 +434,17 @@ function buildFeed() {
   fs.writeFileSync(path.join(ROOT, 'feed.xml'), `<?xml version="1.0" encoding="utf-8"?>\n<feed xmlns="http://www.w3.org/2005/Atom"><title>foidslop — Daily Recipes</title><link href="${BASE_URL}/feed.xml" rel="self"/><link href="${BASE_URL}/"/><id>${BASE_URL}/</id><updated>${today}T05:00:00Z</updated>${entries}</feed>\n`);
 }
 
+function buildPinterestFeed() {
+  const entries = published.slice().reverse().map(meal => {
+    const image = imageUrl(meal);
+    const imagePath = path.join(SLOP_DIR, 'img', `${meal.slug}.jpg`);
+    const size = fs.statSync(imagePath).size;
+    const date = releaseDate(meal).toUTCString();
+    return `<item><title>${xml(meal.name)}</title><description>${xml(meal.description)}</description><link>${recipeUrl(meal)}</link><guid isPermaLink="true">${recipeUrl(meal)}</guid><pubDate>${date}</pubDate><enclosure url="${image}" length="${size}" type="image/jpeg"/><media:content url="${image}" type="image/jpeg" medium="image"/></item>`;
+  }).join('\n');
+  fs.writeFileSync(path.join(ROOT, 'pinterest-rss.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>foidslop recipes</title><link>${BASE_URL}/</link><description>Daily recipes made for one from foidslop.</description><lastBuildDate>${new Date(`${today}T05:00:00Z`).toUTCString()}</lastBuildDate>${entries}</channel></rss>\n`);
+}
+
 function buildRedirects() {
   const lines = [`/slop/today  /slop/${current.slug}  301`, '/index.html  /  301', '/slop/archive.html  /slop/archive  301', '/privacy.html  /privacy  301', '/what-is-foidslop.html  /what-is-foidslop  301', '/what-does-foid-mean.html  /what-does-foid-mean  301', '/editorial-standards.html  /editorial-standards  301', '/girl-dinner-ideas.html  /girl-dinner-ideas  301'];
   for (const hub of hubs) lines.push(`/recipes/${hub.slug}.html  /recipes/${hub.slug}  301`);
@@ -448,5 +467,6 @@ buildHubs();
 renderEditorialPages();
 buildSitemap();
 buildFeed();
+buildPinterestFeed();
 buildRedirects();
 console.log(`Published ${current.name} (${today}); ${published.length} public recipes.`);
