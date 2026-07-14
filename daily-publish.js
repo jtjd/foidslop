@@ -27,7 +27,7 @@ const MERCH_PRODUCTS = [
 ];
 const LOCAL_MERCH_ASSETS = {
   hero: 'DJTNIP.png',
-  lifestyle: 'djt-nippon-lifestyle.avif',
+  lifestyle: 'CarModel.png?v=20260714-1',
   poster: 'DJTNIP.png',
   model: 'MerchModel.png'
 };
