@@ -37,7 +37,7 @@ jobs:
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add index.html slop/ recipes/ foidslop-meals.json og-image.jpg _redirects sitemap.xml feed.xml \
+          git add index.html slop/ recipes/ foidslop-meals.json og-image.png _redirects sitemap.xml feed.xml \
             what-is-foidslop.html girl-dinner-ideas.html editorial-standards.html
           if ! git diff --staged --quiet; then
             git commit -m "Daily Slop Update: $(date +'%Y-%m-%d')"
