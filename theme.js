@@ -10,7 +10,7 @@
     document.querySelectorAll('.theme-toggle').forEach(function (button) {
       button.setAttribute('aria-pressed', String(dark));
       button.querySelector('.theme-toggle-label').textContent = dark ? 'Light mode' : 'Dark mode';
-      button.querySelector('.theme-toggle-mark').textContent = dark ? '☼' : '☾';
+      button.querySelector('.theme-toggle-mark').textContent = dark ? '*' : 'o';
     });
   }
   function bind() {
@@ -23,7 +23,7 @@
     var dark = root.dataset.theme === 'dark';
     document.querySelectorAll('.theme-toggle').forEach(function (button) {
       button.querySelector('.theme-toggle-label').textContent = dark ? 'Light mode' : 'Dark mode';
-      button.querySelector('.theme-toggle-mark').textContent = dark ? '☼' : '☾';
+      button.querySelector('.theme-toggle-mark').textContent = dark ? '*' : 'o';
       button.setAttribute('aria-pressed', String(dark));
     });
   }
