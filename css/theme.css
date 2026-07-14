@@ -70,9 +70,10 @@ html[data-theme="light"] .manifesto-text em, html[data-theme="light"] .scroll-ca
 .site-header { position:relative; top:auto; left:auto; right:auto; height:88px; padding:0 26px; background:var(--bg); backdrop-filter:none; -webkit-backdrop-filter:none; border-bottom:1px solid var(--border); font-size:10px; font-weight:400; letter-spacing:.14em; text-transform:uppercase; }
 .site-header { max-width:1440px; margin:0 auto; display:grid; grid-template-columns:180px 1fr auto; align-items:center; border-inline:1px solid var(--border); }
 .zine-home > .site-header { border-inline:0; }
-.site-header-center { text-align:center; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--text); }
+.site-header-center { text-align:center; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:#fff; }
 .site-header.scrolled { background:var(--bg); }
-.site-header .logo { display:inline; width:142px; height:auto; }
+.site-header > a:first-child { display:flex; align-items:center; height:100%; line-height:0; }
+.site-header .logo { display:block; width:auto; height:100%; }
 .header-right { gap:16px; }
 .site-header a { text-decoration:none; }
 .site-header .theme-toggle-label { display:none; }
