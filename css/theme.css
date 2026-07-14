@@ -67,12 +67,12 @@ html[data-theme="light"] .manifesto-text em, html[data-theme="light"] .scroll-ca
 @media (max-width:1024px) { .theme-toggle { margin-right:4px; } }
 
 /* One publication header shared by the homepage and every interior page. */
-.site-header { position:relative; top:auto; left:auto; right:auto; height:76px; padding:0 26px; background:var(--bg); backdrop-filter:none; -webkit-backdrop-filter:none; border-bottom:1px solid var(--border); font-size:10px; font-weight:400; letter-spacing:.14em; text-transform:uppercase; }
+.site-header { position:relative; top:auto; left:auto; right:auto; height:88px; padding:0 26px; background:var(--bg); backdrop-filter:none; -webkit-backdrop-filter:none; border-bottom:1px solid var(--border); font-size:10px; font-weight:400; letter-spacing:.14em; text-transform:uppercase; }
 .site-header { max-width:1440px; margin:0 auto; display:grid; grid-template-columns:180px 1fr auto; align-items:center; border-inline:1px solid var(--border); }
 .zine-home > .site-header { border-inline:0; }
 .site-header-center { text-align:center; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--text); }
 .site-header.scrolled { background:var(--bg); }
-.site-header .logo { display:inline; width:126px; height:auto; }
+.site-header .logo { display:inline; width:142px; height:auto; }
 .header-right { gap:16px; }
 .site-header a { text-decoration:none; }
 .site-header .theme-toggle-label { display:none; }
@@ -116,5 +116,5 @@ footer { max-width:1440px; margin:0 auto; border-inline:1px solid var(--border);
 .zine-rss { display:inline-block; margin-top:24px; border-bottom:2px solid var(--accent); color:var(--text); padding-bottom:5px; font-size:11px; font-weight:700; letter-spacing:.12em; text-decoration:none; text-transform:uppercase; transition:color .2s ease,border-color .2s ease; }
 .zine-rss:hover,.zine-rss:focus-visible { color:var(--accent); border-color:var(--accent); }
 @media (max-width:1024px) { .site-header .header-right .nav-link { display:inline-flex; } .content-page,.article-page { padding:56px 24px 60px; } .page-title { padding:56px 24px 30px; } .slop-header { padding-top:40px; } }
-@media (max-width:800px) { .site-header { height:62px; padding:0 16px; grid-template-columns:1fr auto; } .site-header-center { display:none; } .site-header .logo { width:98px; height:auto; } .site-header .header-right { gap:16px; } }
+@media (max-width:800px) { .site-header { height:68px; padding:0 16px; grid-template-columns:1fr auto; } .site-header-center { display:none; } .site-header .logo { width:110px; height:auto; } .site-header .header-right { gap:16px; } }
 @media (max-width:560px) { .zine-find-links { grid-template-columns:1fr; } .zine-find-links a { border-right:0 !important; white-space:nowrap; } }
