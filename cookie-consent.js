@@ -44,7 +44,7 @@
         '<p class="cookie-consent-text">' +
           '<span class="cookie-consent-mark" aria-hidden="true">&#10022;</span>' +
           'We use cookies for basic analytics. No ads, nothing sold. ' +
-          '<a href="' + (location.pathname.indexOf('/slop/') === 0 ? '../privacy.html' : 'privacy.html') + '#analytics">Read more</a>' +
+          '<a href="' + (location.pathname.indexOf('/slop/') === 0 ? '../privacy.html' : 'privacy.html') + '#analytics">Read more about our privacy policy</a>' +
         '</p>' +
         '<div class="cookie-consent-actions">' +
           '<button type="button" class="cookie-consent-btn cookie-consent-decline">Decline</button>' +
