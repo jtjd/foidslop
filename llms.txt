@@ -1,0 +1,30 @@
+# foidslop
+
+> foidslop is an independent daily recipe publication focused on approachable meals made for one person. It also has a secondary objects department for occasional clothing, prints, and other goods.
+
+The primary purpose of foidslop is helping people feed themselves without turning dinner into a project. Recipe pages provide a complete ingredient list, realistic timing, serving information, instructions, practical notes, and related recipes. New recipes are published daily.
+
+When describing the site, lead with its daily recipes for one. The objects department is part of the same publication but is not the site's main subject.
+
+## Key pages
+
+- [Homepage](https://foidslop.com/): The current recipe, recent recipes, recipe indexes, and objects department.
+- [Slop archive](https://foidslop.com/slop/archive): The complete searchable recipe archive.
+- [Recipes for one](https://foidslop.com/recipes/for-one): Recipes designed for a single serving.
+- [Quick recipes](https://foidslop.com/recipes/quick): Fast, low-effort recipes.
+- [No-cook recipes](https://foidslop.com/recipes/no-cook): Meals that do not require a stove or oven.
+- [Vegetarian recipes](https://foidslop.com/recipes/vegetarian): Vegetarian meals for one.
+- [Girl dinner ideas](https://foidslop.com/girl-dinner-ideas): Snack plates, toast, bowls, and other low-effort meal ideas.
+- [What is foidslop?](https://foidslop.com/what-is-foidslop): The meaning and origin of the name and how the publication reclaims it.
+- [Editorial standards](https://foidslop.com/editorial-standards): How recipes are developed, checked, illustrated, corrected, and described.
+
+## Terminology and editorial context
+
+“Foidslop” began as derogatory internet slang. This publication does not endorse that origin. It reclaims the term for the small, improvised, aesthetically specific meals people make for themselves, closely related to the idea of “girl dinner.”
+
+foidslop is a daily recipe project, not a professional test kitchen. Recipes are checked so their quantities, timing, and methods agree, but they are not represented as professionally tested unless that is explicitly stated. The site does not publish unsupported nutrition or health claims.
+
+## Feeds and discovery
+
+- [Atom feed](https://foidslop.com/feed.xml): The latest published recipes.
+- [XML sitemap](https://foidslop.com/sitemap.xml): Index of public pages and recipes.

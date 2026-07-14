@@ -69,16 +69,29 @@
 .slop-stat-value { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: var(--text); line-height: 1; }
 
 /* ── Ingredients ────────────────────────── */
-.recipe-tools { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 0 0 30px; padding-top: 28px; border-top: 1px solid var(--border); }
-.recipe-tool { appearance: none; background: transparent; border: 1px solid var(--accent); color: var(--text); cursor: pointer; font: 600 .64rem/1 Inter, sans-serif; letter-spacing: .11em; padding: 11px 14px; text-transform: uppercase; transition: background .2s ease, color .2s ease; }
+.recipe-tools { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); margin: 0 0 34px; border: 1px solid var(--border); }
+.recipe-tool { appearance: none; align-items: center; background: var(--surface); border: 0; color: var(--text); cursor: pointer; display: flex; font: 700 .66rem/1 Arial,sans-serif; justify-content: space-between; letter-spacing: .12em; min-height: 48px; padding: 14px 16px; text-align: left; text-transform: uppercase; transition: background .2s ease,color .2s ease; }
+.recipe-tool + .recipe-tool { border-left: 1px solid var(--border); }
+.recipe-tool::after { color: var(--accent); font-family: Arial Black,Arial,sans-serif; font-size: .9rem; }
+#print-recipe::after { content: '↗'; }
+#copy-ingredients::after { content: '+'; }
 .recipe-tool:hover,.recipe-tool:focus-visible { background: var(--accent); color: var(--accent-contrast); }
-.recipe-tool.copied { background: var(--text); border-color: var(--text); color: var(--bg); }
-.recipe-tool-status { color: var(--muted); font-size: .68rem; min-height: 1em; }
+.recipe-tool:hover::after,.recipe-tool:focus-visible::after { color: var(--accent-contrast); }
+.recipe-tool.copied { background: var(--accent); color: var(--accent-contrast); }
+.recipe-tool.copied::after { color: var(--accent-contrast); content: '✓' !important; }
+.recipe-tool-status { background: var(--text); color: var(--bg); font-size: .62rem; grid-column: 1/-1; letter-spacing: .1em; padding: 10px 16px; text-transform: uppercase; }
+.recipe-tool-status:empty { display: none; }
 .ingredients-list { list-style: none; margin-bottom: 48px; }
-.ingredient-item { border-bottom: 1px solid var(--border); }
+.ingredient-item { border-bottom: 1px solid var(--border); transition: background .2s ease; }
 .ingredient-item:first-child { border-top: 1px solid var(--border); }
-.ingredient-item label { align-items: baseline; cursor: pointer; display: grid; gap: 12px; grid-template-columns: 18px minmax(0,1fr) auto; padding: 13px 0; }
-.ingredient-check { accent-color: var(--accent); height: 15px; margin: 3px 0 0; width: 15px; }
+.ingredient-item label { align-items: center; cursor: pointer; display: grid; gap: 12px; grid-template-columns: 20px minmax(0,1fr) auto; padding: 14px 12px; }
+.ingredient-item:hover { background: color-mix(in srgb,var(--accent) 7%,var(--bg)); }
+.ingredient-item:has(.ingredient-check:checked) { background: color-mix(in srgb,var(--accent) 11%,var(--bg)); }
+.ingredient-check { appearance: none; background: transparent; border: 1px solid var(--muted); border-radius: 0; cursor: pointer; display: grid; height: 18px; margin: 0; place-content: center; transition: background .15s ease,border-color .15s ease; width: 18px; }
+.ingredient-check::after { color: var(--accent-contrast); content: '✓'; font: 700 12px/1 Arial,sans-serif; transform: scale(0); transition: transform .12s ease; }
+.ingredient-check:checked { background: var(--accent); border-color: var(--accent); }
+.ingredient-check:checked::after { transform: scale(1); }
+.ingredient-check:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .ingredient-check:checked ~ .ingredient-name,.ingredient-check:checked ~ .ingredient-amount { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--accent); }
 .ingredient-name { font-size: 0.88rem; color: var(--text); line-height: 1.5; flex: 1; }
 .ingredient-amount { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.04em; white-space: nowrap; flex-shrink: 0; }
