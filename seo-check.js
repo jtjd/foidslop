@@ -76,6 +76,9 @@ for (const slug of requiredCollections) {
   if (!fs.existsSync(file)) errors.push(`missing generated collection: recipes/${slug}.html`);
   if (!locations.includes(`https://foidslop.com/recipes/${slug}`)) errors.push(`sitemap.xml: missing recipes/${slug}`);
 }
+const foidArticle = path.join(ROOT, 'what-does-foid-mean.html');
+if (!fs.existsSync(foidArticle)) errors.push('missing editorial page: what-does-foid-mean.html');
+if (!locations.includes('https://foidslop.com/what-does-foid-mean')) errors.push('sitemap.xml: missing what-does-foid-mean');
 const homepage = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
 if (!homepage.includes('Latest foidslop recipes')) errors.push('index.html: missing latest recipe ItemList');
 if (homepage.includes('DJT Nippon Collection — foidslop')) errors.push('index.html: merchandise is still the primary ItemList');

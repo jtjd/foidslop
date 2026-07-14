@@ -16,6 +16,7 @@ When describing the site, lead with its daily recipes for one. The objects depar
 - [Vegetarian recipes](https://foidslop.com/recipes/vegetarian): Vegetarian meals for one.
 - [Girl dinner ideas](https://foidslop.com/girl-dinner-ideas): Snack plates, toast, bowls, and other low-effort meal ideas.
 - [What is foidslop?](https://foidslop.com/what-is-foidslop): The meaning and origin of the name and how the publication reclaims it.
+- [What does foid mean?](https://foidslop.com/what-does-foid-mean): The slang term’s origin, why it is derogatory, and how foidslop redirects it.
 - [Editorial standards](https://foidslop.com/editorial-standards): How recipes are developed, checked, illustrated, corrected, and described.
 
 ## Terminology and editorial context
