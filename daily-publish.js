@@ -141,6 +141,7 @@ function commonHead({ title, description, canonical, image = `${BASE_URL}/og-ima
 <script src="${root}cookie-consent.js?v=20260713-4" data-ga-id="G-VT527DETQ2"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="p:domain_verify" content="7bdfbfde1745ec62bc759913fcc45642">
 <link rel="icon" href="${root}favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="${root}favicon-32x32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="${root}apple-touch-icon.png">
