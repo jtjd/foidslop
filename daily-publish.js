@@ -142,9 +142,8 @@ function commonHead({ title, description, canonical, image = `${BASE_URL}/og-ima
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="p:domain_verify" content="7bdfbfde1745ec62bc759913fcc45642">
-<link rel="icon" href="${root}favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="${root}favicon-32x32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="${root}apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/brand-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="${root}site.webmanifest">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
