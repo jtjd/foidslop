@@ -27,6 +27,18 @@ function run(command, args, options = {}) {
   return result;
 }
 
+function imageInvocation(operation, args) {
+  if (magick === 'magick') {
+    return { command: magick, args: operation === 'convert' ? args : [operation, ...args] };
+  }
+  return { command: operation, args };
+}
+
+function runImage(operation, args, options = {}) {
+  const invocation = imageInvocation(operation, args);
+  return run(invocation.command, invocation.args, options);
+}
+
 function releaseDate(meal) {
   if (meal.publishDate) return meal.publishDate;
   const date = new Date('2026-05-01T12:00:00Z');
@@ -39,9 +51,14 @@ function isCurrent(source, output) {
 }
 
 function metric(source, output, name) {
-  const result = spawnSync(magick, ['compare', '-metric', name, source, output, 'null:'], { encoding: 'utf8' });
-  const value = Number.parseFloat(result.stderr || result.stdout);
-  if (![0, 1].includes(result.status) || !Number.isFinite(value)) throw new Error(`Could not calculate ${name} for ${output}`);
+  const invocation = imageInvocation('compare', ['-metric', name, source, output, 'null:']);
+  const result = spawnSync(invocation.command, invocation.args, { encoding: 'utf8' });
+  const raw = (result.stderr || result.stdout || '').trim();
+  const value = /^(?:inf|infinity)\b/i.test(raw) ? Number.POSITIVE_INFINITY : Number.parseFloat(raw);
+  const validValue = Number.isFinite(value) || (name === 'PSNR' && value === Number.POSITIVE_INFINITY);
+  if (![0, 1].includes(result.status) || !validValue) {
+    throw new Error(`Could not calculate ${name} for ${output}: ${raw || `exit ${result.status}`}`);
+  }
   return value;
 }
 
@@ -60,14 +77,14 @@ function buildHomepageImages() {
         run(avifenc, ['--yuv', '444', '--qcolor', '97', '--qalpha', '100', '--speed', '6', '--ignore-exif', '--ignore-xmp', source, avif]);
       }
     }
-    if (!isCurrent(source, webp)) run(magick, [source, '-strip', '-quality', '95', webp]);
+    if (!isCurrent(source, webp)) runImage('convert', [source, '-strip', '-quality', '95', webp]);
 
     const decoded = path.join('/tmp', `${name}-hq-${process.pid}.png`);
     if (avifdec) run(avifdec, ['--png-compress', '1', avif, decoded]);
-    else run(magick, [avif, decoded]);
+    else runImage('convert', [avif, decoded]);
     const psnr = metric(source, decoded, 'PSNR');
-    const sourceSize = `${run(magick, ['identify', '-format', '%wx%h', source]).stdout}`;
-    const avifSize = `${run(magick, ['identify', '-format', '%wx%h', decoded]).stdout}`;
+    const sourceSize = `${runImage('identify', ['-format', '%wx%h', source]).stdout}`;
+    const avifSize = `${runImage('identify', ['-format', '%wx%h', decoded]).stdout}`;
     const [width, height] = sourceSize.split('x').map(Number);
     const dssimRaw = metric(source, decoded, 'DSSIM');
     const dssim = dssimRaw > 1 ? dssimRaw / (width * height) : dssimRaw;
@@ -78,7 +95,7 @@ function buildHomepageImages() {
 
   const logoSource = path.join(BRAND_ASSETS, 'logo.png');
   const logoWebp = path.join(BRAND_ASSETS, 'logo.webp');
-  if (!isCurrent(logoSource, logoWebp)) run(magick, [logoSource, '-strip', '-define', 'webp:lossless=true', logoWebp]);
+  if (!isCurrent(logoSource, logoWebp)) runImage('convert', [logoSource, '-strip', '-define', 'webp:lossless=true', logoWebp]);
 }
 
 function socialCanvas(meal, source, output, kind) {
@@ -104,7 +121,7 @@ function socialCanvas(meal, source, output, kind) {
     );
   }
   args.push('-strip', '-interlace', 'Plane', '-sampling-factor', '4:4:4', '-quality', '94', output);
-  run(magick, args);
+  runImage('convert', args);
 }
 
 function prepareRecipeAssets(meal) {
@@ -130,7 +147,7 @@ function prepareRecipeAssets(meal) {
   ];
   for (const variant of variants) {
     const output = path.join(imageDirectory, variant.file);
-    if (!isCurrent(source, output)) run(magick, [source, '-auto-orient', ...variant.args, '-strip', output]);
+    if (!isCurrent(source, output)) runImage('convert', [source, '-auto-orient', ...variant.args, '-strip', output]);
   }
   return source;
 }
