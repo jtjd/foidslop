@@ -12,6 +12,7 @@ const SHOP_ASSETS = path.join(ROOT, 'assets', 'shop');
 const BRAND_ASSETS = path.join(ROOT, 'assets', 'brand');
 const meals = JSON.parse(fs.readFileSync(path.join(DATA, 'foidslop-meals.json'), 'utf8')).meals;
 const force = process.argv.includes('--force');
+const forcePins = process.argv.includes('--force-pins');
 const dateArg = process.argv.includes('--date')
   ? process.argv[process.argv.indexOf('--date') + 1]
   : new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
@@ -103,24 +104,16 @@ function socialCanvas(meal, source, output, kind) {
   const isPin = kind === 'pin';
   const width = isPin ? 1000 : 1280;
   const height = isPin ? 1500 : 720;
-  const args = [
-    '-size', `${width}x${height}`, 'xc:#f2efe7',
-    '(', source, '-auto-orient', '-resize', `${isPin ? '768x768' : '720x720'}>`, ')',
-    '-gravity', isPin ? 'north' : 'east', '-geometry', isPin ? '+0+90' : '+0+0', '-composite'
-  ];
-  if (isPin) {
-    args.push(
-      '(', '-background', 'none', '-fill', '#111111', '-font', 'DejaVu-Sans-Bold', '-pointsize', '62', '-gravity', 'center', '-size', '840x250', `caption:${meal.name.toUpperCase()}`, ')',
-      '-gravity', 'south', '-geometry', '+0+170', '-composite',
-      '-fill', '#111111', '-font', 'DejaVu-Sans-Bold', '-pointsize', '30', '-gravity', 'south', '-annotate', '+0+62', 'FOIDSLOP / RECIPE FOR ONE'
-    );
-  } else {
-    args.push(
+  const args = isPin
+    ? [source, '-auto-orient', '-resize', `${width}x${height}^`, '-gravity', 'center', '-extent', `${width}x${height}`]
+    : [
+      '-size', `${width}x${height}`, 'xc:#f2efe7',
+      '(', source, '-auto-orient', '-resize', '720x720>', ')',
+      '-gravity', 'east', '-geometry', '+0+0', '-composite',
       '(', '-background', 'none', '-fill', '#111111', '-font', 'DejaVu-Sans-Bold', '-pointsize', '54', '-gravity', 'center', '-size', '470x360', `caption:${meal.name.toUpperCase()}`, ')',
       '-gravity', 'west', '-geometry', '+38-34', '-composite',
       '-fill', '#111111', '-font', 'DejaVu-Sans-Bold', '-pointsize', '22', '-gravity', 'southwest', '-annotate', '+42+42', 'FOIDSLOP / RECIPE FOR ONE'
-    );
-  }
+    ];
   args.push('-strip', '-interlace', 'Plane', '-sampling-factor', '4:4:4', '-quality', '94', output);
   runImage('convert', args);
 }
@@ -161,7 +154,7 @@ function buildSocialImages() {
     const source = prepareRecipeAssets(meal);
     for (const kind of ['wide', 'pin']) {
       const output = path.join(SOCIAL, `${meal.slug}-${kind}.jpg`);
-      if (!isCurrent(source, output)) {
+      if (!isCurrent(source, output) || (forcePins && kind === 'pin')) {
         socialCanvas(meal, source, output, kind);
         created += 1;
       }

@@ -206,7 +206,19 @@ for (const slug of [...requiredCollections, 'quick', 'no-cook', 'for-one', 'vege
   if (!html.includes('class="collection-guide"')) errors.push(`recipes/${slug}.html: missing collection guide`);
 }
 if (!archive.includes('class="archive-intro"') || !archive.includes('mushrooms, feta, pasta')) errors.push('slop/archive.html: missing enriched archive introduction');
-if (!fs.readFileSync(path.join(ROOT, 'pinterest-rss.xml'), 'utf8').includes('/slop/social/')) errors.push('pinterest-rss.xml: missing Pinterest canvas URLs');
+const pinterestRss = fs.readFileSync(path.join(ROOT, 'pinterest-rss.xml'), 'utf8');
+if (!pinterestRss.includes('/slop/social/')) errors.push('pinterest-rss.xml: missing Pinterest canvas URLs');
+const pinterestItems = [...pinterestRss.matchAll(/<item>([\s\S]*?)<\/item>/g)].map(match => match[1]);
+const pinterestLinks = pinterestItems.map(item => (item.match(/<link>([^<]+)<\/link>/) || [])[1]).filter(Boolean);
+const pinterestGuids = pinterestItems.map(item => (item.match(/<guid[^>]*>([^<]+)<\/guid>/) || [])[1]).filter(Boolean);
+const pinterestImages = pinterestItems.map(item => (item.match(/<enclosure[^>]+url="([^"]+)"/) || [])[1]).filter(Boolean);
+const pinterestMediaImages = pinterestItems.map(item => (item.match(/<media:content[^>]+url="([^"]+)"/) || [])[1]).filter(Boolean);
+if (!pinterestItems.length) errors.push('pinterest-rss.xml: no RSS items');
+if (new Set(pinterestLinks).size !== pinterestLinks.length) errors.push('pinterest-rss.xml: duplicate recipe links');
+if (new Set(pinterestGuids).size !== pinterestGuids.length) errors.push('pinterest-rss.xml: duplicate recipe GUIDs');
+if (pinterestLinks.some((link, index) => link !== pinterestGuids[index])) errors.push('pinterest-rss.xml: GUID does not match recipe link');
+if (pinterestImages.some((image, index) => image !== pinterestMediaImages[index])) errors.push('pinterest-rss.xml: enclosure and media image URLs differ');
+if (pinterestImages.some(image => !/\/slop\/social\/[^/]+-pin\.jpg$/.test(image))) errors.push('pinterest-rss.xml: noncanonical Pinterest image URL');
 
 const redirects = fs.readFileSync(path.join(ROOT, '_redirects'), 'utf8');
 if (!/^\/slop\/today\s+\/slop\/[a-z0-9-]+\s+301/m.test(redirects)) errors.push('_redirects: missing clean /slop/today destination');
