@@ -50,11 +50,14 @@ function isCurrent(source, output) {
   return fs.existsSync(output) && !force;
 }
 
-function metric(source, output, name) {
+function metric(source, output, name, normalized = false) {
   const invocation = imageInvocation('compare', ['-metric', name, source, output, 'null:']);
   const result = spawnSync(invocation.command, invocation.args, { encoding: 'utf8' });
   const raw = (result.stderr || result.stdout || '').trim();
-  const value = /^(?:inf|infinity)\b/i.test(raw) ? Number.POSITIVE_INFINITY : Number.parseFloat(raw);
+  const normalizedMatch = normalized ? raw.match(/\(([-+\d.eE]+)\)/) : null;
+  const value = /^(?:inf|infinity)\b/i.test(raw)
+    ? Number.POSITIVE_INFINITY
+    : Number.parseFloat(normalizedMatch ? normalizedMatch[1] : raw);
   const validValue = Number.isFinite(value) || (name === 'PSNR' && value === Number.POSITIVE_INFINITY);
   if (![0, 1].includes(result.status) || !validValue) {
     throw new Error(`Could not calculate ${name} for ${output}: ${raw || `exit ${result.status}`}`);
@@ -85,10 +88,8 @@ function buildHomepageImages() {
     const psnr = metric(source, decoded, 'PSNR');
     const sourceSize = `${runImage('identify', ['-format', '%wx%h', source]).stdout}`;
     const avifSize = `${runImage('identify', ['-format', '%wx%h', decoded]).stdout}`;
-    const [width, height] = sourceSize.split('x').map(Number);
-    const dssimRaw = metric(source, decoded, 'DSSIM');
-    const dssim = dssimRaw > 1 ? dssimRaw / (width * height) : dssimRaw;
-    if (psnr < 45 || dssim > 0.005) throw new Error(`${name}-hq.avif missed the visual quality threshold: PSNR ${psnr}, normalized DSSIM ${dssim}`);
+    const rmse = metric(source, decoded, 'RMSE', true);
+    if (psnr < 45 || rmse > 0.006) throw new Error(`${name}-hq.avif missed the visual quality threshold: PSNR ${psnr}, normalized RMSE ${rmse}`);
     fs.unlinkSync(decoded);
     if (sourceSize !== avifSize) throw new Error(`${name}-hq.avif changed dimensions from ${sourceSize} to ${avifSize}`);
   }
