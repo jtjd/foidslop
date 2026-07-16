@@ -1,0 +1,11 @@
+{
+  "name": "foidslop-site",
+  "private": true,
+  "scripts": {
+    "build": "node seo-check.js && node build-deploy.js",
+    "check": "node daily-publish.js --check && node seo-check.js",
+    "publish": "node daily-publish.js",
+    "optimize": "node optimize-images.js",
+    "upgrade-content": "node upgrade-recipe-content.js"
+  }
+}

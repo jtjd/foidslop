@@ -21,8 +21,10 @@ jobs:
         with:
           node-version: '22' # Updated to Node 22 LTS
 
-      - name: Ensure ImageMagick is available
-        run: command -v magick || command -v convert || (sudo apt-get update && sudo apt-get install -y imagemagick)
+      - name: Ensure image tools are available
+        run: |
+          command -v magick || command -v convert || (sudo apt-get update && sudo apt-get install -y imagemagick)
+          command -v avifenc && command -v avifdec || (sudo apt-get update && sudo apt-get install -y libavif-bin)
 
       - name: Optimize newly published images
         run: node optimize-images.js
@@ -37,8 +39,9 @@ jobs:
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add index.html slop/ recipes/ foidslop-meals.json og-image.png _redirects sitemap.xml feed.xml \
-            what-is-foidslop.html girl-dinner-ideas.html editorial-standards.html
+          git add index.html slop/ recipes/ foidslop-meals.json _redirects sitemap.xml feed.xml pinterest-rss.xml \
+            what-is-foidslop.html what-does-foid-mean.html girl-dinner-ideas.html editorial-standards.html \
+            DJTNIP-hq.avif DJTNIP-hq.webp CarModel-hq.avif CarModel-hq.webp MerchModel-hq.avif MerchModel-hq.webp logo.webp
           if ! git diff --staged --quiet; then
             git commit -m "Daily Slop Update: $(date +'%Y-%m-%d')"
             git push

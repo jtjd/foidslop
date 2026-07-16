@@ -29,6 +29,7 @@
 /* ── Content panel ──────────────────────── */
 .slop-content { padding: 48px 56px 80px; display: flex; flex-direction: column; }
 .slop-desc { font-size: 1rem; color: var(--muted); line-height: 1.75; margin-bottom: 48px; max-width: 560px; }
+.slop-headnote { border-left: 3px solid var(--accent); color: var(--text); font: 1rem/1.75 Georgia, serif; margin: -20px 0 46px; max-width: 560px; padding: 4px 0 4px 20px; }
 
 /* ── Breadcrumbs ──────────────────────── */
 .breadcrumbs {
@@ -110,6 +111,9 @@
 .slop-notes { background: var(--surface); border: 1px solid var(--border); padding: 24px 28px; margin-bottom: 48px; }
 .slop-notes-label { font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
 .slop-notes p { font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
+.recipe-extra { border-top: 1px solid var(--border); margin: -12px 0 36px; padding-top: 22px; }
+.recipe-extra-label { color: var(--text); font-size: .62rem; font-weight: 600; letter-spacing: .12em; margin-bottom: 8px; text-transform: uppercase; }
+.recipe-extra p:last-child { color: var(--muted); font-size: .85rem; line-height: 1.7; }
 .recipe-trust { color: var(--muted); font-size: .72rem; line-height: 1.6; }
 .recipe-trust a {
   color: var(--muted);

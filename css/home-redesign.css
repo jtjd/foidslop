@@ -5,3 +5,4 @@
 @media(max-width:800px){.zine-home .zine-masthead{grid-template-columns:1fr auto}}
 .zine-find-links a::after{content:'+';margin-left:.25em;color:var(--accent);font-family:Arial,sans-serif;font-weight:700;letter-spacing:0}
 .zine-find-links a:hover::after,.zine-find-links a:focus-visible::after{color:#fff}
+.zine-art picture,.zine-object-spread picture{display:block;height:100%;width:100%}.zine-signature picture{display:block}

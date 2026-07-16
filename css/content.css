@@ -11,6 +11,7 @@
 }
 
 .content-hero { margin-bottom: 52px; }
+.collection-count { color: var(--accent); display: block; font-size: .66rem; font-weight: 600; letter-spacing: .12em; margin-top: 24px; text-transform: uppercase; }
 .content-eyebrow {
   color: var(--muted);
   font-size: .68rem;
@@ -72,6 +73,11 @@
   text-decoration: none;
   text-transform: uppercase;
 }
+.collection-guide { border-top: 1px solid var(--border); margin-top: 64px; max-width: 880px; padding-top: 40px; }
+.collection-guide h2 { color: var(--text); font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 400; line-height: .95; margin: 0 0 26px; text-transform: uppercase; }
+.collection-guide ul { background: var(--border); border: 1px solid var(--border); display: grid; gap: 1px; list-style: none; margin: 0; padding: 0; }
+.collection-guide li { background: var(--surface); color: var(--muted); font-size: .92rem; line-height: 1.65; padding: 20px 22px 20px 54px; position: relative; }
+.collection-guide li::before { color: var(--accent); content: '*'; font-family: Arial Black, Arial, sans-serif; left: 22px; position: absolute; top: 20px; }
 .article-page h2 {
   color: var(--text);
   font-family: 'Bebas Neue', sans-serif;

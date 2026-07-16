@@ -73,6 +73,7 @@ html[data-theme="light"] .manifesto-text em, html[data-theme="light"] .scroll-ca
 .site-header-center { text-align:center; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:#fff; }
 .site-header.scrolled { background:var(--bg); }
 .site-header > a:first-child { display:flex; align-items:center; height:100%; line-height:0; }
+.site-header > a:first-child picture { display:block; }
 .site-header .logo { display:block; width:126px; height:74px; }
 .header-right { gap:16px; }
 .site-header a { text-decoration:none; }
