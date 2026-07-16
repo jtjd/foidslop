@@ -7,7 +7,10 @@ const { spawnSync } = require('child_process');
 const ROOT = process.cwd();
 const SLOP = path.join(ROOT, 'slop');
 const SOCIAL = path.join(SLOP, 'social');
-const meals = JSON.parse(fs.readFileSync(path.join(ROOT, 'foidslop-meals.json'), 'utf8')).meals;
+const DATA = path.join(ROOT, 'data');
+const SHOP_ASSETS = path.join(ROOT, 'assets', 'shop');
+const BRAND_ASSETS = path.join(ROOT, 'assets', 'brand');
+const meals = JSON.parse(fs.readFileSync(path.join(DATA, 'foidslop-meals.json'), 'utf8')).meals;
 const force = process.argv.includes('--force');
 const dateArg = process.argv.includes('--date')
   ? process.argv[process.argv.indexOf('--date') + 1]
@@ -45,9 +48,9 @@ function metric(source, output, name) {
 function buildHomepageImages() {
   const assets = ['DJTNIP', 'CarModel', 'MerchModel'];
   for (const name of assets) {
-    const source = path.join(ROOT, `${name}.png`);
-    const avif = path.join(ROOT, `${name}-hq.avif`);
-    const webp = path.join(ROOT, `${name}-hq.webp`);
+    const source = path.join(SHOP_ASSETS, `${name}.png`);
+    const avif = path.join(SHOP_ASSETS, `${name}-hq.avif`);
+    const webp = path.join(SHOP_ASSETS, `${name}-hq.webp`);
     if (!fs.existsSync(source)) throw new Error(`Missing homepage source image: ${source}`);
 
     if (!isCurrent(source, avif)) {
@@ -73,8 +76,8 @@ function buildHomepageImages() {
     if (sourceSize !== avifSize) throw new Error(`${name}-hq.avif changed dimensions from ${sourceSize} to ${avifSize}`);
   }
 
-  const logoSource = path.join(ROOT, 'logo.png');
-  const logoWebp = path.join(ROOT, 'logo.webp');
+  const logoSource = path.join(BRAND_ASSETS, 'logo.png');
+  const logoWebp = path.join(BRAND_ASSETS, 'logo.webp');
   if (!isCurrent(logoSource, logoWebp)) run(magick, [logoSource, '-strip', '-define', 'webp:lossless=true', logoWebp]);
 }
 

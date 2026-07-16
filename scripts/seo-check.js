@@ -6,6 +6,20 @@ const path = require('path');
 const ROOT = process.cwd();
 const errors = [];
 const htmlFiles = [];
+const publicRootSources = new Map();
+
+for (const [directory, files] of Object.entries({
+  'assets/js': ['archive.js', 'cookie-consent.js', 'recipe-tools.js', 'theme.js'],
+  'assets/brand': ['logo.png', 'logo.webp', 'brand-icon.png', 'og-image.png', 'favicon.ico', 'favicon-16x16.png', 'favicon-32x32.png', 'apple-touch-icon.png', 'android-chrome-192x192.png', 'android-chrome-512x512.png'],
+  'assets/shop': ['DJTNIP.png', 'DJTNIP-hq.avif', 'DJTNIP-hq.webp', 'CarModel.png', 'CarModel-hq.avif', 'CarModel-hq.webp', 'MerchModel.png', 'MerchModel-hq.avif', 'MerchModel-hq.webp']
+})) {
+  for (const file of files) publicRootSources.set(file, path.join(ROOT, directory, file));
+}
+
+function publicSourceCandidate(absolute) {
+  const relative = path.relative(ROOT, absolute);
+  return relative && !relative.includes(path.sep) ? publicRootSources.get(relative) : null;
+}
 
 function walk(directory) {
   for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
@@ -43,7 +57,7 @@ for (const file of htmlFiles) {
     const clean = href.split(/[?#]/)[0];
     if (!clean || clean === '/') continue;
     const absolute = clean.startsWith('/') ? path.join(ROOT, clean) : path.resolve(path.dirname(file), clean);
-    const candidates = [absolute, `${absolute}.html`, path.join(absolute, 'index.html')];
+    const candidates = [absolute, `${absolute}.html`, path.join(absolute, 'index.html'), publicSourceCandidate(absolute)].filter(Boolean);
     if (clean === '/slop/today' || clean === 'slop/today' || clean === './today') continue;
     if (!candidates.some(candidate => fs.existsSync(candidate))) errors.push(`${relative}: broken internal link ${href}`);
   }
@@ -72,7 +86,7 @@ for (const file of recipeFiles) {
   if (sourceName.endsWith('.jpg') && !signature.startsWith('ffd8')) errors.push(`${file}: .jpg source is not JPEG data`);
   if (sourceName.endsWith('.png') && !signature.startsWith('89504e47')) errors.push(`${file}: .png source is not PNG data`);
 }
-if (!fs.existsSync(path.join(ROOT, 'og-image.png'))) errors.push('missing transparent og-image.png');
+if (!fs.existsSync(path.join(ROOT, 'assets', 'brand', 'og-image.png'))) errors.push('missing transparent og-image.png');
 
 const requiredCollections = ['pasta', 'toast', 'snack-plates', 'comfort-food', '15-minute'];
 for (const slug of requiredCollections) {
@@ -101,8 +115,8 @@ for (const file of recipeFiles) {
   }
 }
 
-const primaryData = JSON.parse(fs.readFileSync(path.join(ROOT, 'foidslop-meals.json'), 'utf8'));
-const volumeTwoPath = path.join(ROOT, 'foidslop-meals-volume-2.json');
+const primaryData = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'foidslop-meals.json'), 'utf8'));
+const volumeTwoPath = path.join(ROOT, 'data', 'foidslop-meals-volume-2.json');
 const volumeTwoData = fs.existsSync(volumeTwoPath) ? JSON.parse(fs.readFileSync(volumeTwoPath, 'utf8')) : null;
 const databases = [{ name: 'volume 1', data: primaryData }];
 if (volumeTwoData) databases.push({ name: 'volume 2', data: volumeTwoData });
@@ -184,7 +198,7 @@ if (volumeTwoData) {
 }
 
 for (const asset of ['DJTNIP-hq.avif', 'DJTNIP-hq.webp', 'CarModel-hq.avif', 'CarModel-hq.webp', 'MerchModel-hq.avif', 'MerchModel-hq.webp']) {
-  if (!fs.existsSync(path.join(ROOT, asset))) errors.push(`missing homepage derivative: ${asset}`);
+  if (!fs.existsSync(path.join(ROOT, 'assets', 'shop', asset))) errors.push(`missing homepage derivative: ${asset}`);
 }
 if (!homepage.includes('DJTNIP-hq.avif') || !homepage.includes('<picture>')) errors.push('index.html: missing responsive high-quality homepage artwork');
 for (const slug of [...requiredCollections, 'quick', 'no-cook', 'for-one', 'vegetarian']) {

@@ -1,2 +1,5 @@
 .wrangler/
 .deploy/
+references/
+test-results/
+.directory

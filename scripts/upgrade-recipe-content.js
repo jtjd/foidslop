@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const file = path.join(process.cwd(), 'foidslop-meals.json');
+const file = path.join(process.cwd(), 'data', 'foidslop-meals.json');
 const db = JSON.parse(fs.readFileSync(file, 'utf8'));
 const revisionDate = '2026-07-15';
 

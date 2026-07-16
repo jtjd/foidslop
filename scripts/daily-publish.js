@@ -13,7 +13,7 @@ const path = require('path');
 const ROOT = process.cwd();
 const SLOP_DIR = path.join(ROOT, 'slop');
 const RECIPE_HUB_DIR = path.join(ROOT, 'recipes');
-const DB_FILE = path.join(ROOT, 'foidslop-meals.json');
+const DB_FILE = path.join(ROOT, 'data', 'foidslop-meals.json');
 const BASE_URL = 'https://foidslop.com';
 const FIRST_RELEASE = new Date('2026-05-01T12:00:00Z');
 const TZ = 'America/New_York';
@@ -317,10 +317,10 @@ function updateArchive() {
     .replace(/<meta name="twitter:title" content="[^"]+">/, '<meta name="twitter:title" content="Recipe Archive for One | foidslop">')
     .replace(/<meta name="twitter:description" content="[^"]+">/, '<meta name="twitter:description" content="Search every published foidslop recipe by name, ingredient, cuisine, or craving.">')
     .replace(/<link rel="canonical" href="[^"]+">/, `<link rel="canonical" href="${BASE_URL}/slop/archive">`)
-    .replace(/[ \t]*<link rel="stylesheet" href="\.\.\/css\/theme\.css">\r?\n?/g, '')
-    .replace(/[ \t]*<script src="\.\.\/theme\.js"><\/script>\r?\n?/g, '')
+    .replace(/[ \t]*<link rel="stylesheet" href="\.\.\/css\/theme\.css(?:\?[^\"]*)?">\r?\n?/g, '')
+    .replace(/[ \t]*<script src="\.\.\/theme\.js(?:\?[^\"]*)?"><\/script>\r?\n?/g, '')
     .replace('<link rel="stylesheet" href="../css/global.css">', '<link rel="stylesheet" href="../css/global.css">\n<script src="../theme.js?v=20260713-5"></script>')
-    .replace('<link rel="stylesheet" href="../css/slop-archive.css?v=20260713-5">', '<link rel="stylesheet" href="../css/slop-archive.css?v=20260713-5">\n<link rel="stylesheet" href="../css/theme.css?v=20260713-4">')
+    .replace('<link rel="stylesheet" href="../css/slop-archive.css?v=20260716-2">', '<link rel="stylesheet" href="../css/slop-archive.css?v=20260716-2">\n<link rel="stylesheet" href="../css/theme.css?v=20260713-4">')
     .replace(/<button class="theme-toggle(?: nav-dropdown-link)?"[\s\S]*?<\/button>/g, '')
     .replace(/href="\.\.\/index"/g, 'href="../"')
     .replace(/<header class="site-header"[\s\S]*?<\/header>/, header('../', 'archive'))

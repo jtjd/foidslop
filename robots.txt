@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /privacy.html
-Disallow: /foidslop-meals.json
-Disallow: /daily-publish.js
-Disallow: /optimize-images.js
-Disallow: /seo-check.js
 Sitemap: https://foidslop.com/sitemap.xml
