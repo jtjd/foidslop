@@ -61,7 +61,6 @@ jobs:
     env:
       KIT_API_KEY: ${{ secrets.KIT_API_KEY }}
       TALLY_API_KEY: ${{ secrets.TALLY_API_KEY }}
-      TALLY_SNAPSHOT_FILE: ${{ runner.temp }}/tally-form-before-weekly.json
       GH_TOKEN: ${{ github.token }}
     steps:
       - name: Checkout repository
@@ -75,6 +74,7 @@ jobs:
       - name: Select operation
         shell: bash
         run: |
+          echo "TALLY_SNAPSHOT_FILE=$RUNNER_TEMP/tally-form-before-weekly.json" >> "$GITHUB_ENV"
           mode="${{ inputs.mode }}"
           operation="${{ inputs.operation }}"
           if [ "${{ github.event_name }}" = "schedule" ]; then
