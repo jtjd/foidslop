@@ -7,11 +7,11 @@ const ROOT = process.cwd();
 const errors = [];
 const htmlFiles = [];
 const publicRootSources = new Map();
+const homepageConfig = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'homepage.json'), 'utf8'));
 
 for (const [directory, files] of Object.entries({
-  'assets/js': ['archive.js', 'cookie-consent.js', 'recipe-tools.js', 'theme.js'],
-  'assets/brand': ['logo.png', 'logo.webp', 'brand-icon.png', 'og-image.png', 'favicon.ico', 'favicon-16x16.png', 'favicon-32x32.png', 'apple-touch-icon.png', 'android-chrome-192x192.png', 'android-chrome-512x512.png'],
-  'assets/shop': ['DJTNIP.png', 'DJTNIP-hq.avif', 'DJTNIP-hq.webp', 'CarModel.png', 'CarModel-hq.avif', 'CarModel-hq.webp', 'MerchModel.png', 'MerchModel-hq.avif', 'MerchModel-hq.webp']
+  'assets/js': ['archive.js', 'cookie-consent.js', 'home.js', 'recipe-tools.js', 'theme.js'],
+  'assets/brand': ['logo.png', 'logo.webp', 'brand-icon.png', 'og-image.png', 'favicon.ico', 'favicon-16x16.png', 'favicon-32x32.png', 'apple-touch-icon.png', 'android-chrome-192x192.png', 'android-chrome-512x512.png']
 })) {
   for (const file of files) publicRootSources.set(file, path.join(ROOT, directory, file));
 }
@@ -23,7 +23,7 @@ function publicSourceCandidate(absolute) {
 
 function walk(directory) {
   for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
-    if (['.git', '.deploy', 'node_modules'].includes(entry.name)) continue;
+    if (['.git', '.deploy', 'node_modules', 'fourthwall'].includes(entry.name)) continue;
     const full = path.join(directory, entry.name);
     if (entry.isDirectory()) walk(full);
     else if (entry.name.endsWith('.html') && !entry.name.startsWith('homepage-example')) htmlFiles.push(full);
@@ -36,6 +36,7 @@ for (const file of htmlFiles) {
   const relative = path.relative(ROOT, file);
   const html = fs.readFileSync(file, 'utf8');
   if (html.includes('—')) errors.push(`${relative}: contains an em dash`);
+  if (/shop\.foidslop\.com|occasional objects|objects department|DJT Nippon/i.test(html)) errors.push(`${relative}: contains retired store promotion`);
   if (!['404.html'].includes(relative)) {
     const canonical = (html.match(/<link rel="canonical" href="([^"]+)"/) || [])[1];
     if (!canonical && relative !== 'privacy.html') errors.push(`${relative}: missing canonical`);
@@ -58,7 +59,7 @@ for (const file of htmlFiles) {
     if (!clean || clean === '/') continue;
     const absolute = clean.startsWith('/') ? path.join(ROOT, clean) : path.resolve(path.dirname(file), clean);
     const candidates = [absolute, `${absolute}.html`, path.join(absolute, 'index.html'), publicSourceCandidate(absolute)].filter(Boolean);
-    if (clean === '/slop/today' || clean === 'slop/today' || clean === './today') continue;
+    if (/(?:^|\/)slop\/today$/.test(clean) || clean === './today') continue;
     if (!candidates.some(candidate => fs.existsSync(candidate))) errors.push(`${relative}: broken internal link ${href}`);
   }
 }
@@ -99,7 +100,36 @@ if (!fs.existsSync(foidArticle)) errors.push('missing editorial page: what-does-
 if (!locations.includes('https://foidslop.com/what-does-foid-mean')) errors.push('sitemap.xml: missing what-does-foid-mean');
 const homepage = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
 if (!homepage.includes('Latest foidslop recipes')) errors.push('index.html: missing latest recipe ItemList');
-if (homepage.includes('DJT Nippon Collection — foidslop')) errors.push('index.html: merchandise is still the primary ItemList');
+for (const landmark of ['id="dispatch"', 'id="week-title"', 'id="find-title"', 'id="table-title"', 'id="filing-cabinet"', 'data-random-recipe']) {
+  if (!homepage.includes(landmark)) errors.push(`index.html: missing community homepage landmark ${landmark}`);
+}
+for (const label of ['Today</a>', 'Archive</a>', 'Dispatch</a>']) {
+  if (!homepage.includes(label)) errors.push(`index.html: missing primary navigation item ${label.replace('</a>', '')}`);
+}
+if (!homepage.includes('home.js?v=') || !fs.existsSync(path.join(ROOT, 'assets', 'js', 'home.js'))) errors.push('index.html: missing homepage interaction script');
+if (!/<link rel="preload" as="image"[^>]+slop\/img\/[^"]+-768\.webp/.test(homepage)) errors.push('index.html: today image is not preloaded');
+const randomPoolMatch = homepage.match(/<script id="random-recipe-pool" type="application\/json">([\s\S]*?)<\/script>/);
+let homepageRandomPool = [];
+if (!randomPoolMatch) errors.push('index.html: missing random recipe pool');
+else {
+  try {
+    homepageRandomPool = JSON.parse(randomPoolMatch[1]);
+    if (!Array.isArray(homepageRandomPool) || new Set(homepageRandomPool).size !== homepageRandomPool.length) errors.push('index.html: invalid or duplicate random recipe pool');
+  } catch (error) {
+    errors.push(`index.html: invalid random recipe JSON (${error.message})`);
+  }
+}
+if (homepageConfig.newsletter.enabled) {
+  if (!/<form class="dispatch-form" action="https:\/\/[^"]+" method="post" data-newsletter-form>/.test(homepage)) errors.push('index.html: enabled newsletter is missing an HTTPS POST form');
+  if (!/<label for="dispatch-primary-email">Email address<\/label>/.test(homepage)) errors.push('index.html: newsletter email field has no visible label');
+} else if (!homepage.includes('data-newsletter-state="inactive"') || homepage.includes('data-newsletter-form')) {
+  errors.push('index.html: inactive newsletter must not render a collecting form');
+}
+if (homepageConfig.community.enabled) {
+  if (!homepage.includes('data-track="community_vote_click"') || !homepage.includes('data-track="community_submit_click"')) errors.push('index.html: enabled community module is missing tracked actions');
+} else if (!homepage.includes('Voting is not open yet.')) {
+  errors.push('index.html: inactive community module needs an honest inactive state');
+}
 const archive = fs.readFileSync(path.join(ROOT, 'slop', 'archive.html'), 'utf8');
 if (!archive.includes('id="archive-search"') || !archive.includes('../archive.js')) errors.push('slop/archive.html: missing archive discovery controls');
 for (const file of recipeFiles) {
@@ -116,6 +146,13 @@ for (const file of recipeFiles) {
 }
 
 const primaryData = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'foidslop-meals.json'), 'utf8'));
+const publishedHomepageSlugs = new Set(primaryData.meals.filter(meal => meal.status === 'published').map(meal => meal.slug));
+if (homepageRandomPool.some(slug => !publishedHomepageSlugs.has(slug))) errors.push('index.html: random recipe pool contains an unpublished or unknown recipe');
+const latestPublished = primaryData.meals.filter(meal => meal.status === 'published').sort((a, b) => a.id - b.id).at(-1);
+if (latestPublished && homepageRandomPool.includes(latestPublished.slug)) errors.push('index.html: random recipe pool includes today’s recipe');
+const configuredArchivePick = primaryData.meals.find(meal => meal.slug === homepageConfig.archivePickSlug);
+if (!configuredArchivePick) errors.push(`homepage config: unknown archive pick ${homepageConfig.archivePickSlug}`);
+else if (configuredArchivePick.status !== 'published') errors.push(`homepage config: archive pick is not published (${homepageConfig.archivePickSlug})`);
 const volumeTwoPath = path.join(ROOT, 'data', 'foidslop-meals-volume-2.json');
 const volumeTwoData = fs.existsSync(volumeTwoPath) ? JSON.parse(fs.readFileSync(volumeTwoPath, 'utf8')) : null;
 const databases = [{ name: 'volume 1', data: primaryData }];
@@ -197,10 +234,7 @@ if (volumeTwoData) {
   }
 }
 
-for (const asset of ['DJTNIP-hq.avif', 'DJTNIP-hq.webp', 'CarModel-hq.avif', 'CarModel-hq.webp', 'MerchModel-hq.avif', 'MerchModel-hq.webp']) {
-  if (!fs.existsSync(path.join(ROOT, 'assets', 'shop', asset))) errors.push(`missing homepage derivative: ${asset}`);
-}
-if (!homepage.includes('DJTNIP-hq.avif') || !homepage.includes('<picture>')) errors.push('index.html: missing responsive high-quality homepage artwork');
+if (!homepage.includes('class="zine-today-image"') || !homepage.includes('<picture>')) errors.push('index.html: missing responsive today-recipe artwork');
 for (const slug of [...requiredCollections, 'quick', 'no-cook', 'for-one', 'vegetarian']) {
   const html = fs.readFileSync(path.join(ROOT, 'recipes', `${slug}.html`), 'utf8');
   if (!html.includes('class="collection-guide"')) errors.push(`recipes/${slug}.html: missing collection guide`);

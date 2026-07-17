@@ -38,7 +38,7 @@ for (const file of [
   'robots.txt', 'llms.txt', 'site.webmanifest', '_redirects'
 ]) copyFile(file);
 
-for (const file of ['archive.js', 'cookie-consent.js', 'recipe-tools.js', 'theme.js']) {
+for (const file of ['archive.js', 'cookie-consent.js', 'home.js', 'recipe-tools.js', 'theme.js']) {
   copyFile(path.join('assets', 'js', file), file);
 }
 
@@ -46,11 +46,6 @@ for (const file of [
   'logo.png', 'logo.webp', 'brand-icon.png', 'og-image.png', 'favicon.ico', 'favicon-16x16.png',
   'favicon-32x32.png', 'apple-touch-icon.png', 'android-chrome-192x192.png', 'android-chrome-512x512.png'
 ]) copyFile(path.join('assets', 'brand', file), file);
-
-for (const file of [
-  'DJTNIP.png', 'DJTNIP-hq.avif', 'DJTNIP-hq.webp', 'CarModel.png', 'CarModel-hq.avif',
-  'CarModel-hq.webp', 'MerchModel.png', 'MerchModel-hq.avif', 'MerchModel-hq.webp'
-]) copyFile(path.join('assets', 'shop', file), file);
 
 copyDirectory('css');
 copyDirectory('recipes');
@@ -68,5 +63,9 @@ const forbidden = ['scripts', 'data', 'assets', 'references'];
 for (const file of forbidden) {
   if (fs.existsSync(path.join(OUTPUT, file))) throw new Error(`Private build file leaked into deployment: ${file}`);
 }
+for (const file of ['DJTNIP.png', 'DJTNIP-hq.avif', 'DJTNIP-hq.webp', 'CarModel.png', 'CarModel-hq.avif', 'CarModel-hq.webp', 'MerchModel.png', 'MerchModel-hq.avif', 'MerchModel-hq.webp']) {
+  if (fs.existsSync(path.join(OUTPUT, file))) throw new Error(`Retired store asset leaked into deployment: ${file}`);
+}
+if (!fs.existsSync(path.join(OUTPUT, 'home.js'))) throw new Error('Homepage interaction script is missing from deployment');
 
 console.log(`Built a public-only deployment in ${OUTPUT} for ${publishedSlugs.size} recipes.`);

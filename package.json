@@ -4,6 +4,7 @@
   "scripts": {
     "build": "node scripts/seo-check.js && node scripts/build-deploy.js",
     "check": "node scripts/daily-publish.js --check && node scripts/seo-check.js",
+    "preview": "node scripts/preview.js",
     "publish": "node scripts/daily-publish.js",
     "optimize": "node scripts/optimize-images.js",
     "upgrade-content": "node scripts/upgrade-recipe-content.js"

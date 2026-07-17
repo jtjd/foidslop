@@ -14,23 +14,10 @@ const ROOT = process.cwd();
 const SLOP_DIR = path.join(ROOT, 'slop');
 const RECIPE_HUB_DIR = path.join(ROOT, 'recipes');
 const DB_FILE = path.join(ROOT, 'data', 'foidslop-meals.json');
+const HOMEPAGE_FILE = path.join(ROOT, 'data', 'homepage.json');
 const BASE_URL = 'https://foidslop.com';
 const FIRST_RELEASE = new Date('2026-05-01T12:00:00Z');
 const TZ = 'America/New_York';
-const MERCH_PRODUCTS = [
-  { name: 'DJT Nippon Premium Tee', price: '$24.99', url: 'https://shop.foidslop.com/products/djt-nippon-premium-tee', image: 'https://imgproxy.fourthwall.dev/2YP3EYknOMIdQ6QXx7L7CEqJnAp4FZjfAbE8CIlK4kI/w:1920/sm:1/enc/wK4D1NeZvrt7N5wk/PUZXwiy5qnXIlcMv/UU-dENRmYZU8KRL4/JuZwWbw0sG1zmlZJ/QoRcs-E0AQ6sn12T/6cNI8eYCPSzWaiTw/TeND9kIV35ot4CSr/FtojfX5KG8wDP7tj/3vdlVr1TRydOC1Ej/zMCKATSKIs8UT1Bd/BDEqVotxrp_QC2RX/hn7b82AleqnYbVfl/GzKc4IwCKzKPD_Vv/q_hw2XoeQoXmtM6l/xR-9JtM0HAc.jpg' },
-  { name: 'DJT Nippon Heavy Tee', price: '$23.99', url: 'https://shop.foidslop.com/products/djt-nippon-heavy-tee', image: 'https://imgproxy.fourthwall.dev/waK-pQcdCo98u7G3QjfH4HBnguGaVV0xtTsHypKsYyw/w:1920/sm:1/enc/rN2Jw4uAk7J_46jF/cE9BEPrts5QB4fN_/VOvWTxwJiGeG713J/9mk7Afrin-ftx7Gm/qHvbhR4e1FW9JU6Q/oBqAXmzw6de4auKp/H3TmzFljySeQFsbN/DUq6gjEWcD4Ainyr/sOoaV2BwgCnSCTs8/lMHUhM9UIvgDdA8S/Oq-RIFVv-c5CEmky/Qf1EOt5pa9oFD2Ea/wfTWA1wt9Q73qLwv/hhYTGl1Nml_w4aM4/TyxZozfIjNU.jpg' },
-  { name: 'DJT Nippon Premium Relaxed Hoodie', price: '$49.99', url: 'https://shop.foidslop.com/products/djt-nippin-premium-heavy-hoodie', image: 'https://imgproxy.fourthwall.dev/qh-a7PeUhC23XLqDUwiRItX5j-ZuwOGXA7fymi81QRU/w:1920/sm:1/enc/hTgl50E6REpt2YMz/0tWMrwa4MtCkJwPf/w3v2g7tjxYVRAlDX/BwGaGY3CCw8ygo6C/gCtVkr8OqaNKWy3b/o554x9fiXrXMTofF/LfVj53jvG8gR1ome/vcYe-izLRDwRok0c/VWl351ShQ7WOBioE/8TqI_BnBGwEEGwpq/N-NvCgS768aSmkna/FcvzX7dUVLb4l4Ly/5Aon3R8LVShKMTs1/krQgw60cQDExR-YF/-DILEup9SpM.jpg' },
-  { name: 'DJT Nippon Mug', price: 'From $8.95', url: 'https://shop.foidslop.com/products/djt-nippon-mug', image: 'https://imgproxy.fourthwall.dev/F0zoKTHInVH7fAt21dOfvAyaxef5Ab-S82lJV8AdwQM/w:1920/sm:1/enc/L8lKpeEDXA48z-gp/WOzuIq6z4VZcdmdT/oUPf1rqZdANianIf/jovHIjOs_Enz_lFQ/X_Iop77stTvdG4Az/WQ72-14PrUrTp49z/rlXn6NN_dR59QYrB/bkwkXar7T4pZd1X3/0OYu3oYa1bs6YINw/YRDreG_XVBPPZN5g/LxPsKRb4GQxVoYJX/7TGOsAGN286T3bLe/rXft0sXAQmFfZbqp/mH_5UeLOHwVpwruX/UpR85BT5-fs.jpg' },
-  { name: 'DJT Nippon Matte Paper Poster', price: '$8.50', url: 'https://shop.foidslop.com/products/djt-nippon-matte-paper-poster', image: 'https://imgproxy.fourthwall.dev/fOS45BZS7utD9OOenoIsnMXjryD8wa7M5LHBdxCU0CM/w:1920/sm:1/enc/SmtLSDrCanrLbIff/a6lcQoNOFU_6-_J_/PXSwxTSPLb24ymNs/DdJfKGc0hmyRbFPC/f0MNBSOVCbKS8JS4/dkIgFJ00dvNvrZ8_/9yNDsnjxUIcsxN7O/dr7a9FJRpDJT7CYj/6mFgmR5z1i9OvTmL/9eT-y3FELxyJzLEh/hbAJTbHuh-WGWexY/haHKbg2ZFQEIHqbM/oAZGzC2rAfTTx43a/JYGTN4hoYZBiJHBr/OJAWAh4Duf8.jpg' },
-  { name: 'DJT Nippon Framed Matte Poster', price: '$23.35', url: 'https://shop.foidslop.com/products/djt-nippon-framed-high-quality-matte-poster', image: 'https://imgproxy.fourthwall.dev/F14Lne3b8uOHlJUKErm64LD8BSgs8G1Md7JfXUtuu7A/w:1920/sm:1/enc/NyhDLyCmrOcheBJz/O_IiHyhKxTHVCR6U/xTTIfSXJMlWgMnN_/j4Z8lLaNuC11KO71/dlZ8snQ0whw_jpn0/BrVXZmbvRB93Vn9J/mF2E5DzTRkPNnzx_/3QgcvDPw7JcP9gI7/2sdmYtpYXiGsp-8w/ve08dsrL8f26B-OE/2Efx4JmzGn7Gm_Wb/B4Rp9suc4B7lPiVv/Vt1t8_-elutBL_7a/MNwuLmhTnhcKWJxB/lxoNosLTHrM.jpg' }
-];
-const LOCAL_MERCH_ASSETS = {
-  hero: { avif: 'DJTNIP-hq.avif', webp: 'DJTNIP-hq.webp', fallback: 'DJTNIP.png' },
-  lifestyle: { avif: 'CarModel-hq.avif', webp: 'CarModel-hq.webp', fallback: 'CarModel.png' },
-  poster: { avif: 'DJTNIP-hq.avif', webp: 'DJTNIP-hq.webp', fallback: 'DJTNIP.png' },
-  model: { avif: 'MerchModel-hq.avif', webp: 'MerchModel-hq.webp', fallback: 'MerchModel.png' }
-};
 
 function esc(value) {
   return String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;')
@@ -66,9 +53,6 @@ function imageUrl(meal) { return `${BASE_URL}/slop/img/${imageFile(meal)}`; }
 function socialImageUrl(meal) { return `${BASE_URL}/slop/social/${meal.slug}-wide.jpg`; }
 function pinterestImageUrl(meal) { return `${BASE_URL}/slop/social/${meal.slug}-pin.jpg`; }
 function schemaImages(meal) { return [imageUrl(meal), `${BASE_URL}/slop/img/${meal.slug}-4x3.jpg`, `${BASE_URL}/slop/img/${meal.slug}-16x9.jpg`]; }
-function merchPicture(asset, alt, attributes = '') {
-  return `<picture><source type="image/avif" srcset="${asset.avif}"><source type="image/webp" srcset="${asset.webp}"><img src="${asset.fallback}" alt="${esc(alt)}" ${attributes}></picture>`;
-}
 function titleLines(name) {
   const words = name.toUpperCase().split(/\s+/);
   const midpoint = Math.ceil(words.length / 2);
@@ -77,8 +61,12 @@ function titleLines(name) {
   return second ? `${first}<br>${second}.` : `${first}.`;
 }
 function jsonLd(data) { return JSON.stringify(data, null, 2).replace(/<\//g, '<\\/'); }
+function isHttpsUrl(value) {
+  try { return new URL(value).protocol === 'https:'; } catch (error) { return false; }
+}
 
 const db = JSON.parse(fs.readFileSync(DB_FILE, 'utf8'));
+const homepage = JSON.parse(fs.readFileSync(HOMEPAGE_FILE, 'utf8'));
 const meals = (db.meals || db).slice().sort((a, b) => a.id - b.id);
 
 let dateOverride = null;
@@ -129,6 +117,34 @@ function validate() {
     const image = path.join(SLOP_DIR, 'img', imageFile(meal));
     if (!fs.existsSync(image)) errors.push(`Missing published image: ${meal.slug}`);
   }
+  if (!homepage || typeof homepage !== 'object') errors.push('Missing homepage configuration');
+  if (!homepage.newsletter?.promise || !homepage.newsletter?.cadence) errors.push('Homepage newsletter copy is incomplete');
+  const newsletterHiddenFields = homepage.newsletter?.hiddenFields || {};
+  if (typeof newsletterHiddenFields !== 'object' || Array.isArray(newsletterHiddenFields)) {
+    errors.push('Newsletter hiddenFields must be an object');
+  } else {
+    for (const [name, value] of Object.entries(newsletterHiddenFields)) {
+      if (!/^[A-Za-z][A-Za-z0-9_.-]*$/.test(name)) errors.push(`Newsletter hidden field name is invalid: ${name}`);
+      if (!['string', 'number', 'boolean'].includes(typeof value)) errors.push(`Newsletter hidden field value is invalid: ${name}`);
+    }
+  }
+  if (homepage.newsletter?.enabled) {
+    if (!isHttpsUrl(homepage.newsletter.action)) errors.push('Enabled newsletter needs an HTTPS form action');
+    if (!/^[A-Za-z][A-Za-z0-9_.-]*$/.test(homepage.newsletter.emailField || '')) errors.push('Newsletter emailField is invalid');
+    if (!homepage.newsletter.providerName || !isHttpsUrl(homepage.newsletter.providerPrivacyUrl)) errors.push('Enabled newsletter needs provider privacy details');
+  }
+  if (!homepage.community?.question || !homepage.community?.deadline || !homepage.community?.promise) errors.push('Homepage community copy is incomplete');
+  if (!Array.isArray(homepage.community?.choices) || homepage.community.choices.length < 2 || homepage.community.choices.some(choice => !choice.label)) errors.push('Homepage community needs at least two named choices');
+  if (homepage.community?.enabled) {
+    if (!isHttpsUrl(homepage.community.submissionUrl)) errors.push('Enabled community module needs an HTTPS submission URL');
+    if (!homepage.community.providerName || !isHttpsUrl(homepage.community.providerPrivacyUrl)) errors.push('Enabled community module needs provider privacy details');
+  }
+  if (homepage.community?.featuredReader) {
+    const feature = homepage.community.featuredReader;
+    if (!feature.name || !feature.report || feature.permissionConfirmed !== true) errors.push('Featured reader needs a name, report, and confirmed publication permission');
+    if (feature.recipeSlug && !published.some(meal => meal.slug === feature.recipeSlug)) errors.push(`Featured reader references an unpublished recipe: ${feature.recipeSlug}`);
+  }
+  if (homepage.archivePickSlug && !meals.some(meal => meal.slug === homepage.archivePickSlug)) errors.push(`Unknown homepage archive pick: ${homepage.archivePickSlug}`);
   if (errors.length) throw new Error(`Content validation failed:\n- ${errors.join('\n- ')}`);
 }
 validate();
@@ -179,11 +195,12 @@ function header(root = '', active = '') {
   const homeUrl = root || '/';
   return `<header class="site-header" id="site-header">
   <a href="${homeUrl}" aria-label="foidslop home"><picture><source type="image/webp" srcset="${root}logo.webp"><img src="${root}logo.png" alt="FOID SLOP" class="logo" width="126" height="74"></picture></a>
-  <div class="site-header-center">Daily recipes / occasional objects / Issue ${String(current.id).padStart(3, '0')}</div>
+  <div class="site-header-center">Daily recipes / made for one / Issue ${String(current.id).padStart(3, '0')}</div>
   <div class="header-right">
     <button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="true"><span class="theme-toggle-mark" aria-hidden="true">*</span><span class="theme-toggle-label">Light mode</span></button>
-    <a href="${root}slop/archive" class="nav-link${active === 'archive' ? ' active' : ''}">Archive</a>
-    <a href="https://shop.foidslop.com/" target="_blank" rel="noopener noreferrer" class="nav-link header-shop">Shop</a>
+    <a href="${root}slop/today" class="nav-link header-today${active === 'today' ? ' active' : ''}"${active === 'today' ? ' aria-current="page"' : ''}>Today</a>
+    <a href="${root}slop/archive" class="nav-link${active === 'archive' ? ' active' : ''}"${active === 'archive' ? ' aria-current="page"' : ''}>Archive</a>
+    <a href="${root}#dispatch" class="nav-link header-dispatch">Dispatch</a>
   </div>
 </header>`;
 }
@@ -263,24 +280,116 @@ ${meal.substitutions ? `<div class="recipe-extra"><p class="recipe-extra-label">
 ${footer('../')}${siteScript}<script src="../recipe-tools.js"></script></body></html>`;
 }
 
-function renderHomepageBase() {
-  const recent = published.slice(-5, -1).reverse();
-  const cards = recent.map(meal => `<a class="zine-recipe-card" href="slop/${meal.slug}"><img src="slop/img/${imageFile(meal)}" alt="${esc(meal.imageAlt || meal.name)}" width="600" height="600" loading="lazy"><p>${esc(meal.name)}</p><small>${shortDate(releaseDate(meal))}</small></a>`).join('');
-  const products = [Object.assign({}, MERCH_PRODUCTS[0], { image: LOCAL_MERCH_ASSETS.lifestyle }), Object.assign({}, MERCH_PRODUCTS[4], { image: LOCAL_MERCH_ASSETS.poster }), Object.assign({}, MERCH_PRODUCTS[2], { image: LOCAL_MERCH_ASSETS.model })].map((product, index) => `<figure><a href="${product.url}" target="_blank" rel="noopener noreferrer">${merchPicture(product.image, `${product.name} from foidslop`, 'width="720" height="900" loading="lazy" decoding="async"')}<figcaption>Object ${String(index + 1).padStart(3, '0')} / ${esc(product.name)} / ${esc(product.price)}</figcaption></a></figure>`).join('');
-  const latestRecipes = [current, ...recent];
-  const recipeSchema = latestRecipes.map((meal, index) => ({ '@type': 'ListItem', position: index + 1, url: recipeUrl(meal), name: meal.name, image: imageUrl(meal) }));
-  const schema = [{ '@context': 'https://schema.org', '@type': 'WebSite', name: 'foidslop', url: BASE_URL, description: 'Approachable daily recipes made for one, plus occasional clothing, prints, and other objects from foidslop.' }, { '@context': 'https://schema.org', '@type': 'Organization', name: 'foidslop', url: BASE_URL, logo: `${BASE_URL}/brand-icon.png`, sameAs: ['https://shop.foidslop.com'] }, { '@context': 'https://schema.org', '@type': 'ItemList', name: 'Latest foidslop recipes', url: `${BASE_URL}/slop/archive`, itemListElement: recipeSchema }];
-  return `<!DOCTYPE html><html lang="en"><head>${commonHead({ title: 'foidslop | Daily Recipes for One and Occasional Objects', description: 'Approachable daily recipes made for one, plus occasional clothing, prints, and other objects from foidslop.', canonical: `${BASE_URL}/` })}<link rel="preload" as="image" href="${LOCAL_MERCH_ASSETS.hero.avif}" type="image/avif" fetchpriority="high"><link rel="stylesheet" href="css/home-redesign.css?v=20260716-1"><link rel="stylesheet" href="css/theme.css?v=20260713-4"><script type="application/ld+json">${jsonLd(schema)}</script></head><body><a href="#main" class="sr-only focusable">Skip to content</a><main id="main" class="zine-home">${header()}<div id="top"><section class="zine-hero"><div class="zine-hero-copy"><div><div class="zine-kicker">A small publication for one</div><h1>Daily<br><span>slop.</span><br>Dinner, etc.</h1><p class="zine-deck">One approachable recipe every day. A few things to wear when the internet demands it.</p></div><div class="zine-note"><span>Vol. 01 / 2026</span><strong>Read / Wear / Repeat</strong></div></div><a class="zine-art" href="${MERCH_PRODUCTS[0].url}" target="_blank" rel="noopener noreferrer">${merchPicture(LOCAL_MERCH_ASSETS.hero, `${MERCH_PRODUCTS[0].name} from foidslop`, 'width="900" height="1100" loading="eager" fetchpriority="high" decoding="async"')}<span class="zine-art-label">DJT Nippon / Drop 001</span></a></section><section class="zine-dispatch"><div class="zine-dispatch-intro"><div class="zine-kicker">Slop of the Day</div><h2>Eat<br>this.</h2><p>Filed every day from the department of feeding yourself without making it a whole thing.</p></div><div class="zine-dispatch-photo"><span class="zine-tape"></span><img src="slop/img/${imageFile(current)}" alt="${esc(current.imageAlt || current.name)}" width="768" height="768"></div><div class="zine-dispatch-copy"><div class="zine-number">${String(current.id).padStart(3, '0')}</div><h3>${titleLines(current.name)}</h3><p>${esc(current.description)}</p><a class="zine-read" href="slop/${current.slug}">Open today’s slop</a></div></section><section><div class="zine-section-head"><h2>Recent issues</h2><span>${published.length} recipes / start anywhere</span></div><div class="zine-recipe-index">${cards}</div></section><section class="zine-objects"><div class="zine-section-head"><h2>Objects department</h2><span>Drop 001 / Available now</span></div><div class="zine-objects-intro"><p>Things you do not need, made for people who know exactly what they like.</p><p>DJT Nippon is the first collection. Tees, hoodies, posters, and mugs from the foidslop objects department.</p></div><div class="zine-object-spread">${products}</div></section><section class="zine-find"><div class="zine-find-copy"><div class="zine-kicker">The index</div><h2>Find<br>dinner.</h2><p>Quick, no-cook, vegetarian, for one. There is a filing system for whatever this is.</p></div><nav class="zine-find-links" aria-label="Recipe collections"><a href="recipes/quick">Quick</a><a href="recipes/no-cook">No-cook</a><a href="recipes/for-one">For one</a><a href="recipes/vegetarian">Vegetarian</a><a href="girl-dinner-ideas">Girl dinner</a><a href="slop/archive">Full archive</a></nav></section><section class="zine-signature"><picture><source type="image/webp" srcset="logo.webp"><img src="logo.png" alt="FOID SLOP, recipes, ideas, misery made for one" width="1009" height="596" loading="lazy" decoding="async"></picture><p>A daily recipe project and an occasional objects department. Same publication. Different problems.</p></section></div></main>${footer('')}${siteScript}</body></html>`;
+function totalMinutes(meal) {
+  return minutes(meal.prep) + minutes(meal.cook);
+}
+
+function homepageCard(meal) {
+  const total = totalMinutes(meal);
+  return `<article class="zine-recipe-card">
+    <a href="slop/${meal.slug}" data-track="home_week_recipe" data-recipe="${esc(meal.slug)}">
+      <picture><source type="image/webp" srcset="slop/img/${meal.slug}-480.webp 480w, slop/img/${meal.slug}-768.webp 768w" sizes="(max-width: 620px) 50vw, (max-width: 1000px) 33vw, 17vw"><img src="slop/img/${imageFile(meal)}" alt="${esc(meal.imageAlt || meal.name)}" width="600" height="600" loading="lazy" decoding="async"></picture>
+      <div class="zine-recipe-card-copy"><p>${esc(meal.name)}</p><small>${shortDate(releaseDate(meal))} / ${total ? `${total} min` : 'No cook'} / ${esc(meal.category)}</small></div>
+    </a>
+  </article>`;
+}
+
+function newsletterSignup(id, repeated = false) {
+  const newsletter = homepage.newsletter;
+  if (repeated && !newsletter.enabled) return '';
+  const hiddenFields = Object.entries(newsletter.hiddenFields || {})
+    .map(([name, value]) => `<input type="hidden" name="${esc(name)}" value="${esc(String(value))}">`)
+    .join('');
+  const status = newsletter.enabled
+    ? `<form class="dispatch-form" action="${esc(newsletter.action)}" method="post" data-newsletter-form>
+        ${hiddenFields}
+        <label for="${id}-email">Email address</label>
+        <div class="dispatch-form-row"><input id="${id}-email" name="${esc(newsletter.emailField)}" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required><button type="submit">Get the weekly slop</button></div>
+      </form>
+      <p class="dispatch-privacy">${esc(newsletter.cadence)} Double opt-in. See the <a href="privacy">privacy policy</a> and <a href="${esc(newsletter.providerPrivacyUrl)}" rel="external">the ${esc(newsletter.providerName)} policy</a>.</p>`
+    : `<div class="dispatch-pending" role="status"><strong>The subscription desk is being connected.</strong><span>No email is collected yet. Follow the daily feed through <a href="feed.xml" type="application/atom+xml">RSS</a> in the meantime.</span></div>`;
+  return `<section class="zine-newsletter${repeated ? ' zine-newsletter-repeat' : ''}"${repeated ? '' : ' id="dispatch"'} aria-labelledby="${id}-title" data-newsletter-state="${newsletter.enabled ? 'active' : 'inactive'}">
+    <div class="zine-newsletter-heading"><div class="zine-kicker">The Weekly Slop</div><h2 id="${id}-title">${repeated ? 'Still hungry?' : 'Come back on purpose.'}</h2></div>
+    <div class="zine-newsletter-body"><p class="dispatch-promise">${esc(newsletter.promise)}</p>${status}</div>
+  </section>`;
+}
+
+function chooseArchivePick() {
+  const excluded = new Set(published.slice(-7).map(meal => meal.slug));
+  const eligible = published.filter(meal => !excluded.has(meal.slug));
+  if (!eligible.length) return null;
+  const configured = eligible.find(meal => meal.slug === homepage.archivePickSlug);
+  if (configured) return configured;
+  const week = Math.floor(Date.parse(`${today}T12:00:00Z`) / (7 * 24 * 60 * 60 * 1000));
+  return eligible[week % eligible.length];
+}
+
+function renderCommunity() {
+  const community = homepage.community;
+  const featured = community.featuredReader && community.featuredReader.name && community.featuredReader.report
+    ? `<aside class="table-feature"><span>Filed by ${esc(community.featuredReader.name)}</span><blockquote>${esc(community.featuredReader.report)}</blockquote>${community.featuredReader.recipeSlug ? `<a href="slop/${esc(community.featuredReader.recipeSlug)}">See the implicated recipe</a>` : ''}</aside>`
+    : '';
+  const choices = community.choices.map((choice, index) => `<li><span>${String(index + 1).padStart(2, '0')}</span>${esc(choice.label)}</li>`).join('');
+  const actions = community.enabled
+    ? `<div class="table-actions"><a href="${esc(community.submissionUrl)}" rel="external" data-track="community_vote_click">Vote this week</a><a href="${esc(community.submissionUrl)}" rel="external" data-track="community_submit_click">Send evidence</a></div><p class="table-privacy">Submissions are moderated. Publication permission is requested in the form. See <a href="${esc(community.providerPrivacyUrl)}" rel="external">${esc(community.providerName)} privacy details</a>.</p>`
+    : `<div class="table-pending" role="status">Voting is not open yet. The question is posted so the desk is ready when its submission form is connected.</div>`;
+  return `<section class="zine-table" id="table" aria-labelledby="table-title">
+    <div class="zine-section-head"><h2 id="table-title">The Table</h2><span>Readers / questions / evidence</span></div>
+    <div class="table-layout"><div class="table-intro"><div class="zine-kicker">Question of the week</div><h3>${esc(community.question)}</h3><p>${esc(community.promise)}</p><small>${esc(community.deadline)}</small></div><div class="table-vote"><ol>${choices}</ol>${actions}</div>${featured}</div>
+  </section>`;
+}
+
+function renderArchivePick(meal) {
+  if (!meal) return '';
+  const total = totalMinutes(meal);
+  return `<section class="zine-filing" id="filing-cabinet" aria-labelledby="filing-title">
+    <a class="filing-image" href="slop/${meal.slug}" data-track="archive_pick_open"><picture><source type="image/webp" srcset="slop/img/${meal.slug}-480.webp 480w, slop/img/${meal.slug}-768.webp 768w" sizes="(max-width: 800px) 100vw, 48vw"><img src="slop/img/${imageFile(meal)}" alt="${esc(meal.imageAlt || meal.name)}" width="768" height="768" loading="lazy" decoding="async"></picture></a>
+    <div class="filing-copy"><div class="zine-kicker">From the filing cabinet</div><h2 id="filing-title">${titleLines(meal.name)}</h2><p>${esc(meal.description)}</p><div class="filing-meta">${shortDate(releaseDate(meal))} / ${total ? `${total} minutes` : 'No cooking'} / ${esc(meal.category)}</div><a class="zine-read" href="slop/${meal.slug}" data-track="archive_pick_open">Reopen this file</a></div>
+  </section>`;
 }
 
 function renderHomepage() {
-  const collectionLinks = '<nav class="zine-find-links" aria-label="Recipe collections"><a href="recipes/quick">Quick</a><a href="recipes/no-cook">No-cook</a><a href="recipes/for-one">For one</a><a href="recipes/vegetarian">Vegetarian</a><a href="recipes/pasta">Pasta</a><a href="recipes/toast">Toast</a><a href="recipes/snack-plates">Snack plates</a><a href="recipes/comfort-food">Comfort food</a><a href="recipes/15-minute">15-minute</a><a href="girl-dinner-ideas">Girl dinner</a><a href="slop/archive">Full archive</a></nav>';
-  return renderHomepageBase()
-    .replaceAll('One approachable recipe for one every day, plus an occasional objects department from foidslop.', 'Approachable daily recipes made for one, plus occasional clothing, prints, and other objects from foidslop.')
-    .replace(`<div class="zine-dispatch-photo"><span class="zine-tape"></span><img src="slop/img/${imageFile(current)}"`, `<div class="zine-dispatch-photo"><span class="zine-tape"></span><a class="zine-dispatch-image" href="slop/${current.slug}"><img src="slop/img/${imageFile(current)}"`)
-    .replace('width="768" height="768"></div><div class="zine-dispatch-copy">', 'width="768" height="768"></a></div><div class="zine-dispatch-copy">')
-    .replace(/<nav class="zine-find-links"[\s\S]*?<\/nav>/, collectionLinks)
-    .replace('</section></div></main>', '<a class="zine-rss" href="feed.xml" type="application/atom+xml">Follow the daily slop via RSS</a></section></div></main>');
+  const week = published.slice(-7, -1).reverse();
+  const archivePick = chooseArchivePick();
+  const randomPool = published.filter(meal => meal.slug !== current.slug).map(meal => meal.slug);
+  const latestRecipes = [current, ...week];
+  const recipeSchema = latestRecipes.map((meal, index) => ({ '@type': 'ListItem', position: index + 1, url: recipeUrl(meal), name: meal.name, image: imageUrl(meal) }));
+  const description = 'One approachable recipe made for one every day, plus a searchable archive and a weekly dispatch from foidslop.';
+  const schema = [
+    { '@context': 'https://schema.org', '@type': 'WebSite', name: 'foidslop', url: BASE_URL, description },
+    { '@context': 'https://schema.org', '@type': 'Organization', name: 'foidslop', url: BASE_URL, logo: `${BASE_URL}/brand-icon.png` },
+    { '@context': 'https://schema.org', '@type': 'ItemList', name: 'Latest foidslop recipes', url: `${BASE_URL}/slop/archive`, itemListElement: recipeSchema }
+  ];
+  const total = totalMinutes(current);
+  const randomDisabled = randomPool.length ? '' : ' disabled aria-disabled="true"';
+  const intentLinks = [
+    ['Fifteen minutes', 'recipes/15-minute', '15-minute'],
+    ['I refuse to cook', 'recipes/no-cook', 'no-cook'],
+    ['Pasta, obviously', 'recipes/pasta', 'pasta'],
+    ['Something on toast', 'recipes/toast', 'toast'],
+    ['Cheap comfort', 'recipes/comfort-food', 'comfort']
+  ].map(([label, href, intent]) => `<a href="${href}" data-track="home_intent_click" data-intent="${intent}">${label}</a>`).join('');
+  return `<!DOCTYPE html><html lang="en"><head>${commonHead({ title: 'foidslop | Daily Recipes for One', description, canonical: `${BASE_URL}/` })}
+<link rel="preload" as="image" href="slop/img/${current.slug}-768.webp" type="image/webp" imagesrcset="slop/img/${current.slug}-480.webp 480w, slop/img/${current.slug}-768.webp 768w" imagesizes="(max-width: 800px) 100vw, 42vw" fetchpriority="high">
+<link rel="stylesheet" href="css/home-redesign.css?v=20260717-1"><link rel="stylesheet" href="css/theme.css?v=20260717-1">
+<script type="application/ld+json">${jsonLd(schema)}</script></head><body><a href="#main" class="sr-only focusable">Skip to content</a>
+<main id="main" class="zine-home">${header('', 'home')}<div id="top">
+  <section class="zine-hero" aria-labelledby="home-title">
+    <div class="zine-hero-copy"><div><div class="zine-kicker">A small publication for one</div><h1 id="home-title">Daily<br><span>slop.</span><br>Dinner, etc.</h1><p class="zine-deck">One approachable recipe every day. Feeding yourself without turning it into a project.</p></div><div class="zine-note"><span>Vol. 01 / Issue ${String(current.id).padStart(3, '0')}</span><strong>Read / Cook / Return</strong></div></div>
+    <article class="zine-today">
+      <a class="zine-today-image" href="slop/${current.slug}" data-track="home_today_open"><picture><source type="image/webp" srcset="slop/img/${current.slug}-480.webp 480w, slop/img/${current.slug}-768.webp 768w" sizes="(max-width: 800px) 100vw, 42vw"><img src="slop/img/${imageFile(current)}" alt="${esc(current.imageAlt || current.name)}" width="768" height="768" loading="eager" fetchpriority="high" decoding="async"></picture></a>
+      <div class="zine-today-copy"><div class="today-label"><span>Today’s slop / ${String(current.id).padStart(3, '0')}</span><span>${total ? `${total} min` : 'No cook'}</span></div><h2>${esc(current.name)}</h2><p>${esc(current.description)}</p><div class="today-actions"><a href="slop/${current.slug}" data-track="home_today_open">Open today’s slop</a><button type="button" data-random-recipe${randomDisabled}>Feed me something else</button></div><small>${randomPool.length ? 'New slop tomorrow.' : 'The archive starts here. New slop tomorrow.'}</small></div>
+    </article>
+  </section>
+  ${newsletterSignup('dispatch-primary')}
+  <section class="zine-week" aria-labelledby="week-title"><div class="zine-section-head"><h2 id="week-title">This week in slop</h2><span>Today plus ${week.length} earlier ${week.length === 1 ? 'issue' : 'issues'}</span></div>${week.length ? `<div class="zine-recipe-index">${week.map(homepageCard).join('')}</div>` : '<p class="zine-empty">The first issue is on the table. Come back tomorrow for another.</p>'}</section>
+  <section class="zine-find" aria-labelledby="find-title"><div class="zine-find-copy"><div class="zine-kicker">The immediate problem</div><h2 id="find-title">What kind<br>of night is it?</h2><p>Choose the constraint, craving, or level of refusal currently running dinner.</p></div><nav class="zine-find-links" aria-label="Find a recipe for tonight">${intentLinks}<button type="button" data-random-recipe${randomDisabled}>I have no idea</button><a href="slop/archive" data-track="home_intent_click" data-intent="archive">Search everything</a></nav></section>
+  ${renderCommunity()}
+  ${renderArchivePick(archivePick)}
+${newsletterSignup('dispatch-repeat', true)}
+  <section class="zine-signature"><picture><source type="image/webp" srcset="logo.webp"><img src="logo.png" alt="FOID SLOP, recipes, ideas, misery made for one" width="1009" height="596" loading="lazy" decoding="async"></picture><p>A daily recipe publication for one person and whatever kind of night this is.</p><a class="zine-rss" href="feed.xml" type="application/atom+xml">Follow the daily slop via RSS</a></section>
+</div></main>${footer('')}${siteScript}
+<script id="random-recipe-pool" type="application/json">${jsonLd(randomPool)}</script><script src="home.js?v=20260717-1" defer></script></body></html>`;
 }
 
 function updateHomepage() {

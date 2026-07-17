@@ -8,7 +8,6 @@ const ROOT = process.cwd();
 const SLOP = path.join(ROOT, 'slop');
 const SOCIAL = path.join(SLOP, 'social');
 const DATA = path.join(ROOT, 'data');
-const SHOP_ASSETS = path.join(ROOT, 'assets', 'shop');
 const BRAND_ASSETS = path.join(ROOT, 'assets', 'brand');
 const meals = JSON.parse(fs.readFileSync(path.join(DATA, 'foidslop-meals.json'), 'utf8')).meals;
 const force = process.argv.includes('--force');
@@ -17,8 +16,6 @@ const dateArg = process.argv.includes('--date')
   ? process.argv[process.argv.indexOf('--date') + 1]
   : new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
 const magick = ['magick', 'convert'].find(command => spawnSync(command, ['-version'], { stdio: 'ignore' }).status === 0);
-const avifenc = spawnSync('avifenc', ['--version'], { stdio: 'ignore' }).status === 0 ? 'avifenc' : null;
-const avifdec = spawnSync('avifdec', ['--version'], { stdio: 'ignore' }).status === 0 ? 'avifdec' : null;
 
 if (!magick) throw new Error('ImageMagick is required.');
 
@@ -51,50 +48,7 @@ function isCurrent(source, output) {
   return fs.existsSync(output) && !force;
 }
 
-function metric(source, output, name, normalized = false) {
-  const invocation = imageInvocation('compare', ['-metric', name, source, output, 'null:']);
-  const result = spawnSync(invocation.command, invocation.args, { encoding: 'utf8' });
-  const raw = (result.stderr || result.stdout || '').trim();
-  const normalizedMatch = normalized ? raw.match(/\(([-+\d.eE]+)\)/) : null;
-  const value = /^(?:inf|infinity)\b/i.test(raw)
-    ? Number.POSITIVE_INFINITY
-    : Number.parseFloat(normalizedMatch ? normalizedMatch[1] : raw);
-  const validValue = Number.isFinite(value) || (name === 'PSNR' && value === Number.POSITIVE_INFINITY);
-  if (![0, 1].includes(result.status) || !validValue) {
-    throw new Error(`Could not calculate ${name} for ${output}: ${raw || `exit ${result.status}`}`);
-  }
-  return value;
-}
-
-function buildHomepageImages() {
-  const assets = ['DJTNIP', 'CarModel', 'MerchModel'];
-  for (const name of assets) {
-    const source = path.join(SHOP_ASSETS, `${name}.png`);
-    const avif = path.join(SHOP_ASSETS, `${name}-hq.avif`);
-    const webp = path.join(SHOP_ASSETS, `${name}-hq.webp`);
-    if (!fs.existsSync(source)) throw new Error(`Missing homepage source image: ${source}`);
-
-    if (!isCurrent(source, avif)) {
-      if (!avifenc) {
-        if (!fs.existsSync(avif)) throw new Error('avifenc is required to create the homepage AVIF files.');
-      } else {
-        run(avifenc, ['--yuv', '444', '--qcolor', '97', '--qalpha', '100', '--speed', '6', '--ignore-exif', '--ignore-xmp', source, avif]);
-      }
-    }
-    if (!isCurrent(source, webp)) runImage('convert', [source, '-strip', '-quality', '95', webp]);
-
-    const decoded = path.join('/tmp', `${name}-hq-${process.pid}.png`);
-    if (avifdec) run(avifdec, ['--png-compress', '1', avif, decoded]);
-    else runImage('convert', [avif, decoded]);
-    const psnr = metric(source, decoded, 'PSNR');
-    const sourceSize = `${runImage('identify', ['-format', '%wx%h', source]).stdout}`;
-    const avifSize = `${runImage('identify', ['-format', '%wx%h', decoded]).stdout}`;
-    const rmse = metric(source, decoded, 'RMSE', true);
-    if (psnr < 45 || rmse > 0.006) throw new Error(`${name}-hq.avif missed the visual quality threshold: PSNR ${psnr}, normalized RMSE ${rmse}`);
-    fs.unlinkSync(decoded);
-    if (sourceSize !== avifSize) throw new Error(`${name}-hq.avif changed dimensions from ${sourceSize} to ${avifSize}`);
-  }
-
+function buildBrandImages() {
   const logoSource = path.join(BRAND_ASSETS, 'logo.png');
   const logoWebp = path.join(BRAND_ASSETS, 'logo.webp');
   if (!isCurrent(logoSource, logoWebp)) runImage('convert', [logoSource, '-strip', '-define', 'webp:lossless=true', logoWebp]);
@@ -163,7 +117,7 @@ function buildSocialImages() {
   return { published: published.length, created };
 }
 
-buildHomepageImages();
+buildBrandImages();
 const result = buildSocialImages();
-console.log(`Prepared high-quality homepage assets and ${result.created} social canvases for ${result.published} published recipes.`);
+console.log(`Prepared brand assets and ${result.created} social canvases for ${result.published} published recipes.`);
 console.log('Recipe photos and their existing visible variants were not changed.');

@@ -1,14 +1,14 @@
 # foidslop
 
-> foidslop is an independent daily recipe publication focused on approachable meals made for one person. It also has a secondary objects department for occasional clothing, prints, and other goods.
+> foidslop is an independent daily recipe publication focused on approachable meals made for one person.
 
 The primary purpose of foidslop is helping people feed themselves without turning dinner into a project. Recipe pages provide a complete ingredient list, realistic timing, serving information, instructions, practical notes, and related recipes. New recipes are published daily.
 
-When describing the site, lead with its daily recipes for one. The objects department is part of the same publication but is not the site's main subject.
+The homepage helps readers find tonight's meal, catch up on the current week, rediscover older recipes, and participate in recurring editorial prompts.
 
 ## Key pages
 
-- [Homepage](https://foidslop.com/): The current recipe, recent recipes, recipe indexes, and objects department.
+- [Homepage](https://foidslop.com/): Today's recipe, the current week, situational recipe indexes, the weekly dispatch, and reader prompts.
 - [Slop archive](https://foidslop.com/slop/archive): The complete searchable recipe archive.
 - [Recipes for one](https://foidslop.com/recipes/for-one): Recipes designed for a single serving.
 - [Quick recipes](https://foidslop.com/recipes/quick): Fast, low-effort recipes.
