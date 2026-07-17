@@ -7,13 +7,26 @@
     {
       "id": "2026-07-24",
       "targetFriday": "2026-07-24",
-      "status": "pending",
+      "status": "open",
       "dispatchNote": null,
       "choices": [
-        { "slot": "A", "label": "15-minute noodles", "recipeSlug": "spicy-peanut-noodles-cucumber" },
-        { "slot": "B", "label": "Something on toast", "recipeSlug": "tuna-olive-tapenade-toast" },
-        { "slot": "C", "label": "A no-cook plate", "recipeSlug": "cantaloupe-prosciutto-plate" }
-      ]
+        {
+          "slot": "A",
+          "label": "15-minute noodles",
+          "recipeSlug": "spicy-peanut-noodles-cucumber"
+        },
+        {
+          "slot": "B",
+          "label": "Something on toast",
+          "recipeSlug": "tuna-olive-tapenade-toast"
+        },
+        {
+          "slot": "C",
+          "label": "A no-cook plate",
+          "recipeSlug": "cantaloupe-prosciutto-plate"
+        }
+      ],
+      "openedAt": "2026-07-17T23:16:01.897Z"
     },
     {
       "id": "2026-07-31",
@@ -21,9 +34,21 @@
       "status": "pending",
       "dispatchNote": null,
       "choices": [
-        { "slot": "A", "label": "Cozy baked potato", "recipeSlug": "baked-potato-chili" },
-        { "slot": "B", "label": "A very good sandwich", "recipeSlug": "tomato-mozzarella-panini" },
-        { "slot": "C", "label": "No-cook wrap", "recipeSlug": "hummus-roasted-red-pepper-wrap" }
+        {
+          "slot": "A",
+          "label": "Cozy baked potato",
+          "recipeSlug": "baked-potato-chili"
+        },
+        {
+          "slot": "B",
+          "label": "A very good sandwich",
+          "recipeSlug": "tomato-mozzarella-panini"
+        },
+        {
+          "slot": "C",
+          "label": "No-cook wrap",
+          "recipeSlug": "hummus-roasted-red-pepper-wrap"
+        }
       ]
     },
     {
@@ -32,9 +57,21 @@
       "status": "pending",
       "dispatchNote": null,
       "choices": [
-        { "slot": "A", "label": "Tinned fish snack", "recipeSlug": "tinned-sardines-lemon-crackers" },
-        { "slot": "B", "label": "Crispy quesadilla", "recipeSlug": "mushroom-spinach-quesadilla" },
-        { "slot": "C", "label": "Something eggy", "recipeSlug": "spinach-feta-scramble" }
+        {
+          "slot": "A",
+          "label": "Tinned fish snack",
+          "recipeSlug": "tinned-sardines-lemon-crackers"
+        },
+        {
+          "slot": "B",
+          "label": "Crispy quesadilla",
+          "recipeSlug": "mushroom-spinach-quesadilla"
+        },
+        {
+          "slot": "C",
+          "label": "Something eggy",
+          "recipeSlug": "spinach-feta-scramble"
+        }
       ]
     },
     {
@@ -43,9 +80,21 @@
       "status": "pending",
       "dispatchNote": null,
       "choices": [
-        { "slot": "A", "label": "Spicy noodles", "recipeSlug": "spicy-peanut-butter-noodles" },
-        { "slot": "B", "label": "Peanut butter toast", "recipeSlug": "peanut-butter-banana-toast" },
-        { "slot": "C", "label": "Lazy tomato plate", "recipeSlug": "cottage-cheese-tomato-plate" }
+        {
+          "slot": "A",
+          "label": "Spicy noodles",
+          "recipeSlug": "spicy-peanut-butter-noodles"
+        },
+        {
+          "slot": "B",
+          "label": "Peanut butter toast",
+          "recipeSlug": "peanut-butter-banana-toast"
+        },
+        {
+          "slot": "C",
+          "label": "Lazy tomato plate",
+          "recipeSlug": "cottage-cheese-tomato-plate"
+        }
       ]
     },
     {
@@ -54,9 +103,21 @@
       "status": "pending",
       "dispatchNote": null,
       "choices": [
-        { "slot": "A", "label": "Breakfast for dinner", "recipeSlug": "tofu-scramble-spinach" },
-        { "slot": "B", "label": "Bagel situation", "recipeSlug": "smoked-salmon-cream-cheese-bagel" },
-        { "slot": "C", "label": "Warm cheesy thing", "recipeSlug": "cheddar-chive-biscuits" }
+        {
+          "slot": "A",
+          "label": "Breakfast for dinner",
+          "recipeSlug": "tofu-scramble-spinach"
+        },
+        {
+          "slot": "B",
+          "label": "Bagel situation",
+          "recipeSlug": "smoked-salmon-cream-cheese-bagel"
+        },
+        {
+          "slot": "C",
+          "label": "Warm cheesy thing",
+          "recipeSlug": "cheddar-chive-biscuits"
+        }
       ]
     },
     {
@@ -65,9 +126,21 @@
       "status": "pending",
       "dispatchNote": null,
       "choices": [
-        { "slot": "A", "label": "Big baked potato", "recipeSlug": "cheddar-broccoli-baked-potato" },
-        { "slot": "B", "label": "Pesto sandwich", "recipeSlug": "pesto-mozzarella-panini" },
-        { "slot": "C", "label": "Sweet bowl", "recipeSlug": "cottage-cheese-pineapple-bowl" }
+        {
+          "slot": "A",
+          "label": "Big baked potato",
+          "recipeSlug": "cheddar-broccoli-baked-potato"
+        },
+        {
+          "slot": "B",
+          "label": "Pesto sandwich",
+          "recipeSlug": "pesto-mozzarella-panini"
+        },
+        {
+          "slot": "C",
+          "label": "Sweet bowl",
+          "recipeSlug": "cottage-cheese-pineapple-bowl"
+        }
       ]
     },
     {
@@ -76,9 +149,21 @@
       "status": "pending",
       "dispatchNote": null,
       "choices": [
-        { "slot": "A", "label": "Toast with an egg", "recipeSlug": "avocado-egg-toast" },
-        { "slot": "B", "label": "Little skewers", "recipeSlug": "mozzarella-tomato-skewers" },
-        { "slot": "C", "label": "Tuna salad", "recipeSlug": "tuna-sweet-corn-salad" }
+        {
+          "slot": "A",
+          "label": "Toast with an egg",
+          "recipeSlug": "avocado-egg-toast"
+        },
+        {
+          "slot": "B",
+          "label": "Little skewers",
+          "recipeSlug": "mozzarella-tomato-skewers"
+        },
+        {
+          "slot": "C",
+          "label": "Tuna salad",
+          "recipeSlug": "tuna-sweet-corn-salad"
+        }
       ]
     },
     {
@@ -87,9 +172,21 @@
       "status": "pending",
       "dispatchNote": null,
       "choices": [
-        { "slot": "A", "label": "Baked cheese", "recipeSlug": "baked-ricotta-honey-thyme" },
-        { "slot": "B", "label": "No-cook salad", "recipeSlug": "avocado-black-bean-salad" },
-        { "slot": "C", "label": "Spicy bowl", "recipeSlug": "spicy-tuna-avocado-bowl" }
+        {
+          "slot": "A",
+          "label": "Baked cheese",
+          "recipeSlug": "baked-ricotta-honey-thyme"
+        },
+        {
+          "slot": "B",
+          "label": "No-cook salad",
+          "recipeSlug": "avocado-black-bean-salad"
+        },
+        {
+          "slot": "C",
+          "label": "Spicy bowl",
+          "recipeSlug": "spicy-tuna-avocado-bowl"
+        }
       ]
     },
     {
@@ -98,9 +195,21 @@
       "status": "pending",
       "dispatchNote": null,
       "choices": [
-        { "slot": "A", "label": "Omelette night", "recipeSlug": "mushroom-thyme-omelette" },
-        { "slot": "B", "label": "Stuffed mushroom", "recipeSlug": "caprese-stuffed-portobello" },
-        { "slot": "C", "label": "Something on toast", "recipeSlug": "tuna-white-bean-bruschetta" }
+        {
+          "slot": "A",
+          "label": "Omelette night",
+          "recipeSlug": "mushroom-thyme-omelette"
+        },
+        {
+          "slot": "B",
+          "label": "Stuffed mushroom",
+          "recipeSlug": "caprese-stuffed-portobello"
+        },
+        {
+          "slot": "C",
+          "label": "Something on toast",
+          "recipeSlug": "tuna-white-bean-bruschetta"
+        }
       ]
     },
     {
@@ -109,9 +218,21 @@
       "status": "pending",
       "dispatchNote": null,
       "choices": [
-        { "slot": "A", "label": "Cheesy quesadilla", "recipeSlug": "cheddar-bacon-quesadilla" },
-        { "slot": "B", "label": "Caprese, no cook", "recipeSlug": "caprese-salad-balsamic-glaze" },
-        { "slot": "C", "label": "Tuna plate", "recipeSlug": "tuna-egg-salad-plate" }
+        {
+          "slot": "A",
+          "label": "Cheesy quesadilla",
+          "recipeSlug": "cheddar-bacon-quesadilla"
+        },
+        {
+          "slot": "B",
+          "label": "Caprese, no cook",
+          "recipeSlug": "caprese-salad-balsamic-glaze"
+        },
+        {
+          "slot": "C",
+          "label": "Tuna plate",
+          "recipeSlug": "tuna-egg-salad-plate"
+        }
       ]
     },
     {
@@ -120,9 +241,21 @@
       "status": "pending",
       "dispatchNote": null,
       "choices": [
-        { "slot": "A", "label": "Fresh salad", "recipeSlug": "avocado-mango-salad" },
-        { "slot": "B", "label": "Spicy ramen", "recipeSlug": "spicy-ramen-tofu" },
-        { "slot": "C", "label": "Loaded sweet potato", "recipeSlug": "baked-sweet-potato-black-beans-salsa" }
+        {
+          "slot": "A",
+          "label": "Fresh salad",
+          "recipeSlug": "avocado-mango-salad"
+        },
+        {
+          "slot": "B",
+          "label": "Spicy ramen",
+          "recipeSlug": "spicy-ramen-tofu"
+        },
+        {
+          "slot": "C",
+          "label": "Loaded sweet potato",
+          "recipeSlug": "baked-sweet-potato-black-beans-salsa"
+        }
       ]
     },
     {
@@ -131,9 +264,21 @@
       "status": "pending",
       "dispatchNote": null,
       "choices": [
-        { "slot": "A", "label": "Cottage cheese toast", "recipeSlug": "cottage-cheese-tomato-toast" },
-        { "slot": "B", "label": "Pesto skewers", "recipeSlug": "pesto-tomato-skewers" },
-        { "slot": "C", "label": "Cheese and crackers", "recipeSlug": "cheese-crackers-apple" }
+        {
+          "slot": "A",
+          "label": "Cottage cheese toast",
+          "recipeSlug": "cottage-cheese-tomato-toast"
+        },
+        {
+          "slot": "B",
+          "label": "Pesto skewers",
+          "recipeSlug": "pesto-tomato-skewers"
+        },
+        {
+          "slot": "C",
+          "label": "Cheese and crackers",
+          "recipeSlug": "cheese-crackers-apple"
+        }
       ]
     }
   ]
