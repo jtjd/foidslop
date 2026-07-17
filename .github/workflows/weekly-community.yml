@@ -1,0 +1,176 @@
+name: Weekly Slop Community Loop
+
+on:
+  schedule:
+    # Sunday morning in New York. The broadcast is scheduled for 10 AM local time.
+    - cron: '5 12 * * 0'
+    # 6:05 PM Thursday across daylight and standard time. The local-hour guard skips the extra run.
+    - cron: '5 22 * * 4'
+    - cron: '5 23 * * 4'
+    # Monthly queue health check.
+    - cron: '0 14 1 * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Weekly operation
+        required: true
+        default: dry-run
+        type: choice
+        options:
+          - dry-run
+          - bootstrap
+          - open
+          - resolve
+          - dispatch
+          - queue-check
+      operation:
+        description: Operation to preview when mode is dry-run
+        required: false
+        default: queue-check
+        type: choice
+        options:
+          - queue-check
+          - open
+          - resolve
+          - dispatch
+      date:
+        description: New York date override (YYYY-MM-DD)
+        required: false
+        type: string
+      poll:
+        description: Poll id override (YYYY-MM-DD)
+        required: false
+        type: string
+      send:
+        description: Schedule the Kit broadcast instead of saving a draft
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: foidslop-publishing
+  cancel-in-progress: false
+
+jobs:
+  weekly:
+    runs-on: ubuntu-latest
+    env:
+      KIT_API_KEY: ${{ secrets.KIT_API_KEY }}
+      TALLY_API_KEY: ${{ secrets.TALLY_API_KEY }}
+      TALLY_SNAPSHOT_FILE: ${{ runner.temp }}/tally-form-before-weekly.json
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Select operation
+        shell: bash
+        run: |
+          mode="${{ inputs.mode }}"
+          operation="${{ inputs.operation }}"
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            case "${{ github.event.schedule }}" in
+              "5 12 * * 0") mode="open" ;;
+              "5 22 * * 4"|"5 23 * * 4")
+                if [ "$(TZ=America/New_York date +%H)" = "18" ]; then mode="resolve"; else mode="skip"; fi
+                ;;
+              "0 14 1 * *") mode="queue-check" ;;
+            esac
+          fi
+          if [ "$mode" = "dry-run" ]; then
+            mode="${operation:-queue-check}"
+            echo "WEEKLY_DRY_RUN=true" >> "$GITHUB_ENV"
+          else
+            echo "WEEKLY_DRY_RUN=false" >> "$GITHUB_ENV"
+          fi
+          echo "WEEKLY_MODE=$mode" >> "$GITHUB_ENV"
+
+      - name: Ensure image tools are available
+        if: env.WEEKLY_MODE == 'resolve' && env.WEEKLY_DRY_RUN != 'true'
+        run: |
+          command -v magick || command -v convert || (sudo apt-get update && sudo apt-get install -y imagemagick)
+          command -v avifenc && command -v avifdec || (sudo apt-get update && sudo apt-get install -y libavif-bin)
+
+      - name: Run weekly operation
+        id: operation
+        if: env.WEEKLY_MODE != 'skip' && env.WEEKLY_MODE != 'queue-check'
+        shell: bash
+        run: |
+          args=("$WEEKLY_MODE")
+          if [ -n "${{ inputs.date }}" ]; then args+=(--date "${{ inputs.date }}"); fi
+          if [ -n "${{ inputs.poll }}" ]; then args+=(--poll "${{ inputs.poll }}"); fi
+          if [ "$WEEKLY_DRY_RUN" = "true" ]; then args+=(--dry-run); fi
+          if [ "${{ inputs.send }}" = "true" ]; then args+=(--send); fi
+          node scripts/weekly-community.js "${args[@]}"
+
+      - name: Regenerate and validate public site
+        id: publish
+        if: (env.WEEKLY_MODE == 'open' || env.WEEKLY_MODE == 'bootstrap' || env.WEEKLY_MODE == 'resolve') && env.WEEKLY_DRY_RUN != 'true'
+        run: |
+          npm run publish
+          npm run check
+          npm run build
+
+      - name: Commit and push weekly state
+        id: commit
+        if: (env.WEEKLY_MODE == 'open' || env.WEEKLY_MODE == 'bootstrap' || env.WEEKLY_MODE == 'resolve') && env.WEEKLY_DRY_RUN != 'true'
+        shell: bash
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add data/homepage.json data/weekly-polls.json data/foidslop-meals.json \
+            index.html slop/ recipes/ _redirects sitemap.xml feed.xml pinterest-rss.xml \
+            what-is-foidslop.html what-does-foid-mean.html girl-dinner-ideas.html editorial-standards.html \
+            assets/brand/logo.webp
+          if ! git diff --staged --quiet; then
+            git commit -m "Weekly community update: $(TZ=America/New_York date +'%Y-%m-%d')"
+            git push
+          fi
+
+      - name: Schedule or draft Sunday dispatch
+        if: (env.WEEKLY_MODE == 'open' || env.WEEKLY_MODE == 'bootstrap') && env.WEEKLY_DRY_RUN != 'true'
+        shell: bash
+        run: |
+          args=(dispatch)
+          if [ -n "${{ inputs.date }}" ]; then args+=(--date "${{ inputs.date }}"); fi
+          if [ -n "${{ inputs.poll }}" ]; then args+=(--poll "${{ inputs.poll }}"); fi
+          if [ "${{ inputs.send }}" = "true" ]; then args+=(--send); fi
+          node scripts/weekly-community.js "${args[@]}"
+
+      - name: Restore Tally after a failed publish
+        if: failure() && (steps.operation.outcome == 'failure' || steps.publish.outcome == 'failure' || steps.commit.outcome == 'failure') && (env.WEEKLY_MODE == 'open' || env.WEEKLY_MODE == 'bootstrap' || env.WEEKLY_MODE == 'resolve') && env.WEEKLY_DRY_RUN != 'true'
+        run: |
+          if [ -f "$TALLY_SNAPSHOT_FILE" ]; then
+            node scripts/weekly-community.js restore-tally --snapshot "$TALLY_SNAPSHOT_FILE"
+          fi
+
+      - name: Check editorial queue
+        if: env.WEEKLY_MODE == 'queue-check'
+        id: queue
+        shell: bash
+        run: |
+          result="$(node scripts/weekly-community.js queue-check --json)"
+          echo "$result"
+          echo "remaining=$(node -e 'const value=JSON.parse(process.argv[1]); process.stdout.write(String(value.remaining))' "$result")" >> "$GITHUB_OUTPUT"
+
+      - name: Open or update low-queue issue
+        if: env.WEEKLY_MODE == 'queue-check' && fromJSON(steps.queue.outputs.remaining) < 4
+        shell: bash
+        run: |
+          title="Weekly poll queue needs recipes"
+          body="Only ${{ steps.queue.outputs.remaining }} unpublished weekly polls remain. Add another editorial batch to data/weekly-polls.json before the queue runs out."
+          issue="$(gh issue list --state open --search "$title in:title" --json number --jq '.[0].number // empty')"
+          if [ -n "$issue" ]; then
+            gh issue comment "$issue" --body "$body"
+          else
+            gh issue create --title "$title" --body "$body"
+          fi

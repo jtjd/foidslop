@@ -16,9 +16,11 @@ Public files in `assets/brand/` and `assets/js/` are copied to their established
 
 ## Homepage services
 
-`data/homepage.json` controls the weekly dispatch, community question, optional reader feature, and archive pick. Newsletter and community collection stay disabled until their entries contain real HTTPS endpoints, provider names, and provider privacy URLs. Disabled services render honest inactive states and do not collect visitor data.
+`data/homepage.json` controls the Kit signup, current Tally question, optional reader feature, and archive pick. Kit receives newsletter subscriptions through a plain HTML form, and Tally hosts the vote and optional reader-submission fields. Neither integration loads a third-party script on the homepage.
 
 The newsletter form also supports provider-required values through `newsletter.hiddenFields`. Those values render as ordinary hidden HTML inputs, so the integration does not need an iframe or third-party script.
+
+`data/weekly-polls.json` contains the twelve-week editorial poll queue. `scripts/weekly-community.js` opens and closes those polls, counts aggregate results, swaps a unique winner onto Friday, prepares its images, and creates an idempotent Kit broadcast. See [Weekly community operations](docs/weekly-community.md) for setup, safe rollout, and recovery commands.
 
 ## Common commands
 
@@ -28,6 +30,9 @@ npm run build
 npm run preview
 npm run publish
 npm run optimize
+npm test
+npm run weekly:check
+npm run weekly:dry-run
 ```
 
 `npm run build` validates the site and creates a public-only `.deploy/` directory. Recipe source data, scripts, references, and future unpublished assets are not included in that directory.

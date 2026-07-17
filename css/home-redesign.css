@@ -545,7 +545,7 @@
 
 .table-vote li {
   display: grid;
-  grid-template-columns: 48px 1fr;
+  grid-template-columns: 48px 1fr auto;
   min-height: 62px;
   border-bottom: 1px solid var(--border);
   align-items: center;
@@ -560,6 +560,23 @@
   color: var(--accent);
   font: 700 10px Inter, sans-serif;
   letter-spacing: .1em;
+}
+
+.table-vote li strong {
+  margin-left: auto;
+  color: var(--accent);
+  font: 700 9px Inter, sans-serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.table-choice-winner {
+  color: var(--text);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+.table-layout[data-poll-status="idle"] .table-vote ol:empty {
+  display: none;
 }
 
 .table-actions {

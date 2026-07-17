@@ -8,6 +8,8 @@ const errors = [];
 const htmlFiles = [];
 const publicRootSources = new Map();
 const homepageConfig = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'homepage.json'), 'utf8'));
+const weeklyQueue = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'weekly-polls.json'), 'utf8'));
+const { validateQueue } = require('./weekly-community');
 
 for (const [directory, files] of Object.entries({
   'assets/js': ['archive.js', 'cookie-consent.js', 'home.js', 'recipe-tools.js', 'theme.js'],
@@ -37,6 +39,9 @@ for (const file of htmlFiles) {
   const html = fs.readFileSync(file, 'utf8');
   if (html.includes('—')) errors.push(`${relative}: contains an em dash`);
   if (/shop\.foidslop\.com|occasional objects|objects department|DJT Nippon/i.test(html)) errors.push(`${relative}: contains retired store promotion`);
+  if (/until those services are connected|weekly dispatch is active|community form is active|future saved-recipes feature/i.test(html)) {
+    errors.push(`${relative}: contains stale publication-service copy`);
+  }
   if (!['404.html'].includes(relative)) {
     const canonical = (html.match(/<link rel="canonical" href="([^"]+)"/) || [])[1];
     if (!canonical && relative !== 'privacy.html') errors.push(`${relative}: missing canonical`);
@@ -126,9 +131,20 @@ if (homepageConfig.newsletter.enabled) {
   errors.push('index.html: inactive newsletter must not render a collecting form');
 }
 if (homepageConfig.community.enabled) {
-  if (!homepage.includes('data-track="community_vote_click"') || !homepage.includes('data-track="community_submit_click"')) errors.push('index.html: enabled community module is missing tracked actions');
-} else if (!homepage.includes('Voting is not open yet.')) {
+  if (!homepage.includes('data-track="community_submit_click"')) errors.push('index.html: enabled community module is missing the submission action');
+  if (homepageConfig.community.status === 'open' && !homepage.includes('data-track="community_vote_click"')) errors.push('index.html: open community poll is missing its vote action');
+  if (!homepage.includes(`data-poll-id="${homepageConfig.community.pollId}"`)) errors.push('index.html: community poll id does not match homepage config');
+  if (homepageConfig.community.status === 'open' && !homepage.includes(`poll_id=${homepageConfig.community.pollId}`)) errors.push('index.html: Tally vote link is missing its poll id');
+} else if (!homepage.includes('Community submissions are currently unavailable.')) {
   errors.push('index.html: inactive community module needs an honest inactive state');
+}
+const checkInbox = fs.readFileSync(path.join(ROOT, 'check-inbox.html'), 'utf8');
+if (!checkInbox.includes('<meta name="robots" content="noindex,follow">')) errors.push('check-inbox.html: confirmation page must be noindex');
+if (!checkInbox.includes('Check your<br>inbox.') || !checkInbox.includes('logo.webp')) errors.push('check-inbox.html: missing branded confirmation content');
+if (locations.includes('https://foidslop.com/check-inbox')) errors.push('sitemap.xml: noindex confirmation page must not be listed');
+const privacy = fs.readFileSync(path.join(ROOT, 'privacy.html'), 'utf8');
+for (const required of ['Kit', 'Tally', 'dispatch@foidslop.com', 'GitHub Actions', 'manually removed']) {
+  if (!privacy.includes(required)) errors.push(`privacy.html: missing active-service disclosure (${required})`);
 }
 const archive = fs.readFileSync(path.join(ROOT, 'slop', 'archive.html'), 'utf8');
 if (!archive.includes('id="archive-search"') || !archive.includes('../archive.js')) errors.push('slop/archive.html: missing archive discovery controls');
@@ -146,9 +162,15 @@ for (const file of recipeFiles) {
 }
 
 const primaryData = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'foidslop-meals.json'), 'utf8'));
+try {
+  validateQueue(weeklyQueue, primaryData);
+} catch (error) {
+  errors.push(error.message);
+}
 const publishedHomepageSlugs = new Set(primaryData.meals.filter(meal => meal.status === 'published').map(meal => meal.slug));
 if (homepageRandomPool.some(slug => !publishedHomepageSlugs.has(slug))) errors.push('index.html: random recipe pool contains an unpublished or unknown recipe');
-const latestPublished = primaryData.meals.filter(meal => meal.status === 'published').sort((a, b) => a.id - b.id).at(-1);
+const latestPublished = primaryData.meals.filter(meal => meal.status === 'published')
+  .sort((a, b) => a.publishDate.localeCompare(b.publishDate) || a.id - b.id).at(-1);
 if (latestPublished && homepageRandomPool.includes(latestPublished.slug)) errors.push('index.html: random recipe pool includes today’s recipe');
 const configuredArchivePick = primaryData.meals.find(meal => meal.slug === homepageConfig.archivePickSlug);
 if (!configuredArchivePick) errors.push(`homepage config: unknown archive pick ${homepageConfig.archivePickSlug}`);

@@ -6,28 +6,41 @@
     "hiddenFields": {},
     "providerName": "Kit",
     "providerPrivacyUrl": "https://kit.com/privacy",
+    "formId": "9696478",
+    "fromAddress": "dispatch@foidslop.com",
+    "replyTo": "dispatch@foidslop.com",
+    "sendLocalTime": "10:00",
+    "automationEnabled": false,
+    "emailTemplateId": null,
     "promise": "Seven dinners for one, one short note, every Sunday. No life story.",
     "cadence": "One email every Sunday. Unsubscribe whenever."
   },
   "community": {
     "enabled": true,
+    "formId": "EkE4QX",
+    "pollId": "2026-07-24",
+    "status": "open",
     "question": "Pick Friday's dinner",
     "deadline": "Voting closes Thursday, July 23.",
     "promise": "The most popular choice becomes Friday's recipe.",
-    "submissionUrl": "https://tally.so/r/EkE4QX",
+    "submissionUrl": "https://tally.so/r/EkE4QX?poll_id=2026-07-24",
     "providerName": "Tally",
     "providerPrivacyUrl": "https://tally.so/help/privacy-policy",
     "choices": [
       {
-        "label": "15-minute pasta"
+        "slot": "A",
+        "label": "15-minute noodles"
       },
       {
+        "slot": "B",
         "label": "Something on toast"
       },
       {
+        "slot": "C",
         "label": "A no-cook plate"
       }
     ],
+    "lastResult": null,
     "featuredReader": null
   },
   "archivePickSlug": "whipped-feta-hot-honey-walnuts"

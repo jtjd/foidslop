@@ -1,0 +1,86 @@
+.inbox-page {
+  display: grid;
+  min-height: calc(100vh - 160px);
+  max-width: 1440px;
+  margin: 0 auto;
+  border-inline: 1px solid var(--border);
+  place-items: center;
+}
+
+.inbox-card {
+  width: min(760px, calc(100% - 40px));
+  margin: 64px auto;
+  padding: clamp(30px, 7vw, 76px);
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--accent) 8%, var(--surface));
+}
+
+.inbox-kicker {
+  margin: 0 0 24px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.inbox-card h1 {
+  margin: 0;
+  font-family: Arial Black, Arial, sans-serif;
+  font-size: clamp(68px, 13vw, 132px);
+  line-height: .78;
+  letter-spacing: -.09em;
+  text-transform: uppercase;
+}
+
+.inbox-deck {
+  max-width: 560px;
+  margin: 34px 0 28px;
+  font: 26px/1.3 Georgia, serif;
+}
+
+.inbox-notes {
+  max-width: 560px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.inbox-notes p + p {
+  margin-top: 8px;
+}
+
+.inbox-notes strong {
+  color: var(--text);
+}
+
+.inbox-return {
+  display: inline-block;
+  margin-top: 28px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--accent);
+  color: var(--text);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.inbox-return:hover,
+.inbox-return:focus-visible {
+  color: var(--accent);
+}
+
+@media (max-width: 560px) {
+  .inbox-page {
+    min-height: calc(100vh - 62px);
+  }
+
+  .inbox-card {
+    width: calc(100% - 24px);
+    margin: 28px auto;
+  }
+}

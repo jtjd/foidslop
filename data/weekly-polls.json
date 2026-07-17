@@ -1,0 +1,140 @@
+{
+  "timezone": "America/New_York",
+  "opensLocalTime": "07:00",
+  "closesLocalTime": "18:00",
+  "dispatchLocalTime": "10:00",
+  "polls": [
+    {
+      "id": "2026-07-24",
+      "targetFriday": "2026-07-24",
+      "status": "pending",
+      "dispatchNote": null,
+      "choices": [
+        { "slot": "A", "label": "15-minute noodles", "recipeSlug": "spicy-peanut-noodles-cucumber" },
+        { "slot": "B", "label": "Something on toast", "recipeSlug": "tuna-olive-tapenade-toast" },
+        { "slot": "C", "label": "A no-cook plate", "recipeSlug": "cantaloupe-prosciutto-plate" }
+      ]
+    },
+    {
+      "id": "2026-07-31",
+      "targetFriday": "2026-07-31",
+      "status": "pending",
+      "dispatchNote": null,
+      "choices": [
+        { "slot": "A", "label": "Cozy baked potato", "recipeSlug": "baked-potato-chili" },
+        { "slot": "B", "label": "A very good sandwich", "recipeSlug": "tomato-mozzarella-panini" },
+        { "slot": "C", "label": "No-cook wrap", "recipeSlug": "hummus-roasted-red-pepper-wrap" }
+      ]
+    },
+    {
+      "id": "2026-08-07",
+      "targetFriday": "2026-08-07",
+      "status": "pending",
+      "dispatchNote": null,
+      "choices": [
+        { "slot": "A", "label": "Tinned fish snack", "recipeSlug": "tinned-sardines-lemon-crackers" },
+        { "slot": "B", "label": "Crispy quesadilla", "recipeSlug": "mushroom-spinach-quesadilla" },
+        { "slot": "C", "label": "Something eggy", "recipeSlug": "spinach-feta-scramble" }
+      ]
+    },
+    {
+      "id": "2026-08-14",
+      "targetFriday": "2026-08-14",
+      "status": "pending",
+      "dispatchNote": null,
+      "choices": [
+        { "slot": "A", "label": "Spicy noodles", "recipeSlug": "spicy-peanut-butter-noodles" },
+        { "slot": "B", "label": "Peanut butter toast", "recipeSlug": "peanut-butter-banana-toast" },
+        { "slot": "C", "label": "Lazy tomato plate", "recipeSlug": "cottage-cheese-tomato-plate" }
+      ]
+    },
+    {
+      "id": "2026-08-21",
+      "targetFriday": "2026-08-21",
+      "status": "pending",
+      "dispatchNote": null,
+      "choices": [
+        { "slot": "A", "label": "Breakfast for dinner", "recipeSlug": "tofu-scramble-spinach" },
+        { "slot": "B", "label": "Bagel situation", "recipeSlug": "smoked-salmon-cream-cheese-bagel" },
+        { "slot": "C", "label": "Warm cheesy thing", "recipeSlug": "cheddar-chive-biscuits" }
+      ]
+    },
+    {
+      "id": "2026-08-28",
+      "targetFriday": "2026-08-28",
+      "status": "pending",
+      "dispatchNote": null,
+      "choices": [
+        { "slot": "A", "label": "Big baked potato", "recipeSlug": "cheddar-broccoli-baked-potato" },
+        { "slot": "B", "label": "Pesto sandwich", "recipeSlug": "pesto-mozzarella-panini" },
+        { "slot": "C", "label": "Sweet bowl", "recipeSlug": "cottage-cheese-pineapple-bowl" }
+      ]
+    },
+    {
+      "id": "2026-09-04",
+      "targetFriday": "2026-09-04",
+      "status": "pending",
+      "dispatchNote": null,
+      "choices": [
+        { "slot": "A", "label": "Toast with an egg", "recipeSlug": "avocado-egg-toast" },
+        { "slot": "B", "label": "Little skewers", "recipeSlug": "mozzarella-tomato-skewers" },
+        { "slot": "C", "label": "Tuna salad", "recipeSlug": "tuna-sweet-corn-salad" }
+      ]
+    },
+    {
+      "id": "2026-09-11",
+      "targetFriday": "2026-09-11",
+      "status": "pending",
+      "dispatchNote": null,
+      "choices": [
+        { "slot": "A", "label": "Baked cheese", "recipeSlug": "baked-ricotta-honey-thyme" },
+        { "slot": "B", "label": "No-cook salad", "recipeSlug": "avocado-black-bean-salad" },
+        { "slot": "C", "label": "Spicy bowl", "recipeSlug": "spicy-tuna-avocado-bowl" }
+      ]
+    },
+    {
+      "id": "2026-09-18",
+      "targetFriday": "2026-09-18",
+      "status": "pending",
+      "dispatchNote": null,
+      "choices": [
+        { "slot": "A", "label": "Omelette night", "recipeSlug": "mushroom-thyme-omelette" },
+        { "slot": "B", "label": "Stuffed mushroom", "recipeSlug": "caprese-stuffed-portobello" },
+        { "slot": "C", "label": "Something on toast", "recipeSlug": "tuna-white-bean-bruschetta" }
+      ]
+    },
+    {
+      "id": "2026-09-25",
+      "targetFriday": "2026-09-25",
+      "status": "pending",
+      "dispatchNote": null,
+      "choices": [
+        { "slot": "A", "label": "Cheesy quesadilla", "recipeSlug": "cheddar-bacon-quesadilla" },
+        { "slot": "B", "label": "Caprese, no cook", "recipeSlug": "caprese-salad-balsamic-glaze" },
+        { "slot": "C", "label": "Tuna plate", "recipeSlug": "tuna-egg-salad-plate" }
+      ]
+    },
+    {
+      "id": "2026-10-02",
+      "targetFriday": "2026-10-02",
+      "status": "pending",
+      "dispatchNote": null,
+      "choices": [
+        { "slot": "A", "label": "Fresh salad", "recipeSlug": "avocado-mango-salad" },
+        { "slot": "B", "label": "Spicy ramen", "recipeSlug": "spicy-ramen-tofu" },
+        { "slot": "C", "label": "Loaded sweet potato", "recipeSlug": "baked-sweet-potato-black-beans-salsa" }
+      ]
+    },
+    {
+      "id": "2026-10-09",
+      "targetFriday": "2026-10-09",
+      "status": "pending",
+      "dispatchNote": null,
+      "choices": [
+        { "slot": "A", "label": "Cottage cheese toast", "recipeSlug": "cottage-cheese-tomato-toast" },
+        { "slot": "B", "label": "Pesto skewers", "recipeSlug": "pesto-tomato-skewers" },
+        { "slot": "C", "label": "Cheese and crackers", "recipeSlug": "cheese-crackers-apple" }
+      ]
+    }
+  ]
+}

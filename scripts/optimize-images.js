@@ -12,6 +12,9 @@ const BRAND_ASSETS = path.join(ROOT, 'assets', 'brand');
 const meals = JSON.parse(fs.readFileSync(path.join(DATA, 'foidslop-meals.json'), 'utf8')).meals;
 const force = process.argv.includes('--force');
 const forcePins = process.argv.includes('--force-pins');
+const slugArg = process.argv.includes('--slug')
+  ? process.argv[process.argv.indexOf('--slug') + 1]
+  : null;
 const dateArg = process.argv.includes('--date')
   ? process.argv[process.argv.indexOf('--date') + 1]
   : new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
@@ -102,7 +105,10 @@ function prepareRecipeAssets(meal) {
 
 function buildSocialImages() {
   fs.mkdirSync(SOCIAL, { recursive: true });
-  const published = meals.filter(meal => releaseDate(meal) <= dateArg && meal.status !== 'retired');
+  const published = slugArg
+    ? meals.filter(meal => meal.slug === slugArg && meal.status !== 'retired')
+    : meals.filter(meal => releaseDate(meal) <= dateArg && meal.status !== 'retired');
+  if (slugArg && !published.length) throw new Error(`Unknown or retired recipe slug: ${slugArg}`);
   let created = 0;
   for (const meal of published) {
     const source = prepareRecipeAssets(meal);
@@ -119,5 +125,5 @@ function buildSocialImages() {
 
 buildBrandImages();
 const result = buildSocialImages();
-console.log(`Prepared brand assets and ${result.created} social canvases for ${result.published} published recipes.`);
+console.log(`Prepared brand assets and ${result.created} social canvases for ${result.published} recipe${result.published === 1 ? '' : 's'}.`);
 console.log('Recipe photos and their existing visible variants were not changed.');

@@ -9,6 +9,7 @@
  */
 const fs = require('fs');
 const path = require('path');
+const { chronological, releaseDate } = require('./lib/publication-order');
 
 const ROOT = process.cwd();
 const SLOP_DIR = path.join(ROOT, 'slop');
@@ -16,7 +17,6 @@ const RECIPE_HUB_DIR = path.join(ROOT, 'recipes');
 const DB_FILE = path.join(ROOT, 'data', 'foidslop-meals.json');
 const HOMEPAGE_FILE = path.join(ROOT, 'data', 'homepage.json');
 const BASE_URL = 'https://foidslop.com';
-const FIRST_RELEASE = new Date('2026-05-01T12:00:00Z');
 const TZ = 'America/New_York';
 
 function esc(value) {
@@ -25,12 +25,6 @@ function esc(value) {
 }
 function xml(value) { return esc(value); }
 function isoDate(date) { return date.toISOString().slice(0, 10); }
-function releaseDate(meal) {
-  if (meal.publishDate) return new Date(`${meal.publishDate}T12:00:00Z`);
-  const date = new Date(FIRST_RELEASE);
-  date.setUTCDate(date.getUTCDate() + Number(meal.id) - 1);
-  return date;
-}
 function prettyDate(date) {
   return new Intl.DateTimeFormat('en-US', { timeZone: 'UTC', year: 'numeric', month: 'long', day: 'numeric' }).format(date);
 }
@@ -82,11 +76,12 @@ for (let i = 2; i < process.argv.length; i += 1) {
 
 const today = dateOverride || newYorkDate();
 if (!/^\d{4}-\d{2}-\d{2}$/.test(today)) throw new Error(`Invalid --date value: ${today}`);
-let published = meals.filter(meal => isoDate(releaseDate(meal)) <= today && meal.status !== 'retired');
+let published = meals.filter(meal => isoDate(releaseDate(meal)) <= today && meal.status !== 'retired').sort(chronological);
 if (setOverride) {
   const selected = meals.find(meal => meal.slug === setOverride || String(meal.id) === String(setOverride));
   if (!selected) throw new Error(`Unknown meal: ${setOverride}`);
-  published = meals.filter(meal => meal.id <= selected.id && meal.status !== 'retired');
+  const selectedDate = releaseDate(selected);
+  published = meals.filter(meal => releaseDate(meal) <= selectedDate && meal.status !== 'retired').sort(chronological);
 }
 if (!published.length) throw new Error(`No meals are published by ${today}`);
 const current = published[published.length - 1];
@@ -134,10 +129,12 @@ function validate() {
     if (!homepage.newsletter.providerName || !isHttpsUrl(homepage.newsletter.providerPrivacyUrl)) errors.push('Enabled newsletter needs provider privacy details');
   }
   if (!homepage.community?.question || !homepage.community?.deadline || !homepage.community?.promise) errors.push('Homepage community copy is incomplete');
-  if (!Array.isArray(homepage.community?.choices) || homepage.community.choices.length < 2 || homepage.community.choices.some(choice => !choice.label)) errors.push('Homepage community needs at least two named choices');
+  if (!Array.isArray(homepage.community?.choices) || homepage.community.choices.some(choice => !choice.label)) errors.push('Homepage community choices are invalid');
+  if (homepage.community?.status !== 'idle' && homepage.community?.choices.length < 2) errors.push('An active or closed community poll needs at least two named choices');
   if (homepage.community?.enabled) {
     if (!isHttpsUrl(homepage.community.submissionUrl)) errors.push('Enabled community module needs an HTTPS submission URL');
     if (!homepage.community.providerName || !isHttpsUrl(homepage.community.providerPrivacyUrl)) errors.push('Enabled community module needs provider privacy details');
+    if (!homepage.community.pollId || !['open', 'closed', 'idle'].includes(homepage.community.status)) errors.push('Enabled community module needs a poll id and valid status');
   }
   if (homepage.community?.featuredReader) {
     const feature = homepage.community.featuredReader;
@@ -213,7 +210,8 @@ function footer(root = '') {
     <a href="${root}what-does-foid-mean">Foid meaning</a><span class="footer-dot"></span>
     <a href="${root}editorial-standards">Editorial standards</a><span class="footer-dot"></span>
     <a href="${root}feed.xml" type="application/atom+xml">RSS</a><span class="footer-dot"></span>
-    <a href="${root}privacy">Privacy</a>
+    <a href="${root}privacy">Privacy</a><span class="footer-dot"></span>
+    <a href="${root}privacy#contact">Contact</a>
   </nav>
 </div></footer>`;
 }
@@ -307,7 +305,7 @@ function newsletterSignup(id, repeated = false) {
         <div class="dispatch-form-row"><input id="${id}-email" name="${esc(newsletter.emailField)}" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required><button type="submit">Get the weekly slop</button></div>
       </form>
       <p class="dispatch-privacy">${esc(newsletter.cadence)} Double opt-in. See the <a href="privacy">privacy policy</a> and <a href="${esc(newsletter.providerPrivacyUrl)}" rel="external">the ${esc(newsletter.providerName)} policy</a>.</p>`
-    : `<div class="dispatch-pending" role="status"><strong>The subscription desk is being connected.</strong><span>No email is collected yet. Follow the daily feed through <a href="feed.xml" type="application/atom+xml">RSS</a> in the meantime.</span></div>`;
+    : `<div class="dispatch-pending" role="status"><strong>Email signup is currently unavailable.</strong><span>Follow the daily feed through <a href="feed.xml" type="application/atom+xml">RSS</a>.</span></div>`;
   return `<section class="zine-newsletter${repeated ? ' zine-newsletter-repeat' : ''}"${repeated ? '' : ' id="dispatch"'} aria-labelledby="${id}-title" data-newsletter-state="${newsletter.enabled ? 'active' : 'inactive'}">
     <div class="zine-newsletter-heading"><div class="zine-kicker">The Weekly Slop</div><h2 id="${id}-title">${repeated ? 'Still hungry?' : 'Come back on purpose.'}</h2></div>
     <div class="zine-newsletter-body"><p class="dispatch-promise">${esc(newsletter.promise)}</p>${status}</div>
@@ -329,13 +327,22 @@ function renderCommunity() {
   const featured = community.featuredReader && community.featuredReader.name && community.featuredReader.report
     ? `<aside class="table-feature"><span>Filed by ${esc(community.featuredReader.name)}</span><blockquote>${esc(community.featuredReader.report)}</blockquote>${community.featuredReader.recipeSlug ? `<a href="slop/${esc(community.featuredReader.recipeSlug)}">See the implicated recipe</a>` : ''}</aside>`
     : '';
-  const choices = community.choices.map((choice, index) => `<li><span>${String(index + 1).padStart(2, '0')}</span>${esc(choice.label)}</li>`).join('');
-  const actions = community.enabled
-    ? `<div class="table-actions"><a href="${esc(community.submissionUrl)}" rel="external" data-track="community_vote_click">Vote this week</a><a href="${esc(community.submissionUrl)}" rel="external" data-track="community_submit_click">Send evidence</a></div><p class="table-privacy">Submissions are moderated. Publication permission is requested in the form. See <a href="${esc(community.providerPrivacyUrl)}" rel="external">${esc(community.providerName)} privacy details</a>.</p>`
-    : `<div class="table-pending" role="status">Voting is not open yet. The question is posted so the desk is ready when its submission form is connected.</div>`;
+  const winnerLabel = community.status === 'closed' && community.lastResult?.pollId === community.pollId
+    ? community.lastResult.winnerLabel
+    : null;
+  const choices = community.choices.map((choice, index) => `<li${choice.label === winnerLabel ? ' class="table-choice-winner"' : ''}><span>${String(index + 1).padStart(2, '0')}</span>${esc(choice.label)}${choice.label === winnerLabel ? '<strong>Friday’s pick</strong>' : ''}</li>`).join('');
+  const isOpen = community.enabled && community.status === 'open';
+  const isClosed = community.enabled && community.status === 'closed';
+  const actions = isOpen
+    ? `<div class="table-actions"><a href="${esc(community.submissionUrl)}" rel="external" data-track="community_vote_click">Vote this week</a><a href="${esc(community.submissionUrl)}" rel="external" data-track="community_submit_click">Send a note or photo</a></div><p class="table-privacy">Submissions are moderated. Publication permission is requested in the form. See <a href="${esc(community.providerPrivacyUrl)}" rel="external">${esc(community.providerName)} privacy details</a>.</p>`
+    : isClosed
+      ? `<div class="table-actions"><a href="${esc(community.submissionUrl)}" rel="external" data-track="community_submit_click">Send a note or photo</a></div><p class="table-privacy">The vote is closed, but reader reports remain open. Publication permission is requested in the form. See <a href="${esc(community.providerPrivacyUrl)}" rel="external">${esc(community.providerName)} privacy details</a>.</p>`
+      : community.enabled
+        ? `<div class="table-actions"><a href="${esc(community.submissionUrl)}" rel="external" data-track="community_submit_click">Send a note or photo</a></div><p class="table-privacy">There is no vote this week. Reader reports remain open.</p>`
+        : `<div class="table-pending" role="status">Community submissions are currently unavailable.</div>`;
   return `<section class="zine-table" id="table" aria-labelledby="table-title">
     <div class="zine-section-head"><h2 id="table-title">The Table</h2><span>Readers / questions / evidence</span></div>
-    <div class="table-layout"><div class="table-intro"><div class="zine-kicker">Question of the week</div><h3>${esc(community.question)}</h3><p>${esc(community.promise)}</p><small>${esc(community.deadline)}</small></div><div class="table-vote"><ol>${choices}</ol>${actions}</div>${featured}</div>
+    <div class="table-layout" data-poll-status="${esc(community.status || 'inactive')}" data-poll-id="${esc(community.pollId || '')}"><div class="table-intro"><div class="zine-kicker">${isClosed ? 'This week’s result' : 'Question of the week'}</div><h3>${esc(community.question)}</h3><p>${esc(community.promise)}</p><small>${esc(community.deadline)}</small></div><div class="table-vote"><ol>${choices}</ol>${actions}</div>${featured}</div>
   </section>`;
 }
 
@@ -371,7 +378,7 @@ function renderHomepage() {
   ].map(([label, href, intent]) => `<a href="${href}" data-track="home_intent_click" data-intent="${intent}">${label}</a>`).join('');
   return `<!DOCTYPE html><html lang="en"><head>${commonHead({ title: 'foidslop | Daily Recipes for One', description, canonical: `${BASE_URL}/` })}
 <link rel="preload" as="image" href="slop/img/${current.slug}-768.webp" type="image/webp" imagesrcset="slop/img/${current.slug}-480.webp 480w, slop/img/${current.slug}-768.webp 768w" imagesizes="(max-width: 800px) 100vw, 42vw" fetchpriority="high">
-<link rel="stylesheet" href="css/home-redesign.css?v=20260717-1"><link rel="stylesheet" href="css/theme.css?v=20260717-1">
+<link rel="stylesheet" href="css/home-redesign.css?v=20260717-2"><link rel="stylesheet" href="css/theme.css?v=20260717-1">
 <script type="application/ld+json">${jsonLd(schema)}</script></head><body><a href="#main" class="sr-only focusable">Skip to content</a>
 <main id="main" class="zine-home">${header('', 'home')}<div id="top">
   <section class="zine-hero" aria-labelledby="home-title">
@@ -546,7 +553,7 @@ function buildPinterestFeed() {
 }
 
 function buildRedirects() {
-  const lines = [`/slop/today  /slop/${current.slug}  301`, '/index.html  /  301', '/slop/archive.html  /slop/archive  301', '/privacy.html  /privacy  301', '/what-is-foidslop.html  /what-is-foidslop  301', '/what-does-foid-mean.html  /what-does-foid-mean  301', '/editorial-standards.html  /editorial-standards  301', '/girl-dinner-ideas.html  /girl-dinner-ideas  301'];
+  const lines = [`/slop/today  /slop/${current.slug}  301`, '/index.html  /  301', '/slop/archive.html  /slop/archive  301', '/privacy.html  /privacy  301', '/check-inbox.html  /check-inbox  301', '/what-is-foidslop.html  /what-is-foidslop  301', '/what-does-foid-mean.html  /what-does-foid-mean  301', '/editorial-standards.html  /editorial-standards  301', '/girl-dinner-ideas.html  /girl-dinner-ideas  301'];
   for (const hub of hubs) lines.push(`/recipes/${hub.slug}.html  /recipes/${hub.slug}  301`);
   for (const meal of published) lines.push(`/slop/${meal.slug}.html  /slop/${meal.slug}  301`);
   fs.writeFileSync(path.join(ROOT, '_redirects'), `${lines.join('\n')}\n`);
