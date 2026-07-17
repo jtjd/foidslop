@@ -6,6 +6,7 @@ const test = require('node:test');
 const {
   applyRecipeSwap,
   buildDispatchEmail,
+  buildKitBroadcastBody,
   communityUrl,
   localInstant,
   mutateTallyForm,
@@ -177,6 +178,21 @@ test('weekly email is image-free, branded, and includes recipes and poll links',
   assert.ok(html.includes('https://foidslop.com/slop/'));
   assert.equal(/<img\b/i.test(html), false);
   assert.equal(/fonts\.googleapis/i.test(html), false);
+});
+
+test('Kit all-subscriber broadcasts omit unsupported recipient filters', () => {
+  const body = buildKitBroadcastBody(
+    homepage,
+    '<p>Weekly dispatch</p>',
+    'foidslop-weekly:2026-07-19',
+    'The Weekly Slop - July 19',
+    new Date('2026-07-19T14:00:00Z'),
+    null
+  );
+  assert.equal(Object.hasOwn(body, 'subscriber_filter'), false);
+  assert.equal(body.email_address, 'dispatch@foidslop.com');
+  assert.equal(body.public, false);
+  assert.equal(body.send_at, null);
 });
 
 test('queue exhaustion still produces a dispatch without a stale vote', () => {

@@ -596,6 +596,25 @@ async function findKitBroadcast(marker) {
   return matches[0] || null;
 }
 
+function buildKitBroadcastBody(homepage, content, marker, subject, dispatchAt, sendAt) {
+  const body = {
+    content,
+    description: marker,
+    public: false,
+    published_at: dispatchAt.toISOString(),
+    send_at: sendAt?.toISOString() || null,
+    thumbnail_alt: null,
+    thumbnail_url: null,
+    preview_text: 'Seven dinners for one and one vote for Friday.',
+    subject,
+    email_address: homepage.newsletter.fromAddress
+  };
+  if (Number.isInteger(homepage.newsletter.emailTemplateId)) {
+    body.email_template_id = homepage.newsletter.emailTemplateId;
+  }
+  return body;
+}
+
 async function dispatch(context) {
   const { queue, homepage, mealsDb, poll, args } = context;
   const dispatchDate = args.date || dateInZone(new Date(), queue.timezone);
@@ -612,20 +631,9 @@ async function dispatch(context) {
     const noon = localInstant(window.opensDate, '12:00', queue.timezone);
     sendAt = now < noon ? new Date(now.getTime() + 5 * 60 * 1000) : null;
   }
-  const body = {
-    content,
-    description: marker,
-    public: false,
-    published_at: window.dispatchAt.toISOString(),
-    send_at: sendAt?.toISOString() || null,
-    thumbnail_alt: null,
-    thumbnail_url: null,
-    preview_text: 'Seven dinners for one and one vote for Friday.',
-    subject,
-    email_address: homepage.newsletter.fromAddress,
-    subscriber_filter: [{ all: [{ type: 'all_subscribers' }] }]
-  };
-  if (Number.isInteger(homepage.newsletter.emailTemplateId)) body.email_template_id = homepage.newsletter.emailTemplateId;
+  const body = buildKitBroadcastBody(
+    homepage, content, marker, subject, window.dispatchAt, sendAt
+  );
   if (args.dryRun) return { operation: 'dispatch', marker, subject, sendAt: body.send_at, contentBytes: Buffer.byteLength(content) };
 
   const existing = await findKitBroadcast(marker);
@@ -677,6 +685,7 @@ module.exports = {
   addDays,
   applyRecipeSwap,
   buildDispatchEmail,
+  buildKitBroadcastBody,
   communityUrl,
   dateInZone,
   findPollOptionBlocks,
