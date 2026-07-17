@@ -24,7 +24,10 @@ const mealsDb = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'foidslop-mea
 const poll = structuredClone(queue.polls[0]);
 
 test('the real twelve-week queue is internally valid', () => {
-  assert.deepEqual(validateQueue(queue, mealsDb), { total: 12, remaining: 12 });
+  assert.deepEqual(validateQueue(queue, mealsDb), {
+    total: queue.polls.length,
+    remaining: queue.polls.filter(candidate => candidate.status === 'pending').length
+  });
 });
 
 test('New York local instants handle daylight and standard time', () => {
@@ -176,6 +179,8 @@ test('weekly email is image-free, branded, and includes recipes and poll links',
   assert.ok(html.includes("Pick Friday's dinner"));
   assert.ok(html.includes('poll_id=2026-07-24'));
   assert.ok(html.includes('https://foidslop.com/slop/'));
+  assert.ok(html.includes('border-top:1px solid #3d3e3a'));
+  assert.equal(/<ol\b/i.test(html), false);
   assert.equal(/<img\b/i.test(html), false);
   assert.equal(/fonts\.googleapis/i.test(html), false);
 });

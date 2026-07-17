@@ -547,7 +547,7 @@ function buildDispatchEmail(homepage, queue, mealsDb, poll, dateOverride = null)
     return `<tr><td style="padding:14px 0;border-top:1px solid #d5d0c5;"><a href="https://foidslop.com/slop/${escapeHtml(meal.slug)}" style="color:#171815;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:700;text-decoration:none;text-transform:uppercase;">${escapeHtml(meal.name)}</a><br><span style="color:#66645f;font-family:Arial,Helvetica,sans-serif;font-size:12px;">${escapeHtml(meal.publishDate)} / ${total ? `${total} min` : 'No cook'} / ${escapeHtml(meal.category)}</span></td></tr>`;
   }).join('');
   const choices = (poll?.choices || []).map(choice =>
-    `<li style="margin:0 0 8px;"><strong style="color:#ef4a35;">${choice.slot}</strong> &nbsp;${escapeHtml(choice.label)}</li>`).join('');
+    `<tr><td style="padding:11px 0;border-top:1px solid #3d3e3a;color:#f4f1e8;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.4;"><strong style="display:inline-block;width:28px;color:#ef4a35;">${choice.slot}</strong><span style="color:#f4f1e8;">${escapeHtml(choice.label)}</span></td></tr>`).join('');
   const result = previous
     ? `<p style="margin:0 0 26px;color:#66645f;font-size:13px;">Last vote: ${previousWinner ? `<strong style="color:#171815;">${escapeHtml(previousWinner.label)}</strong> won` : 'there was no unique winner'}${previous.totalVotes != null ? ` from ${previous.totalVotes} vote${previous.totalVotes === 1 ? '' : 's'}` : ''}.</p>`
     : '';
@@ -555,14 +555,14 @@ function buildDispatchEmail(homepage, queue, mealsDb, poll, dateOverride = null)
   const tableSection = poll
     ? `<div style="margin:30px 0 0;padding:24px;background:#171815;color:#f4f1e8;">
       <p style="margin:0 0 8px;color:#ef4a35;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:1.4px;">THE TABLE / VOTE BY THURSDAY</p>
-      <h2 style="margin:0 0 16px;font-family:Arial Black,Arial,Helvetica,sans-serif;font-size:27px;text-transform:uppercase;">Pick Friday's dinner</h2>
-      <ol style="margin:0 0 22px;padding-left:22px;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.5;">${choices}</ol>
+      <h2 style="margin:0 0 16px;color:#f4f1e8;font-family:Arial Black,Arial,Helvetica,sans-serif;font-size:27px;line-height:1.05;text-transform:uppercase;">Pick Friday's dinner</h2>
+      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="width:100%;margin:0 0 22px;color:#f4f1e8;">${choices}</table>
       <a href="${escapeHtml(voteUrl)}" style="display:inline-block;padding:13px 18px;background:#ef4a35;color:#fff;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;text-decoration:none;text-transform:uppercase;">Vote at The Table</a>
     </div>`
     : `<div style="margin:30px 0 0;padding:24px;background:#171815;color:#f4f1e8;">
       <p style="margin:0 0 8px;color:#ef4a35;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:1.4px;">THE TABLE</p>
-      <h2 style="margin:0 0 12px;font-family:Arial Black,Arial,Helvetica,sans-serif;font-size:27px;text-transform:uppercase;">No vote this week</h2>
-      <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.5;">The next batch is being prepared. Notes and photos are still welcome on the site.</p>
+      <h2 style="margin:0 0 12px;color:#f4f1e8;font-family:Arial Black,Arial,Helvetica,sans-serif;font-size:27px;text-transform:uppercase;">No vote this week</h2>
+      <p style="margin:0;color:#f4f1e8;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.5;">The next batch is being prepared. Notes and photos are still welcome on the site.</p>
     </div>`;
   return `<table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="width:100%;background:#f4f1e8;"><tr><td align="center" style="padding:24px 12px;"><table role="presentation" width="600" cellspacing="0" cellpadding="0" style="width:100%;max-width:600px;background:#fffdf8;border:1px solid #d5d0c5;"><tr><td style="padding:30px 28px 12px;">
     <p style="margin:0 0 10px;color:#ef4a35;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;">* FOID SLOP / THE WEEKLY SLOP</p>
