@@ -10,7 +10,7 @@
     "fromAddress": "dispatch@foidslop.com",
     "replyTo": "dispatch@foidslop.com",
     "sendLocalTime": "10:00",
-    "automationEnabled": false,
+    "automationEnabled": true,
     "emailTemplateId": null,
     "promise": "Seven dinners for one, one short note, every Sunday. No life story.",
     "cadence": "One email every Sunday. Unsubscribe whenever."

@@ -9,8 +9,8 @@ The weekly loop uses the free Kit and Tally APIs plus GitHub Actions. It does no
 3. In GitHub repository **Settings → Secrets and variables → Actions**, create repository secrets named `KIT_API_KEY` and `TALLY_API_KEY` with those values.
 4. Run the **Weekly Slop Community Loop** workflow manually with mode `dry-run`, operation `open`, and poll `2026-07-24`.
 5. Run it again with mode `bootstrap` and poll `2026-07-24`. This snapshots the existing form, preserves its styles and evidence fields, adds the `poll_id` hidden field, and updates the live choices.
-6. Run mode `dispatch` for the same poll. While `newsletter.automationEnabled` is false, this creates a Kit draft instead of scheduling a send.
-7. Review the draft and complete the Kit settings below. After the test email, confirmation, reply, and unsubscribe flow all work, change `newsletter.automationEnabled` to `true`.
+6. During initial setup, keep `newsletter.automationEnabled` false and run mode `dispatch` for the same poll to create a Kit draft.
+7. Review the draft and complete the Kit settings below. After the test email, confirmation, reply, and unsubscribe flow all work, change `newsletter.automationEnabled` to `true`. The live configuration is now enabled.
 
 The Sunday schedule then opens the poll, publishes the site, and schedules the dispatch for 10 AM New York time. Thursday runs just after 6 PM New York time and resolves the vote. A shared workflow concurrency group prevents daily and weekly publishing from pushing at the same time.
 
@@ -19,7 +19,7 @@ The Sunday schedule then opens the poll, publishes the site, and schedules the d
 In the Kit form's **General** settings:
 
 - After subscribe: redirect to `https://foidslop.com/check-inbox`
-- After confirming: redirect to `https://foidslop.com/#dispatch`
+- After confirming: redirect to `https://foidslop.com/subscribed`
 - From address: `foidslop <dispatch@foidslop.com>`
 - Reply-to: `dispatch@foidslop.com`
 - Auto-confirm new subscribers: off

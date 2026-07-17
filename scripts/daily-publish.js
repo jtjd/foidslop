@@ -553,7 +553,7 @@ function buildPinterestFeed() {
 }
 
 function buildRedirects() {
-  const lines = [`/slop/today  /slop/${current.slug}  301`, '/index.html  /  301', '/slop/archive.html  /slop/archive  301', '/privacy.html  /privacy  301', '/check-inbox.html  /check-inbox  301', '/what-is-foidslop.html  /what-is-foidslop  301', '/what-does-foid-mean.html  /what-does-foid-mean  301', '/editorial-standards.html  /editorial-standards  301', '/girl-dinner-ideas.html  /girl-dinner-ideas  301'];
+  const lines = [`/slop/today  /slop/${current.slug}  301`, '/index.html  /  301', '/slop/archive.html  /slop/archive  301', '/privacy.html  /privacy  301', '/check-inbox.html  /check-inbox  301', '/subscribed.html  /subscribed  301', '/what-is-foidslop.html  /what-is-foidslop  301', '/what-does-foid-mean.html  /what-does-foid-mean  301', '/editorial-standards.html  /editorial-standards  301', '/girl-dinner-ideas.html  /girl-dinner-ideas  301'];
   for (const hub of hubs) lines.push(`/recipes/${hub.slug}.html  /recipes/${hub.slug}  301`);
   for (const meal of published) lines.push(`/slop/${meal.slug}.html  /slop/${meal.slug}  301`);
   fs.writeFileSync(path.join(ROOT, '_redirects'), `${lines.join('\n')}\n`);

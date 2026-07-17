@@ -33,7 +33,7 @@ fs.rmSync(OUTPUT, { recursive: true, force: true });
 fs.mkdirSync(OUTPUT, { recursive: true });
 
 for (const file of [
-  'index.html', '404.html', 'privacy.html', 'check-inbox.html', 'what-is-foidslop.html', 'what-does-foid-mean.html',
+  'index.html', '404.html', 'privacy.html', 'check-inbox.html', 'subscribed.html', 'what-is-foidslop.html', 'what-does-foid-mean.html',
   'editorial-standards.html', 'girl-dinner-ideas.html', 'feed.xml', 'pinterest-rss.xml', 'sitemap.xml',
   'robots.txt', 'llms.txt', 'site.webmanifest', '_redirects'
 ]) copyFile(file);

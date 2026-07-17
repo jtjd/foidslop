@@ -142,6 +142,10 @@ const checkInbox = fs.readFileSync(path.join(ROOT, 'check-inbox.html'), 'utf8');
 if (!checkInbox.includes('<meta name="robots" content="noindex,follow">')) errors.push('check-inbox.html: confirmation page must be noindex');
 if (!checkInbox.includes('Check your<br>inbox.') || !checkInbox.includes('logo.webp')) errors.push('check-inbox.html: missing branded confirmation content');
 if (locations.includes('https://foidslop.com/check-inbox')) errors.push('sitemap.xml: noindex confirmation page must not be listed');
+const subscribed = fs.readFileSync(path.join(ROOT, 'subscribed.html'), 'utf8');
+if (!subscribed.includes('<meta name="robots" content="noindex,follow">')) errors.push('subscribed.html: confirmation page must be noindex');
+if (!subscribed.includes('You’re<br>in.') || !subscribed.includes('logo.webp')) errors.push('subscribed.html: missing branded success content');
+if (locations.includes('https://foidslop.com/subscribed')) errors.push('sitemap.xml: noindex success page must not be listed');
 const privacy = fs.readFileSync(path.join(ROOT, 'privacy.html'), 'utf8');
 for (const required of ['Kit', 'Tally', 'dispatch@foidslop.com', 'GitHub Actions', 'manually removed']) {
   if (!privacy.includes(required)) errors.push(`privacy.html: missing active-service disclosure (${required})`);

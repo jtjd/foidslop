@@ -74,6 +74,16 @@
   color: var(--accent);
 }
 
+.inbox-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 28px;
+}
+
+.inbox-return--secondary {
+  border-bottom-color: var(--border);
+}
+
 @media (max-width: 560px) {
   .inbox-page {
     min-height: calc(100vh - 62px);
