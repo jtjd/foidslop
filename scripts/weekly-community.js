@@ -148,10 +148,11 @@ function findPollOptionBlocks(form, queue, homepage) {
     ...(queue.polls || []).map(poll => poll.choices.map(choice => choice.label.toLowerCase())),
     (homepage.community?.choices || []).map(choice => choice.label.toLowerCase())
   ];
-  const matches = [...groups.values()].filter(blocks => {
-    if (blocks.length !== 3) return false;
+  const threeOptionGroups = [...groups.values()].filter(blocks => blocks.length === 3);
+  const matches = threeOptionGroups.filter(blocks => {
     const labels = blocks.map(optionLabel).map(label => label.toLowerCase());
-    return knownSets.some(known => known.length === 3 && labels.every(label => known.includes(label)));
+    return knownSets.some(known => known.length === 3
+      && labels.filter(label => known.includes(label)).length >= 2);
   });
   if (matches.length === 1) return matches[0].sort((a, b) => (a.payload?.index || 0) - (b.payload?.index || 0));
 
@@ -159,6 +160,9 @@ function findPollOptionBlocks(form, queue, homepage) {
   if (questionBlock) {
     const options = groups.get(questionBlock.groupUuid) || [];
     if (options.length === 3) return options.sort((a, b) => (a.payload?.index || 0) - (b.payload?.index || 0));
+  }
+  if (threeOptionGroups.length === 1) {
+    return threeOptionGroups[0].sort((a, b) => (a.payload?.index || 0) - (b.payload?.index || 0));
   }
   throw new Error('Could not uniquely identify the three Tally poll choices. Keep the question titled "Pick Friday\'s dinner".');
 }
@@ -193,8 +197,7 @@ function mutateTallyForm(form, poll, queue, homepage, mode) {
     options[index].payload.isRequired = mode === 'open';
   });
 
-  const groupBlocks = clone.blocks.filter(block => block.groupUuid === questionGroup);
-  const question = groupBlocks.find(block => block.type !== 'MULTIPLE_CHOICE_OPTION'
+  const question = clone.blocks.find(block => block.type !== 'MULTIPLE_CHOICE_OPTION'
     && blockStrings(block.payload).some(text => /pick friday|voting is closed/i.test(text)));
   if (question) replaceBlockText(question, /pick friday|voting is closed/i,
     mode === 'open' ? "Pick Friday's dinner" : `Voting is closed for Friday`);

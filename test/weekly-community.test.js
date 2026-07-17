@@ -48,6 +48,7 @@ test('community links carry the poll id without losing existing parameters', () 
 });
 
 function tallyFixture() {
+  const existingLabels = ['15-minute pasta', 'Something on toast', 'A no-cook plate'];
   return {
     name: 'The Table',
     settings: {
@@ -56,8 +57,11 @@ function tallyFixture() {
     },
     blocks: [
       { uuid: 'title', groupUuid: 'title', type: 'FORM_TITLE', payload: { title: 'The Table' } },
-      { uuid: 'poll-label', groupUuid: 'poll', type: 'LABEL', payload: { html: "<p>Pick Friday's dinner</p>" } },
-      ...poll.choices.map((choice, index) => ({
+      { uuid: 'poll-label', groupUuid: 'poll-label', groupType: 'QUESTION', type: 'LABEL', payload: { html: "<p>Pick Friday's dinner</p>" } },
+      ...existingLabels.map((label, index) => ({
+        slot: String.fromCharCode(65 + index),
+        label
+      })).map((choice, index) => ({
         uuid: `option-${choice.slot}`, groupUuid: 'poll', groupType: 'MULTIPLE_CHOICE',
         type: 'MULTIPLE_CHOICE_OPTION',
         payload: { index, text: choice.label, isRequired: true }
@@ -84,6 +88,11 @@ test('Tally mutation preserves evidence and design while adding poll state', () 
   const choices = result.form.blocks.filter(block => block.type === 'MULTIPLE_CHOICE_OPTION');
   assert.deepEqual(choices.map(block => block.payload.text), queue.polls[1].choices.map(choice => choice.label));
   assert.ok(result.form.blocks.find(block => block.uuid === 'deadline').payload.html.includes('July 30'));
+
+  const closedPoll = structuredClone(queue.polls[0]);
+  closedPoll.winnerSlot = 'A';
+  const closed = mutateTallyForm(tallyFixture(), closedPoll, queue, homepage, 'closed');
+  assert.match(closed.form.blocks.find(block => block.uuid === 'poll-label').payload.html, /Voting is closed/);
 });
 
 function submission(id, respondentId, answer, submittedAt, pollId = poll.id) {
