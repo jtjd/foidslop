@@ -31,7 +31,7 @@
     {
       "id": "2026-07-31",
       "targetFriday": "2026-07-31",
-      "status": "pending",
+      "status": "open",
       "dispatchNote": null,
       "choices": [
         {
@@ -49,7 +49,8 @@
           "label": "No-cook wrap",
           "recipeSlug": "hummus-roasted-red-pepper-wrap"
         }
-      ]
+      ],
+      "openedAt": "2026-07-26T13:48:59.815Z"
     },
     {
       "id": "2026-08-07",

@@ -18,26 +18,26 @@
   "community": {
     "enabled": true,
     "formId": "EkE4QX",
-    "pollId": "2026-07-24",
+    "pollId": "2026-07-31",
     "status": "open",
     "question": "Pick Friday's dinner",
-    "deadline": "Voting closes Thursday, July 23 at 6 PM ET.",
+    "deadline": "Voting closes Thursday, July 30 at 6 PM ET.",
     "promise": "The most popular choice becomes Friday's recipe.",
-    "submissionUrl": "https://tally.so/r/EkE4QX?poll_id=2026-07-24",
+    "submissionUrl": "https://tally.so/r/EkE4QX?poll_id=2026-07-31",
     "providerName": "Tally",
     "providerPrivacyUrl": "https://tally.so/help/privacy-policy",
     "choices": [
       {
         "slot": "A",
-        "label": "15-minute noodles"
+        "label": "Cozy baked potato"
       },
       {
         "slot": "B",
-        "label": "Something on toast"
+        "label": "A very good sandwich"
       },
       {
         "slot": "C",
-        "label": "A no-cook plate"
+        "label": "No-cook wrap"
       }
     ],
     "lastResult": null,
