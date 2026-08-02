@@ -55,7 +55,7 @@
     {
       "id": "2026-08-07",
       "targetFriday": "2026-08-07",
-      "status": "pending",
+      "status": "open",
       "dispatchNote": null,
       "choices": [
         {
@@ -73,7 +73,8 @@
           "label": "Something eggy",
           "recipeSlug": "spinach-feta-scramble"
         }
-      ]
+      ],
+      "openedAt": "2026-08-02T13:47:46.520Z"
     },
     {
       "id": "2026-08-14",
