@@ -79,7 +79,7 @@
     {
       "id": "2026-08-14",
       "targetFriday": "2026-08-14",
-      "status": "pending",
+      "status": "open",
       "dispatchNote": null,
       "choices": [
         {
@@ -97,7 +97,8 @@
           "label": "Lazy tomato plate",
           "recipeSlug": "cottage-cheese-tomato-plate"
         }
-      ]
+      ],
+      "openedAt": "2026-08-09T13:10:28.403Z"
     },
     {
       "id": "2026-08-21",

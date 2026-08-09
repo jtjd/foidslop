@@ -18,26 +18,26 @@
   "community": {
     "enabled": true,
     "formId": "EkE4QX",
-    "pollId": "2026-08-07",
+    "pollId": "2026-08-14",
     "status": "open",
     "question": "Pick Friday's dinner",
-    "deadline": "Voting closes Thursday, August 6 at 6 PM ET.",
+    "deadline": "Voting closes Thursday, August 13 at 6 PM ET.",
     "promise": "The most popular choice becomes Friday's recipe.",
-    "submissionUrl": "https://tally.so/r/EkE4QX?poll_id=2026-08-07",
+    "submissionUrl": "https://tally.so/r/EkE4QX?poll_id=2026-08-14",
     "providerName": "Tally",
     "providerPrivacyUrl": "https://tally.so/help/privacy-policy",
     "choices": [
       {
         "slot": "A",
-        "label": "Tinned fish snack"
+        "label": "Spicy noodles"
       },
       {
         "slot": "B",
-        "label": "Crispy quesadilla"
+        "label": "Peanut butter toast"
       },
       {
         "slot": "C",
-        "label": "Something eggy"
+        "label": "Lazy tomato plate"
       }
     ],
     "lastResult": null,
