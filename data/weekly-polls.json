@@ -79,7 +79,7 @@
     {
       "id": "2026-08-14",
       "targetFriday": "2026-08-14",
-      "status": "open",
+      "status": "resolved",
       "dispatchNote": null,
       "choices": [
         {
@@ -98,7 +98,17 @@
           "recipeSlug": "cottage-cheese-tomato-plate"
         }
       ],
-      "openedAt": "2026-08-09T13:10:28.403Z"
+      "openedAt": "2026-08-09T13:10:28.403Z",
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "totalVotes": 0,
+      "winnerSlot": null,
+      "winnerRecipeSlug": null,
+      "resolvedAt": "2026-08-13T22:55:36.122Z",
+      "swapApplied": false
     },
     {
       "id": "2026-08-21",

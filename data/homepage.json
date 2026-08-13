@@ -19,10 +19,10 @@
     "enabled": true,
     "formId": "EkE4QX",
     "pollId": "2026-08-14",
-    "status": "open",
-    "question": "Pick Friday's dinner",
-    "deadline": "Voting closes Thursday, August 13 at 6 PM ET.",
-    "promise": "The most popular choice becomes Friday's recipe.",
+    "status": "closed",
+    "question": "Voting is closed",
+    "deadline": "Voting is closed. Notes and photos are still welcome.",
+    "promise": "No winner this week, so Friday's original recipe stays on the schedule.",
     "submissionUrl": "https://tally.so/r/EkE4QX?poll_id=2026-08-14",
     "providerName": "Tally",
     "providerPrivacyUrl": "https://tally.so/help/privacy-policy",
@@ -40,7 +40,18 @@
         "label": "Lazy tomato plate"
       }
     ],
-    "lastResult": null,
+    "lastResult": {
+      "pollId": "2026-08-14",
+      "targetFriday": "2026-08-14",
+      "winnerLabel": null,
+      "winnerRecipeSlug": null,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "totalVotes": 0
+    },
     "featuredReader": null
   },
   "archivePickSlug": "whipped-feta-hot-honey-walnuts"
