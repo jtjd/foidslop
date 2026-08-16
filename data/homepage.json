@@ -18,26 +18,26 @@
   "community": {
     "enabled": true,
     "formId": "EkE4QX",
-    "pollId": "2026-08-14",
-    "status": "closed",
-    "question": "Voting is closed",
-    "deadline": "Voting is closed. Notes and photos are still welcome.",
-    "promise": "No winner this week, so Friday's original recipe stays on the schedule.",
-    "submissionUrl": "https://tally.so/r/EkE4QX?poll_id=2026-08-14",
+    "pollId": "2026-08-21",
+    "status": "open",
+    "question": "Pick Friday's dinner",
+    "deadline": "Voting closes Thursday, August 20 at 6 PM ET.",
+    "promise": "The most popular choice becomes Friday's recipe.",
+    "submissionUrl": "https://tally.so/r/EkE4QX?poll_id=2026-08-21",
     "providerName": "Tally",
     "providerPrivacyUrl": "https://tally.so/help/privacy-policy",
     "choices": [
       {
         "slot": "A",
-        "label": "Spicy noodles"
+        "label": "Breakfast for dinner"
       },
       {
         "slot": "B",
-        "label": "Peanut butter toast"
+        "label": "Bagel situation"
       },
       {
         "slot": "C",
-        "label": "Lazy tomato plate"
+        "label": "Warm cheesy thing"
       }
     ],
     "lastResult": {

@@ -113,7 +113,7 @@
     {
       "id": "2026-08-21",
       "targetFriday": "2026-08-21",
-      "status": "pending",
+      "status": "open",
       "dispatchNote": null,
       "choices": [
         {
@@ -131,7 +131,8 @@
           "label": "Warm cheesy thing",
           "recipeSlug": "cheddar-chive-biscuits"
         }
-      ]
+      ],
+      "openedAt": "2026-08-16T12:56:34.338Z"
     },
     {
       "id": "2026-08-28",
