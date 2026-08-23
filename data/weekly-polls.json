@@ -137,7 +137,7 @@
     {
       "id": "2026-08-28",
       "targetFriday": "2026-08-28",
-      "status": "pending",
+      "status": "open",
       "dispatchNote": null,
       "choices": [
         {
@@ -155,7 +155,8 @@
           "label": "Sweet bowl",
           "recipeSlug": "cottage-cheese-pineapple-bowl"
         }
-      ]
+      ],
+      "openedAt": "2026-08-23T12:57:25.517Z"
     },
     {
       "id": "2026-09-04",
