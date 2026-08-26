@@ -8,6 +8,8 @@
     "publish": "node scripts/daily-publish.js",
     "optimize": "node scripts/optimize-images.js",
     "test": "node --test",
+    "sync:ratings": "node scripts/sync-ratings.js --soft",
+    "ping:indexnow": "node scripts/indexnow-ping.js",
     "weekly:check": "node scripts/weekly-community.js queue-check",
     "weekly:dry-run": "node scripts/weekly-community.js dry-run --operation queue-check",
     "upgrade-content": "node scripts/upgrade-recipe-content.js"

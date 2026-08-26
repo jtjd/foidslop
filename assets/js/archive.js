@@ -1,6 +1,45 @@
 (function () {
+  'use strict';
+
   var grid = document.getElementById('archive-grid');
   if (!grid) return;
+
+  function track(name, parameters) {
+    if (!window.__foidslopGALoaded || typeof window.gtag !== 'function') return;
+    window.gtag('event', name, Object.assign({ transport_type: 'beacon' }, parameters || {}));
+  }
+
+  function esc(value) {
+    return String(value == null ? '' : value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  function buildCard(entry) {
+    var article = document.createElement('article');
+    article.className = 'archive-card';
+    article.hidden = true;
+    article.setAttribute('data-search', entry.search);
+    article.setAttribute('data-filters', entry.filters);
+    article.innerHTML = '<a href="./' + esc(entry.slug) + '">'
+      + '<div class="archive-card-img"><picture><source type="image/webp" srcset="img/' + esc(entry.slug) + '-480.webp 480w, img/' + esc(entry.slug) + '-768.webp 768w" sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"><img src="img/' + esc(entry.img) + '" alt="' + esc(entry.alt) + '" width="600" height="600" loading="lazy"></picture></div>'
+      + '<div class="archive-card-body"><p class="archive-card-name">' + esc(entry.name) + '</p>'
+      + '<div class="archive-card-meta"><span class="archive-card-date">' + esc(entry.date) + '</span><div class="archive-card-tags">'
+      + (entry.tags || []).map(function (tag) { return '<span class="archive-card-tag">' + esc(tag) + '</span>'; }).join('')
+      + '</div></div></div></a>';
+    return article;
+  }
+
+  // Older recipes arrive as a JSON manifest and hydrate into the same card
+  // markup the publisher renders server-side for the newest chunk.
+  var manifest = document.getElementById('archive-manifest');
+  if (manifest) {
+    var entries = [];
+    try { entries = JSON.parse(manifest.textContent) || []; } catch (error) { entries = []; }
+    if (entries.length) {
+      var fragment = document.createDocumentFragment();
+      entries.forEach(function (entry) { fragment.appendChild(buildCard(entry)); });
+      grid.appendChild(fragment);
+    }
+  }
 
   var cards = Array.prototype.slice.call(grid.querySelectorAll('.archive-card'));
   var search = document.getElementById('archive-search');
@@ -14,6 +53,8 @@
   var params = new URLSearchParams(window.location.search);
   var activeFilter = allowed.indexOf(params.get('filter')) >= 0 ? params.get('filter') : 'all';
   var visibleLimit = 12;
+  var lastMatchCount = 0;
+  var searchTimer = null;
 
   search.value = params.get('q') || '';
 
@@ -50,6 +91,7 @@
     results.textContent = matches.length ? 'Showing ' + shown + (shown < matches.length ? ' of ' + matches.length : '') + (matches.length === 1 ? ' recipe' : ' recipes') : 'No recipes found';
     empty.hidden = matches.length !== 0;
     loadMoreWrap.hidden = filtering || visibleLimit >= matches.length;
+    lastMatchCount = matches.length;
     syncUrl();
   }
 
@@ -60,7 +102,19 @@
       apply();
     });
   });
-  search.addEventListener('input', function () { visibleLimit = 12; apply(); });
+  search.addEventListener('input', function () {
+    visibleLimit = 12;
+    apply();
+
+    // Reader searches are the cheapest keyword research available: log settled
+    // queries with their result counts to mine future roundup topics.
+    if (searchTimer) clearTimeout(searchTimer);
+    searchTimer = setTimeout(function () {
+      var query = search.value.trim().toLowerCase();
+      if (query.length < 3) return;
+      track('archive_search', { search_term: query, result_count: String(lastMatchCount) });
+    }, 1200);
+  });
   loadMore.addEventListener('click', function () { visibleLimit += 12; apply(); });
 
   var backToTop = document.getElementById('back-to-top');

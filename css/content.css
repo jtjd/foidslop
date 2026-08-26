@@ -78,6 +78,12 @@
 .collection-guide ul { background: var(--border); border: 1px solid var(--border); display: grid; gap: 1px; list-style: none; margin: 0; padding: 0; }
 .collection-guide li { background: var(--surface); color: var(--muted); font-size: .92rem; line-height: 1.65; padding: 20px 22px 20px 54px; position: relative; }
 .collection-guide li::before { color: var(--accent); content: '*'; font-family: Arial Black, Arial, sans-serif; left: 22px; position: absolute; top: 20px; }
+.collection-faq { border-top: 1px solid var(--border); margin-top: 64px; max-width: 880px; padding-top: 40px; }
+.collection-faq h2 { color: var(--text); font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 400; line-height: .95; margin: 0 0 26px; text-transform: uppercase; }
+.collection-faq-item { border-bottom: 1px solid var(--border); padding: 22px 0; }
+.collection-faq-item:last-child { border-bottom: 0; }
+.collection-faq-item h3 { color: var(--text); font-size: 1.02rem; font-weight: 600; letter-spacing: -.01em; margin: 0 0 10px; }
+.collection-faq-item p { color: var(--muted); font-size: .92rem; line-height: 1.7; margin: 0; }
 .article-page h2 {
   color: var(--text);
   font-family: 'Bebas Neue', sans-serif;

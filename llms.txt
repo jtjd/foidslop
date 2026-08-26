@@ -6,6 +6,15 @@ The primary purpose of foidslop is helping people feed themselves without turnin
 
 The homepage helps readers find tonight's meal, catch up on the current week, rediscover older recipes, and participate in recurring editorial prompts.
 
+## Roundup guides
+
+<!-- AUTO:ROUNDUPS START -->
+- [Girl Dinner Ideas for Fall](https://foidslop.com/girl-dinner-ideas-fall): Seasonal girl dinner ideas for fall: apple-and-cheese boards, warm toast, cozy bowls, and no-cook plates made for one.
+- [Eggs for Dinner Ideas](https://foidslop.com/eggs-for-dinner): Eggs for dinner, done right. Shakshuka, frittata, fried-egg toast, and more easy single-serving recipes ready tonight.
+- [Soup Recipes for One](https://foidslop.com/soup-for-one): Small-batch soup recipes for one. Upgraded tomato, miso with tofu, pasta e fagioli scaled down, all fast with no leftovers.
+- [Noodle Recipes for One](https://foidslop.com/noodle-recipes-for-one): Noodle recipes for one: sesame noodles, ramen upgrades, chilli crisp bowls, and peanut noodles ready faster than delivery.
+<!-- AUTO:ROUNDUPS END -->
+
 ## Key pages
 
 - [Homepage](https://foidslop.com/): Today's recipe, the current week, situational recipe indexes, the weekly dispatch, and reader prompts.
@@ -15,6 +24,10 @@ The homepage helps readers find tonight's meal, catch up on the current week, re
 - [No-cook recipes](https://foidslop.com/recipes/no-cook): Meals that do not require a stove or oven.
 - [Vegetarian recipes](https://foidslop.com/recipes/vegetarian): Vegetarian meals for one.
 - [Girl dinner ideas](https://foidslop.com/girl-dinner-ideas): Snack plates, toast, bowls, and other low-effort meal ideas.
+- [Girl dinner ideas for fall](https://foidslop.com/girl-dinner-ideas-fall): Seasonal snack plates, toast, and cozy no-cook plates.
+- [Eggs for dinner](https://foidslop.com/eggs-for-dinner): Shakshuka, frittata, fried-egg toast, and other egg dinners for one.
+- [Soup for one](https://foidslop.com/soup-for-one): Small-batch soup recipes that leave no leftovers.
+- [Noodle recipes for one](https://foidslop.com/noodle-recipes-for-one): Sesame noodles, ramen upgrades, and quick noodle bowls.
 - [What is foidslop?](https://foidslop.com/what-is-foidslop): The meaning and origin of the name and how the publication reclaims it.
 - [What does foid mean?](https://foidslop.com/what-does-foid-mean): The slang term’s origin, why it is derogatory, and how foidslop redirects it.
 - [Editorial standards](https://foidslop.com/editorial-standards): How recipes are developed, checked, illustrated, corrected, and described.

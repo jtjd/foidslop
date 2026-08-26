@@ -81,6 +81,54 @@
 .recipe-tool.copied::after { color: var(--accent-contrast); content: 'OK' !important; font-size: .65rem; }
 .recipe-tool-status { background: var(--text); color: var(--bg); font-size: .62rem; grid-column: 1/-1; letter-spacing: .1em; padding: 10px 16px; text-transform: uppercase; }
 .recipe-tool-status:empty { display: none; }
+
+/* ── Reader ratings ─────────────────────── */
+.rate-recipe { align-items: center; border: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 14px; margin: 0 0 34px; padding: 16px 18px; }
+.rate-label { color: var(--muted); font: 700 .66rem/1 Arial,sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+.rate-stars { display: inline-flex; gap: 4px; }
+.rate-star { appearance: none; background: none; border: 1px solid var(--border); color: var(--muted); cursor: pointer; font-family: Arial Black,Arial,sans-serif; font-size: .95rem; line-height: 1; min-height: 38px; min-width: 38px; padding: 0; transition: background .2s ease,border-color .2s ease,color .2s ease; }
+.rate-star:hover,.rate-star:focus-visible { border-color: var(--accent); color: var(--accent); }
+.rate-star.active { background: var(--accent); border-color: var(--accent); color: var(--accent-contrast); }
+.rate-star:disabled { cursor: default; opacity: .55; }
+.rate-recipe.rated .rate-star:disabled { opacity: 1; }
+.rate-recipe.rated .rate-star:not(.active) { opacity: .35; }
+.rate-summary { color: var(--muted); font-size: .78rem; margin-left: auto; }
+
+/* ── Share row + pin overlay ────────────── */
+.share-row { align-items: center; display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 30px; }
+.share-row-label { color: var(--muted); font: 700 .62rem/1 Arial,sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+.share-link { appearance: none; background: var(--surface); border: 1px solid var(--border); color: var(--text); cursor: pointer; font: 600 .68rem/1 Arial,sans-serif; letter-spacing: .08em; min-height: 34px; padding: 9px 14px; text-decoration: none; text-transform: uppercase; transition: background .2s ease,border-color .2s ease,color .2s ease; }
+.share-link:hover,.share-link:focus-visible { background: var(--accent); border-color: var(--accent); color: var(--accent-contrast); }
+.image-pin { align-items: center; background: rgba(5,5,7,.82); border: 1px solid rgba(255,255,255,.35); color: #fff; display: flex; font: 700 .64rem/1 Arial,sans-serif; letter-spacing: .12em; min-height: 36px; opacity: 0; padding: 0 16px; position: absolute; right: 18px; text-decoration: none; text-transform: uppercase; top: 18px; transition: opacity .2s ease; z-index: 3; }
+.slop-image-panel:hover .image-pin,.image-pin:focus-visible { opacity: 1; }
+@media (hover: none) { .image-pin { opacity: 1; } }
+
+/* ── Keep browsing strip ────────────────── */
+.keep-browsing { border-top: 1px solid var(--border); margin: 0; padding: 44px 24px 8px; }
+.keep-links { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); margin-top: 16px; max-width: 1200px; }
+.keep-links a { border: 1px solid var(--border); color: inherit; display: flex; flex-direction: column; gap: 6px; justify-content: space-between; min-height: 96px; padding: 18px 20px; text-decoration: none; transition: background .2s ease,border-color .2s ease; }
+.keep-links a:hover,.keep-links a:focus-visible { background: color-mix(in srgb,var(--accent) 9%,var(--bg)); border-color: var(--accent); }
+.keep-links strong { font-family: Arial Black,Arial,sans-serif; font-size: .95rem; letter-spacing: -.02em; line-height: 1.25; text-transform: uppercase; }
+.keep-links span { color: var(--muted); font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; }
+
+/* ── Inline newsletter on recipes ───────── */
+.dispatch-inline { border: 1px solid var(--border); border-left: 3px solid var(--accent); margin-top: 40px; padding: 26px 26px 22px; }
+.dispatch-inline-copy .zine-kicker { display: block; margin-bottom: 10px; }
+.dispatch-inline h2 { color: var(--text); font-family: Arial Black,Arial,sans-serif; font-size: 1.05rem; letter-spacing: -.01em; line-height: 1.4; margin: 0; text-transform: none; }
+.dispatch-inline-form { margin-top: 16px; }
+.dispatch-inline-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.dispatch-inline-row input { background: var(--bg); border: 1px solid var(--border); color: var(--text); flex: 1 1 210px; font: 400 .92rem/1 Arial,sans-serif; min-height: 46px; padding: 0 14px; }
+.dispatch-inline-row input:focus-visible { border-color: var(--accent); outline: none; }
+.dispatch-inline-row button { appearance: none; background: var(--text); border: 1px solid var(--text); color: var(--bg); cursor: pointer; font: 700 .72rem/1 Arial,sans-serif; letter-spacing: .1em; min-height: 46px; padding: 0 18px; text-transform: uppercase; transition: opacity .2s ease; }
+.dispatch-inline-row button:hover,.dispatch-inline-row button:focus-visible { opacity: .85; }
+.dispatch-inline-privacy { color: var(--muted); font-size: .7rem; line-height: 1.6; margin: 12px 0 0; }
+.dispatch-inline-privacy a { color: var(--text); }
+
+/* ── Reader report prompt ───────────────── */
+.report-prompt { background: var(--surface); border: 1px solid var(--border); margin-top: 14px; padding: 20px 24px 22px; }
+.report-prompt-label { color: var(--accent); display: block; font: 700 .62rem/1 Arial,sans-serif; letter-spacing: .12em; margin-bottom: 8px; text-transform: uppercase; }
+.report-prompt p { color: var(--muted); font-size: .82rem; line-height: 1.6; margin: 0 0 12px; }
+.report-prompt a { color: var(--text); font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-decoration-color: var(--accent); text-transform: uppercase; }
 .ingredients-list { list-style: none; margin-bottom: 48px; }
 .ingredient-item { border-bottom: 1px solid var(--border); transition: background .2s ease; }
 .ingredient-item:first-child { border-top: 1px solid var(--border); }
@@ -172,7 +220,7 @@
 /* ── Print Stylesheet ───────────────────── */
 @media print {
   header.site-header, footer, .slop-nav, .slop-share, .bg-layer,
-  .slop-tags, .slop-stats, .affiliate-note, .recipe-tools, .ingredient-check, script, style, noscript {
+  .slop-tags, .slop-stats, .affiliate-note, .recipe-tools, .rate-recipe, .ingredient-check, script, style, noscript {
     display: none !important;
   }
   body { background: #fff !important; color: #000 !important; }

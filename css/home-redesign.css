@@ -955,3 +955,31 @@
     font-size: 20px;
   }
 }
+
+/* ── Seasonal roundup tile ───────────────── */
+.zine-roundup {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 0 8px;
+  padding: 30px 34px;
+  text-decoration: none;
+  transition: background .2s ease, border-color .2s ease;
+}
+.zine-roundup:hover,
+.zine-roundup:focus-visible { background: color-mix(in srgb, var(--accent) 9%, var(--surface)); border-color: var(--accent); }
+.zine-roundup .zine-kicker { margin: 0; }
+.zine-roundup strong {
+  color: var(--text);
+  font-family: Arial Black, Arial, sans-serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  letter-spacing: -.02em;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+.zine-roundup em { color: var(--muted); font-size: .92rem; font-style: normal; line-height: 1.6; max-width: 640px; }
+.zine-roundup-cta { color: var(--accent); font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }

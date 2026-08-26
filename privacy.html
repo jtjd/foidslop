@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <!-- Google Analytics loads only after cookie consent. See cookie-consent.js. -->
-<script src="cookie-consent.js?v=20260713-4" data-ga-id="G-VT527DETQ2"></script>
+<script src="cookie-consent.js?v=20260713-4" data-ga-id="G-VT527DETQ2" defer></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -45,11 +45,12 @@
 </script>
 
 <!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap"></noscript>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/inter-var.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/bebas-neue-400.woff2" crossorigin>
+<link rel="stylesheet" href="css/fonts.css?v=20260826-1" media="print" onload="this.media='all'">
+<noscript><link rel="preload" as="font" type="font/woff2" href="/fonts/inter-var.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/bebas-neue-400.woff2" crossorigin>
+<link rel="stylesheet" href="css/fonts.css?v=20260826-1"></noscript>
 
 <!-- Stylesheets -->
 <link rel="stylesheet" href="css/global.css">
@@ -90,6 +91,7 @@
   <ul>
     <li><strong>Weekly dispatch:</strong> <a href="https://kit.com/privacy" target="_blank" rel="noopener noreferrer">Kit<span class="sr-only"> (opens in new tab)</span></a> receives your email address when you subscribe. Kit processes double opt-in, delivery, opens and clicks where those measurements are enabled, unsubscribes, and suppression records used to prevent unwanted mail.</li>
     <li><strong>Community submissions:</strong> <a href="https://tally.so/help/privacy-policy" target="_blank" rel="noopener noreferrer">Tally<span class="sr-only"> (opens in new tab)</span></a> receives your vote and, when you choose to provide them, a name or alias, written report, photo, and publication-permission choices.</li>
+    <li><strong>Recipe ratings:</strong> when you rate a recipe, we store the star value and recipe name in our hosting provider's key-value storage. To prevent duplicate votes without accounts or tracking cookies, the request IP address is combined with a random salt and reduced to a one-way hash that cannot be reversed to identify you. Only the star rating, recipe, aggregate counts, and that hash are stored.</li>
     <li><strong>Google Analytics:</strong> we use Google Analytics to understand how visitors use this site, including pages viewed, time on site, device and browser type, approximate location (city/region level), and referral source. Google Analytics uses cookies and similar technologies to collect this data. See the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy<span class="sr-only"> (opens in new tab)</span></a>.</li>
     <li><strong>Cloudflare:</strong> our hosting and CDN provider may log IP addresses, browser type, and request metadata for security and performance purposes. See the <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare Privacy Policy<span class="sr-only"> (opens in new tab)</span></a>.</li>
   </ul>
