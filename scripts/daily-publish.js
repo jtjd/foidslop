@@ -581,7 +581,7 @@ function archiveControls(count) {
   const introLinks = hubs
     .map(hub => ({ href: `../recipes/${hub.slug}`, label: hub.title, count: published.filter(hub.filter).length }))
     .filter(link => link.count >= 6);
-  return `<div class="archive-intro"><p class="archive-label">The complete recipe index</p><h2>Find something good to eat</h2><p>Search by recipe, ingredient, or craving. Try mushrooms, feta, pasta, no cook, or anything else already in your kitchen. Every one of the ${count} recipes here is written for a single person and published fresh each morning, so dinner never turns into a week of leftovers.</p><p>Browse by collection instead: ${introLinks.map(link => `<a href="${link.href}">${esc(link.label)} (${link.count})</a>`).join(' · ')}.</p></div><div class="archive-header"><span class="archive-label">Past Slops</span><span class="archive-count" id="archive-count">${count} recipes</span></div>
+  return `<div class="archive-intro"><p class="archive-label">The complete recipe index</p><h2>Find something good to eat</h2><p class="archive-intro-copy">Search by recipe, ingredient, or craving. Try mushrooms, feta, pasta, no cook, or anything else already in your kitchen. Every one of the ${count} recipes here is written for a single person and published fresh each morning, so dinner never turns into a week of leftovers.</p><nav class="archive-collections" aria-label="Browse by collection"><span class="archive-collections-label">Browse by collection</span><div class="archive-collections-list">${introLinks.map(link => `<a href="${link.href}"><strong>${esc(link.label)}</strong><span>${link.count} recipes</span></a>`).join('')}</div></nav></div><div class="archive-header"><span class="archive-label">Past Slops</span><span class="archive-count" id="archive-count">${count} recipes</span></div>
   <section class="archive-tools" aria-label="Search and filter recipes">
     <label class="archive-search-label" for="archive-search">Search the archive</label>
     <input class="archive-search" id="archive-search" type="search" placeholder="Pasta, toast, cheese…" autocomplete="off">
@@ -608,7 +608,7 @@ function renderArchivePage(pageNumber, chunkMeals, totalPages) {
   const pager = `<nav class="hub-links" aria-label="Archive pages"><a href="../archive">Search view</a><a href="${prevHref}"${pageNumber === 2 ? '' : ''}>Previous page</a>${nextHref ? `<a href="${nextHref}">Next page</a>` : ''}</nav>`;
   return `<!DOCTYPE html><html lang="en"><head>${commonHead({ title, description, canonical, root: '../../', image: socialOrHeroImage(chunkMeals[0]) })}
 <script type="application/ld+json">${jsonLd(schema)}</script>
-<link rel="stylesheet" href="../../css/slop-archive.css?v=20260716-2"><link rel="stylesheet" href="../../css/theme.css?v=20260826-1"></head><body>
+<link rel="stylesheet" href="../../css/slop-archive.css?v=20260826-2"><link rel="stylesheet" href="../../css/theme.css?v=20260826-1"></head><body>
 <a href="#main" class="sr-only focusable">Skip to content</a>${header('../../', 'archive')}
 <main id="main" class="archive-page-static"><div class="archive-intro"><p class="archive-label">The older issues</p><h2>Every slop, page by page</h2><p>Issues published ${oldest} through ${newest}. Each card opens a complete single-serving recipe. For search and filters across all ${published.length - 1} past recipes, use the <a href="../archive">searchable archive</a>.</p></div>
 <section class="archive-grid">${chunkMeals.map((meal, index) => archiveCard(meal, index < 2, '../')).join('\n')}</section>
@@ -641,7 +641,7 @@ function updateArchive() {
     .replace(/[ \t]*<link rel="stylesheet" href="\.\.\/css\/theme\.css(?:\?[^\"]*)?">\r?\n?/g, '')
     .replace(/[ \t]*<script src="\.\.\/theme\.js(?:\?[^\"]*)?"><\/script>\r?\n?/g, '')
     .replace('<link rel="stylesheet" href="../css/global.css">', '<link rel="stylesheet" href="../css/global.css">\n<script src="../theme.js?v=20260713-5"></script>')
-    .replace('<link rel="stylesheet" href="../css/slop-archive.css?v=20260716-2">', '<link rel="stylesheet" href="../css/slop-archive.css?v=20260716-2">\n<link rel="stylesheet" href="../css/theme.css?v=20260713-4">')
+    .replace('<link rel="stylesheet" href="../css/slop-archive.css?v=20260826-2">', '<link rel="stylesheet" href="../css/slop-archive.css?v=20260826-2">\n<link rel="stylesheet" href="../css/theme.css?v=20260713-4">')
     .replace(/<button class="theme-toggle(?: nav-dropdown-link)?"[\s\S]*?<\/button>/g, '')
     .replace(/href="\.\.\/index"/g, 'href="../"')
     .replace(/<header class="site-header"[\s\S]*?<\/header>/, header('../', 'archive'))
