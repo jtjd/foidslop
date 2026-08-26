@@ -437,6 +437,13 @@ for (const file of recipeFiles.slice(0, 3)) {
   const sample = fs.readFileSync(path.join(ROOT, 'slop', recipeFiles[0]), 'utf8');
   if (!sample.includes('og:image:width') || !sample.includes('og:image:height')) errors.push('recipe head is missing og:image dimensions');
 }
+{
+  const archiveHtml = fs.readFileSync(path.join(ROOT, 'slop', 'archive.html'), 'utf8');
+  const manifests = (archiveHtml.match(/id="archive-manifest"/g) || []).length;
+  if (manifests !== 1) errors.push(`slop/archive.html: expected exactly one manifest block, found ${manifests}`);
+  if ((archiveHtml.match(/archive\.js\?v=/g) || []).length !== 1) errors.push('slop/archive.html: archive.js must be included exactly once');
+  if (archiveHtml.length > 300 * 1024) errors.push(`slop/archive.html: ${(archiveHtml.length / 1024).toFixed(0)}KB exceeds the 300KB budget`);
+}
 
 for (const functionFile of ['functions/api/rate.js', 'functions/api/ratings.js']) {
   if (!fs.existsSync(path.join(ROOT, functionFile))) errors.push(`missing ratings endpoint: ${functionFile}`);

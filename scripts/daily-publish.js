@@ -630,7 +630,8 @@ function updateArchive() {
     ? `<nav class="hub-links" aria-label="Older archive pages"><span class="archive-pages-label">Older issues, page by page:</span>${archivePageFiles.map(n => `<a href="./page-${n}">Page ${n}</a>`).join('')}</nav>`
     : '';
   const archiveSchema = { '@context': 'https://schema.org', '@type': 'ItemList', name: 'foidslop Recipe Archive', itemListElement: published.slice().reverse().map((meal, index) => ({ '@type': 'ListItem', position: index + 1, url: recipeUrl(meal), name: meal.name })) };
-  html = html.replace(/<div class="archive-intro">[\s\S]*?<\/div>/g, '')
+  html = html.replace(/(?:<\/nav><\/div>)+(?=<div class="archive-intro">)/g, '')
+    .replace(/<div class="archive-intro">[\s\S]*?(?=<div class="archive-header">)/g, '')
     .replace(/<title>[\s\S]*?<\/title>/, '<title>Search Every Recipe for One: The foidslop Archive</title>')
     .replace(/<meta name="description" content="[^"]+">/, '<meta name="description" content="Search every published foidslop recipe by name, ingredient, cuisine, or craving. Clear single-serving recipes with new ideas added daily.">')
     .replace(/<meta property="og:title" content="[^"]+">/, '<meta property="og:title" content="The foidslop Recipe Archive for One">')
@@ -687,6 +688,10 @@ function updateArchive() {
     filters: archiveFiltersFor(meal)
   }));
   const manifestTag = `<script id="archive-manifest" type="application/json">${jsonLd(manifestEntries)}</script>`;
+  // Idempotent: strip any previously injected blocks before re-inserting, so
+  // repeated publishes never stack manifests or loader scripts.
+  html = html.replace(/<script id="archive-manifest"[\s\S]*?<\/script>\n?/g, '');
+  html = html.replace(/<script src="\.\.\/archive\.js(?:\?v=[^"]*)?"><\/script>\n?/g, '');
   html = html.replace('</body>', `${manifestTag}\n<script src="../archive.js?v=20260826-1"></script>\n</body>`);
   fs.writeFileSync(file, html);
   // Static pagination: fresh directory every run so stale pages never linger.
