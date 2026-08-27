@@ -399,7 +399,8 @@ if (!fs.existsSync(path.join(ROOT, '_headers'))) {
   }
 }
 const forOne = fs.readFileSync(path.join(ROOT, 'recipes', 'for-one.html'), 'utf8');
-if (!forOne.includes('<h1>Easy Dinner Ideas for One</h1>') || !forOne.includes('<title>118+ Easy Dinner Ideas for One</title>')) {
+const expectedForOneTitle = `<title>${recipeFiles.length}+ Easy Dinner Ideas for One</title>`;
+if (!forOne.includes('<h1>Easy Dinner Ideas for One</h1>') || !forOne.includes(expectedForOneTitle)) {
   errors.push('recipes/for-one.html: head-term title drifted from Dinner Ideas for One');
 }
 for (const file of recipeFiles.slice(0, 3)) {
