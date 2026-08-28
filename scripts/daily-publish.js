@@ -25,7 +25,7 @@ const PINTEREST_URL = 'https://www.pinterest.com/foidslop/';
 const SAME_AS = [PINTEREST_URL];
 const TZ = 'America/New_York';
 const GLOBAL_CSS_VERSION = '20260827-1';
-const ARCHIVE_CSS_VERSION = '20260827-2';
+const ARCHIVE_CSS_VERSION = '20260827-3';
 const CONTENT_CSS_VERSION = '20260827-1';
 const SLOP_CSS_VERSION = '20260827-2';
 const THEME_CSS_VERSION = '20260827-2';
@@ -708,9 +708,9 @@ function renderArchivePage(pageNumber, chunkMeals, totalPages) {
   const pager = `<nav class="archive-pagination" aria-label="Archive pages"><a href="../archive">Search view</a><a href="${prevHref}">Previous page</a>${nextHref ? `<a href="${nextHref}">Next page</a>` : ''}</nav>`;
   return `<!DOCTYPE html><html lang="en"><head>${commonHead({ title, description, canonical, root: '../../', image: socialOrHeroImage(chunkMeals[0]) })}
 <script type="application/ld+json">${jsonLd(schema)}</script>
-<link rel="stylesheet" href="../../css/slop-archive.css?v=20260827-1"><link rel="stylesheet" href="../../css/theme.css?v=${THEME_CSS_VERSION}"></head><body>
+<link rel="stylesheet" href="../../css/slop-archive.css?v=${ARCHIVE_CSS_VERSION}"><link rel="stylesheet" href="../../css/theme.css?v=${THEME_CSS_VERSION}"></head><body>
 <a href="#main" class="sr-only focusable">Skip to content</a>${header('../../', 'archive')}
-<main id="main" class="archive-page-static"><div class="archive-intro"><p class="archive-label">The older issues</p><h2>Every slop, page by page</h2><p>Issues published ${oldest} through ${newest}. Each card opens a complete single-serving recipe. For search and filters across all ${published.length - 1} past recipes, use the <a href="../archive">searchable archive</a>.</p></div>
+<main id="main" class="archive-page-static"><div class="archive-intro"><p class="archive-label">The older issues</p><h2>Every slop, page by page</h2><p class="archive-intro-copy">Issues published ${oldest} through ${newest}. Each card opens a complete single-serving recipe. For search and filters across all ${published.length - 1} past recipes, use the <a href="../archive">searchable archive</a>.</p></div>
 <section class="archive-grid">${chunkMeals.map((meal, index) => archiveCard(meal, index < 2, '../')).join('\n')}</section>
 ${pager}</main>
 ${footer('../../')}${siteScript}</body></html>`;
