@@ -11,6 +11,7 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const { chronological, releaseDate, ARCHIVE_CHUNK } = require('./lib/publication-order');
+const { chooseArchivePick } = require('./lib/archive-pick');
 const ratings = require('./lib/ratings');
 
 const ROOT = process.cwd();
@@ -287,7 +288,8 @@ function validate() {
     if (!feature.name || !feature.report || feature.permissionConfirmed !== true) errors.push('Featured reader needs a name, report, and confirmed publication permission');
     if (feature.recipeSlug && !published.some(meal => meal.slug === feature.recipeSlug)) errors.push(`Featured reader references an unpublished recipe: ${feature.recipeSlug}`);
   }
-  if (homepage.archivePickSlug && !meals.some(meal => meal.slug === homepage.archivePickSlug)) errors.push(`Unknown homepage archive pick: ${homepage.archivePickSlug}`);
+  if (!['daily', 'weekly'].includes(homepage.archivePickRotation)) errors.push('Homepage archivePickRotation must be daily or weekly');
+  if (Object.hasOwn(homepage, 'archivePickSlug')) errors.push('Homepage archivePickSlug is retired; use archivePickRotation for automatic selection');
   errors.push(...validateEditorialConfig());
   if (errors.length) throw new Error(`Content validation failed:\n- ${errors.join('\n- ')}`);
 }
@@ -508,16 +510,6 @@ function newsletterSignup(id, repeated = false) {
   </section>`;
 }
 
-function chooseArchivePick() {
-  const excluded = new Set(published.slice(-7).map(meal => meal.slug));
-  const eligible = published.filter(meal => !excluded.has(meal.slug));
-  if (!eligible.length) return null;
-  const configured = eligible.find(meal => meal.slug === homepage.archivePickSlug);
-  if (configured) return configured;
-  const week = Math.floor(Date.parse(`${today}T12:00:00Z`) / (7 * 24 * 60 * 60 * 1000));
-  return eligible[week % eligible.length];
-}
-
 function renderCommunity() {
   const community = homepage.community;
   const featured = community.featuredReader && community.featuredReader.name && community.featuredReader.report
@@ -545,7 +537,7 @@ function renderCommunity() {
 function renderArchivePick(meal) {
   if (!meal) return '';
   const total = totalMinutes(meal);
-  return `<section class="zine-filing" id="filing-cabinet" aria-labelledby="filing-title">
+  return `<section class="zine-filing" id="filing-cabinet" data-archive-pick="${esc(meal.slug)}" data-archive-rotation="${esc(homepage.archivePickRotation)}" aria-labelledby="filing-title">
     <a class="filing-image" href="slop/${meal.slug}" data-track="archive_pick_open"><picture><source type="image/webp" srcset="slop/img/${meal.slug}-480.webp 480w, slop/img/${meal.slug}-768.webp 768w" sizes="(max-width: 800px) 100vw, 48vw"><img src="slop/img/${imageFile(meal)}" alt="${esc(meal.imageAlt || meal.name)}" width="768" height="768" loading="lazy" decoding="async"></picture></a>
     <div class="filing-copy"><div class="zine-kicker">From the filing cabinet</div><h2 id="filing-title">${titleLines(meal.name)}</h2><p>${esc(meal.description)}</p><div class="filing-meta">${shortDate(releaseDate(meal))} / ${total ? `${total} minutes` : 'No cooking'} / ${esc(meal.category)}</div><a class="zine-read" href="slop/${meal.slug}" data-track="archive_pick_open">Reopen this file</a></div>
   </section>`;
@@ -560,7 +552,7 @@ function seasonalRoundupTile() {
 
 function renderHomepage() {
   const week = published.slice(-7, -1).reverse();
-  const archivePick = chooseArchivePick();
+  const archivePick = chooseArchivePick(published, today, homepage.archivePickRotation);
   const randomPool = published.filter(meal => meal.slug !== current.slug).map(meal => meal.slug);
   const latestRecipes = [current, ...week];
   const recipeSchema = latestRecipes.map((meal, index) => ({ '@type': 'ListItem', position: index + 1, url: recipeUrl(meal), name: meal.name, image: imageUrl(meal) }));

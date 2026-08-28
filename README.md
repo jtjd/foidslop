@@ -45,6 +45,7 @@ Several publisher features exist to move visitors deeper and earn clicks:
 - **Keep browsing strip:** every recipe page auto-links its two best-fit collection hubs (matched by category/tags) plus up to two in-season roundups, with a "for-one" fallback so the strip is never empty. Breadcrumbs mirror the primary hub.
 - **Inline dispatch form:** recipe pages end with a compact newsletter signup reusing `data/homepage.json` settings; it renders only while `newsletter.enabled`.
 - **Homepage seasonal tile:** the first in-season roundup gets a tile between the intent links and The Table.
+- **Automatic filing cabinet:** the homepage rotates a deterministic older recipe daily (or weekly if configured), excluding the seven newest issues so the cabinet stays meaningfully archival.
 - **Share row:** Pinterest, X, and copy-link actions on every recipe plus a save-to-Pinterest overlay on the hero image.
 - **Measurement:** `recipe-tools.js` binds every recipe-page `data-track` action (share, pin, report, today's-slop) and rating submissions to GA events; `archive.js` sends settled archive searches as `archive_search` with result counts. All tracking is gated behind the cookie-consent flag exactly like the homepage.
 - **Reader report prompt:** recipes end with a "Made this slop?" call to the Tally submission form, feeding The Table's featured-reader slot.

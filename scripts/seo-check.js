@@ -13,6 +13,7 @@ const VALIDATION_TODAY = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/N
 const homepageConfig = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'homepage.json'), 'utf8'));
 const weeklyQueue = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'weekly-polls.json'), 'utf8'));
 const { validateQueue } = require('./weekly-community');
+const { chooseArchivePick } = require('./lib/archive-pick');
 
 for (const [directory, files] of Object.entries({
   'assets/js': ['archive.js', 'cookie-consent.js', 'home.js', 'recipe-tools.js', 'theme.js'],
@@ -255,10 +256,17 @@ if (homepageRandomPool.some(slug => !publishedHomepageSlugs.has(slug))) errors.p
 const latestPublished = primaryData.meals.filter(meal => meal.status === 'published')
   .sort((a, b) => a.publishDate.localeCompare(b.publishDate) || a.id - b.id).at(-1);
 if (latestPublished && homepageRandomPool.includes(latestPublished.slug)) errors.push('index.html: random recipe pool includes today’s recipe');
-const configuredArchivePick = primaryData.meals.find(meal => meal.slug === homepageConfig.archivePickSlug);
-if (!configuredArchivePick) errors.push(`homepage config: unknown archive pick ${homepageConfig.archivePickSlug}`);
-else if (configuredArchivePick.status !== 'published') errors.push(`homepage config: archive pick is not published (${homepageConfig.archivePickSlug})`);
 const publishedMeals = primaryData.meals.filter(meal => meal.status === 'published');
+if (!['daily', 'weekly'].includes(homepageConfig.archivePickRotation)) errors.push('homepage config: archivePickRotation must be daily or weekly');
+if (Object.hasOwn(homepageConfig, 'archivePickSlug')) errors.push('homepage config: archivePickSlug is retired');
+const archivePickMatch = homepage.match(/<section class="zine-filing"[^>]*data-archive-pick="([^"]+)"/);
+const archiveRotationMatch = homepage.match(/<section class="zine-filing"[^>]*data-archive-rotation="([^"]+)"/);
+const generatedDate = String(primaryData.generated || '').slice(0, 10);
+const orderedPublishedMeals = publishedMeals.slice().sort((left, right) => left.publishDate.localeCompare(right.publishDate) || Number(left.id) - Number(right.id));
+const expectedArchivePick = chooseArchivePick(orderedPublishedMeals, /^\d{4}-\d{2}-\d{2}$/.test(generatedDate) ? generatedDate : VALIDATION_TODAY, homepageConfig.archivePickRotation);
+if (!archivePickMatch) errors.push('index.html: filing cabinet is missing its selected recipe metadata');
+else if (!expectedArchivePick || archivePickMatch[1] !== expectedArchivePick.slug) errors.push(`index.html: filing cabinet pick does not match ${homepageConfig.archivePickRotation} rotation`);
+if (!archiveRotationMatch || archiveRotationMatch[1] !== homepageConfig.archivePickRotation) errors.push('index.html: filing cabinet rotation metadata does not match homepage config');
 for (const field of ['headnote', 'storage', 'substitutions', 'seoDescription']) {
   const seen = new Map();
   for (const meal of publishedMeals) {
