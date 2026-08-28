@@ -27,6 +27,8 @@ const TZ = 'America/New_York';
 const GLOBAL_CSS_VERSION = '20260827-1';
 const ARCHIVE_CSS_VERSION = '20260827-2';
 const CONTENT_CSS_VERSION = '20260827-1';
+const SLOP_CSS_VERSION = '20260827-2';
+const THEME_CSS_VERSION = '20260827-2';
 
 function esc(value) {
   return String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;')
@@ -76,6 +78,34 @@ function titleLines(name) {
   const first = esc(words.slice(0, midpoint).join(' '));
   const second = esc(words.slice(midpoint).join(' '));
   return second ? `${first}<br>${second}.` : `${first}.`;
+}
+function isLongSlopTitle(name) {
+  const value = String(name || '').trim();
+  const wordCount = value ? value.split(/\s+/).length : 0;
+  return value.length >= 36 || wordCount >= 8;
+}
+function recipeTitleLines(name) {
+  if (!isLongSlopTitle(name)) return titleLines(name);
+  const words = String(name).toUpperCase().trim().split(/\s+/);
+  if (words.length < 3) return titleLines(name);
+  let best = null;
+  for (let firstBreak = 1; firstBreak < words.length - 1; firstBreak += 1) {
+    for (let secondBreak = firstBreak + 1; secondBreak < words.length; secondBreak += 1) {
+      const lines = [
+        words.slice(0, firstBreak).join(' '),
+        words.slice(firstBreak, secondBreak).join(' '),
+        words.slice(secondBreak).join(' ')
+      ];
+      const lengths = lines.map(line => line.length);
+      const range = Math.max(...lengths) - Math.min(...lengths);
+      const score = Math.max(...lengths) * 2 + range;
+      if (!best || score < best.score) best = { lines, score };
+    }
+  }
+  return best.lines.map((line, index) => `${esc(line)}${index === best.lines.length - 1 ? '.' : ''}`).join('<br>');
+}
+function slopTitleClass(name) {
+  return isLongSlopTitle(name) ? 'slop-title slop-title--long' : 'slop-title';
 }
 function jsonLd(data) { return JSON.stringify(data, null, 2).replace(/<\//g, '<\\/'); }
 function isHttpsUrl(value) {
@@ -482,9 +512,9 @@ function renderRecipe(meal, index) {
     canonical: recipeUrl(meal), image: fs.existsSync(path.join(SLOP_DIR, 'social', `${meal.slug}-wide.jpg`)) ? socialImageUrl(meal) : imageUrl(meal), type: 'article', root: '../'
   })}
 <script type="application/ld+json">${jsonLd([schema, breadcrumb])}</script>
-<link rel="stylesheet" href="../css/slop-page.css?v=20260827-1"><link rel="stylesheet" href="../css/theme.css?v=20260713-4"></head><body>
+<link rel="stylesheet" href="../css/slop-page.css?v=${SLOP_CSS_VERSION}"><link rel="stylesheet" href="../css/theme.css?v=${THEME_CSS_VERSION}"></head><body>
 <a href="#main" class="sr-only focusable">Skip to content</a>${header('../', meal.slug === current.slug ? 'today' : '')}
-<div class="slop-header"><p class="slop-eyebrow">Slop of the Day / ${prettyDate(date)}</p><h1 class="slop-title">${titleLines(meal.name)}</h1>
+<div class="slop-header"><p class="slop-eyebrow">Slop of the Day / ${prettyDate(date)}</p><h1 class="${slopTitleClass(meal.name)}">${recipeTitleLines(meal.name)}</h1>
 <div class="slop-meta"><span class="slop-date">Published ${prettyDate(date)}</span><div class="slop-tags">${meal.tags.map(tag => `<span class="slop-tag">${esc(tag)}</span>`).join('')}</div></div></div>
 <main id="main"><div class="slop-body"><div class="slop-image-panel"><picture><source type="image/webp" srcset="img/${meal.slug}-480.webp 480w, img/${meal.slug}-768.webp 768w" sizes="(max-width: 900px) 100vw, 50vw"><img src="img/${imageFile(meal)}" alt="${esc(meal.imageAlt || meal.name)}" width="768" height="768" loading="eager" fetchpriority="high"></picture><a class="image-pin" href="${pinterestShareUrl(meal)}" target="_blank" rel="noopener" data-track="pin_click" aria-label="Save ${esc(meal.name)} to Pinterest">Pin</a><span class="slop-image-caption">${esc(meal.name)} / foidslop</span></div>
 <div class="slop-content"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Home</a><span>/</span>${primaryHub ? `<a href="../recipes/${primaryHub.slug}">${esc(primaryHub.title)}</a>` : `<a href="./archive">Archive</a>`}<span>/</span><span class="current">${esc(meal.name)}</span></nav>
@@ -605,7 +635,7 @@ function renderHomepage() {
   ].map(([label, href, intent]) => `<a href="${href}" data-track="home_intent_click" data-intent="${intent}">${label}</a>`).join('');
   return `<!DOCTYPE html><html lang="en"><head>${commonHead({ title: 'foidslop | Daily Recipes for One', description, canonical: `${BASE_URL}/` })}
 <link rel="preload" as="image" href="slop/img/${current.slug}-768.webp" type="image/webp" imagesrcset="slop/img/${current.slug}-480.webp 480w, slop/img/${current.slug}-768.webp 768w" imagesizes="(max-width: 800px) 100vw, 42vw" fetchpriority="high">
-<link rel="stylesheet" href="css/home-redesign.css?v=20260826-1"><link rel="stylesheet" href="css/theme.css?v=20260717-1">
+<link rel="stylesheet" href="css/home-redesign.css?v=20260826-1"><link rel="stylesheet" href="css/theme.css?v=${THEME_CSS_VERSION}">
 <script type="application/ld+json">${jsonLd(schema)}</script></head><body><a href="#main" class="sr-only focusable">Skip to content</a>
 <main id="main" class="zine-home">${header('', 'home')}<div id="top">
   <section class="zine-hero" aria-labelledby="home-title">
@@ -678,7 +708,7 @@ function renderArchivePage(pageNumber, chunkMeals, totalPages) {
   const pager = `<nav class="archive-pagination" aria-label="Archive pages"><a href="../archive">Search view</a><a href="${prevHref}">Previous page</a>${nextHref ? `<a href="${nextHref}">Next page</a>` : ''}</nav>`;
   return `<!DOCTYPE html><html lang="en"><head>${commonHead({ title, description, canonical, root: '../../', image: socialOrHeroImage(chunkMeals[0]) })}
 <script type="application/ld+json">${jsonLd(schema)}</script>
-<link rel="stylesheet" href="../../css/slop-archive.css?v=20260827-1"><link rel="stylesheet" href="../../css/theme.css?v=20260826-1"></head><body>
+<link rel="stylesheet" href="../../css/slop-archive.css?v=20260827-1"><link rel="stylesheet" href="../../css/theme.css?v=${THEME_CSS_VERSION}"></head><body>
 <a href="#main" class="sr-only focusable">Skip to content</a>${header('../../', 'archive')}
 <main id="main" class="archive-page-static"><div class="archive-intro"><p class="archive-label">The older issues</p><h2>Every slop, page by page</h2><p>Issues published ${oldest} through ${newest}. Each card opens a complete single-serving recipe. For search and filters across all ${published.length - 1} past recipes, use the <a href="../archive">searchable archive</a>.</p></div>
 <section class="archive-grid">${chunkMeals.map((meal, index) => archiveCard(meal, index < 2, '../')).join('\n')}</section>
@@ -713,7 +743,7 @@ function updateArchive() {
     .replace(/[ \t]*<link rel="stylesheet" href="\.\.\/css\/theme\.css(?:\?[^\"]*)?">\r?\n?/g, '')
     .replace(/[ \t]*<script src="\.\.\/theme\.js(?:\?[^\"]*)?"><\/script>\r?\n?/g, '')
     .replace(/<link rel="stylesheet" href="\.\.\/css\/global\.css(?:\?v=[^"]*)?">/, `<link rel="stylesheet" href="../css/global.css?v=${GLOBAL_CSS_VERSION}">\n<script src="../theme.js?v=20260713-5"></script>`)
-    .replace(/<link rel="stylesheet" href="\.\.\/css\/slop-archive\.css(?:\?v=[^"]*)?">/, `<link rel="stylesheet" href="../css/slop-archive.css?v=${ARCHIVE_CSS_VERSION}">\n<link rel="stylesheet" href="../css/theme.css?v=20260713-4">`)
+    .replace(/<link rel="stylesheet" href="\.\.\/css\/slop-archive\.css(?:\?v=[^"]*)?">/, `<link rel="stylesheet" href="../css/slop-archive.css?v=${ARCHIVE_CSS_VERSION}">\n<link rel="stylesheet" href="../css/theme.css?v=${THEME_CSS_VERSION}">`)
     .replace(/<button class="theme-toggle(?: nav-dropdown-link)?"[\s\S]*?<\/button>/g, '')
     .replace(/href="\.\.\/index"/g, 'href="../"')
     .replace(/<header class="site-header"[\s\S]*?<\/header>/, header('../', 'archive'))

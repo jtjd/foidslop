@@ -97,7 +97,8 @@ html[data-theme="light"] .manifesto-text em, html[data-theme="light"] .scroll-ca
 .featured-slop { background:var(--surface); }
 .featured-title { font-family:Arial Black,Arial,sans-serif; letter-spacing:-.08em; }
 .featured-cta,.article-cta a,.hub-links a,.featured-tag { border-color:var(--accent); }
-.slop-title { font-size:clamp(4.5rem,10vw,10rem); }
+.slop-title { font-size:clamp(4.5rem,10vw,10rem); text-wrap:balance; }
+.slop-title--long { font-size:clamp(4rem,8vw,8rem); }
 .slop-header,.slop-body,.related-recipes,.slop-nav { max-width:1440px; margin:0 auto; border-inline:1px solid var(--border); }
 .slop-header { padding-top:54px; }
 .slop-body { background:var(--bg); }
@@ -119,4 +120,6 @@ footer { max-width:1440px; margin:0 auto; border-inline:1px solid var(--border);
 .zine-rss:hover,.zine-rss:focus-visible { color:var(--accent); border-color:var(--accent); }
 @media (max-width:1024px) { .site-header .header-right .nav-link { display:inline-flex; } .content-page,.article-page { padding:56px 24px 60px; } .page-title { padding:56px 24px 30px; } .slop-header { padding-top:40px; } }
 @media (max-width:800px) { .site-header { height:62px; padding:0 16px; grid-template-columns:1fr auto; } .site-header-center { display:none; } .site-header .logo { width:98px; height:58px; } .site-header .header-right { gap:16px; } }
+@media (max-width:1024px) { .slop-title--long { font-size:clamp(3.5rem,9vw,6rem); } }
+@media (max-width:640px) { .slop-title { font-size:clamp(3rem,14vw,5rem); } .slop-title--long { font-size:clamp(2.75rem,12vw,4.5rem); } }
 @media (max-width:560px) { .site-header .header-today { display:none !important; } .site-header .header-right { gap:12px; } .zine-find-links { grid-template-columns:1fr; } .zine-find-links a,.zine-find-links button { border-right:0 !important; white-space:normal; } }
