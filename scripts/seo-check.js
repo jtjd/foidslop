@@ -8,13 +8,15 @@ const ROOT = process.cwd();
 const errors = [];
 const htmlFiles = [];
 const publicRootSources = new Map();
+const PUBLIC_BASE = 'https://foidslop.com';
+const VALIDATION_TODAY = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
 const homepageConfig = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'homepage.json'), 'utf8'));
 const weeklyQueue = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'weekly-polls.json'), 'utf8'));
 const { validateQueue } = require('./weekly-community');
 
 for (const [directory, files] of Object.entries({
   'assets/js': ['archive.js', 'cookie-consent.js', 'home.js', 'recipe-tools.js', 'theme.js'],
-  'assets/brand': ['logo.png', 'logo.webp', 'brand-icon.png', 'og-image.png', 'favicon.ico', 'favicon-16x16.png', 'favicon-32x32.png', 'apple-touch-icon.png', 'android-chrome-192x192.png', 'android-chrome-512x512.png']
+  'assets/brand': ['logo.png', 'logo.webp', 'logo-header.png', 'logo-header.webp', 'brand-icon.png', 'brand-icon.webp', 'brand-icon-192.webp', 'og-image.png', 'favicon.ico', 'favicon-16x16.png', 'favicon-32x32.png', 'apple-touch-icon.png', 'android-chrome-192x192.png', 'android-chrome-512x512.png']
 })) {
   for (const file of files) publicRootSources.set(file, path.join(ROOT, directory, file));
 }
@@ -33,6 +35,28 @@ function walk(directory) {
   }
 }
 walk(ROOT);
+
+function publicPathForFile(file) {
+  const relative = path.relative(ROOT, file).split(path.sep).join('/');
+  if (relative === 'index.html') return '/';
+  if (!relative.endsWith('.html')) return null;
+  return `/${relative.slice(0, -'.html'.length)}`;
+}
+
+const publicRoutes = new Map(htmlFiles.map(file => [publicPathForFile(file), file]));
+
+function assetExists(publicPath) {
+  const relative = publicPath.replace(/^\//, '');
+  const candidates = [path.join(ROOT, relative), publicRootSources.get(relative)];
+  if (relative.startsWith('fonts/')) candidates.push(path.join(ROOT, 'assets', relative));
+  return candidates.filter(Boolean).some(candidate => fs.existsSync(candidate));
+}
+
+function isIsoDate(value) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(value || ''))) return false;
+  const parsed = new Date(`${value}T00:00:00Z`);
+  return !Number.isNaN(parsed.getTime()) && parsed.toISOString().slice(0, 10) === value;
+}
 
 const canonicals = new Map();
 const titleViolations = [];
@@ -65,20 +89,24 @@ for (const file of htmlFiles) {
   if (/href="(?:\.\.\/|\.\/|\/)?[^"#?]+\.html(?:["?#])/.test(html) && !['404.html'].includes(relative)) {
     errors.push(`${relative}: contains an internal .html link`);
   }
-  for (const match of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+  for (const match of html.matchAll(/<script(?: id="[^"]+")? type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
     try { JSON.parse(match[1]); } catch (error) { errors.push(`${relative}: invalid JSON-LD (${error.message})`); }
   }
   for (const match of html.matchAll(/href="([^"]+)"/g)) {
     const href = match[1];
     if (/^(?:https?:|mailto:|tel:|#)/.test(href)) continue;
-    const clean = href.split(/[?#]/)[0];
-    if (!clean || clean === '/') continue;
-    const absolute = clean.startsWith('/') ? path.join(ROOT, clean) : path.resolve(path.dirname(file), clean);
-    const candidates = [absolute, `${absolute}.html`, path.join(absolute, 'index.html'), publicSourceCandidate(absolute)].filter(Boolean);
-    if (/^\/?fonts\/[\w.-]+\.woff2$/.test(clean)) candidates.push(path.join(ROOT, 'assets', 'fonts', clean.replace(/^\/?fonts\//, '')));
-    if (/^\.?\/?page-\d+$/.test(clean)) candidates.push(path.join(ROOT, 'slop', 'archive', `${clean.replace(/^\.?\//, '')}.html`));
-    if (/(?:^|\/)slop\/today$/.test(clean) || clean === './today') continue;
-    if (!candidates.some(candidate => fs.existsSync(candidate))) errors.push(`${relative}: broken internal link ${href}`);
+    let target;
+    try {
+      const pageUrl = new URL(publicPathForFile(file), `${PUBLIC_BASE}/`);
+      target = new URL(href, pageUrl);
+    } catch {
+      errors.push(`${relative}: malformed internal link ${href}`);
+      continue;
+    }
+    if (target.origin !== PUBLIC_BASE) continue;
+    const cleanPath = target.pathname;
+    if (cleanPath === '/slop/today') continue; // intentional clean redirect to today's recipe
+    if (!publicRoutes.has(cleanPath) && !assetExists(cleanPath)) errors.push(`${relative}: broken internal link ${href} (${cleanPath})`);
   }
 }
 if (titleViolations.length) errors.push(`titles still end with the brand suffix: ${titleViolations.join(', ')}`);
@@ -154,11 +182,11 @@ if (homepageConfig.community.enabled) {
 }
 const checkInbox = fs.readFileSync(path.join(ROOT, 'check-inbox.html'), 'utf8');
 if (!checkInbox.includes('<meta name="robots" content="noindex,follow">')) errors.push('check-inbox.html: confirmation page must be noindex');
-if (!checkInbox.includes('Check your<br>inbox.') || !checkInbox.includes('logo.webp')) errors.push('check-inbox.html: missing branded confirmation content');
+if (!checkInbox.includes('Check your<br>inbox.') || !checkInbox.includes('logo-header.webp')) errors.push('check-inbox.html: missing branded confirmation content');
 if (locations.includes('https://foidslop.com/check-inbox')) errors.push('sitemap.xml: noindex confirmation page must not be listed');
 const subscribed = fs.readFileSync(path.join(ROOT, 'subscribed.html'), 'utf8');
 if (!subscribed.includes('<meta name="robots" content="noindex,follow">')) errors.push('subscribed.html: confirmation page must be noindex');
-if (!subscribed.includes('You’re<br>in.') || !subscribed.includes('logo.webp')) errors.push('subscribed.html: missing branded success content');
+if (!subscribed.includes('You’re<br>in.') || !subscribed.includes('logo-header.webp')) errors.push('subscribed.html: missing branded success content');
 if (locations.includes('https://foidslop.com/subscribed')) errors.push('sitemap.xml: noindex success page must not be listed');
 const privacy = fs.readFileSync(path.join(ROOT, 'privacy.html'), 'utf8');
 for (const required of ['Kit', 'Tally', 'dispatch@foidslop.com', 'GitHub Actions', 'manually removed']) {
@@ -188,6 +216,17 @@ for (const file of recipeFiles) {
     for (const node of Array.isArray(parsed) ? parsed : [parsed]) {
       if (!node || node['@type'] !== 'Recipe') continue;
       sawRecipeSchema = true;
+      const keywordValues = Array.isArray(node.keywords)
+        ? node.keywords
+        : String(node.keywords || '').split(',').map(value => value.trim()).filter(Boolean);
+      const category = String(node.recipeCategory || '').trim().toLowerCase();
+      const cuisine = String(node.recipeCuisine || '').trim().toLowerCase();
+      if (keywordValues.some(value => [category, cuisine].includes(String(value).trim().toLowerCase()))) {
+        errors.push(`${file}: Recipe keywords duplicate recipeCategory or recipeCuisine`);
+      }
+      if (node.datePublished && node.dateModified && node.dateModified < node.datePublished) {
+        errors.push(`${file}: dateModified precedes datePublished`);
+      }
       const expected = ratingsCache ? ratings.aggregateRatingSchema(`https://foidslop.com/slop/${slug}`, ratingsCache[slug]) : null;
       if (node.aggregateRating && !expected) errors.push(`${file}: aggregateRating present without enough cached votes`);
       if (expected && JSON.stringify(node.aggregateRating) !== JSON.stringify(expected)) {
@@ -219,6 +258,20 @@ if (latestPublished && homepageRandomPool.includes(latestPublished.slug)) errors
 const configuredArchivePick = primaryData.meals.find(meal => meal.slug === homepageConfig.archivePickSlug);
 if (!configuredArchivePick) errors.push(`homepage config: unknown archive pick ${homepageConfig.archivePickSlug}`);
 else if (configuredArchivePick.status !== 'published') errors.push(`homepage config: archive pick is not published (${homepageConfig.archivePickSlug})`);
+const publishedMeals = primaryData.meals.filter(meal => meal.status === 'published');
+for (const field of ['headnote', 'storage', 'substitutions', 'seoDescription']) {
+  const seen = new Map();
+  for (const meal of publishedMeals) {
+    if (!meal[field]) continue;
+    if (!seen.has(meal[field])) seen.set(meal[field], []);
+    seen.get(meal[field]).push(meal.slug);
+  }
+  const duplicateGroups = [...seen.values()].filter(slugs => slugs.length > 1);
+  if (duplicateGroups.length) errors.push(`published recipe ${field} copy is duplicated: ${duplicateGroups.slice(0, 3).map(slugs => slugs.join(', ')).join('; ')}`);
+}
+if (publishedMeals.some(meal => /clear single-serving recipe ready in|complete ingredient list, clear method, and a total time of/i.test(meal.seoDescription || ''))) {
+  errors.push('published recipe SEO descriptions still use generic template endings');
+}
 const databases = [{ name: 'primary database', data: primaryData }];
 const ids = new Set();
 const slugs = new Set();
@@ -249,6 +302,10 @@ for (const { name: databaseName, data } of databases) {
     if (/—/.test(JSON.stringify(meal))) errors.push(`${meal.slug}: em dash in recipe data`);
     if (/high protein|protein packed|protein rich|pre or post workout|low carb alternative|much healthier/i.test(JSON.stringify(meal))) errors.push(`${meal.slug}: unsupported health or workout language`);
     if ((meal.seoTitle || '').length > 64 || (meal.seoDescription || '').length > 160) errors.push(`${meal.slug}: oversized search title or description`);
+    if (!isIsoDate(meal.publishDate)) errors.push(`${meal.slug}: invalid publication date`);
+    if (meal.dateModified && !isIsoDate(meal.dateModified)) errors.push(`${meal.slug}: invalid modification date`);
+    if (meal.dateModified && isIsoDate(meal.dateModified) && meal.dateModified < meal.publishDate) errors.push(`${meal.slug}: modification date precedes publication date`);
+    if (meal.status === 'published' && meal.dateModified && meal.dateModified > VALIDATION_TODAY) errors.push(`${meal.slug}: modification date is in the future`);
   }
 }
 
@@ -398,6 +455,11 @@ if (!fs.existsSync(path.join(ROOT, '_headers'))) {
     if (!headers.includes(required)) errors.push(`_headers: missing ${required} rule`);
   }
 }
+const unversionedGlobalCss = htmlFiles.filter(file => {
+  const html = fs.readFileSync(file, 'utf8');
+  return /href="[^"]*css\/global\.css"/.test(html);
+});
+if (unversionedGlobalCss.length) errors.push(`global.css must be versioned under immutable caching: ${unversionedGlobalCss.slice(0, 5).map(file => path.relative(ROOT, file)).join(', ')}`);
 const forOne = fs.readFileSync(path.join(ROOT, 'recipes', 'for-one.html'), 'utf8');
 const expectedForOneTitle = `<title>${recipeFiles.length}+ Easy Dinner Ideas for One</title>`;
 if (!forOne.includes('<h1>Easy Dinner Ideas for One</h1>') || !forOne.includes(expectedForOneTitle)) {
@@ -421,6 +483,7 @@ for (const file of recipeFiles.slice(0, 3)) {
     const html = fs.readFileSync(path.join(archiveDir, `page-${n}.html`), 'utf8');
     if ((html.match(/class="archive-card"/g) || []).length === 0) errors.push(`slop/archive/page-${n}.html: no server-rendered cards`);
     if (!html.includes(`rel="canonical" href="${BASE}/slop/archive/page-${n}"`)) errors.push(`slop/archive/page-${n}.html: canonical mismatch`);
+    if (!archive.includes(`href="./archive/page-${n}"`)) errors.push(`slop/archive.html: pagination link for page ${n} does not resolve under /slop/archive/`);
   }
   if (locations.some(location => location.includes('/slop/archive/page-'))) errors.push('sitemap.xml: pagination pages must stay out of the sitemap');
   for (const n of onDisk) {

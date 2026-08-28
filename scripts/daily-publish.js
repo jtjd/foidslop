@@ -22,6 +22,9 @@ const BASE_URL = 'https://foidslop.com';
 const PINTEREST_URL = 'https://www.pinterest.com/foidslop/';
 const SAME_AS = [PINTEREST_URL];
 const TZ = 'America/New_York';
+const GLOBAL_CSS_VERSION = '20260827-1';
+const ARCHIVE_CSS_VERSION = '20260827-2';
+const CONTENT_CSS_VERSION = '20260827-1';
 
 function esc(value) {
   return String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;')
@@ -29,6 +32,11 @@ function esc(value) {
 }
 function xml(value) { return esc(value); }
 function isoDate(date) { return date.toISOString().slice(0, 10); }
+function isIsoDate(value) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(value || ''))) return false;
+  const parsed = new Date(`${value}T00:00:00Z`);
+  return !Number.isNaN(parsed.getTime()) && isoDate(parsed) === value;
+}
 function prettyDate(date) {
   return new Intl.DateTimeFormat('en-US', { timeZone: 'UTC', year: 'numeric', month: 'long', day: 'numeric' }).format(date);
 }
@@ -51,6 +59,15 @@ function imageUrl(meal) { return `${BASE_URL}/slop/img/${imageFile(meal)}`; }
 function socialImageUrl(meal) { return `${BASE_URL}/slop/social/${meal.slug}-wide.jpg`; }
 function pinterestImageUrl(meal) { return `${BASE_URL}/slop/social/${meal.slug}-pin.jpg`; }
 function schemaImages(meal) { return [imageUrl(meal), `${BASE_URL}/slop/img/${meal.slug}-4x3.jpg`, `${BASE_URL}/slop/img/${meal.slug}-16x9.jpg`]; }
+function effectiveDateModified(meal) {
+  const publicationDate = isoDate(releaseDate(meal));
+  const storedDate = isIsoDate(meal.dateModified) ? meal.dateModified : publicationDate;
+  return storedDate < publicationDate ? publicationDate : storedDate;
+}
+function recipeKeywords(meal) {
+  const excluded = new Set([meal.category, meal.cuisine].filter(Boolean).map(value => String(value).trim().toLowerCase()));
+  return [...new Set((meal.tags || []).filter(tag => !excluded.has(String(tag).trim().toLowerCase())))];
+}
 function titleLines(name) {
   const words = name.toUpperCase().split(/\s+/);
   const midpoint = Math.ceil(words.length / 2);
@@ -187,7 +204,21 @@ if (!published.length) throw new Error(`No meals are published by ${today}`);
 const current = published[published.length - 1];
 
 for (const meal of meals) {
-  if (meal.status !== 'retired') meal.status = isoDate(releaseDate(meal)) <= today ? 'published' : 'scheduled';
+  const wasPublished = meal.status === 'published';
+  if (meal.status === 'retired') continue;
+  const release = isoDate(releaseDate(meal));
+  meal.status = release <= today ? 'published' : 'scheduled';
+  if (meal.status === 'published') {
+    // A newly activated recipe must carry today's build date so its first
+    // sitemap publication is eligible for IndexNow, while existing recipes
+    // retain their honest content revision date.
+    if (!wasPublished || !isIsoDate(meal.dateModified)) meal.dateModified = today;
+    else meal.dateModified = effectiveDateModified(meal);
+  } else {
+    // A scheduled recipe has no public revision yet. Keeping a pre-publication
+    // dateModified creates invalid Recipe metadata and stale sitemap lastmod.
+    delete meal.dateModified;
+  }
 }
 db.meals = meals;
 db.count = meals.length;
@@ -207,6 +238,21 @@ function validate() {
     if (meal.steps.some(step => !step.name || !step.text || step.text.length < 55)) errors.push(`Thin recipe step: ${meal.slug}`);
     if (/\u2014/.test(JSON.stringify(meal))) errors.push(`Em dash in recipe content: ${meal.slug}`);
     if (releaseDate(meal).toString() === 'Invalid Date') errors.push(`Invalid release date: ${meal.slug}`);
+    if (meal.dateModified && !isIsoDate(meal.dateModified)) errors.push(`Invalid modification date: ${meal.slug}`);
+    if (meal.dateModified && meal.dateModified < isoDate(releaseDate(meal))) errors.push(`Modification date precedes publication: ${meal.slug}`);
+    if (meal.status === 'published' && meal.dateModified > today) errors.push(`Modification date is in the future: ${meal.slug}`);
+  }
+  for (const field of ['headnote', 'storage', 'substitutions', 'seoDescription']) {
+    const seen = new Map();
+    for (const meal of meals.filter(item => item.status !== 'retired')) {
+      if (!seen.has(meal[field])) seen.set(meal[field], []);
+      seen.get(meal[field]).push(meal.slug);
+    }
+    const duplicates = [...seen.values()].filter(slugs => slugs.length > 1);
+    if (duplicates.length) errors.push(`Repeated discovery copy in ${field}: ${duplicates.slice(0, 3).map(slugs => slugs.join(', ')).join('; ')}`);
+  }
+  if (meals.some(meal => /clear single-serving recipe ready in|complete ingredient list, clear method, and a total time of/i.test(meal.seoDescription || ''))) {
+    errors.push('Recipe SEO descriptions still use a generic template ending');
   }
   for (const meal of published) {
     const image = path.join(SLOP_DIR, 'img', imageFile(meal));
@@ -265,7 +311,7 @@ function commonHead({ title, description, canonical, image = `${BASE_URL}/og-ima
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="p:domain_verify" content="7bdfbfde1745ec62bc759913fcc45642">
-<link rel="icon" type="image/png" sizes="512x512" href="/brand-icon.png">
+<link rel="icon" type="image/webp" sizes="512x512" href="/brand-icon.webp">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="${root}site.webmanifest">
 <title>${esc(title)}</title>
@@ -288,14 +334,14 @@ function commonHead({ title, description, canonical, image = `${BASE_URL}/og-ima
 <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-var.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/bebas-neue-400.woff2" crossorigin>
 <link rel="stylesheet" href="${root}css/fonts.css?v=20260826-1">
-<link rel="stylesheet" href="${root}css/global.css">
+<link rel="stylesheet" href="${root}css/global.css?v=${GLOBAL_CSS_VERSION}">
 <script src="${root}theme.js?v=20260713-5"></script>`;
 }
 
 function header(root = '', active = '') {
   const homeUrl = root || '/';
   return `<header class="site-header" id="site-header">
-  <a href="${homeUrl}" aria-label="foidslop home"><picture><source type="image/webp" srcset="${root}logo.webp"><img src="${root}logo.png" alt="FOID SLOP" class="logo" width="126" height="74"></picture></a>
+  <a href="${homeUrl}" aria-label="foidslop home"><picture><source type="image/webp" srcset="${root}logo-header.webp"><img src="${root}logo-header.png" alt="FOID SLOP" class="logo" width="126" height="74"></picture></a>
   <div class="site-header-center">Daily recipes / made for one / Issue ${String(current.id).padStart(3, '0')}</div>
   <div class="header-right">
     <button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="true"><span class="theme-toggle-mark" aria-hidden="true">*</span><span class="theme-toggle-label">Light mode</span></button>
@@ -380,8 +426,8 @@ function renderRecipe(meal, index) {
   const schema = {
     '@context': 'https://schema.org', '@type': 'Recipe', '@id': `${recipeUrl(meal)}#recipe`,
     mainEntityOfPage: recipeUrl(meal), name: meal.name, description: meal.description,
-    image: schemaImages(meal), author: { '@type': 'Organization', name: 'foidslop', url: BASE_URL, logo: `${BASE_URL}/brand-icon.png`, sameAs: SAME_AS },
-    datePublished: isoDate(date), dateModified: meal.dateModified || isoDate(date), keywords: meal.tags.join(', '), recipeCategory: meal.category,
+    image: schemaImages(meal), author: { '@type': 'Organization', name: 'foidslop', url: BASE_URL, logo: `${BASE_URL}/brand-icon.webp`, sameAs: SAME_AS },
+    datePublished: isoDate(date), dateModified: effectiveDateModified(meal), ...(recipeKeywords(meal).length ? { keywords: recipeKeywords(meal).join(', ') } : {}), recipeCategory: meal.category,
     recipeCuisine: meal.cuisine, prepTime: duration(meal.prep), cookTime: duration(meal.cook),
     totalTime: `PT${total}M`, recipeYield: meal.serves,
     recipeIngredient: meal.ingredients.map(item => `${item.amount} ${item.name}`),
@@ -405,7 +451,7 @@ function renderRecipe(meal, index) {
     canonical: recipeUrl(meal), image: fs.existsSync(path.join(SLOP_DIR, 'social', `${meal.slug}-wide.jpg`)) ? socialImageUrl(meal) : imageUrl(meal), type: 'article', root: '../'
   })}
 <script type="application/ld+json">${jsonLd([schema, breadcrumb])}</script>
-<link rel="stylesheet" href="../css/slop-page.css?v=20260826-1"><link rel="stylesheet" href="../css/theme.css?v=20260713-4"></head><body>
+<link rel="stylesheet" href="../css/slop-page.css?v=20260827-1"><link rel="stylesheet" href="../css/theme.css?v=20260713-4"></head><body>
 <a href="#main" class="sr-only focusable">Skip to content</a>${header('../', meal.slug === current.slug ? 'today' : '')}
 <div class="slop-header"><p class="slop-eyebrow">Slop of the Day / ${prettyDate(date)}</p><h1 class="slop-title">${titleLines(meal.name)}</h1>
 <div class="slop-meta"><span class="slop-date">Published ${prettyDate(date)}</span><div class="slop-tags">${meal.tags.map(tag => `<span class="slop-tag">${esc(tag)}</span>`).join('')}</div></div></div>
@@ -521,7 +567,7 @@ function renderHomepage() {
   const description = 'One approachable recipe made for one every day, plus a searchable archive and a weekly dispatch from foidslop.';
   const schema = [
     { '@context': 'https://schema.org', '@type': 'WebSite', name: 'foidslop', url: BASE_URL, description },
-    { '@context': 'https://schema.org', '@type': 'Organization', name: 'foidslop', url: BASE_URL, logo: `${BASE_URL}/brand-icon.png`, sameAs: SAME_AS },
+    { '@context': 'https://schema.org', '@type': 'Organization', name: 'foidslop', url: BASE_URL, logo: `${BASE_URL}/brand-icon.webp`, sameAs: SAME_AS },
     { '@context': 'https://schema.org', '@type': 'ItemList', name: 'Latest foidslop recipes', url: `${BASE_URL}/slop/archive`, itemListElement: recipeSchema }
   ];
   const total = totalMinutes(current);
@@ -605,10 +651,10 @@ function renderArchivePage(pageNumber, chunkMeals, totalPages) {
   };
   const prevHref = pageNumber === 2 ? '../archive' : `./page-${pageNumber - 1}`;
   const nextHref = pageNumber < totalPages ? `./page-${pageNumber + 1}` : null;
-  const pager = `<nav class="hub-links" aria-label="Archive pages"><a href="../archive">Search view</a><a href="${prevHref}"${pageNumber === 2 ? '' : ''}>Previous page</a>${nextHref ? `<a href="${nextHref}">Next page</a>` : ''}</nav>`;
+  const pager = `<nav class="archive-pagination" aria-label="Archive pages"><a href="../archive">Search view</a><a href="${prevHref}">Previous page</a>${nextHref ? `<a href="${nextHref}">Next page</a>` : ''}</nav>`;
   return `<!DOCTYPE html><html lang="en"><head>${commonHead({ title, description, canonical, root: '../../', image: socialOrHeroImage(chunkMeals[0]) })}
 <script type="application/ld+json">${jsonLd(schema)}</script>
-<link rel="stylesheet" href="../../css/slop-archive.css?v=20260826-2"><link rel="stylesheet" href="../../css/theme.css?v=20260826-1"></head><body>
+<link rel="stylesheet" href="../../css/slop-archive.css?v=20260827-1"><link rel="stylesheet" href="../../css/theme.css?v=20260826-1"></head><body>
 <a href="#main" class="sr-only focusable">Skip to content</a>${header('../../', 'archive')}
 <main id="main" class="archive-page-static"><div class="archive-intro"><p class="archive-label">The older issues</p><h2>Every slop, page by page</h2><p>Issues published ${oldest} through ${newest}. Each card opens a complete single-serving recipe. For search and filters across all ${published.length - 1} past recipes, use the <a href="../archive">searchable archive</a>.</p></div>
 <section class="archive-grid">${chunkMeals.map((meal, index) => archiveCard(meal, index < 2, '../')).join('\n')}</section>
@@ -627,11 +673,12 @@ function updateArchive() {
   const totalPages = extraChunks.length + 1;
   archivePageFiles = extraChunks.map((chunk, index) => index + 2);
   const pagerNav = archivePageFiles.length
-    ? `<nav class="hub-links" aria-label="Older archive pages"><span class="archive-pages-label">Older issues, page by page:</span>${archivePageFiles.map(n => `<a href="./page-${n}">Page ${n}</a>`).join('')}</nav>`
+    ? `<nav class="archive-pagination" aria-label="Older archive pages"><span class="archive-pages-label">Older issues, page by page:</span>${archivePageFiles.map(n => `<a href="./archive/page-${n}">Page ${n}</a>`).join('')}</nav>`
     : '';
   const archiveSchema = { '@context': 'https://schema.org', '@type': 'ItemList', name: 'foidslop Recipe Archive', itemListElement: published.slice().reverse().map((meal, index) => ({ '@type': 'ListItem', position: index + 1, url: recipeUrl(meal), name: meal.name })) };
   html = html.replace(/(?:<\/nav><\/div>)+(?=<div class="archive-intro">)/g, '')
     .replace(/<div class="archive-intro">[\s\S]*?(?=<div class="archive-header">)/g, '')
+    .replace(/<nav class="archive-pagination"[\s\S]*?<\/nav>\s*/g, '')
     .replace(/<title>[\s\S]*?<\/title>/, '<title>Search Every Recipe for One: The foidslop Archive</title>')
     .replace(/<meta name="description" content="[^"]+">/, '<meta name="description" content="Search every published foidslop recipe by name, ingredient, cuisine, or craving. Clear single-serving recipes with new ideas added daily.">')
     .replace(/<meta property="og:title" content="[^"]+">/, '<meta property="og:title" content="The foidslop Recipe Archive for One">')
@@ -641,8 +688,8 @@ function updateArchive() {
     .replace(/<link rel="canonical" href="[^"]+">/, `<link rel="canonical" href="${BASE_URL}/slop/archive">`)
     .replace(/[ \t]*<link rel="stylesheet" href="\.\.\/css\/theme\.css(?:\?[^\"]*)?">\r?\n?/g, '')
     .replace(/[ \t]*<script src="\.\.\/theme\.js(?:\?[^\"]*)?"><\/script>\r?\n?/g, '')
-    .replace('<link rel="stylesheet" href="../css/global.css">', '<link rel="stylesheet" href="../css/global.css">\n<script src="../theme.js?v=20260713-5"></script>')
-    .replace('<link rel="stylesheet" href="../css/slop-archive.css?v=20260826-2">', '<link rel="stylesheet" href="../css/slop-archive.css?v=20260826-2">\n<link rel="stylesheet" href="../css/theme.css?v=20260713-4">')
+    .replace(/<link rel="stylesheet" href="\.\.\/css\/global\.css(?:\?v=[^"]*)?">/, `<link rel="stylesheet" href="../css/global.css?v=${GLOBAL_CSS_VERSION}">\n<script src="../theme.js?v=20260713-5"></script>`)
+    .replace(/<link rel="stylesheet" href="\.\.\/css\/slop-archive\.css(?:\?v=[^"]*)?">/, `<link rel="stylesheet" href="../css/slop-archive.css?v=${ARCHIVE_CSS_VERSION}">\n<link rel="stylesheet" href="../css/theme.css?v=20260713-4">`)
     .replace(/<button class="theme-toggle(?: nav-dropdown-link)?"[\s\S]*?<\/button>/g, '')
     .replace(/href="\.\.\/index"/g, 'href="../"')
     .replace(/<header class="site-header"[\s\S]*?<\/header>/, header('../', 'archive'))
@@ -653,7 +700,7 @@ function updateArchive() {
     .replace(/class="featured-slop(?: reveal)?"/, 'class="featured-slop"')
     .replace(/class="featured-image(?: reveal-clip)?"/, 'class="featured-image"')
     .replace(/(class="featured-slop" aria-label=")[^"]+/, `$1Read today's slop: ${esc(current.name)}`)
-    .replace(/(class="featured-image">\s*<img src="img\/)[^"]+(" alt=")[^"]+/, `$1${imageFile(current)}$2${esc(current.imageAlt || current.name)}`)
+    .replace(/(<div class="featured-image">)\s*(?:<picture>[\s\S]*?<\/picture>|<img[^>]*>)\s*(<span class="featured-badge")/, `$1\n      <picture><source type="image/webp" srcset="img/${current.slug}-480.webp 480w, img/${current.slug}-768.webp 768w" sizes="(max-width: 1024px) 100vw, 50vw"><img src="img/${imageFile(current)}" alt="${esc(current.imageAlt || current.name)}" width="768" height="768" loading="eager" fetchpriority="high" decoding="async"></picture>\n      $2`)
     .replace(/(<p class="featured-eyebrow">)[^<]+/, `$1${prettyDate(releaseDate(current))}`)
     .replace(/(<h2 class="featured-title">)[\s\S]*?(<\/h2>)/, `$1${titleLines(current.name)}$2`)
     .replace(/(<p class="featured-desc">)[^<]+/, `$1${esc(current.description)}`)
@@ -661,7 +708,7 @@ function updateArchive() {
     .replace(/(<p class="featured-date">Published )[^<]+/, `$1${prettyDate(releaseDate(current))}`)
     .replace(/<div class="archive-header">[\s\S]*?<section class="archive-grid"/, `${archiveControls(past.length)}\n  <section class="archive-grid"`)
     .replace(/(<a href="https:\/\/shop\.foidslop\.com\/"[^>]*class="header-cta">)/, '<button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="true"><span class="theme-toggle-mark" aria-hidden="true">*</span><span class="theme-toggle-label">Light mode</span></button>$1')
-    .replace(/(<section class="archive-grid"[^>]*>)[\s\S]*?(<\/section>)/, `$1\n${past.slice(0, ARCHIVE_CHUNK).map((meal, index) => archiveCard(meal, index < 2)).join('\n')}\n${pagerNav}\n$2`)
+    .replace(/(<section class="archive-grid"[^>]*>)[\s\S]*?(<\/section>)/, `$1\n${past.slice(0, ARCHIVE_CHUNK).map((meal, index) => archiveCard(meal, index < 2)).join('\n')}\n$2\n${pagerNav}`)
     .replace('id="archive-load-more" style="display: none;"', 'id="archive-load-more"')
     .replace(/<div class="archive-load-more" id="archive-load-more"(?: hidden)?>/, '<div class="archive-load-more" id="archive-load-more" hidden>')
     .replace(/<div class="archive-empty" id="archive-empty"(?: hidden)?>/, '<div class="archive-empty" id="archive-empty" hidden>')
@@ -692,7 +739,7 @@ function updateArchive() {
   // repeated publishes never stack manifests or loader scripts.
   html = html.replace(/<script id="archive-manifest"[\s\S]*?<\/script>\n?/g, '');
   html = html.replace(/<script src="\.\.\/archive\.js(?:\?v=[^"]*)?"><\/script>\n?/g, '');
-  html = html.replace('</body>', `${manifestTag}\n<script src="../archive.js?v=20260826-1"></script>\n</body>`);
+  html = html.replace('</body>', `${manifestTag}\n<script src="../archive.js?v=20260827-1"></script>\n</body>`);
   fs.writeFileSync(file, html);
   // Static pagination: fresh directory every run so stale pages never linger.
   fs.rmSync(path.join(SLOP_DIR, 'archive'), { recursive: true, force: true });
@@ -882,8 +929,8 @@ function buildEditorialPages() {
 }
 
 function renderEditorialPages() {
-  const definitionSchema = { '@context': 'https://schema.org', '@type': 'Article', headline: 'What Is Foidslop?', description: 'The meaning and origin of foidslop, its relationship to girl dinner, and why this site reclaims the term.', author: { '@type': 'Organization', name: 'foidslop', url: BASE_URL, logo: `${BASE_URL}/brand-icon.png`, sameAs: SAME_AS }, mainEntityOfPage: `${BASE_URL}/what-is-foidslop` };
-  fs.writeFileSync(path.join(ROOT, 'what-is-foidslop.html'), `<!DOCTYPE html><html lang="en"><head>${commonHead({ title: 'What Is Foidslop? Meaning, Origin & Girl Dinner', description: 'What does foidslop mean? Learn the slang term’s origin, its connection to girl dinner, and how foidslop reclaims it through daily recipes.', canonical: `${BASE_URL}/what-is-foidslop` })}<script type="application/ld+json">${jsonLd(definitionSchema)}</script><link rel="stylesheet" href="css/content.css"><link rel="stylesheet" href="css/theme.css?v=20260713-4"></head><body>${header('', 'meaning')}<main class="article-page"><p class="content-eyebrow">Internet slang, reclaimed</p><h1>What is foidslop?</h1><p class="article-deck">Foidslop is internet slang for the low-effort, aesthetically specific meals often associated with “girl dinner”: toast, snack plates, smoothies, cottage-cheese bowls, tinned fish, and whatever else counts as feeding yourself without staging a production.</p><h2>The honest origin</h2><p>The word is built from “foid,” a derogatory term for women that emerged from misogynistic online communities, and “slop.” That origin is dehumanizing. This site does not endorse it or pretend it is harmless.</p><h2>Why reclaim it?</h2><p>foidslop takes the insult and points it somewhere more useful: toward the small, improvised meals people make for themselves. The food does not need to be nutritionally perfect, traditionally plated, or labor intensive to deserve care.</p><h2>How is it related to girl dinner?</h2><p>Girl dinner became a name for assembling snacks, bread, cheese, fruit, pickles, tinned fish, or leftovers into a meal for one. Foidslop is the sharper and more internet-poisoned cousin of that idea. Here it becomes a daily recipe format: one approachable meal, with actual ingredients and instructions.</p><h2>Examples of foidslop</h2><ul><li>Avocado or ricotta toast</li><li>Cheese, fruit, bread, and pickles</li><li>Upgraded instant noodles</li><li>Cottage-cheese and yogurt bowls</li><li>Tinned-fish and mezze plates</li></ul><p class="article-cta"><a href="girl-dinner-ideas">Browse girl dinner ideas</a> or <a href="slop/archive">see the full recipe archive</a>.</p></main>${footer('')}${siteScript}</body></html>`);
+  const definitionSchema = { '@context': 'https://schema.org', '@type': 'Article', headline: 'What Is Foidslop?', description: 'The meaning and origin of foidslop, its relationship to girl dinner, and why this site reclaims the term.', author: { '@type': 'Organization', name: 'foidslop', url: BASE_URL, logo: `${BASE_URL}/brand-icon.webp`, sameAs: SAME_AS }, mainEntityOfPage: `${BASE_URL}/what-is-foidslop` };
+  fs.writeFileSync(path.join(ROOT, 'what-is-foidslop.html'), `<!DOCTYPE html><html lang="en"><head>${commonHead({ title: 'What Is Foidslop? Meaning, Origin & Girl Dinner', description: 'What does foidslop mean? Learn the slang term’s origin, its connection to girl dinner, and how foidslop reclaims it through daily recipes.', canonical: `${BASE_URL}/what-is-foidslop` })}<script type="application/ld+json">${jsonLd(definitionSchema)}</script><link rel="stylesheet" href="css/content.css?v=${CONTENT_CSS_VERSION}"><link rel="stylesheet" href="css/theme.css?v=20260713-4"></head><body>${header('', 'meaning')}<main class="article-page"><p class="content-eyebrow">Internet slang, reclaimed</p><h1>What is foidslop?</h1><p class="article-deck">Foidslop is internet slang for the low-effort, aesthetically specific meals often associated with “girl dinner”: toast, snack plates, smoothies, cottage-cheese bowls, tinned fish, and whatever else counts as feeding yourself without staging a production.</p><h2>The honest origin</h2><p>The word is built from “foid,” a derogatory term for women that emerged from misogynistic online communities, and “slop.” That origin is dehumanizing. This site does not endorse it or pretend it is harmless.</p><h2>Why reclaim it?</h2><p>foidslop takes the insult and points it somewhere more useful: toward the small, improvised meals people make for themselves. The food does not need to be nutritionally perfect, traditionally plated, or labor intensive to deserve care.</p><h2>How is it related to girl dinner?</h2><p>Girl dinner became a name for assembling snacks, bread, cheese, fruit, pickles, tinned fish, or leftovers into a meal for one. Foidslop is the sharper and more internet-poisoned cousin of that idea. Here it becomes a daily recipe format: one approachable meal, with actual ingredients and instructions.</p><h2>Examples of foidslop</h2><ul><li>Avocado or ricotta toast</li><li>Cheese, fruit, bread, and pickles</li><li>Upgraded instant noodles</li><li>Cottage-cheese and yogurt bowls</li><li>Tinned-fish and mezze plates</li></ul><p class="article-cta"><a href="girl-dinner-ideas">Browse girl dinner ideas</a> or <a href="slop/archive">see the full recipe archive</a>.</p></main>${footer('')}${siteScript}</body></html>`);
   fs.writeFileSync(path.join(ROOT, 'editorial-standards.html'), `<!DOCTYPE html><html lang="en"><head>${commonHead({ title: 'How foidslop Recipes Get Made', description: 'How foidslop writes clear single-serving recipes, handles measurements, and keeps its recipe archive useful.', canonical: `${BASE_URL}/editorial-standards` })}<link rel="stylesheet" href="css/content.css?v=20260715-1"><link rel="stylesheet" href="css/theme.css?v=20260713-4"></head><body>${header('')}<main class="article-page"><p class="content-eyebrow">Behind the slop</p><h1>How foidslop gets made</h1><p class="article-deck">One recipe goes up every day. The aim is simple: give one person a clear, appealing way to feed themselves without turning dinner into a project.</p><h2>What counts as a recipe here?</h2><p>Sometimes it is pasta with a real method. Sometimes it is excellent things arranged on toast. Both count. A useful recipe tells you what to buy, how much to use, what order to do things in, and how to recognize when the food is ready.</p><h2>Written for one from the start</h2><p>These are not family recipes divided until the numbers look small. Quantities, cookware, timing, and yield are written around a single serving. Appetite varies, of course, so bread, greens, fruit, or an egg can round out a lighter plate.</p><h2>Measurements that make sense</h2><p>US measurements come first. Weight is included when it makes the result more accurate, especially for pasta, cheese, and other ingredients that are awkward to measure by volume. Oven temperatures appear in Fahrenheit followed by Celsius.</p><h2>Clear methods, not busywork</h2><p>Steps follow the real stages of the recipe. Browning, simmering, assembling, and finishing stay separate when that makes the method easier to follow. Timing and visual cues are included where they matter. A genuine assembly recipe can still have one step if splitting it would only create extra scrolling.</p><h2>Flexible where it helps</h2><p>These recipes are meant to bend. A different cheese, another pasta shape, or the herb already in your refrigerator can often work. The notes call out the details that matter most, such as drying chickpeas before roasting or saving pasta water before draining.</p><h2>Food safety stays plain</h2><p>Recipes that cook meat, fish, or eggs include a clear doneness cue where one is needed. Keep raw ingredients separate, refrigerate leftovers promptly, and reheat them until hot throughout.</p><h2>Useful updates</h2><p>The archive is maintained as a working collection. If an ingredient, measurement, or instruction needs a meaningful fix, the recipe itself is updated while its original publication date stays in place.</p><p class="article-cta"><a href="slop/archive">Browse the recipe archive</a> <a href="what-is-foidslop">Why the name foidslop?</a></p></main>${footer('')}${siteScript}</body></html>`);
 
   const foidArticleDate = '2026-07-13';
@@ -892,10 +939,10 @@ function renderEditorialPages() {
     '@context': 'https://schema.org', '@type': 'Article', headline: 'What Does Foid Mean? Slang Definition and Origin',
     description: foidArticleDescription, image: `${BASE_URL}/og-image.png`, datePublished: foidArticleDate, dateModified: foidArticleDate,
     author: { '@type': 'Organization', name: 'foidslop', url: BASE_URL, sameAs: SAME_AS },
-    publisher: { '@type': 'Organization', name: 'foidslop', url: BASE_URL, sameAs: SAME_AS, logo: { '@type': 'ImageObject', url: `${BASE_URL}/brand-icon.png` } },
+    publisher: { '@type': 'Organization', name: 'foidslop', url: BASE_URL, sameAs: SAME_AS, logo: { '@type': 'ImageObject', url: `${BASE_URL}/brand-icon.webp` } },
     mainEntityOfPage: `${BASE_URL}/what-does-foid-mean`, about: ['foid', 'femoid', 'incel slang', 'internet slang']
   };
-  fs.writeFileSync(path.join(ROOT, 'what-does-foid-mean.html'), `<!DOCTYPE html><html lang="en"><head>${commonHead({ title: 'What Does Foid Mean? Slang Definition & Origin', description: foidArticleDescription, canonical: `${BASE_URL}/what-does-foid-mean`, type: 'article' })}<meta property="article:published_time" content="${foidArticleDate}"><meta property="article:modified_time" content="${foidArticleDate}"><script type="application/ld+json">${jsonLd(foidArticleSchema)}</script><link rel="stylesheet" href="css/content.css"><link rel="stylesheet" href="css/theme.css?v=20260713-4"></head><body>${header('', 'meaning')}<main id="main" class="article-page"><p class="content-eyebrow">Internet slang, explained</p><h1>What does “foid” mean?</h1><p class="article-deck"><strong>The short answer:</strong> “Foid” is derogatory internet slang for a woman. It comes from “femoid” and is associated with incel communities that use the word to make women sound less than human.</p><p class="article-meta">Published July 13, 2026 · foidslop editorial</p><aside class="article-callout"><span>In plain English</span><p>It is not a neutral synonym for “woman.” It is an insult with a deliberately dehumanizing origin.</p></aside><h2>Where does the word “foid” come from?</h2><p>“Foid” is a shortened form of “femoid.” The longer word combines “female” with “humanoid” or “android,” framing women as a separate, mechanical kind of being rather than as people. The <a href="https://www.adl.org/resources/backgrounder/incels-involuntary-celibates" rel="external">Anti-Defamation League’s guide to incel terminology</a> describes it as a derogatory term used to reduce women to a subhuman group.</p><p>The word developed inside online incel culture. “Incel” is short for “involuntary celibate,” but the communities associated with that label have built a much larger ideology around resentment, sexual entitlement, and hostility toward women. In that vocabulary, “foid” does more than identify gender: it signals the speaker’s contempt.</p><h2>Is “foid” a slur?</h2><p>People differ over which offensive words receive the formal label “slur,” but the practical answer is straightforward: “foid” functions as a misogynistic and dehumanizing insult. It is normally used to talk about women as a category, not to describe a specific behavior or idea.</p><p>That context matters when the term appears in a joke, username, meme, or unfamiliar piece of internet language. Someone can repeat a word without knowing its history, but the history does not disappear. Using it casually can still reproduce the contempt built into it.</p><h2>What is the difference between “foid” and “femoid”?</h2><p>There is no meaningful difference in intent. “Foid” is simply the clipped form of “femoid.” Both words belong to the same vocabulary and carry the same dehumanizing idea. “Moid,” a later parallel term aimed at men, does not make the original word neutral.</p><h2>Then why is this site called foidslop?</h2><p><a href="what-is-foidslop">foidslop takes the insult apart and redirects it</a>. Here, the name refers to the small, improvised meals people make for themselves: toast, pasta, snack plates, bowls, tinned fish, and other food that can be dismissed as unserious or insufficiently domestic.</p><p>The publication does not pretend the first half of its name is harmless. The point is reclamation: take a term meant to diminish women, attach it to the ordinary work of feeding yourself, and turn the result into something useful. On foidslop, that means one approachable recipe for one person every day.</p><h2>Sources and further reading</h2><ul class="article-sources"><li><a href="https://www.adl.org/resources/backgrounder/incels-involuntary-celibates" rel="external">Anti-Defamation League: Incels (Involuntary Celibates)</a></li><li><a href="https://www.adl.org/resources/article/online-poll-results-provide-new-insights-incel-community" rel="external">Anti-Defamation League: Online Poll Results Provide New Insights into Incel Community</a></li><li><a href="https://www.icct.nl/sites/default/files/2023-01/Special-Edition-Volume-2.pdf" rel="external">International Centre for Counter-Terrorism: Incel Radical Milieu and External Locus of Control</a></li></ul><p class="article-cta"><a href="what-is-foidslop">What is foidslop?</a><a href="girl-dinner-ideas">Browse girl dinner ideas</a><a href="slop/archive">Open the recipe archive</a></p></main>${footer('')}${siteScript}</body></html>`);
+  fs.writeFileSync(path.join(ROOT, 'what-does-foid-mean.html'), `<!DOCTYPE html><html lang="en"><head>${commonHead({ title: 'What Does Foid Mean? Slang Definition & Origin', description: foidArticleDescription, canonical: `${BASE_URL}/what-does-foid-mean`, type: 'article' })}<meta property="article:published_time" content="${foidArticleDate}"><meta property="article:modified_time" content="${foidArticleDate}"><script type="application/ld+json">${jsonLd(foidArticleSchema)}</script><link rel="stylesheet" href="css/content.css?v=${CONTENT_CSS_VERSION}"><link rel="stylesheet" href="css/theme.css?v=20260713-4"></head><body>${header('', 'meaning')}<main id="main" class="article-page"><p class="content-eyebrow">Internet slang, explained</p><h1>What does “foid” mean?</h1><p class="article-deck"><strong>The short answer:</strong> “Foid” is derogatory internet slang for a woman. It comes from “femoid” and is associated with incel communities that use the word to make women sound less than human.</p><p class="article-meta">Published July 13, 2026 · foidslop editorial</p><aside class="article-callout"><span>In plain English</span><p>It is not a neutral synonym for “woman.” It is an insult with a deliberately dehumanizing origin.</p></aside><h2>Where does the word “foid” come from?</h2><p>“Foid” is a shortened form of “femoid.” The longer word combines “female” with “humanoid” or “android,” framing women as a separate, mechanical kind of being rather than as people. The <a href="https://www.adl.org/resources/backgrounder/incels-involuntary-celibates" rel="external">Anti-Defamation League’s guide to incel terminology</a> describes it as a derogatory term used to reduce women to a subhuman group.</p><p>The word developed inside online incel culture. “Incel” is short for “involuntary celibate,” but the communities associated with that label have built a much larger ideology around resentment, sexual entitlement, and hostility toward women. In that vocabulary, “foid” does more than identify gender: it signals the speaker’s contempt.</p><h2>Is “foid” a slur?</h2><p>People differ over which offensive words receive the formal label “slur,” but the practical answer is straightforward: “foid” functions as a misogynistic and dehumanizing insult. It is normally used to talk about women as a category, not to describe a specific behavior or idea.</p><p>That context matters when the term appears in a joke, username, meme, or unfamiliar piece of internet language. Someone can repeat a word without knowing its history, but the history does not disappear. Using it casually can still reproduce the contempt built into it.</p><h2>What is the difference between “foid” and “femoid”?</h2><p>There is no meaningful difference in intent. “Foid” is simply the clipped form of “femoid.” Both words belong to the same vocabulary and carry the same dehumanizing idea. “Moid,” a later parallel term aimed at men, does not make the original word neutral.</p><h2>Then why is this site called foidslop?</h2><p><a href="what-is-foidslop">foidslop takes the insult apart and redirects it</a>. Here, the name refers to the small, improvised meals people make for themselves: toast, pasta, snack plates, bowls, tinned fish, and other food that can be dismissed as unserious or insufficiently domestic.</p><p>The publication does not pretend the first half of its name is harmless. The point is reclamation: take a term meant to diminish women, attach it to the ordinary work of feeding yourself, and turn the result into something useful. On foidslop, that means one approachable recipe for one person every day.</p><h2>Sources and further reading</h2><ul class="article-sources"><li><a href="https://www.adl.org/resources/backgrounder/incels-involuntary-celibates" rel="external">Anti-Defamation League: Incels (Involuntary Celibates)</a></li><li><a href="https://www.adl.org/resources/article/online-poll-results-provide-new-insights-incel-community" rel="external">Anti-Defamation League: Online Poll Results Provide New Insights into Incel Community</a></li><li><a href="https://www.icct.nl/sites/default/files/2023-01/Special-Edition-Volume-2.pdf" rel="external">International Centre for Counter-Terrorism: Incel Radical Milieu and External Locus of Control</a></li></ul><p class="article-cta"><a href="what-is-foidslop">What is foidslop?</a><a href="girl-dinner-ideas">Browse girl dinner ideas</a><a href="slop/archive">Open the recipe archive</a></p></main>${footer('')}${siteScript}</body></html>`);
 
   const whatPageFile = path.join(ROOT, 'what-is-foidslop.html');
   const whatPageRelated = '<section class="article-related" aria-labelledby="what-related-title"><p class="content-eyebrow">Editorial / read more</p><h2 id="what-related-title">Keep reading</h2><div class="article-related-grid"><a href="what-does-foid-mean"><span>Slang, explained</span><strong>What does “foid” mean?</strong><em>The term behind the name, without pretending its origin is harmless.</em></a><a href="editorial-standards"><span>Behind the slop</span><strong>How foidslop gets made</strong><em>How the daily recipes are developed, checked, illustrated, and corrected.</em></a></div></section>';
@@ -962,7 +1009,7 @@ function buildSitemap() {
   });
   fs.writeFileSync(path.join(ROOT, 'data', 'lastmod-state.json'), `${JSON.stringify(Object.fromEntries(Object.keys(lastmodState).sort().map(key => [key, lastmodState[key]])), null, 1)}\n`);
   const imageTag = entry => entry.image ? `<image:image><image:loc>${entry.image.loc}</image:loc><image:title>${xml(entry.image.title)}</image:title></image:image>` : '';
-  const body = staticUrls.map(entry => `<url><loc>${BASE_URL}/${entry.url}</loc><lastmod>${entry.lastmod}</lastmod>${imageTag(entry)}</url>`).join('\n') + '\n' + published.map(meal => `<url><loc>${recipeUrl(meal)}</loc><lastmod>${meal.dateModified || isoDate(releaseDate(meal))}</lastmod><image:image><image:loc>${imageUrl(meal)}</image:loc><image:title>${xml(meal.name)}</image:title></image:image></url>`).join('\n');
+  const body = staticUrls.map(entry => `<url><loc>${BASE_URL}/${entry.url}</loc><lastmod>${entry.lastmod}</lastmod>${imageTag(entry)}</url>`).join('\n') + '\n' + published.map(meal => `<url><loc>${recipeUrl(meal)}</loc><lastmod>${effectiveDateModified(meal)}</lastmod><image:image><image:loc>${imageUrl(meal)}</image:loc><image:title>${xml(meal.name)}</image:title></image:image></url>`).join('\n');
   fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${body}\n</urlset>\n`);
 }
 

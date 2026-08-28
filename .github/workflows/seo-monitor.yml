@@ -1,0 +1,26 @@
+name: SEO Production Monitor
+
+on:
+  schedule:
+    # Run after the daily publish has had time to deploy and update redirects.
+    - cron: '35 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Crawl production SEO surface
+        run: node scripts/seo-crawl.js --base-url https://foidslop.com

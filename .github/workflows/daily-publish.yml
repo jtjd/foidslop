@@ -5,6 +5,11 @@ on:
     # 12:05 AM EST / 1:05 AM EDT; publisher resolves the America/New_York date.
     - cron: '5 5 * * *'
   workflow_dispatch:
+    inputs:
+      publish_date:
+        description: Optional New York date to publish through (YYYY-MM-DD)
+        required: false
+        type: string
 
 permissions:
   contents: write # REQUIRED for the bot to push commits
@@ -37,7 +42,14 @@ jobs:
         run: node scripts/sync-ratings.js --soft
 
       - name: Run daily publish script
-        run: node scripts/daily-publish.js
+        env:
+          PUBLISH_DATE: ${{ inputs.publish_date }}
+        run: |
+          if [ -n "$PUBLISH_DATE" ]; then
+            node scripts/daily-publish.js --date "$PUBLISH_DATE"
+          else
+            node scripts/daily-publish.js
+          fi
 
       - name: Validate generated SEO output
         run: node scripts/seo-check.js

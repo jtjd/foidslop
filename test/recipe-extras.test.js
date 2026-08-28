@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert');
-const { keyIngredients, buildSubstitutions, buildStorage } = require('../scripts/lib/recipe-extras');
+const { keyIngredients, buildSubstitutions, buildStorage, buildHeadnote, buildSeoDescription } = require('../scripts/lib/recipe-extras');
 
 const meal = {
   id: 7,
@@ -40,4 +40,23 @@ test('deterministic per meal id and rotates across ids', () => {
   const left = buildSubstitutions({ id: 11, category: 'Dip', ingredients: [{ amount: '1 cup', name: 'white beans' }] });
   const right = buildSubstitutions({ id: 12, category: 'Dip', ingredients: [{ amount: '1 cup', name: 'white beans' }] });
   assert.equal(left, buildSubstitutions({ id: 11, category: 'Dip', ingredients: [{ amount: '1 cup', name: 'white beans' }] }));
+});
+
+test('discovery copy names recipe-specific ingredients and avoids the old generic SEO ending', () => {
+  const recipe = {
+    id: 14,
+    name: 'Tomato Toast with Feta',
+    category: 'Toast',
+    description: 'Juicy tomatoes and salty feta make a crisp, bright dinner on toast.',
+    prep: '3m',
+    cook: '5m',
+    ingredients: [
+      { amount: '1 slice', name: 'sourdough bread' },
+      { amount: '½ cup', name: 'tomatoes, sliced' },
+      { amount: '2 tbsp', name: 'feta, crumbled' }
+    ]
+  };
+  assert.match(buildHeadnote(recipe), /tomatoes|feta/i);
+  assert.doesNotMatch(buildSeoDescription(recipe), /clear single-serving recipe ready in/i);
+  assert.ok(buildSeoDescription(recipe).length <= 158);
 });

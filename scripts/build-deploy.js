@@ -60,7 +60,7 @@ for (const file of fs.readdirSync(path.join(ROOT, 'assets', 'fonts'))) {
 }
 
 for (const file of [
-  'logo.png', 'logo.webp', 'brand-icon.png', 'og-image.png', 'favicon.ico', 'favicon-16x16.png',
+  'logo.png', 'logo.webp', 'logo-header.png', 'logo-header.webp', 'brand-icon.png', 'brand-icon.webp', 'brand-icon-192.webp', 'og-image.png', 'favicon.ico', 'favicon-16x16.png',
   'favicon-32x32.png', 'apple-touch-icon.png', 'android-chrome-192x192.png', 'android-chrome-512x512.png'
 ]) copyFile(path.join('assets', 'brand', file), file);
 

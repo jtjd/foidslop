@@ -2,10 +2,11 @@
 
 const fs = require('fs');
 const path = require('path');
+const { buildHeadnote, buildSeoDescription } = require('./lib/recipe-extras');
 
 const file = path.join(process.cwd(), 'data', 'foidslop-meals.json');
 const db = JSON.parse(fs.readFileSync(file, 'utf8'));
-const revisionDate = '2026-07-15';
+const revisionDate = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
 
 const headnotes = {
   'Snack Plate': [
@@ -273,15 +274,10 @@ for (const original of db.meals) {
     text: stepReplacements.get(`${meal.slug}:${stepIndex}`) || extendShortStep(meal, step)
   }));
 
-  const pool = headnotes[meal.category] || headnotes.Main;
-  meal.headnote = pool[(meal.id - 1) % pool.length];
+  meal.headnote = buildHeadnote(meal);
   meal.seoTitle = `${meal.name} Recipe for One | foidslop`;
   if (meal.seoTitle.length > 64) meal.seoTitle = `${meal.name} | foidslop`;
-  const total = (Number.parseInt(meal.prep, 10) || 0) + (Number.parseInt(meal.cook, 10) || 0);
-  const suffix = ` A clear single-serving recipe ready in ${total} minutes.`;
-  meal.seoDescription = meal.description.length + suffix.length <= 158
-    ? `${meal.description}${suffix}`
-    : `${meal.name} made for one, with a complete ingredient list, clear method, and a total time of ${total} minutes.`;
+  meal.seoDescription = buildSeoDescription(meal);
   if (meal.publishDate <= revisionDate) meal.dateModified = revisionDate;
   else delete meal.dateModified;
   Object.assign(original, meal);

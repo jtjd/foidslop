@@ -11,6 +11,7 @@ const DATA = path.join(ROOT, 'data');
 const BRAND_ASSETS = path.join(ROOT, 'assets', 'brand');
 const meals = JSON.parse(fs.readFileSync(path.join(DATA, 'foidslop-meals.json'), 'utf8')).meals;
 const force = process.argv.includes('--force');
+const refreshBrand = force || process.argv.includes('--refresh-brand');
 const forcePins = process.argv.includes('--force-pins');
 const slugArg = process.argv.includes('--slug')
   ? process.argv[process.argv.indexOf('--slug') + 1]
@@ -54,7 +55,26 @@ function isCurrent(source, output) {
 function buildBrandImages() {
   const logoSource = path.join(BRAND_ASSETS, 'logo.png');
   const logoWebp = path.join(BRAND_ASSETS, 'logo.webp');
-  if (!isCurrent(logoSource, logoWebp)) runImage('convert', [logoSource, '-strip', '-define', 'webp:lossless=true', logoWebp]);
+  const logoHeaderPng = path.join(BRAND_ASSETS, 'logo-header.png');
+  const logoHeaderWebp = path.join(BRAND_ASSETS, 'logo-header.webp');
+  const iconSource = path.join(BRAND_ASSETS, 'brand-icon.png');
+  const iconWebp = path.join(BRAND_ASSETS, 'brand-icon.webp');
+  const iconSmallWebp = path.join(BRAND_ASSETS, 'brand-icon-192.webp');
+  if (refreshBrand || !fs.existsSync(logoWebp)) {
+    runImage('convert', [logoSource, '-auto-orient', '-strip', '-define', 'webp:method=6', '-quality', '86', logoWebp]);
+  }
+  if (refreshBrand || !fs.existsSync(logoHeaderPng)) {
+    runImage('convert', [logoSource, '-auto-orient', '-resize', '252x149>', '-strip', '-define', 'png:compression-level=9', logoHeaderPng]);
+  }
+  if (refreshBrand || !fs.existsSync(logoHeaderWebp)) {
+    runImage('convert', [logoSource, '-auto-orient', '-resize', '252x149>', '-strip', '-define', 'webp:method=6', '-quality', '86', logoHeaderWebp]);
+  }
+  if (refreshBrand || !fs.existsSync(iconWebp)) {
+    runImage('convert', [iconSource, '-strip', '-define', 'webp:method=6', '-quality', '86', iconWebp]);
+  }
+  if (refreshBrand || !fs.existsSync(iconSmallWebp)) {
+    runImage('convert', [iconSource, '-resize', '192x192!', '-strip', '-define', 'webp:method=6', '-quality', '86', iconSmallWebp]);
+  }
 }
 
 function socialCanvas(meal, source, output, kind) {

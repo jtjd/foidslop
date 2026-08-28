@@ -7,6 +7,8 @@
     "preview": "node scripts/preview.js",
     "publish": "node scripts/daily-publish.js",
     "optimize": "node scripts/optimize-images.js",
+    "refresh:copy": "node scripts/enrich-recipe-extras.js --refresh",
+    "seo:crawl": "node scripts/seo-crawl.js",
     "test": "node --test",
     "sync:ratings": "node scripts/sync-ratings.js --soft",
     "ping:indexnow": "node scripts/indexnow-ping.js",

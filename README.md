@@ -54,6 +54,7 @@ Several publisher features exist to move visitors deeper and earn clicks:
 - **Per-collection og:image:** hubs, roundups, and the girl-dinner pillar use their newest matching recipe's wide social canvas instead of the brand default.
 - **Honest lastmod:** static sitemap URLs keep their previous `lastmod` until page bytes change; hashes live in `data/lastmod-state.json`. Delete that file to force a full refresh.
 - **Bounded archive weight:** `slop/archive.html` server-renders the newest 48 cards; older recipes ship as a JSON manifest that `archive.js` hydrates into identical markup, so search still covers everything as the catalog grows.
+- **Production SEO monitor:** `.github/workflows/seo-monitor.yml` crawls the deployed sitemap pages, internal links, canonicals, indexability signals, and same-origin assets each morning. Search Console and Bing setup steps live in [SEO operations](docs/seo-operations.md).
 
 ## IndexNow
 
@@ -73,6 +74,8 @@ npm run build
 npm run preview
 npm run publish
 npm run optimize
+npm run refresh:copy
+npm run seo:crawl
 npm test
 npm run sync:ratings
 npm run ping:indexnow

@@ -77,6 +77,42 @@ h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 8vw, 6.5rem
 .archive-label::before { content: '*'; font-size: 0.5rem; }
 .archive-count { font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 
+/* ── Archive pagination ─────────────────── */
+.archive-pagination {
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  border-inline: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 28px 40px 40px;
+}
+.archive-pages-label {
+  align-items: center;
+  color: var(--accent);
+  display: flex;
+  flex: 0 0 100%;
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .14em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.archive-pages-label::before { content: '*'; font-size: .5rem; margin-right: 10px; }
+.archive-pagination a {
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: .7rem;
+  letter-spacing: .1em;
+  padding: 10px 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.archive-pagination a:hover,
+.archive-pagination a:focus-visible { border-color: var(--accent); color: var(--text); }
+
 /* ── Archive grid & Premium Cards ───────── */
 .archive-tools { border-bottom: 1px solid var(--border); display: grid; grid-template-columns: minmax(0,1fr); padding: 26px 40px 30px; }
 .archive-search-label { color: var(--accent); display: block; font-size: .64rem; font-weight: 600; grid-column: 1; letter-spacing: .13em; margin-bottom: 10px; text-transform: uppercase; }
@@ -218,6 +254,7 @@ height: 14px;
   .featured-content { height: auto; padding: 36px 24px 48px; justify-content: flex-start; overflow-y: visible; }
   .archive-header { padding: 24px 24px 20px; }
   .archive-intro { padding: 32px 24px; }
+  .archive-pagination { padding: 28px 24px 32px; }
   .archive-tools { padding: 24px; }
   .archive-grid { grid-template-columns: repeat(2, 1fr); }
   .archive-card:nth-child(3n) { border-right: 1px solid var(--border); }
@@ -247,4 +284,5 @@ height: 14px;
 
 @media (max-width: 600px) {
   .archive-tools { padding: 22px 20px; }
+  .archive-pagination { padding: 24px 20px 28px; }
 }

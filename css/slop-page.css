@@ -104,8 +104,9 @@
 @media (hover: none) { .image-pin { opacity: 1; } }
 
 /* ── Keep browsing strip ────────────────── */
-.keep-browsing { border-top: 1px solid var(--border); margin: 0; padding: 44px 24px 8px; }
-.keep-links { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); margin-top: 16px; max-width: 1200px; }
+.keep-browsing { border-inline: 1px solid var(--border); border-top: 1px solid var(--border); margin: 0 auto; max-width: 1440px; padding: 44px 24px 8px; }
+.keep-browsing > .section-label { margin-left: auto; margin-right: auto; max-width: 1200px; }
+.keep-links { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); margin: 16px auto 0; max-width: 1200px; }
 .keep-links a { border: 1px solid var(--border); color: inherit; display: flex; flex-direction: column; gap: 6px; justify-content: space-between; min-height: 96px; padding: 18px 20px; text-decoration: none; transition: background .2s ease,border-color .2s ease; }
 .keep-links a:hover,.keep-links a:focus-visible { background: color-mix(in srgb,var(--accent) 9%,var(--bg)); border-color: var(--accent); }
 .keep-links strong { font-family: Arial Black,Arial,sans-serif; font-size: .95rem; letter-spacing: -.02em; line-height: 1.25; text-transform: uppercase; }
