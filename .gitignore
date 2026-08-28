@@ -3,3 +3,8 @@
 references/
 test-results/
 .directory
+
+# Local webmaster exports can contain private query and traffic data.
+foidslop.com-Performance-on-Search-*.zip
+foidslop.com_*Report_*.csv
+foidslop.com_*PerformanceOverview*.csv

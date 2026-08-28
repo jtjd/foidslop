@@ -55,8 +55,15 @@
   var visibleLimit = 12;
   var lastMatchCount = 0;
   var searchTimer = null;
+  var lastTrackedSearch = '';
 
   search.value = params.get('q') || '';
+
+  function readUrlState() {
+    var currentParams = new URLSearchParams(window.location.search);
+    search.value = currentParams.get('q') || '';
+    activeFilter = allowed.indexOf(currentParams.get('filter')) >= 0 ? currentParams.get('filter') : 'all';
+  }
 
   function syncUrl() {
     var next = new URLSearchParams();
@@ -65,6 +72,25 @@
     if (activeFilter !== 'all') next.set('filter', activeFilter);
     var suffix = next.toString();
     window.history.replaceState(null, '', window.location.pathname + (suffix ? '?' + suffix : '') + window.location.hash);
+  }
+
+  function scheduleSearchTracking() {
+    if (searchTimer) clearTimeout(searchTimer);
+    searchTimer = setTimeout(function () {
+      var query = search.value.trim().toLowerCase();
+      if (query.length < 3 && activeFilter === 'all') return;
+      var state = query + '|' + activeFilter + '|' + lastMatchCount;
+      if (state === lastTrackedSearch) return;
+      lastTrackedSearch = state;
+      var parameters = {
+        search_term: query || '(filter only)',
+        filter: activeFilter,
+        result_count: String(lastMatchCount),
+        has_results: lastMatchCount ? 'true' : 'false'
+      };
+      track('archive_search', parameters);
+      if (!lastMatchCount) track('archive_search_no_results', parameters);
+    }, 1200);
   }
 
   function apply() {
@@ -100,22 +126,22 @@
       activeFilter = button.dataset.filter;
       visibleLimit = 12;
       apply();
+      scheduleSearchTracking();
     });
   });
   search.addEventListener('input', function () {
     visibleLimit = 12;
     apply();
-
-    // Reader searches are the cheapest keyword research available: log settled
-    // queries with their result counts to mine future roundup topics.
-    if (searchTimer) clearTimeout(searchTimer);
-    searchTimer = setTimeout(function () {
-      var query = search.value.trim().toLowerCase();
-      if (query.length < 3) return;
-      track('archive_search', { search_term: query, result_count: String(lastMatchCount) });
-    }, 1200);
+    scheduleSearchTracking();
   });
   loadMore.addEventListener('click', function () { visibleLimit += 12; apply(); });
+
+  window.addEventListener('popstate', function () {
+    readUrlState();
+    visibleLimit = 12;
+    apply();
+    scheduleSearchTracking();
+  });
 
   var backToTop = document.getElementById('back-to-top');
   if (backToTop) {
@@ -124,4 +150,5 @@
   }
 
   apply();
+  scheduleSearchTracking();
 }());

@@ -146,7 +146,20 @@ for (const slug of requiredCollections) {
 const foidArticle = path.join(ROOT, 'what-does-foid-mean.html');
 if (!fs.existsSync(foidArticle)) errors.push('missing editorial page: what-does-foid-mean.html');
 if (!locations.includes('https://foidslop.com/what-does-foid-mean')) errors.push('sitemap.xml: missing what-does-foid-mean');
+if (fs.existsSync(foidArticle)) {
+  const foidHtml = fs.readFileSync(foidArticle, 'utf8');
+  if (!foidHtml.includes('<title>Foid Meaning in Slang: Definition, Origin &amp; Is It a Slur?</title>')) errors.push('what-does-foid-mean.html: missing query-led CTR title');
+  if (!foidHtml.includes('Foid meaning in slang:')) errors.push('what-does-foid-mean.html: missing query-led answer copy');
+}
+for (const slug of ['cheap-meals-for-one', 'high-protein-meals-for-one']) {
+  const page = path.join(ROOT, `${slug}.html`);
+  if (!fs.existsSync(page)) errors.push(`missing intent landing page: ${slug}.html`);
+  if (!locations.includes(`${PUBLIC_BASE}/${slug}`)) errors.push(`sitemap.xml: missing intent landing page ${slug}`);
+}
 const homepage = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+for (const slug of ['cheap-meals-for-one', 'high-protein-meals-for-one']) {
+  if (!homepage.includes(`href="${slug}"`)) errors.push(`index.html: missing homepage link to ${slug}`);
+}
 if (!homepage.includes('Latest foidslop recipes')) errors.push('index.html: missing latest recipe ItemList');
 for (const landmark of ['id="dispatch"', 'id="week-title"', 'id="find-title"', 'id="table-title"', 'id="filing-cabinet"', 'data-random-recipe']) {
   if (!homepage.includes(landmark)) errors.push(`index.html: missing community homepage landmark ${landmark}`);
@@ -195,6 +208,10 @@ for (const required of ['Kit', 'Tally', 'dispatch@foidslop.com', 'GitHub Actions
 }
 const archive = fs.readFileSync(path.join(ROOT, 'slop', 'archive.html'), 'utf8');
 if (!archive.includes('id="archive-search"') || !archive.includes('../archive.js')) errors.push('slop/archive.html: missing archive discovery controls');
+const archiveSource = fs.readFileSync(path.join(ROOT, 'assets', 'js', 'archive.js'), 'utf8');
+for (const marker of ['URLSearchParams', 'history.replaceState', 'archive_search_no_results', 'has_results']) {
+  if (!archiveSource.includes(marker)) errors.push(`assets/js/archive.js: missing search measurement feature ${marker}`);
+}
 let ratingsCache = null;
 try {
   ratingsCache = ratings.normalizeSummaries(JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'ratings.json'), 'utf8')));

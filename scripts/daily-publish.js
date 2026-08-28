@@ -594,11 +594,14 @@ function renderHomepage() {
   const total = totalMinutes(current);
   const randomDisabled = randomPool.length ? '' : ' disabled aria-disabled="true"';
   const intentLinks = [
+    ['Dinner for one', 'recipes/for-one', 'dinner-for-one'],
     ['Fifteen minutes', 'recipes/15-minute', '15-minute'],
     ['I refuse to cook', 'recipes/no-cook', 'no-cook'],
     ['Pasta, obviously', 'recipes/pasta', 'pasta'],
     ['Something on toast', 'recipes/toast', 'toast'],
-    ['Cheap comfort', 'recipes/comfort-food', 'comfort']
+    ['Cheap comfort', 'recipes/comfort-food', 'comfort'],
+    ['Cheap meals', 'cheap-meals-for-one', 'cheap-meals'],
+    ['High-protein meals', 'high-protein-meals-for-one', 'high-protein']
   ].map(([label, href, intent]) => `<a href="${href}" data-track="home_intent_click" data-intent="${intent}">${label}</a>`).join('');
   return `<!DOCTYPE html><html lang="en"><head>${commonHead({ title: 'foidslop | Daily Recipes for One', description, canonical: `${BASE_URL}/` })}
 <link rel="preload" as="image" href="slop/img/${current.slug}-768.webp" type="image/webp" imagesrcset="slop/img/${current.slug}-480.webp 480w, slop/img/${current.slug}-768.webp 768w" imagesizes="(max-width: 800px) 100vw, 42vw" fetchpriority="high">
@@ -760,7 +763,7 @@ function updateArchive() {
   // repeated publishes never stack manifests or loader scripts.
   html = html.replace(/<script id="archive-manifest"[\s\S]*?<\/script>\n?/g, '');
   html = html.replace(/<script src="\.\.\/archive\.js(?:\?v=[^"]*)?"><\/script>\n?/g, '');
-  html = html.replace('</body>', `${manifestTag}\n<script src="../archive.js?v=20260827-1"></script>\n</body>`);
+  html = html.replace('</body>', `${manifestTag}\n<script src="../archive.js?v=20260828-1"></script>\n</body>`);
   fs.writeFileSync(file, html);
   // Static pagination: fresh directory every run so stale pages never linger.
   fs.rmSync(path.join(SLOP_DIR, 'archive'), { recursive: true, force: true });
@@ -955,10 +958,12 @@ function renderEditorialPages() {
   fs.writeFileSync(path.join(ROOT, 'editorial-standards.html'), `<!DOCTYPE html><html lang="en"><head>${commonHead({ title: 'How foidslop Recipes Get Made', description: 'How foidslop writes clear single-serving recipes, handles measurements, and keeps its recipe archive useful.', canonical: `${BASE_URL}/editorial-standards` })}<link rel="stylesheet" href="css/content.css?v=20260715-1"><link rel="stylesheet" href="css/theme.css?v=20260713-4"></head><body>${header('')}<main class="article-page"><p class="content-eyebrow">Behind the slop</p><h1>How foidslop gets made</h1><p class="article-deck">One recipe goes up every day. The aim is simple: give one person a clear, appealing way to feed themselves without turning dinner into a project.</p><h2>What counts as a recipe here?</h2><p>Sometimes it is pasta with a real method. Sometimes it is excellent things arranged on toast. Both count. A useful recipe tells you what to buy, how much to use, what order to do things in, and how to recognize when the food is ready.</p><h2>Written for one from the start</h2><p>These are not family recipes divided until the numbers look small. Quantities, cookware, timing, and yield are written around a single serving. Appetite varies, of course, so bread, greens, fruit, or an egg can round out a lighter plate.</p><h2>Measurements that make sense</h2><p>US measurements come first. Weight is included when it makes the result more accurate, especially for pasta, cheese, and other ingredients that are awkward to measure by volume. Oven temperatures appear in Fahrenheit followed by Celsius.</p><h2>Clear methods, not busywork</h2><p>Steps follow the real stages of the recipe. Browning, simmering, assembling, and finishing stay separate when that makes the method easier to follow. Timing and visual cues are included where they matter. A genuine assembly recipe can still have one step if splitting it would only create extra scrolling.</p><h2>Flexible where it helps</h2><p>These recipes are meant to bend. A different cheese, another pasta shape, or the herb already in your refrigerator can often work. The notes call out the details that matter most, such as drying chickpeas before roasting or saving pasta water before draining.</p><h2>Food safety stays plain</h2><p>Recipes that cook meat, fish, or eggs include a clear doneness cue where one is needed. Keep raw ingredients separate, refrigerate leftovers promptly, and reheat them until hot throughout.</p><h2>Useful updates</h2><p>The archive is maintained as a working collection. If an ingredient, measurement, or instruction needs a meaningful fix, the recipe itself is updated while its original publication date stays in place.</p><p class="article-cta"><a href="slop/archive">Browse the recipe archive</a> <a href="what-is-foidslop">Why the name foidslop?</a></p></main>${footer('')}${siteScript}</body></html>`);
 
   const foidArticleDate = '2026-07-13';
-  const foidArticleDescription = 'Foid is derogatory incel slang for women. Learn where the term comes from, why it is offensive, and how foidslop reclaims the name.';
+  const foidArticleModifiedDate = '2026-08-27';
+  const foidArticleTitle = 'Foid Meaning in Slang: Definition, Origin & Is It a Slur?';
+  const foidArticleDescription = 'Foid meaning in slang: learn what “foid” means, where the term comes from, whether it is a slur, and why it is considered offensive.';
   const foidArticleSchema = {
-    '@context': 'https://schema.org', '@type': 'Article', headline: 'What Does Foid Mean? Slang Definition and Origin',
-    description: foidArticleDescription, image: `${BASE_URL}/og-image.png`, datePublished: foidArticleDate, dateModified: foidArticleDate,
+    '@context': 'https://schema.org', '@type': 'Article', headline: foidArticleTitle,
+    description: foidArticleDescription, image: `${BASE_URL}/og-image.png`, datePublished: foidArticleDate, dateModified: foidArticleModifiedDate,
     author: { '@type': 'Organization', name: 'foidslop', url: BASE_URL, sameAs: SAME_AS },
     publisher: { '@type': 'Organization', name: 'foidslop', url: BASE_URL, sameAs: SAME_AS, logo: { '@type': 'ImageObject', url: `${BASE_URL}/brand-icon.webp` } },
     mainEntityOfPage: `${BASE_URL}/what-does-foid-mean`, about: ['foid', 'femoid', 'incel slang', 'internet slang']
@@ -972,7 +977,16 @@ function renderEditorialPages() {
 
   const foidPageFile = path.join(ROOT, 'what-does-foid-mean.html');
   const foidPageRelated = '<section class="article-related" aria-labelledby="foid-related-title"><p class="content-eyebrow">Editorial / read more</p><h2 id="foid-related-title">Keep reading</h2><div class="article-related-grid"><a href="what-is-foidslop"><span>Meaning &amp; origin</span><strong>What is foidslop?</strong><em>How an insult became a daily recipe publication for one.</em></a><a href="editorial-standards"><span>Behind the slop</span><strong>How foidslop gets made</strong><em>How the daily recipes are developed, checked, illustrated, and corrected.</em></a></div></section>';
-  const foidPage = fs.readFileSync(foidPageFile, 'utf8').replace('<p class="article-cta">', `${foidPageRelated}<p class="article-cta">`);
+  const escapedFoidArticleTitle = foidArticleTitle.replace(/&/g, '&amp;');
+  const foidPage = fs.readFileSync(foidPageFile, 'utf8')
+    .replace(/What Does Foid Mean\? Slang Definition &amp; Origin/g, escapedFoidArticleTitle)
+    .replace(/What Does Foid Mean\? Slang Definition and Origin/g, foidArticleTitle)
+    .replace(/Foid is derogatory incel slang for women\. Learn where the term comes from, why it is offensive, and how foidslop reclaims the name\./g, foidArticleDescription)
+    .replace('dateModified": "2026-07-13"', `dateModified": "${foidArticleModifiedDate}"`)
+    .replace('article:modified_time" content="2026-07-13"', `article:modified_time" content="${foidArticleModifiedDate}"`)
+    .replace('<strong>The short answer:</strong>', '<strong>Foid meaning in slang:</strong>')
+    .replace('Published July 13, 2026 · foidslop editorial', 'Published July 13, 2026 · Updated August 27, 2026 · foidslop editorial')
+    .replace('<p class="article-cta">', `${foidPageRelated}<p class="article-cta">`);
   fs.writeFileSync(foidPageFile, foidPage);
 }
 

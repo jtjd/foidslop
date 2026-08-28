@@ -14,6 +14,8 @@ The homepage helps readers find tonight's meal, catch up on the current week, re
 - [Soup Recipes for One](https://foidslop.com/soup-for-one): Small-batch soup recipes for one. Upgraded tomato, miso with tofu, pasta e fagioli scaled down, all fast with no leftovers.
 - [Noodle Recipes for One](https://foidslop.com/noodle-recipes-for-one): Noodle recipes for one: instant ramen upgrades, cold sesame noodles, chilli crisp bowls, soba, and udon with practical single-serving portions.
 - [Tinned Fish Recipes for One](https://foidslop.com/tinned-fish-recipes-for-one): Tinned fish recipes for one with sardines, oysters, mussels, anchovies, salmon, and tuna on toast, crackers, rice, and snack plates.
+- [Cheap Meals for One](https://foidslop.com/cheap-meals-for-one): Cheap meals for one built from pasta, rice, beans, eggs, toast, and other flexible pantry staples.
+- [High-Protein Meals for One](https://foidslop.com/high-protein-meals-for-one): High-protein meals for one featuring eggs, fish, beans, tofu, cottage cheese, yogurt, and other satisfying staples.
 <!-- AUTO:ROUNDUPS END -->
 
 ## Key pages

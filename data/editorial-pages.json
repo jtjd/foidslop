@@ -200,6 +200,117 @@
     "minRecipes": 9
   },
   {
+    "slug": "cheap-meals-for-one",
+    "title": "Cheap Meals for One",
+    "seoTitle": "Cheap Meals for One: Budget-Friendly Pantry Dinners",
+    "description": "Cheap meals for one built from pasta, rice, beans, eggs, toast, and other flexible pantry staples.",
+    "eyebrow": "Good dinner, smaller bill",
+    "intro": "Cheap meals should still feel deliberate. This collection leans on pasta, rice, beans, eggs, canned ingredients, bread, and frozen staples that can carry more than one dinner. Prices vary by shop and season, but every recipe is portioned for one and designed to avoid a drawer full of abandoned leftovers.",
+    "guideTitle": "How to make a cheap meal feel complete",
+    "guide": [
+      "Start with one inexpensive anchor such as beans, eggs, pasta, rice, potatoes, or bread, then build flavor around it.",
+      "Keep one bright or sharp finish nearby: lemon, vinegar, pickles, hot sauce, herbs, or a spoonful of mustard.",
+      "Buy ingredients that can move between meals. Bread, eggs, canned beans, frozen vegetables, and strong condiments do more than one job.",
+      "Treat the listed quantity as a single-serving baseline, then add bread, greens, or another egg when your appetite calls for it."
+    ],
+    "faqs": [
+      {
+        "q": "What makes a meal cheap?",
+        "a": "These recipes center on inexpensive staples such as pasta, rice, beans, eggs, potatoes, bread, canned tomatoes, and frozen ingredients. Your local prices will vary, so use the swaps when a particular ingredient costs more than expected."
+      },
+      {
+        "q": "How do I make cheap food taste better?",
+        "a": "Season in layers, brown what you can, and finish with acid or something pickled. Lemon, vinegar, hot sauce, herbs, and sharp cheese make pantry ingredients taste intentional."
+      },
+      {
+        "q": "Are these meals only for one person?",
+        "a": "Yes. Each recipe starts as a single serving, with quantities and timing written for one. Most can be doubled if you need to feed someone else."
+      }
+    ],
+    "faqHeading": "Cheap meals for one questions",
+    "match": {
+      "slugs": [
+        "instant-ramen-upgraded",
+        "lazy-mac-and-cheese",
+        "butter-noodles-parmesan-black-pepper",
+        "loaded-baked-potato",
+        "classic-cheese-quesadilla",
+        "cacio-e-pepe",
+        "elevated-canned-tomato-soup",
+        "miso-soup-tofu-noodles",
+        "loaded-sweet-potato-black-beans",
+        "spaghetti-aglio-e-olio",
+        "egg-yolk-garlic-pasta",
+        "pasta-e-fagioli",
+        "crispy-fried-rice",
+        "ten-minute-freezer-fried-rice",
+        "creamy-tuscan-white-beans",
+        "silky-egg-drop-soup",
+        "garlic-parmesan-toast",
+        "pan-con-tomate"
+      ]
+    },
+    "minRecipes": 12
+  },
+  {
+    "slug": "high-protein-meals-for-one",
+    "title": "High-Protein Meals for One",
+    "seoTitle": "High-Protein Meals for One: Easy Fish, Egg and Bean Ideas",
+    "description": "High-protein meals for one featuring eggs, fish, beans, tofu, cottage cheese, yogurt, and other satisfying staples.",
+    "eyebrow": "More staying power",
+    "intro": "These meals put a protein-forward ingredient at the center: eggs, fish, beans, tofu, cottage cheese, yogurt, shrimp, or pork. They are still small-batch recipes for one, not a spreadsheet of macros. Check package labels for exact nutrition, then use the textures, sauces, and sharp finishes here to make a satisfying plate.",
+    "guideTitle": "Build a protein-forward dinner",
+    "guide": [
+      "Choose one clear anchor such as eggs, fish, beans, tofu, cottage cheese, yogurt, shrimp, or pork.",
+      "Pair the anchor with a useful base: toast, rice, potatoes, noodles, greens, or crackers make a small portion eat like dinner.",
+      "Use acid and texture to keep the plate lively. Lemon, pickles, herbs, chilli, toasted seeds, and crisp vegetables do the work.",
+      "Nutrition varies by brand and portion. Use the recipe as written for one serving and check labels when exact protein numbers matter."
+    ],
+    "faqs": [
+      {
+        "q": "What counts as high protein here?",
+        "a": "The collection prioritizes recipes built around recognizable protein sources such as eggs, fish, beans, tofu, cottage cheese, yogurt, shrimp, and pork. It does not assign exact grams because brands and serving sizes vary."
+      },
+      {
+        "q": "Can I make these meals more filling?",
+        "a": "Add the suggested base rather than simply increasing the protein: toast, rice, potatoes, noodles, greens, or crackers turn the central ingredient into a complete single-serving meal."
+      },
+      {
+        "q": "Are these recipes meal-prep friendly?",
+        "a": "Some are, but many are best fresh. Follow each recipe's storage note, especially for eggs, fish, crisp toppings, and dressed vegetables."
+      }
+    ],
+    "faqHeading": "High-protein meals for one questions",
+    "match": {
+      "slugs": [
+        "cottage-cheese-everything-bagel-plate",
+        "tinned-sardines-buttered-toast",
+        "smoked-salmon-cream-cheese-capers",
+        "scrambled-eggs-cream-cheese-chives",
+        "greek-salad-chickpeas",
+        "crispy-chickpea-feta-bowl",
+        "edamame-garlic-butter-chilli",
+        "tuna-salad-crackers",
+        "shakshuka-for-one",
+        "miso-soup-tofu-noodles",
+        "loaded-sweet-potato-black-beans",
+        "savory-cottage-cheese-bowl",
+        "egg-yolk-garlic-pasta",
+        "frittata-for-one",
+        "pasta-e-fagioli",
+        "everything-bagel-salmon-bites",
+        "creamy-tuscan-white-beans",
+        "spicy-tuna-crispy-rice",
+        "honey-garlic-butter-shrimp",
+        "smoked-oyster-toast",
+        "tinned-mussels-escabeche-crackers",
+        "tuna-melt-pita",
+        "baked-eggs-avocado"
+      ]
+    },
+    "minRecipes": 15
+  },
+  {
     "slug": "thanksgiving-dinner-for-one",
     "title": "Thanksgiving Dinner for One",
     "seoTitle": "Thanksgiving Dinner for One: Small-Batch Ideas",
