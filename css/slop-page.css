@@ -269,3 +269,55 @@
   .related-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .related-card span { font-size: 1.05rem; padding: 13px; }
 }
+.recipe-variations {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  background: var(--paper-warm);
+}
+
+.recipe-variations h2 {
+  margin: 0.3rem 0 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.recipe-variations ul {
+  display: grid;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.recipe-variations li {
+  display: grid;
+  grid-template-columns: minmax(7rem, 0.35fr) 1fr;
+  gap: 0.75rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--line);
+}
+
+.recipe-variations li:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.recipe-variations strong {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.recipe-variations span {
+  line-height: 1.55;
+}
+
+@media (max-width: 560px) {
+  .recipe-variations li {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}

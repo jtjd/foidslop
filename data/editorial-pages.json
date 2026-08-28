@@ -118,15 +118,16 @@
   {
     "slug": "noodle-recipes-for-one",
     "title": "Noodle Recipes for One",
-    "seoTitle": "Noodle Recipes for One: Quick Bowls Ready in Minutes",
-    "description": "Noodle recipes for one: sesame noodles, ramen upgrades, chilli crisp bowls, and peanut noodles ready faster than delivery.",
+    "seoTitle": "Noodle Recipes for One: Ramen, Sesame and Quick Bowls",
+    "description": "Noodle recipes for one: instant ramen upgrades, cold sesame noodles, chilli crisp bowls, soba, and udon with practical single-serving portions.",
     "eyebrow": "Slurp-forward dinners",
-    "intro": "Noodles are the fastest route from hungry to eating. Cold sesame noodles, upgraded instant ramen, kimchi butter ramen, chilli crisp with a soft-boiled egg, and peanut noodles all live here, each portioned for a single bowl.",
+    "intro": "Noodles are the fastest route from hungry to eating, but the method changes with the bowl. Cold sesame noodles need a thorough rinse and a loose sauce; ramen needs concentrated broth and strong toppings; soba and udon need careful timing. Every recipe here is portioned for one and explains the cue that keeps the noodles from turning soft or sticky.",
     "guideTitle": "Noodle night rules",
     "guide": [
-      "Undercook by a minute; carryover heat finishes the job in the bowl.",
-      "Reserve noodle water for the sauce, exactly as you would for pasta.",
-      "Crunchy toppings go on last: chilli crisp, scallions, sesame, crushed peanuts."
+      "Read the package time, then taste one noodle a minute early; carryover heat finishes hot bowls quickly.",
+      "Reserve noodle water for warm sauces, but rinse noodles thoroughly when the finished dish is meant to be cold.",
+      "Mix sesame, peanut, or chilli sauces before the noodles are ready so every strand gets coated immediately.",
+      "Add crunchy toppings last: chilli crisp, scallions, sesame seeds, peanuts, or crisp vegetables."
     ],
     "faqs": [
       {
@@ -140,6 +141,10 @@
       {
         "q": "How do I keep noodles from clumping?",
         "a": "Use enough water, stir during the first minute of cooking, rinse noodles going into cold preparations, and dress hot noodles immediately."
+      },
+      {
+        "q": "How do I make instant ramen taste better?",
+        "a": "Use a little less water, add an egg or tofu for substance, and finish off the heat with butter, sesame oil, miso, chilli crisp, or another aromatic ingredient."
       }
     ],
     "faqHeading": "Noodle night questions",
@@ -149,6 +154,50 @@
       ]
     },
     "minRecipes": 6
+  },
+  {
+    "slug": "tinned-fish-recipes-for-one",
+    "title": "Tinned Fish Recipes for One",
+    "seoTitle": "Tinned Fish Recipes for One: Toasts, Boards and More",
+    "description": "Tinned fish recipes for one with sardines, oysters, mussels, anchovies, salmon, and tuna on toast, crackers, rice, and snack plates.",
+    "eyebrow": "Open a tin, make dinner",
+    "intro": "Tinned fish already brings protein, salt, richness, and long shelf life. The recipes here turn sardines, smoked oysters, mussels, anchovies, salmon, and tuna into complete single-serving meals with crisp bread, crackers, vegetables, acid, and enough contrast to keep every bite interesting.",
+    "guideTitle": "Build a better tinned-fish dinner",
+    "guide": [
+      "Taste the fish before adding salt; tins packed in brine, oil, or sauce arrive with very different seasoning.",
+      "Use acid generously. Lemon, vinegar, pickles, capers, and hot sauce cut through oil and smoke.",
+      "Keep the base crisp by draining the fish lightly and assembling toast or crackers immediately before eating.",
+      "Treat the liquid in a good tin as an ingredient: spoon a little oil or escabeche sauce over the finished plate."
+    ],
+    "faqs": [
+      {
+        "q": "What tinned fish is easiest to start with?",
+        "a": "Tuna and smoked oysters are approachable, while sardines and anchovies bring a stronger savory flavor. Choose a tin packed in olive oil when you want the fish to carry the whole plate."
+      },
+      {
+        "q": "What should I serve with tinned fish?",
+        "a": "Crisp toast or crackers, something acidic such as lemon or pickles, and a fresh element such as cucumber, herbs, apple, or tomato make a complete small meal."
+      },
+      {
+        "q": "How do I store an opened tin?",
+        "a": "Move leftovers and some of their packing liquid to a covered container, refrigerate promptly, and use within two days. Do not store leftovers in the opened metal tin."
+      }
+    ],
+    "faqHeading": "Tinned fish questions",
+    "match": {
+      "slugs": [
+        "tinned-sardines-buttered-toast",
+        "smoked-salmon-cream-cheese-capers",
+        "tuna-salad-crackers",
+        "tinned-fish-board",
+        "anchovy-butter-toast",
+        "everything-bagel-salmon-bites",
+        "smoked-oyster-toast",
+        "smoked-trout-apple-plate",
+        "tinned-mussels-escabeche-crackers"
+      ]
+    },
+    "minRecipes": 9
   },
   {
     "slug": "thanksgiving-dinner-for-one",

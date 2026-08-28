@@ -1,6 +1,6 @@
 {
  "": {
-  "hash": "dc7c1eb97042e13039a838c861c6010fcca357af",
+  "hash": "16bd9299f8f0ae1c1530c85ccd41b249cb563084",
   "lastmod": "2026-08-27"
  },
  "christmas-eve-dinner-for-one": {
@@ -8,19 +8,19 @@
   "lastmod": "2027-01-15"
  },
  "editorial-standards": {
-  "hash": "239219af910a8df99bd292d818d332c1f79c95d1",
+  "hash": "7f91d8d2b97c1d5db723c6e007c29a29c12be481",
   "lastmod": "2026-08-27"
  },
  "eggs-for-dinner": {
-  "hash": "7858f3f6aac6c6e60ccbbc5fe1cc604969d98618",
+  "hash": "dddfcec561caad6569c21ce4354114e53cbf7c70",
   "lastmod": "2026-08-27"
  },
  "girl-dinner-ideas": {
-  "hash": "8e762d634954894fd2d1a2b41b1f70a37db17e20",
+  "hash": "988d7760fb9b65979d957904469fb05d441ba8b0",
   "lastmod": "2026-08-27"
  },
  "girl-dinner-ideas-fall": {
-  "hash": "547ca4361d31198c6022a0ef5cb4777d728b3cf7",
+  "hash": "34de1d081b89364f87d6ecd6d77e7af2464172ee",
   "lastmod": "2026-08-27"
  },
  "hanukkah-dinner-for-one": {
@@ -32,63 +32,67 @@
   "lastmod": "2027-01-15"
  },
  "noodle-recipes-for-one": {
-  "hash": "0c3c0517efc12909b9544dfb6626c4837d729eb2",
+  "hash": "9a9f179ccf0ed19da8456ed0ecdaab857d5cbcf1",
   "lastmod": "2026-08-27"
  },
  "recipes/15-minute": {
-  "hash": "87e3f1101ec598ba48e760c097b75816d0166537",
+  "hash": "33ef0a17dc863316c734266e39bc445cc87a3efc",
   "lastmod": "2026-08-27"
  },
  "recipes/comfort-food": {
-  "hash": "e0219da8764fd5fadb6d984e3ccb14d7c2c8f258",
+  "hash": "5c62fe91225f77b0d8ad0b6253ed6a82da37840e",
   "lastmod": "2026-08-27"
  },
  "recipes/for-one": {
-  "hash": "dda9993c354e0a1f26435e22e1adbd94382a253d",
+  "hash": "7940371b7dae2ca84ba124ef0351efcab0a86bc8",
   "lastmod": "2026-08-27"
  },
  "recipes/no-cook": {
-  "hash": "c33e442c3dfda3620420c736dfa821133593cae5",
+  "hash": "2e8bf35b1087e7ff8a86b418fcdb5228a354953c",
   "lastmod": "2026-08-27"
  },
  "recipes/pasta": {
-  "hash": "78e9a2bc6c4add7869b1c6772ea497dc8fe26931",
+  "hash": "d714f8f9e81f15a7aeecf287a97e0d2a6e75b546",
   "lastmod": "2026-08-27"
  },
  "recipes/quick": {
-  "hash": "c97f74603690ec1926ddce9ffd2c286aa73d891c",
+  "hash": "d3df1a1a55a77aad9c9fdd50fb0f16fbe5efcd56",
   "lastmod": "2026-08-27"
  },
  "recipes/snack-plates": {
-  "hash": "b70357406e6815336d1484fff44a2b5f1a747b07",
+  "hash": "0f8261fb4a7bcea3f7ada390383cbe53c2133249",
   "lastmod": "2026-08-27"
  },
  "recipes/toast": {
-  "hash": "9e68a285c1ac1a081c3e2a1c70b51c89b494213a",
+  "hash": "afeb597bf4e8cfce8bc5762b7224f5a47fef0c60",
   "lastmod": "2026-08-27"
  },
  "recipes/vegetarian": {
-  "hash": "b9f682c92bd846d3b3d5efab6ea633ab4b4a664c",
+  "hash": "6852705410e7e708a20ff5535baf5f93ec36e60a",
   "lastmod": "2026-08-27"
  },
  "slop/archive": {
-  "hash": "20f554b90a73862c64336570bbffa211e3162c4e",
+  "hash": "d38e1227120eac6a828d6e84a70cd7eb39ff8afb",
   "lastmod": "2026-08-27"
  },
  "soup-for-one": {
-  "hash": "c43b65ff4945792fe29e8462488139ed7ce21664",
+  "hash": "3b2529fb479c767403cd79c98c6593ae30f6c350",
   "lastmod": "2026-08-27"
  },
  "thanksgiving-dinner-for-one": {
   "hash": "27125180ff5a5c7925bc024855a810d44fcc631d",
   "lastmod": "2027-01-15"
  },
+ "tinned-fish-recipes-for-one": {
+  "hash": "98700e29fdc6ad7a6df4892fa2484e315a758e7d",
+  "lastmod": "2026-08-27"
+ },
  "what-does-foid-mean": {
-  "hash": "237553ff5026ea0bc0c8dd46ed50786b73a4ee79",
+  "hash": "9e836af94e0c19ae59716ced86f63156505884f8",
   "lastmod": "2026-08-27"
  },
  "what-is-foidslop": {
-  "hash": "fa24bfa24106d2957c897cee9c3a599b5c8c5aac",
+  "hash": "9b905813c0e5a6ec62fc149f2d3cbd0de22ce2a9",
   "lastmod": "2026-08-27"
  }
 }

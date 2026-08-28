@@ -5,7 +5,7 @@
  * database and stamps dateModified only for published recipes whose visible
  * copy genuinely changed.
  *
- * Usage: node scripts/enrich-recipe-extras.js [--check] [--refresh]
+ * Usage: node scripts/enrich-recipe-extras.js [--check] [--refresh] [--scheduled-only]
  */
 const fs = require('fs');
 const path = require('path');
@@ -13,6 +13,7 @@ const { buildSubstitutions, buildStorage, buildHeadnote, buildSeoDescription } =
 
 const checkOnly = process.argv.includes('--check');
 const refresh = process.argv.includes('--refresh');
+const scheduledOnly = process.argv.includes('--scheduled-only');
 const file = path.join(process.cwd(), 'data', 'foidslop-meals.json');
 const db = JSON.parse(fs.readFileSync(file, 'utf8'));
 const revisionDate = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
@@ -39,6 +40,10 @@ function distinctCopy(value, meal, field) {
 
 let filled = 0;
 for (const meal of db.meals) {
+  if (scheduledOnly && meal.status === 'published') {
+    for (const field of Object.keys(usedCopy)) usedCopy[field].add(meal[field]);
+    continue;
+  }
   let touched = false;
   if (refresh || !meal.substitutions) { meal.substitutions = distinctCopy(buildSubstitutions(meal), meal, 'substitutions'); touched = true; }
   else usedCopy.substitutions.add(meal.substitutions);
@@ -47,11 +52,11 @@ for (const meal of db.meals) {
   // Existing published pages used broad category templates for these fields.
   // Future recipes may contain intentionally curated copy, so leave their
   // headnotes and search descriptions alone until they are published.
-  if (refresh && (meal.status === 'published' || repetitiveHeadnotes.has(meal.headnote) || legacyHeadnote(meal.headnote))) {
+  if (refresh && (scheduledOnly || meal.status === 'published' || repetitiveHeadnotes.has(meal.headnote) || legacyHeadnote(meal.headnote))) {
     meal.headnote = distinctCopy(buildHeadnote(meal), meal, 'headnote');
     touched = true;
   } else usedCopy.headnote.add(meal.headnote);
-  if (refresh && (meal.status === 'published' || legacySeoDescription(meal.seoDescription))) {
+  if (refresh && (scheduledOnly || meal.status === 'published' || legacySeoDescription(meal.seoDescription))) {
     meal.seoDescription = distinctCopy(buildSeoDescription(meal), meal, 'seoDescription');
     touched = true;
   } else usedCopy.seoDescription.add(meal.seoDescription);

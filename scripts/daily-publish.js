@@ -12,6 +12,7 @@ const path = require('path');
 const crypto = require('crypto');
 const { chronological, releaseDate, ARCHIVE_CHUNK } = require('./lib/publication-order');
 const { chooseArchivePick } = require('./lib/archive-pick');
+const { sitemapFingerprint } = require('./lib/sitemap-fingerprint');
 const ratings = require('./lib/ratings');
 
 const ROOT = process.cwd();
@@ -112,11 +113,13 @@ function editorialNavLinks(excludeSlug = null) {
 
 function editorialSelection(page) {
   const match = page.match || {};
+  const includeSlugs = Array.isArray(match.slugs) ? match.slugs : [];
   const includeTags = Array.isArray(match.tags) ? match.tags : [];
   const includeCategories = Array.isArray(match.categories) ? match.categories : [];
   const excludeTags = Array.isArray(match.excludeTags) ? match.excludeTags : [];
-  if (!includeTags.length && !includeCategories.length) return [];
+  if (!includeSlugs.length && !includeTags.length && !includeCategories.length) return [];
   return published.filter(meal => {
+    if (includeSlugs.length && !includeSlugs.includes(meal.slug)) return false;
     if (excludeTags.some(tag => meal.tags.includes(tag))) return false;
     if (includeTags.length && !includeTags.some(tag => meal.tags.includes(tag))) return false;
     if (includeCategories.length && !includeCategories.includes(meal.category)) return false;
@@ -136,6 +139,11 @@ function validateEditorialConfig() {
       if (typeof page[field] !== 'string' || !page[field].trim()) errors.push(`editorial page ${page.slug}: missing ${field}`);
     }
     if ((page.seoTitle || '').length > 64) errors.push(`editorial page ${page.slug}: seoTitle exceeds 64 characters`);
+    if (Array.isArray(page.match?.slugs)) {
+      for (const slug of page.match.slugs) {
+        if (!meals.some(meal => meal.slug === slug)) errors.push(`editorial page ${page.slug}: unknown recipe slug ${slug}`);
+      }
+    }
     if (!Array.isArray(page.guide) || page.guide.length < 3) errors.push(`editorial page ${page.slug}: guide needs at least three items`);
     if (!Array.isArray(page.faqs) || page.faqs.length < 3 || page.faqs.some(item => !item.q || !item.a)) {
       errors.push(`editorial page ${page.slug}: needs at least three complete FAQ entries`);
@@ -173,9 +181,10 @@ function activeRoundups() {
 function roundupMatchesMeal(page, meal) {
   const match = page.match || {};
   if (Array.isArray(match.excludeTags) && match.excludeTags.some(tag => meal.tags.includes(tag))) return false;
+  const slugHit = Array.isArray(match.slugs) && match.slugs.includes(meal.slug);
   const tagHit = Array.isArray(match.tags) && match.tags.some(tag => meal.tags.includes(tag));
   const categoryHit = Array.isArray(match.categories) && match.categories.includes(meal.category);
-  if (!tagHit && !categoryHit) return false;
+  if (!slugHit && !tagHit && !categoryHit) return false;
   if (match.maxTotalMinutes != null && minutes(meal.prep) + minutes(meal.cook) > match.maxTotalMinutes) return false;
   return true;
 }
@@ -242,6 +251,23 @@ function validate() {
     if (meal.dateModified && !isIsoDate(meal.dateModified)) errors.push(`Invalid modification date: ${meal.slug}`);
     if (meal.dateModified && meal.dateModified < isoDate(releaseDate(meal))) errors.push(`Modification date precedes publication: ${meal.slug}`);
     if (meal.status === 'published' && meal.dateModified > today) errors.push(`Modification date is in the future: ${meal.slug}`);
+    if (/Whatever protein or hearty filling|Anything crunchy works for scooping|frozen versions cook directly|crisp or warm as intended/i.test([meal.headnote, meal.storage, meal.substitutions].join(' '))) {
+      errors.push(`Generic discovery copy needs editing: ${meal.slug}`);
+    }
+    if (meal.variations != null) {
+      if (!meal.variationsTitle || !Array.isArray(meal.variations) || meal.variations.length < 6) {
+        errors.push(`Recipe variations need a title and at least six entries: ${meal.slug}`);
+      } else {
+        const variationNames = new Set();
+        for (const variation of meal.variations) {
+          const variationName = String(variation?.name || '').trim();
+          const variationText = String(variation?.text || '').trim();
+          if (!variationName || variationText.length < 45) errors.push(`Thin recipe variation: ${meal.slug}`);
+          if (variationNames.has(variationName.toLowerCase())) errors.push(`Duplicate recipe variation: ${meal.slug}`);
+          variationNames.add(variationName.toLowerCase());
+        }
+      }
+    }
   }
   for (const field of ['headnote', 'storage', 'substitutions', 'seoDescription']) {
     const seen = new Map();
@@ -347,7 +373,7 @@ function header(root = '', active = '') {
   <div class="site-header-center">Daily recipes / made for one / Issue ${String(current.id).padStart(3, '0')}</div>
   <div class="header-right">
     <button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="true"><span class="theme-toggle-mark" aria-hidden="true">*</span><span class="theme-toggle-label">Light mode</span></button>
-    <a href="${root}slop/today" class="nav-link header-today${active === 'today' ? ' active' : ''}"${active === 'today' ? ' aria-current="page"' : ''}>Today</a>
+    <a href="${root}slop/${current.slug}" class="nav-link header-today${active === 'today' ? ' active' : ''}"${active === 'today' ? ' aria-current="page"' : ''}>Today</a>
     <a href="${root}slop/archive" class="nav-link${active === 'archive' ? ' active' : ''}"${active === 'archive' ? ' aria-current="page"' : ''}>Archive</a>
     <a href="${root}#dispatch" class="nav-link header-dispatch">Dispatch</a>
   </div>
@@ -448,6 +474,9 @@ function renderRecipe(meal, index) {
     { '@type': 'ListItem', position: 3, name: meal.name, item: recipeUrl(meal) }
   ] };
   const related = relatedMeals(meal);
+  const variations = Array.isArray(meal.variations) && meal.variations.length
+    ? `<section class="recipe-variations" aria-labelledby="variation-title"><p class="section-label">Make it yours</p><h2 id="variation-title">${esc(meal.variationsTitle || 'Ways to change it')}</h2><ul>${meal.variations.map(item => `<li><strong>${esc(item.name)}</strong><span>${esc(item.text)}</span></li>`).join('')}</ul></section>`
+    : '';
   return `<!DOCTYPE html><html lang="en"><head>${commonHead({
     title: stripBrand(meal.seoTitle), description: meal.seoDescription,
     canonical: recipeUrl(meal), image: fs.existsSync(path.join(SLOP_DIR, 'social', `${meal.slug}-wide.jpg`)) ? socialImageUrl(meal) : imageUrl(meal), type: 'article', root: '../'
@@ -466,13 +495,13 @@ ${shareRow(meal)}
 <div class="rate-recipe" id="rate-recipe" data-slug="${esc(meal.slug)}"><span class="rate-label">Rate this slop</span><div class="rate-stars">${[1, 2, 3, 4, 5].map(value => `<button type="button" class="rate-star${summary && value <= Math.round(summary.average) ? ' active' : ''}" data-value="${value}" aria-pressed="${summary && value <= Math.round(summary.average) ? 'true' : 'false'}" aria-label="Rate ${value} out of 5">${value}</button>`).join('')}</div><span class="rate-summary" id="rate-summary">${summary ? `Rated ${summary.average}/5 by ${summary.count} ${summary.count === 1 ? 'reader' : 'readers'}.` : 'Be the first to rate it.'}</span></div>
 <p class="section-label">Ingredients</p><ul class="ingredients-list">${meal.ingredients.map((item, ingredientIndex) => `<li class="ingredient-item"><label><input type="checkbox" class="ingredient-check"><span class="ingredient-name">${esc(item.name)}</span><span class="ingredient-amount">${esc(item.amount)}</span></label></li>`).join('')}</ul>
 <p class="section-label">Method</p><ol class="steps-list">${meal.steps.map((step, stepIndex) => `<li class="step-item" id="step-${stepIndex + 1}"><span class="step-number">${String(stepIndex + 1).padStart(2, '0')}</span><div class="step-content"><p class="step-name">${esc(step.name)}</p><p class="step-text">${esc(step.text)}</p></div></li>`).join('')}</ol>
-${meal.substitutions ? `<div class="recipe-extra"><p class="recipe-extra-label">Easy swaps</p><p>${esc(meal.substitutions)}</p></div>` : ''}${meal.storage ? `<div class="recipe-extra"><p class="recipe-extra-label">Storage</p><p>${esc(meal.storage)}</p></div>` : ''}
+${variations}${meal.substitutions ? `<div class="recipe-extra"><p class="recipe-extra-label">Easy swaps</p><p>${esc(meal.substitutions)}</p></div>` : ''}${meal.storage ? `<div class="recipe-extra"><p class="recipe-extra-label">Storage</p><p>${esc(meal.storage)}</p></div>` : ''}
 <div class="slop-notes"><p class="slop-notes-label">Slop Notes</p><p>${esc(meal.notes)}</p></div>
 <p class="recipe-trust">Recipe by foidslop · <a href="../editorial-standards">How we create our recipes</a></p>
 ${newsletterInlineSignup('../')}${reportPrompt()}</div></div>
 ${keepBrowsingLinks(meal)}
 <section class="related-recipes" aria-labelledby="related-title"><p class="section-label">Keep eating</p><h2 id="related-title">Related recipes</h2><div class="related-grid">${related.map(item => recipeCard(item, '../')).join('')}</div></section>
-<nav class="slop-nav" aria-label="Other slops">${previous ? `<a href="./${previous.slug}" class="slop-nav-item prev"><span class="slop-nav-dir">Previous Slop</span><span class="slop-nav-name">${esc(previous.name)}</span><span class="slop-nav-date">${prettyDate(releaseDate(previous))}</span></a>` : '<span></span>'}${next ? `<a href="./${next.slug}" class="slop-nav-item next"><span class="slop-nav-dir">Next Slop</span><span class="slop-nav-name">${esc(next.name)}</span><span class="slop-nav-date">${prettyDate(releaseDate(next))}</span></a>` : `<a href="./today" class="slop-nav-item next"><span class="slop-nav-dir">Next Slop</span><span class="slop-nav-name">Check back tomorrow</span></a>`}</nav></main>
+<nav class="slop-nav" aria-label="Other slops">${previous ? `<a href="./${previous.slug}" class="slop-nav-item prev"><span class="slop-nav-dir">Previous Slop</span><span class="slop-nav-name">${esc(previous.name)}</span><span class="slop-nav-date">${prettyDate(releaseDate(previous))}</span></a>` : '<span></span>'}${next ? `<a href="./${next.slug}" class="slop-nav-item next"><span class="slop-nav-dir">Next Slop</span><span class="slop-nav-name">${esc(next.name)}</span><span class="slop-nav-date">${prettyDate(releaseDate(next))}</span></a>` : `<span class="slop-nav-item next"><span class="slop-nav-dir">Next Slop</span><span class="slop-nav-name">Check back tomorrow</span></span>`}</nav></main>
 ${footer('../')}${siteScript}<script src="../recipe-tools.js?v=20260826-1"></script></body></html>`;
 }
 
@@ -988,11 +1017,13 @@ function buildSitemap() {
     ...visibleEditorialPages().map(page => ({ url: page.slug, lastmod: today, image: leadImage(editorialSelection(page)[0], page.title) })),
     ...hubs.map(hub => ({ url: `recipes/${hub.slug}`, lastmod: today, image: leadImage(published.filter(hub.filter).slice().reverse()[0] || null, hub.title) }))
   ];
-  // Static pages keep their previous lastmod until their bytes actually change,
-  // so crawlers can trust freshness instead of learning to ignore it.
+  // Static pages keep their previous lastmod until their substantive <main>
+  // content changes. Global issue counters and navigation are intentionally
+  // excluded so crawlers can trust freshness instead of learning to ignore it.
   const staticUrls = staticUrlDefs.map(def => {
     const file = staticFileForUrl(def.url);
-    const hash = fs.existsSync(file) ? crypto.createHash('sha1').update(fs.readFileSync(file)).digest('hex') : '';
+    const source = fs.existsSync(file) ? fs.readFileSync(file, 'utf8') : '';
+    const hash = crypto.createHash('sha1').update(sitemapFingerprint(source)).digest('hex');
     const previous = lastmodState[def.url];
     const unchanged = previous && previous.hash === hash && previous.lastmod <= today;
     const lastmod = unchanged ? previous.lastmod : today;
@@ -1023,12 +1054,26 @@ function buildPinterestFeed() {
 }
 
 function buildRedirects() {
-  const lines = [`/slop/today  /slop/${current.slug}  301`, '/index.html  /  301', '/slop/archive.html  /slop/archive  301', '/privacy.html  /privacy  301', '/check-inbox.html  /check-inbox  301', '/subscribed.html  /subscribed  301', '/what-is-foidslop.html  /what-is-foidslop  301', '/what-does-foid-mean.html  /what-does-foid-mean  301', '/editorial-standards.html  /editorial-standards  301', '/girl-dinner-ideas.html  /girl-dinner-ideas  301'];
+  const lines = [`/slop/today  /slop/${current.slug}  302`, '/index.html  /  301', '/slop/archive.html  /slop/archive  301', '/privacy.html  /privacy  301', '/check-inbox.html  /check-inbox  301', '/subscribed.html  /subscribed  301', '/what-is-foidslop.html  /what-is-foidslop  301', '/what-does-foid-mean.html  /what-does-foid-mean  301', '/editorial-standards.html  /editorial-standards  301', '/girl-dinner-ideas.html  /girl-dinner-ideas  301'];
   for (const page of visibleEditorialPages()) lines.push(`/${page.slug}.html  /${page.slug}  301`);
   for (const n of archivePageFiles) lines.push(`/slop/archive/page-${n}.html  /slop/archive/page-${n}  301`);
   for (const hub of hubs) lines.push(`/recipes/${hub.slug}.html  /recipes/${hub.slug}  301`);
   for (const meal of published) lines.push(`/slop/${meal.slug}.html  /slop/${meal.slug}  301`);
   fs.writeFileSync(path.join(ROOT, '_redirects'), `${lines.join('\n')}\n`);
+}
+
+function updateStaticTodayLinks() {
+  const files = ['404.html', 'privacy.html', 'check-inbox.html', 'subscribed.html'];
+  const destination = `/slop/${current.slug}`;
+  for (const relative of files) {
+    const file = path.join(ROOT, relative);
+    const source = fs.readFileSync(file, 'utf8');
+    const updated = source.replace(/<a\b[^>]*>/gi, tag => {
+      if (!/class="[^"]*(?:header-today|error-today|inbox-return)[^"]*"/i.test(tag)) return tag;
+      return tag.replace(/href="[^"]*"/i, `href="${destination}"`);
+    });
+    fs.writeFileSync(file, updated);
+  }
 }
 
 function removeFuturePages() {
@@ -1042,6 +1087,7 @@ for (const [index, meal] of published.entries()) fs.writeFileSync(path.join(SLOP
 removeFuturePages();
 updateHomepage();
 updateArchive();
+updateStaticTodayLinks();
 buildEditorialPages();
 buildHubs();
 renderEditorialPages();

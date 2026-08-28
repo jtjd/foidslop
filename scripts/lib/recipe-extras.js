@@ -61,7 +61,7 @@ const SWAPS = {
   ],
   Soup: [
     'No {a}? Any soft vegetable roasts or simmers into the base the same way. Canned tomatoes can replace fresh in equal volume.',
-    'Stock substitutes freely: vegetable for chicken, miso stirred in at the end for depth. If {a} is out, frozen versions cook directly into small pots.'
+    'Vegetable and chicken stock swap one-for-one. If {a} is unavailable, use a similar fresh or frozen vegetable and add it early enough to become tender.'
   ],
   Eggs: [
     'Mix-ins trade freely here: if {a} is not on hand, any leftover vegetable, cheese, or fresh herb folds in at the same stage. Eggs forgive improvisation.',
@@ -80,12 +80,12 @@ const SWAPS = {
     'Brown rice, quinoa, or cauliflower rice all work. Brown the base properly before adding {a}; that toastiness is the whole trick.'
   ],
   Main: [
-    'No {a}? Whatever protein or hearty filling you have takes the same seasoning and roughly the same cook time at this portion size.',
-    'Protein here is a suggestion, not a rule. Swap {a} freely and let the sauce and timing lead; check doneness a few minutes early either way.'
+    'No {a}? Choose a filling with a similar texture, keep the same seasoning, and adjust the cooking time to its own doneness cues rather than the clock.',
+    'Swap {a} for tofu, beans, mushrooms, or another filling that suits the sauce. Start checking early because each substitute cooks at a different rate.'
   ],
   Dip: [
     'No {a}? White beans, roasted eggplant, or extra yogurt blend into an equally dippable base. Taste and re-salt after blending.',
-    'Out of {b}? Anything crunchy works for scooping. The dip itself keeps for days, which makes it a good make-ahead plate.'
+    'Out of {b}? Use toasted pita, sliced cucumber, sturdy crackers, or crisp vegetables for scooping. Keep the dip and scoops separate until serving.'
   ],
   Drink: [
     'The base swaps freely: if {a} is unavailable, any juice or syrup in the same flavor family keeps the balance. Build strong, pour over ice, adjust after one sip.',
@@ -248,7 +248,7 @@ const HEADNOTES = {
     ({ name, a, b }) => `The balance in ${name} comes from tasting before the glass is full. Keep ${a} cold, add the sparkling part last, and do not flatten it with over-stirring.`
   ],
   Snack: [
-    ({ name, a, b }) => `${name} sits between snack and dinner, so texture matters. Keep ${a} crisp or warm as intended, add ${b} evenly, and serve it on a real plate.`,
+    ({ name, a, b }) => `${name} sits between snack and dinner, so texture matters. Prepare ${a} just before serving, add ${b} evenly, and eat while the contrasting textures are distinct.`,
     ({ name, a, b }) => `The method for ${name} is short because the ingredients already know what they are doing. Give ${a} enough heat or seasoning, then finish with ${b}.`,
     ({ name, a, b }) => `A small snack still deserves attention. Let ${a} carry the bite, use ${b} for contrast, and add the salt, heat, or acid while the food is at its best.`,
     ({ name, a, b }) => `${name} has a clear payoff for very little work. Keep the components recognizable, taste before serving, and let ${b} provide the final lift.`

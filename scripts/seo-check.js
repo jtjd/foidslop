@@ -385,7 +385,20 @@ if (pinterestImages.some((image, index) => image !== pinterestMediaImages[index]
 if (pinterestImages.some(image => !/\/slop\/social\/[^/]+-pin\.jpg$/.test(image))) errors.push('pinterest-rss.xml: noncanonical Pinterest image URL');
 
 const redirects = fs.readFileSync(path.join(ROOT, '_redirects'), 'utf8');
-if (!/^\/slop\/today\s+\/slop\/[a-z0-9-]+\s+301/m.test(redirects)) errors.push('_redirects: missing clean /slop/today destination');
+if (!/^\/slop\/today\s+\/slop\/[a-z0-9-]+\s+302/m.test(redirects)) errors.push('_redirects: /slop/today must use a temporary redirect');
+const generatedHtml = htmlFiles.map(file => fs.readFileSync(file, 'utf8')).join('\n');
+if (/href="(?:\.\.\/|\.\/|\/)?slop\/today"/.test(generatedHtml) || /href="\.\/today"/.test(generatedHtml)) {
+  errors.push('generated HTML: internal links must point directly to today’s recipe instead of /slop/today');
+}
+const ramenPage = fs.readFileSync(path.join(ROOT, 'slop', 'instant-ramen-upgraded.html'), 'utf8');
+if (!ramenPage.includes('class="recipe-variations"') || !ramenPage.includes('10 ways to upgrade instant ramen')) {
+  errors.push('instant-ramen-upgraded.html: missing substantive ramen upgrade variations');
+}
+const bingVerification = path.join(ROOT, 'BingSiteAuth.xml');
+if (!fs.existsSync(bingVerification)) errors.push('BingSiteAuth.xml: missing Bing Webmaster Tools verification file');
+else if (!/^<\?xml[^>]*\?>\s*<users>\s*<user>[A-F0-9]+<\/user>\s*<\/users>\s*$/i.test(fs.readFileSync(bingVerification, 'utf8'))) {
+  errors.push('BingSiteAuth.xml: invalid Bing verification document');
+}
 
 const BASE = 'https://foidslop.com';
 const nyToday = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());

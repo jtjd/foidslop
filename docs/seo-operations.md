@@ -16,7 +16,9 @@ need to be connected to the property once in their webmaster tools.
 
 ## Bing Webmaster Tools
 
-1. Verify the same domain property.
+1. Verify the same domain property with the deployed XML file at
+   `https://foidslop.com/BingSiteAuth.xml`. The repository includes the file
+   in the public build, so keep its verification token unchanged.
 2. Submit `https://foidslop.com/sitemap.xml`.
 3. Confirm that IndexNow submissions are accepted after a daily publish. The
    repository publishes the key proof file and submits URLs whose sitemap

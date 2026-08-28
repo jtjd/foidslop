@@ -53,7 +53,8 @@ Several publisher features exist to move visitors deeper and earn clicks:
 - **Scheduled roundups:** an optional `notBefore: "YYYY-MM-DD"` keeps an editorial page dormant (no file, no sitemap entry, no inventory requirement) until its date; the publisher deletes any file left by a future-dated run. Thanksgiving, Christmas, Hanukkah, and New Year pages are pre-configured and activate automatically as volume-2 holiday recipes publish.
 - **Pinterest entity:** `PINTEREST_URL`/`SAME_AS` feed every Organization schema `sameAs` and the footer link.
 - **Per-collection og:image:** hubs, roundups, and the girl-dinner pillar use their newest matching recipe's wide social canvas instead of the brand default.
-- **Honest lastmod:** static sitemap URLs keep their previous `lastmod` until page bytes change; hashes live in `data/lastmod-state.json`. Delete that file to force a full refresh.
+- **Honest lastmod:** static sitemap URLs keep their previous `lastmod` until the page's substantive `<main>` content changes; shared navigation and footer churn is ignored. Hashes live in `data/lastmod-state.json`. Delete that file to force a full refresh.
+- **Stable discovery URLs:** site navigation links directly to the current recipe. `/slop/today` remains a temporary `302` convenience redirect so crawlers do not treat a rotating destination as a permanent canonical.
 - **Bounded archive weight:** `slop/archive.html` server-renders the newest 48 cards; older recipes ship as a JSON manifest that `archive.js` hydrates into identical markup, so search still covers everything as the catalog grows.
 - **Production SEO monitor:** `.github/workflows/seo-monitor.yml` crawls the deployed sitemap pages, internal links, canonicals, indexability signals, and same-origin assets each morning. Search Console and Bing setup steps live in [SEO operations](docs/seo-operations.md).
 
