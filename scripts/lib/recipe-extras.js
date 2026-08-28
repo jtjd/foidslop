@@ -303,19 +303,25 @@ function shorten(text, limit) {
   return `${shortened}.`;
 }
 
+function sentenceCase(value) {
+  const text = String(value || '').trim();
+  return text ? `${text[0].toUpperCase()}${text.slice(1)}` : text;
+}
+
 /** Search description that keeps the dish-specific detail visible. */
 function buildSeoDescription(meal) {
   const description = String(meal.description || '').replace(/\s+/g, ' ').trim();
   const [a, b] = keyIngredients(meal);
+  const recipeId = Number(meal.id) || 0;
   const total = totalMinutes(meal);
   const category = String(meal.category || 'recipe').toLowerCase();
   const variants = [
     ` Made for one in ${total} minutes, with ${a} and ${b}.`,
     ` A ${category} recipe for one, ready in ${total} minutes with ${a}.`,
-    ` ${a} and ${b} make this ${category} recipe for one in ${total} minutes.`
+    ` ${sentenceCase(a)} and ${b} make this ${category} recipe for one in ${total} minutes.`
   ];
   for (let offset = 0; offset < variants.length; offset += 1) {
-    const variant = variants[(meal.id + offset) % variants.length];
+    const variant = variants[(recipeId + offset) % variants.length];
     if ((description + variant).length <= 158) return `${description}${variant}`;
   }
   return shorten(description, 158);

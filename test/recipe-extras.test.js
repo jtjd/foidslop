@@ -60,3 +60,19 @@ test('discovery copy names recipe-specific ingredients and avoids the old generi
   assert.doesNotMatch(buildSeoDescription(recipe), /clear single-serving recipe ready in/i);
   assert.ok(buildSeoDescription(recipe).length <= 158);
 });
+
+test('SEO descriptions capitalize appended ingredient sentences', () => {
+  const seo = buildSeoDescription({
+    id: 119,
+    category: 'Snack',
+    description: 'Slices of banana topped with almond butter and dark chocolate chips.',
+    prep: '5m',
+    cook: '0m',
+    ingredients: [
+      { amount: '1', name: 'banana, sliced' },
+      { amount: '2 tbsp', name: 'almond butter' },
+      { amount: '1 tbsp', name: 'dark chocolate chips' }
+    ]
+  });
+  assert.doesNotMatch(seo, /\.\s+[a-z]/);
+});
