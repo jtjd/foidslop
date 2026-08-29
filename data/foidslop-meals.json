@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-28T00:00:00.000Z",
+  "generated": "2026-08-29T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -7761,13 +7761,14 @@
       "notes": "Muhammara is made with roasted red peppers, walnuts, and pomegranate molasses. It is tangy and deeply flavorful.",
       "photo_search": "bowl of dark red muhammara dip swirled with olive oil and served with pita",
       "publishDate": "2026-08-29",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of bowl of dark red muhammara dip swirled with olive oil and served with pita",
       "headnote": "The texture of Muhammara Dip with Pita should be soft enough to scoop but sturdy enough to hold a swirl. Let pita bread provide the crunch and serve it before the edges dry out.",
       "seoTitle": "Muhammara Dip with Pita Recipe for One | foidslop",
       "seoDescription": "A spicy, smoky roasted red pepper and walnut dip. Better than hummus. A dip recipe for one, ready in 5 minutes with store-bought muhammara.",
       "substitutions": "Out of pita bread? Use toasted pita, sliced cucumber, sturdy crackers, or crisp vegetables for scooping. Keep the dip and scoops separate until serving.",
-      "storage": "This dip keeps covered for four days. Let one portion lose its chill, stir in a teaspoon of water if needed, and add pita bread only when serving."
+      "storage": "This dip keeps covered for four days. Let one portion lose its chill, stir in a teaspoon of water if needed, and add pita bread only when serving.",
+      "dateModified": "2026-08-29"
     },
     {
       "id": 122,
