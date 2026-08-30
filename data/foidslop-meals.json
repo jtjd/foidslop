@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-29T00:00:00.000Z",
+  "generated": "2026-08-30T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -7825,13 +7825,14 @@
       "notes": "Brown rice adds a nutty flavor and extra fiber. Make sure it is still warm when you assemble the bowl.",
       "photo_search": "bowl of brown rice topped with spicy diced tuna, avocado, and sesame seeds",
       "publishDate": "2026-08-30",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of bowl of brown rice topped with spicy diced tuna, avocado, and sesame seeds",
       "headnote": "The finish matters in Spicy Tuna Bowl with Brown Rice. Keep the creamy, crisp, and savory parts separate long enough to notice them, then bring them together one bite at a time.",
       "seoTitle": "Spicy Tuna Bowl with Brown Rice Recipe for One | foidslop",
       "seoDescription": "Sushi-grade tuna tossed with spicy mayo, soy sauce, and sesame oil makes a bold topping for warm brown rice.",
       "substitutions": "Rice, farro, couscous, or frozen grains all make the base. No sushi grade tuna? Any roasted vegetable or canned bean drops straight in.",
-      "storage": "Cool cooked components promptly and refrigerate for three days. Bring the base back with gentle heat, then add sushi grade tuna and any crunch at the table."
+      "storage": "Cool cooked components promptly and refrigerate for three days. Bring the base back with gentle heat, then add sushi grade tuna and any crunch at the table.",
+      "dateModified": "2026-08-30"
     },
     {
       "id": 123,
