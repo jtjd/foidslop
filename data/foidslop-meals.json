@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-30T00:00:00.000Z",
+  "generated": "2026-08-31T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -7893,13 +7893,14 @@
       "notes": "The cottage cheese makes it incredibly creamy without the heaviness of mayo.",
       "photo_search": "bowl of creamy tuna salad made with cottage cheese, served with crackers",
       "publishDate": "2026-08-31",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of bowl of creamy tuna salad made with cottage cheese, served with crackers",
       "headnote": "Cottage Cheese and Tuna Salad has a clear payoff for very little work. Keep the components recognizable, taste before serving, and let cottage cheese provide the final lift.",
       "seoTitle": "Cottage Cheese and Tuna Salad Recipe for One | foidslop",
       "seoDescription": "Cottage cheese replaces the usual mayonnaise in this creamy tuna salad for crackers or cucumber slices. A snack recipe for one, ready in 5 minutes with tuna.",
       "substitutions": "Tuna can become whatever you have on hand. Keep portions honest for one and season louder than you think for such a small plate.",
-      "storage": "This is best straight away. If tuna or cottage cheese needs to wait, cover it separately for one day and reassemble so the crisp parts do not soften."
+      "storage": "This is best straight away. If tuna or cottage cheese needs to wait, cover it separately for one day and reassemble so the crisp parts do not soften.",
+      "dateModified": "2026-08-31"
     },
     {
       "id": 124,
