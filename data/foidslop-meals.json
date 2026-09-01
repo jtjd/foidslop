@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-31T00:00:00.000Z",
+  "generated": "2026-09-01T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -7961,13 +7961,14 @@
       "notes": "Let this sit for 10 minutes before eating. The beans will absorb the dressing.",
       "photo_search": "bowl of tuna, white beans, red onion, and parsley in a light vinaigrette",
       "publishDate": "2026-09-01",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of bowl of tuna, white beans, red onion, and parsley in a light vinaigrette",
       "headnote": "Let the dressing for White Bean and Tuna Salad reach every ingredient, then taste before adding more salt. Keep tuna crisp and save cannellini beans for the last toss.",
       "seoTitle": "White Bean and Tuna Salad Recipe for One | foidslop",
       "seoDescription": "A Mediterranean style tuna salad with white beans, red onion, and herbs. A salad recipe for one, ready in 5 minutes with tuna.",
       "substitutions": "No tuna? Chickpeas, white beans, or lentils hold the same role. Dress at the table so nothing wilts before you eat.",
-      "storage": "The vegetables keep for two days when dry and covered. Hold the dressing apart, then add tuna and taste again just before eating."
+      "storage": "The vegetables keep for two days when dry and covered. Hold the dressing apart, then add tuna and taste again just before eating.",
+      "dateModified": "2026-09-01"
     },
     {
       "id": 125,
