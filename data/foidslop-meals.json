@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-01T00:00:00.000Z",
+  "generated": "2026-09-02T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -8029,13 +8029,14 @@
       "notes": "Choose an avocado that gives slightly under gentle pressure so it holds the filling without feeling hard.",
       "photo_search": "avocado half stuffed with cherry tomatoes, mozzarella, and basil",
       "publishDate": "2026-09-02",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of avocado half stuffed with cherry tomatoes, mozzarella, and basil",
       "headnote": "Caprese Stuffed Avocado works because the ingredients keep their own texture. Cut ripe avocado into fork-friendly pieces, dress lightly, and let the sharper flavors settle for a minute.",
       "seoTitle": "Caprese Stuffed Avocado Recipe for One | foidslop",
       "seoDescription": "An avocado half filled with mozzarella, tomato, basil, and balsamic makes a fresh single-serving salad.",
       "substitutions": "Greens swap freely by season. Without ripe avocado, toasted nuts or seeds restore the crunch the salad is counting on.",
-      "storage": "Make the components ahead, but do not finish the salad until serving. Refrigerate cherry tomatoes separately so the bowl keeps its snap."
+      "storage": "Make the components ahead, but do not finish the salad until serving. Refrigerate cherry tomatoes separately so the bowl keeps its snap.",
+      "dateModified": "2026-09-02"
     },
     {
       "id": 126,
