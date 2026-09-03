@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-02T00:00:00.000Z",
+  "generated": "2026-09-03T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -8097,13 +8097,14 @@
       "notes": "Using store-bought pesto is fine, but a little fresh lemon juice brightens it up.",
       "photo_search": "bowl of potato gnocchi in green pesto with burst red cherry tomatoes",
       "publishDate": "2026-09-03",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of bowl of potato gnocchi in green pesto with burst red cherry tomatoes",
       "headnote": "The ingredient list for Gnocchi with Pesto and Cherry Tomatoes is short enough to pay attention to technique. Salt the water, brown or bloom store-bought potato gnocchi, and serve before the sauce loses its lift.",
       "seoTitle": "Gnocchi with Pesto and Cherry Tomatoes Recipe for One | foidslop",
       "seoDescription": "Pillowy potato gnocchi tossed in basil pesto with burst cherry tomatoes. Made for one in 12 minutes, with store-bought potato gnocchi and basil pesto.",
       "substitutions": "Different short pasta shapes swap freely here. No store-bought potato gnocchi? Pecorino, asiago, or extra-black-pepper parmesan covers the same role in the sauce.",
-      "storage": "Refrigerate leftovers in a sealed container for up to two days. Reheat gently with a splash of water so store-bought potato gnocchi loosens instead of turning thick or dry."
+      "storage": "Refrigerate leftovers in a sealed container for up to two days. Reheat gently with a splash of water so store-bought potato gnocchi loosens instead of turning thick or dry.",
+      "dateModified": "2026-09-03"
     },
     {
       "id": 127,
