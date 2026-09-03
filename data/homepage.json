@@ -18,26 +18,26 @@
   "community": {
     "enabled": true,
     "formId": "EkE4QX",
-    "pollId": "2026-08-28",
+    "pollId": "2026-09-04",
     "status": "open",
     "question": "Pick Friday's dinner",
-    "deadline": "Voting closes Thursday, August 27 at 6 PM ET.",
+    "deadline": "Voting closes Thursday, September 3 at 6 PM ET.",
     "promise": "The most popular choice becomes Friday's recipe.",
-    "submissionUrl": "https://tally.so/r/EkE4QX?poll_id=2026-08-28",
+    "submissionUrl": "https://tally.so/r/EkE4QX?poll_id=2026-09-04",
     "providerName": "Tally",
     "providerPrivacyUrl": "https://tally.so/help/privacy-policy",
     "choices": [
       {
         "slot": "A",
-        "label": "Big baked potato"
+        "label": "Toast with an egg"
       },
       {
         "slot": "B",
-        "label": "Pesto sandwich"
+        "label": "Little skewers"
       },
       {
         "slot": "C",
-        "label": "Sweet bowl"
+        "label": "Tuna salad"
       }
     ],
     "lastResult": {
