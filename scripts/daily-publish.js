@@ -24,10 +24,11 @@ const BASE_URL = 'https://foidslop.com';
 const PINTEREST_URL = 'https://www.pinterest.com/foidslop/';
 const SAME_AS = [PINTEREST_URL];
 const TZ = 'America/New_York';
+const RECIPE_EDITORIAL_FILE = path.join(ROOT, 'data', 'recipe-editorial.json');
 const GLOBAL_CSS_VERSION = '20260827-1';
 const ARCHIVE_CSS_VERSION = '20260827-3';
 const CONTENT_CSS_VERSION = '20260827-1';
-const SLOP_CSS_VERSION = '20260827-2';
+const SLOP_CSS_VERSION = '20260903-1';
 const THEME_CSS_VERSION = '20260827-2';
 
 function esc(value) {
@@ -65,8 +66,11 @@ function pinterestImageUrl(meal) { return `${BASE_URL}/slop/social/${meal.slug}-
 function schemaImages(meal) { return [imageUrl(meal), `${BASE_URL}/slop/img/${meal.slug}-4x3.jpg`, `${BASE_URL}/slop/img/${meal.slug}-16x9.jpg`]; }
 function effectiveDateModified(meal) {
   const publicationDate = isoDate(releaseDate(meal));
-  const storedDate = isIsoDate(meal.dateModified) ? meal.dateModified : publicationDate;
-  return storedDate < publicationDate ? publicationDate : storedDate;
+  const storedDate = isIsoDate(meal.dateModified) && meal.dateModified <= today ? meal.dateModified : publicationDate;
+  const editorialDate = recipeEditorialBySlug.has(meal.slug) && isIsoDate(recipeEditorial.revisionDate) && recipeEditorial.revisionDate <= today
+    ? recipeEditorial.revisionDate
+    : publicationDate;
+  return [publicationDate, storedDate, editorialDate].sort().at(-1);
 }
 function recipeKeywords(meal) {
   const excluded = new Set([meal.category, meal.cuisine].filter(Boolean).map(value => String(value).trim().toLowerCase()));
@@ -126,6 +130,9 @@ function stripBrand(title) {
   return String(title || '').replace(/\s*\|\s*foidslop\s*$/i, '').trim();
 }
 const EDITORIAL_FILE = path.join(ROOT, 'data', 'editorial-pages.json');
+
+const recipeEditorial = JSON.parse(fs.readFileSync(RECIPE_EDITORIAL_FILE, 'utf8'));
+const recipeEditorialBySlug = new Map((recipeEditorial.entries || []).map(entry => [entry.slug, entry]));
 
 function loadEditorialConfig() {
   if (!fs.existsSync(EDITORIAL_FILE)) return [];
@@ -268,6 +275,25 @@ function validate() {
   const errors = [];
   const ids = new Set();
   const slugs = new Set();
+  if (!isIsoDate(recipeEditorial.revisionDate)) errors.push('data/recipe-editorial.json has an invalid revision date');
+  if (!Array.isArray(recipeEditorial.entries) || recipeEditorial.entries.length !== 46) {
+    errors.push(`data/recipe-editorial.json must contain 46 recipe entries, found ${recipeEditorial.entries?.length || 0}`);
+  } else {
+    const editorialSlugs = new Set();
+    for (const entry of recipeEditorial.entries) {
+      const entrySlug = String(entry?.slug || '').trim();
+      const paragraphs = Array.isArray(entry?.paragraphs) ? entry.paragraphs : [];
+      if (!entrySlug || editorialSlugs.has(entrySlug)) errors.push(`Invalid or duplicate recipe editorial entry: ${entrySlug || '(missing slug)'}`);
+      editorialSlugs.add(entrySlug);
+      if (!meals.some(meal => meal.slug === entrySlug && meal.status !== 'retired')) errors.push(`Recipe editorial entry references an unknown recipe: ${entrySlug}`);
+      if (!entry.label || paragraphs.length !== 2 || paragraphs.some(paragraph => String(paragraph || '').trim().length < 180)) {
+        errors.push(`Recipe editorial entry is incomplete: ${entrySlug}`);
+      }
+      if (/—/.test(JSON.stringify(entry)) || /high protein|protein packed|protein rich|pre or post workout|low carb alternative/i.test(JSON.stringify(entry))) {
+        errors.push(`Recipe editorial entry contains prohibited language: ${entrySlug}`);
+      }
+    }
+  }
   for (const meal of meals) {
     if (ids.has(meal.id)) errors.push(`Duplicate id: ${meal.id}`);
     if (slugs.has(meal.slug)) errors.push(`Duplicate slug: ${meal.slug}`);
@@ -481,6 +507,10 @@ function renderRecipe(meal, index) {
   const previous = published[index - 1];
   const next = published[index + 1];
   const total = minutes(meal.prep) + minutes(meal.cook);
+  const editorial = recipeEditorialBySlug.get(meal.slug);
+  const editorialSection = editorial
+    ? `<section class="recipe-editorial" aria-labelledby="recipe-editorial-title"><p class="recipe-editorial-label" id="recipe-editorial-title">${esc(editorial.label)}</p>${editorial.paragraphs.map(paragraph => `<p>${esc(paragraph)}</p>`).join('')}</section>`
+    : '';
   const schema = {
     '@context': 'https://schema.org', '@type': 'Recipe', '@id': `${recipeUrl(meal)}#recipe`,
     mainEntityOfPage: recipeUrl(meal), name: meal.name, description: meal.description,
@@ -519,7 +549,7 @@ function renderRecipe(meal, index) {
 <main id="main"><div class="slop-body"><div class="slop-image-panel"><picture><source type="image/webp" srcset="img/${meal.slug}-480.webp 480w, img/${meal.slug}-768.webp 768w" sizes="(max-width: 900px) 100vw, 50vw"><img src="img/${imageFile(meal)}" alt="${esc(meal.imageAlt || meal.name)}" width="768" height="768" loading="eager" fetchpriority="high"></picture><a class="image-pin" href="${pinterestShareUrl(meal)}" target="_blank" rel="noopener" data-track="pin_click" aria-label="Save ${esc(meal.name)} to Pinterest">Pin</a><span class="slop-image-caption">${esc(meal.name)} / foidslop</span></div>
 <div class="slop-content"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Home</a><span>/</span>${primaryHub ? `<a href="../recipes/${primaryHub.slug}">${esc(primaryHub.title)}</a>` : `<a href="./archive">Archive</a>`}<span>/</span><span class="current">${esc(meal.name)}</span></nav>
 ${shareRow(meal)}
-<p class="slop-desc">${esc(meal.description)}</p><p class="slop-headnote">${esc(meal.headnote)}</p><p class="section-label">At a Glance</p><div class="slop-stats" role="list">
+<p class="slop-desc">${esc(meal.description)}</p><p class="slop-headnote">${esc(meal.headnote)}</p>${editorialSection}<p class="section-label">At a Glance</p><div class="slop-stats" role="list">
 <div class="slop-stat"><div class="slop-stat-label">Prep</div><div class="slop-stat-value">${esc(meal.prep)}</div></div><div class="slop-stat"><div class="slop-stat-label">Cook</div><div class="slop-stat-value">${esc(meal.cook)}</div></div><div class="slop-stat"><div class="slop-stat-label">Serves</div><div class="slop-stat-value">${esc(meal.serves)}</div></div><div class="slop-stat"><div class="slop-stat-label">Difficulty</div><div class="slop-stat-value">${esc(meal.difficulty)}</div></div></div>
 <div class="recipe-tools" aria-label="Recipe tools"><button type="button" class="recipe-tool" id="print-recipe">Print recipe</button><button type="button" class="recipe-tool" id="copy-ingredients">Copy ingredients</button><span class="recipe-tool-status" id="recipe-tool-status" role="status" aria-live="polite"></span></div>
 <div class="rate-recipe" id="rate-recipe" data-slug="${esc(meal.slug)}"><span class="rate-label">Rate this slop</span><div class="rate-stars">${[1, 2, 3, 4, 5].map(value => `<button type="button" class="rate-star${summary && value <= Math.round(summary.average) ? ' active' : ''}" data-value="${value}" aria-pressed="${summary && value <= Math.round(summary.average) ? 'true' : 'false'}" aria-label="Rate ${value} out of 5">${value}</button>`).join('')}</div><span class="rate-summary" id="rate-summary">${summary ? `Rated ${summary.average}/5 by ${summary.count} ${summary.count === 1 ? 'reader' : 'readers'}.` : 'Be the first to rate it.'}</span></div>

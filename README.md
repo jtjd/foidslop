@@ -7,7 +7,7 @@ This repository contains the static foidslop website, its recipe data, and the s
 - `assets/brand/` contains logos, favicons, and sharing artwork.
 - `assets/js/` contains browser JavaScript used by the published site.
 - `assets/shop/` contains retired store artwork kept out of public builds.
-- `data/` contains the private recipe source files, editable homepage publication settings, editorial roundup configuration, and the synced reader-ratings cache.
+- `data/` contains the private recipe source files, curated recipe editorial notes, editable homepage publication settings, editorial roundup configuration, and the synced reader-ratings cache.
 - `functions/api/` contains Cloudflare Pages Functions that collect recipe votes.
 - `scripts/` contains publishing, image, SEO, and deployment tools.
 - `css/`, `recipes/`, and `slop/` contain public site pages and styles.

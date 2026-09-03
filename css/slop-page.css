@@ -30,6 +30,10 @@
 .slop-content { padding: 48px 56px 80px; display: flex; flex-direction: column; }
 .slop-desc { font-size: 1rem; color: var(--muted); line-height: 1.75; margin-bottom: 48px; max-width: 560px; }
 .slop-headnote { border-left: 3px solid var(--accent); color: var(--text); font: 1rem/1.75 Georgia, serif; margin: -20px 0 46px; max-width: 560px; padding: 4px 0 4px 20px; }
+.recipe-editorial { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: -12px 0 44px; max-width: 560px; padding: 22px 0 24px; }
+.recipe-editorial-label { color: var(--accent); font-size: .64rem; font-weight: 700; letter-spacing: .14em; margin-bottom: 12px; text-transform: uppercase; }
+.recipe-editorial p:not(.recipe-editorial-label) { color: var(--muted); font-size: .9rem; line-height: 1.75; margin: 0; }
+.recipe-editorial p + p { margin-top: 16px; }
 
 /* ── Breadcrumbs ──────────────────────── */
 .breadcrumbs {
