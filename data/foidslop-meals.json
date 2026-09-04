@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-03T00:00:00.000Z",
+  "generated": "2026-09-04T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -8161,13 +8161,14 @@
       "notes": "You can use leftover baked sweet potato or microwave one for 5 minutes.",
       "photo_search": "golden quesadilla cut open to reveal sweet potato, black beans, and melted cheese",
       "publishDate": "2026-09-04",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of golden quesadilla cut open to reveal sweet potato, black beans, and melted cheese",
       "headnote": "Let the main ingredient in Quesadilla with Sweet Potato and Black Beans do the heavy lifting. Keep mashed cooked sweet potato recognizable, add black beans after the heat, and serve before the best texture fades.",
       "seoTitle": "Quesadilla with Sweet Potato and Black Beans | foidslop",
       "seoDescription": "A hearty vegetarian quesadilla filled with mashed sweet potato and beans. A main recipe for one, ready in 15 minutes with mashed cooked sweet potato.",
       "substitutions": "Swap mashed cooked sweet potato for tofu, beans, mushrooms, or another filling that suits the sauce. Start checking early because each substitute cooks at a different rate.",
-      "storage": "Cool the cooked portion promptly and keep it covered for three days. Warm it at moderate heat, then add black beans after reheating so it keeps its texture."
+      "storage": "Cool the cooked portion promptly and keep it covered for three days. Warm it at moderate heat, then add black beans after reheating so it keeps its texture.",
+      "dateModified": "2026-09-04"
     },
     {
       "id": 128,
