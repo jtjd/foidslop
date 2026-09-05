@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-04T00:00:00.000Z",
+  "generated": "2026-09-05T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -8224,13 +8224,14 @@
       "notes": "Do not overcook the zucchini. Stop when the strands are just tender so they do not release too much water.",
       "photo_search": "bowl of green zucchini noodles tossed in pesto with parmesan",
       "publishDate": "2026-09-05",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of bowl of green zucchini noodles tossed in pesto with parmesan",
       "headnote": "Zucchini Noodles with Pesto comes together when the noodles finish in the sauce. Keep zucchini close, save some cooking water, and stop as soon as the bowl turns glossy.",
       "seoTitle": "Zucchini Noodles with Pesto Recipe for One | foidslop",
       "seoDescription": "Tender zucchini noodles tossed with basil pesto and parmesan make a light, quick dinner for one. Made for one in 10 minutes, with zucchini and basil pesto.",
       "substitutions": "Different short pasta shapes swap freely here. No zucchini? Pecorino, asiago, or extra-black-pepper parmesan covers the same role in the sauce.",
-      "storage": "Cool leftovers promptly and refrigerate for up to two days. Warm them slowly with a little water, then finish with zucchini just before serving."
+      "storage": "Cool leftovers promptly and refrigerate for up to two days. Warm them slowly with a little water, then finish with zucchini just before serving.",
+      "dateModified": "2026-09-05"
     },
     {
       "id": 129,
