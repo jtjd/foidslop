@@ -114,3 +114,22 @@ test('culture receipts are local, sourced, and dimensioned', () => {
     assert.ok(fs.statSync(file).size <= 750000, `receipt image too large ${receipt.image}`);
   }
 });
+
+test('launch receipts stay attached to the intended pages', () => {
+  const byDictionarySlug = new Map(dictionary.entries.map(entry => [entry.slug, entry]));
+  const byCultureSlug = new Map(culture.articles.map(article => [article.slug, article]));
+
+  const foidReceipt = byDictionarySlug.get('foid').evidence?.[0];
+  assert.equal(foidReceipt?.image, 'culture/receipts/foid-r9k-2018.webp');
+  assert.match(foidReceipt?.sourceUrl || '', /knowyourmeme\.com/);
+  assert.match(foidReceipt?.transcript || '', /foid/i);
+
+  const usernameReceipt = byCultureSlug.get('foidslop-usernames').evidence?.[0];
+  assert.equal(usernameReceipt?.image, 'culture/receipts/foidslop-usernames-reddit.webp');
+  assert.match(usernameReceipt?.sourceUrl || '', /reddit\.com/);
+  assert.match(usernameReceipt?.caption || '', /image attached/i);
+
+  const girlDinnerReceipt = byDictionarySlug.get('girl-dinner').evidence?.[0];
+  assert.equal(girlDinnerReceipt?.image, 'culture/receipts/girl-dinner-2023.webp');
+  assert.match(girlDinnerReceipt?.sourceUrl || '', /knowyourmeme\.com/);
+});
