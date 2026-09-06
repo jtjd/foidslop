@@ -29,8 +29,10 @@ jobs:
           const fs = require('fs');
           const dictionaryFile = 'data/dictionary.json';
           const data = JSON.parse(fs.readFileSync(dictionaryFile, 'utf8'));
-          const item = data.entries.find(entry => entry.slug === 'femcel');
-          item.description = 'Femcel means female involuntary celibate. Online it also describes lonely-girl memes, aesthetics, characters, playlists, and posting styles.';
+          const femcel = data.entries.find(entry => entry.slug === 'femcel');
+          femcel.description = 'Femcel means female involuntary celibate. Online it also describes lonely-girl memes, aesthetics, characters, playlists, and posting styles.';
+          const foid = data.entries.find(entry => entry.slug === 'foid');
+          foid.definition = 'Foid meaning in slang: foid means woman in 4chan/incel slang. It is short for femoid, and it is the root word in foidslop.';
           fs.writeFileSync(dictionaryFile, JSON.stringify(data, null, 2) + '\n');
           const testFile = 'test/culture-content.test.js';
           let test = fs.readFileSync(testFile, 'utf8');
