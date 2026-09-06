@@ -8,6 +8,7 @@
     "publish": "node scripts/daily-publish.js",
     "optimize": "node scripts/optimize-images.js",
     "refresh:copy": "node scripts/enrich-recipe-extras.js --refresh",
+    "remediate:copy": "node scripts/apply-editorial-overrides.js",
     "seo:crawl": "node scripts/seo-crawl.js",
     "test": "node --test",
     "sync:ratings": "node scripts/sync-ratings.js --soft",
