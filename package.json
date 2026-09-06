@@ -7,7 +7,7 @@
     "preview": "node scripts/preview.js",
     "publish": "node scripts/daily-publish.js",
     "optimize": "node scripts/optimize-images.js",
-    "refresh:copy": "node scripts/enrich-recipe-extras.js --refresh",
+    "refresh:copy": "node scripts/enrich-recipe-extras.js --refresh --scheduled-only",
     "remediate:copy": "node scripts/apply-editorial-overrides.js",
     "seo:crawl": "node scripts/seo-crawl.js",
     "test": "node --test",
