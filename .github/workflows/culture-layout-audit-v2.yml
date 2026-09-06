@@ -1,0 +1,155 @@
+name: Culture layout audit v2
+
+on:
+  push:
+    branches: [culture-layout-audit]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: culture-layout-audit-v2
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Apply remediation
+        run: |
+          python3 scripts/_culture_layout_fix.py
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('scripts/publish-culture-products.js')
+          text = p.read_text().replace('culture-showcase.css?v=20260906-2">\n</head>', 'culture-showcase.css?v=20260906-2">\\n</head>')
+          p.write_text(text)
+          Path('test/culture-layout-audit.test.js').write_text(r'''const test = require('node:test');
+          const assert = require('node:assert/strict');
+          const fs = require('node:fs');
+          const culture = JSON.parse(fs.readFileSync('data/culture-articles.json', 'utf8'));
+          const products = fs.readFileSync('scripts/publish-culture-products.js', 'utf8');
+          const theme = fs.readFileSync('css/theme.css', 'utf8');
+          const css = fs.readFileSync('css/culture.css', 'utf8');
+          const showcase = fs.readFileSync('css/culture-showcase.css', 'utf8');
+          test('username article has no unrelated portrait receipt', () => {
+            const article = culture.articles.find(item => item.slug === 'foidslop-usernames');
+            assert.ok(article); assert.equal((article.evidence || []).length, 0);
+            assert.ok(article.sources.some(source => source.url.includes('reddit.com')));
+          });
+          test('Slop Trial has the dedicated court layout', () => {
+            assert.match(products, /slop-trial-page/);
+            assert.match(products, /slop-trial-specimen/);
+            assert.match(products, /slop-trial-verdict/);
+            assert.match(showcase, /grid-template-columns: minmax\(0,1\.18fr\) minmax\(330px,\.82fr\)/);
+          });
+          test('article titles and receipts have explicit caps', () => {
+            assert.match(theme, /culture-article:not\(\.foidslop-primer\) > h1/);
+            assert.match(theme, /max-width: 1040px/);
+            assert.match(css, /max-height: 620px/);
+            assert.match(css, /width: auto/);
+          });
+          test('mid-width header removes decorative center copy', () => {
+            assert.match(theme, /min-width: 801px\) and \(max-width: 1180px/);
+            assert.match(theme, /site-header-center \{ display: none; \}/);
+          });
+          ''')
+          PY
+          rm -f culture/receipts/foidslop-usernames-reddit.webp
+
+      - name: Regenerate and validate
+        run: |
+          node scripts/publish-culture.js
+          node scripts/publish-culture-products.js
+          node scripts/publish-culture.js --check
+          node scripts/publish-culture-products.js --check
+          npm test
+          node scripts/seo-check.js
+          node scripts/build-deploy.js
+
+      - name: Browser audit every culture surface
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+          mkdir -p artifacts/layout-audit
+          python3 -m http.server 4173 --directory .deploy >/tmp/foidslop-layout-preview.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID || true' EXIT
+          sleep 2
+          node <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const assert = require('node:assert');
+          const { chromium } = require('playwright');
+          function htmlFiles(dir) {
+            if (!fs.existsSync(dir)) return [];
+            return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e => {
+              const full=path.join(dir,e.name);
+              if(e.isDirectory()) return htmlFiles(full);
+              return e.isFile() && e.name.endsWith('.html') ? [full] : [];
+            });
+          }
+          const deploy=path.resolve('.deploy');
+          const files=[path.join(deploy,'what-is-foidslop.html'),path.join(deploy,'what-does-foid-mean.html'),path.join(deploy,'about.html'),path.join(deploy,'index.html'),...htmlFiles(path.join(deploy,'culture')),...htmlFiles(path.join(deploy,'dictionary'))].filter((v,i,a)=>fs.existsSync(v)&&a.indexOf(v)===i);
+          const routes=files.map(f=>'/' + path.relative(deploy,f).split(path.sep).join('/'));
+          const viewports=[['desktop',1440,1000],['mid',1120,900],['mobile',390,844]];
+          const report=[];
+          (async()=>{
+            const browser=await chromium.launch({headless:true});
+            const page=await browser.newPage();
+            const base='http://127.0.0.1:4173';
+            for(const [name,width,height] of viewports){
+              await page.setViewportSize({width,height});
+              for(const route of routes){
+                await page.goto(base+route,{waitUntil:'networkidle'});
+                const r=await page.evaluate(({width})=>{
+                  const visible=el=>{const s=getComputedStyle(el),b=el.getBoundingClientRect();return s.display!=='none'&&s.visibility!=='hidden'&&b.width>0&&b.height>0};
+                  const rect=el=>{if(!el)return null;const b=el.getBoundingClientRect();return {left:b.left,right:b.right,top:b.top,bottom:b.bottom,width:b.width,height:b.height}};
+                  const main=document.querySelector('main'),h1=main?.querySelector('h1');
+                  const offenders=[...document.querySelectorAll('main *, .site-header > *')].filter(visible).map(el=>({tag:el.tagName.toLowerCase(),cls:typeof el.className==='string'?el.className:'',text:(el.textContent||'').trim().replace(/\s+/g,' ').slice(0,70),rect:rect(el)})).filter(x=>x.rect.left < -2 || x.rect.right > width + 2).slice(0,12);
+                  return {main:rect(main),h1:rect(h1),h1Font:h1?parseFloat(getComputedStyle(h1).fontSize):null,offenders,receipts:[...document.querySelectorAll('.culture-receipt img')].filter(visible).map(rect)};
+                },{width});
+                report.push({route,viewport:name,...r});
+                assert.ok(r.main,`missing main ${route}`);
+                assert.ok(r.main.left>=-1 && r.main.right<=width+1,`main clips ${route} ${name}`);
+                assert.equal(r.offenders.length,0,`offscreen ${route} ${name}: ${JSON.stringify(r.offenders[0])}`);
+                if(r.h1) assert.ok(r.h1.right<=width+1,`h1 clips ${route} ${name}`);
+                for(const receipt of r.receipts) assert.ok(receipt.height<=Math.max(640,height*.82),`receipt too tall ${route} ${name}`);
+              }
+            }
+            await page.setViewportSize({width:1120,height:900});
+            const shots=[['/culture/foidslop-usernames.html','usernames-1120'],['/culture/is-it-foidslop.html?item=mamma-mia','slop-trial-1120'],['/culture/index.html','culture-1120'],['/culture/slop-index.html','slop-index-1120'],['/culture/slop-taxonomy.html','taxonomy-1120'],['/dictionary/index.html','dictionary-1120'],['/what-does-foid-mean.html','foid-1120'],['/about.html','about-1120']];
+            for(const [route,name] of shots){await page.goto(base+route,{waitUntil:'networkidle'});await page.screenshot({path:`artifacts/layout-audit/${name}.png`,fullPage:true});}
+            await page.goto(base+'/culture/foidslop-usernames.html',{waitUntil:'networkidle'});
+            assert.equal(await page.locator('.culture-receipt img').count(),0,'username article still has bunny receipt');
+            await page.goto(base+'/culture/is-it-foidslop.html?item=mamma-mia',{waitUntil:'networkidle'});
+            assert.equal(await page.locator('.slop-trial-specimen').count(),1); assert.equal(await page.locator('.slop-trial-verdict').count(),1);
+            await page.setViewportSize({width:390,height:844});
+            for(const [route,name] of [['/culture/foidslop-usernames.html','usernames-mobile'],['/culture/is-it-foidslop.html?item=mamma-mia','slop-trial-mobile'],['/culture/slop-taxonomy.html','taxonomy-mobile'],['/dictionary/index.html','dictionary-mobile']]){await page.goto(base+route,{waitUntil:'networkidle'});await page.screenshot({path:`artifacts/layout-audit/${name}.png`,fullPage:true});}
+            fs.writeFileSync('artifacts/layout-audit/layout-report.json',JSON.stringify(report,null,2));
+            console.log(`Audited ${routes.length} pages x ${viewports.length} viewports = ${report.length} renders.`);
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exit(1)});
+          NODE
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: culture-layout-audit-screens
+          path: artifacts/layout-audit/
+
+      - name: Commit remediation
+        run: |
+          rm -rf node_modules package-lock.json artifacts
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git rm -f scripts/_culture_layout_fix.py
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Fix culture-wide layout and visual hierarchy [skip ci]"
+            git push
+          fi
