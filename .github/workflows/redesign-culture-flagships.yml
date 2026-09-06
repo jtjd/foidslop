@@ -1,0 +1,112 @@
+name: Redesign culture flagships
+
+on:
+  push:
+    branches: [redesign-culture-flagships]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: redesign-culture-flagships
+  cancel-in-progress: false
+
+jobs:
+  redesign:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Apply redesign
+        run: python3 scripts/_redesign_culture_flagships.py
+
+      - name: Regenerate and validate
+        run: |
+          node scripts/publish-culture.js
+          node scripts/publish-culture-products.js
+          node scripts/publish-culture.js --check
+          node scripts/publish-culture-products.js --check
+          npm test
+          node scripts/seo-check.js
+          node scripts/build-deploy.js
+
+      - name: Browser review
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+          mkdir -p artifacts
+          python3 -m http.server 4173 --directory .deploy >/tmp/foidslop-preview.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID || true' EXIT
+          sleep 2
+          node <<'NODE'
+          const { chromium } = require('playwright');
+          const assert = require('node:assert');
+          (async () => {
+            const browser = await chromium.launch({ headless: true });
+            const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+            const base = 'http://127.0.0.1:4173';
+
+            await page.goto(`${base}/culture/username-generator.html`, { waitUntil: 'networkidle' });
+            assert.equal(await page.locator('[data-username-tab]').count(), 6);
+            assert.equal(await page.locator('[data-username-variant]').count(), 3);
+            const before = await page.locator('[data-username-output]').textContent();
+            await page.locator('[data-username-tab="gothic"]').click();
+            await page.locator('[data-username-generate]').click();
+            const after = await page.locator('[data-username-output]').textContent();
+            assert.ok(after && after.trim().length > 2);
+            assert.notEqual(before, after);
+            assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth), false);
+            await page.screenshot({ path: 'artifacts/username-generator-redesign.png', fullPage: true });
+
+            await page.goto(`${base}/what-is-foidslop.html`, { waitUntil: 'networkidle' });
+            assert.equal(await page.locator('.foidslop-category-card').count(), 4);
+            const receipts = page.locator('.culture-receipt img');
+            assert.equal(await receipts.count(), 2);
+            for (let i = 0; i < 2; i++) {
+              await receipts.nth(i).scrollIntoViewIfNeeded();
+              assert.ok(await receipts.nth(i).evaluate(img => img.complete && img.naturalWidth > 0));
+            }
+            assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth), false);
+            await page.screenshot({ path: 'artifacts/what-is-foidslop-redesign.png', fullPage: true });
+
+            await page.setViewportSize({ width: 390, height: 844 });
+            for (const route of ['/culture/username-generator.html', '/what-is-foidslop.html']) {
+              await page.goto(`${base}${route}`, { waitUntil: 'networkidle' });
+              assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth), false, `horizontal overflow on ${route}`);
+            }
+            await page.screenshot({ path: 'artifacts/what-is-foidslop-mobile.png', fullPage: true });
+            await browser.close();
+          })().catch(error => { console.error(error); process.exit(1); });
+          NODE
+
+      - name: Upload visual review
+        uses: actions/upload-artifact@v4
+        with:
+          name: culture-flagship-redesign-screens
+          path: artifacts/
+
+      - name: Commit redesign
+        run: |
+          rm -rf node_modules package-lock.json
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git rm scripts/_redesign_culture_flagships.py
+          git add -u
+          git add \
+            css/culture-showcase.css \
+            culture/username-generator.js culture/username-generator.html \
+            what-is-foidslop.html \
+            scripts/publish-culture.js scripts/publish-culture-products.js \
+            test/culture-showcase.test.js
+          if ! git diff --cached --quiet; then
+            git commit -m "Redesign culture flagship pages"
+            git push
+          fi
