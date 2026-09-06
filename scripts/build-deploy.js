@@ -39,7 +39,7 @@ fs.rmSync(OUTPUT, { recursive: true, force: true });
 fs.mkdirSync(OUTPUT, { recursive: true });
 
 for (const file of [
-  'index.html', '404.html', 'privacy.html', 'check-inbox.html', 'subscribed.html', 'what-is-foidslop.html', 'what-does-foid-mean.html',
+  'index.html', '404.html', 'privacy.html', 'about.html', 'check-inbox.html', 'subscribed.html', 'what-is-foidslop.html', 'what-does-foid-mean.html',
   'editorial-standards.html', 'girl-dinner-ideas.html', 'feed.xml', 'pinterest-rss.xml', 'sitemap.xml',
   'robots.txt', 'llms.txt', 'site.webmanifest', 'BingSiteAuth.xml', '_redirects', '_headers'
 ]) copyFile(file);
@@ -89,6 +89,9 @@ for (const file of ['DJTNIP.png', 'DJTNIP-hq.avif', 'DJTNIP-hq.webp', 'CarModel.
 if (!fs.existsSync(path.join(OUTPUT, 'home.js'))) throw new Error('Homepage interaction script is missing from deployment');
 if (!fs.existsSync(path.join(OUTPUT, 'culture', 'index.html'))) throw new Error('Culture index is missing from deployment');
 if (!fs.existsSync(path.join(OUTPUT, 'dictionary', 'index.html'))) throw new Error('Dictionary index is missing from deployment');
+for (const file of ['culture/is-it-foidslop.html', 'culture/username-generator.html', 'culture/slop-taxonomy.html', 'culture/slop-tools.js', 'about.html']) {
+  if (!fs.existsSync(path.join(OUTPUT, file))) throw new Error(`Culture product is missing from deployment: ${file}`);
+}
 const requiredCultureReceipts = ['foid-r9k-2018.webp', 'foidslop-usernames-reddit.webp', 'girl-dinner-2023.webp'];
 for (const receipt of requiredCultureReceipts) {
   if (!fs.existsSync(path.join(OUTPUT, 'culture', 'receipts', receipt))) throw new Error(`Culture receipt is missing from deployment: ${receipt}`);

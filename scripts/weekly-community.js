@@ -9,6 +9,8 @@ const ROOT = process.cwd();
 const QUEUE_FILE = path.join(ROOT, 'data', 'weekly-polls.json');
 const HOMEPAGE_FILE = path.join(ROOT, 'data', 'homepage.json');
 const MEALS_FILE = path.join(ROOT, 'data', 'foidslop-meals.json');
+const CULTURE_FILE = path.join(ROOT, 'data', 'culture-articles.json');
+const SLOP_TRIALS_FILE = path.join(ROOT, 'data', 'slop-trials.json');
 const DEFAULT_TIMEZONE = 'America/New_York';
 const TALLY_API = 'https://api.tally.so';
 const KIT_API = 'https://api.kit.com/v4';
@@ -546,6 +548,18 @@ function buildDispatchEmail(homepage, queue, mealsDb, poll, dateOverride = null)
     const total = (Number.parseInt(meal.prep) || 0) + (Number.parseInt(meal.cook) || 0);
     return `<tr><td style="padding:14px 0;border-top:1px solid #d5d0c5;"><a href="https://foidslop.com/slop/${escapeHtml(meal.slug)}" style="color:#171815;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:700;text-decoration:none;text-transform:uppercase;">${escapeHtml(meal.name)}</a><br><span style="color:#66645f;font-family:Arial,Helvetica,sans-serif;font-size:12px;">${escapeHtml(meal.publishDate)} / ${total ? `${total} min` : 'No cook'} / ${escapeHtml(meal.category)}</span></td></tr>`;
   }).join('');
+  const cultureDesk = fs.existsSync(CULTURE_FILE) ? readJson(CULTURE_FILE) : { articles: [] };
+  const slopTrials = fs.existsSync(SLOP_TRIALS_FILE) ? readJson(SLOP_TRIALS_FILE) : { items: [] };
+  const weekSeed = Math.abs(Math.floor(new Date(`${window.opensDate}T12:00:00Z`).getTime() / 604800000));
+  const fieldNote = cultureDesk.articles.length ? cultureDesk.articles[weekSeed % cultureDesk.articles.length] : null;
+  const slopTrial = slopTrials.items.length ? slopTrials.items[weekSeed % slopTrials.items.length] : null;
+  const cultureSection = fieldNote || slopTrial
+    ? `<div style="margin:30px 0 0;padding:24px;border:1px solid #d5d0c5;background:#f4f1e8;color:#171815;">
+      <p style="margin:0 0 12px;color:#ef4a35;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:1.4px;">ELSEWHERE IN THE SLOP</p>
+      ${fieldNote ? `<h2 style="margin:0 0 8px;color:#171815;font-family:Arial Black,Arial,Helvetica,sans-serif;font-size:24px;line-height:1.05;text-transform:uppercase;">Field note: ${escapeHtml(fieldNote.title)}</h2><p style="margin:0 0 14px;color:#66645f;font-family:Georgia,serif;font-size:15px;line-height:1.5;">${escapeHtml(fieldNote.deck)}</p><p style="margin:0 0 18px;"><a href="https://foidslop.com/culture/${escapeHtml(fieldNote.slug)}" style="color:#171815;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;">Read the field note</a></p>` : ''}
+      ${slopTrial ? `<p style="margin:0 0 6px;color:#ef4a35;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:1.4px;">SLOP TRIAL</p><p style="margin:0 0 14px;color:#171815;font-family:Arial Black,Arial,Helvetica,sans-serif;font-size:21px;line-height:1.1;text-transform:uppercase;">Is ${escapeHtml(slopTrial.name)} foidslop?</p><a href="https://foidslop.com/culture/is-it-foidslop?item=${encodeURIComponent(slopTrial.id)}" style="display:inline-block;padding:11px 15px;background:#171815;color:#f4f1e8;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:700;letter-spacing:1px;text-decoration:none;text-transform:uppercase;">Vote yes or no</a>` : ''}
+    </div>`
+    : '';
   const choices = (poll?.choices || []).map(choice =>
     `<tr><td style="padding:11px 0;border-top:1px solid #3d3e3a;color:#f4f1e8;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.4;"><strong style="display:inline-block;width:28px;color:#ef4a35;">${choice.slot}</strong><span style="color:#f4f1e8;">${escapeHtml(choice.label)}</span></td></tr>`).join('');
   const result = previous
@@ -572,6 +586,7 @@ function buildDispatchEmail(homepage, queue, mealsDb, poll, dateOverride = null)
     <h2 style="margin:0 0 10px;color:#171815;font-family:Arial Black,Arial,Helvetica,sans-serif;font-size:24px;text-transform:uppercase;">This week in slop</h2>
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0">${recipeRows}</table>
     ${tableSection}
+    ${cultureSection}
     <p style="margin:26px 0 12px;color:#66645f;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.5;">Made something? Reply and tell me how it went. One email every Sunday. No life story.</p>
   </td></tr></table></td></tr></table>`;
 }
@@ -605,7 +620,7 @@ function buildKitBroadcastBody(homepage, content, marker, subject, dispatchAt, s
     send_at: sendAt?.toISOString() || null,
     thumbnail_alt: null,
     thumbnail_url: null,
-    preview_text: 'Seven dinners for one and one vote for Friday.',
+    preview_text: 'Seven dinners, one field note, and one Slop Trial.',
     subject,
     email_address: homepage.newsletter.fromAddress
   };
