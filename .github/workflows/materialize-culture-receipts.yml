@@ -1,0 +1,138 @@
+name: One-time culture receipts materialization
+
+on:
+  push:
+    branches: [foidslop-culture-expansion]
+    paths:
+      - '.github/workflows/materialize-culture-receipts.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: foidslop-culture-expansion
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Add receipt model and source metadata
+        run: node scripts/add-culture-receipts.js
+
+      - name: Download source screenshots
+        run: |
+          mkdir -p culture/receipts /tmp/foidslop-receipts
+          curl --fail --location --retry 3 --user-agent 'Mozilla/5.0' \
+            'https://i.kym-cdn.com/photos/images/newsfeed/002/951/989/9ac.png' \
+            -o /tmp/foidslop-receipts/foid-r9k.png
+          curl --fail --location --retry 3 --user-agent 'Mozilla/5.0' \
+            'https://i.kym-cdn.com/entries/icons/facebook/000/045/676/girl_dinner.jpg' \
+            -o /tmp/foidslop-receipts/girl-dinner.jpg
+
+      - name: Capture foidslop usernames Reddit post
+        run: |
+          npm install --no-save --package-lock=false playwright@1.55.0
+          npx playwright install chromium
+          node - <<'NODE'
+          const { chromium } = require('playwright');
+          const fs = require('fs');
+          (async () => {
+            const browser = await chromium.launch({ headless: true });
+            const page = await browser.newPage({ viewport: { width: 1280, height: 1000 }, deviceScaleFactor: 1 });
+            await page.setExtraHTTPHeaders({ 'Accept-Language': 'en-US,en;q=0.9' });
+            const attempts = [
+              ['https://www.reddit.com/r/lovethissmug/comments/1vbnzlp/i_love_foidslop_usernames/', 'shreddit-post'],
+              ['https://old.reddit.com/r/lovethissmug/comments/1vbnzlp/i_love_foidslop_usernames/', '.thing.link']
+            ];
+            let captured = false;
+            for (const [url, selector] of attempts) {
+              try {
+                await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+                await page.waitForTimeout(3500);
+                const dismiss = page.getByRole('button', { name: /reject non-essential|continue without accepting|close/i }).first();
+                if (await dismiss.isVisible().catch(() => false)) await dismiss.click().catch(() => {});
+                const post = page.locator(selector).first();
+                await post.waitFor({ state: 'visible', timeout: 10000 });
+                await post.screenshot({ path: '/tmp/foidslop-receipts/foidslop-usernames-reddit.png' });
+                captured = true;
+                break;
+              } catch (error) {
+                console.log(`Screenshot attempt failed for ${url}: ${error.message}`);
+              }
+            }
+            await browser.close();
+            if (!captured || !fs.existsSync('/tmp/foidslop-receipts/foidslop-usernames-reddit.png')) {
+              throw new Error('Could not capture the Reddit source post');
+            }
+          })();
+          NODE
+
+      - name: Optimize receipt images and record dimensions
+        run: |
+          python -m pip install --disable-pip-version-check --quiet pillow
+          python - <<'PY'
+          from PIL import Image
+          import json
+          from pathlib import Path
+
+          root = Path('.')
+          inputs = {
+              'culture/receipts/foid-r9k-2018.webp': Path('/tmp/foidslop-receipts/foid-r9k.png'),
+              'culture/receipts/foidslop-usernames-reddit.webp': Path('/tmp/foidslop-receipts/foidslop-usernames-reddit.png'),
+              'culture/receipts/girl-dinner-2023.webp': Path('/tmp/foidslop-receipts/girl-dinner.jpg'),
+          }
+          sizes = {}
+          for destination, source in inputs.items():
+              image = Image.open(source).convert('RGB')
+              if image.width > 1400:
+                  height = round(image.height * 1400 / image.width)
+                  image = image.resize((1400, height), Image.Resampling.LANCZOS)
+              target = root / destination
+              target.parent.mkdir(parents=True, exist_ok=True)
+              image.save(target, 'WEBP', quality=82, method=6)
+              sizes[destination] = image.size
+              if target.stat().st_size > 750000:
+                  image.save(target, 'WEBP', quality=72, method=6)
+              if target.stat().st_size > 750000:
+                  raise RuntimeError(f'{destination} remains larger than 750 KB')
+
+          for file in [root / 'data/dictionary.json', root / 'data/culture-articles.json']:
+              data = json.loads(file.read_text())
+              groups = data.get('entries') or data.get('articles') or []
+              for item in groups:
+                  for receipt in item.get('evidence', []):
+                      if receipt['image'] in sizes:
+                          receipt['width'], receipt['height'] = sizes[receipt['image']]
+              file.write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n')
+          PY
+
+      - name: Validate source and tests
+        run: |
+          node scripts/publish-culture.js --check
+          npm test
+
+      - name: Regenerate public site
+        run: |
+          node scripts/daily-publish.js
+          node scripts/publish-culture.js
+
+      - name: Validate generated site
+        run: |
+          node scripts/seo-check.js
+          node scripts/build-deploy.js
+          npm test
+
+      - name: Commit receipt system and images
+        run: |
+          rm -f scripts/add-culture-receipts.js .github/workflows/materialize-culture-receipts.yml
+          git config user.name 'GitHub Actions'
+          git config user.email 'actions@github.com'
+          git add -A
+          git commit -m 'Add sourced visual receipts to culture pages'
+          git push origin HEAD:foidslop-culture-expansion
