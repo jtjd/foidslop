@@ -328,6 +328,7 @@ function validate() {
   for (const field of ['headnote', 'storage', 'substitutions', 'seoDescription']) {
     const seen = new Map();
     for (const meal of meals.filter(item => item.status !== 'retired')) {
+      if (!meal[field]) continue;
       if (!seen.has(meal[field])) seen.set(meal[field], []);
       seen.get(meal[field]).push(meal.slug);
     }
@@ -517,7 +518,7 @@ function renderRecipe(meal, index) {
     image: schemaImages(meal), author: { '@type': 'Organization', name: 'foidslop', url: BASE_URL, logo: `${BASE_URL}/brand-icon.webp`, sameAs: SAME_AS },
     datePublished: isoDate(date), dateModified: effectiveDateModified(meal), ...(recipeKeywords(meal).length ? { keywords: recipeKeywords(meal).join(', ') } : {}), recipeCategory: meal.category,
     recipeCuisine: meal.cuisine, prepTime: duration(meal.prep), cookTime: duration(meal.cook),
-    totalTime: `PT${total}M`, recipeYield: meal.serves,
+    totalTime: `PT${total}M`, recipeYield: `${meal.serves} serving${String(meal.serves) === '1' ? '' : 's'}`,
     recipeIngredient: meal.ingredients.map(item => `${item.amount} ${item.name}`),
     recipeInstructions: meal.steps.map((step, stepIndex) => ({ '@type': 'HowToStep', name: step.name, text: step.text, url: `${recipeUrl(meal)}#step-${stepIndex + 1}` }))
   };
