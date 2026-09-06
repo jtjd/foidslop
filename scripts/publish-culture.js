@@ -202,12 +202,18 @@ function patchHome() {
   if (!fs.existsSync(file)) return;
   let html = fs.readFileSync(file, 'utf8');
   html = html.replace(/<!-- culture-expansion:start -->[\s\S]*?<!-- culture-expansion:end -->/g, '');
-  if (!html.includes('css/culture.css')) html = html.replace('</head>', `<link rel="stylesheet" href="css/culture.css?v=${STYLE_VERSION}">\n</head>`);
+  if (/css\/culture\.css\?v=[^"']+/.test(html)) html = html.replace(/css\/culture\.css\?v=[^"']+/, `css/culture.css?v=${STYLE_VERSION}`);
+  else html = html.replace('</head>', `<link rel="stylesheet" href="css/culture.css?v=${STYLE_VERSION}">\n</head>`);
   if (!html.includes('property="og:site_name"')) html = html.replace('<meta property="og:title"', '<meta property="og:site_name" content="foidslop">\n<meta property="og:title"');
+  html = html.replace(/\n\s*"alternateName": \["Foid Slop", "foidslop\.com"\],/g, '');
   html = html.replace('"@type": "WebSite",\n    "name": "foidslop",', '"@type": "WebSite",\n    "name": "foidslop",\n    "alternateName": ["Foid Slop", "foidslop.com"],');
   if (!html.includes('href="culture" class="nav-link"')) html = html.replace(/(<a href="slop\/archive"[^>]*>Archive<\/a>)/, '$1\n    <a href="culture" class="nav-link">Culture</a>');
   const module = `<!-- culture-expansion:start --><section class="zine-culture" aria-labelledby="culture-desk-title"><div class="zine-section-head"><h2 id="culture-desk-title">Elsewhere in the slop</h2><a href="culture">Open culture desk</a></div><div class="zine-culture-grid">${culture.articles.slice(0, 3).map(article => `<a href="culture/${article.slug}"><span>${esc(article.eyebrow.replace('Field notes / ', ''))}</span><strong>${esc(article.title)}</strong><p>${esc(article.deck)}</p></a>`).join('')}</div><div class="zine-culture-bottom"><a href="dictionary"><strong>Slop Dictionary</strong><span>Internet vocabulary for foidslop, girl dinner, mogging, slop, and everything around them.</span></a><a href="culture/slop-index"><strong>Foidslop Media Index</strong><span>Yearning has now been quantified. The spreadsheet is thriving.</span></a></div></section><!-- culture-expansion:end -->`;
-  html = html.replace('<footer>', `${module}<footer>`);
+  const repeatNewsletter = '<section class="zine-newsletter zine-newsletter-repeat"';
+  const signature = '<section class="zine-signature"';
+  if (html.includes(repeatNewsletter)) html = html.replace(repeatNewsletter, `${module}${repeatNewsletter}`);
+  else if (html.includes(signature)) html = html.replace(signature, `${module}${signature}`);
+  else html = html.replace('</main>', `${module}</main>`);
   write(file, html);
 }
 function patchNavigation() {

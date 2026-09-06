@@ -153,3 +153,16 @@ test('foidslop pillar carries visual receipts', () => {
   assert.match(generated, /foid-r9k-2018\.webp/);
   assert.match(generated, /girl-dinner-2023\.webp/);
 });
+
+test('homepage culture integration stays inside the editorial flow', () => {
+  const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  assert.equal((home.match(/"alternateName"/g) || []).length, 1, 'homepage should have exactly one alternateName key');
+  assert.match(home, /css\/culture\.css\?v=20260906-3/);
+  const moduleStart = home.indexOf('<!-- culture-expansion:start -->');
+  const moduleEnd = home.indexOf('<!-- culture-expansion:end -->');
+  const repeatNewsletter = home.indexOf('zine-newsletter zine-newsletter-repeat');
+  const mainEnd = home.indexOf('</main>');
+  assert.ok(moduleStart > 0 && moduleEnd > moduleStart, 'homepage culture module missing');
+  assert.ok(repeatNewsletter > moduleEnd, 'culture module should come before the closing newsletter');
+  assert.ok(mainEnd > moduleEnd, 'culture module must stay inside main');
+});
