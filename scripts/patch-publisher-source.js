@@ -33,16 +33,14 @@ replaceOnce(
 );
 
 replaceOnce(
-  `  return [meal.name, meal.description, meal.headnote, meal.category, meal.cuisine, ...meal.tags, ...meal.ingredients.map(item => item.name)].join(' ').toLowerCase();`,
-  `  return [meal.name, meal.description, meal.headnote || '', meal.category, meal.cuisine, ...meal.tags, ...meal.ingredients.map(item => item.name)].join(' ').toLowerCase();`,
+  "  return [meal.name, meal.description, meal.headnote, meal.category, meal.cuisine, ...meal.tags, ...meal.ingredients.map(item => item.name)].join(' ').toLowerCase();",
+  "  return [meal.name, meal.description, meal.headnote || '', meal.category, meal.cuisine, ...meal.tags, ...meal.ingredients.map(item => item.name)].join(' ').toLowerCase();",
   'archive search headnote handling'
 );
 
-replaceOnce(
-  `<p class="slop-desc">\${esc(meal.description)}</p><p class="slop-headnote">\${esc(meal.headnote)}</p>\${editorialSection}<p class="section-label">At a Glance</p>`,
-  `<p class="slop-desc">\${esc(meal.description)}</p>\${meal.headnote ? `<p class="slop-headnote">\${esc(meal.headnote)}</p>` : ''}\${editorialSection}<p class="section-label">At a Glance</p>`,
-  'recipe headnote rendering'
-);
+const renderBefore = '<p class="slop-desc">${esc(meal.description)}</p><p class="slop-headnote">${esc(meal.headnote)}</p>${editorialSection}<p class="section-label">At a Glance</p>';
+const renderAfter = '<p class="slop-desc">${esc(meal.description)}</p>${meal.headnote ? `<p class="slop-headnote">${esc(meal.headnote)}</p>` : \'\'}${editorialSection}<p class="section-label">At a Glance</p>';
+replaceOnce(renderBefore, renderAfter, 'recipe headnote rendering');
 
 if (changed) fs.writeFileSync(file, source);
 console.log(changed ? 'Patched publisher source.' : 'Publisher source already patched.');
