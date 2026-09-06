@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-05T00:00:00.000Z",
+  "generated": "2026-09-06T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -8288,13 +8288,14 @@
       "notes": "These are perfect for eating while standing in the kitchen.",
       "photo_search": "small skewers threaded with salami, mozzarella, olives, and cherry tomatoes",
       "publishDate": "2026-09-06",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of small skewers threaded with salami, mozzarella, olives, and cherry tomatoes",
       "headnote": "The method for Antipasto Skewers is short because the ingredients already know what they are doing. Give small skewers enough heat or seasoning, then finish with tortellini.",
       "seoTitle": "Antipasto Skewers Recipe for One | foidslop",
       "seoDescription": "All the flavors of an antipasto plate, threaded onto skewers for easy eating. Made for one in 10 minutes, with small skewers and tortellini.",
       "substitutions": "Small skewers can become whatever you have on hand. Keep portions honest for one and season louder than you think for such a small plate.",
-      "storage": "This is best straight away. If small skewers or tortellini needs to wait, cover it separately for one day and reassemble so the crisp parts do not soften."
+      "storage": "This is best straight away. If small skewers or tortellini needs to wait, cover it separately for one day and reassemble so the crisp parts do not soften.",
+      "dateModified": "2026-09-06"
     },
     {
       "id": 130,
