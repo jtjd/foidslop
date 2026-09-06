@@ -8,7 +8,7 @@ const BASE_URL = 'https://foidslop.com';
 const DICTIONARY_FILE = path.join(ROOT, 'data', 'dictionary.json');
 const CULTURE_FILE = path.join(ROOT, 'data', 'culture-articles.json');
 const INDEX_FILE = path.join(ROOT, 'data', 'slop-index.json');
-const STYLE_VERSION = '20260906-1';
+const STYLE_VERSION = '20260906-2';
 const args = process.argv.slice(2);
 const checkOnly = args.includes('--check');
 const dateIndex = args.indexOf('--date');
@@ -52,6 +52,22 @@ const bannedStyle = [
   /\bnot just .+ but also\b/i
 ];
 
+function validateEvidence(owner, evidence, sectionCount, errors) {
+  for (const [index, receipt] of (evidence || []).entries()) {
+    const label = `${owner} evidence ${index + 1}`;
+    for (const field of ['image', 'alt', 'caption', 'sourceLabel', 'sourceUrl']) {
+      if (!String(receipt[field] || '').trim()) errors.push(`${label}: missing ${field}`);
+    }
+    if (!Number.isInteger(receipt.afterSection) || receipt.afterSection < 0 || receipt.afterSection >= sectionCount) errors.push(`${label}: invalid afterSection`);
+    if (!/^culture\/receipts\/[a-z0-9-]+\.webp$/.test(receipt.image || '')) errors.push(`${label}: image must be a local WebP receipt`);
+    if (!/^https:\/\//.test(receipt.sourceUrl || '')) errors.push(`${label}: invalid sourceUrl`);
+    const imageFile = path.join(ROOT, receipt.image || '');
+    if (!fs.existsSync(imageFile)) errors.push(`${label}: missing local image ${receipt.image}`);
+    else if (fs.statSync(imageFile).size > 750000) errors.push(`${label}: image exceeds 750 KB`);
+    if (!Number.isInteger(receipt.width) || receipt.width < 1 || !Number.isInteger(receipt.height) || receipt.height < 1) errors.push(`${label}: missing image dimensions`);
+  }
+}
+
 function validateSource() {
   const errors = [];
   for (const [label, source] of [['dictionary', dictionary], ['culture', culture], ['slop index', slopIndex]]) {
@@ -71,6 +87,7 @@ function validateSource() {
     if ((entry.description || '').length < 90 || (entry.description || '').length > 180) errors.push(`dictionary ${entry.slug}: description should be 90-180 chars`);
     for (const slug of entry.related || []) if (!dictionaryBySlug.has(slug)) errors.push(`dictionary ${entry.slug}: unknown related slug ${slug}`);
     for (const source of entry.sources || []) if (!/^https:\/\//.test(source.url || '')) errors.push(`dictionary ${entry.slug}: invalid source URL`);
+    validateEvidence(`dictionary ${entry.slug}`, entry.evidence, entry.sections.length, errors);
   }
   if (dictionaryBySlug.get('foidslop')?.route !== 'what-is-foidslop') errors.push('dictionary: foidslop must preserve /what-is-foidslop');
   if (dictionaryBySlug.get('foid')?.route !== 'what-does-foid-mean') errors.push('dictionary: foid must preserve /what-does-foid-mean');
@@ -84,6 +101,7 @@ function validateSource() {
     if (!Array.isArray(article.sections) || article.sections.length < 4) errors.push(`culture ${article.slug}: needs at least four sections`);
     for (const slug of article.dictionaryLinks || []) if (!dictionaryBySlug.has(slug)) errors.push(`culture ${article.slug}: unknown dictionary slug ${slug}`);
     for (const source of article.sources || []) if (!/^https:\/\//.test(source.url || '')) errors.push(`culture ${article.slug}: invalid source URL`);
+    validateEvidence(`culture ${article.slug}`, article.evidence, article.sections.length, errors);
   }
   if (!Array.isArray(slopIndex.items) || slopIndex.items.length < 8) errors.push('slop index: needs at least eight entries');
   const ids = new Set();
@@ -125,8 +143,16 @@ function sourceList(sources) {
   if (!sources?.length) return '';
   return `<section class="culture-sources"><p class="content-eyebrow">Sources / receipts</p><ul>${sources.map(source => `<li><a href="${esc(source.url)}" rel="external">${esc(source.label)}</a></li>`).join('')}</ul></section>`;
 }
-function sectionHtml(sections) {
-  return sections.map(section => `<section><h2>${esc(section.heading)}</h2>${section.paragraphs.map(p => `<p>${esc(p)}</p>`).join('')}</section>`).join('');
+function receiptHtml(receipt, route) {
+  const prefix = prefixFor(route);
+  const transcript = receipt.transcript ? `<details class="culture-receipt-transcript"><summary>Transcript</summary><p>${esc(receipt.transcript)}</p></details>` : '';
+  return `<figure class="culture-receipt"><a class="culture-receipt-image" href="${prefix}${esc(receipt.image)}"><img src="${prefix}${esc(receipt.image)}" alt="${esc(receipt.alt)}" width="${receipt.width}" height="${receipt.height}" loading="lazy" decoding="async"></a><figcaption><span class="content-eyebrow">Receipt</span><p>${esc(receipt.caption)}</p><a href="${esc(receipt.sourceUrl)}" rel="external">Source: ${esc(receipt.sourceLabel)}</a>${transcript}</figcaption></figure>`;
+}
+function sectionHtml(sections, evidence = [], route = '') {
+  return sections.map((section, index) => {
+    const receipts = evidence.filter(receipt => receipt.afterSection === index).map(receipt => receiptHtml(receipt, route)).join('');
+    return `<section><h2>${esc(section.heading)}</h2>${section.paragraphs.map(p => `<p>${esc(p)}</p>`).join('')}</section>${receipts}`;
+  }).join('');
 }
 function relatedDictionary(entry, route) {
   const items = (entry.related || []).map(slug => dictionaryBySlug.get(slug)).filter(Boolean);
@@ -139,7 +165,7 @@ function renderDictionaryEntry(entry) {
     { '@context': 'https://schema.org', '@type': 'Article', headline: entry.title, description: entry.description, datePublished: '2026-09-06', dateModified: dictionary.revisionDate, author: { '@type': 'Organization', name: 'foidslop', url: BASE_URL }, publisher: { '@type': 'Organization', name: 'foidslop', url: BASE_URL, logo: { '@type': 'ImageObject', url: `${BASE_URL}/brand-icon.webp` } }, mainEntityOfPage: canonical(route), about: [entry.term, 'internet slang'] },
     { '@context': 'https://schema.org', '@type': 'DefinedTerm', name: entry.term, description: entry.definition, url: canonical(route), inDefinedTermSet: `${BASE_URL}/dictionary` }
   ];
-  return `${commonHead({ route, title: entry.seoTitle, description: entry.description, schema, rootFeed: true })}${header(route, 'dictionary')}<main id="main" class="article-page culture-article"><p class="content-eyebrow">Slop Dictionary / ${esc(entry.term)}</p><h1>${esc(entry.title)}</h1><p class="article-deck">${esc(entry.deck)}</p><aside class="culture-definition"><span>Short version</span><p>${esc(entry.definition)}</p></aside>${sectionHtml(entry.sections)}${sourceList(entry.sources)}${relatedDictionary(entry, route)}<p class="article-cta"><a href="${prefixFor(route)}dictionary">Open the Slop Dictionary</a><a href="${prefixFor(route)}culture">Read Culture</a><a href="${prefixFor(route)}slop/archive">Eat something</a></p></main>${footer(route)}`;
+  return `${commonHead({ route, title: entry.seoTitle, description: entry.description, schema, rootFeed: true })}${header(route, 'dictionary')}<main id="main" class="article-page culture-article"><p class="content-eyebrow">Slop Dictionary / ${esc(entry.term)}</p><h1>${esc(entry.title)}</h1><p class="article-deck">${esc(entry.deck)}</p><aside class="culture-definition"><span>Short version</span><p>${esc(entry.definition)}</p></aside>${sectionHtml(entry.sections, entry.evidence, route)}${sourceList(entry.sources)}${relatedDictionary(entry, route)}<p class="article-cta"><a href="${prefixFor(route)}dictionary">Open the Slop Dictionary</a><a href="${prefixFor(route)}culture">Read Culture</a><a href="${prefixFor(route)}slop/archive">Eat something</a></p></main>${footer(route)}`;
 }
 function renderDictionaryIndex() {
   const route = 'dictionary';
@@ -155,7 +181,7 @@ function renderCultureArticle(article) {
   const route = `culture/${article.slug}`;
   const schema = { '@context': 'https://schema.org', '@type': 'Article', headline: article.title, description: article.description, datePublished: '2026-09-06', dateModified: culture.revisionDate, author: { '@type': 'Organization', name: 'foidslop', url: BASE_URL }, publisher: { '@type': 'Organization', name: 'foidslop', url: BASE_URL, logo: { '@type': 'ImageObject', url: `${BASE_URL}/brand-icon.webp` } }, mainEntityOfPage: canonical(route), about: article.dictionaryLinks || [] };
   const glossary = (article.dictionaryLinks || []).map(slug => dictionaryBySlug.get(slug)).filter(Boolean);
-  return `${commonHead({ route, title: article.seoTitle, description: article.description, schema })}${header(route, 'culture')}<main id="main" class="article-page culture-article"><p class="content-eyebrow">${esc(article.eyebrow)}</p><h1>${esc(article.title)}</h1><p class="article-deck">${esc(article.deck)}</p>${sectionHtml(article.sections)}${glossary.length ? `<aside class="culture-glossary"><span>Vocabulary involved</span>${glossary.map(entry => `<a href="../${dictionaryRoute(entry)}">${esc(entry.term)}</a>`).join('')}</aside>` : ''}${sourceList(article.sources)}${cultureRelated(article)}</main>${footer(route)}`;
+  return `${commonHead({ route, title: article.seoTitle, description: article.description, schema })}${header(route, 'culture')}<main id="main" class="article-page culture-article"><p class="content-eyebrow">${esc(article.eyebrow)}</p><h1>${esc(article.title)}</h1><p class="article-deck">${esc(article.deck)}</p>${sectionHtml(article.sections, article.evidence, route)}${glossary.length ? `<aside class="culture-glossary"><span>Vocabulary involved</span>${glossary.map(entry => `<a href="../${dictionaryRoute(entry)}">${esc(entry.term)}</a>`).join('')}</aside>` : ''}${sourceList(article.sources)}${cultureRelated(article)}</main>${footer(route)}`;
 }
 function renderCultureIndex() {
   const route = 'culture';

@@ -98,3 +98,19 @@ test('Slop Index classifies media rather than people', () => {
     assert.ok(item.type, `missing media type: ${item.id}`);
   }
 });
+
+test('culture receipts are local, sourced, and dimensioned', () => {
+  const receipts = [...dictionary.entries.flatMap(entry => entry.evidence || []), ...culture.articles.flatMap(article => article.evidence || [])];
+  assert.ok(receipts.length >= 3, 'expected launch receipts');
+  for (const receipt of receipts) {
+    assert.match(receipt.image, /^culture\/receipts\/[a-z0-9-]+\.webp$/);
+    assert.match(receipt.sourceUrl, /^https:\/\//);
+    assert.ok(receipt.alt.length >= 30, 'receipt needs useful alt text');
+    assert.ok(receipt.caption.length >= 50, 'receipt needs a useful caption');
+    assert.ok(Number.isInteger(receipt.width) && receipt.width > 0);
+    assert.ok(Number.isInteger(receipt.height) && receipt.height > 0);
+    const file = path.join(root, receipt.image);
+    assert.ok(fs.existsSync(file), `missing receipt image ${receipt.image}`);
+    assert.ok(fs.statSync(file).size <= 750000, `receipt image too large ${receipt.image}`);
+  }
+});
