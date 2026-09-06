@@ -23,6 +23,9 @@ jobs:
       - name: Run unit tests
         run: npm test
 
+      - name: Validate culture source
+        run: node scripts/publish-culture.js --check
+
       - name: Apply editorial remediation in validation workspace
         run: node scripts/apply-editorial-overrides.js
 
@@ -30,7 +33,15 @@ jobs:
         run: node scripts/audit-editorial-quality.js
 
       - name: Regenerate public site
-        run: node scripts/daily-publish.js
+        run: |
+          node scripts/daily-publish.js
+          node scripts/publish-culture.js
 
       - name: Validate generated SEO output
         run: node scripts/seo-check.js
+
+      - name: Validate deployable public build
+        run: node scripts/build-deploy.js
+
+      - name: Re-run tests after generation
+        run: npm test
