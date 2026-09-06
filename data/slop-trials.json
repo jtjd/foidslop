@@ -1,0 +1,149 @@
+{
+  "revisionDate": "2026-09-06",
+  "items": [
+    {
+      "id": "twilight",
+      "name": "Twilight",
+      "category": "movies",
+      "prompt": "Rain, yearning, vampires, bad decisions. Foundational specimen."
+    },
+    {
+      "id": "nana",
+      "name": "Nana",
+      "category": "anime",
+      "prompt": "Outfits, cigarettes, music, friendship, catastrophic romance."
+    },
+    {
+      "id": "the-sims",
+      "name": "The Sims",
+      "category": "games",
+      "prompt": "Three hours on a kitchen and five minutes on the actual household."
+    },
+    {
+      "id": "stardew-valley",
+      "name": "Stardew Valley",
+      "category": "games",
+      "prompt": "Farming, decorating, tiny gifts, romance, seasonal rituals."
+    },
+    {
+      "id": "gossip-girl",
+      "name": "Gossip Girl",
+      "category": "television",
+      "prompt": "Luxury, terrible dating decisions, clothes doing narrative work."
+    },
+    {
+      "id": "mamma-mia",
+      "name": "Mamma Mia!",
+      "category": "movies",
+      "prompt": "Greek island. ABBA. Three possible fathers. Case nearly closed."
+    },
+    {
+      "id": "pride-and-prejudice-2005",
+      "name": "Pride & Prejudice (2005)",
+      "category": "movies",
+      "prompt": "Hand flex. Rain. Muddy hems. Advanced yearning technology."
+    },
+    {
+      "id": "animal-crossing",
+      "name": "Animal Crossing",
+      "category": "games",
+      "prompt": "Debt, fruit economics, furniture placement, tiny animals."
+    },
+    {
+      "id": "sex-and-the-city",
+      "name": "Sex and the City",
+      "category": "television",
+      "prompt": "Shoes, friendship, restaurants, men, columns, decades of discourse."
+    },
+    {
+      "id": "gilmore-girls",
+      "name": "Gilmore Girls",
+      "category": "television",
+      "prompt": "Coffee, coats, autumn, impossible dialogue speed."
+    },
+    {
+      "id": "the-vampire-diaries",
+      "name": "The Vampire Diaries",
+      "category": "television",
+      "prompt": "Cheekbones, supernatural paperwork, love triangles, body count."
+    },
+    {
+      "id": "letterboxd",
+      "name": "Letterboxd",
+      "category": "activities",
+      "prompt": "Four lowercase words and a top four treated as constitutional law."
+    },
+    {
+      "id": "matcha",
+      "name": "Matcha",
+      "category": "food",
+      "prompt": "Green powder carrying several aesthetics on its back."
+    },
+    {
+      "id": "tinned-fish",
+      "name": "Tinned fish",
+      "category": "food",
+      "prompt": "A can, good bread, little plate, unreasonable visual authority."
+    },
+    {
+      "id": "tiny-treat",
+      "name": "A tiny treat",
+      "category": "food",
+      "prompt": "Small purchase. Large emotional accounting department."
+    },
+    {
+      "id": "bunni",
+      "name": "The username bunni",
+      "category": "usernames",
+      "prompt": "One vowel mutation. Entire profile already visible in your head."
+    },
+    {
+      "id": "rottingangel",
+      "name": "The username rottingangel",
+      "category": "usernames",
+      "prompt": "Soft noun plus damage modifier. Textbook construction."
+    },
+    {
+      "id": "romance-novels",
+      "name": "Romance novels",
+      "category": "books",
+      "prompt": "Yearning, tropes, annotations, tabs, increasingly specific men."
+    },
+    {
+      "id": "sad-girl-playlist",
+      "name": "A sad-girl playlist",
+      "category": "music",
+      "prompt": "Lowercase title. Rain photo. Twelve songs about the same mistake."
+    },
+    {
+      "id": "coquette-bedroom",
+      "name": "A coquette bedroom",
+      "category": "aesthetics",
+      "prompt": "Bows, lace, lamps, perfume bottles, zero undecorated surfaces."
+    },
+    {
+      "id": "claw-clip",
+      "name": "A claw clip",
+      "category": "aesthetics",
+      "prompt": "Plastic hair hardware promoted to cultural infrastructure."
+    },
+    {
+      "id": "booktok",
+      "name": "BookTok",
+      "category": "activities",
+      "prompt": "Tabs, tropes, special editions, annotations, twelve-book weekends."
+    },
+    {
+      "id": "dress-to-impress",
+      "name": "Dress to Impress",
+      "category": "games",
+      "prompt": "Runway competition with enough outfit discourse to qualify immediately."
+    },
+    {
+      "id": "vampire-boyfriend",
+      "name": "An impractical vampire boyfriend",
+      "category": "activities",
+      "prompt": "Not technically a hobby. Historically significant anyway."
+    }
+  ]
+}

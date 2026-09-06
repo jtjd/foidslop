@@ -21,8 +21,10 @@ const RECIPE_HUB_DIR = path.join(ROOT, 'recipes');
 const DB_FILE = path.join(ROOT, 'data', 'foidslop-meals.json');
 const HOMEPAGE_FILE = path.join(ROOT, 'data', 'homepage.json');
 const BASE_URL = 'https://foidslop.com';
-const PINTEREST_URL = 'https://www.pinterest.com/foidslop/';
-const SAME_AS = [PINTEREST_URL];
+const SITE_IDENTITY_FILE = path.join(ROOT, 'data', 'site-identity.json');
+const siteIdentity = fs.existsSync(SITE_IDENTITY_FILE) ? JSON.parse(fs.readFileSync(SITE_IDENTITY_FILE, 'utf8')) : { sameAs: ['https://www.pinterest.com/foidslop/'] };
+const SAME_AS = Array.isArray(siteIdentity.sameAs) ? siteIdentity.sameAs.filter(isHttpsUrl) : [];
+const PINTEREST_URL = SAME_AS.find(url => /pinterest\.com/i.test(url)) || 'https://www.pinterest.com/foidslop/';
 const TZ = 'America/New_York';
 const RECIPE_EDITORIAL_FILE = path.join(ROOT, 'data', 'recipe-editorial.json');
 const GLOBAL_CSS_VERSION = '20260827-1';
@@ -442,12 +444,12 @@ function footer(root = '') {
   <span class="footer-copy">&copy; ${new Date().getFullYear()} foidslop</span>
   <nav class="footer-links" aria-label="Footer navigation">
     <a href="${root}what-is-foidslop">What is foidslop?</a><span class="footer-dot"></span>
-    <a href="${root}what-does-foid-mean">Foid meaning</a><span class="footer-dot"></span>
-    <a href="${root}editorial-standards">Editorial standards</a><span class="footer-dot"></span>
+    <a href="${root}dictionary">Dictionary</a><span class="footer-dot"></span>
+    <a href="${root}culture">Culture</a><span class="footer-dot"></span>
     <a href="${PINTEREST_URL}" rel="external">Pinterest</a><span class="footer-dot"></span>
     <a href="${root}feed.xml" type="application/atom+xml">RSS</a><span class="footer-dot"></span>
-    <a href="${root}privacy">Privacy</a><span class="footer-dot"></span>
-    <a href="${root}privacy#contact">Contact</a>
+    <a href="${root}about">About</a><span class="footer-dot"></span>
+    <a href="${root}privacy">Privacy</a>
   </nav>
 </div></footer>`;
 }

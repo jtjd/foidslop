@@ -8,7 +8,7 @@ This repository contains the static foidslop website, its recipe data, culture d
 - `assets/js/` contains browser JavaScript used by the published site.
 - `assets/shop/` contains retired store artwork kept out of public builds.
 - `data/` contains the private recipe source files, curated recipe editorial notes, culture and dictionary source files, editable homepage publication settings, editorial roundup configuration, and the synced reader-ratings cache.
-- `functions/api/` contains Cloudflare Pages Functions that collect recipe votes.
+- `functions/api/` contains Cloudflare Pages Functions that collect recipe votes and community Slop Trial votes.
 - `scripts/` contains recipe publishing, culture publishing, image, SEO, and deployment tools.
 - `css/`, `recipes/`, `slop/`, `culture/`, and `dictionary/` contain public site pages and styles.
 - `.deploy/` is generated locally and is the directory Cloudflare Pages publishes.
@@ -17,9 +17,9 @@ Public files in `assets/brand/` and `assets/js/` are copied to their established
 
 ## Culture desk and Slop Dictionary
 
-`data/culture-articles.json`, `data/dictionary.json`, and `data/slop-index.json` are the curated source of truth for the non-recipe publication. `scripts/publish-culture.js` validates those files and generates `/culture`, `/dictionary`, the Foidslop Media Index, the culture Atom feed, and the two existing branded search pages at `/what-is-foidslop` and `/what-does-foid-mean`.
+`data/culture-articles.json`, `data/dictionary.json`, `data/slop-index.json`, `data/slop-trials.json`, `data/username-generator.json`, and `data/slop-taxonomy.json` are the curated source of truth for the non-recipe publication. `scripts/publish-culture.js` validates those files and generates `/culture`, `/dictionary`, the Foidslop Media Index, the culture Atom feed, and the two existing branded search pages at `/what-is-foidslop` and `/what-does-foid-mean`.
 
-The culture publisher runs after `daily-publish.js`, so the recipe publisher remains independent and continues to own recipe pages, collections, roundups, and the core homepage. The culture pass adds a small homepage module and Culture navigation after the recipe build has finished.
+The culture publisher runs after `daily-publish.js`, so the recipe publisher remains independent and continues to own recipe pages, collections, roundups, and the core homepage. `publish-culture-products.js` runs last and adds Is It Foidslop?, the username generator, the Slop Taxonomy, weekly culture promotion, About, and product metadata.
 
 Culture source is deliberately curated rather than generated from keyword lists. Validation rejects missing sections, unknown dictionary links, broken source URLs, em dashes, and a short list of stock AI-writing phrases. Existing high-value branded URLs must not move.
 
@@ -39,6 +39,14 @@ The normal `npm run publish` command runs both recipe and culture publishing in 
 The newsletter form also supports provider-required values through `newsletter.hiddenFields`. Those values render as ordinary hidden HTML inputs, so the integration does not need an iframe or third-party script.
 
 `data/weekly-polls.json` contains the twelve-week editorial poll queue. `scripts/weekly-community.js` opens and closes those polls, counts aggregate results, swaps a unique winner onto Friday, prepares its images, and creates an idempotent Kit broadcast. See [Weekly community operations](docs/weekly-community.md) for setup, safe rollout, and recovery commands.
+
+## Slop Trial voting
+
+`/culture/is-it-foidslop` uses first-party Pages Functions at `/api/slop-vote` and `/api/slop-votes`. The preferred Workers KV binding is `SLOP_VOTES`. If it is absent, the functions safely fall back to the existing `RATINGS` namespace using `slop:`-prefixed keys, which do not overlap recipe `counts:` or `voter:` keys. `SLOP_VOTE_SALT` is optional; `VOTE_SALT` is used as a fallback.
+
+The public trial list lives in `data/slop-trials.json`. One vote per visitor/item is kept for 90 days. The browser also remembers its vote locally so the normal UI does not invite repeat voting.
+
+`data/site-identity.json` is the source of truth for Organization `sameAs`. Add only profiles that have actually been claimed. Do not create placeholder social URLs for schema.
 
 ## Reader ratings
 
@@ -95,6 +103,8 @@ npm run preview
 npm run publish
 npm run culture:check
 npm run culture:publish
+npm run products:publish
+npm run products:check
 npm run optimize
 npm run refresh:copy
 npm run seo:crawl

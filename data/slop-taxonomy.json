@@ -1,0 +1,104 @@
+{
+  "revisionDate": "2026-09-06",
+  "branches": [
+    {
+      "name": "Food Slop",
+      "description": "Meals classified by who made them, how assembled they look, or how much effort survived plating.",
+      "items": [
+        {
+          "name": "Foidslop",
+          "href": "/what-is-foidslop",
+          "note": "Female-coded food, then eventually much more than food."
+        },
+        {
+          "name": "Guyslop",
+          "href": "/dictionary/guyslop",
+          "note": "Protein, starch, hot sauce, one bowl, optimized."
+        },
+        {
+          "name": "Girl dinner",
+          "href": "/dictionary/girl-dinner",
+          "note": "Assembled snack dinner with excellent category recognition."
+        },
+        {
+          "name": "Wifechow",
+          "href": "/dictionary/wifechow",
+          "note": "Conventional home-cooked dinner branch."
+        },
+        {
+          "name": "Goyslop",
+          "href": "/dictionary/goyslop",
+          "note": "A separate imageboard-born slop compound with its own history."
+        }
+      ]
+    },
+    {
+      "name": "Media Slop",
+      "description": "Movies, shows, games, books, and franchises sorted by audience, repetition, and cultural residue.",
+      "items": [
+        {
+          "name": "Foidslop media",
+          "href": "/culture/foidslop-media",
+          "note": "Romance, life sims, vampires, fandom, yearning, customization."
+        },
+        {
+          "name": "Prestige foidslop",
+          "href": "/culture/foidslop-media-canon",
+          "note": "Period drama and literary adaptation with awards nearby."
+        },
+        {
+          "name": "Franchise slop",
+          "href": "/culture/why-everything-is-slop",
+          "note": "The installment exists because the machine still has power."
+        },
+        {
+          "name": "Cozy slop",
+          "href": "/culture/slop-index",
+          "note": "Reliable comfort consumed with zero need to defend the choice."
+        }
+      ]
+    },
+    {
+      "name": "Content Slop",
+      "description": "Feed material where volume, repetition, and publishing pressure are part of the definition.",
+      "items": [
+        {
+          "name": "AI slop",
+          "href": "/dictionary/ai-slop",
+          "note": "Low-quality machine-made images, text, video, or audio."
+        },
+        {
+          "name": "Content slop",
+          "href": "/dictionary/content-slop",
+          "note": "High-volume filler regardless of who or what made it."
+        },
+        {
+          "name": "Engagement slop",
+          "href": "/culture/why-everything-is-slop",
+          "note": "Posts engineered mainly to keep replies and reactions moving."
+        }
+      ]
+    },
+    {
+      "name": "Posting Slop",
+      "description": "The stuff produced when the account needs to keep posting even though civilization would survive a day off.",
+      "items": [
+        {
+          "name": "Ragebait",
+          "href": "/culture/why-everything-is-slop",
+          "note": "The take is shaped for anger before it is shaped for truth."
+        },
+        {
+          "name": "Discourse slop",
+          "href": "/culture/how-forum-slang-goes-mainstream",
+          "note": "Repeated arguments with new screenshots and the same six positions."
+        },
+        {
+          "name": "Word salad",
+          "href": "/dictionary/content-slop",
+          "note": "Many words entered. Meaning did not make the trip."
+        }
+      ]
+    }
+  ]
+}

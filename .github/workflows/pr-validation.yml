@@ -24,7 +24,9 @@ jobs:
         run: npm test
 
       - name: Validate culture source
-        run: node scripts/publish-culture.js --check
+        run: |
+          node scripts/publish-culture.js --check
+          node scripts/publish-culture-products.js --check
 
       - name: Apply editorial remediation in validation workspace
         run: node scripts/apply-editorial-overrides.js
@@ -36,6 +38,7 @@ jobs:
         run: |
           node scripts/daily-publish.js
           node scripts/publish-culture.js
+          node scripts/publish-culture-products.js
 
       - name: Validate generated SEO output
         run: node scripts/seo-check.js

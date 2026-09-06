@@ -1,0 +1,197 @@
+{
+  "revisionDate": "2026-09-06",
+  "categories": {
+    "soft": {
+      "label": "Soft",
+      "bases": [
+        "bunni",
+        "kitty",
+        "angel",
+        "fae",
+        "pixie",
+        "doll",
+        "peach",
+        "cherry",
+        "mochi",
+        "sushi",
+        "honey",
+        "petal",
+        "lamb",
+        "poppy",
+        "mimi",
+        "lulu"
+      ],
+      "modifiers": [
+        "baby",
+        "little",
+        "soft",
+        "sweet",
+        "pink",
+        "tiny",
+        "milk",
+        "cloud",
+        "dream",
+        "moon"
+      ],
+      "suffixes": [
+        "girl",
+        "kiss",
+        "milk",
+        "core",
+        "online",
+        "jpg",
+        "mp3",
+        "angel"
+      ]
+    },
+    "terminal": {
+      "label": "Terminal",
+      "bases": [
+        "bunni",
+        "angel",
+        "doll",
+        "kitty",
+        "faerie",
+        "princess",
+        "cherub",
+        "lamb",
+        "baby",
+        "star"
+      ],
+      "modifiers": [
+        "rotting",
+        "wired",
+        "internet",
+        "dead",
+        "offline",
+        "broken",
+        "digital",
+        "sick",
+        "lost",
+        "parasocial"
+      ],
+      "suffixes": [
+        "online",
+        "dotcom",
+        "exe",
+        "jpg",
+        "posting",
+        "archive",
+        "forum",
+        "wifi",
+        "files"
+      ]
+    },
+    "gothic": {
+      "label": "Gothic",
+      "bases": [
+        "angel",
+        "doll",
+        "bunni",
+        "vampire",
+        "cherub",
+        "princess",
+        "widow",
+        "kitty",
+        "saint",
+        "rose"
+      ],
+      "modifiers": [
+        "blood",
+        "grave",
+        "dead",
+        "rotting",
+        "vampire",
+        "gore",
+        "bruise",
+        "funeral",
+        "sugar",
+        "velvet"
+      ],
+      "suffixes": [
+        "gore",
+        "grave",
+        "teeth",
+        "blood",
+        "bruise",
+        "saint",
+        "mourning",
+        "kiss"
+      ]
+    },
+    "food": {
+      "label": "Food",
+      "bases": [
+        "mochi",
+        "sushi",
+        "matcha",
+        "peach",
+        "cherry",
+        "honey",
+        "milk",
+        "berry",
+        "miso",
+        "plum",
+        "jelly",
+        "sugar"
+      ],
+      "modifiers": [
+        "baby",
+        "pink",
+        "sweet",
+        "tiny",
+        "soft",
+        "strawberry",
+        "vanilla",
+        "sour",
+        "spicy",
+        "little"
+      ],
+      "suffixes": [
+        "milk",
+        "cake",
+        "jam",
+        "soda",
+        "snack",
+        "jelly",
+        "kiss",
+        "crumb"
+      ]
+    },
+    "2009": {
+      "label": "2009",
+      "bases": [
+        "kitty",
+        "angel",
+        "princess",
+        "bunny",
+        "vampire",
+        "scene",
+        "baby",
+        "cupcake",
+        "star",
+        "sparkle"
+      ],
+      "modifiers": [
+        "xX",
+        "rawr",
+        "emo",
+        "dark",
+        "neon",
+        "xx",
+        "miss",
+        "lil"
+      ],
+      "suffixes": [
+        "Xx",
+        "666",
+        "13",
+        "69",
+        "xo",
+        "rawr",
+        "girl",
+        "2009"
+      ]
+    }
+  }
+}
