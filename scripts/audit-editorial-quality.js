@@ -7,13 +7,19 @@ const { buildSubstitutions, buildStorage, buildHeadnote, buildSeoDescription } =
 const ROOT = process.cwd();
 const DB_FILE = path.join(ROOT, 'data', 'foidslop-meals.json');
 const OVERRIDES_FILE = path.join(ROOT, 'data', 'recipe-copy-overrides.json');
+const PUBLISHED_OVERRIDES_FILE = path.join(ROOT, 'data', 'published-recipe-copy-overrides.json');
 const db = JSON.parse(fs.readFileSync(DB_FILE, 'utf8'));
 const config = JSON.parse(fs.readFileSync(OVERRIDES_FILE, 'utf8'));
-const overrides = config.entries || {};
+const publishedConfig = JSON.parse(fs.readFileSync(PUBLISHED_OVERRIDES_FILE, 'utf8'));
+const overrides = {
+  ...(config.entries || {}),
+  ...(publishedConfig.entries || {})
+};
+const publishedOverrides = publishedConfig.entries || {};
 
 const badPastaSwap = /^Different short pasta shapes swap freely here\. No ([^?]+)\? Pecorino, asiago, or extra-black-pepper parmesan covers the same role in the sauce\.$/;
 const suspiciousHeadnote = /\b(save some cooking water|save a little cooking water|finish in the sauce|brown or bloom|give .* enough heat or seasoning|cook the filling until hot)\b/i;
-const genericDiscovery = /Whatever protein or hearty filling|Anything crunchy works for scooping|frozen versions cook directly|crisp or warm as intended/i;
+const genericDiscovery = /Whatever protein or hearty filling|Anything crunchy works for scooping|frozen versions cook directly|crisp or warm as intended|Protein here is a suggestion|Swap .* freely and let the sauce and timing lead/i;
 const brokenEnding = /\b(?:a|an|and|for|from|in|of|the|to|with)\.$/i;
 
 function normalize(value) {
@@ -34,6 +40,17 @@ for (const meal of db.meals || []) {
     substitutions: buildSubstitutions(meal),
     storage: buildStorage(meal)
   };
+
+  if (meal.status === 'published') {
+    const bespoke = publishedOverrides[meal.slug];
+    if (!bespoke) add(meal, 'discovery', 'published recipe is missing its bespoke editorial override', 'error');
+    else {
+      if (!normalize(bespoke.headnote)) add(meal, 'headnote', 'published recipe is missing a bespoke headnote', 'error');
+      if (!normalize(bespoke.substitutions) && !normalize(bespoke.storage)) {
+        add(meal, 'discovery', 'published recipe has no bespoke supplemental editorial guidance', 'error');
+      }
+    }
+  }
 
   for (const [field, generated] of Object.entries(generatedBody)) {
     if (normalize(meal[field]) && normalize(meal[field]) === normalize(generated)) {
@@ -66,6 +83,7 @@ const counts = findings.reduce((out, item) => {
 }, {});
 
 console.log(`Editorial quality audit: ${published.length} published actionable finding(s), ${scheduled.length} scheduled actionable finding(s).`);
+console.log(`Bespoke published coverage: ${Object.keys(publishedOverrides).length}/${(db.meals || []).filter(item => item.status === 'published').length}.`);
 console.log(`SEO descriptions still using the deterministic description helper: ${seoTemplateInfo.length} (informational; descriptions remain required).`);
 console.log('Counts:', JSON.stringify(counts, null, 2));
 if (published.length) {

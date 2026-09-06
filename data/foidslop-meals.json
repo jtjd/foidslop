@@ -58,7 +58,9 @@
       "imageAlt": "Photograph of rustic wooden board with sliced sourdough, thick slabs of butter, sharp cheddar, red grapes, and dill pickles",
       "seoTitle": "The OG Girl Dinner Recipe for One | foidslop",
       "seoDescription": "Bread, butter, sharp cheese, grapes, and pickles. The medieval peasant plate that started it all.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Use room-temperature butter and cheese so the sourdough, grapes, and pickles feel like one deliberate plate instead of fridge snacks. Keep each element in its own pile and build bites as you eat.",
+      "substitutions": "Aged gouda, manchego, or sharp cheddar all work with the bread and pickles. Swap grapes for sliced apple or pear, and use cornichons or any crisp dill pickle you actually like."
     },
     {
       "id": 2,
@@ -119,8 +121,10 @@
       "imageAlt": "Photograph of ceramic bowl of whipped feta drizzled with hot honey and scattered with toasted walnuts, served with crackers",
       "seoTitle": "Whipped Feta with Hot Honey and Walnuts | foidslop",
       "seoDescription": "Creamy, salty, sweet, and crunchy. Four textures in one bowl with zero cooking required. Made for one in 5 minutes, with feta cheese and cream cheese.",
-      "storage": "Refrigerate whipped feta in a covered container for up to three days. Keep the walnuts and bread separate, then stir the dip smooth and add fresh hot honey and nuts just before serving.",
-      "dateModified": "2026-09-06"
+      "storage": "Keep whipped feta covered in the refrigerator for up to three days, but store walnuts and bread separately. Stir the dip smooth and add fresh hot honey just before serving.",
+      "dateModified": "2026-09-06",
+      "headnote": "Blend the feta and cream cheese longer than seems necessary so the dip turns genuinely fluffy. Add hot honey and toasted walnuts only after plating so the sweet heat and crunch stay distinct.",
+      "substitutions": "Use goat cheese for part of the feta if you want a softer tang, or pecans instead of walnuts. Plain honey plus a pinch of chilli flakes works when hot honey is not around."
     },
     {
       "id": 3,
@@ -189,7 +193,10 @@
       "imageAlt": "Photograph of bowl of noodles in red chilli crisp oil topped with a halved soft boiled egg and spring onions",
       "seoTitle": "Chilli Crisp Noodles with Soft-Boiled Egg | foidslop",
       "seoDescription": "Six minute noodles that taste like you ordered them from a really good spot. Made for one in 10 minutes, with egg and soy sauce.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Whisk the chilli crisp, soy sauce, sesame oil, and rice vinegar in the serving bowl before the noodles are ready. Toss while the noodles are hot so the sauce coats them instead of pooling underneath.",
+      "substitutions": "Ramen, soba, wheat noodles, or rice noodles all work here. A fried egg can replace the soft-boiled egg, and peanut butter can be whisked into the chilli crisp sauce for a richer bowl.",
+      "storage": "The noodles are best fresh, but leftovers can be refrigerated for one day. Loosen them with a teaspoon of water or soy sauce before reheating, and cook a fresh egg for serving."
     },
     {
       "id": 4,
@@ -258,9 +265,10 @@
       "imageAlt": "Photograph of baked pasta with melted feta and burst cherry tomatoes in a ceramic casserole dish",
       "seoTitle": "Baked Feta Pasta Recipe for One | foidslop",
       "seoDescription": "The TikTok pasta that broke the internet. Roasted tomatoes, melted feta, done. A pasta recipe for one, ready in 40 minutes with cherry tomatoes.",
-      "substitutions": "Rigatoni, penne, fusilli, or another short pasta all work. If cherry tomatoes are unavailable, use grape tomatoes or chopped ripe plum tomatoes; if replacing feta, choose another tangy cheese that softens well rather than a hard grating cheese.",
-      "storage": "Refrigerate leftovers in a sealed container for up to two days. Reheat gently with a splash of water until the sauce loosens, then add fresh basil after warming.",
-      "dateModified": "2026-09-06"
+      "substitutions": "Rigatoni, penne, or fusilli all work. Grape tomatoes can replace cherry tomatoes, and another tangy soft cheese can replace feta if it melts and loosens rather than staying dry.",
+      "storage": "Refrigerate leftovers in a sealed container for up to two days. Reheat gently with a splash of water until the tomato-feta sauce loosens, then add fresh basil after warming.",
+      "dateModified": "2026-09-06",
+      "headnote": "Roast the cherry tomatoes until they burst and the feta is browned at the edges, then mash the roasted garlic into the cheese before adding pasta. Reserved pasta water is what turns the mixture into a sauce."
     },
     {
       "id": 5,
@@ -313,7 +321,10 @@
       "imageAlt": "Photograph of bowl of cottage cheese topped with everything bagel seasoning, olive oil, cherry tomatoes, and crackers",
       "seoTitle": "Cottage Cheese and Everything Bagel Plate | foidslop",
       "seoDescription": "Creamy cottage cheese, juicy tomatoes, and everything bagel seasoning make a savory plate with plenty of crunch.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Use a wide bowl so the cottage cheese can hold the olive oil and everything seasoning without burying the tomatoes. Keep cucumber or crackers on the side so every scoop still has crunch.",
+      "substitutions": "Labneh or thick Greek yogurt can replace cottage cheese if you prefer a smoother base. Radishes, sliced bell pepper, or cucumber can replace tomatoes, and chilli crisp works instead of olive oil.",
+      "storage": "Keep the cottage cheese and cut vegetables refrigerated separately for up to two days. Add everything seasoning and crackers only when serving so the seeds stay crisp."
     },
     {
       "id": 6,
@@ -374,7 +385,10 @@
       "imageAlt": "Photograph of sourdough toast heavily buttered and topped with sardines, lemon wedges, and black pepper",
       "seoTitle": "Tinned Sardines on Buttered Toast Recipe for One | foidslop",
       "seoDescription": "Briny, rich, and done in two minutes. The girl dinner for people with great taste. Made for one in 5 minutes, with quality sardines and salted butter.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Toast the sourdough until it is sturdy enough to hold the sardine oil, then butter it while hot. Lemon, black pepper, and cornichons should brighten the fish rather than cover its flavor.",
+      "substitutions": "Mackerel, smoked trout, or good tinned mussels can replace sardines. Rye works especially well in place of sourdough, and whole-grain mustard can replace Dijon.",
+      "storage": "Once opened, transfer unused sardines and their oil to a covered container and refrigerate. Make fresh toast for leftovers rather than storing the assembled sardine toast."
     },
     {
       "id": 7,
@@ -435,7 +449,10 @@
       "imageAlt": "Photograph of plate with burrata, sliced peaches, prosciutto, balsamic glaze, and fresh basil",
       "seoTitle": "Burrata with Peach and Prosciutto Recipe for One | foidslop",
       "seoDescription": "Sweet peach, salty prosciutto, creamy burrata. Summer on a plate with no cooking required. Made for one in 5 minutes, with fresh burrata and ripe peach.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "This plate depends on ripe peach and room-temperature burrata. Tear the burrata open only when you are ready to eat, then use prosciutto, basil, and black pepper to balance the fruit.",
+      "substitutions": "Nectarines or ripe figs can replace peach, and fresh mozzarella can replace burrata if needed. Speck or thinly sliced salami works in place of prosciutto.",
+      "storage": "Keep burrata, peach, and prosciutto refrigerated separately and assemble close to serving. Once dressed with olive oil and balsamic, the fruit softens quickly."
     },
     {
       "id": 8,
@@ -496,7 +513,10 @@
       "imageAlt": "Photograph of plate of smoked salmon, cream cheese bowl, capers, red onion, rye crackers, and dill",
       "seoTitle": "Smoked Salmon Plate with Cream Cheese and Capers | foidslop",
       "seoDescription": "Deli style but make it dinner. Everything a bagel would be without the bagel. A snack plate recipe for one, ready in 5 minutes with smoked salmon slices.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Slice the red onion as thinly as possible and let the cream cheese soften slightly before plating. The smoked salmon needs only capers, dill, lemon, and a crisp cracker to feel complete.",
+      "substitutions": "Labneh or creme fraiche can replace cream cheese. Rye crispbread, cucumber rounds, or toasted baguette can replace crackers, and smoked trout works well instead of salmon.",
+      "storage": "Keep the smoked salmon tightly covered and refrigerated, with crackers stored separately. Assemble only what you plan to eat so the crisp base does not soften."
     },
     {
       "id": 9,
@@ -557,7 +577,10 @@
       "imageAlt": "Photograph of sourdough toast topped with mashed avocado, everything bagel seasoning, and chilli flakes",
       "seoTitle": "Avocado Toast with Everything Bagel and Chilli Flakes | foidslop",
       "seoDescription": "Yes it is basic. Yes it is still perfect. The seasoning and chilli flakes make it. A toast recipe for one, ready in 8 minutes with ripe avocado.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Mash the avocado directly onto deeply toasted sourdough so some pieces stay chunky. Add citrus first, then everything seasoning and chilli flakes, and finish with flaky salt after tasting.",
+      "substitutions": "Lime or lemon both work with avocado. Sesame seeds and onion flakes can stand in for everything seasoning, and a fried egg or sliced tomato makes the toast more substantial.",
+      "storage": "Avocado toast is best made to order. If half an avocado remains, press wrap directly against the cut surface and refrigerate it, then toast fresh bread when serving."
     },
     {
       "id": 10,
@@ -626,7 +649,10 @@
       "imageAlt": "Photograph of bowl of hummus swirled with olive oil and paprika, served with warm pita, cucumbers, and olives",
       "seoTitle": "Hummus Plate with Warm Pita and Toppings | foidslop",
       "seoDescription": "A good hummus plate hits different when the pita is warm and the toppings are thoughtful.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Warm the pita until it is soft with a few charred spots, then dress the hummus with olive oil before adding tomatoes, cucumber, and olives. Keep the vegetables around the bowl rather than stirring them in.",
+      "substitutions": "Labneh, baba ganoush, or white bean dip can replace hummus. Use naan or toasted flatbread instead of pita, and choose any combination of cucumber, tomato, olives, or roasted peppers.",
+      "storage": "Refrigerate hummus and cut vegetables separately for up to two days. Warm fresh pita and add olive oil and paprika only when you are ready to eat."
     },
     {
       "id": 11,
@@ -683,7 +709,10 @@
       "imageAlt": "Photograph of bowl of creamy macaroni and cheese topped with freshly ground black pepper",
       "seoTitle": "Lazy Mac and Cheese Recipe for One | foidslop",
       "seoDescription": "Kraft in a pot, made correctly. Extra butter, black pepper, and no apologies.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Use less milk than the box suggests and leave a spoonful of starchy water in the pot. Extra butter and vigorous stirring make the powdered cheese sauce glossy instead of thin.",
+      "substitutions": "Annie's, Kraft, or any boxed macaroni works. Stir in sharp cheddar for more cheese flavor, or add hot sauce, peas, or buttered breadcrumbs after the sauce is smooth.",
+      "storage": "Boxed mac and cheese thickens quickly in the refrigerator. Reheat leftovers with a small splash of milk or water and stir until the sauce loosens again."
     },
     {
       "id": 12,
@@ -744,7 +773,10 @@
       "imageAlt": "Photograph of grilled cheese sandwich cut in half, served with a bowl of tomato soup for dipping",
       "seoTitle": "Grilled Cheese Dipped in Tomato Soup Recipe for One | foidslop",
       "seoDescription": "The ultimate comfort duo. Golden buttery bread, melted cheese, silky soup for dunking.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Cook the grilled cheese over medium-low heat so the bread browns before the cheese leaks out. Keep the tomato soup hot but not boiling, then cut the sandwich just before dunking.",
+      "substitutions": "Cheddar, American, fontina, or Monterey Jack all melt well. Use sourdough or white bread, and any smooth tomato soup works once adjusted with butter or a small splash of cream.",
+      "storage": "Store soup and sandwich separately. Refrigerate leftover soup for up to three days, then reheat gently; grilled cheese is best cooked fresh because the crust softens in storage."
     },
     {
       "id": 13,
@@ -805,7 +837,10 @@
       "imageAlt": "Photograph of small wooden board with folded salami, sliced cheddar, crackers, grapes, olives, and mustard",
       "seoTitle": "Charcuterie Snack Plate for One Recipe for One | foidslop",
       "seoDescription": "All the hits of a charcuterie board scaled down to a solo dinner plate. A snack plate recipe for one, ready in 8 minutes with salami or prosciutto.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Choose one cured meat, one aged cheese, one crisp thing, and one acidic or sweet thing. A small amount of salami, cheddar, crackers, grapes, and cornichons is enough for a balanced solo board.",
+      "substitutions": "Prosciutto, salami, turkey, or smoked sausage can fill the meat slot. Manchego, gouda, or cheddar all work, while apple, pear, or grapes provide the sweet element.",
+      "storage": "Return meat and cheese to the refrigerator as soon as you finish eating. Keep crackers and nuts sealed at room temperature, and store cut fruit separately."
     },
     {
       "id": 14,
@@ -866,7 +901,10 @@
       "imageAlt": "Photograph of bowl of spaghetti tossed in butter and parmesan with coarsely ground black pepper",
       "seoTitle": "Butter Noodles with Parmesan and Black Pepper | foidslop",
       "seoDescription": "Cacio e pepe's lazy cousin. Butter, parmesan, pepper, done in 10 minutes. Salted butter and parmesan make this pasta recipe for one in 12 minutes.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Take the pasta off the heat before adding parmesan, then toss butter and pasta water until the sauce looks glossy. Black pepper should be coarse enough to stay noticeable against the rich noodles.",
+      "substitutions": "Spaghetti, linguine, or short pasta all work. Pecorino can replace some or all of the parmesan, and a spoonful of cream cheese can add richness if you are short on butter.",
+      "storage": "Butter noodles are best fresh, but leftovers can be refrigerated for up to two days. Reheat with a splash of water and a little butter, then add fresh parmesan."
     },
     {
       "id": 15,
@@ -931,7 +969,10 @@
       "imageAlt": "Photograph of plate of soft scrambled eggs with cream cheese and chives, served with toast",
       "seoTitle": "Scrambled Eggs with Cream Cheese and Chives | foidslop",
       "seoDescription": "Low and slow eggs with cream cheese folded in. The softest, richest scramble. Made for one in 10 minutes, with eggs and cream cheese.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Keep the pan on the lowest heat and stir the eggs constantly so the curds stay soft. Fold in cream cheese only after the eggs are barely set, then finish with chives and black pepper.",
+      "substitutions": "Creme fraiche, mascarpone, or soft goat cheese can replace cream cheese. Dill or scallions work instead of chives, and toast or crackers can be used for serving.",
+      "storage": "Scrambled eggs lose their soft texture in storage, so make only what you plan to eat. If necessary, refrigerate promptly and reheat very gently until just warm."
     },
     {
       "id": 16,
@@ -984,7 +1025,10 @@
       "imageAlt": "Photograph of small wooden board with a wedge of brie, fig jam, apple slices, and water crackers",
       "seoTitle": "Brie with Jam and Apple on a Board Recipe for One | foidslop",
       "seoDescription": "Ripe brie, sharp jam, crisp apple slices. The girl dinner that feels like a French picnic.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Let the brie lose its refrigerator chill before serving so it turns soft and creamy beside the crisp apple. Use just enough jam to add fruitiness without making every bite sweet.",
+      "substitutions": "Camembert or triple-cream cheese can replace brie. Pear works instead of apple, and fig, raspberry, cherry, or apricot preserves all pair well with the cheese.",
+      "storage": "Refrigerate leftover brie and cut apple separately. Wrap cheese tightly, and toss apple slices with a little lemon juice if you need to hold them for a few hours."
     },
     {
       "id": 17,
@@ -1057,7 +1101,10 @@
       "imageAlt": "Photograph of bowl of chunky cucumber, cherry tomatoes, chickpeas, olives, and crumbled feta",
       "seoTitle": "Greek Salad with Chickpeas Recipe for One | foidslop",
       "seoDescription": "The most refreshing no cook dinner. Salty, crunchy, and genuinely satisfying. Chickpeas and cucumber make this salad recipe for one in 8 minutes.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Salt the tomatoes lightly before dressing so their juices mix with the olive oil and red wine vinegar. Add feta at the end so it stays in distinct salty pieces instead of dissolving into the salad.",
+      "substitutions": "White beans can replace chickpeas, and green olives can replace Kalamata. Use goat cheese if feta is unavailable, and scallions can stand in for red onion.",
+      "storage": "The dressed chickpeas and vegetables keep well for a day, but add feta and any extra cucumber just before serving for the best texture."
     },
     {
       "id": 18,
@@ -1118,8 +1165,10 @@
       "imageAlt": "Photograph of baked potato split open and loaded with sour cream, cheddar, chives, and butter",
       "seoTitle": "Loaded Baked Potato Recipe for One | foidslop",
       "seoDescription": "A whole meal in a potato skin. Sour cream, cheese, chives, the works. Made for one in 55 minutes, with russet potato and sour cream.",
-      "substitutions": "A large Yukon Gold makes a creamier baked potato, while a sweet potato gives the toppings a sweeter base. Greek yogurt can replace sour cream, and cooked black beans can stand in for bacon.",
-      "dateModified": "2026-09-06"
+      "substitutions": "A large Yukon Gold makes a creamier baked potato, while a sweet potato gives the toppings a sweeter base. Greek yogurt can replace sour cream, and beans can add more substance.",
+      "dateModified": "2026-09-06",
+      "headnote": "Bake the russet directly on the rack after rubbing it with oil and salt so the skin turns crisp. Split it immediately, fluff the inside, and season the potato before piling on sour cream and cheddar.",
+      "storage": "Refrigerate a baked potato without toppings for up to three days. Reheat until hot, then add fresh sour cream, cheddar, and chives after warming."
     },
     {
       "id": 19,
@@ -1172,7 +1221,10 @@
       "imageAlt": "Photograph of bowl of thick Greek yogurt topped with granola, mixed berries, and a drizzle of honey",
       "seoTitle": "Fruit and Yogurt Bowl with Honey and Granola | foidslop",
       "seoDescription": "Breakfast as dinner is always valid. Greek yogurt, fruit, honey, crunch. A bowl recipe for one, ready in 3 minutes with thick Greek yogurt.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Use thick full-fat Greek yogurt so the berries and granola sit on top rather than sinking. Add granola only at the end, then drizzle honey around the fruit instead of soaking the whole bowl.",
+      "substitutions": "Skyr, labneh, or another thick yogurt can replace Greek yogurt. Use any ripe fruit, swap granola for toasted nuts, or add peanut butter when you want a more filling bowl.",
+      "storage": "Yogurt and fruit can be portioned ahead and refrigerated for a day. Keep granola, nuts, and honey separate until serving so the crunchy parts stay crisp."
     },
     {
       "id": 20,
@@ -1231,10 +1283,12 @@
       "publishDate": "2026-05-20",
       "status": "published",
       "imageAlt": "Photograph of basket of warm soft pretzels served with a bowl of melted beer cheese dip",
-      "headnote": "Warm the pretzel until its crust is crisp and the center is soft, then make the cheese sauce over moderate heat. Add the cheddar by handfuls and stop heating as soon as the sauce is smooth so it does not turn grainy.",
+      "headnote": "Warm the pretzel until its crust is crisp and the center is soft, then make the cheese sauce over moderate heat. Add cheddar gradually and stop heating once the sauce is smooth so it does not turn grainy.",
       "seoTitle": "Soft Pretzel with Beer Cheese Dip Recipe for One | foidslop",
       "seoDescription": "Warm soft pretzels and a quick melted cheese sauce. Salty, satisfying, no real effort. Made for one in 13 minutes, with soft pretzels and sharp cheddar.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "substitutions": "Milk makes a milder cheese sauce than beer, while a light lager keeps the classic flavor. Monterey Jack can replace part of the cheddar, and sturdy bread cubes work if pretzels are unavailable.",
+      "storage": "Refrigerate leftover beer cheese for up to three days. Reheat it slowly with a splash of milk, whisking until smooth; warm pretzels separately so they do not turn rubbery."
     },
     {
       "id": 21,
@@ -1283,7 +1337,10 @@
       "imageAlt": "Photograph of plate of dill pickles, sharp cheddar slices, and crackers",
       "seoTitle": "Pickles and Cheese Board Recipe for One | foidslop",
       "seoDescription": "For when the jar of pickles IS the meal. Paired with aged cheese and crackers.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Use a sharp, firm cheese against cold dill pickles and a sturdy cracker. The plate works because the cheddar is rich, the pickles are acidic, and the crackers reset each bite.",
+      "substitutions": "Aged gouda, manchego, or Swiss can replace cheddar. Cornichons, bread-and-butter pickles, or pickled onions all work, but choose at least one crisp, tangy element.",
+      "storage": "Return cheese and pickles to the refrigerator after serving and keep crackers sealed at room temperature. Do not store the assembled plate because the crackers absorb moisture."
     },
     {
       "id": 22,
@@ -1388,9 +1445,9 @@
       "headnote": "Use slightly less water than the packet requests so the broth stays concentrated. Butter rounds out the salty seasoning, sesame oil adds aroma, and a softly cooked egg makes the bowl substantial enough for dinner.",
       "seoTitle": "10-Minute Instant Ramen Upgrade for One | foidslop",
       "seoDescription": "Upgrade one packet of instant ramen with egg, butter, sesame oil, scallions, and chilli crisp. A fast single-serving dinner in under 10 minutes.",
-      "substitutions": "No egg? Add cubed tofu during the final two minutes or stir in a spoonful of peanut butter after cooking. Frozen corn, spinach, or peas can go into the pot with the noodles. Use half the seasoning packet if your toppings are already salty.",
-      "storage": "Instant ramen is best eaten immediately because the noodles continue absorbing broth. If necessary, refrigerate the broth and noodles separately for one day, then reheat the broth and add the noodles only long enough to warm through.",
-      "dateModified": "2026-09-03"
+      "substitutions": "No egg? Add cubed tofu during the final two minutes or stir in a spoonful of peanut butter after cooking. Frozen corn, spinach, or peas can go into the pot with the noodles.",
+      "storage": "Instant ramen is best eaten immediately because the noodles continue absorbing broth. If necessary, refrigerate the broth and noodles separately for one day and reheat them separately.",
+      "dateModified": "2026-09-06"
     },
     {
       "id": 23,
@@ -1451,7 +1508,10 @@
       "imageAlt": "Photograph of plate of alternating heirloom tomato and mozzarella slices with fresh basil and olive oil",
       "seoTitle": "Caprese with Good Olive Oil Recipe for One | foidslop",
       "seoDescription": "Three ingredients, zero cooking. Entirely dependent on quality. Get good tomatoes.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Use tomatoes that smell ripe and mozzarella that has lost its refrigerator chill. Salt the tomato slices directly, then drizzle olive oil over the whole plate and add basil just before eating.",
+      "substitutions": "Burrata or bocconcini can replace sliced mozzarella, and ripe peaches work surprisingly well in place of some tomato. Skip balsamic if the tomatoes are already sweet and acidic.",
+      "storage": "Caprese is best assembled just before serving. Keep sliced tomatoes and mozzarella refrigerated separately, then bring the cheese toward room temperature before plating."
     },
     {
       "id": 24,
@@ -1506,10 +1566,12 @@
       "publishDate": "2026-05-24",
       "status": "published",
       "imageAlt": "Photograph of large bowl of stovetop popcorn dusted with seasoning and melted butter",
-      "headnote": "Use a pot wide enough for the kernels to sit mostly in one layer and shake it occasionally as they pop. Pour the butter in a thin stream while tossing so the seasoning reaches the whole bowl without creating soggy patches.",
+      "headnote": "Use a pot wide enough for the kernels to sit mostly in one layer and shake it occasionally as they pop. Pour butter in a thin stream while tossing so the seasoning reaches the whole bowl without creating soggy patches.",
       "seoTitle": "Stovetop Popcorn Dinner Recipe for One | foidslop",
       "seoDescription": "A bit unhinged but completely valid. Stovetop popcorn with real butter and fancy seasoning. Made for one in 7 minutes, with popcorn kernels and salted butter.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "substitutions": "Nutritional yeast, parmesan, Tajin, chilli powder, or everything seasoning all work on popcorn. Coconut oil or another neutral high-heat oil can replace the popping oil.",
+      "storage": "Popcorn is best the same day. Let any leftovers cool completely before sealing them at room temperature, and avoid refrigerating because the kernels lose their crispness."
     },
     {
       "id": 25,
@@ -1571,9 +1633,9 @@
       "headnote": "Toast the bread darker than you would for breakfast so it stays crisp beneath the ricotta. Season the cheese with a pinch of salt before spreading it, then add honey sparingly enough that the pistachios still taste nutty.",
       "seoTitle": "Ricotta Toast with Honey and Pistachios Recipe | foidslop",
       "seoDescription": "Make ricotta toast with honey, pistachios, flaky salt, and lemon zest in 8 minutes. A crisp, creamy single-serving toast recipe.",
-      "substitutions": "Cottage cheese blended until smooth or softened goat cheese can replace ricotta. Use almonds or walnuts instead of pistachios, and maple syrup instead of honey. Choose thick bread that can support the topping without bending.",
-      "storage": "Keep seasoned ricotta covered in the refrigerator for up to two days. Store the bread and nuts separately, then toast fresh and assemble just before eating so the base remains crisp.",
-      "dateModified": "2026-08-27"
+      "substitutions": "Cottage cheese blended until smooth or softened goat cheese can replace ricotta. Use almonds or walnuts instead of pistachios, and maple syrup instead of honey.",
+      "storage": "Keep seasoned ricotta covered in the refrigerator for up to two days. Store the bread and nuts separately, then toast fresh and assemble just before eating.",
+      "dateModified": "2026-09-06"
     },
     {
       "id": 26,
@@ -1631,7 +1693,9 @@
       "seoTitle": "Brie and Raspberry Quesadilla Recipe for One | foidslop",
       "seoDescription": "Sweet savory quesadilla that sounds wrong but is absolutely right. Brie and raspberry jam make this main recipe for one in 8 minutes.",
       "substitutions": "Camembert is the closest replacement for brie. Mild goat cheese or sharp cheddar also works, but use less jam with cheddar. Apricot, fig, or cherry preserves can replace raspberry jam.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Spread the jam thinly so it perfumes the tortilla without leaking into the pan. Keep the heat at medium so the brie melts fully before the tortilla becomes too dark.",
+      "storage": "This quesadilla is best fresh. If you have leftovers, refrigerate them for one day and reheat in a dry skillet rather than the microwave so the tortilla crisps again."
     },
     {
       "id": 27,
@@ -1692,7 +1756,10 @@
       "imageAlt": "Photograph of mezze plate with hummus, tabbouleh, olives, feta, sliced cucumber, and torn pita",
       "seoTitle": "Mezze Plate Recipe for One | foidslop",
       "seoDescription": "Hummus, tabbouleh, olives, pita. The Middle Eastern answer to the girl dinner snack plate. Made for one in 10 minutes, with hummus and store bought tabbouleh.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Keep the hummus, tabbouleh, feta, olives, and cucumber in separate zones so each bite can be built differently. Warm pita at the last minute and drizzle olive oil over the hummus rather than the whole plate.",
+      "substitutions": "Baba ganoush or labneh can replace hummus, and chopped tomato salad can replace tabbouleh. Use any briny olives and either feta or another salty crumbly cheese.",
+      "storage": "Refrigerate the hummus, tabbouleh, feta, and vegetables in separate containers for up to two days. Warm fresh pita only when you are ready to eat."
     },
     {
       "id": 28,
@@ -1745,7 +1812,10 @@
       "imageAlt": "Photograph of sourdough toast topped with fried eggs with crispy edges, drizzled with hot sauce",
       "seoTitle": "Fried Egg on Toast with Hot Sauce Recipe for One | foidslop",
       "seoDescription": "A perfectly fried egg with crispy lacy edges on buttered toast. Never gets old. A eggs recipe for one, ready in 7 minutes with eggs.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Use enough butter or oil for the egg white to fry rather than steam, and keep the heat high enough to crisp the edges while the yolk stays runny. Slide the eggs onto toast immediately.",
+      "substitutions": "Olive oil gives the egg crisper edges than butter. Use sourdough, rye, or an English muffin, and swap hot sauce for chilli crisp when you want more texture.",
+      "storage": "Fried egg toast is a make-and-eat dish. If you have extra eggs, refrigerate them separately and cook fresh toast when serving rather than storing the assembled plate."
     },
     {
       "id": 29,
@@ -1806,7 +1876,10 @@
       "imageAlt": "Photograph of plate of salami, marinated artichoke hearts, olives, mozzarella balls, and roasted peppers",
       "seoTitle": "Antipasto Plate Recipe for One | foidslop",
       "seoDescription": "Italian store bought excellence arranged beautifully. Artichoke hearts, salami, olives, marinated things.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Drain marinated artichokes, peppers, and mozzarella well before plating so the bread does not get oily. Balance the salami with something briny, something creamy, and something sweet or roasted.",
+      "substitutions": "Capicola, prosciutto, or mortadella can replace salami. Use provolone or firm cheese cubes instead of mozzarella, and swap artichokes for marinated mushrooms or pepperoncini.",
+      "storage": "Return meats, cheese, and marinated vegetables to the refrigerator after serving. Keep focaccia or ciabatta at room temperature and assemble a fresh plate later."
     },
     {
       "id": 30,
@@ -1867,7 +1940,10 @@
       "imageAlt": "Photograph of bowl of potato gnocchi in brown butter sauce with crispy sage leaves and parmesan",
       "seoTitle": "Brown Butter Gnocchi with Sage Recipe for One | foidslop",
       "seoDescription": "Pillowy store bought gnocchi in nutty brown butter with crispy sage. Ready in 10 minutes.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Brown the butter only until the milk solids turn amber and smell nutty, then add sage and gnocchi quickly. The gnocchi should be dry enough to pick up a little color instead of steaming in the pan.",
+      "substitutions": "Shelf-stable or refrigerated potato gnocchi both work. Thyme can replace sage, and pecorino can replace parmesan for a sharper finish.",
+      "storage": "Refrigerate leftovers for up to two days. Reheat in a skillet with a small knob of butter so the gnocchi regain some surface texture instead of becoming gummy."
     },
     {
       "id": 31,
@@ -1920,8 +1996,10 @@
       "imageAlt": "Photograph of golden crispy cheese quesadilla served with salsa and sour cream",
       "seoTitle": "Classic Cheese Quesadilla Recipe for One | foidslop",
       "seoDescription": "The comfort food that requires no recipe. Just cheese, a tortilla, and heat. A main recipe for one, ready in 7 minutes with Oaxacan cheese or Monterey Jack.",
-      "substitutions": "Protein here is a suggestion, not a rule. Swap Oaxacan cheese or Monterey Jack freely and let the sauce and timing lead; check doneness a few minutes early either way.",
-      "dateModified": "2026-09-06"
+      "substitutions": "Oaxaca, Monterey Jack, cheddar, or low-moisture mozzarella all melt well. A thin layer of refried beans can make it more filling, and corn tortillas work if you make two smaller quesadillas.",
+      "dateModified": "2026-09-06",
+      "headnote": "Use a dry skillet over medium heat and keep the cheese concentrated toward the center so it melts before the tortilla over-browns. Let the quesadilla rest for a minute before cutting so the filling stays put.",
+      "storage": "Quesadillas are best fresh, but leftovers keep for one day in the refrigerator. Reheat in a dry skillet or toaster oven so the tortilla becomes crisp again."
     },
     {
       "id": 32,
@@ -1971,7 +2049,9 @@
       "headnote": "Cut the cucumber into thick, dry rounds so they stay rigid under the topping. Season the cream cheese before spooning it on, then add capers, radish, or smoked salmon only at the end.",
       "seoTitle": "Cucumber Cream Cheese Bites Recipe for One | foidslop",
       "seoDescription": "Refreshing, crunchy little bites. A snack that feels like an appetizer. A snack recipe for one, ready in 5 minutes with English cucumber.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "substitutions": "Whipped feta, labneh, or goat cheese can replace cream cheese. Endive leaves work instead of cucumber, and chopped olives or everything seasoning can replace capers.",
+      "storage": "Keep sliced cucumber and seasoned cream cheese refrigerated separately. Assemble shortly before serving because salt and cream cheese pull moisture from the cucumber over time."
     },
     {
       "id": 33,
@@ -2040,7 +2120,10 @@
       "imageAlt": "Photograph of bowl of lemony yogurt topped with crispy spiced chickpeas, feta, and fresh herbs",
       "seoTitle": "Crispy Spiced Chickpea and Feta Bowl Recipe for One | foidslop",
       "seoDescription": "Crispy spiced chickpeas over lemony yogurt with feta and herbs. Deeply satisfying. Made for one in 30 minutes, with chickpeas and smoked paprika.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Dry the chickpeas thoroughly before roasting and give them enough space on the tray to actually crisp. Spoon them over lemony yogurt while still warm, then finish with feta and herbs.",
+      "substitutions": "Cannellini beans can work if roasted gently, though they stay softer than chickpeas. Labneh can replace Greek yogurt, and goat cheese can replace feta.",
+      "storage": "Store roasted chickpeas separately from yogurt and feta. Refrigerate the dairy components for up to two days and re-crisp the chickpeas briefly in a hot oven or skillet."
     },
     {
       "id": 34,
@@ -2109,7 +2192,10 @@
       "imageAlt": "Photograph of bowl of soba noodles in peanut sesame sauce, topped with spring onions and cucumber ribbons",
       "seoTitle": "Peanut Butter Sesame Noodles Recipe for One | foidslop",
       "seoDescription": "Sesame peanut sauce over noodles. The most satisfying thing you can make in 15 minutes. A noodles recipe for one, ready in 15 minutes with peanut butter.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Thin the peanut butter sauce with warm water until it looks slightly looser than you want, because the noodles absorb moisture fast. Toss while the noodles are warm and add cucumber only after coating.",
+      "substitutions": "Tahini, almond butter, or sunflower seed butter can replace peanut butter. Soba, ramen, wheat noodles, or spaghetti all work, and maple syrup can replace honey.",
+      "storage": "Refrigerate dressed noodles for up to two days. The peanut sauce thickens when cold, so loosen with a splash of water or rice vinegar and toss again before eating."
     },
     {
       "id": 35,
@@ -2175,9 +2261,9 @@
       "headnote": "A ripe avocado should yield gently at the stem end without feeling hollow or mushy. Mash it only until chunky, season before adding the onion and jalapeño, and keep the chips separate until each bite is scooped.",
       "seoTitle": "Guacamole and Tortilla Chips Recipe for One | foidslop",
       "seoDescription": "Make guacamole and tortilla chips for one with avocado, lime, red onion, jalapeño, and cilantro. Ready in about 8 minutes.",
-      "substitutions": "Use lemon if lime is unavailable, scallion instead of red onion, or a pinch of chilli flakes instead of jalapeño. For a larger meal, add black beans, crumbled queso fresco, or a fried egg alongside the guacamole.",
-      "storage": "Guacamole is best the day it is made. Press reusable wrap directly against the surface and refrigerate for up to one day; the close contact slows browning. Keep tortilla chips sealed separately.",
-      "dateModified": "2026-08-27"
+      "substitutions": "Use lemon if lime is unavailable, scallion instead of red onion, or a pinch of chilli flakes instead of jalapeño. Black beans or queso fresco can turn the plate into a fuller meal.",
+      "storage": "Guacamole is best the day it is made. Press reusable wrap directly against the surface and refrigerate for up to one day; keep tortilla chips sealed separately.",
+      "dateModified": "2026-09-06"
     },
     {
       "id": 36,
@@ -2226,7 +2312,10 @@
       "imageAlt": "Photograph of glass of iced tart cherry juice mixed with sparkling water, garnished with lime",
       "seoTitle": "Sleepy Girl Mocktail Recipe for One | foidslop",
       "seoDescription": "Tart cherry juice and sparkling water make a bright, fizzy mocktail with an optional magnesium addition.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Use cold tart cherry juice and add the sparkling water last so the drink stays fizzy. If using magnesium powder, dissolve it fully before topping with carbonation and follow the serving directions on its package.",
+      "substitutions": "Plain sparkling water keeps the cherry flavor sharp, while a prebiotic soda makes the drink sweeter. A squeeze of lime can replace the garnish and brighten a very sweet cherry juice.",
+      "storage": "Mix this drink only when you are ready to serve it. Tart cherry juice keeps refrigerated according to its package, but sparkling water loses carbonation once combined."
     },
     {
       "id": 37,
@@ -2292,9 +2381,9 @@
       "headnote": "Rinse the cooked noodles until they are genuinely cool, then drain them very well so water does not dilute the sesame sauce. Thin the sauce separately until it falls from a spoon in a ribbon before tossing.",
       "seoTitle": "Cold Sesame Noodles Recipe for One | foidslop",
       "seoDescription": "Room temperature noodles in a nutty, gingery sauce. Better cold than hot. A noodles recipe for one, ready in 18 minutes with tahini or sesame paste.",
-      "substitutions": "Chinese sesame paste gives the deepest toasted flavor, but tahini or smooth peanut butter also works. Use rice noodles for a gluten-free bowl and tamari in place of soy sauce. Shredded carrot can replace cucumber.",
+      "substitutions": "Chinese sesame paste gives the deepest toasted flavor, but tahini or smooth peanut butter also works. Use rice noodles for a gluten-free bowl and tamari in place of soy sauce.",
       "storage": "Refrigerate dressed noodles in a sealed container for up to two days. The sauce thickens when cold, so loosen each serving with a teaspoon of water and toss again before eating.",
-      "dateModified": "2026-09-03"
+      "dateModified": "2026-09-06"
     },
     {
       "id": 38,
@@ -2347,7 +2436,10 @@
       "imageAlt": "Photograph of plate of cantaloupe melon slices wrapped in prosciutto, garnished with black pepper",
       "seoTitle": "Prosciutto and Melon Recipe for One | foidslop",
       "seoDescription": "The Italian classic that needs no recipe. Sweet cantaloupe and salty prosciutto. A snack plate recipe for one, ready in 5 minutes with ripe cantaloupe melon.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Chill the cantaloupe but let the prosciutto sit out for a few minutes so its fat softens. Wrap or drape the meat loosely around ripe melon and add mint or black pepper only after plating.",
+      "substitutions": "Honeydew, ripe peach, or fresh fig can replace cantaloupe. Speck is a smokier substitute for prosciutto, and arugula can replace mint for a peppery finish.",
+      "storage": "Keep melon and prosciutto refrigerated separately and assemble only what you plan to eat. Dressed melon releases juice quickly, so add olive oil and salt just before serving."
     },
     {
       "id": 39,
@@ -2416,8 +2508,10 @@
       "imageAlt": "Photograph of bubbling golden spinach and artichoke dip served with pita chips",
       "seoTitle": "Spinach Artichoke Dip with Pita Chips Recipe for One | foidslop",
       "seoDescription": "Warm, cheesy, bubbly dip made in 20 minutes. The shareable girl dinner. Made for one in 25 minutes, with frozen spinach and marinated artichoke hearts.",
-      "substitutions": "Jarred artichoke hearts in water work if marinated ones are unavailable; drain them thoroughly and add an extra teaspoon of olive oil. Kale can replace spinach, and Greek yogurt can replace sour cream.",
-      "dateModified": "2026-09-06"
+      "substitutions": "Jarred artichoke hearts in water work if marinated ones are unavailable; drain them thoroughly. Kale can replace spinach, and Greek yogurt can replace sour cream.",
+      "dateModified": "2026-09-06",
+      "headnote": "Squeeze the thawed spinach until it feels almost dry before mixing, and drain the artichokes well. Bake until the center bubbles and the top browns, then let the dip sit briefly before scooping.",
+      "storage": "Refrigerate leftover spinach artichoke dip for up to three days. Reheat until hot in a small baking dish, and keep pita chips or crackers sealed separately so they stay crisp."
     },
     {
       "id": 40,
@@ -2474,7 +2568,10 @@
       "imageAlt": "Photograph of cucumber rounds topped with cream cheese, smoked salmon, capers, red onion, and dill",
       "seoTitle": "Lox Plate on Cucumber Recipe for One | foidslop",
       "seoDescription": "Smoked salmon, cream cheese, capers, and cucumber deliver all the familiar lox flavors without a bagel.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Cut cucumber rounds thick enough to stay crisp under the lox and cream cheese. Use only a little red onion and caper on each bite so the smoked salmon remains the main flavor.",
+      "substitutions": "Labneh can replace cream cheese, and endive leaves or rye crackers can replace cucumber. Smoked trout works well in place of lox, especially with dill and lemon.",
+      "storage": "Keep lox, cream cheese, and cucumber refrigerated separately. Assemble only what you plan to eat because cucumber releases water and softens the toppings."
     },
     {
       "id": 41,
@@ -2527,7 +2624,10 @@
       "imageAlt": "Photograph of plate with distinct piles of crackers, deli turkey, cheddar cheese, and red grapes",
       "seoTitle": "Adult Lunchable Plate Recipe for One | foidslop",
       "seoDescription": "Exactly what you think. Crackers, deli meat, cheese, grapes, a little candy if you want.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Keep the crackers, deli meat, cheddar, fruit, and vegetables in separate piles so you can build different stacks as you eat. One salty, one creamy, one crisp, and one sweet element is enough.",
+      "substitutions": "Turkey, ham, salami, or leftover roast chicken all work with cheddar. Swap grapes for apple slices and Ritz for Triscuits, pretzel thins, or another sturdy cracker.",
+      "storage": "Return deli meat and cheese to the refrigerator after eating and keep crackers sealed separately. Store cut fruit or vegetables in their own container so they do not soften the crackers."
     },
     {
       "id": 42,
@@ -2584,7 +2684,10 @@
       "imageAlt": "Photograph of toasted crusty bread topped with melted garlic butter and crispy parmesan",
       "seoTitle": "Garlic Parmesan Toast Recipe for One | foidslop",
       "seoDescription": "The simplest, most satisfying thing. Crispy garlic toast with melted parmesan. Made for one in 11 minutes, with salted butter and garlic.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Mix the garlic into softened butter before adding parmesan so it spreads evenly across the bread. Broil close enough to brown the cheese, but watch continuously because the edges can burn fast.",
+      "substitutions": "Pecorino can replace parmesan for a saltier toast, and roasted garlic gives a sweeter flavor than raw minced garlic. Use sourdough, ciabatta, or a split baguette.",
+      "storage": "Garlic parmesan toast is best fresh. Refrigerate any unused garlic butter for a few days, then spread it on fresh bread and broil only what you plan to eat."
     },
     {
       "id": 43,
@@ -2653,7 +2756,10 @@
       "imageAlt": "Photograph of bowl of rigatoni pasta with blistered cherry tomatoes, torn mozzarella, and fresh basil",
       "seoTitle": "Cherry Tomato and Mozzarella Pasta Recipe for One | foidslop",
       "seoDescription": "Fresh blistered tomato sauce with torn mozzarella that melts into hot pasta. Summer simplicity. Made for one in 20 minutes, with cherry tomatoes and garlic.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Let the cherry tomatoes blister before stirring so they develop browned spots and release a concentrated sauce. Add mozzarella only after the pan comes off the heat so it melts into pockets instead of disappearing.",
+      "substitutions": "Grape tomatoes or chopped ripe plum tomatoes can replace cherry tomatoes. Bocconcini or burrata works instead of mozzarella, and fusilli, rigatoni, or penne all hold the tomato juices well.",
+      "storage": "Refrigerate leftovers for up to two days. Reheat gently with a splash of water, then add a little fresh mozzarella or basil after warming to restore the fresh texture."
     },
     {
       "id": 44,
@@ -2711,7 +2817,9 @@
       "headnote": "Steam the edamame only until hot and bright green, then dry the pods before tossing so the garlic butter clings. Bloom the garlic and chilli gently and pull the pan before the garlic browns.",
       "seoTitle": "Edamame with Garlic Butter and Chilli Recipe for One | foidslop",
       "seoDescription": "Steamed edamame tossed with garlic butter and chilli makes a salty, hands-on snack dinner.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "substitutions": "Chilli crisp can replace butter and chilli flakes for a spicier coating. Lime zest, sesame seeds, or grated ginger all work with edamame when you want a different finish.",
+      "storage": "Refrigerate cooked edamame for up to two days. Reheat briefly, then toss with fresh garlic butter so the pods are glossy rather than greasy from repeated heating."
     },
     {
       "id": 45,
@@ -2769,9 +2877,9 @@
       "headnote": "Warm canned tomato soup over medium-low heat so the cream stays smooth and the bottom does not scorch. Stir in the butter after the soup is hot, then finish each bowl with basil oil and something crisp.",
       "seoTitle": "Elevated Canned Tomato Soup Recipe for One | foidslop",
       "seoDescription": "Upgrade canned tomato soup with cream, butter, basil oil, and crunchy crackers. A richer single-serving bowl ready in about 10 minutes.",
-      "substitutions": "Half-and-half or unsweetened oat cream can replace heavy cream. Use pesto or good olive oil if basil oil is unavailable. Grilled bread, croutons, or a cheese toast can stand in for crackers.",
+      "substitutions": "Half-and-half or unsweetened oat cream can replace heavy cream. Use pesto or good olive oil if basil oil is unavailable, and grilled bread can stand in for crackers.",
       "storage": "Refrigerate leftover soup in a sealed container for up to three days. Reheat over medium-low heat, stirring often, and avoid a hard boil so the dairy does not separate.",
-      "dateModified": "2026-09-03"
+      "dateModified": "2026-09-06"
     },
     {
       "id": 46,
@@ -2836,7 +2944,10 @@
       "imageAlt": "Photograph of bowl of tuna salad with celery and capers, served alongside a pile of crackers",
       "seoTitle": "Tuna Salad on Crackers Recipe for One | foidslop",
       "seoDescription": "A proper tuna salad. Mayo, celery, dijon, capers. Scooped onto crackers. A snack recipe for one, ready in 8 minutes with quality tuna.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Drain the tuna well but leave a little of its olive oil if it tastes good. Dice celery small, chop capers roughly, and add lemon after the mayonnaise so you can stop before the salad gets loose.",
+      "substitutions": "Greek yogurt can replace part of the mayonnaise, and chopped cornichons can replace capers. Serve the tuna salad with cucumber rounds, toast, or rye crackers instead of Ritz.",
+      "storage": "Refrigerate tuna salad in a covered container and eat within two days. Keep crackers separate and scoop only when serving so they stay crisp."
     },
     {
       "id": 47,
@@ -2893,7 +3004,10 @@
       "imageAlt": "Photograph of sourdough toast spread with goat cheese, drizzled with honey, and topped with walnuts",
       "seoTitle": "Goat Cheese Toast with Honey and Walnuts | foidslop",
       "seoDescription": "Tangy goat cheese on toasted bread with honey. Easy, satisfying, and kind of impressive. Made for one in 6 minutes, with soft goat cheese and good honey.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Let the goat cheese soften before spreading so the toast does not tear. Add honey in a thin drizzle and keep the walnuts in larger pieces so the tangy cheese still leads each bite.",
+      "substitutions": "Ricotta or cream cheese can replace goat cheese for a milder toast. Pecans or pistachios work instead of walnuts, and pear or fig can add fruit when in season.",
+      "storage": "Keep goat cheese and toasted nuts covered separately in the refrigerator and pantry. Toast fresh bread and assemble just before eating so the base remains crisp."
     },
     {
       "id": 48,
@@ -2966,7 +3080,10 @@
       "imageAlt": "Photograph of cast iron skillet of shakshuka with eggs poached in spiced tomato sauce, topped with feta",
       "seoTitle": "Shakshuka for One Recipe for One | foidslop",
       "seoDescription": "Eggs poached in spiced tomato sauce. A dramatic, satisfying pan dinner. Made for one in 25 minutes, with diced tomatoes and onion.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Simmer the tomato sauce until it is thick enough to hold wells for the eggs. Cover only after the eggs go in, then stop cooking as soon as the whites set so the yolks remain runny.",
+      "substitutions": "Crushed tomatoes can replace diced tomatoes, and feta or goat cheese can be added at the end. Chickpeas make the sauce more substantial if you want fewer eggs.",
+      "storage": "The tomato base can be refrigerated for up to three days without eggs. Reheat the sauce, then crack in fresh eggs and finish the dish just before eating."
     },
     {
       "id": 49,
@@ -3019,7 +3136,10 @@
       "imageAlt": "Photograph of bowl of spaghetti in a silky black pepper and pecorino sauce",
       "seoTitle": "Cacio e Pepe Recipe for One | foidslop",
       "seoDescription": "Only three ingredients but requires technique. Cheese, pepper, and pasta water do everything.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Toast the black pepper first, then use starchy pasta water to cool and loosen the pan before adding cheese off the heat. Toss constantly until the pecorino becomes glossy rather than clumpy.",
+      "substitutions": "Tonnarelli, spaghetti, or bucatini all work. Use all Pecorino Romano for a sharper sauce, or combine pecorino with parmesan for a gentler flavor.",
+      "storage": "Cacio e pepe is best eaten immediately. If leftovers are unavoidable, refrigerate for one day and reheat very gently with a splash of water while tossing."
     },
     {
       "id": 50,
@@ -3084,7 +3204,10 @@
       "imageAlt": "Photograph of wooden board with open tins of sardines and oysters, crackers, cornichons, and mustard",
       "seoTitle": "Tinned Fish Board Recipe for One | foidslop",
       "seoDescription": "The elevated pantry dinner. Sardines, smoked oysters, arranged on a board with all the accompaniments.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Open the tins just before serving and keep their flavorful oil or escabeche on the board. Pair rich sardines or oysters with mustard, lemon, cornichons, and crisp crackers rather than adding more heavy toppings.",
+      "substitutions": "Smoked mussels, mackerel, trout, sardines, or oysters can fill either tin slot. Labneh can replace creme fraiche, and rye crispbread works especially well with oily fish.",
+      "storage": "Transfer any opened fish and its oil to covered containers and refrigerate promptly. Store crackers separately and build a fresh board rather than refrigerating the assembled one."
     },
     {
       "id": 51,
@@ -3149,7 +3272,10 @@
       "imageAlt": "Photograph of crisp lettuce leaves filled with creamy avocado and chopped egg salad, dusted with paprika",
       "seoTitle": "Avocado and Egg Salad Lettuce Cups Recipe for One | foidslop",
       "seoDescription": "Creamy mashed avocado and chopped egg in crisp lettuce. Fresh, filling, no bread needed. Made for one in 18 minutes, with eggs and ripe avocado.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Mash the avocado before folding in the chopped egg so the filling stays creamy without becoming paste. Keep the butter lettuce cold and dry, then fill the leaves only when you are ready to eat.",
+      "substitutions": "Greek yogurt can replace part of the avocado if needed, and scallion can replace celery for a sharper bite. Romaine hearts or cucumber rounds work instead of butter lettuce.",
+      "storage": "Refrigerate the avocado egg filling in a tightly covered container and eat within one day. Keep lettuce leaves separate and dry so they stay crisp."
     },
     {
       "id": 52,
@@ -3210,7 +3336,10 @@
       "imageAlt": "Photograph of bowl of ramen with kimchi, butter, an egg, and spring onions",
       "seoTitle": "Kimchi Butter Ramen Recipe for One | foidslop",
       "seoDescription": "Shin Ramyun with kimchi, butter, and a soft egg. The Korean midnight snack elevated. A noodles recipe for one, ready in 9 minutes with kimchi.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Use sour, well-fermented kimchi and add its juice near the end of cooking so the broth stays bright and tangy. Stir butter in off the boil, then add the egg and scallions at serving.",
+      "substitutions": "Any spicy instant ramen works, and a soft-boiled or fried egg can replace the poached egg. A small spoonful of gochujang can strengthen mild kimchi, while tofu can replace the egg.",
+      "storage": "Kimchi ramen is best fresh because the noodles keep absorbing broth. If needed, refrigerate broth and noodles separately for one day and reheat them separately."
     },
     {
       "id": 53,
@@ -3263,7 +3392,10 @@
       "imageAlt": "Photograph of plate of Medjool dates stuffed with almond butter and sprinkled with flaky sea salt",
       "seoTitle": "Medjool Dates with Almond Butter and Flaky Salt | foidslop",
       "seoDescription": "Nature's candy stuffed with almond butter. The sweet salty snack that feels indulgent. Made for one in 5 minutes, with Medjool dates and almond butter.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Use soft Medjool dates and split them without cutting all the way through. Fill with just enough almond butter to hold its shape, then add flaky salt after closing each date slightly.",
+      "substitutions": "Peanut, cashew, or sunflower seed butter can replace almond butter. Toasted almonds, pistachios, or a small piece of dark chocolate can be tucked inside for crunch.",
+      "storage": "Stuffed dates keep well refrigerated for several days in a covered container. Let them sit out briefly before eating if you prefer the almond butter softer."
     },
     {
       "id": 54,
@@ -3324,7 +3456,10 @@
       "imageAlt": "Photograph of sheet pan of tortilla chips loaded with melted cheese, jalapenos, and black beans",
       "seoTitle": "Sheet Pan Nachos Recipe for One | foidslop",
       "seoDescription": "Maximum chip to topping ratio achieved by spreading everything on one tray. Made for one in 17 minutes, with Monterey Jack or cheddar and black beans.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Spread the tortilla chips in a single layer so every chip gets some cheese and beans. Bake only until the cheese bubbles, then add sour cream, salsa, and guacamole after the tray leaves the oven.",
+      "substitutions": "Pinto beans can replace black beans, and Monterey Jack, cheddar, or a Mexican cheese blend all melt well. Pickled onions or fresh jalapeño can replace pickled jalapeños.",
+      "storage": "Nachos are best fresh because the chips soften quickly. Store any extra beans, cheese, and cold toppings separately and build a new small tray later."
     },
     {
       "id": 55,
@@ -3390,9 +3525,9 @@
       "headnote": "Cook the noodles separately so they do not cloud or over-thicken the broth. Warm the tofu gently, take the broth off the heat, and dissolve the miso in a ladleful of hot liquid before stirring it back into the pot.",
       "seoTitle": "Miso Soup with Tofu and Noodles Recipe for One | foidslop",
       "seoDescription": "Warm, savory, deeply comforting. A proper miso broth with noodles and soft tofu. A soup recipe for one, ready in 15 minutes with white miso paste.",
-      "substitutions": "Use red or yellow miso for a stronger broth, starting with one tablespoon and adding more to taste. Firm tofu can replace silken tofu, and soba, somen, or instant ramen noodles all work. Use tamari instead of soy sauce for a gluten-free version.",
-      "storage": "Store broth, noodles, and tofu separately when possible for up to two days. Reheat the broth gently without boiling, then add the noodles and tofu just long enough to warm through.",
-      "dateModified": "2026-08-27"
+      "substitutions": "Use red or yellow miso for a stronger broth, starting with less and adding to taste. Firm tofu can replace silken tofu, and soba, somen, or ramen noodles all work.",
+      "storage": "Store broth, noodles, and tofu separately when possible for up to two days. Reheat the broth gently without boiling, then add noodles and tofu just long enough to warm through.",
+      "dateModified": "2026-09-06"
     },
     {
       "id": 56,
@@ -3445,7 +3580,10 @@
       "imageAlt": "Photograph of thick toast heavily buttered and drizzled with hot honey and flaky salt",
       "seoTitle": "Hot Honey Butter Toast Recipe for One | foidslop",
       "seoDescription": "The most minimal toast possible. Just good bread, real butter, and hot honey. Salted butter and hot honey make this toast recipe for one in 5 minutes.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Toast the bread until the center is crisp enough to carry melted butter without collapsing. Spread the butter while the bread is hot, then add hot honey in a thin zigzag and finish with salt.",
+      "substitutions": "Brioche makes a softer, sweeter version while sourdough adds tang. Plain honey plus chilli flakes can replace hot honey, and maple syrup with cayenne also works.",
+      "storage": "This toast is best made fresh. Keep butter and hot honey at their normal storage temperatures and toast only the amount of bread you plan to eat."
     },
     {
       "id": 57,
@@ -3510,8 +3648,10 @@
       "imageAlt": "Photograph of baked sweet potato split open and loaded with black beans, avocado, and lime crema",
       "seoTitle": "Loaded Sweet Potato with Black Beans Recipe for One | foidslop",
       "seoDescription": "Baked sweet potato with black beans, avocado, and lime crema. A whole satisfying meal. Made for one in 55 minutes, with sweet potato and black beans.",
-      "substitutions": "Protein here is a suggestion, not a rule. Swap sweet potato freely and let the sauce and timing lead; check doneness a few minutes early either way.",
-      "dateModified": "2026-09-06"
+      "substitutions": "Pinto beans or lentils can replace black beans. Greek yogurt can replace sour cream, and corn, salsa, or pickled jalapeños all work with the sweet potato.",
+      "dateModified": "2026-09-06",
+      "headnote": "Bake the sweet potato until the center is completely soft, then season the flesh before adding black beans, avocado, and lime crema. Warm beans and cool toppings should stay distinct.",
+      "storage": "Refrigerate the baked sweet potato and black beans separately for up to three days. Reheat them until hot, then add fresh avocado, crema, cilantro, and lime."
     },
     {
       "id": 58,
@@ -3580,7 +3720,10 @@
       "imageAlt": "Photograph of bowl of creamy caramelized onion dip served with ridged potato chips",
       "seoTitle": "Caramelized Onion Dip with Ridged Chips | foidslop",
       "seoDescription": "Caramelized onion dip made from scratch. Vastly superior to the packet kind. A dip recipe for one, ready in 40 minutes with yellow onions.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Cook the onions low and slow until they are deeply golden and jammy, then cool them completely before folding into sour cream and cream cheese. Chilling the dip gives the onion flavor time to spread.",
+      "substitutions": "Greek yogurt can replace part of the sour cream, and creme fraiche makes a richer version. Kettle chips or sturdy crackers can replace ridged potato chips.",
+      "storage": "Refrigerate the onion dip in a covered container for up to three days. Keep chips sealed at room temperature and stir the dip before serving again."
     },
     {
       "id": 59,
@@ -3649,7 +3792,10 @@
       "imageAlt": "Photograph of bowl of spaghetti in garlic and olive oil with chilli flakes and fresh parsley",
       "seoTitle": "Spaghetti Aglio e Olio Recipe for One | foidslop",
       "seoDescription": "Spaghetti with garlic, olive oil, chilli, and parsley. Italian simplicity at its finest. Made for one in 18 minutes, with garlic and chilli flakes.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Slice the garlic thinly and cook it slowly in olive oil until pale gold, not brown. Toss the spaghetti with pasta water until the oil emulsifies, then add parsley only after the sauce clings.",
+      "substitutions": "Linguine or bucatini can replace spaghetti. Fresh chilli can replace chilli flakes, and toasted breadcrumbs make a useful savory topping when you do not want parmesan.",
+      "storage": "Aglio e olio is best fresh. Refrigerate leftovers for up to two days and reheat gently with a splash of water and fresh olive oil to loosen the sauce."
     },
     {
       "id": 60,
@@ -3706,7 +3852,10 @@
       "imageAlt": "Photograph of bowl of cottage cheese topped with diced cucumbers, cherry tomatoes, and everything bagel seasoning",
       "seoTitle": "Savory Cottage Cheese Bowl Recipe for One | foidslop",
       "seoDescription": "Cottage cheese topped with cucumber, tomatoes, everything seasoning, and chilli crisp makes a savory bowl in five minutes.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Use cold, full-fat cottage cheese and cut the cucumber and tomatoes into small pieces so each spoonful gets some crunch. Add chilli crisp or olive oil last, then season after tasting.",
+      "substitutions": "Labneh or Greek yogurt can replace cottage cheese. Radishes, avocado, pickled jalapeños, or bell pepper all work in place of some cucumber or tomato.",
+      "storage": "Refrigerate cottage cheese and cut vegetables separately for up to two days. Add everything seasoning and chilli crisp only when serving for the best texture."
     },
     {
       "id": 61,
@@ -3775,7 +3924,10 @@
       "imageAlt": "Photograph of rustic bowl of panzanella salad with torn sourdough, juicy tomatoes, red onion, and basil",
       "seoTitle": "Panzanella Recipe for One | foidslop",
       "seoDescription": "Tuscan bread salad. Stale bread soaked in the juices of very ripe tomatoes. A salad recipe for one, ready in 15 minutes with day old sourdough.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Salt the ripe tomatoes first and let their juices collect before the bread goes in. Day-old sourdough should absorb the dressing without dissolving, so toss gently and stop once the edges soften.",
+      "substitutions": "Ciabatta or another sturdy day-old loaf can replace sourdough. White wine vinegar can replace red wine vinegar, and cucumber or roasted peppers can be added without changing the basic balance.",
+      "storage": "Panzanella is best within a few hours of dressing. If making ahead, keep the bread separate from the tomato mixture and combine shortly before eating."
     },
     {
       "id": 62,
@@ -3836,7 +3988,10 @@
       "imageAlt": "Photograph of mug of frothy green matcha latte served with a banana and a side of peanut butter",
       "seoTitle": "Matcha Latte and Banana with Peanut Butter | foidslop",
       "seoDescription": "The girl dinner that is just a drink and a banana with nut butter. Deeply valid. Made for one in 5 minutes, with ceremonial grade matcha powder and oat milk.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Use water below boiling so the matcha stays smooth rather than bitter, and whisk it before adding oat milk. The banana and peanut butter are the solid part of the meal, so serve them alongside rather than blending everything together.",
+      "substitutions": "Dairy milk, soy milk, or almond milk can replace oat milk. Almond or cashew butter works instead of peanut butter, and maple syrup can replace honey in the matcha.",
+      "storage": "Matcha tastes best freshly whisked. Keep milk and nut butter refrigerated as required, and slice the banana only when you are ready to eat."
     },
     {
       "id": 63,
@@ -3897,8 +4052,10 @@
       "imageAlt": "Photograph of bowl of creamy white bean dip with olive oil, lemon, and rosemary, served with crackers",
       "seoTitle": "White Bean Dip with Lemon and Rosemary Recipe for One | foidslop",
       "seoDescription": "Blended white beans with olive oil and lemon. A more interesting alternative to hummus. Made for one in 8 minutes, with cannellini or butter beans and lemon.",
-      "substitutions": "Use 2 teaspoons of white wine vinegar if lemon is unavailable, adding it gradually to taste. Butter beans make an equally creamy dip, and thyme or sage can replace rosemary.",
-      "dateModified": "2026-09-06"
+      "substitutions": "Butter beans make an equally creamy dip, while thyme or sage can replace rosemary. White wine vinegar can stand in for lemon if added gradually to taste.",
+      "dateModified": "2026-09-06",
+      "headnote": "Blend the cannellini beans long enough to remove any graininess, using olive oil for richness and lemon for lift. Add rosemary sparingly because its flavor becomes stronger as the dip sits.",
+      "storage": "Refrigerate white bean dip in a covered container for up to three days. Stir in a splash of olive oil before serving and keep crackers or pita separate."
     },
     {
       "id": 64,
@@ -3963,7 +4120,10 @@
       "imageAlt": "Photograph of bowl of spaghetti in a creamy garlic sauce with grated parmesan and chilli flakes",
       "seoTitle": "Egg Yolk Garlic Pasta Recipe for One | foidslop",
       "seoDescription": "Garlic pasta finished with an egg yolk. A solo carbonara for when you cannot be bothered. A pasta recipe for one, ready in 15 minutes with garlic.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Let the garlic turn pale gold in olive oil, then cool the pasta for a few seconds off the heat before adding the egg yolk. Toss immediately so the yolk and pasta water become a sauce instead of scrambled egg.",
+      "substitutions": "Spaghetti, linguine, or bucatini work equally well. Pecorino can replace parmesan, and a whole egg can replace the yolk if you want a lighter, less concentrated sauce.",
+      "storage": "This pasta is best eaten immediately because the yolk sauce tightens as it cools. If necessary, refrigerate for one day and reheat very gently with a splash of water."
     },
     {
       "id": 65,
@@ -4032,7 +4192,10 @@
       "imageAlt": "Photograph of dark moody plate with burrata, fresh strawberries, blueberries, balsamic glaze, and crackers overhead flatlay food photography",
       "seoTitle": "4th of July Burrata Plate Recipe for One | foidslop",
       "seoDescription": "Red, white, and blue on a plate. Creamy burrata, sweet strawberries, and blueberries for a festive, no cook girl dinner.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Use ripe strawberries and blueberries that are dry on the surface, then keep the burrata whole until the plate reaches the table. Olive oil, salt, and balsamic should tie the fruit to the cheese without making it dessert-sweet.",
+      "substitutions": "Raspberries or sliced cherries can replace strawberries, and fresh mozzarella works if burrata is unavailable. Basil gives a savory finish while mint keeps the plate more fruit-forward.",
+      "storage": "Keep burrata and berries refrigerated separately and assemble close to serving. Once dressed, the berries release juice and the cheese softens quickly."
     },
     {
       "id": 66,
@@ -4089,7 +4252,10 @@
       "imageAlt": "Photograph of plate of creamy stracciatella cheese drizzled with olive oil, served with grilled bread",
       "seoTitle": "Stracciatella with Olive Oil and Grilled Bread | foidslop",
       "seoDescription": "Creamy stracciatella drizzled with olive oil and black pepper. The simplest luxury.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Let the stracciatella warm slightly from refrigerator temperature so it becomes loose and creamy. Use your best olive oil, plenty of black pepper, and bread toasted hard enough to survive repeated scooping.",
+      "substitutions": "The creamy center of a burrata is the closest substitute for stracciatella. Whipped ricotta also works, and grilled ciabatta or sourdough can replace the toasted bread.",
+      "storage": "Keep stracciatella covered and refrigerated, and use it within the package guidance after opening. Toast bread fresh and add olive oil only when serving."
     },
     {
       "id": 67,
@@ -4154,7 +4320,10 @@
       "imageAlt": "Photograph of small skillet frittata with cherry tomatoes and herbs, sliced and golden",
       "seoTitle": "Frittata for One Recipe for One | foidslop",
       "seoDescription": "Open face Italian omelette with whatever is in the fridge. Elegant and effortless. A eggs recipe for one, ready in 17 minutes with eggs.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Cook any watery vegetables before the eggs go in, then keep the stovetop heat moderate until the edges set. Finish under the broiler only long enough to puff and lightly brown the top without drying the center.",
+      "substitutions": "Any combination of cooked spinach, potato, tomato, herbs, or leftover vegetables can fill the frittata. Pecorino, cheddar, feta, or goat cheese can replace parmesan.",
+      "storage": "Frittata keeps well refrigerated for up to two days. Eat cold, at room temperature, or reheat gently so the eggs stay tender."
     },
     {
       "id": 68,
@@ -4207,8 +4376,10 @@
       "imageAlt": "Photograph of bowl of labneh drizzled with olive oil and dusted with za'atar, served with pita",
       "seoTitle": "Labneh with Za'atar and Olive Oil Recipe for One | foidslop",
       "seoDescription": "Strained yogurt cheese with za'atar and olive oil. The Middle Eastern answer to cream cheese.",
-      "storage": "Refrigerate the labneh mixture in a covered container for up to three days. Keep pita and vegetables separate, then add fresh olive oil and za'atar after the labneh has lost some of its refrigerator chill.",
-      "dateModified": "2026-09-06"
+      "storage": "Refrigerate labneh in a covered container for up to three days. Keep pita and vegetables separate, then add fresh olive oil and za'atar after the labneh has warmed slightly.",
+      "dateModified": "2026-09-06",
+      "headnote": "Spread the labneh wide enough to create ridges for the olive oil and za'atar. Let it lose some refrigerator chill, then add the spice blend just before serving so the sesame seeds stay fragrant.",
+      "substitutions": "Very thick Greek yogurt can replace labneh. Dukkah can replace za'atar for a nuttier finish, and warm naan or toasted flatbread can replace pita."
     },
     {
       "id": 69,
@@ -4282,7 +4453,9 @@
       "seoTitle": "Pasta e Fagioli Recipe for One | foidslop",
       "seoDescription": "Italian peasant soup. Pasta and white beans in a rich tomato rosemary broth. Made for one in 30 minutes, with cannellini beans and crushed tomatoes.",
       "substitutions": "Great Northern beans, navy beans, or chickpeas can replace cannellini beans. Use vegetable broth for a vegetarian bowl, and choose any small pasta shape that fits easily on a spoon.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Mash only part of the cannellini beans so the broth thickens while some beans remain whole. Add the small pasta late enough that it stays distinct, and loosen the soup with broth if it tightens as it sits.",
+      "storage": "Pasta e fagioli thickens in the refrigerator as the pasta absorbs broth. Refrigerate for up to three days and add water or stock while reheating until the soup loosens."
     },
     {
       "id": 70,
@@ -4352,7 +4525,9 @@
       "seoTitle": "Homemade Crunchwrap Recipe for One | foidslop",
       "seoDescription": "Flour tortilla folded around all the Taco Bell fixings. The ultimate comfort DIY. A main recipe for one, ready in 20 minutes with sour cream.",
       "substitutions": "Greek yogurt or Mexican crema can replace sour cream. Use seasoned black beans instead of beef, and swap the crisp tostada for a handful of sturdy tortilla chips if needed.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Keep the filling compact and centered so the tortilla can fold without tearing. The tostada belongs in the middle for crunch, and the first side to hit the pan should be the folded seam so it seals.",
+      "storage": "Crunchwraps are best fresh. Refrigerate leftover filling components separately, then assemble and toast a new one so the tostada layer stays crisp."
     },
     {
       "id": 71,
@@ -4413,7 +4588,10 @@
       "imageAlt": "Photograph of sourdough toast spread with ricotta, topped with prosciutto, figs, and a honey drizzle",
       "seoTitle": "Prosciutto and Fig Toast Recipe for One | foidslop",
       "seoDescription": "Salty cured meat and sweet figs on ricotta toast. A two minute fancy moment. Whole milk ricotta and prosciutto make this toast recipe for one in 8 minutes.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Spread ricotta on toast while the bread is still hot, then add prosciutto and figs after it reaches the plate. Honey or balsamic should be a small accent because the fruit already brings sweetness.",
+      "substitutions": "Fig jam works when fresh figs are unavailable, and sliced pear is another good fruit option. Goat cheese can replace ricotta, while speck can replace prosciutto.",
+      "storage": "Keep ricotta, prosciutto, and figs refrigerated separately. Toast fresh bread and assemble just before eating so the base stays crisp."
     },
     {
       "id": 72,
@@ -4470,7 +4648,10 @@
       "imageAlt": "Photograph of sourdough toast spread with anchovy butter, topped with sliced radishes and lemon",
       "seoTitle": "Anchovy Butter Toast Recipe for One | foidslop",
       "seoDescription": "For the umami obsessed. Anchovies mashed into butter on very good toast. Made for one in 8 minutes, with anchovy fillets and salted butter.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Mash the anchovies into softened butter until no large pieces remain, then spread it onto very hot toast so the mixture melts into the crumb. Lemon and radish keep the rich, salty butter from feeling heavy.",
+      "substitutions": "Sardine or mackerel paste can work in place of anchovies, though the flavor will be stronger. Rye or sourdough both make sturdy bases, and parsley can replace radish for freshness.",
+      "storage": "Anchovy butter can be refrigerated in a covered container for several days. Toast bread fresh and spread the butter while the toast is hot rather than storing the assembled toast."
     },
     {
       "id": 73,
@@ -4539,8 +4720,10 @@
       "imageAlt": "Photograph of baked bell pepper halves stuffed with herby rice, feta, and cherry tomatoes",
       "seoTitle": "Stuffed Bell Pepper with Rice and Feta Recipe for One | foidslop",
       "seoDescription": "Two halves of roasted bell pepper filled with herby rice and feta. Easy solo dinner. A main recipe for one, ready in 45 minutes with bell pepper.",
-      "substitutions": "Protein here is a suggestion, not a rule. Swap bell pepper freely and let the sauce and timing lead; check doneness a few minutes early either way.",
-      "dateModified": "2026-09-06"
+      "substitutions": "Quinoa or couscous can replace cooked rice. Goat cheese can replace feta, and zucchini, spinach, or chopped olives can stand in for some of the tomatoes.",
+      "dateModified": "2026-09-06",
+      "headnote": "Roast the bell pepper halves before filling so they become tender without making the rice soggy. Season the cooked rice separately, then add feta and tomatoes before the second bake.",
+      "storage": "Refrigerate stuffed peppers for up to three days. Reheat covered until hot, then uncover briefly at the end if you want the top to dry and brown again."
     },
     {
       "id": 74,
@@ -4606,9 +4789,9 @@
       "headnote": "Carbonara succeeds in the minute after the pasta leaves the water. Let the guanciale pan cool briefly, toss off the heat, and add reserved pasta water a spoonful at a time until the egg and cheese become glossy rather than scrambled.",
       "seoTitle": "Carbonara for One: Creamy 20-Minute Recipe | foidslop",
       "seoDescription": "True carbonara. No cream, just eggs, guanciale, and pecorino. Perfect. Guanciale or pancetta and Pecorino Romano make this pasta recipe for one in 20 minutes.",
-      "substitutions": "Pancetta is the closest replacement for guanciale; bacon works but adds smoke. Use all Pecorino Romano for a sharper sauce or combine pecorino and parmesan for a gentler one. Spaghetti, bucatini, and rigatoni all work.",
-      "storage": "Carbonara is best eaten immediately. Refrigerate leftovers for up to one day, then warm very gently with a splash of water; high heat will tighten the egg sauce and make it grainy.",
-      "dateModified": "2026-08-27"
+      "substitutions": "Pancetta is the closest replacement for guanciale; bacon works but adds smoke. Use all Pecorino Romano for a sharper sauce or combine pecorino and parmesan for a gentler one.",
+      "storage": "Carbonara is best eaten immediately. Refrigerate leftovers for up to one day, then warm very gently with a splash of water; high heat will tighten the egg sauce.",
+      "dateModified": "2026-09-06"
     },
     {
       "id": 75,
@@ -4661,7 +4844,10 @@
       "imageAlt": "Photograph of cucumber rounds topped with cream cheese, smoked salmon, and everything bagel seasoning",
       "seoTitle": "Everything Bagel Salmon Bites Recipe for One | foidslop",
       "seoDescription": "All the vibes of a bagel and lox without the bagel. Refreshing, salty, quick. Made for one in 8 minutes, with English cucumber and cream cheese.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Dry the cucumber rounds before topping so the cream cheese grips them, then cut the smoked salmon into pieces that fit without folding into a tall stack. Add capers and everything seasoning last.",
+      "substitutions": "Labneh can replace cream cheese, and endive leaves or rye crackers can replace cucumber. Smoked trout also works well with capers, dill, and lemon zest.",
+      "storage": "Keep cucumber, cream cheese, and smoked salmon refrigerated separately. Assemble close to serving because cucumber moisture softens the topping and seasoning."
     },
     {
       "id": 76,
@@ -4734,7 +4920,10 @@
       "imageAlt": "Photograph of sourdough toast piled high with mushrooms in a creamy garlic thyme sauce",
       "seoTitle": "Creamy Mushroom Toast with Thyme Recipe for One | foidslop",
       "seoDescription": "Sauteed mushrooms in garlic and thyme, splashed with cream, on thick buttered toast. A toast recipe for one, ready in 17 minutes with mixed mushrooms.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Give the mushrooms room in the skillet and leave them alone long enough to brown before adding garlic or cream. Reduce the cream until it coats the mushrooms, then spoon over toast only at serving.",
+      "substitutions": "Cremini, shiitake, oyster, or button mushrooms can be mixed freely. Creme fraiche can replace heavy cream, and rosemary or parsley can replace thyme.",
+      "storage": "Refrigerate the creamy mushrooms for up to two days and toast fresh bread when serving. Reheat the mushrooms gently, adding a small splash of water or cream if the sauce is too thick."
     },
     {
       "id": 77,
@@ -4799,7 +4988,10 @@
       "imageAlt": "Photograph of plate of crispy fried rice with scrambled egg and spring onions",
       "seoTitle": "Crispy Fried Rice Recipe for One | foidslop",
       "seoDescription": "Day old rice fried until crispy with soy, egg, and sesame. The solo dinner staple. Eggs and soy sauce make this rice recipe for one in 13 minutes.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Cold rice is the key: press it into hot oil and leave it undisturbed until the bottom crisps before breaking it up. Scramble the eggs in an open spot in the pan, then fold everything together.",
+      "substitutions": "White, brown, or jasmine rice all work if cooked and chilled first. Frozen peas, corn, edamame, leftover vegetables, or cooked protein can be added without changing the basic method.",
+      "storage": "Cool leftover fried rice promptly and refrigerate for up to two days. Reheat in a hot skillet until steaming, adding sesame oil only at the end for aroma."
     },
     {
       "id": 78,
@@ -4856,7 +5048,10 @@
       "imageAlt": "Photograph of wooden board with aged cheddar, brie, grapes, figs, and crackers, drizzled with honey",
       "seoTitle": "Seasonal Fruit and Cheese Plate Recipe for One | foidslop",
       "seoDescription": "Seasonal fruit with a few good cheeses. The no effort elegant dinner. Made for one in 5 minutes, with aged cheddar or manchego and brie or camembert.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Let the cheese come toward room temperature while you wash and cut the fruit. Pair one firm aged cheese with one soft cheese, then use fruit, nuts, and crackers to move between rich and fresh bites.",
+      "substitutions": "Choose fruit by season: grapes, pears, figs, apples, berries, or stone fruit all work. Manchego, cheddar, gouda, brie, or camembert can be mixed in any two-cheese combination.",
+      "storage": "Wrap leftover cheese tightly and refrigerate it, and keep cut fruit in a separate container. Crackers and nuts should stay sealed at room temperature."
     },
     {
       "id": 79,
@@ -4921,7 +5116,10 @@
       "imageAlt": "Photograph of plate of fried rice with mixed vegetables, egg, and a drizzle of chilli crisp",
       "seoTitle": "10-Minute Freezer Fried Rice Recipe for One | foidslop",
       "seoDescription": "Using entirely freezer ingredients. Frozen rice, vegetables, egg. Dinner in 10 minutes flat.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Start with a hot pan and fry the frozen or microwave rice before adding too many vegetables. Let moisture cook off, then scramble the eggs separately in the pan and finish with soy and sesame oil.",
+      "substitutions": "Any frozen vegetable mix works, including peas, carrots, corn, or edamame. Brown rice or jasmine rice pouches are both fine, and tamari can replace soy sauce.",
+      "storage": "Refrigerate leftover fried rice promptly and eat within two days. Reheat in a hot skillet until steaming, then add chilli crisp or sesame oil after heating."
     },
     {
       "id": 80,
@@ -4978,7 +5176,10 @@
       "imageAlt": "Photograph of toasted sourdough rubbed with tomato and garlic, drizzled with olive oil and flaky salt",
       "seoTitle": "Pan Con Tomate Recipe for One | foidslop",
       "seoDescription": "The Catalan classic. Ripe tomato rubbed directly onto garlicky toasted bread. Garlic and very ripe tomato make this toast recipe for one in 6 minutes.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "The bread needs to be hot and aggressively toasted when the garlic and ripe tomato hit it. Rub the garlic lightly, use the cut tomato like a sponge, then finish with olive oil and salt.",
+      "substitutions": "Ciabatta, sourdough, or a split baguette all work as long as the bread is sturdy. If tomatoes are not fully ripe, wait for better tomatoes rather than replacing them with sauce.",
+      "storage": "Pan con tomate should be eaten immediately. Keep bread and tomatoes separate until serving because the tomato pulp softens the toast within minutes."
     },
     {
       "id": 81,
@@ -5027,7 +5228,10 @@
       "imageAlt": "Photograph of cast iron pan of blistered green padron peppers dusted heavily with flaky sea salt",
       "seoTitle": "Blistered Padron Peppers Recipe for One | foidslop",
       "seoDescription": "Fried green Spanish peppers with flaky salt. Most are mild, some are brutally hot. A snack recipe for one, ready in 8 minutes with Padron or shishito peppers.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Heat the pan until the oil is shimmering, then add dry Padron peppers in one layer and leave them long enough to blister. Salt them only after cooking so the skins stay crisp.",
+      "substitutions": "Shishito peppers are the closest substitute for Padron peppers and cook the same way. A squeeze of lemon is optional, but avoid heavy sauces that hide the charred pepper flavor.",
+      "storage": "Blistered peppers are best hot from the pan. Refrigerate leftovers for one day and reheat quickly in a very hot skillet rather than microwaving."
     },
     {
       "id": 82,
@@ -5089,7 +5293,9 @@
       "seoTitle": "Pita Pizza Recipe for One | foidslop",
       "seoDescription": "A 10 minute pizza using pita bread as the base. Crispy, melty, endlessly customizable. A main recipe for one, ready in 13 minutes with pita bread.",
       "substitutions": "Naan, a thick flour tortilla, or a split English muffin can replace pita; thinner bases need a shorter bake. Use pesto or crushed tomatoes instead of marinara and any good melting cheese instead of mozzarella.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Use a light hand with sauce so the pita stays crisp, then put cheese all the way to the edges to protect the toppings. Baking directly on the rack gives the bottom the best crunch.",
+      "storage": "Pita pizza keeps for up to two days refrigerated. Reheat directly on an oven rack or in a dry skillet so the base crisps again."
     },
     {
       "id": 83,
@@ -5154,7 +5360,10 @@
       "imageAlt": "Photograph of bowl of warm mixed olives in olive oil with orange peel and rosemary, served with bread",
       "seoTitle": "Warm Olives with Orange and Herbs Recipe for One | foidslop",
       "seoDescription": "Olives gently warmed in olive oil with citrus and herbs. A 5 minute pot of wonder. Mixed olives and orange peel make this snack recipe for one in 8 minutes.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Warm the olives gently rather than frying them so the citrus peel, rosemary, garlic, and chilli can perfume the oil. Serve the flavored oil with bread because it is as important as the olives.",
+      "substitutions": "Any mix of green and black olives works. Lemon peel can replace orange, thyme can replace rosemary, and a pinch of fennel seed adds another savory direction.",
+      "storage": "Refrigerate leftover olives in their infused oil for up to several days. Rewarm gently before serving and use a clean spoon to keep the oil fresh."
     },
     {
       "id": 84,
@@ -5220,7 +5429,9 @@
       "seoTitle": "Creamy Tuscan White Beans Recipe for One | foidslop",
       "seoDescription": "Butter beans simmered in garlic, tomatoes, and spinach. Italian pantry perfection. Made for one in 18 minutes, with butter beans or cannellini and garlic.",
       "substitutions": "Chickpeas or Great Northern beans can replace butter beans or cannellini. Kale works instead of spinach but needs a few extra minutes, and canned tomatoes can replace fresh cherry tomatoes.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Burst the cherry tomatoes before adding the beans, then mash a small portion of the beans into the pan liquid to create a creamy sauce without cream. Wilt spinach only at the end.",
+      "storage": "Refrigerate the bean mixture for up to three days. Reheat gently with a splash of broth or water, then add fresh parmesan or olive oil after warming."
     },
     {
       "id": 85,
@@ -5290,7 +5501,9 @@
       "seoTitle": "Silky Egg Drop Soup Recipe for One | foidslop",
       "seoDescription": "Better than takeout. Silky egg ribbons in a gingery, savory broth. A soup recipe for one, ready in 11 minutes with good chicken broth.",
       "substitutions": "Low-sodium chicken stock or vegetable broth both work. Use tamari instead of soy sauce for a gluten-free bowl, and arrowroot starch can replace cornstarch in the same amount.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Thicken the broth lightly before adding the eggs, then pour beaten egg in a very thin stream while stirring slowly in one direction. Gentle movement creates long ribbons instead of small scrambled bits.",
+      "storage": "Egg drop soup keeps refrigerated for up to two days. Reheat gently without boiling hard, which can make the egg ribbons tough and break the broth."
     },
     {
       "id": 86,
@@ -5355,7 +5568,10 @@
       "imageAlt": "Photograph of grilled sourdough topped with torn burrata, roasted tomatoes, basil, and balsamic glaze",
       "seoTitle": "Roasted Tomato and Burrata Toast Recipe for One | foidslop",
       "seoDescription": "Slow roasted sweet tomatoes with creamy burrata on grilled bread. The best toast. Cherry tomatoes and garlic make this toast recipe for one in 30 minutes.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Roast the cherry tomatoes until they collapse and their juices concentrate, then use all of that oil and juice on the toast. Add burrata at the end so the warm tomatoes soften it without fully melting it.",
+      "substitutions": "Fresh mozzarella or whipped ricotta can replace burrata. Grape tomatoes work instead of cherry tomatoes, and basil can be swapped for oregano or thyme.",
+      "storage": "Store roasted tomatoes and burrata separately in the refrigerator for up to two days. Reheat the tomatoes gently and toast fresh bread before assembling."
     },
     {
       "id": 87,
@@ -5428,7 +5644,10 @@
       "imageAlt": "Photograph of crispy fried rice cakes topped with spicy diced tuna, avocado, and jalapeno",
       "seoTitle": "Spicy Tuna Crispy Rice Recipe for One | foidslop",
       "seoDescription": "Sushi grade tuna, sesame spiced and piled onto shatteringly crispy pan fried rice cakes. Made for one in 25 minutes, with sushi grade tuna and soy sauce.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Use properly chilled sushi-grade tuna and keep it refrigerated while you fry the rice. Press cold sushi rice firmly before cutting so each piece holds together and develops a crisp crust.",
+      "substitutions": "Sushi-grade salmon can replace tuna. Avocado or spicy cooked shrimp can provide a non-raw alternative, and short-grain rice is the best base because it holds together when fried.",
+      "storage": "Eat the seasoned raw tuna the day it is prepared and keep it chilled until serving. Store rice cakes separately and re-crisp them in a hot pan before topping."
     },
     {
       "id": 88,
@@ -5482,9 +5701,9 @@
       "headnote": "Add lime and chamoy in two light passes, tossing between each, so the seasoning coats the Takis without pooling at the bottom. Serve cucumber, mango, or jicama alongside for a cool, crisp contrast.",
       "seoTitle": "Takis with Lime and Chamoy (5-Minute Snack) | foidslop",
       "seoDescription": "Make Takis with lime, chamoy, Tajin, cucumber, and mango in five minutes. A spicy, sour snack plate with plenty of crunch.",
-      "substitutions": "Flamin Hot Cheetos or sturdy tortilla chips can replace Takis. Use Valentina or another tangy hot sauce if chamoy is unavailable, and add extra mango or cucumber when you want less heat.",
-      "storage": "Dress only the amount you plan to eat because lime and chamoy soften the chips quickly. Keep unopened chips at room temperature and refrigerate cut fruit separately for up to one day.",
-      "dateModified": "2026-08-27"
+      "substitutions": "Flamin Hot Cheetos or sturdy tortilla chips can replace Takis. Use another tangy hot sauce if chamoy is unavailable, and add extra mango or cucumber when you want less heat.",
+      "storage": "Dress only the amount you plan to eat because lime and chamoy soften the chips quickly. Keep unopened chips at room temperature and refrigerate cut fruit separately.",
+      "dateModified": "2026-09-06"
     },
     {
       "id": 89,
@@ -5545,7 +5764,10 @@
       "imageAlt": "Photograph of jar of overnight oats topped with berries, chia seeds, and a drizzle of nut butter",
       "seoTitle": "Overnight Oats as Dinner Recipe for One | foidslop",
       "seoDescription": "The reverse breakfast dinner. Prepared oats with toppings eaten at any hour. Rolled oats and milk or oat milk make this bowl recipe for one in 5 minutes.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Stir the oats, milk, yogurt, and chia thoroughly before chilling so there are no dry pockets. Add enough milk that the mixture looks slightly loose because the oats thicken significantly overnight.",
+      "substitutions": "Dairy milk, oat milk, or soy milk all work. Maple syrup can replace honey, and Greek yogurt can be swapped for a plant-based yogurt or omitted with a little extra milk.",
+      "storage": "Overnight oats keep refrigerated for up to three days. Add granola, fresh fruit, and nut butter only when serving so the toppings keep their texture."
     },
     {
       "id": 90,
@@ -5610,7 +5832,10 @@
       "imageAlt": "Photograph of sourdough toast topped with rich creamed spinach and parmesan",
       "seoTitle": "Creamed Spinach on Toast Recipe for One | foidslop",
       "seoDescription": "Classic steakhouse creamed spinach reduced down to a solo toast topping. Rich and ridiculous. Made for one in 15 minutes, with baby spinach and butter.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Wilt the spinach first and squeeze out excess liquid before adding cream. Reduce the sauce until it clings to the greens, then spoon it onto very crisp buttered toast only when you are ready to eat.",
+      "substitutions": "Frozen spinach works if thawed and squeezed very dry. Creme fraiche can replace heavy cream, and pecorino can replace parmesan for a sharper finish.",
+      "storage": "Refrigerate creamed spinach for up to two days and toast fresh bread for serving. Reheat the spinach gently, adding a spoonful of cream if it becomes too thick."
     },
     {
       "id": 91,
@@ -5663,7 +5888,10 @@
       "imageAlt": "Photograph of plate of fresh mango slices dusted with Tajin and lime juice",
       "seoTitle": "Mango with Tajin and Lime Recipe for One | foidslop",
       "seoDescription": "Sweet ripe mango sliced and dusted with Tajin and lime. The refreshing solo dessert dinner. A snack recipe for one, ready in 5 minutes with ripe mango.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Use a mango that gives slightly when pressed and smells fruity near the stem. Add lime first, then Tajin, so the seasoning clings to the wet fruit instead of falling to the plate.",
+      "substitutions": "Pineapple, watermelon, or ripe peaches work with the same lime and Tajin treatment. Chamoy adds sweetness and tang, while chilli flakes can add heat without extra salt.",
+      "storage": "Cut mango can be refrigerated in a covered container for one day. Add lime, Tajin, and chamoy only when serving so the fruit does not become watery."
     },
     {
       "id": 92,
@@ -5736,7 +5964,10 @@
       "imageAlt": "Photograph of small wooden board with prosciutto, manchego, brie, olives, grapes, and a glass of wine",
       "seoTitle": "Solo Charcuterie Board with Wine Recipe for One | foidslop",
       "seoDescription": "A proper small board built for one, with wine. This is aspirational solo dining. A snack plate recipe for one, ready in 10 minutes with prosciutto or coppa.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Let the manchego and brie warm slightly while you arrange the prosciutto, salami, olives, fruit, and almonds. Keep portions small enough that you can change combinations rather than repeating the same bite.",
+      "substitutions": "Coppa, mortadella, or another cured meat can replace either salami. Comte, gouda, or cheddar can replace manchego, and pears or grapes work when figs are unavailable.",
+      "storage": "Wrap meat and cheese separately and refrigerate them after eating. Keep nuts and crackers sealed at room temperature and cut fruit in its own container."
     },
     {
       "id": 93,
@@ -5801,8 +6032,10 @@
       "imageAlt": "Photograph of skillet of shrimp in a sticky honey garlic butter sauce with lemon",
       "seoTitle": "Honey Garlic Butter Shrimp Recipe for One | foidslop",
       "seoDescription": "Shrimp cooked in 5 minutes in a sticky honey garlic butter. Eat with bread or rice. Made for one in 13 minutes, with raw shrimp or prawns and garlic.",
-      "substitutions": "Protein here is a suggestion, not a rule. Swap raw shrimp or prawns freely and let the sauce and timing lead; check doneness a few minutes early either way.",
-      "dateModified": "2026-09-06"
+      "substitutions": "Scallops or bite-size chicken can use the same honey-garlic glaze with adjusted cooking time. Maple syrup can replace honey, and tamari can replace soy sauce.",
+      "dateModified": "2026-09-06",
+      "headnote": "Pat the shrimp completely dry so they sear quickly, then cook only until opaque before adding the honey-soy butter glaze. The sauce should coat the shrimp for a minute, not simmer them until rubbery.",
+      "storage": "Refrigerate cooked shrimp promptly and eat within two days. Reheat gently just until hot, ideally in a skillet with a spoonful of water so the glaze does not burn."
     },
     {
       "id": 94,
@@ -5860,9 +6093,9 @@
       "headnote": "Toast the bread until the center is crisp enough to support the oil from the oysters. Drain the tin lightly rather than completely, then balance its smoke and richness with lemon, hot sauce, black pepper, and sliced shallot.",
       "seoTitle": "Smoked Oyster Toast Recipe for One | foidslop",
       "seoDescription": "A tin of smoked oysters on buttered rye toast with hot sauce. Deeply underrated girl dinner. A toast recipe for one, ready in 6 minutes with smoked oysters.",
-      "substitutions": "Smoked mussels or trout can replace the oysters. Use rye for a firm, savory base or sourdough for more tang. Cream cheese is optional, but if using it, spread a thin layer so it does not bury the oyster flavor.",
-      "storage": "Transfer unused oysters and their oil to a covered container and refrigerate for up to two days. Toast fresh bread when serving leftovers; assembled oyster toast turns soft in storage.",
-      "dateModified": "2026-09-03"
+      "substitutions": "Smoked mussels or trout can replace the oysters. Use rye for a firm, savory base or sourdough for more tang. Cream cheese is optional, but keep the layer thin.",
+      "storage": "Transfer unused oysters and their oil to a covered container and refrigerate for up to two days. Toast fresh bread when serving leftovers; assembled oyster toast turns soft.",
+      "dateModified": "2026-09-06"
     },
     {
       "id": 95,
@@ -5927,7 +6160,10 @@
       "imageAlt": "Photograph of plate of arugula, sliced roasted beets, crumbled goat cheese, and candied walnuts",
       "seoTitle": "Roasted Beet and Goat Cheese Salad Recipe for One | foidslop",
       "seoDescription": "Earthy roasted beets, tangy goat cheese, and candied walnuts. Classic bistro salad. Made for one in 5 minutes, with pre cooked beets and soft goat cheese.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Slice the beets into bite-size pieces and dress the greens lightly before adding them so the entire salad does not turn beet-red. Goat cheese and walnuts should go on last to stay distinct.",
+      "substitutions": "Feta can replace goat cheese, and toasted pecans or pistachios can replace walnuts. Arugula, spinach, or mixed greens all work with the balsamic dressing.",
+      "storage": "Keep dressed greens separate from beets, cheese, and nuts if preparing ahead. The beets and dressing keep refrigerated for several days; assemble the salad just before eating."
     },
     {
       "id": 96,
@@ -5993,8 +6229,9 @@
       "headnote": "Soak refrigerated or frozen rice cakes until they bend without cracking, then simmer rather than boil aggressively. The sauce is ready when it clings to each rice cake in a glossy coat but still moves across the pan.",
       "seoTitle": "Easy Tteokbokki for One (20-Minute Recipe) | foidslop",
       "seoDescription": "Make easy tteokbokki for one with chewy Korean rice cakes and a spicy-sweet gochujang sauce. Ready in about 20 minutes.",
-      "substitutions": "Flat rice-cake slices work in place of cylinders but cook faster. Add fish cake, a halved boiled egg, or napa cabbage for a fuller bowl. There is no close substitute for gochujang; reducing the amount is better than replacing it with plain hot sauce.",
-      "dateModified": "2026-09-06"
+      "substitutions": "Flat rice-cake slices work in place of cylinders but cook faster. Add fish cake, a halved boiled egg, or napa cabbage for a fuller bowl. There is no close substitute for gochujang.",
+      "dateModified": "2026-09-06",
+      "storage": "Tteokbokki is best fresh because rice cakes firm up when cold. Refrigerate leftovers for up to one day and reheat gently with a splash of water until the cakes soften again."
     },
     {
       "id": 97,
@@ -6051,7 +6288,10 @@
       "imageAlt": "Photograph of toasted bread spread with tahini, drizzled with honey, and sprinkled with sesame seeds",
       "seoTitle": "Tahini and Honey Toast Recipe for One | foidslop",
       "seoDescription": "Nutty tahini with honey and sesame seeds. A two ingredient toast that is weirdly addictive. A toast recipe for one, ready in 5 minutes with tahini.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Stir the tahini until completely smooth before spreading it on hot, deeply toasted bread. Add honey in a thin layer and finish with flaky salt so the toast stays nutty rather than simply sweet.",
+      "substitutions": "Almond butter, peanut butter, or sunflower seed butter can replace tahini. Maple syrup works instead of honey, and banana slices or cinnamon can make the toast more substantial.",
+      "storage": "Tahini and honey keep separately according to their packages, so toast only the bread you plan to eat. Assembled toast softens quickly and is not worth storing."
     },
     {
       "id": 98,
@@ -6117,7 +6357,9 @@
       "seoTitle": "Store-Bought Pork Belly Bao Recipe for One | foidslop",
       "seoDescription": "Using supermarket char siu pork belly and frozen steamed buns. Restaurant at home. A main recipe for one, ready in 15 minutes with frozen steamed bao buns.",
       "substitutions": "Small flour tortillas or lettuce cups can replace steamed bao buns. Char siu, roast pork, shredded chicken, or crisp tofu all work with hoisin and pickled vegetables.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Steam the bao until soft and keep them covered while you caramelize the pork belly edges in a hot pan. Fill each bun only at the table so the pickled vegetables stay crisp and the bao stays fluffy.",
+      "storage": "Refrigerate pork, pickles, and sauce separately. Re-steam bao until soft and reheat pork in a skillet before building fresh buns rather than storing them assembled."
     },
     {
       "id": 99,
@@ -6174,7 +6416,10 @@
       "imageAlt": "Photograph of plate with a slice of olive oil cake topped with juicy macerated berries",
       "seoTitle": "Olive Oil Cake with Macerated Berries Recipe for One | foidslop",
       "seoDescription": "A slice of Italian olive oil cake with macerated berries as dinner. Acceptable and right. Made for one in 5 minutes, with mixed berries and sugar.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Give the berries at least ten minutes with sugar and lemon so they release a glossy syrup, then spoon both fruit and juices over the olive oil cake. Add cream only after the berries are on the plate.",
+      "substitutions": "Pound cake, almond cake, or plain yogurt cake can replace olive oil cake. Any soft berry works, and mascarpone or Greek yogurt can replace whipped cream.",
+      "storage": "Keep cake covered at room temperature or refrigerated according to the bakery guidance. Refrigerate macerated berries separately for up to one day and combine only when serving."
     },
     {
       "id": 100,
@@ -6240,9 +6485,9 @@
       "headnote": "Wash the lettuce in cold water and dry it thoroughly so the vinaigrette can cling. Tear large leaves by hand, whisk the dressing until glossy, and toss with only half at first because butter lettuce wilts quickly.",
       "seoTitle": "Butter Lettuce Salad with Champagne Vinaigrette | foidslop",
       "seoDescription": "Make butter lettuce salad with a bright champagne vinaigrette, parmesan, and toasted nuts. A light single-serving salad ready in 8 minutes.",
-      "substitutions": "White wine vinegar is the closest substitute for champagne vinegar; rice vinegar also works but is milder. Use toasted walnuts, hazelnuts, or almonds, and swap parmesan for crumbled goat cheese if preferred.",
-      "storage": "Keep washed, thoroughly dried lettuce covered with a dry paper towel for up to two days. Refrigerate the vinaigrette separately for up to one week and whisk again before using.",
-      "dateModified": "2026-09-03"
+      "substitutions": "White wine vinegar is the closest substitute for champagne vinegar; rice vinegar also works but is milder. Use toasted walnuts, hazelnuts, or almonds, and swap parmesan for goat cheese.",
+      "storage": "Keep washed, thoroughly dried lettuce covered with a dry paper towel for up to two days. Refrigerate the vinaigrette separately and whisk again before using.",
+      "dateModified": "2026-09-06"
     },
     {
       "id": 101,
@@ -6300,9 +6545,9 @@
       "headnote": "Drain watery ricotta before whipping so it becomes airy instead of loose. Spoon warm tomatoes and their flavored oil over the cold ricotta just before serving for a clear temperature and texture contrast.",
       "seoTitle": "Whipped Ricotta with Cherry Tomato Confit | foidslop",
       "seoDescription": "Silky whipped ricotta topped with sweet, blistered cherry tomatoes in olive oil. A dip recipe for one, ready in 5 minutes with whole milk ricotta.",
-      "substitutions": "Roast halved cherry tomatoes at 425°F until blistered if confit is unavailable. Cottage cheese blended until smooth can replace ricotta, while toasted sourdough, pita, or sturdy crackers all work for scooping.",
+      "substitutions": "Roast halved cherry tomatoes until blistered if confit is unavailable. Cottage cheese blended until smooth can replace ricotta, while toasted sourdough, pita, or sturdy crackers all work for scooping.",
       "storage": "Refrigerate whipped ricotta and tomato confit in separate covered containers for up to three days. Bring the ricotta toward room temperature and warm the tomatoes gently before assembling.",
-      "dateModified": "2026-09-03"
+      "dateModified": "2026-09-06"
     },
     {
       "id": 102,
@@ -6363,7 +6608,10 @@
       "imageAlt": "Photograph of plate of sliced green apples topped with flaked smoked trout and a honey mustard drizzle",
       "seoTitle": "Smoked Trout and Apple Plate Recipe for One | foidslop",
       "seoDescription": "Smoky trout flaked over crisp apple slices with a mustard dressing. Made for one in 5 minutes, with smoked trout and crisp apple.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Slice the apple thin enough to act like a crisp cracker, then flake the smoked trout into large pieces rather than mashing it. Drizzle mustard dressing lightly so the fish and apple keep their texture.",
+      "substitutions": "Smoked mackerel or salmon can replace trout. Pear works instead of apple, and whole-grain mustard can replace Dijon for a more textured dressing.",
+      "storage": "Keep smoked trout and sliced apple refrigerated separately. Toss apple with a little lemon juice if holding it, and dress the plate only when ready to eat."
     },
     {
       "id": 103,
@@ -6428,7 +6676,10 @@
       "imageAlt": "Photograph of deep bowl of udon noodles in clear broth with wilted spinach and spring onions",
       "seoTitle": "Udon Noodles in Mentsuyu with Spinach Recipe for One | foidslop",
       "seoDescription": "Chewy udon noodles in a savory Japanese dipping broth with tender spinach. A noodles recipe for one, ready in 10 minutes with mentsuyu.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Cook frozen udon only until the strands separate and turn chewy, then wilt spinach during the final seconds. Dilute the mentsuyu to taste before pouring it over the drained noodles.",
+      "substitutions": "Soba or ramen noodles can replace udon, though their cooking times differ. Bok choy or napa cabbage can replace spinach, and a soft egg can make the bowl more filling.",
+      "storage": "Store broth and noodles separately for up to two days. Reheat the mentsuyu broth gently and warm the udon only long enough to loosen so the noodles do not become soft."
     },
     {
       "id": 104,
@@ -6485,7 +6736,10 @@
       "imageAlt": "Photograph of sourdough toast smeared with soft golden garlic confit and sprinkled with flaky sea salt",
       "seoTitle": "Garlic Confit Bread Recipe for One | foidslop",
       "seoDescription": "Crisp toast smeared with soft, sweet garlic confit and flaky salt. Garlic confit cloves and flaky sea salt make this toast recipe for one in 5 minutes.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Toast the sourdough hard enough that the garlic oil can soak in without making it floppy. Smash the soft confit cloves directly onto the hot bread, then season with flaky salt after tasting the oil.",
+      "substitutions": "Roasted garlic can replace confit cloves, and olive oil can replace garlic oil. Ciabatta or a split baguette also works as long as the bread gets deeply crisp.",
+      "storage": "Keep garlic confit refrigerated according to your safe preparation method and use a clean utensil. Toast fresh bread for each serving rather than storing assembled garlic toast."
     },
     {
       "id": 105,
@@ -6538,7 +6792,10 @@
       "imageAlt": "Photograph of bowl of cottage cheese topped with sliced peaches, hot honey, and almonds",
       "seoTitle": "Cottage Cheese with Peaches and Hot Honey | foidslop",
       "seoDescription": "Creamy cottage cheese, ripe peaches, and hot honey make a sweet, spicy bowl with plenty of contrast.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Use a ripe but firm peach so the slices keep their shape against the cottage cheese. Drizzle hot honey after arranging the fruit, then finish with salt and toasted almonds for contrast.",
+      "substitutions": "Nectarines, plums, or berries can replace peaches. Ricotta or thick Greek yogurt can replace cottage cheese, and plain honey plus chilli flakes works instead of hot honey.",
+      "storage": "Refrigerate cottage cheese and sliced fruit separately for up to one day. Add hot honey, nuts, and salt only when serving so the fruit stays fresh."
     },
     {
       "id": 106,
@@ -6591,7 +6848,10 @@
       "imageAlt": "Photograph of rustic crackers topped with tinned mussels in a golden escabeche sauce and parsley",
       "seoTitle": "Tinned Mussels in Escabeche on Crackers | foidslop",
       "seoDescription": "Briny mussels in a tangy vinegar sauce piled onto crisp crackers. A snack plate recipe for one, ready in 2 minutes with mussels in escabeche.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Use the escabeche from the tin as part of the seasoning rather than draining it away. Spoon only a little sauce onto each cracker, then finish with lemon, pepper, and onion so the base stays crisp.",
+      "substitutions": "Smoked oysters, sardines, or another tinned shellfish can replace mussels. Rye crisps or toasted baguette can replace crackers, and parsley or chives both work as a fresh finish.",
+      "storage": "Transfer opened mussels and their escabeche to a covered container and refrigerate promptly. Keep crackers separate and assemble each bite only when eating."
     },
     {
       "id": 107,
@@ -6640,7 +6900,10 @@
       "imageAlt": "Photograph of plate of cantaloupe wedges wrapped in prosciutto with fresh mint and balsamic glaze",
       "seoTitle": "Prosciutto Wrapped Melon with Mint Recipe for One | foidslop",
       "seoDescription": "The classic appetizer, upgraded with fresh mint for a bright finish. Cantaloupe melon and prosciutto make this snack plate recipe for one in 5 minutes.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Cut the cantaloupe into pieces that can be wrapped with a single loose ribbon of prosciutto. Add mint after wrapping and use balsamic sparingly so the ripe melon remains the sweet center of the bite.",
+      "substitutions": "Honeydew, ripe peach, or fresh fig can replace cantaloupe. Speck can replace prosciutto, and basil can replace mint for a more savory version.",
+      "storage": "Keep melon and prosciutto refrigerated separately and wrap close to serving. Pre-wrapped melon can be held for a few hours, but add mint and balsamic at the last minute."
     },
     {
       "id": 108,
@@ -6693,7 +6956,10 @@
       "imageAlt": "Photograph of toasted brioche spread with cream cheese and dark raspberry preserves",
       "seoTitle": "Cream Cheese and Jelly Toast Recipe for One | foidslop",
       "seoDescription": "Whipped cream cheese and dark fruit preserves turn crisp toast into a sweet, salty five-minute dinner.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Toast the bread until the edges are crisp, then spread cream cheese while it is still warm enough to soften the layer. Spoon preserves in small pockets rather than covering every inch, and finish with salt.",
+      "substitutions": "Ricotta, mascarpone, or goat cheese can replace cream cheese. Fig, raspberry, blackberry, or cherry preserves all work, and sourdough gives more contrast than brioche.",
+      "storage": "Keep cream cheese and preserves refrigerated or stored according to their packages. Toast fresh bread for each serving because assembled jelly toast quickly softens."
     },
     {
       "id": 109,
@@ -6758,7 +7024,10 @@
       "imageAlt": "Photograph of bowl of hummus topped with crispy roasted chickpeas, olive oil, and parsley",
       "seoTitle": "Hummus and Crispy Chickpea Bowl Recipe for One | foidslop",
       "seoDescription": "Creamy hummus topped with crunchy, spiced roasted chickpeas for textural contrast. A bowl recipe for one, ready in 30 minutes with hummus.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Dry the chickpeas thoroughly and roast until their edges are crisp before spooning them onto the hummus. Keep the hummus cool and the chickpeas warm so the bowl has a real texture contrast.",
+      "substitutions": "White bean dip can replace hummus, and roasted lentils can replace chickpeas if cooked until dry. Add cucumber, tomato, feta, or herbs when you want a fuller bowl.",
+      "storage": "Store hummus and roasted chickpeas separately. Refrigerate hummus for up to a few days and re-crisp the chickpeas in a hot oven or skillet before serving."
     },
     {
       "id": 110,
@@ -6831,7 +7100,10 @@
       "imageAlt": "Photograph of bowl of penne pasta in a bright red, creamy spicy vodka sauce",
       "seoTitle": "Spicy Vodka Pasta Recipe for One | foidslop",
       "seoDescription": "The viral Gigi Hadid pasta. Creamy, spicy, and ready in 20 minutes. Butter and tomato paste make this pasta recipe for one in 25 minutes.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Cook the tomato paste until it darkens and smells sweet before adding vodka or cream. Loosen the finished sauce with pasta water and keep the heat moderate after the parmesan goes in so it stays smooth.",
+      "substitutions": "Rigatoni, penne, or shells all hold the creamy sauce well. The vodka can be omitted, and half-and-half can replace heavy cream for a lighter sauce.",
+      "storage": "Refrigerate leftovers for up to two days. Reheat over low heat with a splash of water or cream, stirring until the vodka sauce becomes glossy again."
     },
     {
       "id": 111,
@@ -6892,8 +7164,10 @@
       "imageAlt": "Photograph of golden toasted pita bread cut open to reveal melted cheesy tuna salad inside",
       "seoTitle": "Tuna Melt in a Pita Recipe for One | foidslop",
       "seoDescription": "A gooey tuna melt stuffed inside a pita pocket and toasted in a pan. Made for one in 13 minutes, with pita bread and tuna.",
-      "substitutions": "Protein here is a suggestion, not a rule. Swap pita bread freely and let the sauce and timing lead; check doneness a few minutes early either way.",
-      "dateModified": "2026-09-06"
+      "substitutions": "Salmon or shredded chicken can replace tuna. Monterey Jack can replace cheddar, and Greek yogurt can replace part of the mayonnaise if you want a tangier filling.",
+      "dateModified": "2026-09-06",
+      "headnote": "Drain the tuna well and keep the filling thick enough to stay inside the pita. Toast over medium heat so the pita browns while the cheddar melts all the way through the center.",
+      "storage": "Tuna filling can be refrigerated for up to two days. Stuff and toast a fresh pita when serving rather than storing the finished melt, which turns soft."
     },
     {
       "id": 112,
@@ -6954,7 +7228,10 @@
       "imageAlt": "Photograph of bowl of creamy tomato soup topped with golden crispy grilled cheese croutons",
       "seoTitle": "Tomato Soup with Grilled Cheese Croutons | foidslop",
       "seoDescription": "Elevated canned tomato soup topped with cubed, crispy grilled cheese. A soup recipe for one, ready in 15 minutes with good tomato soup.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Make the grilled cheese first and let it sit for a minute before cutting so the cheese stays inside each cube. Drop the croutons onto hot tomato soup only at the table so their edges remain crisp.",
+      "substitutions": "Cheddar, American, or fontina all work in the sandwich. Use sourdough or white bread, and any smooth tomato soup can be enriched with a splash of cream.",
+      "storage": "Store soup and grilled cheese separately. Refrigerate the soup for up to three days and make fresh grilled cheese croutons when reheating because stored cubes soften."
     },
     {
       "id": 113,
@@ -7011,8 +7288,10 @@
       "imageAlt": "Photograph of golden grilled cheese sandwich cut in half, showing melted brie and prosciutto",
       "seoTitle": "Brie and Prosciutto Grilled Cheese Recipe for One | foidslop",
       "seoDescription": "An elevated grilled cheese with melted brie and salty prosciutto. Butter and brie make this main recipe for one in 13 minutes.",
-      "substitutions": "Protein here is a suggestion, not a rule. Swap butter freely and let the sauce and timing lead; check doneness a few minutes early either way.",
-      "dateModified": "2026-09-06"
+      "substitutions": "Camembert can replace brie, and speck or thin salami can replace prosciutto. Apricot or cherry preserves work instead of fig jam, while Dijon gives a less-sweet version.",
+      "dateModified": "2026-09-06",
+      "headnote": "Use medium-low heat so the sourdough browns slowly enough for the brie to melt. Keep prosciutto in a thin layer and use fig jam sparingly so the sandwich stays savory.",
+      "storage": "This sandwich is best fresh. Refrigerate leftovers for one day and reheat in a dry skillet over low heat so the bread crisps while the brie softens."
     },
     {
       "id": 114,
@@ -7073,7 +7352,10 @@
       "imageAlt": "Photograph of bowl of cold soba noodles in a dark sesame soy sauce with sesame seeds",
       "seoTitle": "Soba Noodles with Sesame Soy Dressing Recipe for One | foidslop",
       "seoDescription": "Cold buckwheat noodles in a nutty, savory dressing. Light but satisfying. Made for one in 13 minutes, with soy sauce and rice vinegar.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Rinse the soba thoroughly under cold water until the surface starch is gone, then drain very well. Toss with sesame-soy dressing only after the noodles are cool so they stay springy rather than sticky.",
+      "substitutions": "Udon, ramen, or thin wheat noodles can replace soba. Tamari works instead of soy sauce, and grated ginger or cucumber can be added for more freshness.",
+      "storage": "Refrigerate dressed soba for up to two days. Toss with a teaspoon of water or rice vinegar before serving because the noodles absorb dressing as they sit."
     },
     {
       "id": 115,
@@ -7126,7 +7408,10 @@
       "imageAlt": "Photograph of baked avocado halves filled with cooked eggs and sprinkled with chilli flakes",
       "seoTitle": "Baked Eggs in Avocado Recipe for One | foidslop",
       "seoDescription": "Eggs baked inside avocado halves make a rich breakfast-for-dinner with crisp edges and a soft center.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Choose a large avocado and scoop the cavity wider before adding the egg so the white does not overflow. Support the halves tightly in a small baking dish and stop once the whites are set.",
+      "substitutions": "Everything seasoning, salsa, chilli crisp, or hot sauce can replace plain chilli flakes. If the eggs are large, use the yolk plus only enough white to fill each avocado half.",
+      "storage": "Baked avocado and egg is best eaten immediately. The avocado darkens and the egg firms in storage, so prepare only the amount you plan to eat."
     },
     {
       "id": 116,
@@ -7188,7 +7473,9 @@
       "seoTitle": "Fig and Gorgonzola Flatbread Recipe for One | foidslop",
       "seoDescription": "Sweet figs and sharp gorgonzola melt together on a crisp flatbread finished with honey and black pepper.",
       "substitutions": "Use another blue cheese for the closest flavor, or goat cheese for a milder flatbread. Pear or thinly sliced apple can replace figs, and naan works in place of flatbread.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Keep the fig slices thin and scatter gorgonzola rather than covering the entire flatbread. Bake until the edges are crisp, then add honey and arugula after the heat is off.",
+      "storage": "Refrigerate leftover flatbread for up to two days. Reheat until crisp, then add fresh arugula and a new drizzle of honey after warming."
     },
     {
       "id": 117,
@@ -7249,7 +7536,10 @@
       "imageAlt": "Photograph of bowl of sliced cucumbers, crumbled feta, and fresh dill in a light vinaigrette",
       "seoTitle": "Cucumber and Feta Salad with Dill Recipe for One | foidslop",
       "seoDescription": "Cool cucumber, briny feta, fresh dill, and red wine vinegar make a crisp salad that improves as it rests.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Slice the cucumber evenly and season lightly before adding feta because the cheese already brings salt. Let the vinegar and dill sit with the cucumber briefly, then add feta near the end.",
+      "substitutions": "Goat cheese can replace feta, and rice vinegar can replace red wine vinegar for a milder salad. Thin radish or red onion adds extra bite without changing the basic dish.",
+      "storage": "The salad keeps refrigerated for about a day, but cucumber releases water as it sits. Drain excess liquid and add a little fresh dill before serving leftovers."
     },
     {
       "id": 118,
@@ -7310,8 +7600,10 @@
       "imageAlt": "Photograph of baked sweet potato split open and topped with toasted marshmallows and pecans",
       "seoTitle": "Baked Sweet Potato with Marshmallows and Pecans | foidslop",
       "seoDescription": "A dessert-like dinner. A sweet potato baked until soft, then topped with marshmallows and pecans.",
-      "substitutions": "A small acorn squash half can replace the sweet potato, though it may need a longer roast. Walnuts work instead of pecans, and maple syrup can replace brown sugar for the finish.",
-      "dateModified": "2026-09-06"
+      "substitutions": "A small acorn squash half can replace the sweet potato, though it may need a longer roast. Walnuts work instead of pecans, and maple syrup can add sweetness without extra marshmallows.",
+      "dateModified": "2026-09-06",
+      "headnote": "Bake the sweet potato until completely soft before splitting it, then add butter and cinnamon beneath the marshmallows. Return it to high heat only long enough to toast the marshmallows and warm the pecans.",
+      "storage": "Refrigerate the baked sweet potato without marshmallows for up to three days. Reheat it first, then add fresh marshmallows and pecans for the final toast."
     },
     {
       "id": 119,
@@ -7360,7 +7652,10 @@
       "imageAlt": "Photograph of plate of banana slices topped with almond butter and dark chocolate chips",
       "seoTitle": "Dark Chocolate and Almond Butter Banana Bites | foidslop",
       "seoDescription": "Slices of banana topped with almond butter and dark chocolate chips. Banana and almond butter make this snack recipe for one in 5 minutes.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Cut the banana into thick rounds so they can hold almond butter without bending. Use a small amount of dark chocolate on each bite and finish with salt after assembling.",
+      "substitutions": "Peanut, cashew, or sunflower seed butter can replace almond butter. Cacao nibs, chopped chocolate, or toasted nuts can replace chocolate chips.",
+      "storage": "Banana bites are best freshly assembled. For a colder snack, freeze them in a single layer and eat from frozen or after a few minutes at room temperature."
     },
     {
       "id": 120,
@@ -7417,7 +7712,10 @@
       "imageAlt": "Photograph of golden quesadilla cut in half, showing melted cheddar and apple slices",
       "seoTitle": "Cheddar and Apple Quesadilla Recipe for One | foidslop",
       "seoDescription": "A sweet and savory quesadilla with sharp cheddar and crisp apple slices. Made for one in 8 minutes, with sharp cheddar and crisp apple.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Slice the apple paper-thin so it warms by the time the cheddar melts. Keep apple between two layers of cheese, which helps the quesadilla hold together when flipped.",
+      "substitutions": "Granny Smith, Honeycrisp, or another crisp apple works well. Gouda or Monterey Jack can replace cheddar, and Dijon can replace honey for a sharper finish.",
+      "storage": "This quesadilla is best fresh. Refrigerate leftovers for one day and reheat in a dry skillet so the tortilla crisps and the cheese melts again."
     },
     {
       "id": 121,
@@ -7466,7 +7764,10 @@
       "imageAlt": "Photograph of bowl of dark red muhammara dip swirled with olive oil and served with pita",
       "seoTitle": "Muhammara Dip with Pita Recipe for One | foidslop",
       "seoDescription": "A spicy, smoky roasted red pepper and walnut dip. Better than hummus. A dip recipe for one, ready in 5 minutes with store-bought muhammara.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Spread the muhammara in a shallow bowl so olive oil can collect in the ridges, then add walnuts and mint only at serving. Warm pita enough to make it flexible without drying the edges.",
+      "substitutions": "Roasted red pepper hummus can stand in for muhammara if necessary, though it will be milder. Flatbread, naan, or sturdy crackers can replace pita.",
+      "storage": "Refrigerate muhammara in a covered container according to its package or for a few days if homemade. Keep pita separate and warm it fresh when serving."
     },
     {
       "id": 122,
@@ -7527,7 +7828,10 @@
       "imageAlt": "Photograph of bowl of brown rice topped with spicy diced tuna, avocado, and sesame seeds",
       "seoTitle": "Spicy Tuna Bowl with Brown Rice Recipe for One | foidslop",
       "seoDescription": "Sushi-grade tuna tossed with spicy mayo, soy sauce, and sesame oil makes a bold topping for warm brown rice.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Keep sushi-grade tuna cold while the brown rice stays warm, then season the tuna just before assembly. The contrast works best when spicy mayo coats the fish lightly rather than drowning it.",
+      "substitutions": "Sushi-grade salmon can replace tuna. Cooked shrimp or baked tofu provides a non-raw option, and white rice can replace brown rice if you prefer a softer base.",
+      "storage": "Eat seasoned raw tuna the day it is prepared and keep it chilled until serving. Store rice separately and reheat it before assembling a fresh bowl."
     },
     {
       "id": 123,
@@ -7592,7 +7896,10 @@
       "imageAlt": "Photograph of bowl of creamy tuna salad made with cottage cheese, served with crackers",
       "seoTitle": "Cottage Cheese and Tuna Salad Recipe for One | foidslop",
       "seoDescription": "Cottage cheese replaces the usual mayonnaise in this creamy tuna salad for crackers or cucumber slices. A snack recipe for one, ready in 5 minutes with tuna.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Drain the tuna thoroughly before folding it into cottage cheese so the salad stays thick enough to scoop. Dice celery finely and add lemon gradually because both tuna and cottage cheese already carry moisture.",
+      "substitutions": "Greek yogurt can replace some cottage cheese, and chopped pickles or capers can replace celery for a sharper bite. Serve with cucumber rounds, crackers, or toast.",
+      "storage": "Refrigerate cottage cheese tuna salad in a covered container and eat within two days. Keep crackers or cucumber slices separate until serving."
     },
     {
       "id": 124,
@@ -7657,7 +7964,10 @@
       "imageAlt": "Photograph of bowl of tuna, white beans, red onion, and parsley in a light vinaigrette",
       "seoTitle": "White Bean and Tuna Salad Recipe for One | foidslop",
       "seoDescription": "A Mediterranean style tuna salad with white beans, red onion, and herbs. A salad recipe for one, ready in 5 minutes with tuna.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Let the cannellini beans sit in olive oil and red wine vinegar for a few minutes before folding in the tuna. Add parsley and red onion at the end so the beans stay whole and the tuna stays flaky.",
+      "substitutions": "Butter beans or chickpeas can replace cannellini beans. Shallot can replace red onion, and lemon juice can stand in for red wine vinegar.",
+      "storage": "Refrigerate the tuna and bean salad in a covered container for up to two days. Bring it toward cool room temperature and add fresh parsley before eating."
     },
     {
       "id": 125,
@@ -7722,7 +8032,10 @@
       "imageAlt": "Photograph of avocado half stuffed with cherry tomatoes, mozzarella, and basil",
       "seoTitle": "Caprese Stuffed Avocado Recipe for One | foidslop",
       "seoDescription": "An avocado half filled with mozzarella, tomato, basil, and balsamic makes a fresh single-serving salad.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Use an avocado that is ripe but still firm enough to hold its shape. Toss the tomatoes and mozzarella separately before filling the cavity, then add balsamic and salt only after stuffing.",
+      "substitutions": "Diced fresh mozzarella can replace bocconcini, and ripe chopped tomato can replace cherry tomatoes. Pesto can stand in for basil and olive oil for a more concentrated flavor.",
+      "storage": "This is best assembled immediately because avocado browns and tomato releases water. Keep the caprese filling separate and cut the avocado only when ready to serve."
     },
     {
       "id": 126,
@@ -7788,7 +8101,7 @@
       "headnote": "Cook the gnocchi until they float, then give them a minute in the pan so the edges pick up a little color. Add pesto off the heat and fold in the tomatoes last so the sauce stays green and the tomatoes keep some shape.",
       "seoTitle": "Gnocchi with Pesto and Cherry Tomatoes Recipe for One | foidslop",
       "seoDescription": "Pillowy potato gnocchi tossed in basil pesto with burst cherry tomatoes. Made for one in 12 minutes, with store-bought potato gnocchi and basil pesto.",
-      "substitutions": "Shelf-stable or refrigerated potato gnocchi both work. Sun-dried tomatoes can replace the cherry tomatoes for a more concentrated flavor, and a spoonful of ricotta can soften a very strong pesto.",
+      "substitutions": "Shelf-stable or refrigerated potato gnocchi both work. Sun-dried tomatoes can replace the cherry tomatoes for a more concentrated flavor, and ricotta can soften a strong pesto.",
       "storage": "Refrigerate leftovers for up to two days. Reheat gently in a skillet with a teaspoon of water, then stir in a small spoonful of fresh pesto after the gnocchi are hot.",
       "dateModified": "2026-09-06"
     },
@@ -7851,7 +8164,10 @@
       "imageAlt": "Photograph of golden quesadilla cut open to reveal sweet potato, black beans, and melted cheese",
       "seoTitle": "Quesadilla with Sweet Potato and Black Beans | foidslop",
       "seoDescription": "A hearty vegetarian quesadilla filled with mashed sweet potato and beans. A main recipe for one, ready in 15 minutes with mashed cooked sweet potato.",
-      "dateModified": "2026-09-06"
+      "dateModified": "2026-09-06",
+      "headnote": "Spread the sweet potato in a thin, even layer so the quesadilla does not become heavy or wet. Scatter black beans and cheese across the full surface, then cook until the tortilla is crisp and the center is hot.",
+      "substitutions": "Pinto beans can replace black beans, and pumpkin or butternut squash puree can replace sweet potato. Cheddar works instead of Monterey Jack, and Greek yogurt can replace sour cream.",
+      "storage": "Refrigerate cooked sweet potato and beans separately for up to three days. Assemble and toast a fresh quesadilla when serving so the tortilla stays crisp."
     },
     {
       "id": 128,
@@ -7912,8 +8228,8 @@
       "headnote": "Zucchini noodles only need a few minutes in the pan. Stop while the strands still have some bite, then take them off the heat before tossing with pesto so the sauce stays bright and the zucchini does not turn watery.",
       "seoTitle": "Zucchini Noodles with Pesto Recipe for One | foidslop",
       "seoDescription": "Tender zucchini noodles tossed with basil pesto and parmesan make a light, quick dinner for one. Made for one in 10 minutes, with zucchini and basil pesto.",
-      "substitutions": "No pesto? Toss the zucchini with olive oil, parmesan, lemon, and black pepper instead. Yellow summer squash can replace the zucchini; keep the same short cooking time and stop before the strands soften completely.",
-      "storage": "Zucchini noodles are best eaten right away because they release water as they sit. If needed, refrigerate leftovers for one day and reheat briefly in a dry pan, then add a fresh spoonful of pesto after warming.",
+      "substitutions": "No pesto? Toss the zucchini with olive oil, parmesan, lemon, and black pepper instead. Yellow summer squash can replace the zucchini; keep the same short cooking time.",
+      "storage": "Zucchini noodles are best eaten right away because they release water as they sit. If needed, refrigerate leftovers for one day and reheat briefly in a dry pan, then add fresh pesto.",
       "dateModified": "2026-09-06"
     },
     {
@@ -7976,8 +8292,8 @@
       "headnote": "Keep the mozzarella, tomatoes, olives, and cured meat close in size so each skewer has a balanced bite. Drain wet ingredients well before assembly, then finish with olive oil, black pepper, and basil just before serving.",
       "seoTitle": "Antipasto Skewers Recipe for One | foidslop",
       "seoDescription": "All the flavors of an antipasto plate, threaded onto skewers for easy eating. Made for one in 10 minutes, with small skewers and tortellini.",
-      "substitutions": "Use any combination of small mozzarella balls, firm cheese cubes, olives, cherry tomatoes, marinated artichokes, roasted peppers, or folded salami. Keep the pieces bite-size and choose a mix of creamy, briny, and fresh ingredients.",
-      "storage": "Assemble these as close to serving as possible. If making them ahead, refrigerate covered for up to one day and add basil, olive oil, and any balsamic finish just before eating so the herbs stay fresh.",
+      "substitutions": "Use any combination of small mozzarella balls, firm cheese cubes, olives, cherry tomatoes, marinated artichokes, roasted peppers, or folded salami. Keep the pieces bite-size and balanced.",
+      "storage": "Assemble these as close to serving as possible. If making them ahead, refrigerate covered for up to one day and add basil, olive oil, and any balsamic finish just before eating.",
       "dateModified": "2026-09-06"
     },
     {
