@@ -129,7 +129,8 @@ jobs:
           rm -rf node_modules package-lock.json
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git rm scripts/_implement_expansion_products.py .github/workflows/implement-expansion-products.yml
+          git checkout -- .github/workflows/daily-publish.yml .github/workflows/pr-validation.yml
+          git rm scripts/_implement_expansion_products.py
           git add -u
           git add \
             about.html \
@@ -140,8 +141,7 @@ jobs:
             scripts/publish-culture-products.js scripts/lib/slop-votes.js \
             css/culture.css \
             package.json README.md docs/culture-products.md test/culture-products.test.js \
-            index.html sitemap.xml _redirects \
-            .github/workflows/daily-publish.yml .github/workflows/pr-validation.yml
+            index.html sitemap.xml _redirects
           if ! git diff --cached --quiet; then
             git commit -m "Complete foidslop culture product expansion"
             git push
