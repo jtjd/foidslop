@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { buildSubstitutions, buildStorage } = require('./lib/recipe-extras');
+const { buildSubstitutions, buildStorage, buildHeadnote } = require('./lib/recipe-extras');
 
 const ROOT = process.cwd();
 const DB_FILE = path.join(ROOT, 'data', 'foidslop-meals.json');
@@ -23,21 +23,21 @@ function normalize(value) {
   return String(value || '').replace(/\s+/g, ' ').trim();
 }
 
-function generatedOptionalCopy(meal, field) {
+function generatedEditorialCopy(meal, field) {
+  if (field === 'headnote') return buildHeadnote(meal);
   if (field === 'substitutions') return buildSubstitutions(meal);
   if (field === 'storage') return buildStorage(meal);
   return '';
 }
 
-function shouldRemoveOptionalCopy(meal, field, value) {
+function shouldRemoveGeneratedCopy(meal, field, value) {
   const text = normalize(value);
   if (!text) return false;
   if (knownGeneric.test(text)) return true;
-  // Category templates are useful as drafting prompts, but they are not
-  // publish-ready editorial copy. If the database still contains the exact
-  // deterministic output of the generator, omit the optional section rather
-  // than replacing it with another generic paragraph.
-  return text === normalize(generatedOptionalCopy(meal, field));
+  // Category templates remain useful as drafting prompts, but exact generator
+  // output is not publish-ready editorial copy. Omit it rather than swapping
+  // one deterministic filler paragraph for another.
+  return text === normalize(generatedEditorialCopy(meal, field));
 }
 
 let changedMeals = 0;
@@ -61,9 +61,9 @@ for (const meal of db.meals || []) {
     }
   }
 
-  for (const field of ['substitutions', 'storage']) {
+  for (const field of ['headnote', 'substitutions', 'storage']) {
     if (override && Object.hasOwn(override, field)) continue;
-    if (shouldRemoveOptionalCopy(meal, field, meal[field])) {
+    if (shouldRemoveGeneratedCopy(meal, field, meal[field])) {
       delete meal[field];
       touched = true;
       removedFields += 1;
@@ -77,9 +77,9 @@ for (const meal of db.meals || []) {
 }
 
 if (checkOnly) {
-  console.log(`${changedMeals} meal(s) need editorial remediation (${appliedOverrides} override field(s), ${removedFields} generated optional field(s)).`);
+  console.log(`${changedMeals} meal(s) need editorial remediation (${appliedOverrides} override field(s), ${removedFields} generated field(s)).`);
   process.exit(changedMeals ? 1 : 0);
 }
 
 fs.writeFileSync(DB_FILE, `${JSON.stringify(db, null, 2)}\n`);
-console.log(`Editorial remediation updated ${changedMeals} meal(s): ${appliedOverrides} curated field(s) applied, ${removedFields} generated optional field(s) removed.`);
+console.log(`Editorial remediation updated ${changedMeals} meal(s): ${appliedOverrides} curated field(s) applied, ${removedFields} generated field(s) removed.`);
