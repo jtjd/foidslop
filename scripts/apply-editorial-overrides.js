@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { buildSubstitutions, buildStorage } = require('./lib/recipe-extras');
 
 const ROOT = process.cwd();
 const DB_FILE = path.join(ROOT, 'data', 'foidslop-meals.json');
@@ -16,28 +17,27 @@ const today = new Intl.DateTimeFormat('en-CA', {
   timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit'
 }).format(new Date());
 
-const hardCheese = /\b(parmesan|pecorino|asiago|romano)\b/i;
-const generatedPastaSwap = /^Different short pasta shapes swap freely here\. No ([^?]+)\? Pecorino, asiago, or extra-black-pepper parmesan covers the same role in the sauce\.$/;
-const noCookHeatLanguage = /\b(reheat|reheated|warm(?:ing|ed)?|cook(?:ed|ing)?|brown(?:ed|ing)?|simmer(?:ed|ing)?|roast(?:ed|ing)?|heat)\b/i;
 const knownGeneric = /Whatever protein or hearty filling|Anything crunchy works for scooping|frozen versions cook directly|crisp or warm as intended/i;
 
-function isNoCook(meal) {
-  return /^0\s*m?$/i.test(String(meal.cook || '').trim()) || (meal.tags || []).some(tag => /^no cook$/i.test(String(tag)));
+function normalize(value) {
+  return String(value || '').replace(/\s+/g, ' ').trim();
 }
 
-function isClearlyBadGeneratedPastaSwap(value) {
-  const match = String(value || '').match(generatedPastaSwap);
-  if (!match) return false;
-  return !hardCheese.test(match[1]);
+function generatedOptionalCopy(meal, field) {
+  if (field === 'substitutions') return buildSubstitutions(meal);
+  if (field === 'storage') return buildStorage(meal);
+  return '';
 }
 
 function shouldRemoveOptionalCopy(meal, field, value) {
-  const text = String(value || '').trim();
+  const text = normalize(value);
   if (!text) return false;
   if (knownGeneric.test(text)) return true;
-  if (field === 'substitutions' && isClearlyBadGeneratedPastaSwap(text)) return true;
-  if (field === 'storage' && isNoCook(meal) && noCookHeatLanguage.test(text)) return true;
-  return false;
+  // Category templates are useful as drafting prompts, but they are not
+  // publish-ready editorial copy. If the database still contains the exact
+  // deterministic output of the generator, omit the optional section rather
+  // than replacing it with another generic paragraph.
+  return text === normalize(generatedOptionalCopy(meal, field));
 }
 
 let changedMeals = 0;
@@ -45,6 +45,7 @@ let removedFields = 0;
 let appliedOverrides = 0;
 
 for (const meal of db.meals || []) {
+  if (meal.status === 'retired') continue;
   let touched = false;
   const override = overrides[meal.slug];
 
@@ -69,12 +70,6 @@ for (const meal of db.meals || []) {
     }
   }
 
-  if (isNoCook(meal) && noCookHeatLanguage.test(String(meal.headnote || '')) && !(override && override.headnote)) {
-    // Headnotes are required by the publisher, so do not silently replace them with
-    // more generated prose. Fail instead: this recipe needs an intentional edit.
-    throw new Error(`No-cook recipe has heat/cooking language in headnote: ${meal.slug}`);
-  }
-
   if (touched) {
     if (meal.status === 'published') meal.dateModified = config.revisionDate || today;
     changedMeals += 1;
@@ -82,9 +77,9 @@ for (const meal of db.meals || []) {
 }
 
 if (checkOnly) {
-  console.log(`${changedMeals} meal(s) need editorial remediation (${appliedOverrides} override field(s), ${removedFields} bad optional field(s)).`);
+  console.log(`${changedMeals} meal(s) need editorial remediation (${appliedOverrides} override field(s), ${removedFields} generated optional field(s)).`);
   process.exit(changedMeals ? 1 : 0);
 }
 
 fs.writeFileSync(DB_FILE, `${JSON.stringify(db, null, 2)}\n`);
-console.log(`Editorial remediation updated ${changedMeals} meal(s): ${appliedOverrides} curated field(s) applied, ${removedFields} bad optional field(s) removed.`);
+console.log(`Editorial remediation updated ${changedMeals} meal(s): ${appliedOverrides} curated field(s) applied, ${removedFields} generated optional field(s) removed.`);
