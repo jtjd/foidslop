@@ -31,7 +31,9 @@ jobs:
           npm test
 
       - name: Regenerate public site
-        run: node scripts/daily-publish.js
+        run: |
+          node scripts/daily-publish.js
+          node scripts/publish-culture.js
 
       - name: Validate generated site
         run: |
