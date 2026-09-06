@@ -155,3 +155,26 @@
 /slop/quesadilla-sweet-potato-black-beans.html  /slop/quesadilla-sweet-potato-black-beans  301
 /slop/zucchini-noodles-pesto.html  /slop/zucchini-noodles-pesto  301
 /slop/antipasto-skewers.html  /slop/antipasto-skewers  301
+
+# culture-expansion:start
+/culture.html /culture 301
+/culture/foidslop-media.html /culture/foidslop-media 301
+/culture/foidslop-usernames.html /culture/foidslop-usernames 301
+/culture/why-everything-is-slop.html /culture/why-everything-is-slop 301
+/culture/how-forum-slang-escapes.html /culture/how-forum-slang-escapes 301
+/culture/girl-dinner-was-only-the-beginning.html /culture/girl-dinner-was-only-the-beginning 301
+/culture/reclaiming-cringe.html /culture/reclaiming-cringe 301
+/culture/slop-index.html /culture/slop-index 301
+/dictionary.html /dictionary 301
+/dictionary/femoid.html /dictionary/femoid 301
+/dictionary/moid.html /dictionary/moid 301
+/dictionary/femcel.html /dictionary/femcel 301
+/dictionary/mog.html /dictionary/mog 301
+/dictionary/looksmaxxing.html /dictionary/looksmaxxing 301
+/dictionary/girl-dinner.html /dictionary/girl-dinner 301
+/dictionary/slop.html /dictionary/slop 301
+/dictionary/ai-slop.html /dictionary/ai-slop 301
+/dictionary/goyslop.html /dictionary/goyslop 301
+/culture/index.html /culture 301
+/dictionary/index.html /dictionary 301
+# culture-expansion:end
