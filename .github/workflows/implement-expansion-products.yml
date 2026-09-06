@@ -27,6 +27,17 @@ jobs:
       - name: Apply expansion implementation
         run: python3 scripts/_implement_expansion_products.py
 
+      - name: Fix culture mobile header density
+        run: |
+          cat >> css/culture.css <<'CSS'
+
+          /* Culture pages add Dictionary to the shared desktop navigation. On
+             narrow screens the homepage-sized nav is the maximum safe density. */
+          @media (max-width:560px) {
+            .site-header .nav-link[href$="dictionary"] { display:none !important; }
+          }
+          CSS
+
       - name: Regenerate and validate site
         run: |
           node scripts/apply-editorial-overrides.js
