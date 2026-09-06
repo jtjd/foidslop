@@ -27,6 +27,17 @@ jobs:
       - name: Apply redesign
         run: python3 scripts/_redesign_culture_flagships.py
 
+      - name: Repair publisher escape emitted by regex patch
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('scripts/publish-culture-products.js')
+          text = p.read_text()
+          broken = '<link rel="stylesheet" href="../css/culture-showcase.css?v=20260906-1">\n</head>'
+          text = text.replace(broken, '<link rel="stylesheet" href="../css/culture-showcase.css?v=20260906-1">\\n</head>')
+          p.write_text(text)
+          PY
+
       - name: Regenerate and validate
         run: |
           node scripts/publish-culture.js
