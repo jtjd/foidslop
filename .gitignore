@@ -1,5 +1,6 @@
 .wrangler/
 .deploy/
+node_modules/
 references/
 test-results/
 .directory

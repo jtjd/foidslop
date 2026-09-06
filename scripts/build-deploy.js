@@ -89,5 +89,9 @@ for (const file of ['DJTNIP.png', 'DJTNIP-hq.avif', 'DJTNIP-hq.webp', 'CarModel.
 if (!fs.existsSync(path.join(OUTPUT, 'home.js'))) throw new Error('Homepage interaction script is missing from deployment');
 if (!fs.existsSync(path.join(OUTPUT, 'culture', 'index.html'))) throw new Error('Culture index is missing from deployment');
 if (!fs.existsSync(path.join(OUTPUT, 'dictionary', 'index.html'))) throw new Error('Dictionary index is missing from deployment');
+const requiredCultureReceipts = ['foid-r9k-2018.webp', 'foidslop-usernames-reddit.webp', 'girl-dinner-2023.webp'];
+for (const receipt of requiredCultureReceipts) {
+  if (!fs.existsSync(path.join(OUTPUT, 'culture', 'receipts', receipt))) throw new Error(`Culture receipt is missing from deployment: ${receipt}`);
+}
 
 console.log(`Built a public-only deployment in ${OUTPUT} for ${publishedSlugs.size} recipes plus culture and dictionary.`);

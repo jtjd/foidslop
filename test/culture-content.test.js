@@ -133,3 +133,36 @@ test('launch receipts stay attached to the intended pages', () => {
   assert.equal(girlDinnerReceipt?.image, 'culture/receipts/girl-dinner-2023.webp');
   assert.match(girlDinnerReceipt?.sourceUrl || '', /knowyourmeme\.com/);
 });
+
+test('culture stylesheet uses the publication theme tokens', () => {
+  const css = fs.readFileSync(path.join(root, 'css', 'culture.css'), 'utf8');
+  for (const stale of ['--page-bg', '--border-color', '--muted-text']) assert.doesNotMatch(css, new RegExp(stale));
+  assert.match(css, /var\(--bg\)/);
+  assert.match(css, /var\(--surface\)/);
+  assert.match(css, /var\(--border\)/);
+  assert.match(css, /var\(--muted\)/);
+});
+
+test('foidslop pillar carries visual receipts', () => {
+  const entry = dictionary.entries.find(item => item.slug === 'foidslop');
+  assert.ok(entry.evidence && entry.evidence.length >= 2, 'foidslop pillar needs launch receipts');
+  assert.equal(entry.evidence[0].image, 'culture/receipts/foid-r9k-2018.webp');
+  assert.equal(entry.evidence[1].image, 'culture/receipts/girl-dinner-2023.webp');
+  const generated = fs.readFileSync(path.join(root, 'what-is-foidslop.html'), 'utf8');
+  assert.match(generated, /culture-receipt/);
+  assert.match(generated, /foid-r9k-2018\.webp/);
+  assert.match(generated, /girl-dinner-2023\.webp/);
+});
+
+test('homepage culture integration stays inside the editorial flow', () => {
+  const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  assert.equal((home.match(/"alternateName"/g) || []).length, 1, 'homepage should have exactly one alternateName key');
+  assert.match(home, /css\/culture\.css\?v=20260906-3/);
+  const moduleStart = home.indexOf('<!-- culture-expansion:start -->');
+  const moduleEnd = home.indexOf('<!-- culture-expansion:end -->');
+  const repeatNewsletter = home.indexOf('zine-newsletter zine-newsletter-repeat');
+  const mainEnd = home.indexOf('</main>');
+  assert.ok(moduleStart > 0 && moduleEnd > moduleStart, 'homepage culture module missing');
+  assert.ok(repeatNewsletter > moduleEnd, 'culture module should come before the closing newsletter');
+  assert.ok(mainEnd > moduleEnd, 'culture module must stay inside main');
+});
