@@ -1,19 +1,36 @@
 # foidslop site
 
-This repository contains the static foidslop website, its recipe data, and the scripts that publish and validate it.
+This repository contains the static foidslop website, its recipe data, culture desk, Slop Dictionary, and the scripts that publish and validate it.
 
 ## Project structure
 
 - `assets/brand/` contains logos, favicons, and sharing artwork.
 - `assets/js/` contains browser JavaScript used by the published site.
 - `assets/shop/` contains retired store artwork kept out of public builds.
-- `data/` contains the private recipe source files, curated recipe editorial notes, editable homepage publication settings, editorial roundup configuration, and the synced reader-ratings cache.
+- `data/` contains the private recipe source files, curated recipe editorial notes, culture and dictionary source files, editable homepage publication settings, editorial roundup configuration, and the synced reader-ratings cache.
 - `functions/api/` contains Cloudflare Pages Functions that collect recipe votes.
-- `scripts/` contains publishing, image, SEO, and deployment tools.
-- `css/`, `recipes/`, and `slop/` contain public site pages and styles.
+- `scripts/` contains recipe publishing, culture publishing, image, SEO, and deployment tools.
+- `css/`, `recipes/`, `slop/`, `culture/`, and `dictionary/` contain public site pages and styles.
 - `.deploy/` is generated locally and is the directory Cloudflare Pages publishes.
 
 Public files in `assets/brand/` and `assets/js/` are copied to their established root URLs during the build. Retired store source artwork remains in the repository but is not deployed.
+
+## Culture desk and Slop Dictionary
+
+`data/culture-articles.json`, `data/dictionary.json`, and `data/slop-index.json` are the curated source of truth for the non-recipe publication. `scripts/publish-culture.js` validates those files and generates `/culture`, `/dictionary`, the Foidslop Media Index, the culture Atom feed, and the two existing branded search pages at `/what-is-foidslop` and `/what-does-foid-mean`.
+
+The culture publisher runs after `daily-publish.js`, so the recipe publisher remains independent and continues to own recipe pages, collections, roundups, and the core homepage. The culture pass adds a small homepage module and Culture navigation after the recipe build has finished.
+
+Culture source is deliberately curated rather than generated from keyword lists. Validation rejects missing sections, unknown dictionary links, broken source URLs, em dashes, and a short list of stock AI-writing phrases. Existing high-value branded URLs must not move.
+
+Use:
+
+```sh
+npm run culture:check
+npm run culture:publish
+```
+
+The normal `npm run publish` command runs both recipe and culture publishing in order.
 
 ## Homepage services
 
@@ -46,6 +63,7 @@ Several publisher features exist to move visitors deeper and earn clicks:
 - **Inline dispatch form:** recipe pages end with a compact newsletter signup reusing `data/homepage.json` settings; it renders only while `newsletter.enabled`.
 - **Homepage seasonal tile:** the first in-season roundup gets a tile between the intent links and The Table.
 - **Automatic filing cabinet:** the homepage rotates a deterministic older recipe daily (or weekly if configured), excluding the seven newest issues so the cabinet stays meaningfully archival.
+- **Culture module:** the homepage keeps the daily recipe as its primary product while surfacing three culture stories plus links to the Dictionary and Media Index lower on the page.
 - **Share row:** Pinterest, X, and copy-link actions on every recipe plus a save-to-Pinterest overlay on the hero image.
 - **Measurement:** `recipe-tools.js` binds every recipe-page `data-track` action (share, pin, report, today's-slop) and rating submissions to GA events; `archive.js` keeps archive query/filter state in shareable URLs and sends settled searches, including zero-result searches, to GA with result counts. All tracking is gated behind the cookie-consent flag exactly like the homepage.
 - **Reader report prompt:** recipes end with a "Made this slop?" call to the Tally submission form, feeding The Table's featured-reader slot.
@@ -75,6 +93,8 @@ npm run check
 npm run build
 npm run preview
 npm run publish
+npm run culture:check
+npm run culture:publish
 npm run optimize
 npm run refresh:copy
 npm run seo:crawl
@@ -85,6 +105,6 @@ npm run weekly:check
 npm run weekly:dry-run
 ```
 
-`npm run build` validates the site and creates a public-only `.deploy/` directory. Recipe source data, scripts, references, and future unpublished assets are not included in that directory.
+`npm run build` validates the site and creates a public-only `.deploy/` directory. Recipe source data, culture source data, scripts, references, and future unpublished assets are not included in that directory.
 
 `npm run preview` rebuilds the public site and serves `.deploy/` at `http://127.0.0.1:4173`. Use this command for local review instead of opening `index.html` directly or serving the repository root: brand files and browser scripts intentionally receive their public root URLs during the deployment build.

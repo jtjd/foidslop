@@ -66,6 +66,8 @@ for (const file of [
 
 copyDirectory('css');
 copyDirectory('recipes');
+if (fs.existsSync(path.join(ROOT, 'culture'))) copyDirectory('culture');
+if (fs.existsSync(path.join(ROOT, 'dictionary'))) copyDirectory('dictionary');
 for (const file of fs.readdirSync(path.join(ROOT, 'slop'))) {
   if (file.endsWith('.html')) copyFile(path.join('slop', file));
 }
@@ -85,5 +87,7 @@ for (const file of ['DJTNIP.png', 'DJTNIP-hq.avif', 'DJTNIP-hq.webp', 'CarModel.
   if (fs.existsSync(path.join(OUTPUT, file))) throw new Error(`Retired store asset leaked into deployment: ${file}`);
 }
 if (!fs.existsSync(path.join(OUTPUT, 'home.js'))) throw new Error('Homepage interaction script is missing from deployment');
+if (!fs.existsSync(path.join(OUTPUT, 'culture', 'index.html'))) throw new Error('Culture index is missing from deployment');
+if (!fs.existsSync(path.join(OUTPUT, 'dictionary', 'index.html'))) throw new Error('Dictionary index is missing from deployment');
 
-console.log(`Built a public-only deployment in ${OUTPUT} for ${publishedSlugs.size} recipes.`);
+console.log(`Built a public-only deployment in ${OUTPUT} for ${publishedSlugs.size} recipes plus culture and dictionary.`);

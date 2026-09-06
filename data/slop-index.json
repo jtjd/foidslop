@@ -1,0 +1,151 @@
+{
+  "revisionDate": "2026-09-06",
+  "title": "The Foidslop Media Index",
+  "description": "A running classification of movies, shows, books, games, and other media by Foid Density, Yearning, Tumblr Residue, Slop Factor, and other necessary measurements.",
+  "items": [
+    {
+      "id": "twilight",
+      "name": "Twilight",
+      "type": "Film / books",
+      "foidDensity": 97,
+      "yearning": 96,
+      "maleUnderstandability": 24,
+      "tumblrResidue": "Catastrophic",
+      "slopFactor": 9.6,
+      "actuallyGood": "Depends who is asking",
+      "verdict": "Foundational foidslop. Rain, yearning, danger, a deeply impractical boyfriend, and a cultural afterlife stronger than several governments."
+    },
+    {
+      "id": "nana",
+      "name": "Nana",
+      "type": "Anime / manga",
+      "foidDensity": 99,
+      "yearning": 100,
+      "maleUnderstandability": 18,
+      "tumblrResidue": "Weapons grade",
+      "slopFactor": 9.8,
+      "actuallyGood": "Yes",
+      "verdict": "Industrial-grade foidslop. Cigarettes smoked sadly, devastating outfits, friendship, romance, music, and emotional stability approaching zero."
+    },
+    {
+      "id": "the-sims",
+      "name": "The Sims",
+      "type": "Game series",
+      "foidDensity": 95,
+      "yearning": 61,
+      "maleUnderstandability": 42,
+      "tumblrResidue": "High",
+      "slopFactor": 9.3,
+      "actuallyGood": "Obviously",
+      "verdict": "You build a perfect kitchen, spend three hours choosing wallpaper, trap an enemy in a room, and call this relaxing. Pure form."
+    },
+    {
+      "id": "stardew-valley",
+      "name": "Stardew Valley",
+      "type": "Video game",
+      "foidDensity": 91,
+      "yearning": 84,
+      "maleUnderstandability": 70,
+      "tumblrResidue": "High",
+      "slopFactor": 8.8,
+      "actuallyGood": "Yes",
+      "verdict": "Cross-demographic foidslop. Farming, decorating, romance, seasonal rituals, tiny gifts, and spreadsheets disguised as a peaceful evening."
+    },
+    {
+      "id": "gilmore-girls",
+      "name": "Gilmore Girls",
+      "type": "Television",
+      "foidDensity": 96,
+      "yearning": 88,
+      "maleUnderstandability": 31,
+      "tumblrResidue": "Persistent",
+      "slopFactor": 9.2,
+      "actuallyGood": "Frequently",
+      "verdict": "Coffee, coats, impossible dialogue speed, terrible romantic decisions, and an autumnal atmosphere capable of moving candle sales."
+    },
+    {
+      "id": "gossip-girl",
+      "name": "Gossip Girl",
+      "type": "Television",
+      "foidDensity": 98,
+      "yearning": 79,
+      "maleUnderstandability": 22,
+      "tumblrResidue": "Historic",
+      "slopFactor": 9.7,
+      "actuallyGood": "The question is rude",
+      "verdict": "Luxury foidslop. Everyone is beautiful, nobody should date anyone, and the clothes have more coherent motivation than several characters."
+    },
+    {
+      "id": "mamma-mia",
+      "name": "Mamma Mia!",
+      "type": "Film / musical",
+      "foidDensity": 97,
+      "yearning": 93,
+      "maleUnderstandability": 38,
+      "tumblrResidue": "Low but spiritually present",
+      "slopFactor": 9.4,
+      "actuallyGood": "Yes",
+      "verdict": "Greek island. Three possible fathers. ABBA. Meryl Streep. Any attempt to argue against the classification will be ignored over the opening piano."
+    },
+    {
+      "id": "sex-and-the-city",
+      "name": "Sex and the City",
+      "type": "Television",
+      "foidDensity": 99,
+      "yearning": 92,
+      "maleUnderstandability": 19,
+      "tumblrResidue": "Pre-Tumblr fossil",
+      "slopFactor": 9.5,
+      "actuallyGood": "Often",
+      "verdict": "The Large Hadron Collider of female-coded discourse. Shoes, friendship, bad men, good restaurants, and enough takes to power magazines for decades."
+    },
+    {
+      "id": "animal-crossing",
+      "name": "Animal Crossing",
+      "type": "Game series",
+      "foidDensity": 94,
+      "yearning": 54,
+      "maleUnderstandability": 57,
+      "tumblrResidue": "High",
+      "slopFactor": 8.9,
+      "actuallyGood": "Yes",
+      "verdict": "Mortgage debt rendered cute enough to become self-care. Furniture placement, fruit economics, tiny animals, and social obligations with excellent typography."
+    },
+    {
+      "id": "the-vampire-diaries",
+      "name": "The Vampire Diaries",
+      "type": "Television",
+      "foidDensity": 95,
+      "yearning": 98,
+      "maleUnderstandability": 27,
+      "tumblrResidue": "Severe",
+      "slopFactor": 9.5,
+      "actuallyGood": "At 1:00 AM, absolutely",
+      "verdict": "Everyone is immortal except the consequences. Love triangles, supernatural bureaucracy, excellent cheekbones, and a body count treated as background texture."
+    },
+    {
+      "id": "pride-and-prejudice-2005",
+      "name": "Pride & Prejudice (2005)",
+      "type": "Film",
+      "foidDensity": 96,
+      "yearning": 100,
+      "maleUnderstandability": 46,
+      "tumblrResidue": "Permanent",
+      "slopFactor": 9.4,
+      "actuallyGood": "Extremely",
+      "verdict": "Prestige foidslop. Hand flex. Rain proposal. Muddy hems. A single glance doing the workload of an entire streaming miniseries."
+    },
+    {
+      "id": "letterboxd",
+      "name": "Letterboxd",
+      "type": "Platform / activity",
+      "foidDensity": 85,
+      "yearning": 73,
+      "maleUnderstandability": 64,
+      "tumblrResidue": "Migrated here",
+      "slopFactor": 8.4,
+      "actuallyGood": "When used irresponsibly",
+      "verdict": "Not media itself, but a vital foidslop processing facility. Log the movie, write four lowercase words, change your top four, repeat until identity stabilizes."
+    }
+  ]
+}
