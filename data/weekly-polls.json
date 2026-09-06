@@ -185,7 +185,7 @@
     {
       "id": "2026-09-11",
       "targetFriday": "2026-09-11",
-      "status": "pending",
+      "status": "open",
       "dispatchNote": null,
       "choices": [
         {
@@ -203,7 +203,8 @@
           "label": "Spicy bowl",
           "recipeSlug": "spicy-tuna-avocado-bowl"
         }
-      ]
+      ],
+      "openedAt": "2026-09-06T15:23:25.301Z"
     },
     {
       "id": "2026-09-18",
