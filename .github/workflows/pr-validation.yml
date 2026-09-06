@@ -1,0 +1,36 @@
+name: PR Validation
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Run unit tests
+        run: npm test
+
+      - name: Apply editorial remediation in validation workspace
+        run: node scripts/apply-editorial-overrides.js
+
+      - name: Audit remediated editorial quality
+        run: node scripts/audit-editorial-quality.js
+
+      - name: Regenerate public site
+        run: node scripts/daily-publish.js
+
+      - name: Validate generated SEO output
+        run: node scripts/seo-check.js

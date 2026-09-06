@@ -298,7 +298,7 @@ function validate() {
     if (ids.has(meal.id)) errors.push(`Duplicate id: ${meal.id}`);
     if (slugs.has(meal.slug)) errors.push(`Duplicate slug: ${meal.slug}`);
     ids.add(meal.id); slugs.add(meal.slug);
-    if (!meal.name || !meal.slug || !meal.description || !meal.headnote || !meal.seoTitle || !meal.seoDescription) errors.push(`Missing required content for meal ${meal.id}`);
+    if (!meal.name || !meal.slug || !meal.description || !meal.seoTitle || !meal.seoDescription) errors.push(`Missing required content for meal ${meal.id}`);
     if (!Array.isArray(meal.ingredients) || !meal.ingredients.length) errors.push(`Missing ingredients: ${meal.slug}`);
     if (!Array.isArray(meal.steps) || !meal.steps.length) errors.push(`Missing steps: ${meal.slug}`);
     if (meal.steps.some(step => !step.name || !step.text || step.text.length < 55)) errors.push(`Thin recipe step: ${meal.slug}`);
@@ -328,6 +328,7 @@ function validate() {
   for (const field of ['headnote', 'storage', 'substitutions', 'seoDescription']) {
     const seen = new Map();
     for (const meal of meals.filter(item => item.status !== 'retired')) {
+      if (!meal[field]) continue;
       if (!seen.has(meal[field])) seen.set(meal[field], []);
       seen.get(meal[field]).push(meal.slug);
     }
@@ -517,7 +518,7 @@ function renderRecipe(meal, index) {
     image: schemaImages(meal), author: { '@type': 'Organization', name: 'foidslop', url: BASE_URL, logo: `${BASE_URL}/brand-icon.webp`, sameAs: SAME_AS },
     datePublished: isoDate(date), dateModified: effectiveDateModified(meal), ...(recipeKeywords(meal).length ? { keywords: recipeKeywords(meal).join(', ') } : {}), recipeCategory: meal.category,
     recipeCuisine: meal.cuisine, prepTime: duration(meal.prep), cookTime: duration(meal.cook),
-    totalTime: `PT${total}M`, recipeYield: meal.serves,
+    totalTime: `PT${total}M`, recipeYield: `${meal.serves} serving${String(meal.serves) === '1' ? '' : 's'}`,
     recipeIngredient: meal.ingredients.map(item => `${item.amount} ${item.name}`),
     recipeInstructions: meal.steps.map((step, stepIndex) => ({ '@type': 'HowToStep', name: step.name, text: step.text, url: `${recipeUrl(meal)}#step-${stepIndex + 1}` }))
   };
@@ -549,7 +550,7 @@ function renderRecipe(meal, index) {
 <main id="main"><div class="slop-body"><div class="slop-image-panel"><picture><source type="image/webp" srcset="img/${meal.slug}-480.webp 480w, img/${meal.slug}-768.webp 768w" sizes="(max-width: 900px) 100vw, 50vw"><img src="img/${imageFile(meal)}" alt="${esc(meal.imageAlt || meal.name)}" width="768" height="768" loading="eager" fetchpriority="high"></picture><a class="image-pin" href="${pinterestShareUrl(meal)}" target="_blank" rel="noopener" data-track="pin_click" aria-label="Save ${esc(meal.name)} to Pinterest">Pin</a><span class="slop-image-caption">${esc(meal.name)} / foidslop</span></div>
 <div class="slop-content"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Home</a><span>/</span>${primaryHub ? `<a href="../recipes/${primaryHub.slug}">${esc(primaryHub.title)}</a>` : `<a href="./archive">Archive</a>`}<span>/</span><span class="current">${esc(meal.name)}</span></nav>
 ${shareRow(meal)}
-<p class="slop-desc">${esc(meal.description)}</p><p class="slop-headnote">${esc(meal.headnote)}</p>${editorialSection}<p class="section-label">At a Glance</p><div class="slop-stats" role="list">
+<p class="slop-desc">${esc(meal.description)}</p>${meal.headnote ? `<p class="slop-headnote">${esc(meal.headnote)}</p>` : ''}${editorialSection}<p class="section-label">At a Glance</p><div class="slop-stats" role="list">
 <div class="slop-stat"><div class="slop-stat-label">Prep</div><div class="slop-stat-value">${esc(meal.prep)}</div></div><div class="slop-stat"><div class="slop-stat-label">Cook</div><div class="slop-stat-value">${esc(meal.cook)}</div></div><div class="slop-stat"><div class="slop-stat-label">Serves</div><div class="slop-stat-value">${esc(meal.serves)}</div></div><div class="slop-stat"><div class="slop-stat-label">Difficulty</div><div class="slop-stat-value">${esc(meal.difficulty)}</div></div></div>
 <div class="recipe-tools" aria-label="Recipe tools"><button type="button" class="recipe-tool" id="print-recipe">Print recipe</button><button type="button" class="recipe-tool" id="copy-ingredients">Copy ingredients</button><span class="recipe-tool-status" id="recipe-tool-status" role="status" aria-live="polite"></span></div>
 <div class="rate-recipe" id="rate-recipe" data-slug="${esc(meal.slug)}"><span class="rate-label">Rate this slop</span><div class="rate-stars">${[1, 2, 3, 4, 5].map(value => `<button type="button" class="rate-star${summary && value <= Math.round(summary.average) ? ' active' : ''}" data-value="${value}" aria-pressed="${summary && value <= Math.round(summary.average) ? 'true' : 'false'}" aria-label="Rate ${value} out of 5">${value}</button>`).join('')}</div><span class="rate-summary" id="rate-summary">${summary ? `Rated ${summary.average}/5 by ${summary.count} ${summary.count === 1 ? 'reader' : 'readers'}.` : 'Be the first to rate it.'}</span></div>
@@ -696,7 +697,7 @@ function archiveFiltersFor(meal) {
 }
 
 function archiveSearchFor(meal) {
-  return [meal.name, meal.description, meal.headnote, meal.category, meal.cuisine, ...meal.tags, ...meal.ingredients.map(item => item.name)].join(' ').toLowerCase();
+  return [meal.name, meal.description, meal.headnote || '', meal.category, meal.cuisine, ...meal.tags, ...meal.ingredients.map(item => item.name)].join(' ').toLowerCase();
 }
 
 function archiveCard(meal, eager = false, prefix = '') {

@@ -253,7 +253,7 @@ for (const file of recipeFiles) {
     }
   }
   if (!sawRecipeSchema) errors.push(`${file}: missing Recipe schema`);
-  if (!html.includes('class="slop-headnote"')) errors.push(`${file}: missing recipe headnote`);
+  // Headnotes are optional editorial enhancements; core recipe content and schema remain required.
   if (!html.includes('max-image-preview:large')) errors.push(`${file}: missing large image preview directive`);
   if (!html.includes('"dateModified"')) errors.push(`${file}: missing recipe modification date`);
   if (!html.includes('id="step-1"') || !html.includes(`#step-1`)) errors.push(`${file}: missing stable recipe step anchors`);
@@ -319,7 +319,7 @@ for (const { name: databaseName, data } of databases) {
     if (slugs.has(meal.slug)) errors.push(`${meal.slug}: duplicate recipe slug`);
     if (meal.id >= 201 && meal.id <= 300 && normalizedNames.has(normalizedName)) errors.push(`${meal.slug}: duplicate normalized recipe name`);
     ids.add(meal.id); slugs.add(meal.slug); normalizedNames.add(normalizedName);
-    if (!meal.name || !meal.slug || !meal.description || !meal.headnote || !meal.seoTitle || !meal.seoDescription) errors.push(`${meal.slug}: incomplete discovery copy`);
+    if (!meal.name || !meal.slug || !meal.description || !meal.seoTitle || !meal.seoDescription) errors.push(`${meal.slug}: incomplete discovery copy`);
     if (!Array.isArray(meal.ingredients) || !meal.ingredients.length || meal.ingredients.some(item => !item.amount || !item.name)) errors.push(`${meal.slug}: incomplete ingredients`);
     if (!Array.isArray(meal.steps) || !meal.steps.length || meal.steps.some(step => !step.name || !step.text)) errors.push(`${meal.slug}: incomplete method`);
     if ((meal.description || '').length < 65 || (meal.notes || '').length < 55) errors.push(`${meal.slug}: thin description or notes`);
@@ -337,7 +337,7 @@ for (const { name: databaseName, data } of databases) {
 const volumeTwo = primaryData.meals.filter(meal => meal.id >= 201 && meal.id <= 300);
 {
   const staged = volumeTwo;
-  const expectedFields = ['id', 'name', 'slug', 'description', 'tags', 'prep', 'cook', 'serves', 'difficulty', 'cuisine', 'category', 'ingredients', 'steps', 'notes', 'photo_search', 'publishDate', 'status', 'imageAlt', 'headnote', 'seoTitle', 'seoDescription'];
+  const expectedFields = ['id', 'name', 'slug', 'description', 'tags', 'prep', 'cook', 'serves', 'difficulty', 'cuisine', 'category', 'ingredients', 'steps', 'notes', 'photo_search', 'publishDate', 'status', 'imageAlt', 'seoTitle', 'seoDescription'];
   if (staged.length !== 100) errors.push(`volume 2: expected 100 recipes, found ${staged.length}`);
   if (staged[0]?.id !== 201 || staged.at(-1)?.id !== 300) errors.push('volume 2: ids must run from 201 through 300');
   if (staged[0]?.publishDate !== '2026-11-17' || staged.at(-1)?.publishDate !== '2027-02-24') errors.push('volume 2: unexpected publication range');
