@@ -54,6 +54,15 @@ test('existing branded search routes stay canonical', () => {
   assert.equal(bySlug.get('foid').route, 'what-does-foid-mean');
 });
 
+test('foidslop baseline stays concrete and origin-forward', () => {
+  const foidslop = dictionary.entries.find(entry => entry.slug === 'foidslop');
+  assert.match(foidslop.deck, /^Foidslop is a catch-all for female-coded slop:/);
+  assert.match(foidslop.deck, /girl dinner/);
+  assert.match(foidslop.deck, /4chan\/incel slang/);
+  assert.match(foidslop.definition, /foid, 4chan\/incel slang for a woman/);
+  assert.doesNotMatch(foidslop.deck, /\b(?:vibe|energy|reclaim|problematic)\b/i);
+});
+
 test('published culture copy avoids em dashes and stock AI voice', () => {
   for (const [name, source] of [['dictionary', dictionary], ['culture', culture], ['slop-index', index]]) {
     for (const value of strings(source)) {
