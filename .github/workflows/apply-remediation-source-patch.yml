@@ -22,17 +22,17 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Patch publisher source
+      - name: Patch publisher and SEO validator source
         run: node scripts/patch-publisher-source.js
 
-      - name: Commit publisher patch
+      - name: Commit source patch
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add scripts/daily-publish.js
+          git add scripts/daily-publish.js scripts/seo-check.js
           if ! git diff --staged --quiet; then
-            git commit -m "[publisher-patch] Allow optional discovery copy and clarify recipe yield"
+            git commit -m "[publisher-patch] Allow optional editorial copy and clarify recipe yield"
             git push origin HEAD:seo-content-quality-remediation
           else
-            echo "Publisher source already patched."
+            echo "Publisher and SEO validator source already patched."
           fi
