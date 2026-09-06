@@ -27,18 +27,72 @@ jobs:
       - name: Apply culture layout remediation
         run: |
           python3 scripts/_culture_layout_fix.py
-          # Python regex replacement strings interpret backslash escapes. Make sure
-          # the generated JS keeps a literal \\n escape inside the head() replacement.
           python3 - <<'PY'
           from pathlib import Path
+          import re
+
+          # Keep a literal newline escape in the generated JS head replacement.
           p = Path('scripts/publish-culture-products.js')
           text = p.read_text()
           text = text.replace('culture-showcase.css?v=20260906-2">\n</head>', 'culture-showcase.css?v=20260906-2">\\n</head>')
           p.write_text(text)
 
-          t = Path('test/culture-layout-audit.test.js')
-          text = t.read_text().replace('max-width: 1180px', 'max-width: 1040px')
-          t.write_text(text)
+          # The bunny image is intentionally no longer an editorial receipt. Keep
+          # the Reddit thread as a source and update the old regression accordingly.
+          p = Path('test/culture-content.test.js')
+          text = p.read_text()
+          old = '''  const usernameReceipt = byCultureSlug.get('foidslop-usernames').evidence?.[0];
+          assert.equal(usernameReceipt?.image, 'culture/receipts/foidslop-usernames-reddit.webp');
+          assert.match(usernameReceipt?.sourceUrl || '', /reddit\\.com/);
+          assert.match(usernameReceipt?.caption || '', /image attached/i);
+          '''
+          new = '''  const usernameArticle = byCultureSlug.get('foidslop-usernames');
+          assert.equal((usernameArticle.evidence || []).length, 0, 'username article should not use the unrelated portrait attachment as a receipt');
+          assert.ok(usernameArticle.sources.some(source => /reddit\\.com/.test(source.url)), 'username article should retain the Reddit source');
+          '''
+          if old not in text:
+              raise SystemExit('old username receipt regression block not found')
+          text = text.replace(old, new)
+          text = text.replace(r'/css\\/culture\\.css\\?v=20260906-4/', r'/css\\/culture\\.css\\?v=20260906-5/')
+          p.write_text(text)
+
+          # Replace the generated helper test with stable, readable assertions.
+          Path('test/culture-layout-audit.test.js').write_text(r'''const test = require('node:test');
+          const assert = require('node:assert/strict');
+          const fs = require('node:fs');
+
+          const culture = JSON.parse(fs.readFileSync('data/culture-articles.json', 'utf8'));
+          const products = fs.readFileSync('scripts/publish-culture-products.js', 'utf8');
+          const theme = fs.readFileSync('css/theme.css', 'utf8');
+          const css = fs.readFileSync('css/culture.css', 'utf8');
+          const showcase = fs.readFileSync('css/culture-showcase.css', 'utf8');
+
+          test('foidslop usernames does not use the unrelated Reddit bunny image as evidence', () => {
+            const article = culture.articles.find(item => item.slug === 'foidslop-usernames');
+            assert.ok(article);
+            assert.equal((article.evidence || []).length, 0);
+            assert.ok(article.sources.some(source => source.url.includes('reddit.com')));
+          });
+
+          test('Slop Trial uses the dedicated responsive court layout', () => {
+            assert.match(products, /slop-trial-page/);
+            assert.match(products, /slop-trial-specimen/);
+            assert.match(products, /slop-trial-verdict/);
+            assert.match(showcase, /grid-template-columns: minmax\(0,1\.18fr\) minmax\(330px,\.82fr\)/);
+          });
+
+          test('culture article titles and receipts have explicit size limits', () => {
+            assert.match(theme, /culture-article:not\(\.foidslop-primer\) > h1/);
+            assert.match(theme, /max-width: 1040px/);
+            assert.match(css, /max-height: 620px/);
+            assert.match(css, /width: auto/);
+          });
+
+          test('intermediate publication header drops decorative center copy before clipping', () => {
+            assert.match(theme, /min-width: 801px\) and \(max-width: 1180px/);
+            assert.match(theme, /site-header-center \{ display: none; \}/);
+          });
+          ''')
           PY
           rm -f culture/receipts/foidslop-usernames-reddit.webp
 
@@ -154,7 +208,6 @@ jobs:
               }
             }
 
-            // Specific regression checks from the user-reported pages.
             await page.setViewportSize({ width: 1120, height: 900 });
             await page.goto(base + '/culture/foidslop-usernames.html', { waitUntil:'networkidle' });
             assert.equal(await page.locator('.culture-receipt img').count(), 0, 'username article still contains unrelated bunny receipt');
