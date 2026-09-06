@@ -7,15 +7,21 @@ const { buildSubstitutions, buildStorage, buildHeadnote } = require('./lib/recip
 const ROOT = process.cwd();
 const DB_FILE = path.join(ROOT, 'data', 'foidslop-meals.json');
 const OVERRIDES_FILE = path.join(ROOT, 'data', 'recipe-copy-overrides.json');
+const PUBLISHED_OVERRIDES_FILE = path.join(ROOT, 'data', 'published-recipe-copy-overrides.json');
 const checkOnly = process.argv.includes('--check');
 
 const db = JSON.parse(fs.readFileSync(DB_FILE, 'utf8'));
 const config = JSON.parse(fs.readFileSync(OVERRIDES_FILE, 'utf8'));
-const overrides = config.entries || {};
+const publishedConfig = JSON.parse(fs.readFileSync(PUBLISHED_OVERRIDES_FILE, 'utf8'));
+const overrides = {
+  ...(config.entries || {}),
+  ...(publishedConfig.entries || {})
+};
 const allowedFields = new Set(['headnote', 'substitutions', 'storage', 'seoTitle', 'seoDescription', 'notes']);
 const today = new Intl.DateTimeFormat('en-CA', {
   timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit'
 }).format(new Date());
+const publishedRevisionDate = publishedConfig.revisionDate || config.revisionDate || today;
 
 const knownGeneric = /Whatever protein or hearty filling|Anything crunchy works for scooping|frozen versions cook directly|crisp or warm as intended/i;
 
@@ -71,7 +77,7 @@ for (const meal of db.meals || []) {
   }
 
   if (touched) {
-    if (meal.status === 'published') meal.dateModified = config.revisionDate || today;
+    if (meal.status === 'published') meal.dateModified = publishedRevisionDate;
     changedMeals += 1;
   }
 }
