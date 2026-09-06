@@ -38,6 +38,14 @@ jobs:
           p.write_text(text)
           PY
 
+      - name: Fix flagship mobile masthead sizing
+        run: |
+          cat >> css/culture-showcase.css <<'CSS'
+          @media(max-width:600px){
+            .foidslop-hero h1{max-width:100%;font-size:clamp(3.25rem,15.5vw,4.4rem);letter-spacing:-.09em}
+          }
+          CSS
+
       - name: Regenerate and validate
         run: |
           node scripts/publish-culture.js
@@ -89,10 +97,11 @@ jobs:
             await page.screenshot({ path: 'artifacts/what-is-foidslop-redesign.png', fullPage: true });
 
             await page.setViewportSize({ width: 390, height: 844 });
-            for (const route of ['/culture/username-generator.html', '/what-is-foidslop.html']) {
-              await page.goto(`${base}${route}`, { waitUntil: 'networkidle' });
-              assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth), false, `horizontal overflow on ${route}`);
-            }
+            await page.goto(`${base}/culture/username-generator.html`, { waitUntil: 'networkidle' });
+            assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth), false, 'horizontal overflow on username generator');
+            await page.screenshot({ path: 'artifacts/username-generator-mobile.png', fullPage: true });
+            await page.goto(`${base}/what-is-foidslop.html`, { waitUntil: 'networkidle' });
+            assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth), false, 'horizontal overflow on foidslop primer');
             await page.screenshot({ path: 'artifacts/what-is-foidslop-mobile.png', fullPage: true });
             await browser.close();
           })().catch(error => { console.error(error); process.exit(1); });
