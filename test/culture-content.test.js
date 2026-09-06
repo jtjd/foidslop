@@ -133,3 +133,23 @@ test('launch receipts stay attached to the intended pages', () => {
   assert.equal(girlDinnerReceipt?.image, 'culture/receipts/girl-dinner-2023.webp');
   assert.match(girlDinnerReceipt?.sourceUrl || '', /knowyourmeme\.com/);
 });
+
+test('culture stylesheet uses the publication theme tokens', () => {
+  const css = fs.readFileSync(path.join(root, 'css', 'culture.css'), 'utf8');
+  for (const stale of ['--page-bg', '--border-color', '--muted-text']) assert.doesNotMatch(css, new RegExp(stale));
+  assert.match(css, /var\(--bg\)/);
+  assert.match(css, /var\(--surface\)/);
+  assert.match(css, /var\(--border\)/);
+  assert.match(css, /var\(--muted\)/);
+});
+
+test('foidslop pillar carries visual receipts', () => {
+  const entry = dictionary.entries.find(item => item.slug === 'foidslop');
+  assert.ok(entry.evidence && entry.evidence.length >= 2, 'foidslop pillar needs launch receipts');
+  assert.equal(entry.evidence[0].image, 'culture/receipts/foid-r9k-2018.webp');
+  assert.equal(entry.evidence[1].image, 'culture/receipts/girl-dinner-2023.webp');
+  const generated = fs.readFileSync(path.join(root, 'what-is-foidslop.html'), 'utf8');
+  assert.match(generated, /culture-receipt/);
+  assert.match(generated, /foid-r9k-2018\.webp/);
+  assert.match(generated, /girl-dinner-2023\.webp/);
+});
