@@ -1,0 +1,51 @@
+name: One-time culture baseline rewrite
+
+on:
+  push:
+    branches: [foidslop-culture-expansion]
+    paths:
+      - '.github/workflows/apply-culture-baseline.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  rewrite:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: foidslop-culture-expansion
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Rewrite culture source
+        run: node scripts/rewrite-culture-baseline.js
+
+      - name: Validate source
+        run: |
+          node scripts/publish-culture.js --check
+          npm test
+
+      - name: Regenerate public site
+        run: |
+          node scripts/daily-publish.js
+          node scripts/publish-culture.js
+
+      - name: Validate generated site
+        run: |
+          node scripts/seo-check.js
+          node scripts/build-deploy.js
+          npm test
+
+      - name: Commit baseline rewrite
+        run: |
+          rm -f scripts/rewrite-culture-baseline.js .github/workflows/apply-culture-baseline.yml
+          git config user.name 'GitHub Actions'
+          git config user.email 'actions@github.com'
+          git add -A
+          git commit -m 'Set concrete editorial baseline for culture'
+          git push origin HEAD:foidslop-culture-expansion
