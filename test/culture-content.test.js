@@ -15,6 +15,16 @@ function strings(value, out = []) {
   return out;
 }
 
+const abstractCultureVoice = [
+  /\bvibe cluster\b/i,
+  /\bfeminine (?:online )?(?:vibe|energy)\b/i,
+  /\bcultural object\b/i,
+  /\blinguistic ecosystem\b/i,
+  /\bproductive (?:internet )?(?:slang|label|suffix)\b/i,
+  /\btransport layer\b/i,
+  /\bworking definition and taxonomy\b/i
+];
+
 const staleAiVoice = [
   /\u2014/,
   /\bdelve(?:s|d)?\b/i,
@@ -47,7 +57,7 @@ test('existing branded search routes stay canonical', () => {
 test('published culture copy avoids em dashes and stock AI voice', () => {
   for (const [name, source] of [['dictionary', dictionary], ['culture', culture], ['slop-index', index]]) {
     for (const value of strings(source)) {
-      for (const pattern of staleAiVoice) assert.doesNotMatch(value, pattern, `${name} copy matched ${pattern}: ${value}`);
+      for (const pattern of [...staleAiVoice, ...abstractCultureVoice]) assert.doesNotMatch(value, pattern, `${name} copy matched ${pattern}: ${value}`);
     }
   }
 });
