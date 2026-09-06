@@ -23,7 +23,16 @@ jobs:
           node-version: '22'
 
       - name: Rewrite culture source
-        run: node scripts/rewrite-culture-baseline.js
+        run: |
+          node scripts/rewrite-culture-baseline.js
+          node - <<'NODE'
+          const fs = require('fs');
+          const file = 'data/dictionary.json';
+          const data = JSON.parse(fs.readFileSync(file, 'utf8'));
+          const item = data.entries.find(entry => entry.slug === 'femcel');
+          item.description = 'Femcel means female involuntary celibate. Online it also describes lonely-girl memes, aesthetics, characters, playlists, and posting styles.';
+          fs.writeFileSync(file, JSON.stringify(data, null, 2) + '\n');
+          NODE
 
       - name: Validate source
         run: |
