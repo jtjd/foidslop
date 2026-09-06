@@ -37,8 +37,9 @@
 .slop-trial select, .username-generator select { display:block; min-width:220px; margin-top:8px; padding:11px 12px; border:1px solid var(--border); background:var(--surface); color:var(--text); font:inherit; }
 .slop-trial-toolbar button, .slop-next, .username-actions button { border:1px solid var(--border); background:transparent; color:var(--text); padding:12px 15px; font:700 10px/1 Inter,sans-serif; letter-spacing:.1em; text-transform:uppercase; cursor:pointer; }
 .slop-trial-card { padding:clamp(28px,5vw,64px); border:1px solid var(--border); background:var(--surface); }
-.slop-trial-card h2 { max-width:760px; margin:0; color:var(--text); font:900 clamp(3.2rem,8vw,7.5rem)/.83 Arial Black,Arial,sans-serif; letter-spacing:-.075em; text-transform:uppercase; }
+.slop-trial-card h2 { max-width:760px; margin:0 0 28px; color:var(--text); font:900 clamp(3.2rem,8vw,7.5rem)/.92 Arial Black,Arial,sans-serif; letter-spacing:-.075em; text-transform:uppercase; }
 .slop-trial-card > p { max-width:650px; color:var(--muted); font:18px/1.55 Georgia,serif; }
+.slop-trial-card > h2 + p { margin-top:0; }
 .slop-trial-question { margin:38px 0 14px; color:var(--text); font:900 clamp(2.1rem,5vw,4.5rem)/.9 Arial Black,Arial,sans-serif; letter-spacing:-.06em; }
 .slop-vote-buttons { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
 .slop-vote-buttons button { min-height:82px; border:2px solid var(--text); background:var(--text); color:var(--bg); font:900 1.5rem/1 Arial Black,Arial,sans-serif; cursor:pointer; }
