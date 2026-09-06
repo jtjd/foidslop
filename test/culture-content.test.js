@@ -22,7 +22,14 @@ const staleAiVoice = [
   /\bin today(?:'s|’s) (?:digital )?(?:world|landscape)\b/i,
   /\bit is important to (?:note|remember|understand)\b/i,
   /\bserves as a testament\b/i,
-  /\bnavigate the complexities\b/i
+  /\bnavigate the complexities\b/i,
+  /\bpoisoned internet\b/i,
+  /\bunfortunate vocabulary\b/i,
+  /\bcursed vocabulary\b/i,
+  /\bcivilizational decline\b/i,
+  /\bdehumanizing piece\b/i,
+  /\bhostile vocabulary\b/i,
+  /\breclaim(?:ed|ing)\b/i
 ];
 
 test('culture expansion has a substantive launch set', () => {
