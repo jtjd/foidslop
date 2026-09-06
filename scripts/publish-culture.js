@@ -8,7 +8,7 @@ const BASE_URL = 'https://foidslop.com';
 const DICTIONARY_FILE = path.join(ROOT, 'data', 'dictionary.json');
 const CULTURE_FILE = path.join(ROOT, 'data', 'culture-articles.json');
 const INDEX_FILE = path.join(ROOT, 'data', 'slop-index.json');
-const STYLE_VERSION = '20260906-4';
+const STYLE_VERSION = '20260906-5';
 const args = process.argv.slice(2);
 const checkOnly = args.includes('--check');
 const dateIndex = args.indexOf('--date');
@@ -160,7 +160,7 @@ function relatedDictionary(entry, route) {
   return `<section class="culture-related"><p class="content-eyebrow">Related vocabulary</p><div class="culture-card-grid">${items.map(item => `<a class="culture-card" href="${dictionaryHref(item.slug, route)}"><span>${esc(item.term)}</span><strong>${esc(item.title)}</strong><p>${esc(item.definition)}</p></a>`).join('')}</div></section>`;
 }
 function renderFoidslopEntry(entry, route, schema) {
-  const pageHead = commonHead({ route, title: entry.seoTitle, description: entry.description, schema, rootFeed: true }).replace('</head>', '<link rel="stylesheet" href="css/culture-showcase.css?v=20260906-1">\n</head>');
+  const pageHead = commonHead({ route, title: entry.seoTitle, description: entry.description, schema, rootFeed: true }).replace('</head>', '<link rel="stylesheet" href="css/culture-showcase.css?v=20260906-2">\n</head>');
   const origin = entry.sections[0];
   const food = entry.sections[1];
   const outside = entry.sections[2];

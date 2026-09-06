@@ -89,3 +89,44 @@
 @media (max-width:560px) {
   .site-header .nav-link[href$="dictionary"] { display:none !important; }
 }
+
+
+/* culture-layout-audit:start */
+/* Normal editorial surfaces should be substantial, not oversized poster text. */
+.culture-index > h1 {
+  max-width: 1040px;
+  margin: 10px 0 20px;
+  font: 900 clamp(3.2rem, 6.2vw, 6.2rem)/.86 Arial Black,Arial,sans-serif;
+  letter-spacing: -.065em;
+  text-wrap: balance;
+  text-transform: uppercase;
+}
+.culture-index > .article-deck { max-width: 760px; }
+
+/* Receipts are evidence, not hero images. Preserve native aspect ratio and cap
+   their reading footprint, especially for portrait social-media attachments. */
+.culture-receipt-image {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: fit-content;
+  max-width: 100%;
+}
+.culture-receipt img {
+  width: auto;
+  max-width: 100%;
+  max-height: 620px;
+  object-fit: contain;
+}
+
+/* Keep grids within their own columns even when copy contains long tokens. */
+.culture-card,.culture-feature,.slop-index-card,.dictionary-row,
+.taxonomy-branch,.taxonomy-nodes a,.culture-tool-links a { min-width: 0; }
+.culture-card strong,.culture-feature strong,.slop-index-card strong,
+.dictionary-row strong,.taxonomy-nodes strong { overflow-wrap: anywhere; }
+
+@media (max-width: 760px) {
+  .culture-index > h1 { font-size: clamp(2.8rem, 13vw, 4.6rem); }
+  .culture-receipt img { max-height: 520px; }
+}
+/* culture-layout-audit:end */
