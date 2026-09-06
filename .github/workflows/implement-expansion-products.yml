@@ -1,0 +1,137 @@
+name: Implement foidslop expansion products
+
+on:
+  push:
+    branches: [foidslop-expansion-products]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: foidslop-expansion-products
+  cancel-in-progress: false
+
+jobs:
+  implement:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Apply expansion implementation
+        run: python3 scripts/_implement_expansion_products.py
+
+      - name: Regenerate and validate site
+        run: |
+          node scripts/apply-editorial-overrides.js
+          node scripts/daily-publish.js
+          node scripts/publish-culture.js
+          node scripts/publish-culture-products.js
+          node scripts/publish-culture.js --check
+          node scripts/publish-culture-products.js --check
+          npm test
+          node scripts/seo-check.js
+          node scripts/build-deploy.js
+
+      - name: Browser smoke test product surfaces
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+          mkdir -p artifacts
+          python3 -m http.server 4173 --directory .deploy >/tmp/foidslop-preview.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID || true' EXIT
+          sleep 2
+          node <<'NODE'
+          const { chromium } = require('playwright');
+          const assert = require('node:assert');
+          (async () => {
+            const browser = await chromium.launch({ headless: true });
+            const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+            const base = 'http://127.0.0.1:4173';
+
+            await page.goto(`${base}/`, { waitUntil: 'networkidle' });
+            const positions = await page.evaluate(() => ({
+              product: document.querySelector('.zine-culture-week')?.getBoundingClientRect().top,
+              repeat: document.querySelector('.zine-newsletter-repeat')?.getBoundingClientRect().top,
+              inside: Boolean(document.querySelector('main .zine-culture-week')),
+              overflow: document.documentElement.scrollWidth > document.documentElement.clientWidth
+            }));
+            assert.equal(positions.inside, true);
+            assert.ok(positions.product < positions.repeat);
+            assert.equal(positions.overflow, false);
+            await page.screenshot({ path: 'artifacts/homepage-products.png', fullPage: true });
+
+            await page.goto(`${base}/culture/is-it-foidslop`, { waitUntil: 'networkidle' });
+            assert.equal(await page.locator('[data-slop-trial]').count(), 1);
+            assert.equal(await page.locator('[data-vote="yes"]').isVisible(), true);
+            const first = await page.locator('[data-trial-name]').textContent();
+            await page.locator('[data-trial-next]').click();
+            const second = await page.locator('[data-trial-name]').textContent();
+            assert.notEqual(first, second);
+            await page.screenshot({ path: 'artifacts/is-it-foidslop.png', fullPage: true });
+
+            await page.goto(`${base}/culture/username-generator`, { waitUntil: 'networkidle' });
+            const initial = await page.locator('[data-username-output]').textContent();
+            assert.ok(initial && initial.trim().length >= 3);
+            await page.locator('[data-username-generate]').click();
+            const rerolled = await page.locator('[data-username-output]').textContent();
+            assert.ok(rerolled && rerolled.trim().length >= 3);
+            await page.screenshot({ path: 'artifacts/username-generator.png', fullPage: true });
+
+            await page.goto(`${base}/culture/slop-taxonomy`, { waitUntil: 'networkidle' });
+            assert.ok(await page.locator('.taxonomy-branch').count() >= 4);
+            assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth), false);
+            await page.screenshot({ path: 'artifacts/slop-taxonomy.png', fullPage: true });
+
+            await page.goto(`${base}/what-is-foidslop`, { waitUntil: 'networkidle' });
+            const receipts = page.locator('.culture-receipt img');
+            assert.ok(await receipts.count() >= 2);
+            for (let i = 0; i < await receipts.count(); i++) {
+              await receipts.nth(i).scrollIntoViewIfNeeded();
+              assert.ok(await receipts.nth(i).evaluate(img => img.complete && img.naturalWidth > 0));
+            }
+
+            await page.setViewportSize({ width: 390, height: 844 });
+            for (const route of ['/culture/is-it-foidslop', '/culture/username-generator', '/culture/slop-taxonomy', '/']) {
+              await page.goto(`${base}${route}`, { waitUntil: 'networkidle' });
+              assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth), false, `horizontal overflow on ${route}`);
+            }
+            await browser.close();
+          })().catch(error => { console.error(error); process.exit(1); });
+          NODE
+
+      - name: Upload visual review
+        uses: actions/upload-artifact@v4
+        with:
+          name: foidslop-expansion-products-screens
+          path: artifacts/
+
+      - name: Commit implementation
+        run: |
+          rm -rf node_modules package-lock.json
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git rm scripts/_implement_expansion_products.py .github/workflows/implement-expansion-products.yml
+          git add -u
+          git add \
+            about.html \
+            culture/ \
+            dictionary/ \
+            data/dictionary.json data/culture-articles.json data/slop-trials.json data/username-generator.json data/slop-taxonomy.json data/site-identity.json \
+            functions/api/slop-vote.js functions/api/slop-votes.js \
+            scripts/publish-culture-products.js scripts/lib/slop-votes.js \
+            css/culture.css \
+            package.json README.md docs/culture-products.md test/culture-products.test.js \
+            index.html sitemap.xml _redirects \
+            .github/workflows/daily-publish.yml .github/workflows/pr-validation.yml
+          if ! git diff --cached --quiet; then
+            git commit -m "Complete foidslop culture product expansion"
+            git push
+          fi
