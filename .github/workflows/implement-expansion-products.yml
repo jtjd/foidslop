@@ -68,7 +68,7 @@ jobs:
             assert.equal(positions.overflow, false);
             await page.screenshot({ path: 'artifacts/homepage-products.png', fullPage: true });
 
-            await page.goto(`${base}/culture/is-it-foidslop`, { waitUntil: 'networkidle' });
+            await page.goto(`${base}/culture/is-it-foidslop.html`, { waitUntil: 'networkidle' });
             assert.equal(await page.locator('[data-slop-trial]').count(), 1);
             assert.equal(await page.locator('[data-vote="yes"]').isVisible(), true);
             const first = await page.locator('[data-trial-name]').textContent();
@@ -77,7 +77,7 @@ jobs:
             assert.notEqual(first, second);
             await page.screenshot({ path: 'artifacts/is-it-foidslop.png', fullPage: true });
 
-            await page.goto(`${base}/culture/username-generator`, { waitUntil: 'networkidle' });
+            await page.goto(`${base}/culture/username-generator.html`, { waitUntil: 'networkidle' });
             const initial = await page.locator('[data-username-output]').textContent();
             assert.ok(initial && initial.trim().length >= 3);
             await page.locator('[data-username-generate]').click();
@@ -85,12 +85,12 @@ jobs:
             assert.ok(rerolled && rerolled.trim().length >= 3);
             await page.screenshot({ path: 'artifacts/username-generator.png', fullPage: true });
 
-            await page.goto(`${base}/culture/slop-taxonomy`, { waitUntil: 'networkidle' });
+            await page.goto(`${base}/culture/slop-taxonomy.html`, { waitUntil: 'networkidle' });
             assert.ok(await page.locator('.taxonomy-branch').count() >= 4);
             assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth), false);
             await page.screenshot({ path: 'artifacts/slop-taxonomy.png', fullPage: true });
 
-            await page.goto(`${base}/what-is-foidslop`, { waitUntil: 'networkidle' });
+            await page.goto(`${base}/what-is-foidslop.html`, { waitUntil: 'networkidle' });
             const receipts = page.locator('.culture-receipt img');
             assert.ok(await receipts.count() >= 2);
             for (let i = 0; i < await receipts.count(); i++) {
@@ -99,7 +99,7 @@ jobs:
             }
 
             await page.setViewportSize({ width: 390, height: 844 });
-            for (const route of ['/culture/is-it-foidslop', '/culture/username-generator', '/culture/slop-taxonomy', '/']) {
+            for (const route of ['/culture/is-it-foidslop.html', '/culture/username-generator.html', '/culture/slop-taxonomy.html', '/']) {
               await page.goto(`${base}${route}`, { waitUntil: 'networkidle' });
               assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth), false, `horizontal overflow on ${route}`);
             }
