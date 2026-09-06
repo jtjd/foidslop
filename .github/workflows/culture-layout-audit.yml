@@ -1,0 +1,201 @@
+name: Culture layout audit
+
+on:
+  push:
+    branches: [culture-layout-audit]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: culture-layout-audit
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Apply culture layout remediation
+        run: |
+          python3 scripts/_culture_layout_fix.py
+          # Python regex replacement strings interpret backslash escapes. Make sure
+          # the generated JS keeps a literal \\n escape inside the head() replacement.
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('scripts/publish-culture-products.js')
+          text = p.read_text()
+          text = text.replace('culture-showcase.css?v=20260906-2">\n</head>', 'culture-showcase.css?v=20260906-2">\\n</head>')
+          p.write_text(text)
+
+          t = Path('test/culture-layout-audit.test.js')
+          text = t.read_text().replace('max-width: 1180px', 'max-width: 1040px')
+          t.write_text(text)
+          PY
+          rm -f culture/receipts/foidslop-usernames-reddit.webp
+
+      - name: Regenerate and validate
+        run: |
+          node scripts/publish-culture.js
+          node scripts/publish-culture-products.js
+          node scripts/publish-culture.js --check
+          node scripts/publish-culture-products.js --check
+          npm test
+          node scripts/seo-check.js
+          node scripts/build-deploy.js
+
+      - name: Browser audit every culture surface
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+          mkdir -p artifacts/layout-audit
+          python3 -m http.server 4173 --directory .deploy >/tmp/foidslop-layout-preview.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID || true' EXIT
+          sleep 2
+          node <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const assert = require('node:assert');
+          const { chromium } = require('playwright');
+
+          function htmlFiles(dir) {
+            if (!fs.existsSync(dir)) return [];
+            return fs.readdirSync(dir, { withFileTypes: true }).flatMap(entry => {
+              const full = path.join(dir, entry.name);
+              if (entry.isDirectory()) return htmlFiles(full);
+              return entry.isFile() && entry.name.endsWith('.html') ? [full] : [];
+            });
+          }
+
+          const deploy = path.resolve('.deploy');
+          const candidates = [
+            path.join(deploy, 'what-is-foidslop.html'),
+            path.join(deploy, 'what-does-foid-mean.html'),
+            path.join(deploy, 'about.html'),
+            path.join(deploy, 'index.html'),
+            ...htmlFiles(path.join(deploy, 'culture')),
+            ...htmlFiles(path.join(deploy, 'dictionary')),
+          ].filter((value, index, array) => fs.existsSync(value) && array.indexOf(value) === index);
+
+          const routes = candidates.map(file => '/' + path.relative(deploy, file).split(path.sep).join('/'));
+          const viewports = [
+            { name: 'desktop', width: 1440, height: 1000 },
+            { name: 'mid', width: 1120, height: 900 },
+            { name: 'mobile', width: 390, height: 844 },
+          ];
+          const report = [];
+
+          (async () => {
+            const browser = await chromium.launch({ headless: true });
+            const page = await browser.newPage();
+            const base = 'http://127.0.0.1:4173';
+
+            for (const viewport of viewports) {
+              await page.setViewportSize({ width: viewport.width, height: viewport.height });
+              for (const route of routes) {
+                await page.goto(base + route, { waitUntil: 'networkidle' });
+                const result = await page.evaluate(({ width, height }) => {
+                  const visible = el => {
+                    const s = getComputedStyle(el);
+                    const r = el.getBoundingClientRect();
+                    return s.display !== 'none' && s.visibility !== 'hidden' && r.width > 0 && r.height > 0;
+                  };
+                  const rectInfo = el => {
+                    if (!el) return null;
+                    const r = el.getBoundingClientRect();
+                    return { left:r.left, right:r.right, top:r.top, bottom:r.bottom, width:r.width, height:r.height };
+                  };
+                  const main = document.querySelector('main');
+                  const header = document.querySelector('.site-header');
+                  const h1 = main?.querySelector('h1');
+                  const offenders = [...document.querySelectorAll('main *, .site-header > *')]
+                    .filter(visible)
+                    .map(el => ({
+                      tag: el.tagName.toLowerCase(),
+                      cls: typeof el.className === 'string' ? el.className : '',
+                      text: (el.textContent || '').trim().replace(/\s+/g,' ').slice(0,80),
+                      rect: rectInfo(el)
+                    }))
+                    .filter(item => item.rect.left < -2 || item.rect.right > width + 2)
+                    .slice(0, 12);
+                  const receipts = [...document.querySelectorAll('.culture-receipt img')].filter(visible).map(img => rectInfo(img));
+                  return {
+                    title: document.title,
+                    docWidth: document.documentElement.scrollWidth,
+                    bodyWidth: document.body.scrollWidth,
+                    main: rectInfo(main),
+                    header: rectInfo(header),
+                    h1: rectInfo(h1),
+                    h1Font: h1 ? parseFloat(getComputedStyle(h1).fontSize) : null,
+                    offenders,
+                    receipts,
+                    trialColumns: document.querySelector('.slop-trial-card') ? getComputedStyle(document.querySelector('.slop-trial-card')).gridTemplateColumns : null,
+                    viewport: { width, height }
+                  };
+                }, viewport);
+                result.route = route;
+                result.viewportName = viewport.name;
+                report.push(result);
+
+                assert.ok(result.main, `missing main on ${route}`);
+                assert.ok(result.main.left >= -1 && result.main.right <= viewport.width + 1, `main clips on ${route} at ${viewport.name}`);
+                assert.equal(result.offenders.length, 0, `off-screen element on ${route} at ${viewport.name}: ${JSON.stringify(result.offenders[0])}`);
+                if (result.h1) assert.ok(result.h1.right <= viewport.width + 1, `h1 clips on ${route} at ${viewport.name}`);
+                for (const receipt of result.receipts) assert.ok(receipt.height <= Math.max(640, viewport.height * .82), `oversized receipt on ${route} at ${viewport.name}`);
+              }
+            }
+
+            // Specific regression checks from the user-reported pages.
+            await page.setViewportSize({ width: 1120, height: 900 });
+            await page.goto(base + '/culture/foidslop-usernames.html', { waitUntil:'networkidle' });
+            assert.equal(await page.locator('.culture-receipt img').count(), 0, 'username article still contains unrelated bunny receipt');
+            await page.screenshot({ path:'artifacts/layout-audit/usernames-1120.png', fullPage:true });
+
+            await page.goto(base + '/culture/is-it-foidslop.html?item=mamma-mia', { waitUntil:'networkidle' });
+            assert.equal(await page.locator('.slop-trial-specimen').count(), 1);
+            assert.equal(await page.locator('.slop-trial-verdict').count(), 1);
+            await page.screenshot({ path:'artifacts/layout-audit/slop-trial-1120.png', fullPage:true });
+
+            for (const route of ['/culture/index.html','/culture/slop-index.html','/culture/slop-taxonomy.html','/dictionary/index.html','/what-does-foid-mean.html','/about.html']) {
+              await page.goto(base + route, { waitUntil:'networkidle' });
+              await page.screenshot({ path:`artifacts/layout-audit/${route.replace(/^\//,'').replaceAll('/','-').replace('.html','')}-1120.png`, fullPage:true });
+            }
+
+            await page.setViewportSize({ width:390, height:844 });
+            for (const [route,name] of [['/culture/foidslop-usernames.html','usernames-mobile'],['/culture/is-it-foidslop.html?item=mamma-mia','slop-trial-mobile'],['/culture/slop-taxonomy.html','taxonomy-mobile'],['/dictionary/index.html','dictionary-mobile']]) {
+              await page.goto(base + route, { waitUntil:'networkidle' });
+              await page.screenshot({ path:`artifacts/layout-audit/${name}.png`, fullPage:true });
+            }
+
+            fs.writeFileSync('artifacts/layout-audit/layout-report.json', JSON.stringify(report,null,2));
+            console.log(`Audited ${routes.length} pages at ${viewports.length} viewport sizes (${report.length} renders).`);
+            await browser.close();
+          })().catch(error => { console.error(error); process.exit(1); });
+          NODE
+
+      - name: Upload visual audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: culture-layout-audit-screens
+          path: artifacts/layout-audit/
+
+      - name: Commit remediation
+        run: |
+          rm -rf node_modules package-lock.json artifacts
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git rm -f scripts/_culture_layout_fix.py
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Fix culture-wide layout and visual hierarchy [skip ci]"
+            git push
+          fi
