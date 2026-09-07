@@ -27,28 +27,36 @@
 <link rel="preload" as="font" type="font/woff2" href="/fonts/bebas-neue-400.woff2" crossorigin>
 <link rel="stylesheet" href="css/fonts.css?v=20260826-1">
 <link rel="stylesheet" href="css/global.css?v=20260827-1">
-<script src="theme.js?v=20260713-5"></script><link rel="stylesheet" href="css/content.css?v=20260715-1"><link rel="stylesheet" href="css/theme.css?v=20260713-4"></head><body><header class="site-header" id="site-header">
-  <a href="/" aria-label="foidslop home"><picture><source type="image/webp" srcset="logo-header.webp"><img src="logo-header.png" alt="FOID SLOP" class="logo" width="126" height="74"></picture></a>
+<script src="theme.js?v=20260713-5"></script><link rel="stylesheet" href="css/content.css?v=20260715-1"><link rel="stylesheet" href="css/theme.css?v=20260713-4">
+<link rel="stylesheet" href="/css/navigation.css?v=20260907-1"></head><body><header class="site-header" id="site-header">
+  <a href="/" aria-label="foidslop home"><picture><source type="image/webp" srcset="/logo-header.webp"><img src="/logo-header.png" alt="FOID SLOP" class="logo" width="126" height="74"></picture></a>
   <div class="site-header-center">Daily recipes / made for one / Issue 129</div>
   <div class="header-right">
     <button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="true"><span class="theme-toggle-mark" aria-hidden="true">*</span><span class="theme-toggle-label">Light mode</span></button>
-    <a href="slop/antipasto-skewers" class="nav-link header-today">Today</a>
-    <a href="slop/archive" class="nav-link">Archive</a>
-    <a href="culture" class="nav-link">Culture</a>
-    <a href="#dispatch" class="nav-link header-dispatch">Dispatch</a>
+    <a href="/slop/antipasto-skewers" class="nav-link header-today">Today</a>
+    <a href="/slop/archive" class="nav-link">Archive</a>
+    <a href="/culture" class="nav-link">Culture</a>
+    <a href="/dictionary" class="nav-link">Dictionary</a>
+    <a href="/#dispatch" class="nav-link header-dispatch">Dispatch</a>
+    <button class="nav-hamburger" id="nav-hamburger" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-dropdown"><span></span><span></span><span></span></button>
   </div>
+  <nav class="nav-dropdown" id="nav-dropdown" aria-label="Mobile navigation" aria-hidden="true">
+    <a href="/slop/antipasto-skewers" class="nav-dropdown-link">Today</a>
+    <a href="/slop/archive" class="nav-dropdown-link">Archive</a>
+    <a href="/culture" class="nav-dropdown-link">Culture</a>
+    <a href="/dictionary" class="nav-dropdown-link">Dictionary</a>
+    <a href="/#dispatch" class="nav-dropdown-link">Dispatch</a>
+  </nav>
 </header><main class="article-page"><p class="content-eyebrow">Behind the slop</p><h1>How foidslop gets made</h1><p class="article-deck">One recipe goes up every day. The aim is simple: give one person a clear, appealing way to feed themselves without turning dinner into a project.</p><h2>What counts as a recipe here?</h2><p>Sometimes it is pasta with a real method. Sometimes it is excellent things arranged on toast. Both count. A useful recipe tells you what to buy, how much to use, what order to do things in, and how to recognize when the food is ready.</p><h2>Written for one from the start</h2><p>These are not family recipes divided until the numbers look small. Quantities, cookware, timing, and yield are written around a single serving. Appetite varies, of course, so bread, greens, fruit, or an egg can round out a lighter plate.</p><h2>Measurements that make sense</h2><p>US measurements come first. Weight is included when it makes the result more accurate, especially for pasta, cheese, and other ingredients that are awkward to measure by volume. Oven temperatures appear in Fahrenheit followed by Celsius.</p><h2>Clear methods, not busywork</h2><p>Steps follow the real stages of the recipe. Browning, simmering, assembling, and finishing stay separate when that makes the method easier to follow. Timing and visual cues are included where they matter. A genuine assembly recipe can still have one step if splitting it would only create extra scrolling.</p><h2>Flexible where it helps</h2><p>These recipes are meant to bend. A different cheese, another pasta shape, or the herb already in your refrigerator can often work. The notes call out the details that matter most, such as drying chickpeas before roasting or saving pasta water before draining.</p><h2>Food safety stays plain</h2><p>Recipes that cook meat, fish, or eggs include a clear doneness cue where one is needed. Keep raw ingredients separate, refrigerate leftovers promptly, and reheat them until hot throughout.</p><h2>Useful updates</h2><p>The archive is maintained as a working collection. If an ingredient, measurement, or instruction needs a meaningful fix, the recipe itself is updated while its original publication date stays in place.</p><p class="article-cta"><a href="slop/archive">Browse the recipe archive</a> <a href="what-is-foidslop">Why the name foidslop?</a></p></main><footer><div class="footer-inner">
   <span class="footer-copy">&copy; 2026 foidslop</span>
   <nav class="footer-links" aria-label="Footer navigation">
-    <a href="what-is-foidslop">What is foidslop?</a><span class="footer-dot"></span>
-    <a href="dictionary">Dictionary</a><span class="footer-dot"></span>
-    <a href="culture">Culture</a><span class="footer-dot"></span>
+    <a href="/what-is-foidslop">What is foidslop?</a><span class="footer-dot"></span>
+    <a href="/slop/archive">Recipes</a><span class="footer-dot"></span>
+    <a href="/dictionary">Dictionary</a><span class="footer-dot"></span>
+    <a href="/culture">Culture</a><span class="footer-dot"></span>
     <a href="https://www.pinterest.com/foidslop/" rel="external">Pinterest</a><span class="footer-dot"></span>
-    <a href="feed.xml" type="application/atom+xml">RSS</a><span class="footer-dot"></span>
-    <a href="about">About</a><span class="footer-dot"></span>
-    <a href="privacy">Privacy</a>
+    <a href="/feed.xml" type="application/atom+xml">RSS</a><span class="footer-dot"></span>
+    <a href="/about">About</a><span class="footer-dot"></span>
+    <a href="/privacy">Privacy</a>
   </nav>
-</div></footer><script>
-const header=document.getElementById('site-header'),button=document.getElementById('nav-hamburger'),menu=document.getElementById('nav-dropdown');
-if(button&&menu){button.addEventListener('click',()=>{const open=button.getAttribute('aria-expanded')==='true';button.setAttribute('aria-expanded',String(!open));menu.setAttribute('aria-hidden',String(open));button.classList.toggle('open',!open);menu.classList.toggle('open',!open)});}
-</script></body></html>
+</div></footer></body></html>

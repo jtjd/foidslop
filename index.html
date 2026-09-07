@@ -31,6 +31,7 @@
 <script src="theme.js?v=20260713-5"></script>
 <link rel="preload" as="image" href="slop/img/antipasto-skewers-768.webp" type="image/webp" imagesrcset="slop/img/antipasto-skewers-480.webp 480w, slop/img/antipasto-skewers-768.webp 768w" imagesizes="(max-width: 800px) 100vw, 42vw" fetchpriority="high">
 <link rel="stylesheet" href="css/home-redesign.css?v=20260826-1"><link rel="stylesheet" href="css/theme.css?v=20260827-2">
+<link rel="stylesheet" href="/css/navigation.css?v=20260907-1">
 <script type="application/ld+json">[
   {
     "@context": "https://schema.org",
@@ -110,15 +111,24 @@
 ]</script><link rel="stylesheet" href="css/culture.css?v=20260906-7">
 </head><body><a href="#main" class="sr-only focusable">Skip to content</a>
 <main id="main" class="zine-home"><header class="site-header" id="site-header">
-  <a href="/" aria-label="foidslop home"><picture><source type="image/webp" srcset="logo-header.webp"><img src="logo-header.png" alt="FOID SLOP" class="logo" width="126" height="74"></picture></a>
+  <a href="/" aria-label="foidslop home"><picture><source type="image/webp" srcset="/logo-header.webp"><img src="/logo-header.png" alt="FOID SLOP" class="logo" width="126" height="74"></picture></a>
   <div class="site-header-center">Daily recipes / made for one / Issue 129</div>
   <div class="header-right">
     <button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="true"><span class="theme-toggle-mark" aria-hidden="true">*</span><span class="theme-toggle-label">Light mode</span></button>
-    <a href="slop/antipasto-skewers" class="nav-link header-today">Today</a>
-    <a href="slop/archive" class="nav-link">Archive</a>
-    <a href="culture" class="nav-link">Culture</a>
-    <a href="#dispatch" class="nav-link header-dispatch">Dispatch</a>
+    <a href="/slop/antipasto-skewers" class="nav-link header-today">Today</a>
+    <a href="/slop/archive" class="nav-link">Archive</a>
+    <a href="/culture" class="nav-link">Culture</a>
+    <a href="/dictionary" class="nav-link">Dictionary</a>
+    <a href="/#dispatch" class="nav-link header-dispatch">Dispatch</a>
+    <button class="nav-hamburger" id="nav-hamburger" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-dropdown"><span></span><span></span><span></span></button>
   </div>
+  <nav class="nav-dropdown" id="nav-dropdown" aria-label="Mobile navigation" aria-hidden="true">
+    <a href="/slop/antipasto-skewers" class="nav-dropdown-link">Today</a>
+    <a href="/slop/archive" class="nav-dropdown-link">Archive</a>
+    <a href="/culture" class="nav-dropdown-link">Culture</a>
+    <a href="/dictionary" class="nav-dropdown-link">Dictionary</a>
+    <a href="/#dispatch" class="nav-dropdown-link">Dispatch</a>
+  </nav>
 </header><div id="top">
   <section class="zine-hero" aria-labelledby="home-title">
     <div class="zine-hero-copy"><div><div class="zine-kicker">A small publication for one</div><h1 id="home-title">Daily<br><span>slop.</span><br>Dinner, etc.</h1><p class="zine-deck">One approachable recipe every day. Feeding yourself without turning it into a project.</p></div><div class="zine-note"><span>Vol. 01 / Issue 129</span><strong>Read / Cook / Return</strong></div></div>
@@ -190,18 +200,16 @@
 </div></main><footer><div class="footer-inner">
   <span class="footer-copy">&copy; 2026 foidslop</span>
   <nav class="footer-links" aria-label="Footer navigation">
-    <a href="what-is-foidslop">What is foidslop?</a><span class="footer-dot"></span>
-    <a href="dictionary">Dictionary</a><span class="footer-dot"></span>
-    <a href="culture">Culture</a><span class="footer-dot"></span>
+    <a href="/what-is-foidslop">What is foidslop?</a><span class="footer-dot"></span>
+    <a href="/slop/archive">Recipes</a><span class="footer-dot"></span>
+    <a href="/dictionary">Dictionary</a><span class="footer-dot"></span>
+    <a href="/culture">Culture</a><span class="footer-dot"></span>
     <a href="https://www.pinterest.com/foidslop/" rel="external">Pinterest</a><span class="footer-dot"></span>
-    <a href="feed.xml" type="application/atom+xml">RSS</a><span class="footer-dot"></span>
-    <a href="about">About</a><span class="footer-dot"></span>
-    <a href="privacy">Privacy</a>
+    <a href="/feed.xml" type="application/atom+xml">RSS</a><span class="footer-dot"></span>
+    <a href="/about">About</a><span class="footer-dot"></span>
+    <a href="/privacy">Privacy</a>
   </nav>
-</div></footer><script>
-const header=document.getElementById('site-header'),button=document.getElementById('nav-hamburger'),menu=document.getElementById('nav-dropdown');
-if(button&&menu){button.addEventListener('click',()=>{const open=button.getAttribute('aria-expanded')==='true';button.setAttribute('aria-expanded',String(!open));menu.setAttribute('aria-hidden',String(open));button.classList.toggle('open',!open);menu.classList.toggle('open',!open)});}
-</script>
+</div></footer>
 <script id="random-recipe-pool" type="application/json">[
   "og-girl-dinner",
   "whipped-feta-hot-honey-walnuts",

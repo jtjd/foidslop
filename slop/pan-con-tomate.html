@@ -106,17 +106,27 @@
     ]
   }
 ]</script>
-<link rel="stylesheet" href="../css/slop-page.css?v=20260903-1"><link rel="stylesheet" href="../css/theme.css?v=20260827-2"></head><body>
+<link rel="stylesheet" href="../css/slop-page.css?v=20260903-1"><link rel="stylesheet" href="../css/theme.css?v=20260827-2">
+<link rel="stylesheet" href="/css/navigation.css?v=20260907-1"></head><body>
 <a href="#main" class="sr-only focusable">Skip to content</a><header class="site-header" id="site-header">
-  <a href="../" aria-label="foidslop home"><picture><source type="image/webp" srcset="../logo-header.webp"><img src="../logo-header.png" alt="FOID SLOP" class="logo" width="126" height="74"></picture></a>
+  <a href="/" aria-label="foidslop home"><picture><source type="image/webp" srcset="/logo-header.webp"><img src="/logo-header.png" alt="FOID SLOP" class="logo" width="126" height="74"></picture></a>
   <div class="site-header-center">Daily recipes / made for one / Issue 129</div>
   <div class="header-right">
     <button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="true"><span class="theme-toggle-mark" aria-hidden="true">*</span><span class="theme-toggle-label">Light mode</span></button>
-    <a href="../slop/antipasto-skewers" class="nav-link header-today">Today</a>
-    <a href="../slop/archive" class="nav-link">Archive</a>
-    <a href="../culture" class="nav-link">Culture</a>
-    <a href="../#dispatch" class="nav-link header-dispatch">Dispatch</a>
+    <a href="/slop/antipasto-skewers" class="nav-link header-today">Today</a>
+    <a href="/slop/archive" class="nav-link active" aria-current="page">Archive</a>
+    <a href="/culture" class="nav-link">Culture</a>
+    <a href="/dictionary" class="nav-link">Dictionary</a>
+    <a href="/#dispatch" class="nav-link header-dispatch">Dispatch</a>
+    <button class="nav-hamburger" id="nav-hamburger" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-dropdown"><span></span><span></span><span></span></button>
   </div>
+  <nav class="nav-dropdown" id="nav-dropdown" aria-label="Mobile navigation" aria-hidden="true">
+    <a href="/slop/antipasto-skewers" class="nav-dropdown-link">Today</a>
+    <a href="/slop/archive" class="nav-dropdown-link active" aria-current="page">Archive</a>
+    <a href="/culture" class="nav-dropdown-link">Culture</a>
+    <a href="/dictionary" class="nav-dropdown-link">Dictionary</a>
+    <a href="/#dispatch" class="nav-dropdown-link">Dispatch</a>
+  </nav>
 </header>
 <div class="slop-header"><p class="slop-eyebrow">Slop of the Day / July 19, 2026</p><h1 class="slop-title">PAN CON<br>TOMATE.</h1>
 <div class="slop-meta"><span class="slop-date">Published July 19, 2026</span><div class="slop-tags"><span class="slop-tag">Toast</span><span class="slop-tag">No Cook</span><span class="slop-tag">Spanish</span></div></div></div>
@@ -147,15 +157,13 @@
 <footer><div class="footer-inner">
   <span class="footer-copy">&copy; 2026 foidslop</span>
   <nav class="footer-links" aria-label="Footer navigation">
-    <a href="../what-is-foidslop">What is foidslop?</a><span class="footer-dot"></span>
-    <a href="../dictionary">Dictionary</a><span class="footer-dot"></span>
-    <a href="../culture">Culture</a><span class="footer-dot"></span>
+    <a href="/what-is-foidslop">What is foidslop?</a><span class="footer-dot"></span>
+    <a href="/slop/archive">Recipes</a><span class="footer-dot"></span>
+    <a href="/dictionary">Dictionary</a><span class="footer-dot"></span>
+    <a href="/culture">Culture</a><span class="footer-dot"></span>
     <a href="https://www.pinterest.com/foidslop/" rel="external">Pinterest</a><span class="footer-dot"></span>
-    <a href="../feed.xml" type="application/atom+xml">RSS</a><span class="footer-dot"></span>
-    <a href="../about">About</a><span class="footer-dot"></span>
-    <a href="../privacy">Privacy</a>
+    <a href="/feed.xml" type="application/atom+xml">RSS</a><span class="footer-dot"></span>
+    <a href="/about">About</a><span class="footer-dot"></span>
+    <a href="/privacy">Privacy</a>
   </nav>
-</div></footer><script>
-const header=document.getElementById('site-header'),button=document.getElementById('nav-hamburger'),menu=document.getElementById('nav-dropdown');
-if(button&&menu){button.addEventListener('click',()=>{const open=button.getAttribute('aria-expanded')==='true';button.setAttribute('aria-expanded',String(!open));menu.setAttribute('aria-hidden',String(open));button.classList.toggle('open',!open);menu.classList.toggle('open',!open)});}
-</script><script src="../recipe-tools.js?v=20260826-1"></script></body></html>
+</div></footer><script src="../recipe-tools.js?v=20260826-1"></script></body></html>

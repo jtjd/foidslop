@@ -128,8 +128,8 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           git add data/homepage.json data/weekly-polls.json data/foidslop-meals.json \
-            index.html slop/ recipes/ _redirects sitemap.xml feed.xml pinterest-rss.xml \
-            what-is-foidslop.html what-does-foid-mean.html girl-dinner-ideas.html editorial-standards.html \
+            index.html 404.html privacy.html check-inbox.html subscribed.html slop/ recipes/ culture/ dictionary/ _redirects sitemap.xml feed.xml pinterest-rss.xml \
+            what-is-foidslop.html what-does-foid-mean.html girl-dinner-ideas.html editorial-standards.html about.html \
             assets/brand/logo.webp
           if ! git diff --staged --quiet; then
             git commit -m "Weekly community update: $(TZ=America/New_York date +'%Y-%m-%d')"
