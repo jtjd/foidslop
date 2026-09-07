@@ -10,7 +10,7 @@ permissions:
 
 concurrency:
   group: slop-trial-visual-pulse
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   materialize:
@@ -21,25 +21,15 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Apply product redesign
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          p = Path('scripts/_slop_trial_visual_pulse.py')
-          s = p.read_text()
-          s = s.replace("new_trial + '\\n', publisher, count=1, flags=re.S)", "lambda _m: new_trial + '\\n', publisher, count=1, flags=re.S)")
-          s = s.replace("new_init + '\\n', script, count=1, flags=re.S)", "lambda _m: new_init + '\\n', script, count=1, flags=re.S)")
-          s = s.replace("visual_css, css, count=1, flags=re.S)", "lambda _m: visual_css, css, count=1, flags=re.S)")
-          p.write_text(s)
-          PY
-          python3 scripts/_slop_trial_visual_pulse.py
+      - name: Apply final product fixes
+        run: python3 scripts/_slop_trial_visual_pulse.py
 
       - name: Install visual tooling
         run: |
           npm install --no-save playwright@1.55.0 sharp@0.33.5
           npx playwright install --with-deps chromium
 
-      - name: Capture current source visuals
+      - name: Generate share cards
         run: node scripts/_capture_trial_images.js
 
       - name: Regenerate and validate
@@ -54,9 +44,13 @@ jobs:
           node - <<'NODE'
           const fs = require('fs');
           const data = JSON.parse(fs.readFileSync('data/slop-trials.json','utf8'));
-          for (const item of data.items.filter(item => item.kind === 'current')) {
-            const path = `.deploy${item.image}`;
-            if (!fs.existsSync(path)) throw new Error(`missing deploy visual ${path}`);
+          for (const item of data.items) {
+            if (item.image) {
+              const imagePath = `.deploy${item.image}`;
+              if (!fs.existsSync(imagePath)) throw new Error(`missing deploy visual ${imagePath}`);
+            }
+            const socialPath = `.deploy${item.socialImage}`;
+            if (!fs.existsSync(socialPath)) throw new Error(`missing social visual ${socialPath}`);
           }
           NODE
 
@@ -74,49 +68,88 @@ jobs:
             const browser = await chromium.launch({ headless: true });
             for (const viewport of [{name:'desktop',width:1440,height:1000},{name:'mid',width:1120,height:900},{name:'mobile',width:390,height:844}]) {
               const page = await browser.newPage({ viewport: { width: viewport.width, height: viewport.height } });
-              await page.goto('http://127.0.0.1:4173/culture/is-it-foidslop.html?item=simone-rocha-adidas', { waitUntil: 'networkidle' });
-              const state = await page.evaluate(({ width }) => {
+              await page.goto('http://127.0.0.1:4173/culture/is-it-foidslop/simone-rocha-adidas.html', { waitUntil: 'networkidle' });
+              await page.locator('.slop-trial-feed').scrollIntoViewIfNeeded();
+              await page.waitForTimeout(350);
+              const state = await page.evaluate(({ width, name }) => {
                 const image = document.querySelector('[data-trial-image]');
                 const card = document.querySelector('.slop-trial-card');
                 const categories = document.querySelector('.slop-trial-categories');
-                const select = document.querySelector('select[data-trial-filter]');
-                const queueImages = [...document.querySelectorAll('[data-trial-queue-item] img')];
+                const queue = document.querySelector('[data-trial-queue]');
+                const queueItems = [...document.querySelectorAll('[data-trial-queue-item]')];
                 const all = [...document.querySelectorAll('main *, .site-header > *')];
                 const offenders = all.filter(el => {
                   const style = getComputedStyle(el);
                   const r = el.getBoundingClientRect();
                   return style.display !== 'none' && style.visibility !== 'hidden' && r.width > 0 && r.height > 0 && (r.left < -3 || r.right > width + 3);
                 }).filter(el => !categories?.contains(el)).map(el => ({tag:el.tagName,cls:el.className,text:(el.textContent||'').trim().slice(0,50)})).slice(0,8);
+                const queueVisuals = queueItems.filter(button => {
+                  const img = button.querySelector('img');
+                  const fallback = button.querySelector('.slop-feed-fallback');
+                  const imgOk = img && !img.hidden && img.complete && img.naturalWidth > 200;
+                  const fallbackOk = fallback && getComputedStyle(fallback).visibility !== 'hidden';
+                  return imgOk || fallbackOk;
+                }).length;
                 return {
                   imageLoaded: image && !image.hidden && image.complete && image.naturalWidth > 300,
                   cardWidth: card.getBoundingClientRect().width,
-                  hasSelect: Boolean(select),
+                  cardHeight: card.getBoundingClientRect().height,
+                  hasSelect: Boolean(document.querySelector('select[data-trial-filter]')),
                   categoryButtons: document.querySelectorAll('[data-trial-category]').length,
-                  queueImagesLoaded: queueImages.filter(img => img.complete && img.naturalWidth > 200).length,
+                  hasEmptyGamesFilter: Boolean(document.querySelector('[data-trial-category="games"]')),
+                  queueItems: queueItems.length,
+                  queueVisuals,
+                  queueColumns: getComputedStyle(queue).gridTemplateColumns.split(' ').filter(Boolean).length,
                   disputedPresent: Boolean(document.querySelector('[data-trial-disputed]')),
                   progressText: document.querySelector('[data-trial-progress]')?.textContent || '',
-                  offenders
+                  heroText: document.querySelector('.slop-trial-hero')?.textContent || '',
+                  offenders,
+                  viewportName: name
                 };
               }, viewport);
               assert.equal(state.hasSelect, false);
-              assert.ok(state.imageLoaded, `${viewport.name}: lead source image did not render`);
-              assert.ok(state.categoryButtons >= 6);
-              assert.ok(state.queueImagesLoaded >= 3, `${viewport.name}: current visual grid is thin`);
+              assert.ok(state.imageLoaded, `${viewport.name}: good lead source image did not render`);
+              assert.ok(state.categoryButtons >= 7, `${viewport.name}: active category navigation is too thin`);
+              assert.equal(state.hasEmptyGamesFilter, false, `${viewport.name}: empty Games filter should not render for Current`);
+              assert.ok(state.queueItems >= 6, `${viewport.name}: current board is too thin`);
+              assert.equal(state.queueVisuals, state.queueItems, `${viewport.name}: current board contains blank visual cards`);
               assert.ok(state.disputedPresent);
               assert.match(state.progressText, /current items voted/);
+              assert.doesNotMatch(state.heroText, /Vote on the current feed/i);
               assert.equal(state.offenders.length, 0, `${viewport.name} offscreen: ${JSON.stringify(state.offenders)}`);
               assert.ok(state.cardWidth <= viewport.width + 1);
+              if (viewport.name !== 'mobile') assert.ok(state.cardHeight < 850, `${viewport.name}: lead card still has excessive dead space (${state.cardHeight}px)`);
+              if (viewport.name === 'mobile') assert.equal(state.queueColumns, 2, 'mobile current board should be two columns');
               await page.screenshot({ path: `artifacts/slop-trial-pulse/${viewport.name}.png`, fullPage: true });
               await page.close();
             }
-            for (const id of ['tired-girl-eyes','bridgerton-season-4','daisy-chain-fields']) {
+
+            for (const id of ['tired-girl-eyes','daisy-chain-fields','lizzie-borden-monster']) {
               const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
-              await page.goto(`http://127.0.0.1:4173/culture/is-it-foidslop.html?item=${id}`, { waitUntil: 'networkidle' });
+              await page.goto(`http://127.0.0.1:4173/culture/is-it-foidslop/${id}.html`, { waitUntil: 'networkidle' });
               const imageLoaded = await page.locator('[data-trial-image]').evaluate(img => !img.hidden && img.complete && img.naturalWidth > 300);
-              assert.ok(imageLoaded, `${id}: source visual did not render`);
+              assert.ok(imageLoaded, `${id}: curated source visual did not render`);
               await page.screenshot({ path: `artifacts/slop-trial-pulse/${id}.png`, fullPage: false });
               await page.close();
             }
+
+            const fallbackPage = await browser.newPage({ viewport: { width: 1280, height: 900 } });
+            await fallbackPage.goto('http://127.0.0.1:4173/culture/is-it-foidslop/bridgerton-season-4.html', { waitUntil: 'networkidle' });
+            const fallbackState = await fallbackPage.evaluate(() => ({
+              imageHidden: document.querySelector('[data-trial-image]')?.hidden,
+              fallbackHidden: document.querySelector('[data-trial-image-fallback]')?.hidden,
+              fallbackText: document.querySelector('[data-trial-image-fallback]')?.textContent || '',
+              ogImage: document.querySelector('meta[property="og:image"]')?.content || '',
+              canonical: document.querySelector('link[rel="canonical"]')?.href || ''
+            }));
+            assert.equal(fallbackState.imageHidden, true);
+            assert.equal(fallbackState.fallbackHidden, false);
+            assert.match(fallbackState.fallbackText, /Bridgerton Season 4/i);
+            assert.match(fallbackState.ogImage, /culture\/trials\/social\/bridgerton-season-4\.png$/);
+            assert.match(fallbackState.canonical, /culture\/is-it-foidslop\/bridgerton-season-4$/);
+            await fallbackPage.screenshot({ path: 'artifacts/slop-trial-pulse/bridgerton-fallback.png', fullPage: false });
+            await fallbackPage.close();
+
             await browser.close();
           })().catch(error => { console.error(error); process.exit(1); });
           NODE
@@ -124,19 +157,21 @@ jobs:
       - name: Upload review artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: slop-trial-visual-pulse-review
+          name: slop-trial-visual-pulse-final-review
           path: |
             artifacts/slop-trial-pulse/
-            trial-image-report.json
+            culture/trials/social/simone-rocha-adidas.png
+            culture/trials/social/bridgerton-season-4.png
+            culture/trials/social/pride-and-prejudice-2005.png
 
       - name: Commit materialized redesign
         run: |
-          rm -rf node_modules package-lock.json artifacts trial-image-report.json
+          rm -rf node_modules package-lock.json artifacts
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git rm -f scripts/_slop_trial_visual_pulse.py scripts/_capture_trial_images.js
           git add -A
           if ! git diff --cached --quiet; then
-            git commit -m "Rebuild Slop Trial as a visual culture pulse [skip ci]"
+            git commit -m "Finish Slop Trial visual culture board [skip ci]"
             git push
           fi
