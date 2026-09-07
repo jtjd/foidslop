@@ -42,7 +42,6 @@ function assert(condition, message) { if (!condition) throw new Error(message); 
           const header = document.querySelector('.site-header');
           const footer = document.querySelector('footer');
           const hamburger = document.querySelector('#nav-hamburger');
-          const menu = document.querySelector('#nav-dropdown');
           const desktopLinks = [...document.querySelectorAll('.header-right .nav-link')];
           const headerRect = header?.getBoundingClientRect();
           const footerRect = footer?.getBoundingClientRect();
@@ -79,16 +78,21 @@ function assert(condition, message) { if (!condition) throw new Error(message); 
           assert(result.hamburgerDisplay !== 'none', `${route.path} @ mobile: hamburger is hidden`);
           assert(result.desktopVisible.length === 0, `${route.path} @ mobile: desktop links still visible`);
           await page.click('#nav-hamburger');
+          await page.waitForTimeout(300);
           const open = await page.evaluate(() => {
             const button = document.querySelector('#nav-hamburger');
             const menu = document.querySelector('#nav-dropdown');
             const rect = menu.getBoundingClientRect();
+            const style = getComputedStyle(menu);
             return {
               expanded: button.getAttribute('aria-expanded'), hidden: menu.getAttribute('aria-hidden'), open: menu.classList.contains('open'),
-              display: getComputedStyle(menu).display, left: rect.left, right: rect.right, width: window.innerWidth
+              display: style.display, opacity: Number(style.opacity), background: style.backgroundColor,
+              left: rect.left, right: rect.right, width: window.innerWidth
             };
           });
           assert(open.expanded === 'true' && open.hidden === 'false' && open.open && open.display !== 'none', `${route.path} @ mobile: hamburger did not open menu`);
+          assert(open.opacity >= 0.99, `${route.path} @ mobile: menu did not settle to full opacity`);
+          assert(!/rgba?\(0, 0, 0, 0\)/.test(open.background), `${route.path} @ mobile: menu background is transparent`);
           assert(open.left >= -1 && open.right <= open.width + 1, `${route.path} @ mobile: menu clipped horizontally`);
           if (route.name === 'home') await page.screenshot({ path: path.join(OUT, 'home-mobile-menu.png'), fullPage: false });
           await page.keyboard.press('Escape');
