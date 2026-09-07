@@ -13,7 +13,8 @@ function readJson(file) {
   return JSON.parse(fs.readFileSync(path.join(ROOT, file), 'utf8'));
 }
 
-const meals = readJson('data/foidslop-meals.json').meals || readJson('data/foidslop-meals.json');
+const mealDb = readJson('data/foidslop-meals.json');
+const meals = mealDb.meals || mealDb;
 const published = meals
   .filter(meal => meal.status === 'published' && meal.slug)
   .sort((a, b) => String(a.publishDate || '').localeCompare(String(b.publishDate || '')) || Number(a.id || 0) - Number(b.id || 0));
@@ -103,7 +104,9 @@ function footer() {
 }
 
 function removeLegacyNavScripts(html) {
-  return html.replace(/<script\b(?![^>]*\bsrc=)[^>]*>[\s\S]*?(?:nav-hamburger|nav-dropdown)[\s\S]*?<\/script>\s*/gi, '');
+  return html.replace(/<script\b(?![^>]*\bsrc=)[^>]*>[\s\S]*?<\/script>/gi, block =>
+    /nav-hamburger|nav-dropdown/.test(block) ? '' : block
+  );
 }
 
 function injectNavigationStylesheet(html) {
