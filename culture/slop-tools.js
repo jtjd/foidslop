@@ -36,7 +36,7 @@
     const share = root.querySelector('[data-trial-share]');
     const progress = root.querySelector('[data-trial-progress]');
     const modeButtons = [...root.querySelectorAll('[data-trial-mode]')];
-    const categoryButtons = [...root.querySelectorAll('[data-trial-category]')];
+    const categoryNav = root.querySelector('[data-trial-categories]');
     const queue = root.querySelector('[data-trial-queue]');
     const disputedWrap = root.querySelector('[data-trial-disputed-wrap]');
     const disputed = root.querySelector('[data-trial-disputed]');
@@ -52,23 +52,40 @@
     const classicItems = all.filter(item => item.kind === 'evergreen');
     if (!currentItems.length) mode = 'classics';
     const savedVote = id => localStorage.getItem(`foidslop:trial:${id}`);
-    const setPressed = () => {
-      modeButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.trialMode === mode)));
-      categoryButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.trialCategory === selectedCategory)));
-    };
-    const pool = () => {
-      let items = mode === 'current' ? currentItems : classicItems;
-      if (selectedCategory !== 'all') items = items.filter(item => item.category === selectedCategory);
-      return items.length ? items : (mode === 'current' ? currentItems : classicItems);
-    };
-    const titleCase = value => String(value || '').replace(/(^|[-\s])([a-z])/g, (_, lead, char) => lead + char.toUpperCase());
     const displayCategory = value => value === 'television' ? 'TV' : titleCase(value);
-    const itemUrl = item => {
-      const url = new URL(location.href);
-      url.search = '';
-      url.searchParams.set('item', item.id);
-      return url.toString();
+    const modeItems = () => mode === 'current' ? currentItems : classicItems;
+    const pool = () => {
+      const base = modeItems();
+      if (selectedCategory === 'all') return base;
+      const filtered = base.filter(item => item.category === selectedCategory);
+      return filtered.length ? filtered : base;
     };
+    const itemUrl = item => `${location.origin}/culture/is-it-foidslop/${encodeURIComponent(item.id)}`;
+
+    function setPressed() {
+      modeButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.trialMode === mode)));
+      [...root.querySelectorAll('[data-trial-category]')].forEach(button => button.setAttribute('aria-pressed', String(button.dataset.trialCategory === selectedCategory)));
+    }
+
+    function renderCategories() {
+      if (!categoryNav) return;
+      const available = [...new Set(modeItems().map(item => item.category))].sort();
+      if (selectedCategory !== 'all' && !available.includes(selectedCategory)) selectedCategory = 'all';
+      categoryNav.innerHTML = '';
+      for (const value of ['all', ...available]) {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.dataset.trialCategory = value;
+        button.textContent = value === 'all' ? 'All' : displayCategory(value);
+        button.setAttribute('aria-pressed', String(value === selectedCategory));
+        button.addEventListener('click', () => {
+          selectedCategory = value;
+          setPressed();
+          render(pool()[0]);
+        });
+        categoryNav.appendChild(button);
+      }
+    }
 
     function updateProgress() {
       if (!progress) return;
@@ -76,16 +93,31 @@
       progress.textContent = `${voted} of ${currentItems.length} current item${currentItems.length === 1 ? '' : 's'} voted`;
     }
 
+    function fallbackMarkup(item) {
+      return `<span class="slop-feed-fallback"><small>${displayCategory(item.category)}</small><strong>${item.name}</strong></span>`;
+    }
+
     function cardMarkup(item) {
       const summary = summaries.get(item.id);
       const consensus = summary?.total ? `<span class="slop-feed-consensus">${summary.percentYes}% yes · ${summary.total}</span>` : '<span class="slop-feed-consensus">Vote</span>';
-      const visual = item.image ? `<img src="${item.image}" alt="" width="480" height="320" loading="lazy" decoding="async">` : `<div class="slop-feed-fallback">${displayCategory(item.category)}</div>`;
-      return `${visual}<span class="slop-feed-meta">${displayCategory(item.category)}</span><strong>${item.name}</strong>${consensus}`;
+      const visual = item.image
+        ? `<span class="slop-feed-visual"><img src="${item.image}" alt="" width="480" height="320" loading="lazy" decoding="async">${fallbackMarkup(item)}</span>`
+        : `<span class="slop-feed-visual">${fallbackMarkup(item)}</span>`;
+      return `${visual}<span class="slop-feed-meta">${displayCategory(item.category)}</span><strong class="slop-feed-title">${item.name}</strong>${consensus}`;
+    }
+
+    function wireQueueImageFallbacks() {
+      for (const img of queue?.querySelectorAll('img') || []) {
+        const fallback = img.nextElementSibling;
+        const fail = () => { img.hidden = true; if (fallback) fallback.hidden = false; };
+        if (img.complete && !img.naturalWidth) fail();
+        else img.addEventListener('error', fail, { once: true });
+      }
     }
 
     function renderQueue() {
       if (!queue) return;
-      const items = pool().filter(item => item.id !== current?.id).slice(0, 6);
+      const items = pool().filter(item => item.id !== current?.id).slice(0, 8);
       queue.innerHTML = '';
       for (const item of items) {
         const button = document.createElement('button');
@@ -95,6 +127,7 @@
         button.addEventListener('click', () => render(item));
         queue.appendChild(button);
       }
+      wireQueueImageFallbacks();
     }
 
     function renderDisputed() {
@@ -136,7 +169,7 @@
         renderQueue();
         renderDisputed();
       } catch {
-        // Individual result loading still works when the batch endpoint is unavailable.
+        // The page still works if aggregate results are temporarily unavailable.
       }
     }
 
@@ -159,6 +192,14 @@
       }
     }
 
+    function showFallback(item) {
+      image.hidden = true;
+      image.removeAttribute('src');
+      imageFallback.hidden = false;
+      imageCategory.textContent = displayCategory(item.category);
+      imageName.textContent = item.name;
+    }
+
     function render(item) {
       if (!item) return;
       current = item;
@@ -171,14 +212,11 @@
       if (item.image) {
         image.hidden = false;
         imageFallback.hidden = true;
-        image.src = item.image;
         image.alt = item.imageAlt || '';
+        image.onerror = () => showFallback(item);
+        image.src = item.image;
       } else {
-        image.hidden = true;
-        image.removeAttribute('src');
-        imageFallback.hidden = false;
-        imageCategory.textContent = displayCategory(item.category);
-        imageName.textContent = item.name;
+        showFallback(item);
       }
       if (activeCurrent && item.sourceUrl) {
         source.hidden = false;
@@ -202,7 +240,6 @@
       loadResult(item.id);
       updateProgress();
       renderQueue();
-      window.scrollTo({ top: Math.max(0, root.getBoundingClientRect().top + window.scrollY - 84), behavior: 'smooth' });
     }
 
     async function vote(value) {
@@ -248,11 +285,7 @@
     modeButtons.forEach(button => button.addEventListener('click', () => {
       mode = button.dataset.trialMode;
       selectedCategory = 'all';
-      setPressed();
-      render(pool()[0]);
-    }));
-    categoryButtons.forEach(button => button.addEventListener('click', () => {
-      selectedCategory = button.dataset.trialCategory;
+      renderCategories();
       setPressed();
       render(pool()[0]);
     }));
@@ -268,20 +301,19 @@
         } else {
           await navigator.clipboard.writeText(`${text} ${url}`.trim());
           share.textContent = 'Copied';
-          setTimeout(() => { share.textContent = 'Share'; }, 1200);
+          setTimeout(() => { share.textContent = 'Share verdict'; }, 1200);
         }
       } catch (error) {
         if (error?.name !== 'AbortError') share.textContent = 'Share failed';
       }
     });
 
-    setPressed();
-    const requested = new URLSearchParams(location.search).get('item');
-    const requestedItem = all.find(item => item.id === requested);
+    const initialId = root.dataset.initialItem || new URLSearchParams(location.search).get('item');
+    const requestedItem = all.find(item => item.id === initialId);
     if (requestedItem?.kind === 'evergreen') mode = 'classics';
+    renderCategories();
     setPressed();
-    const initial = requestedItem || (currentItems[0] || classicItems[0]);
-    render(initial);
+    render(requestedItem || (currentItems[0] || classicItems[0]));
     loadAllResults();
   }
 

@@ -13,7 +13,8 @@
       "activeFrom": "2026-09-03",
       "activeUntil": "2026-10-05",
       "image": "/culture/trials/simone-rocha-adidas.webp",
-      "imageAlt": "Editorial source image for Simone Rocha x Adidas"
+      "imageAlt": "Editorial source image for Simone Rocha x Adidas",
+      "socialImage": "/culture/trials/social/simone-rocha-adidas.png"
     },
     {
       "id": "tired-girl-eyes",
@@ -27,7 +28,8 @@
       "activeFrom": "2026-09-05",
       "activeUntil": "2026-10-31",
       "image": "/culture/trials/tired-girl-eyes.webp",
-      "imageAlt": "Editorial source image for the tired girl eye makeup trend"
+      "imageAlt": "Editorial source image for the tired girl eye makeup trend",
+      "socialImage": "/culture/trials/social/tired-girl-eyes.png"
     },
     {
       "id": "adidas-mary-janes",
@@ -41,7 +43,8 @@
       "activeFrom": "2026-09-03",
       "activeUntil": "2026-10-15",
       "image": "/culture/trials/adidas-mary-janes.webp",
-      "imageAlt": "Editorial source image for Adidas Mary Jane shoes"
+      "imageAlt": "Editorial source image for Adidas Mary Jane shoes",
+      "socialImage": "/culture/trials/social/adidas-mary-janes.png"
     },
     {
       "id": "ballet-flats-again",
@@ -55,7 +58,8 @@
       "activeFrom": "2026-09-06",
       "activeUntil": "2026-10-15",
       "image": "/culture/trials/ballet-flats-again.webp",
-      "imageAlt": "Editorial source image for the ballet flat trend"
+      "imageAlt": "Editorial source image for the ballet flat trend",
+      "socialImage": "/culture/trials/social/ballet-flats-again.png"
     },
     {
       "id": "preppy-revival-2026",
@@ -68,8 +72,7 @@
       "sourceUrl": "https://www.wsj.com/style/fashion/preppy-style-is-booming-what-does-it-look-like-now-b1320c95",
       "activeFrom": "2026-09-02",
       "activeUntil": "2026-10-31",
-      "image": "/culture/trials/preppy-revival-2026.webp",
-      "imageAlt": "Editorial source image for the fall 2026 preppy trend"
+      "socialImage": "/culture/trials/social/preppy-revival-2026.png"
     },
     {
       "id": "yesteryear",
@@ -82,8 +85,7 @@
       "sourceUrl": "https://www.thebookseller.com/books/books-on-booktok-a-mid-year-review",
       "activeFrom": "2026-09-04",
       "activeUntil": "2026-10-05",
-      "image": "/culture/trials/yesteryear.webp",
-      "imageAlt": "Editorial source image for Yesteryear and BookTok coverage"
+      "socialImage": "/culture/trials/social/yesteryear.png"
     },
     {
       "id": "once-upon-a-broken-heart",
@@ -96,8 +98,7 @@
       "sourceUrl": "https://booktokai.com/",
       "activeFrom": "2026-09-05",
       "activeUntil": "2026-09-30",
-      "image": "/culture/trials/once-upon-a-broken-heart.webp",
-      "imageAlt": "Editorial source image for Once Upon a Broken Heart BookTok coverage"
+      "socialImage": "/culture/trials/social/once-upon-a-broken-heart.png"
     },
     {
       "id": "devil-wears-prada-2",
@@ -110,8 +111,7 @@
       "sourceUrl": "https://www.theguardian.com/film/the-devil-wears-prada-2",
       "activeFrom": "2026-09-01",
       "activeUntil": "2026-09-30",
-      "image": "/culture/trials/devil-wears-prada-2.webp",
-      "imageAlt": "Editorial source image for The Devil Wears Prada 2"
+      "socialImage": "/culture/trials/social/devil-wears-prada-2.png"
     },
     {
       "id": "bridgerton-season-4",
@@ -124,8 +124,7 @@
       "sourceUrl": "https://www.netflix.com/tudum/articles/bridgerton-season-4-cast-release-date-news",
       "activeFrom": "2026-08-20",
       "activeUntil": "2026-09-30",
-      "image": "/culture/trials/bridgerton-season-4.webp",
-      "imageAlt": "Editorial source image for Bridgerton season 4"
+      "socialImage": "/culture/trials/social/bridgerton-season-4.png"
     },
     {
       "id": "daisy-chain-fields",
@@ -139,7 +138,8 @@
       "activeFrom": "2026-09-01",
       "activeUntil": "2026-09-20",
       "image": "/culture/trials/daisy-chain-fields.webp",
-      "imageAlt": "Editorial source image for Daisy Chain Fields"
+      "imageAlt": "Editorial source image for Daisy Chain Fields",
+      "socialImage": "/culture/trials/social/daisy-chain-fields.png"
     },
     {
       "id": "earle-meets-world",
@@ -152,8 +152,7 @@
       "sourceUrl": "https://people.com/netflix-shows-you-need-to-watch-september-2026-12063336",
       "activeFrom": "2026-09-04",
       "activeUntil": "2026-10-05",
-      "image": "/culture/trials/earle-meets-world.webp",
-      "imageAlt": "Editorial source image for Earle Meets World"
+      "socialImage": "/culture/trials/social/earle-meets-world.png"
     },
     {
       "id": "lizzie-borden-monster",
@@ -167,7 +166,8 @@
       "activeFrom": "2026-09-01",
       "activeUntil": "2026-10-10",
       "image": "/culture/trials/lizzie-borden-monster.webp",
-      "imageAlt": "Editorial source image for Monster: The Lizzie Borden Story"
+      "imageAlt": "Editorial source image for Monster: The Lizzie Borden Story",
+      "socialImage": "/culture/trials/social/lizzie-borden-monster.png"
     },
     {
       "id": "the-wrong-girls",
@@ -181,91 +181,104 @@
       "activeFrom": "2026-09-04",
       "activeUntil": "2026-09-25",
       "image": "/culture/trials/the-wrong-girls.webp",
-      "imageAlt": "Editorial source image for The Wrong Girls"
+      "imageAlt": "Editorial source image for The Wrong Girls",
+      "socialImage": "/culture/trials/social/the-wrong-girls.png"
     },
     {
       "id": "twilight",
       "name": "Twilight",
       "category": "movies",
       "kind": "evergreen",
-      "prompt": "A vampire romance set in the Pacific Northwest, centered on Bella Swan and Edward Cullen."
+      "prompt": "A vampire romance set in the Pacific Northwest, centered on Bella Swan and Edward Cullen.",
+      "socialImage": "/culture/trials/social/twilight.png"
     },
     {
       "id": "nana",
       "name": "Nana",
       "category": "anime",
       "kind": "evergreen",
-      "prompt": "A manga and anime about two women named Nana navigating music, fashion, friendship and relationships in Tokyo."
+      "prompt": "A manga and anime about two women named Nana navigating music, fashion, friendship and relationships in Tokyo.",
+      "socialImage": "/culture/trials/social/nana.png"
     },
     {
       "id": "the-sims",
       "name": "The Sims",
       "category": "games",
       "kind": "evergreen",
-      "prompt": "A life-simulation series built around houses, outfits, relationships, careers and domestic chaos."
+      "prompt": "A life-simulation series built around houses, outfits, relationships, careers and domestic chaos.",
+      "socialImage": "/culture/trials/social/the-sims.png"
     },
     {
       "id": "stardew-valley",
       "name": "Stardew Valley",
       "category": "games",
       "kind": "evergreen",
-      "prompt": "A farming game built around routines, decorating, gifts, relationships and seasonal collecting."
+      "prompt": "A farming game built around routines, decorating, gifts, relationships and seasonal collecting.",
+      "socialImage": "/culture/trials/social/stardew-valley.png"
     },
     {
       "id": "mamma-mia",
       "name": "Mamma Mia!",
       "category": "movies",
       "kind": "evergreen",
-      "prompt": "An ABBA musical set on a Greek island, built around a wedding and a paternity question."
+      "prompt": "An ABBA musical set on a Greek island, built around a wedding and a paternity question.",
+      "socialImage": "/culture/trials/social/mamma-mia.png"
     },
     {
       "id": "pride-and-prejudice-2005",
       "name": "Pride & Prejudice (2005)",
       "category": "movies",
       "kind": "evergreen",
-      "prompt": "The 2005 adaptation of Pride & Prejudice starring Keira Knightley and Matthew Macfadyen."
+      "prompt": "The 2005 adaptation of Pride & Prejudice starring Keira Knightley and Matthew Macfadyen.",
+      "socialImage": "/culture/trials/social/pride-and-prejudice-2005.png"
     },
     {
       "id": "animal-crossing",
       "name": "Animal Crossing",
       "category": "games",
       "kind": "evergreen",
-      "prompt": "A life-simulation series about decorating, collecting, clothes, neighbors and seasonal routines."
+      "prompt": "A life-simulation series about decorating, collecting, clothes, neighbors and seasonal routines.",
+      "socialImage": "/culture/trials/social/animal-crossing.png"
     },
     {
       "id": "matcha",
       "name": "Matcha",
       "category": "food",
       "kind": "evergreen",
-      "prompt": "Powdered green tea that also became a recurring visual and lifestyle marker online."
+      "prompt": "Powdered green tea that also became a recurring visual and lifestyle marker online.",
+      "socialImage": "/culture/trials/social/matcha.png"
     },
     {
       "id": "tiny-treat",
       "name": "A tiny treat",
       "category": "food",
       "kind": "evergreen",
-      "prompt": "A small snack, drink or purchase framed as a reward for getting through the day."
+      "prompt": "A small snack, drink or purchase framed as a reward for getting through the day.",
+      "socialImage": "/culture/trials/social/tiny-treat.png"
     },
     {
       "id": "rottingangel",
       "name": "rottingangel",
       "category": "usernames",
       "kind": "evergreen",
-      "prompt": "A username built from a soft noun and a damage modifier, one of the common foidslop handle patterns."
+      "prompt": "A username built from a soft noun and a damage modifier, one of the common foidslop handle patterns.",
+      "socialImage": "/culture/trials/social/rottingangel.png"
     },
     {
       "id": "romance-novels",
       "name": "Romance novels",
       "category": "books",
       "kind": "evergreen",
-      "prompt": "A huge fiction category organized around romantic relationships, tropes, subgenres and highly specific reader tastes."
+      "prompt": "A huge fiction category organized around romantic relationships, tropes, subgenres and highly specific reader tastes.",
+      "socialImage": "/culture/trials/social/romance-novels.png"
     },
     {
       "id": "dress-to-impress",
       "name": "Dress to Impress",
       "category": "games",
       "kind": "evergreen",
-      "prompt": "A Roblox dress-up game where players build outfits around a theme and vote on the runway."
+      "prompt": "A Roblox dress-up game where players build outfits around a theme and vote on the runway.",
+      "socialImage": "/culture/trials/social/dress-to-impress.png"
     }
   ]
 }
