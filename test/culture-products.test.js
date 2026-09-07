@@ -59,7 +59,7 @@ test('Slop Taxonomy links into the actual publication', () => {
 test('interactive product pages are generated and wired', () => {
   for (const page of ['culture/is-it-foidslop.html', 'culture/username-generator.html', 'culture/slop-taxonomy.html', 'about.html']) assert.ok(fs.existsSync(path.join(root, page)), `missing ${page}`);
   assert.match(file('culture/is-it-foidslop.html'), /data-slop-trial/);
-  assert.match(file('culture/is-it-foidslop.html'), /Community Slop Trials/);
+  assert.match(file('culture/is-it-foidslop.html'), /Current Slop Trials/);
   assert.match(file('culture/username-generator.html'), /data-username-generator/);
   assert.match(file('culture/slop-taxonomy.html'), /taxonomy-root/);
   assert.match(file('culture/slop-tools.js'), /\/api\/slop-vote/);
@@ -73,6 +73,12 @@ test('Slop Trial storage is isolated from recipe rating keys', () => {
   assert.match(vote, /slop:counts:/);
   assert.match(results, /slop:counts:/);
   assert.doesNotMatch(vote, /`counts:\$\{id\}`/);
+});
+
+test('homepage Slop Trial prefers active current items', () => {
+  const publisher = fs.readFileSync(path.join(root, 'scripts', 'publish-culture-products.js'), 'utf8');
+  assert.match(publisher, /const activeTrials = trials\.items\.filter/);
+  assert.match(publisher, /const trialPool = activeTrials\.length \? activeTrials/);
 });
 
 test('homepage promotes a weekly field note, Slop Trial, and generator', () => {

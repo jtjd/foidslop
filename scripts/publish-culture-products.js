@@ -4,7 +4,7 @@ const path = require('path');
 
 const ROOT = process.cwd();
 const BASE_URL = 'https://foidslop.com';
-const STYLE_VERSION = '20260906-5';
+const STYLE_VERSION = '20260906-6';
 const checkOnly = process.argv.includes('--check');
 const dateArg = process.argv.indexOf('--date');
 const today = dateArg >= 0 ? process.argv[dateArg + 1] : process.env.PUBLISH_DATE || new Intl.DateTimeFormat('en-CA', {
@@ -44,8 +44,15 @@ function validate() {
     if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(item.id || '') || ids.has(item.id)) errors.push(`invalid or duplicate Slop Trial id: ${item.id}`);
     ids.add(item.id);
     for (const field of ['name', 'category', 'prompt']) if (!String(item[field] || '').trim()) errors.push(`Slop Trial ${item.id}: missing ${field}`);
+    if (!['current', 'evergreen'].includes(item.kind)) errors.push(`Slop Trial ${item.id}: invalid kind`);
+    if (item.kind === 'current') {
+      for (const field of ['whyNow', 'sourceLabel', 'sourceUrl', 'activeFrom', 'activeUntil']) if (!String(item[field] || '').trim()) errors.push(`Slop Trial ${item.id}: missing current field ${field}`);
+      if (!/^https:\/\//.test(item.sourceUrl || '')) errors.push(`Slop Trial ${item.id}: current source must be https`);
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(item.activeFrom || '') || !/^\d{4}-\d{2}-\d{2}$/.test(item.activeUntil || '')) errors.push(`Slop Trial ${item.id}: invalid current date window`);
+    }
   }
-  if (ids.size < 20) errors.push('Slop Trials needs at least 20 launch items');
+  if (ids.size < 20) errors.push('Slop Trials needs at least 20 items');
+  if ((trials.items || []).filter(item => item.kind === 'current').length < 8) errors.push('Slop Trials needs a substantive current-events pool');
   const categoryNames = Object.keys(usernames.categories || {});
   if (categoryNames.length < 5) errors.push('username generator needs at least five categories');
   for (const key of categoryNames) {
@@ -90,15 +97,17 @@ function scriptData(id, value) { return `<script type="application/json" id="${i
 
 function renderTrialPage() {
   const route = 'culture/is-it-foidslop';
-  const title = 'Is It Foidslop? Community Slop Trials';
-  const description = 'Vote yes or no on movies, games, food, usernames, books, aesthetics, and other candidates. See the live community foidslop verdict.';
+  const title = 'Is It Foidslop? Current Slop Trials';
+  const description = 'Vote yes or no on current movies, fashion, books, internet trends, games, food, and other candidates. See the live community result.';
   const schema = [
     { '@context': 'https://schema.org', '@type': 'WebApplication', name: 'Is It Foidslop?', applicationCategory: 'EntertainmentApplication', operatingSystem: 'Any', url: canonical(route), description },
     breadcrumb(route, 'Is It Foidslop?')
   ];
   const categories = [...new Set(trials.items.map(item => item.category))].sort();
-  const pageHead = head(route, title, description, schema).replace('</head>', '<link rel="stylesheet" href="../css/culture-showcase.css?v=20260906-2">\n</head>');
-  return `${pageHead}${header(route)}<main id="main" class="slop-trial-page"><header class="slop-trial-hero"><div><p class="content-eyebrow">Slop Trial / community court</p><h1>Is It Foidslop?</h1><p class="article-deck">A thing appears. You vote yes or no. The jury gets a percentage. Science advances.</p></div><aside class="slop-trial-docket"><span>Community court</span><strong>24</strong><span>launch specimens on file</span></aside></header><section class="slop-trial-shell" data-slop-trial><div class="slop-trial-toolbar"><label>Department <select data-trial-filter><option value="all">Everything</option>${categories.map(value => `<option value="${esc(value)}">${esc(value)}</option>`).join('')}</select></label><button type="button" data-trial-share>Copy trial link</button></div><article class="slop-trial-card"><div class="slop-trial-specimen"><span data-trial-category></span><h2 data-trial-name></h2><p data-trial-prompt></p></div><div class="slop-trial-verdict"><div class="slop-trial-question">FOIDSLOP?</div><div class="slop-vote-buttons"><button type="button" data-vote="yes">YES</button><button type="button" data-vote="no">NO</button></div><p class="slop-trial-status" data-trial-status aria-live="polite"></p><p class="slop-trial-result" data-trial-result aria-live="polite"></p><button class="slop-next" type="button" data-trial-next>Next specimen</button></div></article></section><section class="slop-trial-links culture-tool-links"><a href="slop-index"><strong>Media Index</strong><span>See the staff scores.</span></a><a href="slop-taxonomy"><strong>Slop Taxonomy</strong><span>See where the category sits.</span></a><a href="username-generator"><strong>Username Generator</strong><span>Generate a new problem.</span></a></section></main>${scriptData('slop-trial-data', trials.items)}<script src="slop-tools.js?v=20260906-1" defer></script>${footer(route)}`;
+  const currentCount = trials.items.filter(item => item.kind === 'current').length;
+  const revisionLabel = new Date(`${trials.revisionDate}T12:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+  const pageHead = head(route, title, description, schema).replace('</head>', '<link rel="stylesheet" href="../css/culture-showcase.css?v=20260906-3">\n</head>');
+  return `${pageHead}${header(route)}<main id="main" class="slop-trial-page"><header class="slop-trial-hero"><p class="content-eyebrow">Slop Trial / updated ${esc(revisionLabel)}</p><h1>Is It Foidslop?</h1><p class="article-deck">Vote on what is making the rounds right now. Current culture first, classics when the feed is quiet.</p></header><section class="slop-trial-shell" data-slop-trial><div class="slop-trial-toolbar"><div class="slop-trial-modes" role="group" aria-label="Trial recency"><button type="button" data-trial-mode="current" aria-pressed="true">Current <span>${currentCount}</span></button><button type="button" data-trial-mode="all" aria-pressed="false">All</button></div><label>Category <select data-trial-filter><option value="all">Everything</option>${categories.map(value => `<option value="${esc(value)}">${esc(value[0].toUpperCase() + value.slice(1))}</option>`).join('')}</select></label></div><article class="slop-trial-card"><div class="slop-trial-meta"><div><span class="slop-trial-freshness" data-trial-freshness></span><span data-trial-category></span></div><a class="slop-trial-source" data-trial-source href="#" target="_blank" rel="noopener" hidden></a></div><div class="slop-trial-main"><div class="slop-trial-copy"><h2 data-trial-name></h2><p class="slop-trial-prompt" data-trial-prompt></p><div class="slop-trial-why" data-trial-why-wrap hidden><span>Why now</span><p data-trial-why></p></div></div><div class="slop-trial-vote"><div class="slop-trial-question">Is it foidslop?</div><div class="slop-vote-buttons"><button type="button" data-vote="yes">Yes</button><button type="button" data-vote="no">No</button></div><p class="slop-trial-status" data-trial-status aria-live="polite"></p><div class="slop-trial-meter" aria-hidden="true"><span data-trial-meter></span></div><p class="slop-trial-result" data-trial-result aria-live="polite"></p></div></div><div class="slop-trial-actions"><button class="slop-next" type="button" data-trial-next>Next</button><button type="button" data-trial-share>Copy link</button></div></article><aside class="slop-trial-on-deck"><div class="slop-trial-on-deck-head"><span>On deck</span><span>Current picks</span></div><div class="slop-trial-on-deck-list" data-trial-queue></div></aside></section><section class="slop-trial-links culture-tool-links"><a href="slop-index"><strong>Media Index</strong><span>Staff scores for the classics.</span></a><a href="slop-taxonomy"><strong>Slop Taxonomy</strong><span>Where the categories fit.</span></a><a href="username-generator"><strong>Username Generator</strong><span>Make a foidslop handle.</span></a></section></main>${scriptData('slop-trial-data', trials.items)}<script src="slop-tools.js?v=20260906-2" defer></script>${footer(route)}`;
 }
 
 function renderUsernamePage() {
@@ -146,7 +155,9 @@ function patchHome() {
   let html = fs.readFileSync(file, 'utf8');
   html = html.replace(/<!-- culture-products:start -->[\s\S]*?<!-- culture-products:end -->/g, '');
   const article = culture.articles[weeklyIndex(culture.articles.length)];
-  const trial = trials.items[weeklyIndex(trials.items.length)];
+  const activeTrials = trials.items.filter(item => item.kind === 'current' && (!item.activeFrom || item.activeFrom <= today) && (!item.activeUntil || item.activeUntil >= today));
+  const trialPool = activeTrials.length ? activeTrials : trials.items.filter(item => item.kind === 'evergreen');
+  const trial = trialPool[weeklyIndex(trialPool.length)];
   const block = `<!-- culture-products:start --><div class="zine-culture-week"><a href="culture/${article.slug}"><span>FIELD NOTE</span><strong>${esc(article.title)}</strong><small>${esc(article.deck)}</small></a><a href="culture/is-it-foidslop?item=${trial.id}"><span>SLOP TRIAL</span><strong>Is ${esc(trial.name)} foidslop?</strong><small>Vote yes or no and see the community verdict.</small></a><a href="culture/username-generator"><span>GENERATOR</span><strong>Need a worse username?</strong><small>Soft nouns, gothic damage, controlled vowel crimes.</small></a></div><!-- culture-products:end -->`;
   if (!html.includes('<!-- culture-expansion:end -->')) throw new Error('Homepage culture module is missing');
   html = html.replace('<!-- culture-expansion:end -->', `${block}<!-- culture-expansion:end -->`);
