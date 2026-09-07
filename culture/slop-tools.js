@@ -24,9 +24,6 @@
     const whyWrap = root.querySelector('[data-trial-why-wrap]');
     const why = root.querySelector('[data-trial-why]');
     const image = root.querySelector('[data-trial-image]');
-    const imageFallback = root.querySelector('[data-trial-image-fallback]');
-    const imageCategory = root.querySelector('[data-trial-image-category]');
-    const imageName = root.querySelector('[data-trial-image-name]');
     const result = root.querySelector('[data-trial-result]');
     const meter = root.querySelector('[data-trial-meter]');
     const status = root.querySelector('[data-trial-status]');
@@ -93,27 +90,13 @@
       progress.textContent = `${voted} of ${currentItems.length} current item${currentItems.length === 1 ? '' : 's'} voted`;
     }
 
-    function fallbackMarkup(item) {
-      return `<span class="slop-feed-fallback"><small>${displayCategory(item.category)}</small><strong>${item.name}</strong></span>`;
-    }
-
     function cardMarkup(item) {
       const summary = summaries.get(item.id);
       const consensus = summary?.total ? `<span class="slop-feed-consensus">${summary.percentYes}% yes · ${summary.total}</span>` : '<span class="slop-feed-consensus">Vote</span>';
-      const visual = item.image
-        ? `<span class="slop-feed-visual"><img src="${item.image}" alt="" width="480" height="320" loading="lazy" decoding="async">${fallbackMarkup(item)}</span>`
-        : `<span class="slop-feed-visual">${fallbackMarkup(item)}</span>`;
+      const visual = `<span class="slop-feed-visual"><img src="${item.image}" alt="" width="480" height="320" loading="lazy" decoding="async"></span>`;
       return `${visual}<span class="slop-feed-meta">${displayCategory(item.category)}</span><strong class="slop-feed-title">${item.name}</strong>${consensus}`;
     }
 
-    function wireQueueImageFallbacks() {
-      for (const img of queue?.querySelectorAll('img') || []) {
-        const fallback = img.nextElementSibling;
-        const fail = () => { img.hidden = true; if (fallback) fallback.hidden = false; };
-        if (img.complete && !img.naturalWidth) fail();
-        else img.addEventListener('error', fail, { once: true });
-      }
-    }
 
     function renderQueue() {
       if (!queue) return;
@@ -127,7 +110,6 @@
         button.addEventListener('click', () => render(item));
         queue.appendChild(button);
       }
-      wireQueueImageFallbacks();
     }
 
     function renderDisputed() {
@@ -192,13 +174,6 @@
       }
     }
 
-    function showFallback(item) {
-      image.hidden = true;
-      image.removeAttribute('src');
-      imageFallback.hidden = false;
-      imageCategory.textContent = displayCategory(item.category);
-      imageName.textContent = item.name;
-    }
 
     function render(item) {
       if (!item) return;
@@ -209,15 +184,9 @@
       const activeCurrent = isCurrent(item);
       freshness.textContent = activeCurrent ? 'Current' : 'Classic';
       dateLabel.textContent = activeCurrent && item.activeFrom ? `Added ${item.activeFrom}` : '';
-      if (item.image) {
-        image.hidden = false;
-        imageFallback.hidden = true;
-        image.alt = item.imageAlt || '';
-        image.onerror = () => showFallback(item);
-        image.src = item.image;
-      } else {
-        showFallback(item);
-      }
+      image.hidden = false;
+      image.alt = item.imageAlt;
+      image.src = item.image;
       if (activeCurrent && item.sourceUrl) {
         source.hidden = false;
         source.href = item.sourceUrl;

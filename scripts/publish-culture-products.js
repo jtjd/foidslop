@@ -22,6 +22,7 @@ const esc = value => String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&
 const jsonLd = value => JSON.stringify(value, null, 2).replace(/<\//g, '<\\/');
 
 const trials = read('data/slop-trials.json');
+const publishedTrials = (trials.items || []).filter(item => item.image && item.imageAlt && fs.existsSync(path.join(ROOT, item.image.replace(/^\/+/, ''))));
 const usernames = read('data/username-generator.json');
 const taxonomy = read('data/slop-taxonomy.json');
 const dictionary = read('data/dictionary.json');
@@ -56,6 +57,11 @@ function validate() {
   }
   if (ids.size < 20) errors.push('Slop Trials needs at least 20 items');
   if ((trials.items || []).filter(item => item.kind === 'current').length < 8) errors.push('Slop Trials needs a substantive current-events pool');
+  if (publishedTrials.length < 6) errors.push('Slop Trials needs at least six approved image-backed published items');
+  for (const item of publishedTrials) {
+    if (!item.image || !item.imageAlt) errors.push(`Published Slop Trial ${item.id}: display image is required`);
+    else if (!fs.existsSync(path.join(ROOT, item.image.replace(/^\//, '')))) errors.push(`Published Slop Trial ${item.id}: missing display image ${item.image}`);
+  }
   const categoryNames = Object.keys(usernames.categories || {});
   if (categoryNames.length < 5) errors.push('username generator needs at least five categories');
   for (const key of categoryNames) {
@@ -101,9 +107,8 @@ function scriptData(id, value) { return `<script type="application/json" id="${i
 function renderTrialPage(initialItem = null) {
   const item = initialItem;
   const route = item ? `culture/is-it-foidslop/${item.id}` : 'culture/is-it-foidslop';
-  const activeCurrent = trials.items.filter(candidate => candidate.kind === 'current' && (!candidate.activeFrom || candidate.activeFrom <= today) && (!candidate.activeUntil || candidate.activeUntil >= today));
-  const currentCount = activeCurrent.length || trials.items.filter(candidate => candidate.kind === 'current').length;
-  const classicCount = trials.items.filter(candidate => candidate.kind === 'evergreen').length;
+  const activeCurrent = publishedTrials.filter(candidate => candidate.kind === 'current' && (!candidate.activeFrom || candidate.activeFrom <= today) && (!candidate.activeUntil || candidate.activeUntil >= today));
+  const currentCount = activeCurrent.length || publishedTrials.filter(candidate => candidate.kind === 'current').length;
   const title = item ? `Is ${item.name} foidslop? | foidslop` : 'Is It Foidslop?';
   const description = item
     ? `${item.prompt} Vote yes or no and see the live split.`
@@ -120,7 +125,7 @@ function renderTrialPage(initialItem = null) {
   if (item) pageHead = pageHead.replace('content="index,follow,max-image-preview:large"', 'content="noindex,follow,max-image-preview:large"');
   const initialCategories = ['all', ...currentCategories];
   const categoryButtons = initialCategories.map((value, index) => `<button type="button" data-trial-category="${esc(value)}" aria-pressed="${index === 0 ? 'true' : 'false'}">${esc(value === 'all' ? 'All' : value === 'television' ? 'TV' : value[0].toUpperCase() + value.slice(1))}</button>`).join('');
-  return `${pageHead}${header(route)}<main id="main" class="slop-trial-page"><header class="slop-trial-hero"><p class="content-eyebrow">Current culture / updated ${esc(revisionLabel)}</p><h1>Is it foidslop?</h1><p class="article-deck">${currentCount} things from this week's feed. Vote yes or no. See the split.</p></header><section class="slop-trial-shell" data-slop-trial data-initial-item="${esc(item?.id || '')}"><div class="slop-trial-nav"><div class="slop-trial-modes" role="group" aria-label="Trial set"><button type="button" data-trial-mode="current" aria-pressed="true">Current</button><button type="button" data-trial-mode="classics" aria-pressed="false">Classics</button></div><nav class="slop-trial-categories" data-trial-categories aria-label="Trial categories">${categoryButtons}</nav></div><div class="slop-trial-progress"><span data-trial-progress>0 of ${currentCount} current items voted</span><span>Live reader split</span></div><article class="slop-trial-card"><figure class="slop-trial-media"><img data-trial-image src="" alt="" width="960" height="640" decoding="async"><div class="slop-trial-media-fallback" data-trial-image-fallback hidden><span data-trial-image-category></span><strong data-trial-image-name></strong></div><figcaption><span data-trial-freshness></span><a data-trial-source href="#" target="_blank" rel="noopener" hidden></a></figcaption></figure><div class="slop-trial-panel"><div class="slop-trial-meta"><span data-trial-category-label></span><span data-trial-date-label></span></div><h2 data-trial-name></h2><p class="slop-trial-prompt" data-trial-prompt></p><div class="slop-trial-why" data-trial-why-wrap hidden><span>Why now</span><p data-trial-why></p></div><div class="slop-trial-vote"><div class="slop-trial-question">Is it foidslop?</div><div class="slop-vote-buttons"><button type="button" data-vote="yes">Yes</button><button type="button" data-vote="no">No</button></div><p class="slop-trial-status" data-trial-status aria-live="polite"></p><div class="slop-trial-result-row"><strong data-trial-result aria-live="polite"></strong><div class="slop-trial-meter" aria-hidden="true"><span data-trial-meter></span></div></div></div><div class="slop-trial-actions"><button class="slop-next" type="button" data-trial-next>Next</button><button type="button" data-trial-share>Share verdict</button></div></div></article><section class="slop-trial-feed"><div class="slop-trial-section-head"><div><span>This week</span><h2>Current board.</h2></div><p>Pick anything below. Your votes stay on this browser.</p></div><div class="slop-trial-feed-grid" data-trial-queue></div></section><section class="slop-trial-disputed" data-trial-disputed-wrap hidden><div class="slop-trial-section-head"><div><span>Closest calls</span><h2>Near 50/50.</h2></div><p>The least settled current votes.</p></div><div class="slop-trial-disputed-grid" data-trial-disputed></div></section></section><section class="slop-trial-links culture-tool-links"><a href="/culture/slop-index"><strong>Media Index</strong><span>Staff scores for the classics.</span></a><a href="/culture/slop-taxonomy"><strong>Slop Taxonomy</strong><span>Where the categories fit.</span></a><a href="/culture/username-generator"><strong>Username Generator</strong><span>Make a foidslop handle.</span></a></section></main>${scriptData('slop-trial-data', trials.items)}<script src="/culture/slop-tools.js?v=20260907-1" defer></script>${footer(route)}`;
+  return `${pageHead}${header(route)}<main id="main" class="slop-trial-page"><header class="slop-trial-hero"><p class="content-eyebrow">Current culture / updated ${esc(revisionLabel)}</p><h1>Is it foidslop?</h1><p class="article-deck">${currentCount} things from this week's feed. Vote yes or no. See the split.</p></header><section class="slop-trial-shell" data-slop-trial data-initial-item="${esc(item?.id || '')}"><div class="slop-trial-nav"><nav class="slop-trial-categories" data-trial-categories aria-label="Trial categories">${categoryButtons}</nav></div><div class="slop-trial-progress"><span data-trial-progress>0 of ${currentCount} current items voted</span><span>Live reader split</span></div><article class="slop-trial-card"><figure class="slop-trial-media"><img data-trial-image src="" alt="" width="960" height="640" decoding="async"><figcaption><span data-trial-freshness></span><a data-trial-source href="#" target="_blank" rel="noopener" hidden></a></figcaption></figure><div class="slop-trial-panel"><div class="slop-trial-meta"><span data-trial-category-label></span><span data-trial-date-label></span></div><h2 data-trial-name></h2><p class="slop-trial-prompt" data-trial-prompt></p><div class="slop-trial-why" data-trial-why-wrap hidden><span>Why now</span><p data-trial-why></p></div><div class="slop-trial-vote"><div class="slop-trial-question">Is it foidslop?</div><div class="slop-vote-buttons"><button type="button" data-vote="yes">Yes</button><button type="button" data-vote="no">No</button></div><p class="slop-trial-status" data-trial-status aria-live="polite"></p><div class="slop-trial-result-row"><strong data-trial-result aria-live="polite"></strong><div class="slop-trial-meter" aria-hidden="true"><span data-trial-meter></span></div></div></div><div class="slop-trial-actions"><button class="slop-next" type="button" data-trial-next>Next</button><button type="button" data-trial-share>Share verdict</button></div></div></article><section class="slop-trial-feed"><div class="slop-trial-section-head"><div><span>This week</span><h2>Current board.</h2></div><p>Pick anything below. Your votes stay on this browser.</p></div><div class="slop-trial-feed-grid" data-trial-queue></div></section><section class="slop-trial-disputed" data-trial-disputed-wrap hidden><div class="slop-trial-section-head"><div><span>Closest calls</span><h2>Near 50/50.</h2></div><p>The least settled current votes.</p></div><div class="slop-trial-disputed-grid" data-trial-disputed></div></section></section><section class="slop-trial-links culture-tool-links"><a href="/culture/slop-index"><strong>Media Index</strong><span>Staff scores for the classics.</span></a><a href="/culture/slop-taxonomy"><strong>Slop Taxonomy</strong><span>Where the categories fit.</span></a><a href="/culture/username-generator"><strong>Username Generator</strong><span>Make a foidslop handle.</span></a></section></main>${scriptData('slop-trial-data', publishedTrials)}<script src="/culture/slop-tools.js?v=20260907-1" defer></script>${footer(route)}`;
 }
 
 function renderUsernamePage() {
@@ -168,8 +173,8 @@ function patchHome() {
   let html = fs.readFileSync(file, 'utf8');
   html = html.replace(/<!-- culture-products:start -->[\s\S]*?<!-- culture-products:end -->/g, '');
   const article = culture.articles[weeklyIndex(culture.articles.length)];
-  const activeTrials = trials.items.filter(item => item.kind === 'current' && (!item.activeFrom || item.activeFrom <= today) && (!item.activeUntil || item.activeUntil >= today));
-  const trialPool = activeTrials.length ? activeTrials : trials.items.filter(item => item.kind === 'evergreen');
+  const activeTrials = publishedTrials.filter(item => item.kind === 'current' && (!item.activeFrom || item.activeFrom <= today) && (!item.activeUntil || item.activeUntil >= today));
+  const trialPool = activeTrials.length ? activeTrials : publishedTrials.filter(item => item.kind === 'current');
   const trial = trialPool[weeklyIndex(trialPool.length)];
   const block = `<!-- culture-products:start --><div class="zine-culture-week"><a href="culture/${article.slug}"><span>FIELD NOTE</span><strong>${esc(article.title)}</strong><small>${esc(article.deck)}</small></a><a href="culture/is-it-foidslop/${trial.id}"><span>SLOP TRIAL</span><strong>Is ${esc(trial.name)} foidslop?</strong><small>Vote yes or no and see the community verdict.</small></a><a href="culture/username-generator"><span>GENERATOR</span><strong>Need a worse username?</strong><small>Soft nouns, gothic damage, controlled vowel crimes.</small></a></div><!-- culture-products:end -->`;
   if (!html.includes('<!-- culture-expansion:end -->')) throw new Error('Homepage culture module is missing');
@@ -219,7 +224,7 @@ function patchSitemap() {
 function patchRedirects() {
   const file = path.join(ROOT, '_redirects');
   let text = fs.readFileSync(file, 'utf8').replace(/\n?# culture-products:start[\s\S]*?# culture-products:end\n?/g, '\n');
-  const routes = ['culture/is-it-foidslop', ...trials.items.map(item => `culture/is-it-foidslop/${item.id}`), 'culture/username-generator', 'culture/slop-taxonomy', 'about'];
+  const routes = ['culture/is-it-foidslop', ...publishedTrials.map(item => `culture/is-it-foidslop/${item.id}`), 'culture/username-generator', 'culture/slop-taxonomy', 'about'];
   const block = `# culture-products:start\n${routes.map(route => `/${route}.html /${route} 301`).join('\n')}\n# culture-products:end`;
   write('_redirects', `${text.trim()}\n\n${block}\n`);
 }
@@ -240,7 +245,7 @@ function patchCultureFeed() {
 function checkGenerated() {
   const required = ['culture/is-it-foidslop.html', 'culture/username-generator.html', 'culture/slop-taxonomy.html', 'culture/slop-tools.js', 'about.html'];
   for (const file of required) if (!fs.existsSync(path.join(ROOT, file))) throw new Error(`Missing generated culture product: ${file}`);
-  for (const item of trials.items) if (!fs.existsSync(path.join(ROOT, `culture/is-it-foidslop/${item.id}.html`))) throw new Error(`Missing generated Slop Trial share page: ${item.id}`);
+  for (const item of publishedTrials) if (!fs.existsSync(path.join(ROOT, `culture/is-it-foidslop/${item.id}.html`))) throw new Error(`Missing generated Slop Trial share page: ${item.id}`);
   const home = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
   if (!home.includes('zine-culture-week') || !home.includes('culture/is-it-foidslop')) throw new Error('Homepage weekly culture product strip is missing');
 }
@@ -251,12 +256,13 @@ if (errors.length) {
   process.exit(1);
 }
 if (checkOnly) {
-  console.log(`Culture products source is valid: ${trials.items.length} trials, ${Object.keys(usernames.categories).length} username departments, ${taxonomy.branches.length} taxonomy branches.`);
+  console.log(`Culture products source is valid: ${publishedTrials.length} image-backed published trials (${trials.items.length} source entries), ${Object.keys(usernames.categories).length} username departments, ${taxonomy.branches.length} taxonomy branches.`);
   process.exit(0);
 }
 
+fs.rmSync(path.join(ROOT, 'culture', 'is-it-foidslop'), { recursive: true, force: true });
 write('culture/is-it-foidslop.html', renderTrialPage());
-for (const item of trials.items) write(`culture/is-it-foidslop/${item.id}.html`, renderTrialPage(item));
+for (const item of publishedTrials) write(`culture/is-it-foidslop/${item.id}.html`, renderTrialPage(item));
 write('culture/username-generator.html', renderUsernamePage());
 write('culture/slop-taxonomy.html', renderTaxonomyPage());
 write('about.html', renderAboutPage());

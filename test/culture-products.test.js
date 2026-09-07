@@ -77,7 +77,7 @@ test('Slop Trial storage is isolated from recipe rating keys', () => {
 
 test('homepage Slop Trial prefers active current items', () => {
   const publisher = fs.readFileSync(path.join(root, 'scripts', 'publish-culture-products.js'), 'utf8');
-  assert.match(publisher, /const activeTrials = trials\.items\.filter/);
+  assert.match(publisher, /const activeTrials = publishedTrials\.filter/);
   assert.match(publisher, /const trialPool = activeTrials\.length \? activeTrials/);
 });
 
@@ -106,7 +106,7 @@ test('weekly dispatch includes culture and a Slop Trial', () => {
 });
 
 test('Slop Trial share pages have item-specific metadata', () => {
-  for (const item of trials.items) {
+  for (const item of trials.items.filter(item => item.image)) {
     const sharePath = `culture/is-it-foidslop/${item.id}.html`;
     assert.ok(fs.existsSync(path.join(root, sharePath)), `missing ${sharePath}`);
     const html = file(sharePath);
@@ -116,15 +116,15 @@ test('Slop Trial share pages have item-specific metadata', () => {
   }
 });
 
-test('current Slop Trial visuals fail closed instead of shipping bad screenshots', () => {
-  const byId = new Map(trials.items.map(item => [item.id, item]));
-  for (const id of ['preppy-revival-2026','yesteryear','once-upon-a-broken-heart','devil-wears-prada-2','bridgerton-season-4','earle-meets-world']) {
-    assert.equal(byId.get(id).image, undefined, `${id} should use the branded fallback until a relevant source image is available`);
-  }
-  for (const item of trials.items) {
-    assert.match(item.socialImage || '', /^\/culture\/trials\/social\/[a-z0-9-]+\.png$/);
-    assert.ok(fs.existsSync(path.join(root, item.socialImage.replace(/^\//,''))), `missing social card for ${item.id}`);
-  }
+test('Slop Trial public surface has no image-less cards or fallbacks', () => {
+  const page = file('culture/is-it-foidslop.html');
+  const payload = JSON.parse(page.match(/<script type="application\/json" id="slop-trial-data">([\s\S]*?)<\/script>/)[1]);
+  assert.ok(payload.length >= 6);
+  assert.ok(payload.every(item => item.image && item.imageAlt));
+  assert.doesNotMatch(page, /data-trial-image-fallback/);
+  assert.doesNotMatch(page, /data-trial-mode="classics"/);
+  const runtime = file('culture/slop-tools.js');
+  assert.doesNotMatch(runtime, /fallbackMarkup|showFallback|slop-feed-fallback/);
 });
 
 test('Slop Trial navigation only renders categories that exist in the active set', () => {

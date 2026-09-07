@@ -51,7 +51,7 @@ test('Slop Trial copy stays direct instead of fake-clever', () => {
 
 test('Slop Trial is image-led and uses button navigation', () => {
   assert.match(page, /data-trial-image/);
-  assert.match(page, /data-trial-image-fallback/);
+  assert.doesNotMatch(page, /data-trial-image-fallback/);
   assert.match(page, /data-trial-category="all"/);
   assert.match(page, /data-trial-progress/);
   assert.match(page, /data-trial-disputed/);

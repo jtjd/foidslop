@@ -1,6 +1,13 @@
 from pathlib import Path
 import re
 
+_real_re_sub = re.sub
+def _literal_sub(pattern, repl, string, count=0, flags=0):
+    if isinstance(repl, str):
+        return _real_re_sub(pattern, lambda _match: repl, string, count=count, flags=flags)
+    return _real_re_sub(pattern, repl, string, count=count, flags=flags)
+re.sub = _literal_sub
+
 ROOT = Path('.')
 
 # --- publisher -------------------------------------------------------------
