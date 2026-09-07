@@ -86,7 +86,7 @@ p.write_text(s)
 p = ROOT / 'scripts/weekly-community.js'
 s = p.read_text()
 old = "const slopTrial = slopTrials.items.length ? slopTrials.items[weekSeed % slopTrials.items.length] : null;"
-new = "const slopTrialPool = slopTrials.items.filter(item => item.kind === 'current' && item.image && fs.existsSync(path.join(ROOT, item.image.replace(/^\\//, ''))) && (!item.activeFrom || item.activeFrom <= dateString) && (!item.activeUntil || item.activeUntil >= dateString));\n  const slopTrial = slopTrialPool.length ? slopTrialPool[weekSeed % slopTrialPool.length] : null;"
+new = "const slopTrialPool = slopTrials.items.filter(item => item.kind === 'current' && item.image && fs.existsSync(path.join(ROOT, item.image.replace(/^\\//, ''))) && (!item.activeFrom || item.activeFrom <= window.opensDate) && (!item.activeUntil || item.activeUntil >= window.opensDate));\n  const slopTrial = slopTrialPool.length ? slopTrialPool[weekSeed % slopTrialPool.length] : null;"
 s = s.replace(old, new)
 s = s.replace('https://foidslop.com/culture/is-it-foidslop?item=${encodeURIComponent(slopTrial.id)}', 'https://foidslop.com/culture/is-it-foidslop/${encodeURIComponent(slopTrial.id)}')
 p.write_text(s)
@@ -120,10 +120,15 @@ s = re.sub(
     count=1,
 )
 s = s.replace("assert.match(page, /Current fashion, media, food, games and internet stuff/);", "assert.match(page, /things from this week's feed/i);")
+s = s.replace("  assert.match(page, /data-trial-image-fallback/);\n", "  assert.doesNotMatch(page, /data-trial-image-fallback/);\n")
 p.write_text(s)
 
 p = ROOT / 'test/culture-products.test.js'
 s = p.read_text()
+s = s.replace(
+    "  assert.match(publisher, /const activeTrials = trials\\.items\\.filter/);",
+    "  assert.match(publisher, /const activeTrials = publishedTrials\\.filter/);"
+)
 s = s.replace(
     "  for (const item of trials.items) {\n    const sharePath = `culture/is-it-foidslop/${item.id}.html`;",
     "  for (const item of trials.items.filter(item => item.image)) {\n    const sharePath = `culture/is-it-foidslop/${item.id}.html`;"
