@@ -1,5 +1,5 @@
 {
-  "revisionDate": "2026-09-06",
+  "revisionDate": "2026-09-07",
   "entries": {
     "og-girl-dinner": {
       "headnote": "Use room-temperature butter and cheese so the sourdough, grapes, and pickles feel like one deliberate plate instead of fridge snacks. Keep each element in its own pile and build bites as you eat.",
@@ -644,6 +644,11 @@
       "headnote": "Keep the mozzarella, tomatoes, olives, and cured meat close in size so each skewer has a balanced bite. Drain wet ingredients well before assembly, then finish with olive oil, black pepper, and basil just before serving.",
       "substitutions": "Use any combination of small mozzarella balls, firm cheese cubes, olives, cherry tomatoes, marinated artichokes, roasted peppers, or folded salami. Keep the pieces bite-size and balanced.",
       "storage": "Assemble these as close to serving as possible. If making them ahead, refrigerate covered for up to one day and add basil, olive oil, and any balsamic finish just before eating."
+    },
+    "mochi-matcha-tea": {
+      "headnote": "Whisk the matcha with hot water before adding the frothed oat milk so the tea stays smooth and evenly suspended. Serve the mochi on the side so its chewy texture stays distinct from the drink.",
+      "substitutions": "Dairy milk, soy milk, or almond milk can replace oat milk. Strawberry, matcha, or another filled mochi all work, and maple syrup can replace honey if you want the latte slightly sweeter.",
+      "storage": "Matcha is best whisked and served immediately. Keep mochi and oat milk refrigerated or frozen according to their package directions, then prepare only the amount you plan to eat."
     }
   }
 }
