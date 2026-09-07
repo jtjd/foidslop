@@ -45,6 +45,10 @@ jobs:
           node scripts/daily-publish.js --date "$VALIDATION_DATE"
           node scripts/publish-culture.js --date "$VALIDATION_DATE"
           node scripts/publish-culture-products.js --date "$VALIDATION_DATE"
+          node scripts/sync-navigation.js
+
+      - name: Validate canonical navigation
+        run: node scripts/sync-navigation.js --check
 
       - name: Validate generated SEO output
         run: node scripts/seo-check.js
