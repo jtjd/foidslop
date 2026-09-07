@@ -59,7 +59,7 @@ test('Slop Taxonomy links into the actual publication', () => {
 test('interactive product pages are generated and wired', () => {
   for (const page of ['culture/is-it-foidslop.html', 'culture/username-generator.html', 'culture/slop-taxonomy.html', 'about.html']) assert.ok(fs.existsSync(path.join(root, page)), `missing ${page}`);
   assert.match(file('culture/is-it-foidslop.html'), /data-slop-trial/);
-  assert.match(file('culture/is-it-foidslop.html'), /Current Slop Trials/);
+  assert.match(file('culture/is-it-foidslop.html'), /Vote on the current feed/);
   assert.match(file('culture/username-generator.html'), /data-username-generator/);
   assert.match(file('culture/slop-taxonomy.html'), /taxonomy-root/);
   assert.match(file('culture/slop-tools.js'), /\/api\/slop-vote/);

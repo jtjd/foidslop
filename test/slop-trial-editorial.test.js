@@ -14,10 +14,16 @@ const cheesy = [
   /jury remains corruptible/i,
   /historically significant anyway/i,
   /advanced yearning technology/i,
-  /emotional accounting department/i
+  /emotional accounting department/i,
+  /expensive yearning/i,
+  /very bad psychedelic night/i,
+  /five minutes of actual gameplay/i,
+  /relentless outfit discourse/i,
+  /feed is quiet/i,
+  /making the rounds/i
 ];
 
-test('Slop Trial defaults to a sourced current-events pool', () => {
+test('Slop Trial defaults to a sourced visual current-events pool', () => {
   const current = trials.items.filter(item => item.kind === 'current');
   assert.ok(current.length >= 8);
   for (const item of current) {
@@ -25,23 +31,27 @@ test('Slop Trial defaults to a sourced current-events pool', () => {
     assert.ok(item.whyNow.length >= 25);
     assert.match(item.activeFrom, /^2026-/);
     assert.match(item.activeUntil, /^2026-/);
+    assert.match(item.image, /^\/culture\/trials\/[a-z0-9-]+\.webp$/);
+    assert.ok(item.imageAlt.length >= 20);
+    assert.ok(fs.existsSync(item.image.replace(/^\//, '')), `missing ${item.image}`);
   }
 });
 
 test('Slop Trial copy stays direct instead of fake-clever', () => {
   const text = JSON.stringify(trials) + page + script;
   for (const pattern of cheesy) assert.doesNotMatch(text, pattern);
-  assert.match(page, /Vote on what is making the rounds right now/);
+  assert.match(page, /Current fashion, media, food, games and internet stuff/);
   assert.match(page, /Why now/);
-  assert.match(page, /Current picks/);
+  assert.match(page, /Closest calls/);
 });
 
-test('Slop Trial page has a compact topical layout', () => {
-  assert.match(page, /slop-trial-modes/);
-  assert.match(page, /slop-trial-main/);
-  assert.match(page, /slop-trial-meter/);
-  assert.match(page, /data-trial-source/);
-  assert.match(script, /const isCurrent/);
-  assert.match(script, /dailyPick/);
+test('Slop Trial is image-led and uses button navigation', () => {
+  assert.match(page, /data-trial-image/);
+  assert.match(page, /data-trial-category="all"/);
+  assert.match(page, /data-trial-progress/);
+  assert.match(page, /data-trial-disputed/);
+  assert.doesNotMatch(page, /<select[^>]*data-trial-filter/);
+  assert.match(script, /navigator\.share/);
+  assert.match(script, /loadAllResults/);
+  assert.match(script, /updateProgress/);
 });
-
