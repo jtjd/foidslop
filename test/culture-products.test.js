@@ -59,7 +59,7 @@ test('Slop Taxonomy links into the actual publication', () => {
 test('interactive product pages are generated and wired', () => {
   for (const page of ['culture/is-it-foidslop.html', 'culture/username-generator.html', 'culture/slop-taxonomy.html', 'about.html']) assert.ok(fs.existsSync(path.join(root, page)), `missing ${page}`);
   assert.match(file('culture/is-it-foidslop.html'), /data-slop-trial/);
-  assert.match(file('culture/is-it-foidslop.html'), /Current Slop Trials/);
+  assert.match(file('culture/is-it-foidslop.html'), /Is it foidslop\?/i);
   assert.match(file('culture/username-generator.html'), /data-username-generator/);
   assert.match(file('culture/slop-taxonomy.html'), /taxonomy-root/);
   assert.match(file('culture/slop-tools.js'), /\/api\/slop-vote/);
@@ -77,7 +77,7 @@ test('Slop Trial storage is isolated from recipe rating keys', () => {
 
 test('homepage Slop Trial prefers active current items', () => {
   const publisher = fs.readFileSync(path.join(root, 'scripts', 'publish-culture-products.js'), 'utf8');
-  assert.match(publisher, /const activeTrials = trials\.items\.filter/);
+  assert.match(publisher, /const activeTrials = publishedTrials\.filter/);
   assert.match(publisher, /const trialPool = activeTrials\.length \? activeTrials/);
 });
 
@@ -103,4 +103,33 @@ test('weekly dispatch includes culture and a Slop Trial', () => {
   assert.match(weekly, /ELSEWHERE IN THE SLOP/);
   assert.match(weekly, /SLOP TRIAL/);
   assert.match(weekly, /culture\/is-it-foidslop/);
+});
+
+test('Slop Trial share pages have item-specific metadata', () => {
+  for (const item of trials.items.filter(item => item.image)) {
+    const sharePath = `culture/is-it-foidslop/${item.id}.html`;
+    assert.ok(fs.existsSync(path.join(root, sharePath)), `missing ${sharePath}`);
+    const html = file(sharePath);
+    assert.match(html, new RegExp(`canonical[^>]+culture/is-it-foidslop/${item.id}`));
+    assert.match(html, new RegExp(`culture/trials/social/${item.id}\\.png`));
+    assert.match(html, /noindex,follow,max-image-preview:large/);
+  }
+});
+
+test('Slop Trial public surface has no image-less cards or fallbacks', () => {
+  const page = file('culture/is-it-foidslop.html');
+  const payload = JSON.parse(page.match(/<script type="application\/json" id="slop-trial-data">([\s\S]*?)<\/script>/)[1]);
+  assert.ok(payload.length >= 6);
+  assert.ok(payload.every(item => item.image && item.imageAlt));
+  assert.doesNotMatch(page, /data-trial-image-fallback/);
+  assert.doesNotMatch(page, /data-trial-mode="classics"/);
+  const runtime = file('culture/slop-tools.js');
+  assert.doesNotMatch(runtime, /fallbackMarkup|showFallback|slop-feed-fallback/);
+});
+
+test('Slop Trial navigation only renders categories that exist in the active set', () => {
+  const runtime = file('culture/slop-tools.js');
+  assert.match(runtime, /new Set\(modeItems\(\)\.map\(item => item\.category\)\)/);
+  assert.match(runtime, /renderCategories\(\)/);
+  assert.doesNotMatch(file('culture/is-it-foidslop.html'), /data-trial-category="games"/);
 });

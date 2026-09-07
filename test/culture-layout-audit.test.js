@@ -11,12 +11,11 @@ test('username article has no unrelated portrait receipt', () => {
   assert.ok(article); assert.equal((article.evidence || []).length, 0);
   assert.ok(article.sources.some(source => source.url.includes('reddit.com')));
 });
-test('Slop Trial uses the compact topical layout', () => {
-  assert.match(products, /slop-trial-page/);
-  assert.match(products, /slop-trial-main/);
-  assert.match(products, /slop-trial-why/);
-  assert.match(products, /slop-trial-on-deck/);
-  assert.match(showcase, /grid-template-columns:minmax\(0,1\.35fr\) minmax\(300px,\.65fr\)/);
+test('Slop Trial uses the visual culture-pulse layout', () => {
+  assert.match(products, /slop-trial-media/);
+  assert.match(products, /slop-trial-categories/);
+  assert.match(products, /slop-trial-disputed/);
+  assert.match(showcase, /grid-template-columns:minmax\(0,1\.12fr\) minmax\(380px,\.88fr\)/);
 });
 test('article titles and receipts have explicit caps', () => {
   assert.match(theme, /culture-article:not\(\.foidslop-primer\) > h1/);

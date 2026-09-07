@@ -16,12 +16,14 @@
     if (!root || !dataNode) return;
     const all = JSON.parse(dataNode.textContent || '[]');
     const name = root.querySelector('[data-trial-name]');
-    const category = root.querySelector('[data-trial-category]');
     const prompt = root.querySelector('[data-trial-prompt]');
     const freshness = root.querySelector('[data-trial-freshness]');
     const source = root.querySelector('[data-trial-source]');
+    const categoryLabel = root.querySelector('[data-trial-category-label]');
+    const dateLabel = root.querySelector('[data-trial-date-label]');
     const whyWrap = root.querySelector('[data-trial-why-wrap]');
     const why = root.querySelector('[data-trial-why]');
+    const image = root.querySelector('[data-trial-image]');
     const result = root.querySelector('[data-trial-result]');
     const meter = root.querySelector('[data-trial-meter]');
     const status = root.querySelector('[data-trial-status]');
@@ -29,77 +31,162 @@
     const no = root.querySelector('[data-vote="no"]');
     const next = root.querySelector('[data-trial-next]');
     const share = root.querySelector('[data-trial-share]');
-    const filter = root.querySelector('[data-trial-filter]');
+    const progress = root.querySelector('[data-trial-progress]');
     const modeButtons = [...root.querySelectorAll('[data-trial-mode]')];
+    const categoryNav = root.querySelector('[data-trial-categories]');
     const queue = root.querySelector('[data-trial-queue]');
+    const disputedWrap = root.querySelector('[data-trial-disputed-wrap]');
+    const disputed = root.querySelector('[data-trial-disputed]');
     let mode = 'current';
+    let selectedCategory = 'all';
     let current = null;
+    let currentSummary = null;
+    const summaries = new Map();
 
     const date = new Date().toISOString().slice(0, 10);
     const isCurrent = item => item.kind === 'current' && (!item.activeFrom || item.activeFrom <= date) && (!item.activeUntil || item.activeUntil >= date);
     const currentItems = all.filter(isCurrent);
-    if (!currentItems.length) mode = 'all';
-
-    const pool = () => {
-      let items = mode === 'current' ? currentItems : all;
-      if (filter.value !== 'all') items = items.filter(item => item.category === filter.value);
-      if (!items.length && mode === 'current') items = currentItems;
-      if (!items.length) items = all;
-      return items;
-    };
+    const classicItems = all.filter(item => item.kind === 'evergreen');
+    if (!currentItems.length) mode = 'classics';
     const savedVote = id => localStorage.getItem(`foidslop:trial:${id}`);
-    const setModeButtons = () => modeButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.trialMode === mode)));
+    const displayCategory = value => value === 'television' ? 'TV' : titleCase(value);
+    const modeItems = () => mode === 'current' ? currentItems : classicItems;
+    const pool = () => {
+      const base = modeItems();
+      if (selectedCategory === 'all') return base;
+      const filtered = base.filter(item => item.category === selectedCategory);
+      return filtered.length ? filtered : base;
+    };
+    const itemUrl = item => `${location.origin}/culture/is-it-foidslop/${encodeURIComponent(item.id)}`;
 
-    function dailyPick(items) {
-      if (!items.length) return null;
-      const seed = date.split('').reduce((sum, char) => sum + char.charCodeAt(0), 0);
-      return items[seed % items.length];
+    function setPressed() {
+      modeButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.trialMode === mode)));
+      [...root.querySelectorAll('[data-trial-category]')].forEach(button => button.setAttribute('aria-pressed', String(button.dataset.trialCategory === selectedCategory)));
     }
+
+    function renderCategories() {
+      if (!categoryNav) return;
+      const available = [...new Set(modeItems().map(item => item.category))].sort();
+      if (selectedCategory !== 'all' && !available.includes(selectedCategory)) selectedCategory = 'all';
+      categoryNav.innerHTML = '';
+      for (const value of ['all', ...available]) {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.dataset.trialCategory = value;
+        button.textContent = value === 'all' ? 'All' : displayCategory(value);
+        button.setAttribute('aria-pressed', String(value === selectedCategory));
+        button.addEventListener('click', () => {
+          selectedCategory = value;
+          setPressed();
+          render(pool()[0]);
+        });
+        categoryNav.appendChild(button);
+      }
+    }
+
+    function updateProgress() {
+      if (!progress) return;
+      const voted = currentItems.filter(item => savedVote(item.id)).length;
+      progress.textContent = `${voted} of ${currentItems.length} current item${currentItems.length === 1 ? '' : 's'} voted`;
+    }
+
+    function cardMarkup(item) {
+      const summary = summaries.get(item.id);
+      const consensus = summary?.total ? `<span class="slop-feed-consensus">${summary.percentYes}% yes · ${summary.total}</span>` : '<span class="slop-feed-consensus">Vote</span>';
+      const visual = `<span class="slop-feed-visual"><img src="${item.image}" alt="" width="480" height="320" loading="lazy" decoding="async"></span>`;
+      return `${visual}<span class="slop-feed-meta">${displayCategory(item.category)}</span><strong class="slop-feed-title">${item.name}</strong>${consensus}`;
+    }
+
 
     function renderQueue() {
       if (!queue) return;
-      const candidates = currentItems.filter(item => item.id !== current?.id).slice(0, 4);
+      const items = pool().filter(item => item.id !== current?.id).slice(0, 8);
       queue.innerHTML = '';
-      for (const item of candidates) {
+      for (const item of items) {
         const button = document.createElement('button');
         button.type = 'button';
-        button.innerHTML = `<span>${titleCase(item.category)}</span><strong>${item.name}</strong>`;
+        button.dataset.trialQueueItem = item.id;
+        button.innerHTML = cardMarkup(item);
         button.addEventListener('click', () => render(item));
         queue.appendChild(button);
       }
-      queue.closest('.slop-trial-on-deck')?.toggleAttribute('hidden', !candidates.length);
+    }
+
+    function renderDisputed() {
+      if (!disputed || !disputedWrap) return;
+      const ranked = currentItems
+        .map(item => ({ item, summary: summaries.get(item.id) }))
+        .filter(row => row.summary?.total)
+        .sort((a, b) => Math.abs(a.summary.percentYes - 50) - Math.abs(b.summary.percentYes - 50) || b.summary.total - a.summary.total)
+        .slice(0, 3);
+      disputedWrap.hidden = !ranked.length;
+      disputed.innerHTML = '';
+      for (const row of ranked) {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.innerHTML = `<span>${displayCategory(row.item.category)}</span><strong>${row.item.name}</strong><b>${row.summary.percentYes}% yes</b><small>${row.summary.total} vote${row.summary.total === 1 ? '' : 's'}</small>`;
+        button.addEventListener('click', () => render(row.item));
+        disputed.appendChild(button);
+      }
     }
 
     function setResult(summary) {
-      const percent = Number(summary?.percentYes || 0);
+      currentSummary = summary || { total: 0, percentYes: 0 };
+      const percent = Number(currentSummary.percentYes || 0);
       meter.style.width = `${Math.max(0, Math.min(100, percent))}%`;
-      result.textContent = summary?.total
-        ? `Community: ${percent}% yes · ${summary.total} vote${summary.total === 1 ? '' : 's'}`
+      result.textContent = currentSummary.total
+        ? `${percent}% yes · ${currentSummary.total} vote${currentSummary.total === 1 ? '' : 's'}`
         : 'No votes yet.';
     }
 
+    async function loadAllResults() {
+      const ids = currentItems.map(item => item.id);
+      if (!ids.length) return;
+      try {
+        const response = await fetch(`/api/slop-votes?ids=${encodeURIComponent(ids.join(','))}`, { headers: { accept: 'application/json' } });
+        const body = await response.json();
+        if (!response.ok) throw new Error('unavailable');
+        for (const [id, summary] of Object.entries(body)) summaries.set(id, summary);
+        if (current && summaries.has(current.id)) setResult(summaries.get(current.id));
+        renderQueue();
+        renderDisputed();
+      } catch {
+        // The page still works if aggregate results are temporarily unavailable.
+      }
+    }
+
     async function loadResult(id) {
-      result.textContent = 'Loading community result...';
+      if (summaries.has(id)) {
+        setResult(summaries.get(id));
+        return;
+      }
+      result.textContent = 'Loading result...';
       meter.style.width = '0%';
       try {
         const response = await fetch(`/api/slop-votes?ids=${encodeURIComponent(id)}`, { headers: { accept: 'application/json' } });
         const body = await response.json();
         if (!response.ok || !body[id]) throw new Error('unavailable');
+        summaries.set(id, body[id]);
         setResult(body[id]);
       } catch {
-        result.textContent = 'Community result unavailable.';
+        currentSummary = null;
+        result.textContent = 'Result unavailable right now.';
       }
     }
+
 
     function render(item) {
       if (!item) return;
       current = item;
       name.textContent = item.name;
-      category.textContent = titleCase(item.category);
       prompt.textContent = item.prompt;
+      categoryLabel.textContent = displayCategory(item.category);
       const activeCurrent = isCurrent(item);
       freshness.textContent = activeCurrent ? 'Current' : 'Classic';
-      freshness.dataset.kind = activeCurrent ? 'current' : 'classic';
+      dateLabel.textContent = activeCurrent && item.activeFrom ? `Added ${item.activeFrom}` : '';
+      image.hidden = false;
+      image.alt = item.imageAlt;
+      image.src = item.image;
       if (activeCurrent && item.sourceUrl) {
         source.hidden = false;
         source.href = item.sourceUrl;
@@ -117,11 +204,10 @@
       no.disabled = Boolean(prior);
       yes.setAttribute('aria-pressed', String(prior === 'yes'));
       no.setAttribute('aria-pressed', String(prior === 'no'));
-      status.textContent = prior ? `Your vote: ${prior.toUpperCase()}.` : 'Vote once per item.';
-      const url = new URL(location.href);
-      url.searchParams.set('item', item.id);
-      history.replaceState(null, '', url);
+      status.textContent = prior ? `You voted ${prior}.` : 'Vote to compare with everyone else.';
+      history.replaceState(null, '', itemUrl(item));
       loadResult(item.id);
+      updateProgress();
       renderQueue();
     }
 
@@ -142,8 +228,14 @@
         localStorage.setItem(`foidslop:trial:${current.id}`, saved);
         yes.setAttribute('aria-pressed', String(saved === 'yes'));
         no.setAttribute('aria-pressed', String(saved === 'no'));
-        status.textContent = `Your vote: ${saved.toUpperCase()}.`;
-        if (body.summary) setResult(body.summary);
+        status.textContent = `You voted ${saved}.`;
+        if (body.summary) {
+          summaries.set(current.id, body.summary);
+          setResult(body.summary);
+        }
+        updateProgress();
+        renderQueue();
+        renderDisputed();
       } catch {
         yes.disabled = false;
         no.disabled = false;
@@ -154,31 +246,44 @@
     yes.addEventListener('click', () => vote('yes'));
     no.addEventListener('click', () => vote('no'));
     next.addEventListener('click', () => {
-      const choices = pool().filter(item => item.id !== current?.id);
-      render(pick(choices.length ? choices : pool()));
+      const items = pool();
+      const unvoted = items.filter(item => item.id !== current?.id && !savedVote(item.id));
+      const choices = unvoted.length ? unvoted : items.filter(item => item.id !== current?.id);
+      render(choices[0] || items[0]);
     });
-    filter.addEventListener('change', () => render(dailyPick(pool())));
     modeButtons.forEach(button => button.addEventListener('click', () => {
       mode = button.dataset.trialMode;
-      if (mode === 'current' && !currentItems.length) mode = 'all';
-      setModeButtons();
-      filter.value = 'all';
-      render(dailyPick(pool()));
+      selectedCategory = 'all';
+      renderCategories();
+      setPressed();
+      render(pool()[0]);
     }));
     share.addEventListener('click', async () => {
+      if (!current) return;
+      const url = itemUrl(current);
+      const percentage = currentSummary?.total ? `${currentSummary.percentYes}% of readers voted yes.` : '';
+      const prior = savedVote(current.id);
+      const text = [prior ? `I voted ${prior.toUpperCase()} on ${current.name}.` : `Is ${current.name} foidslop?`, percentage].filter(Boolean).join(' ');
       try {
-        await navigator.clipboard.writeText(location.href);
-        share.textContent = 'Copied';
-        setTimeout(() => { share.textContent = 'Copy link'; }, 1200);
-      } catch { share.textContent = 'Copy failed'; }
+        if (navigator.share) {
+          await navigator.share({ title: `Is ${current.name} foidslop?`, text, url });
+        } else {
+          await navigator.clipboard.writeText(`${text} ${url}`.trim());
+          share.textContent = 'Copied';
+          setTimeout(() => { share.textContent = 'Share verdict'; }, 1200);
+        }
+      } catch (error) {
+        if (error?.name !== 'AbortError') share.textContent = 'Share failed';
+      }
     });
 
-    setModeButtons();
-    const requested = new URLSearchParams(location.search).get('item');
-    const requestedItem = all.find(item => item.id === requested);
-    if (requestedItem && !isCurrent(requestedItem)) mode = 'all';
-    setModeButtons();
-    render(requestedItem || dailyPick(currentItems.length ? currentItems : all));
+    const initialId = root.dataset.initialItem || new URLSearchParams(location.search).get('item');
+    const requestedItem = all.find(item => item.id === initialId);
+    if (requestedItem?.kind === 'evergreen') mode = 'classics';
+    renderCategories();
+    setPressed();
+    render(requestedItem || (currentItems[0] || classicItems[0]));
+    loadAllResults();
   }
 
   function initUsernameGenerator() {

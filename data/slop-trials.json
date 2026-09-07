@@ -6,240 +6,279 @@
       "name": "Simone Rocha x Adidas",
       "category": "fashion",
       "kind": "current",
-      "prompt": "Lace, pearls and tulle on Adidas sportswear. The first collection lands September 10.",
+      "prompt": "Simone Rocha put lace, pearls, tulle and ribbon details onto Adidas sportswear and shoes. The first collection launches September 10.",
       "whyNow": "Simone Rocha's first Adidas Originals collection launches this week.",
       "sourceLabel": "Vogue \u00b7 Sep 3",
       "sourceUrl": "https://www.vogue.com/article/simone-rocha-adidas-fall-winter-2026-interview",
       "activeFrom": "2026-09-03",
-      "activeUntil": "2026-10-05"
+      "activeUntil": "2026-10-05",
+      "image": "/culture/trials/simone-rocha-adidas.webp",
+      "imageAlt": "Editorial source image for Simone Rocha x Adidas",
+      "socialImage": "/culture/trials/social/simone-rocha-adidas.png"
     },
     {
       "id": "tired-girl-eyes",
       "name": "Tired Girl Eyes",
       "category": "beauty",
       "kind": "current",
-      "prompt": "Smudged shadow, visible under-eyes and dark lips. Fall makeup has decided looking a little wrecked is back.",
-      "whyNow": "Byrdie listed tired-girl eyes among fall 2026's biggest makeup trends this week.",
+      "prompt": "Smudged eye makeup, visible under-eyes and dark lips are back in fall beauty coverage.",
+      "whyNow": "Byrdie included tired-girl eyes in its fall 2026 makeup trend report this week.",
       "sourceLabel": "Byrdie \u00b7 Sep 5",
       "sourceUrl": "https://www.byrdie.com/fall-makeup-trends-2026-12064486",
       "activeFrom": "2026-09-05",
-      "activeUntil": "2026-10-31"
+      "activeUntil": "2026-10-31",
+      "image": "/culture/trials/tired-girl-eyes.webp",
+      "imageAlt": "Editorial source image for the tired girl eye makeup trend",
+      "socialImage": "/culture/trials/social/tired-girl-eyes.png"
     },
     {
       "id": "adidas-mary-janes",
       "name": "Adidas Mary Janes",
       "category": "fashion",
       "kind": "current",
-      "prompt": "A sneaker with a Mary Jane strap. Back-to-school TikTok is wearing them.",
-      "whyNow": "Who What Wear found Adidas Mary Janes in a scan of more than 200 back-to-school TikToks.",
+      "prompt": "Adidas sneaker silhouettes with Mary Jane straps are showing up in back-to-school TikTok.",
+      "whyNow": "Who What Wear found Adidas Mary Janes repeatedly in a scan of more than 200 back-to-school TikToks.",
       "sourceLabel": "Who What Wear \u00b7 Sep 3",
       "sourceUrl": "https://www.whowhatwear.com/fashion/trends/back-to-school-fashion-trends-2026",
       "activeFrom": "2026-09-03",
-      "activeUntil": "2026-10-15"
+      "activeUntil": "2026-10-15",
+      "image": "/culture/trials/adidas-mary-janes.webp",
+      "imageAlt": "Editorial source image for Adidas Mary Jane shoes",
+      "socialImage": "/culture/trials/social/adidas-mary-janes.png"
     },
     {
       "id": "ballet-flats-again",
       "name": "Ballet Flats Again",
       "category": "fashion",
       "kind": "current",
-      "prompt": "The shoes are back again. Fall celebrity outfits are full of them.",
-      "whyNow": "People flagged ballet flats as a fall staple again on September 6 after a run of celebrity sightings.",
+      "prompt": "Ballet flats are back in fall celebrity styling.",
+      "whyNow": "People highlighted another run of ballet-flat sightings on September 6.",
       "sourceLabel": "People \u00b7 Sep 6",
       "sourceUrl": "https://people.com/kate-middleton-katie-holmes-ballet-flats-september-2026-12105789",
       "activeFrom": "2026-09-06",
-      "activeUntil": "2026-10-15"
+      "activeUntil": "2026-10-15",
+      "image": "/culture/trials/ballet-flats-again.webp",
+      "imageAlt": "Editorial source image for the ballet flat trend",
+      "socialImage": "/culture/trials/social/ballet-flats-again.png"
     },
     {
       "id": "preppy-revival-2026",
       "name": "The Preppy Revival",
       "category": "fashion",
       "kind": "current",
-      "prompt": "Argyle, roll-necks, micro minis and prep-school references are back in the fall rotation.",
-      "whyNow": "Preppy style is surging with Gen Z and Gen Alpha as fall 2026 starts.",
+      "prompt": "Argyle, roll-necks, micro minis and prep-school references are back in fall fashion.",
+      "whyNow": "The Wall Street Journal reported a new preppy push among Gen Z and Gen Alpha as fall starts.",
       "sourceLabel": "WSJ \u00b7 Sep 2",
       "sourceUrl": "https://www.wsj.com/style/fashion/preppy-style-is-booming-what-does-it-look-like-now-b1320c95",
       "activeFrom": "2026-09-02",
-      "activeUntil": "2026-10-31"
+      "activeUntil": "2026-10-31",
+      "socialImage": "/culture/trials/social/preppy-revival-2026.png"
     },
     {
       "id": "yesteryear",
       "name": "Yesteryear",
       "category": "books",
       "kind": "current",
-      "prompt": "A novel about tradwife influencer culture that BookTok spent a large part of 2026 talking about.",
+      "prompt": "A novel about tradwife influencer culture became one of BookTok's major 2026 discussion titles.",
       "whyNow": "The Bookseller's September BookTok review singled it out as one of the year's biggest discussion books.",
       "sourceLabel": "The Bookseller \u00b7 Sep 4",
       "sourceUrl": "https://www.thebookseller.com/books/books-on-booktok-a-mid-year-review",
       "activeFrom": "2026-09-04",
-      "activeUntil": "2026-10-05"
+      "activeUntil": "2026-10-05",
+      "socialImage": "/culture/trials/social/yesteryear.png"
     },
     {
       "id": "once-upon-a-broken-heart",
       "name": "Once Upon a Broken Heart",
       "category": "books",
       "kind": "current",
-      "prompt": "Jacks, romantasy and reread edits. The series is back near the center of BookTok attention.",
-      "whyNow": "BookTokAI had it at No. 1 in its September 5 weekly tracking.",
+      "prompt": "Stephanie Garber's romantasy series is back near the top of BookTok tracking.",
+      "whyNow": "BookTokAI ranked the series first in its September 5 weekly tracking.",
       "sourceLabel": "BookTokAI \u00b7 Sep 5",
       "sourceUrl": "https://booktokai.com/",
       "activeFrom": "2026-09-05",
-      "activeUntil": "2026-09-30"
+      "activeUntil": "2026-09-30",
+      "socialImage": "/culture/trials/social/once-upon-a-broken-heart.png"
     },
     {
       "id": "devil-wears-prada-2",
       "name": "The Devil Wears Prada 2",
       "category": "movies",
       "kind": "current",
-      "prompt": "Miranda, Andy, Emily and another round of fashion-office pathology. Summer 2026 made it a hit.",
+      "prompt": "Miranda, Andy and Emily returned for The Devil Wears Prada 2 this summer.",
       "whyNow": "The sequel is still part of the post-summer box-office conversation heading into fall.",
       "sourceLabel": "The Guardian \u00b7 Sep 1",
       "sourceUrl": "https://www.theguardian.com/film/the-devil-wears-prada-2",
       "activeFrom": "2026-09-01",
-      "activeUntil": "2026-09-30"
+      "activeUntil": "2026-09-30",
+      "socialImage": "/culture/trials/social/devil-wears-prada-2.png"
     },
     {
       "id": "bridgerton-season-4",
       "name": "Bridgerton Season 4",
       "category": "television",
       "kind": "current",
-      "prompt": "Benedict, Sophie, a masquerade ball and another season of expensive yearning.",
-      "whyNow": "Season 4 is streaming now and Netflix says it is already Emmy-nominated.",
+      "prompt": "Bridgerton season 4 centers Benedict and Sophie and is streaming now.",
+      "whyNow": "Netflix says the full season is now available and the season is Emmy-nominated.",
       "sourceLabel": "Netflix Tudum \u00b7 Jul 10",
       "sourceUrl": "https://www.netflix.com/tudum/articles/bridgerton-season-4-cast-release-date-news",
       "activeFrom": "2026-08-20",
-      "activeUntil": "2026-09-30"
+      "activeUntil": "2026-09-30",
+      "socialImage": "/culture/trials/social/bridgerton-season-4.png"
     },
     {
       "id": "daisy-chain-fields",
       "name": "Daisy Chain Fields",
       "category": "music",
       "kind": "current",
-      "prompt": "Olivia Rodrigo built an all-female festival with Stevie Nicks, Bikini Kill and a new punk song.",
-      "whyNow": "The inaugural Daisy Chain Fields festival happened this week in California.",
+      "prompt": "Olivia Rodrigo launched an all-female festival in California with Chappell Roan, Doechii, Stevie Nicks, Bikini Kill and more.",
+      "whyNow": "The inaugural Daisy Chain Fields festival took place last week and remains in current music coverage.",
       "sourceLabel": "The Atlantic \u00b7 Sep 1",
       "sourceUrl": "https://www.theatlantic.com/culture/2026/09/olivia-rodrigo-daisy-chain-festival-review/688477/",
       "activeFrom": "2026-09-01",
-      "activeUntil": "2026-09-20"
+      "activeUntil": "2026-09-20",
+      "image": "/culture/trials/daisy-chain-fields.webp",
+      "imageAlt": "Editorial source image for Daisy Chain Fields",
+      "socialImage": "/culture/trials/social/daisy-chain-fields.png"
     },
     {
       "id": "earle-meets-world",
       "name": "Earle Meets World",
       "category": "television",
       "kind": "current",
-      "prompt": "Alix Earle now has a Netflix reality show about her life and career.",
-      "whyNow": "The series premiered September 4.",
+      "prompt": "Alix Earle now has a Netflix reality series about her life and career.",
+      "whyNow": "Earle Meets World premiered September 4.",
       "sourceLabel": "People \u00b7 Aug 31",
       "sourceUrl": "https://people.com/netflix-shows-you-need-to-watch-september-2026-12063336",
       "activeFrom": "2026-09-04",
-      "activeUntil": "2026-10-05"
+      "activeUntil": "2026-10-05",
+      "socialImage": "/culture/trials/social/earle-meets-world.png"
     },
     {
       "id": "lizzie-borden-monster",
       "name": "Monster: The Lizzie Borden Story",
       "category": "television",
       "kind": "current",
-      "prompt": "Ryan Murphy's next Monster season puts Lizzie Borden at the center of the story.",
+      "prompt": "Ryan Murphy's Monster series turns to Lizzie Borden this month.",
       "whyNow": "The season arrives on Netflix September 17 with Ella Beatty as Borden.",
       "sourceLabel": "People \u00b7 Aug 31",
       "sourceUrl": "https://people.com/netflix-shows-you-need-to-watch-september-2026-12063336",
       "activeFrom": "2026-09-01",
-      "activeUntil": "2026-10-10"
+      "activeUntil": "2026-10-10",
+      "image": "/culture/trials/lizzie-borden-monster.webp",
+      "imageAlt": "Editorial source image for Monster: The Lizzie Borden Story",
+      "socialImage": "/culture/trials/social/lizzie-borden-monster.png"
     },
     {
       "id": "the-wrong-girls",
       "name": "The Wrong Girls",
       "category": "movies",
       "kind": "current",
-      "prompt": "Kristen Stewart and Alia Shawkat play stoner roommates having a very bad psychedelic night.",
-      "whyNow": "The movie hit digital rental and purchase platforms this week.",
+      "prompt": "Kristen Stewart and Alia Shawkat star as roommates in a psychedelic comedy now available digitally.",
+      "whyNow": "The movie reached digital rental and purchase platforms this week.",
       "sourceLabel": "Decider \u00b7 Sep 4",
       "sourceUrl": "https://decider.com/2026/09/04/new-movies-on-streaming-i-want-your-sex-the-wrong-girls-and-more/",
       "activeFrom": "2026-09-04",
-      "activeUntil": "2026-09-25"
+      "activeUntil": "2026-09-25",
+      "image": "/culture/trials/the-wrong-girls.webp",
+      "imageAlt": "Editorial source image for The Wrong Girls",
+      "socialImage": "/culture/trials/social/the-wrong-girls.png"
     },
     {
       "id": "twilight",
       "name": "Twilight",
       "category": "movies",
       "kind": "evergreen",
-      "prompt": "Vampire romance, Pacific Northwest rain, yearning and Bella Swan."
+      "prompt": "A vampire romance set in the Pacific Northwest, centered on Bella Swan and Edward Cullen.",
+      "socialImage": "/culture/trials/social/twilight.png"
     },
     {
       "id": "nana",
       "name": "Nana",
       "category": "anime",
       "kind": "evergreen",
-      "prompt": "Fashion, music, friendship and disastrous relationships."
+      "prompt": "A manga and anime about two women named Nana navigating music, fashion, friendship and relationships in Tokyo.",
+      "socialImage": "/culture/trials/social/nana.png"
     },
     {
       "id": "the-sims",
       "name": "The Sims",
       "category": "games",
       "kind": "evergreen",
-      "prompt": "House building, outfit planning, family drama and five minutes of actual gameplay."
+      "prompt": "A life-simulation series built around houses, outfits, relationships, careers and domestic chaos.",
+      "socialImage": "/culture/trials/social/the-sims.png"
     },
     {
       "id": "stardew-valley",
       "name": "Stardew Valley",
       "category": "games",
       "kind": "evergreen",
-      "prompt": "Farming, decorating, gifts, romance and seasonal routines."
+      "prompt": "A farming game built around routines, decorating, gifts, relationships and seasonal collecting.",
+      "socialImage": "/culture/trials/social/stardew-valley.png"
     },
     {
       "id": "mamma-mia",
       "name": "Mamma Mia!",
       "category": "movies",
       "kind": "evergreen",
-      "prompt": "ABBA, a Greek island, a wedding and three possible fathers."
+      "prompt": "An ABBA musical set on a Greek island, built around a wedding and a paternity question.",
+      "socialImage": "/culture/trials/social/mamma-mia.png"
     },
     {
       "id": "pride-and-prejudice-2005",
       "name": "Pride & Prejudice (2005)",
       "category": "movies",
       "kind": "evergreen",
-      "prompt": "Period romance, muddy hems, the hand flex and Keira Knightley."
+      "prompt": "The 2005 adaptation of Pride & Prejudice starring Keira Knightley and Matthew Macfadyen.",
+      "socialImage": "/culture/trials/social/pride-and-prejudice-2005.png"
     },
     {
       "id": "animal-crossing",
       "name": "Animal Crossing",
       "category": "games",
       "kind": "evergreen",
-      "prompt": "Decorating, clothes, gifts, tiny animals and seasonal collecting."
+      "prompt": "A life-simulation series about decorating, collecting, clothes, neighbors and seasonal routines.",
+      "socialImage": "/culture/trials/social/animal-crossing.png"
     },
     {
       "id": "matcha",
       "name": "Matcha",
       "category": "food",
       "kind": "evergreen",
-      "prompt": "A drink that is now also an aesthetic object, color palette and personality marker."
+      "prompt": "Powdered green tea that also became a recurring visual and lifestyle marker online.",
+      "socialImage": "/culture/trials/social/matcha.png"
     },
     {
       "id": "tiny-treat",
       "name": "A tiny treat",
       "category": "food",
       "kind": "evergreen",
-      "prompt": "A small snack or purchase justified as a reward for surviving the day."
+      "prompt": "A small snack, drink or purchase framed as a reward for getting through the day.",
+      "socialImage": "/culture/trials/social/tiny-treat.png"
     },
     {
       "id": "rottingangel",
       "name": "rottingangel",
       "category": "usernames",
       "kind": "evergreen",
-      "prompt": "Soft noun plus damage modifier. A standard foidslop username construction."
+      "prompt": "A username built from a soft noun and a damage modifier, one of the common foidslop handle patterns.",
+      "socialImage": "/culture/trials/social/rottingangel.png"
     },
     {
       "id": "romance-novels",
       "name": "Romance novels",
       "category": "books",
       "kind": "evergreen",
-      "prompt": "Tropes, yearning, annotations, special editions and highly specific male leads."
+      "prompt": "A huge fiction category organized around romantic relationships, tropes, subgenres and highly specific reader tastes.",
+      "socialImage": "/culture/trials/social/romance-novels.png"
     },
     {
       "id": "dress-to-impress",
       "name": "Dress to Impress",
       "category": "games",
       "kind": "evergreen",
-      "prompt": "Dress-up competition, runway themes and relentless outfit discourse."
+      "prompt": "A Roblox dress-up game where players build outfits around a theme and vote on the runway.",
+      "socialImage": "/culture/trials/social/dress-to-impress.png"
     }
   ]
 }
