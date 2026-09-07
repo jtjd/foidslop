@@ -22,6 +22,21 @@ footer { width: 100%; }
 }
 .site-header .nav-dropdown-link.active { color: var(--accent); }
 
+/* Culture vocabulary chips must never fall through to the browser's default
+   blue/purple link states. This stylesheet loads after culture/theme CSS. */
+.culture-glossary a,
+.culture-glossary a:visited {
+  color: var(--text);
+  border-color: var(--border);
+  background: transparent;
+}
+.culture-glossary a:hover,
+.culture-glossary a:focus-visible {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, var(--bg));
+}
+
 @media (max-width: 1024px) {
   .site-header .header-right .nav-link { display: none !important; }
   .site-header .nav-hamburger { display: flex !important; }
