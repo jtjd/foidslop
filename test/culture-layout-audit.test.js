@@ -5,6 +5,7 @@ const culture = JSON.parse(fs.readFileSync('data/culture-articles.json', 'utf8')
 const products = fs.readFileSync('scripts/publish-culture-products.js', 'utf8');
 const theme = fs.readFileSync('css/theme.css', 'utf8');
 const css = fs.readFileSync('css/culture.css', 'utf8');
+const navigation = fs.readFileSync('css/navigation.css', 'utf8');
 const showcase = fs.readFileSync('css/culture-showcase.css', 'utf8');
 test('username article has no unrelated portrait receipt', () => {
   const article = culture.articles.find(item => item.slug === 'foidslop-usernames');
@@ -26,4 +27,8 @@ test('article titles and receipts have explicit caps', () => {
 test('mid-width header removes decorative center copy', () => {
   assert.match(theme, /min-width: 801px\) and \(max-width: 1180px/);
   assert.match(theme, /site-header-center \{ display: none; \}/);
+});
+test('culture vocabulary links override default and visited browser colors', () => {
+  assert.match(navigation, /\.culture-glossary a,\s*\.culture-glossary a:visited\s*\{[\s\S]*color:\s*var\(--text\)/);
+  assert.match(navigation, /\.culture-glossary a:hover,[\s\S]*color:\s*var\(--accent\)/);
 });
