@@ -34,6 +34,14 @@ jobs:
       - name: Audit remediated editorial quality
         run: node scripts/audit-editorial-quality.js
 
+      - name: Ensure image tools are available
+        run: |
+          command -v magick || command -v convert || (sudo apt-get update && sudo apt-get install -y imagemagick)
+          command -v avifenc && command -v avifdec || (sudo apt-get update && sudo apt-get install -y libavif-bin)
+
+      - name: Optimize newly published images
+        run: node scripts/optimize-images.js
+
       - name: Regenerate public site
         run: |
           node scripts/daily-publish.js
