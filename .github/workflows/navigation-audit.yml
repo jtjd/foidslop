@@ -24,6 +24,31 @@ jobs:
         run: node scripts/seo-check.js
       - name: Validate deploy build
         run: node scripts/build-deploy.js
+      - name: Install browser harness
+        run: npm install --no-save --package-lock=false playwright-core
+      - name: Start local preview
+        run: |
+          node scripts/preview.js > /tmp/foidslop-preview.log 2>&1 &
+          echo $! > /tmp/foidslop-preview.pid
+          for i in {1..30}; do
+            if curl -fsS http://127.0.0.1:4173/ >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/foidslop-preview.log
+          exit 1
+      - name: Browser-audit navigation
+        run: node scripts/_navigation_browser_audit.js
+      - name: Upload navigation captures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: navigation-audit-screens
+          path: navigation-audit-screens/
+          if-no-files-found: ignore
+      - name: Stop local preview
+        if: always()
+        run: |
+          if [ -f /tmp/foidslop-preview.pid ]; then kill "$(cat /tmp/foidslop-preview.pid)" || true; fi
       - name: Commit synchronized HTML
         run: |
           git config --global user.name "GitHub Actions"
