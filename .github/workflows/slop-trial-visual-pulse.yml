@@ -22,7 +22,17 @@ jobs:
           node-version: '22'
 
       - name: Apply product redesign
-        run: python3 scripts/_slop_trial_visual_pulse.py
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('scripts/_slop_trial_visual_pulse.py')
+          s = p.read_text()
+          s = s.replace("new_trial + '\\n', publisher, count=1, flags=re.S)", "lambda _m: new_trial + '\\n', publisher, count=1, flags=re.S)")
+          s = s.replace("new_init + '\\n', script, count=1, flags=re.S)", "lambda _m: new_init + '\\n', script, count=1, flags=re.S)")
+          s = s.replace("visual_css, css, count=1, flags=re.S)", "lambda _m: visual_css, css, count=1, flags=re.S)")
+          p.write_text(s)
+          PY
+          python3 scripts/_slop_trial_visual_pulse.py
 
       - name: Install visual tooling
         run: |
