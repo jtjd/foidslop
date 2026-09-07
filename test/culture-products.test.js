@@ -59,7 +59,7 @@ test('Slop Taxonomy links into the actual publication', () => {
 test('interactive product pages are generated and wired', () => {
   for (const page of ['culture/is-it-foidslop.html', 'culture/username-generator.html', 'culture/slop-taxonomy.html', 'about.html']) assert.ok(fs.existsSync(path.join(root, page)), `missing ${page}`);
   assert.match(file('culture/is-it-foidslop.html'), /data-slop-trial/);
-  assert.match(file('culture/is-it-foidslop.html'), /Vote on the current feed/);
+  assert.match(file('culture/is-it-foidslop.html'), /Is it foidslop\?/i);
   assert.match(file('culture/username-generator.html'), /data-username-generator/);
   assert.match(file('culture/slop-taxonomy.html'), /taxonomy-root/);
   assert.match(file('culture/slop-tools.js'), /\/api\/slop-vote/);
@@ -103,4 +103,33 @@ test('weekly dispatch includes culture and a Slop Trial', () => {
   assert.match(weekly, /ELSEWHERE IN THE SLOP/);
   assert.match(weekly, /SLOP TRIAL/);
   assert.match(weekly, /culture\/is-it-foidslop/);
+});
+
+test('Slop Trial share pages have item-specific metadata', () => {
+  for (const item of trials.items) {
+    const sharePath = `culture/is-it-foidslop/${item.id}.html`;
+    assert.ok(fs.existsSync(path.join(root, sharePath)), `missing ${sharePath}`);
+    const html = file(sharePath);
+    assert.match(html, new RegExp(`canonical[^>]+culture/is-it-foidslop/${item.id}`));
+    assert.match(html, new RegExp(`culture/trials/social/${item.id}\\.png`));
+    assert.match(html, /noindex,follow,max-image-preview:large/);
+  }
+});
+
+test('current Slop Trial visuals fail closed instead of shipping bad screenshots', () => {
+  const byId = new Map(trials.items.map(item => [item.id, item]));
+  for (const id of ['preppy-revival-2026','yesteryear','once-upon-a-broken-heart','devil-wears-prada-2','bridgerton-season-4','earle-meets-world']) {
+    assert.equal(byId.get(id).image, undefined, `${id} should use the branded fallback until a relevant source image is available`);
+  }
+  for (const item of trials.items) {
+    assert.match(item.socialImage || '', /^\/culture\/trials\/social\/[a-z0-9-]+\.png$/);
+    assert.ok(fs.existsSync(path.join(root, item.socialImage.replace(/^\//,''))), `missing social card for ${item.id}`);
+  }
+});
+
+test('Slop Trial navigation only renders categories that exist in the active set', () => {
+  const runtime = file('culture/slop-tools.js');
+  assert.match(runtime, /new Set\(modeItems\(\)\.map\(item => item\.category\)\)/);
+  assert.match(runtime, /renderCategories\(\)/);
+  assert.doesNotMatch(file('culture/is-it-foidslop.html'), /data-trial-category="games"/);
 });
