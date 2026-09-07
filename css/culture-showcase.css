@@ -109,3 +109,6 @@
   .slop-trial-disputed-grid button:last-child{border-bottom:0!important}
 }
 /* slop-trial-final:end */
+
+/* Slop Trial fallbacks must fully replace rejected source images. */
+.slop-trial-media>img[hidden]{display:none!important}

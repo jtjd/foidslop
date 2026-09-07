@@ -116,7 +116,7 @@ function renderTrialPage(initialItem = null) {
   const revisionLabel = new Date(`${trials.revisionDate}T12:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
   const currentCategories = [...new Set(activeCurrent.map(candidate => candidate.category))].sort();
   let pageHead = head(route, title, description, schema, socialImage)
-    .replace('</head>', '<link rel="stylesheet" href="/css/culture-showcase.css?v=20260907-1">\n</head>');
+    .replace('</head>', '<link rel="stylesheet" href="/css/culture-showcase.css?v=20260907-2">\n</head>');
   if (item) pageHead = pageHead.replace('content="index,follow,max-image-preview:large"', 'content="noindex,follow,max-image-preview:large"');
   const initialCategories = ['all', ...currentCategories];
   const categoryButtons = initialCategories.map((value, index) => `<button type="button" data-trial-category="${esc(value)}" aria-pressed="${index === 0 ? 'true' : 'false'}">${esc(value === 'all' ? 'All' : value === 'television' ? 'TV' : value[0].toUpperCase() + value.slice(1))}</button>`).join('');
