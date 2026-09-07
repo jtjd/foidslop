@@ -81,6 +81,15 @@ test('homepage Slop Trial prefers active current items', () => {
   assert.match(publisher, /const trialPool = activeTrials\.length \? activeTrials/);
 });
 
+test('homepage Slop Trial uses a published static item URL', () => {
+  const home = file('index.html');
+  assert.doesNotMatch(home, /culture\/is-it-foidslop\?item=/);
+  const match = home.match(/href="culture\/is-it-foidslop\/([a-z0-9-]+)"[^>]*><span>SLOP TRIAL<\/span>/);
+  assert.ok(match, 'homepage Slop Trial must link directly to a static item page');
+  const published = trials.items.find(item => item.id === match[1]);
+  assert.ok(published?.image, `homepage linked unpublished or image-less trial: ${match[1]}`);
+});
+
 test('homepage promotes a weekly field note, Slop Trial, and generator', () => {
   const home = file('index.html');
   assert.match(home, /zine-culture-week/);
@@ -103,6 +112,7 @@ test('weekly dispatch includes culture and a Slop Trial', () => {
   assert.match(weekly, /ELSEWHERE IN THE SLOP/);
   assert.match(weekly, /SLOP TRIAL/);
   assert.match(weekly, /culture\/is-it-foidslop/);
+  assert.doesNotMatch(weekly, /culture\/is-it-foidslop\?item=/);
 });
 
 test('Slop Trial share pages have item-specific metadata', () => {

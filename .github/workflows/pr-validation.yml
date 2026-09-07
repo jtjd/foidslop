@@ -20,6 +20,12 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Resolve checked-in publication date
+        run: |
+          VALIDATION_DATE=$(node -e "const db=require('./data/foidslop-meals.json'); const dates=(db.meals||db).filter(m=>m.status==='published' && m.publishDate).map(m=>m.publishDate).sort(); if(!dates.length) process.exit(1); process.stdout.write(dates.at(-1));")
+          echo "VALIDATION_DATE=$VALIDATION_DATE" >> "$GITHUB_ENV"
+          echo "Validating checked-in publication state through $VALIDATION_DATE"
+
       - name: Run unit tests
         run: npm test
 
@@ -36,9 +42,9 @@ jobs:
 
       - name: Regenerate public site
         run: |
-          node scripts/daily-publish.js
-          node scripts/publish-culture.js
-          node scripts/publish-culture-products.js
+          node scripts/daily-publish.js --date "$VALIDATION_DATE"
+          node scripts/publish-culture.js --date "$VALIDATION_DATE"
+          node scripts/publish-culture-products.js --date "$VALIDATION_DATE"
 
       - name: Validate generated SEO output
         run: node scripts/seo-check.js
