@@ -1,5 +1,6 @@
 /* Canonical publication navigation. Loaded after theme.css so mobile behavior is consistent everywhere. */
-.site-header { z-index: 50; }
+.site-header { z-index: 50; width: 100%; }
+footer { width: 100%; }
 .site-header .nav-hamburger { color: var(--text); }
 .site-header .nav-hamburger span { background: var(--text); }
 .site-header .nav-dropdown {
