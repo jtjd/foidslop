@@ -26,9 +26,7 @@ const viewports = [
 ];
 const expectedLinks = ['Today', 'Archive', 'Culture', 'Dictionary', 'Dispatch'];
 
-function assert(condition, message) {
-  if (!condition) throw new Error(message);
-}
+function assert(condition, message) { if (!condition) throw new Error(message); }
 
 (async () => {
   const browser = await chromium.launch({ executablePath: process.env.CHROME_BIN || '/usr/bin/google-chrome', headless: true, args: ['--no-sandbox'] });
@@ -40,31 +38,36 @@ function assert(condition, message) {
         const response = await page.goto(`${BASE}${route.path}`, { waitUntil: 'networkidle' });
         const status = response ? response.status() : 0;
         assert(status === (route.expectedStatus || 200), `${route.path} @ ${viewport.label}: unexpected status ${status}`);
-        const result = await page.evaluate(({ expectedLinks, mobile }) => {
+        const result = await page.evaluate(() => {
           const header = document.querySelector('.site-header');
+          const footer = document.querySelector('footer');
           const hamburger = document.querySelector('#nav-hamburger');
           const menu = document.querySelector('#nav-dropdown');
           const desktopLinks = [...document.querySelectorAll('.header-right .nav-link')];
-          const rect = header?.getBoundingClientRect();
+          const headerRect = header?.getBoundingClientRect();
+          const footerRect = footer?.getBoundingClientRect();
           return {
             hasHeader: !!header,
-            headerLeft: rect?.left ?? null,
-            headerRight: rect?.right ?? null,
+            hasFooter: !!footer,
+            headerLeft: headerRect?.left ?? null,
+            headerRight: headerRect?.right ?? null,
+            headerWidth: headerRect?.width ?? 0,
+            footerWidth: footerRect?.width ?? 0,
             scrollWidth: document.documentElement.scrollWidth,
             innerWidth: window.innerWidth,
             hamburgerDisplay: hamburger ? getComputedStyle(hamburger).display : null,
-            menuDisplay: menu ? getComputedStyle(menu).display : null,
             desktopVisible: desktopLinks.filter(link => getComputedStyle(link).display !== 'none').map(link => link.textContent.trim()),
             desktopLabels: desktopLinks.map(link => link.textContent.trim()),
             activeDesktop: desktopLinks.filter(link => link.classList.contains('active')).map(link => link.textContent.trim()),
-            mobileLabels: [...document.querySelectorAll('#nav-dropdown .nav-dropdown-link')].map(link => link.textContent.trim()),
-            mobile
+            mobileLabels: [...document.querySelectorAll('#nav-dropdown .nav-dropdown-link')].map(link => link.textContent.trim())
           };
-        }, { expectedLinks, mobile: viewport.width <= 1024 });
+        });
 
-        assert(result.hasHeader, `${route.path} @ ${viewport.label}: site header missing`);
+        assert(result.hasHeader && result.hasFooter, `${route.path} @ ${viewport.label}: shared navigation chrome missing`);
         assert(result.scrollWidth <= result.innerWidth + 1, `${route.path} @ ${viewport.label}: horizontal overflow ${result.scrollWidth}/${result.innerWidth}`);
         assert(result.headerLeft >= -1 && result.headerRight <= result.innerWidth + 1, `${route.path} @ ${viewport.label}: header clipped`);
+        assert(result.headerWidth >= result.innerWidth - 2, `${route.path} @ ${viewport.label}: header does not span viewport (${result.headerWidth}/${result.innerWidth})`);
+        assert(result.footerWidth >= result.innerWidth - 2, `${route.path} @ ${viewport.label}: footer does not span viewport (${result.footerWidth}/${result.innerWidth})`);
         assert(JSON.stringify(result.desktopLabels) === JSON.stringify(expectedLinks), `${route.path}: desktop link set drifted: ${result.desktopLabels.join(', ')}`);
         assert(JSON.stringify(result.mobileLabels) === JSON.stringify(expectedLinks), `${route.path}: mobile link set drifted: ${result.mobileLabels.join(', ')}`);
         assert(JSON.stringify(result.activeDesktop) === JSON.stringify(route.active ? [route.active] : []), `${route.path}: wrong active nav ${result.activeDesktop.join(', ')}`);
@@ -81,22 +84,15 @@ function assert(condition, message) {
             const menu = document.querySelector('#nav-dropdown');
             const rect = menu.getBoundingClientRect();
             return {
-              expanded: button.getAttribute('aria-expanded'),
-              hidden: menu.getAttribute('aria-hidden'),
-              open: menu.classList.contains('open'),
-              display: getComputedStyle(menu).display,
-              left: rect.left,
-              right: rect.right,
-              bottom: rect.bottom,
-              width: window.innerWidth
+              expanded: button.getAttribute('aria-expanded'), hidden: menu.getAttribute('aria-hidden'), open: menu.classList.contains('open'),
+              display: getComputedStyle(menu).display, left: rect.left, right: rect.right, width: window.innerWidth
             };
           });
-          assert(open.expanded === 'true' && open.hidden === 'false' && open.open, `${route.path} @ mobile: hamburger did not open menu`);
-          assert(open.display !== 'none', `${route.path} @ mobile: open menu not displayed`);
+          assert(open.expanded === 'true' && open.hidden === 'false' && open.open && open.display !== 'none', `${route.path} @ mobile: hamburger did not open menu`);
           assert(open.left >= -1 && open.right <= open.width + 1, `${route.path} @ mobile: menu clipped horizontally`);
+          if (route.name === 'home') await page.screenshot({ path: path.join(OUT, 'home-mobile-menu.png'), fullPage: false });
           await page.keyboard.press('Escape');
-          const closed = await page.getAttribute('#nav-hamburger', 'aria-expanded');
-          assert(closed === 'false', `${route.path} @ mobile: Escape did not close menu`);
+          assert(await page.getAttribute('#nav-hamburger', 'aria-expanded') === 'false', `${route.path} @ mobile: Escape did not close menu`);
         }
 
         report.push({ route: route.path, viewport: viewport.label, status, active: route.active, ok: true });
@@ -108,10 +104,5 @@ function assert(condition, message) {
     }
     fs.writeFileSync(path.join(OUT, 'report.json'), JSON.stringify(report, null, 2));
     console.log(`Browser navigation audit passed: ${report.length} route/viewport checks.`);
-  } finally {
-    await browser.close();
-  }
-})().catch(error => {
-  console.error(error.stack || error.message);
-  process.exit(1);
-});
+  } finally { await browser.close(); }
+})().catch(error => { console.error(error.stack || error.message); process.exit(1); });
