@@ -21,19 +21,38 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Fix hidden source-image rendering and bump CSS version
+      - name: Finish visual polish and bump CSS version
         run: |
           python3 - <<'PY'
           from pathlib import Path
           css = Path('css/culture-showcase.css')
           text = css.read_text()
-          rule = '\n/* Slop Trial fallbacks must fully replace rejected source images. */\n.slop-trial-media>img[hidden]{display:none!important}\n'
+          hidden_rule = '\n/* Slop Trial fallbacks must fully replace rejected source images. */\n.slop-trial-media>img[hidden]{display:none!important}\n'
           if '.slop-trial-media>img[hidden]' not in text:
-              text += rule
+              text += hidden_rule
+          consent_rule = '''
+/* Keep first-visit consent from covering the interactive culture tools. */
+.slop-trial-page~.cookie-consent,.cookie-consent:has(~script #never){max-width:480px}
+body:has(.slop-trial-page) .cookie-consent{left:auto;right:14px;bottom:14px;max-width:460px;margin:0}
+body:has(.slop-trial-page) .cookie-consent-inner{gap:12px;padding:12px 14px}
+body:has(.slop-trial-page) .cookie-consent-text{font-size:.68rem;line-height:1.45}
+body:has(.slop-trial-page) .cookie-consent-btn{padding:7px 10px;font-size:.58rem}
+@media(max-width:600px){
+  body:has(.slop-trial-page) .cookie-consent{left:8px;right:8px;bottom:8px;max-width:none}
+  body:has(.slop-trial-page) .cookie-consent-inner{gap:9px;padding:10px}
+  body:has(.slop-trial-page) .cookie-consent-text{font-size:.64rem;line-height:1.35}
+  body:has(.slop-trial-page) .cookie-consent-actions{gap:6px}
+  body:has(.slop-trial-page) .cookie-consent-btn{padding:7px 8px}
+}
+'''
+          if 'Keep first-visit consent from covering the interactive culture tools' not in text:
+              text += consent_rule
           css.write_text(text)
 
           publisher = Path('scripts/publish-culture-products.js')
-          p = publisher.read_text().replace('culture-showcase.css?v=20260907-1', 'culture-showcase.css?v=20260907-2')
+          p = publisher.read_text()
+          p = p.replace('culture-showcase.css?v=20260907-1', 'culture-showcase.css?v=20260907-3')
+          p = p.replace('culture-showcase.css?v=20260907-2', 'culture-showcase.css?v=20260907-3')
           publisher.write_text(p)
           PY
 
@@ -71,11 +90,13 @@ jobs:
               const image = document.querySelector('[data-trial-image]');
               const backup = document.querySelector('[data-trial-image-fallback]');
               const media = document.querySelector('.slop-trial-media');
+              const consent = document.querySelector('.cookie-consent');
               return {
                 imageDisplay: getComputedStyle(image).display,
                 fallbackDisplay: getComputedStyle(backup).display,
                 fallbackText: backup.textContent || '',
                 mediaHeight: media.getBoundingClientRect().height,
+                consentWidth: consent?.getBoundingClientRect().width || 0,
                 cssHref: document.querySelector('link[href*="culture-showcase.css"]')?.getAttribute('href') || ''
               };
             });
@@ -83,7 +104,8 @@ jobs:
             assert.notEqual(fallbackState.fallbackDisplay, 'none');
             assert.match(fallbackState.fallbackText, /Bridgerton Season 4/i);
             assert.ok(fallbackState.mediaHeight < 600, `fallback media is still oversized: ${fallbackState.mediaHeight}px`);
-            assert.match(fallbackState.cssHref, /20260907-2/);
+            assert.ok(fallbackState.consentWidth <= 470, `desktop consent banner too wide: ${fallbackState.consentWidth}px`);
+            assert.match(fallbackState.cssHref, /20260907-3/);
             await fallback.screenshot({ path: 'artifacts/slop-trial-final/bridgerton-fallback.png', fullPage: false });
             await fallback.close();
 
@@ -101,17 +123,22 @@ jobs:
                   return style.display !== 'none' && style.visibility !== 'hidden' && r.width > 0 && r.height > 0 && (r.left < -3 || r.right > width + 3);
                 }).filter(el => !categories?.contains(el));
                 const queue = document.querySelector('[data-trial-queue]');
+                const consent = document.querySelector('.cookie-consent');
                 return {
                   offenders: offenders.length,
                   cardHeight: document.querySelector('.slop-trial-card').getBoundingClientRect().height,
                   columns: getComputedStyle(queue).gridTemplateColumns.split(' ').filter(Boolean).length,
-                  hasGames: Boolean(document.querySelector('[data-trial-category="games"]'))
+                  hasGames: Boolean(document.querySelector('[data-trial-category="games"]')),
+                  consentHeight: consent?.getBoundingClientRect().height || 0
                 };
               }, viewport.width);
               assert.equal(state.offenders, 0);
               assert.equal(state.hasGames, false);
               if (viewport.name === 'desktop') assert.ok(state.cardHeight < 850);
-              if (viewport.name === 'mobile') assert.equal(state.columns, 2);
+              if (viewport.name === 'mobile') {
+                assert.equal(state.columns, 2);
+                assert.ok(state.consentHeight < 125, `mobile consent banner too tall: ${state.consentHeight}px`);
+              }
               await page.screenshot({ path: `artifacts/slop-trial-final/${viewport.name}.png`, fullPage: true });
               await page.close();
             }
@@ -132,6 +159,6 @@ jobs:
           git config user.email "actions@github.com"
           git add -A
           if ! git diff --cached --quiet; then
-            git commit -m "Fix Slop Trial fallback rendering [skip ci]"
+            git commit -m "Polish Slop Trial consent and fallbacks [skip ci]"
             git push
           fi
