@@ -22,7 +22,17 @@ jobs:
           node-version: '22'
 
       - name: Apply image-only product contract
-        run: python3 scripts/_apply_image_only_trials.py
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('scripts/_apply_image_only_trials.py')
+          s = p.read_text()
+          shim = """\n_real_re_sub = re.sub\ndef _literal_sub(pattern, repl, string, count=0, flags=0):\n    if isinstance(repl, str):\n        return _real_re_sub(pattern, lambda _match: repl, string, count=count, flags=flags)\n    return _real_re_sub(pattern, repl, string, count=count, flags=flags)\nre.sub = _literal_sub\n"""
+          if '_literal_sub' not in s:
+              s = s.replace('import re\n', 'import re\n' + shim)
+          p.write_text(s)
+          PY
+          python3 scripts/_apply_image_only_trials.py
 
       - name: Install browser tooling
         run: |
