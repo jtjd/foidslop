@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-06T00:00:00.000Z",
+  "generated": "2026-09-07T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -8347,10 +8347,11 @@
       "notes": "Mochi can be found in the freezer section of Asian markets or specialty grocers.",
       "photo_search": "matcha latte in a mug next to a plate of colorful mochi pieces",
       "publishDate": "2026-09-07",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of matcha latte in a mug next to a plate of colorful mochi pieces",
       "seoTitle": "Mochi and Matcha Tea Recipe for One | foidslop",
-      "seoDescription": "A sweet Japanese snack of chewy mochi served with a frothy matcha latte. A snack recipe for one, ready in 5 minutes with mochi pieces."
+      "seoDescription": "A sweet Japanese snack of chewy mochi served with a frothy matcha latte. A snack recipe for one, ready in 5 minutes with mochi pieces.",
+      "dateModified": "2026-09-07"
     },
     {
       "id": 131,
