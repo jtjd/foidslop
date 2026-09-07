@@ -156,7 +156,7 @@ test('foidslop pillar carries visual receipts', () => {
 test('homepage culture integration stays inside the editorial flow', () => {
   const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   assert.equal((home.match(/"alternateName"/g) || []).length, 1, 'homepage should have exactly one alternateName key');
-  assert.match(home, /css\/culture\.css\?v=20260906-6/);
+  assert.match(home, /css\/culture\.css\?v=20260906-7/);
   const moduleStart = home.indexOf('<!-- culture-expansion:start -->');
   const moduleEnd = home.indexOf('<!-- culture-expansion:end -->');
   const repeatNewsletter = home.indexOf('zine-newsletter zine-newsletter-repeat');
