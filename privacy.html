@@ -57,6 +57,7 @@
 <script src="theme.js?v=20260713-5"></script>
 <link rel="stylesheet" href="css/privacy.css?v=20260713-5">
 <link rel="stylesheet" href="css/theme.css?v=20260713-4">
+<link rel="stylesheet" href="/css/navigation.css?v=20260907-1">
 </head>
 <body>
 
@@ -65,15 +66,24 @@
 <a href="#main" class="sr-only focusable">Skip to content</a>
 
 <header class="site-header" id="site-header">
-  <a href="/" aria-label="foidslop home"><picture><source type="image/webp" srcset="logo-header.webp"><img src="logo-header.png" alt="FOID SLOP" class="logo" width="126" height="74"></picture></a>
+  <a href="/" aria-label="foidslop home"><picture><source type="image/webp" srcset="/logo-header.webp"><img src="/logo-header.png" alt="FOID SLOP" class="logo" width="126" height="74"></picture></a>
   <div class="site-header-center">Daily recipes / made for one</div>
   <div class="header-right">
     <button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="true"><span class="theme-toggle-mark" aria-hidden="true">*</span><span class="theme-toggle-label">Light mode</span></button>
     <a href="/slop/antipasto-skewers" class="nav-link header-today">Today</a>
-    <a href="slop/archive" class="nav-link">Archive</a>
-    <a href="culture" class="nav-link">Culture</a>
+    <a href="/slop/archive" class="nav-link">Archive</a>
+    <a href="/culture" class="nav-link">Culture</a>
+    <a href="/dictionary" class="nav-link">Dictionary</a>
     <a href="/#dispatch" class="nav-link header-dispatch">Dispatch</a>
+    <button class="nav-hamburger" id="nav-hamburger" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-dropdown"><span></span><span></span><span></span></button>
   </div>
+  <nav class="nav-dropdown" id="nav-dropdown" aria-label="Mobile navigation" aria-hidden="true">
+    <a href="/slop/antipasto-skewers" class="nav-dropdown-link">Today</a>
+    <a href="/slop/archive" class="nav-dropdown-link">Archive</a>
+    <a href="/culture" class="nav-dropdown-link">Culture</a>
+    <a href="/dictionary" class="nav-dropdown-link">Dictionary</a>
+    <a href="/#dispatch" class="nav-dropdown-link">Dispatch</a>
+  </nav>
 </header>
 
 <div class="page-title">
@@ -130,63 +140,20 @@
   <p>For privacy questions, corrections, or deletion requests, email <a href="mailto:dispatch@foidslop.com">dispatch@foidslop.com</a> or reply to any dispatch. To stop receiving the newsletter, use the unsubscribe link in any email.</p>
 </main>
 
-<footer>
-  <div class="footer-inner">
-    <span class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> foidslop</span>
-    <nav class="footer-links" aria-label="Footer navigation">
-      <a href="what-is-foidslop">What is foidslop?</a><span class="footer-dot" aria-hidden="true"></span>
-      <a href="what-does-foid-mean">Foid meaning</a><span class="footer-dot" aria-hidden="true"></span>
-      <a href="editorial-standards">Editorial standards</a><span class="footer-dot" aria-hidden="true"></span>
-      <a href="feed.xml" type="application/atom+xml">RSS</a><span class="footer-dot" aria-hidden="true"></span>
-      <a href="privacy" class="active" aria-current="page">Privacy</a><span class="footer-dot" aria-hidden="true"></span>
-      <a href="privacy#contact">Contact</a>
-    </nav>
-  </div>
-</footer>
+<footer><div class="footer-inner">
+  <span class="footer-copy">&copy; 2026 foidslop</span>
+  <nav class="footer-links" aria-label="Footer navigation">
+    <a href="/what-is-foidslop">What is foidslop?</a><span class="footer-dot"></span>
+    <a href="/slop/archive">Recipes</a><span class="footer-dot"></span>
+    <a href="/dictionary">Dictionary</a><span class="footer-dot"></span>
+    <a href="/culture">Culture</a><span class="footer-dot"></span>
+    <a href="https://www.pinterest.com/foidslop/" rel="external">Pinterest</a><span class="footer-dot"></span>
+    <a href="/feed.xml" type="application/atom+xml">RSS</a><span class="footer-dot"></span>
+    <a href="/about">About</a><span class="footer-dot"></span>
+    <a href="/privacy">Privacy</a>
+  </nav>
+</div></footer>
 
-<script>
-  document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
 
-  const header = document.getElementById('site-header');
-  let ticking = false;
-  window.addEventListener('scroll', () => {
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        header.classList.toggle('scrolled', window.scrollY > 60);
-        ticking = false;
-      });
-      ticking = true;
-    }
-  }, { passive: true });
-
-  // Hamburger menu
-  const hamburger = document.getElementById('nav-hamburger');
-  const dropdown  = document.getElementById('nav-dropdown');
-  if (hamburger && dropdown) {
-    hamburger.addEventListener('click', () => {
-      const isOpen = hamburger.getAttribute('aria-expanded') === 'true';
-      hamburger.setAttribute('aria-expanded', String(!isOpen));
-      hamburger.setAttribute('aria-label', isOpen ? 'Open navigation' : 'Close navigation');
-      dropdown.setAttribute('aria-hidden', String(isOpen));
-      hamburger.classList.toggle('open', !isOpen);
-      dropdown.classList.toggle('open', !isOpen);
-    });
-    document.addEventListener('click', (e) => {
-      if (!header.contains(e.target)) {
-        hamburger.setAttribute('aria-expanded', 'false');
-        hamburger.setAttribute('aria-label', 'Open navigation');
-        dropdown.setAttribute('aria-hidden', 'true');
-        hamburger.classList.remove('open');
-        dropdown.classList.remove('open');
-      }
-    });
-    dropdown.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      hamburger.setAttribute('aria-expanded', 'false');
-      dropdown.setAttribute('aria-hidden', 'true');
-      hamburger.classList.remove('open');
-      dropdown.classList.remove('open');
-    }));
-  }
-</script>
 </body>
 </html>

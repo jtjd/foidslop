@@ -8,6 +8,7 @@
 <title>404: Slop Not Found | foidslop</title>
 <link rel="stylesheet" href="css/global.css?v=20260827-1">
 <link rel="stylesheet" href="css/theme.css?v=20260713-4">
+<link rel="stylesheet" href="/css/navigation.css?v=20260907-1">
 <script src="theme.js?v=20260713-5"></script>
 <style>
   body { display: flex; flex-direction: column; min-height: 100vh; text-align: center; }
@@ -26,11 +27,43 @@
 </style>
 </head>
 <body>
-  <header class="error-header"><a href="/"><picture><source type="image/webp" srcset="logo-header.webp"><img src="logo-header.png" alt="FOID SLOP" width="126" height="74"></picture></a><span class="error-header-center">Daily recipes / made for one</span><span class="error-header-right"><button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="true"><span class="theme-toggle-mark" aria-hidden="true">*</span><span class="theme-toggle-label">Light mode</span></button><a href="/slop/antipasto-skewers" class="error-today">Today</a><a href="slop/archive">Archive</a><a href="/#dispatch">Dispatch</a></span></header>
+  <header class="site-header" id="site-header">
+  <a href="/" aria-label="foidslop home"><picture><source type="image/webp" srcset="/logo-header.webp"><img src="/logo-header.png" alt="FOID SLOP" class="logo" width="126" height="74"></picture></a>
+  <div class="site-header-center">Daily recipes / made for one</div>
+  <div class="header-right">
+    <button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="true"><span class="theme-toggle-mark" aria-hidden="true">*</span><span class="theme-toggle-label">Light mode</span></button>
+    <a href="/slop/antipasto-skewers" class="nav-link header-today">Today</a>
+    <a href="/slop/archive" class="nav-link">Archive</a>
+    <a href="/culture" class="nav-link">Culture</a>
+    <a href="/dictionary" class="nav-link">Dictionary</a>
+    <a href="/#dispatch" class="nav-link header-dispatch">Dispatch</a>
+    <button class="nav-hamburger" id="nav-hamburger" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-dropdown"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="nav-dropdown" id="nav-dropdown" aria-label="Mobile navigation" aria-hidden="true">
+    <a href="/slop/antipasto-skewers" class="nav-dropdown-link">Today</a>
+    <a href="/slop/archive" class="nav-dropdown-link">Archive</a>
+    <a href="/culture" class="nav-dropdown-link">Culture</a>
+    <a href="/dictionary" class="nav-dropdown-link">Dictionary</a>
+    <a href="/#dispatch" class="nav-dropdown-link">Dispatch</a>
+  </nav>
+</header>
   <main class="error-main"><div>
     <div class="error-code">404</div>
     <p class="error-msg">This slop has gone bad.</p>
     <a href="/" class="error-btn">Back to Home</a>
   </div></main>
+<footer><div class="footer-inner">
+  <span class="footer-copy">&copy; 2026 foidslop</span>
+  <nav class="footer-links" aria-label="Footer navigation">
+    <a href="/what-is-foidslop">What is foidslop?</a><span class="footer-dot"></span>
+    <a href="/slop/archive">Recipes</a><span class="footer-dot"></span>
+    <a href="/dictionary">Dictionary</a><span class="footer-dot"></span>
+    <a href="/culture">Culture</a><span class="footer-dot"></span>
+    <a href="https://www.pinterest.com/foidslop/" rel="external">Pinterest</a><span class="footer-dot"></span>
+    <a href="/feed.xml" type="application/atom+xml">RSS</a><span class="footer-dot"></span>
+    <a href="/about">About</a><span class="footer-dot"></span>
+    <a href="/privacy">Privacy</a>
+  </nav>
+</div></footer>
 </body>
 </html>
