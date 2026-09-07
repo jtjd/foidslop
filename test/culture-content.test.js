@@ -124,10 +124,9 @@ test('launch receipts stay attached to the intended pages', () => {
   assert.match(foidReceipt?.sourceUrl || '', /knowyourmeme\.com/);
   assert.match(foidReceipt?.transcript || '', /foid/i);
 
-  const usernameReceipt = byCultureSlug.get('foidslop-usernames').evidence?.[0];
-  assert.equal(usernameReceipt?.image, 'culture/receipts/foidslop-usernames-reddit.webp');
-  assert.match(usernameReceipt?.sourceUrl || '', /reddit\.com/);
-  assert.match(usernameReceipt?.caption || '', /image attached/i);
+  const usernameArticle = byCultureSlug.get('foidslop-usernames');
+  assert.equal((usernameArticle.evidence || []).length, 0, 'username article should not use the unrelated portrait attachment as a receipt');
+  assert.ok(usernameArticle.sources.some(source => /reddit\.com/.test(source.url)), 'username article should retain the Reddit source');
 
   const girlDinnerReceipt = byDictionarySlug.get('girl-dinner').evidence?.[0];
   assert.equal(girlDinnerReceipt?.image, 'culture/receipts/girl-dinner-2023.webp');
@@ -157,7 +156,7 @@ test('foidslop pillar carries visual receipts', () => {
 test('homepage culture integration stays inside the editorial flow', () => {
   const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   assert.equal((home.match(/"alternateName"/g) || []).length, 1, 'homepage should have exactly one alternateName key');
-  assert.match(home, /css\/culture\.css\?v=20260906-4/);
+  assert.match(home, /css\/culture\.css\?v=20260906-5/);
   const moduleStart = home.indexOf('<!-- culture-expansion:start -->');
   const moduleEnd = home.indexOf('<!-- culture-expansion:end -->');
   const repeatNewsletter = home.indexOf('zine-newsletter zine-newsletter-repeat');

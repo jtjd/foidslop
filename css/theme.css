@@ -123,3 +123,37 @@ footer { max-width:1440px; margin:0 auto; border-inline:1px solid var(--border);
 @media (max-width:1024px) { .slop-title--long { font-size:clamp(3.5rem,9vw,6rem); } }
 @media (max-width:640px) { .slop-title { font-size:clamp(3rem,14vw,5rem); } .slop-title--long { font-size:clamp(2.75rem,12vw,4.5rem); } }
 @media (max-width:560px) { .site-header .header-today { display:none !important; } .site-header .header-right { gap:12px; } .zine-find-links { grid-template-columns:1fr; } .zine-find-links a,.zine-find-links button { border-right:0 !important; white-space:normal; } }
+
+
+/* culture-layout-audit:start */
+.culture-article:not(.foidslop-primer) > h1 {
+  max-width: 1040px;
+  font-size: clamp(3.4rem, 6.3vw, 6.15rem);
+  line-height: .87;
+  letter-spacing: -.07em;
+  text-wrap: balance;
+}
+.culture-article:not(.foidslop-primer) > .article-deck { max-width: 760px; }
+
+/* The three-column publication header gets cramped well before the old 800px
+   breakpoint. Remove the decorative center line first, then collapse secondary
+   nav on phone widths instead of letting it clip off-screen. */
+@media (min-width: 801px) and (max-width: 1180px) {
+  .site-header { grid-template-columns: 180px 1fr; }
+  .site-header-center { display: none; }
+  .site-header .header-right { justify-self: end; min-width: 0; gap: 12px; }
+}
+@media (max-width: 800px) {
+  .site-header .header-right { min-width: 0; gap: 10px; }
+  .site-header .header-right .nav-link { display: none !important; }
+  .site-header .header-right .nav-link.active,
+  .site-header .header-right .header-dispatch { display: inline-flex !important; }
+}
+@media (max-width: 560px) {
+  .site-header .header-right .header-dispatch { display: none !important; }
+  .culture-article:not(.foidslop-primer) > h1 {
+    font-size: clamp(2.85rem, 12.5vw, 4.35rem);
+    overflow-wrap: anywhere;
+  }
+}
+/* culture-layout-audit:end */

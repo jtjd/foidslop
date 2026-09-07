@@ -92,7 +92,7 @@ if (!fs.existsSync(path.join(OUTPUT, 'dictionary', 'index.html'))) throw new Err
 for (const file of ['culture/is-it-foidslop.html', 'culture/username-generator.html', 'culture/slop-taxonomy.html', 'culture/slop-tools.js', 'about.html']) {
   if (!fs.existsSync(path.join(OUTPUT, file))) throw new Error(`Culture product is missing from deployment: ${file}`);
 }
-const requiredCultureReceipts = ['foid-r9k-2018.webp', 'foidslop-usernames-reddit.webp', 'girl-dinner-2023.webp'];
+const requiredCultureReceipts = ['foid-r9k-2018.webp', 'girl-dinner-2023.webp'];
 for (const receipt of requiredCultureReceipts) {
   if (!fs.existsSync(path.join(OUTPUT, 'culture', 'receipts', receipt))) throw new Error(`Culture receipt is missing from deployment: ${receipt}`);
 }
