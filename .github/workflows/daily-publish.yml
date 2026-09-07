@@ -74,10 +74,14 @@ jobs:
             node scripts/publish-culture-products.js
           fi
 
-      - name: Validate culture source
+      - name: Synchronize publication navigation
+        run: node scripts/sync-navigation.js
+
+      - name: Validate generated source
         run: |
           node scripts/publish-culture.js --check
           node scripts/publish-culture-products.js --check
+          node scripts/sync-navigation.js --check
 
       - name: Validate generated SEO output
         run: node scripts/seo-check.js
@@ -86,7 +90,7 @@ jobs:
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add index.html slop/ recipes/ culture/ dictionary/ data/foidslop-meals.json _redirects sitemap.xml feed.xml pinterest-rss.xml \
+          git add index.html 404.html privacy.html check-inbox.html subscribed.html slop/ recipes/ culture/ dictionary/ data/foidslop-meals.json _redirects sitemap.xml feed.xml pinterest-rss.xml \
             what-is-foidslop.html what-does-foid-mean.html girl-dinner-ideas.html editorial-standards.html about.html \
             assets/brand/logo.webp \
             data/ratings.json data/lastmod-state.json data/editorial-pages.json data/recipe-copy-overrides.json
