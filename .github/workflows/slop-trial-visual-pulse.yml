@@ -1,0 +1,132 @@
+name: Slop Trial visual pulse
+
+on:
+  push:
+    branches: [slop-trial-visual-pulse]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: slop-trial-visual-pulse
+  cancel-in-progress: false
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Apply product redesign
+        run: python3 scripts/_slop_trial_visual_pulse.py
+
+      - name: Install visual tooling
+        run: |
+          npm install --no-save playwright@1.55.0 sharp@0.33.5
+          npx playwright install --with-deps chromium
+
+      - name: Capture current source visuals
+        run: node scripts/_capture_trial_images.js
+
+      - name: Regenerate and validate
+        run: |
+          node scripts/publish-culture.js
+          node scripts/publish-culture-products.js
+          node scripts/publish-culture.js --check
+          node scripts/publish-culture-products.js --check
+          npm test
+          node scripts/seo-check.js
+          node scripts/build-deploy.js
+          node - <<'NODE'
+          const fs = require('fs');
+          const data = JSON.parse(fs.readFileSync('data/slop-trials.json','utf8'));
+          for (const item of data.items.filter(item => item.kind === 'current')) {
+            const path = `.deploy${item.image}`;
+            if (!fs.existsSync(path)) throw new Error(`missing deploy visual ${path}`);
+          }
+          NODE
+
+      - name: Browser review
+        run: |
+          mkdir -p artifacts/slop-trial-pulse
+          python3 -m http.server 4173 --directory .deploy >/tmp/foidslop-preview.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID || true' EXIT
+          sleep 2
+          node <<'NODE'
+          const assert = require('node:assert/strict');
+          const { chromium } = require('playwright');
+          (async () => {
+            const browser = await chromium.launch({ headless: true });
+            for (const viewport of [{name:'desktop',width:1440,height:1000},{name:'mid',width:1120,height:900},{name:'mobile',width:390,height:844}]) {
+              const page = await browser.newPage({ viewport: { width: viewport.width, height: viewport.height } });
+              await page.goto('http://127.0.0.1:4173/culture/is-it-foidslop.html?item=simone-rocha-adidas', { waitUntil: 'networkidle' });
+              const state = await page.evaluate(({ width }) => {
+                const image = document.querySelector('[data-trial-image]');
+                const card = document.querySelector('.slop-trial-card');
+                const categories = document.querySelector('.slop-trial-categories');
+                const select = document.querySelector('select[data-trial-filter]');
+                const queueImages = [...document.querySelectorAll('[data-trial-queue-item] img')];
+                const all = [...document.querySelectorAll('main *, .site-header > *')];
+                const offenders = all.filter(el => {
+                  const style = getComputedStyle(el);
+                  const r = el.getBoundingClientRect();
+                  return style.display !== 'none' && style.visibility !== 'hidden' && r.width > 0 && r.height > 0 && (r.left < -3 || r.right > width + 3);
+                }).filter(el => !categories?.contains(el)).map(el => ({tag:el.tagName,cls:el.className,text:(el.textContent||'').trim().slice(0,50)})).slice(0,8);
+                return {
+                  imageLoaded: image && !image.hidden && image.complete && image.naturalWidth > 300,
+                  cardWidth: card.getBoundingClientRect().width,
+                  hasSelect: Boolean(select),
+                  categoryButtons: document.querySelectorAll('[data-trial-category]').length,
+                  queueImagesLoaded: queueImages.filter(img => img.complete && img.naturalWidth > 200).length,
+                  disputedPresent: Boolean(document.querySelector('[data-trial-disputed]')),
+                  progressText: document.querySelector('[data-trial-progress]')?.textContent || '',
+                  offenders
+                };
+              }, viewport);
+              assert.equal(state.hasSelect, false);
+              assert.ok(state.imageLoaded, `${viewport.name}: lead source image did not render`);
+              assert.ok(state.categoryButtons >= 6);
+              assert.ok(state.queueImagesLoaded >= 3, `${viewport.name}: current visual grid is thin`);
+              assert.ok(state.disputedPresent);
+              assert.match(state.progressText, /current items voted/);
+              assert.equal(state.offenders.length, 0, `${viewport.name} offscreen: ${JSON.stringify(state.offenders)}`);
+              assert.ok(state.cardWidth <= viewport.width + 1);
+              await page.screenshot({ path: `artifacts/slop-trial-pulse/${viewport.name}.png`, fullPage: true });
+              await page.close();
+            }
+            for (const id of ['tired-girl-eyes','bridgerton-season-4','daisy-chain-fields']) {
+              const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
+              await page.goto(`http://127.0.0.1:4173/culture/is-it-foidslop.html?item=${id}`, { waitUntil: 'networkidle' });
+              const imageLoaded = await page.locator('[data-trial-image]').evaluate(img => !img.hidden && img.complete && img.naturalWidth > 300);
+              assert.ok(imageLoaded, `${id}: source visual did not render`);
+              await page.screenshot({ path: `artifacts/slop-trial-pulse/${id}.png`, fullPage: false });
+              await page.close();
+            }
+            await browser.close();
+          })().catch(error => { console.error(error); process.exit(1); });
+          NODE
+
+      - name: Upload review artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: slop-trial-visual-pulse-review
+          path: |
+            artifacts/slop-trial-pulse/
+            trial-image-report.json
+
+      - name: Commit materialized redesign
+        run: |
+          rm -rf node_modules package-lock.json artifacts trial-image-report.json
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git rm -f scripts/_slop_trial_visual_pulse.py scripts/_capture_trial_images.js
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Rebuild Slop Trial as a visual culture pulse [skip ci]"
+            git push
+          fi
