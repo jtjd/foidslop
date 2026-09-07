@@ -2,148 +2,244 @@
   "revisionDate": "2026-09-06",
   "items": [
     {
+      "id": "simone-rocha-adidas",
+      "name": "Simone Rocha x Adidas",
+      "category": "fashion",
+      "kind": "current",
+      "prompt": "Lace, pearls and tulle on Adidas sportswear. The first collection lands September 10.",
+      "whyNow": "Simone Rocha's first Adidas Originals collection launches this week.",
+      "sourceLabel": "Vogue \u00b7 Sep 3",
+      "sourceUrl": "https://www.vogue.com/article/simone-rocha-adidas-fall-winter-2026-interview",
+      "activeFrom": "2026-09-03",
+      "activeUntil": "2026-10-05"
+    },
+    {
+      "id": "tired-girl-eyes",
+      "name": "Tired Girl Eyes",
+      "category": "beauty",
+      "kind": "current",
+      "prompt": "Smudged shadow, visible under-eyes and dark lips. Fall makeup has decided looking a little wrecked is back.",
+      "whyNow": "Byrdie listed tired-girl eyes among fall 2026's biggest makeup trends this week.",
+      "sourceLabel": "Byrdie \u00b7 Sep 5",
+      "sourceUrl": "https://www.byrdie.com/fall-makeup-trends-2026-12064486",
+      "activeFrom": "2026-09-05",
+      "activeUntil": "2026-10-31"
+    },
+    {
+      "id": "adidas-mary-janes",
+      "name": "Adidas Mary Janes",
+      "category": "fashion",
+      "kind": "current",
+      "prompt": "A sneaker with a Mary Jane strap. Back-to-school TikTok is wearing them.",
+      "whyNow": "Who What Wear found Adidas Mary Janes in a scan of more than 200 back-to-school TikToks.",
+      "sourceLabel": "Who What Wear \u00b7 Sep 3",
+      "sourceUrl": "https://www.whowhatwear.com/fashion/trends/back-to-school-fashion-trends-2026",
+      "activeFrom": "2026-09-03",
+      "activeUntil": "2026-10-15"
+    },
+    {
+      "id": "ballet-flats-again",
+      "name": "Ballet Flats Again",
+      "category": "fashion",
+      "kind": "current",
+      "prompt": "The shoes are back again. Fall celebrity outfits are full of them.",
+      "whyNow": "People flagged ballet flats as a fall staple again on September 6 after a run of celebrity sightings.",
+      "sourceLabel": "People \u00b7 Sep 6",
+      "sourceUrl": "https://people.com/kate-middleton-katie-holmes-ballet-flats-september-2026-12105789",
+      "activeFrom": "2026-09-06",
+      "activeUntil": "2026-10-15"
+    },
+    {
+      "id": "preppy-revival-2026",
+      "name": "The Preppy Revival",
+      "category": "fashion",
+      "kind": "current",
+      "prompt": "Argyle, roll-necks, micro minis and prep-school references are back in the fall rotation.",
+      "whyNow": "Preppy style is surging with Gen Z and Gen Alpha as fall 2026 starts.",
+      "sourceLabel": "WSJ \u00b7 Sep 2",
+      "sourceUrl": "https://www.wsj.com/style/fashion/preppy-style-is-booming-what-does-it-look-like-now-b1320c95",
+      "activeFrom": "2026-09-02",
+      "activeUntil": "2026-10-31"
+    },
+    {
+      "id": "yesteryear",
+      "name": "Yesteryear",
+      "category": "books",
+      "kind": "current",
+      "prompt": "A novel about tradwife influencer culture that BookTok spent a large part of 2026 talking about.",
+      "whyNow": "The Bookseller's September BookTok review singled it out as one of the year's biggest discussion books.",
+      "sourceLabel": "The Bookseller \u00b7 Sep 4",
+      "sourceUrl": "https://www.thebookseller.com/books/books-on-booktok-a-mid-year-review",
+      "activeFrom": "2026-09-04",
+      "activeUntil": "2026-10-05"
+    },
+    {
+      "id": "once-upon-a-broken-heart",
+      "name": "Once Upon a Broken Heart",
+      "category": "books",
+      "kind": "current",
+      "prompt": "Jacks, romantasy and reread edits. The series is back near the center of BookTok attention.",
+      "whyNow": "BookTokAI had it at No. 1 in its September 5 weekly tracking.",
+      "sourceLabel": "BookTokAI \u00b7 Sep 5",
+      "sourceUrl": "https://booktokai.com/",
+      "activeFrom": "2026-09-05",
+      "activeUntil": "2026-09-30"
+    },
+    {
+      "id": "devil-wears-prada-2",
+      "name": "The Devil Wears Prada 2",
+      "category": "movies",
+      "kind": "current",
+      "prompt": "Miranda, Andy, Emily and another round of fashion-office pathology. Summer 2026 made it a hit.",
+      "whyNow": "The sequel is still part of the post-summer box-office conversation heading into fall.",
+      "sourceLabel": "The Guardian \u00b7 Sep 1",
+      "sourceUrl": "https://www.theguardian.com/film/the-devil-wears-prada-2",
+      "activeFrom": "2026-09-01",
+      "activeUntil": "2026-09-30"
+    },
+    {
+      "id": "bridgerton-season-4",
+      "name": "Bridgerton Season 4",
+      "category": "television",
+      "kind": "current",
+      "prompt": "Benedict, Sophie, a masquerade ball and another season of expensive yearning.",
+      "whyNow": "Season 4 is streaming now and Netflix says it is already Emmy-nominated.",
+      "sourceLabel": "Netflix Tudum \u00b7 Jul 10",
+      "sourceUrl": "https://www.netflix.com/tudum/articles/bridgerton-season-4-cast-release-date-news",
+      "activeFrom": "2026-08-20",
+      "activeUntil": "2026-09-30"
+    },
+    {
+      "id": "daisy-chain-fields",
+      "name": "Daisy Chain Fields",
+      "category": "music",
+      "kind": "current",
+      "prompt": "Olivia Rodrigo built an all-female festival with Stevie Nicks, Bikini Kill and a new punk song.",
+      "whyNow": "The inaugural Daisy Chain Fields festival happened this week in California.",
+      "sourceLabel": "The Atlantic \u00b7 Sep 1",
+      "sourceUrl": "https://www.theatlantic.com/culture/2026/09/olivia-rodrigo-daisy-chain-festival-review/688477/",
+      "activeFrom": "2026-09-01",
+      "activeUntil": "2026-09-20"
+    },
+    {
+      "id": "earle-meets-world",
+      "name": "Earle Meets World",
+      "category": "television",
+      "kind": "current",
+      "prompt": "Alix Earle now has a Netflix reality show about her life and career.",
+      "whyNow": "The series premiered September 4.",
+      "sourceLabel": "People \u00b7 Aug 31",
+      "sourceUrl": "https://people.com/netflix-shows-you-need-to-watch-september-2026-12063336",
+      "activeFrom": "2026-09-04",
+      "activeUntil": "2026-10-05"
+    },
+    {
+      "id": "lizzie-borden-monster",
+      "name": "Monster: The Lizzie Borden Story",
+      "category": "television",
+      "kind": "current",
+      "prompt": "Ryan Murphy's next Monster season puts Lizzie Borden at the center of the story.",
+      "whyNow": "The season arrives on Netflix September 17 with Ella Beatty as Borden.",
+      "sourceLabel": "People \u00b7 Aug 31",
+      "sourceUrl": "https://people.com/netflix-shows-you-need-to-watch-september-2026-12063336",
+      "activeFrom": "2026-09-01",
+      "activeUntil": "2026-10-10"
+    },
+    {
+      "id": "the-wrong-girls",
+      "name": "The Wrong Girls",
+      "category": "movies",
+      "kind": "current",
+      "prompt": "Kristen Stewart and Alia Shawkat play stoner roommates having a very bad psychedelic night.",
+      "whyNow": "The movie hit digital rental and purchase platforms this week.",
+      "sourceLabel": "Decider \u00b7 Sep 4",
+      "sourceUrl": "https://decider.com/2026/09/04/new-movies-on-streaming-i-want-your-sex-the-wrong-girls-and-more/",
+      "activeFrom": "2026-09-04",
+      "activeUntil": "2026-09-25"
+    },
+    {
       "id": "twilight",
       "name": "Twilight",
       "category": "movies",
-      "prompt": "Rain, yearning, vampires, bad decisions. Foundational specimen."
+      "kind": "evergreen",
+      "prompt": "Vampire romance, Pacific Northwest rain, yearning and Bella Swan."
     },
     {
       "id": "nana",
       "name": "Nana",
       "category": "anime",
-      "prompt": "Outfits, cigarettes, music, friendship, catastrophic romance."
+      "kind": "evergreen",
+      "prompt": "Fashion, music, friendship and disastrous relationships."
     },
     {
       "id": "the-sims",
       "name": "The Sims",
       "category": "games",
-      "prompt": "Three hours on a kitchen and five minutes on the actual household."
+      "kind": "evergreen",
+      "prompt": "House building, outfit planning, family drama and five minutes of actual gameplay."
     },
     {
       "id": "stardew-valley",
       "name": "Stardew Valley",
       "category": "games",
-      "prompt": "Farming, decorating, tiny gifts, romance, seasonal rituals."
-    },
-    {
-      "id": "gossip-girl",
-      "name": "Gossip Girl",
-      "category": "television",
-      "prompt": "Luxury, terrible dating decisions, clothes doing narrative work."
+      "kind": "evergreen",
+      "prompt": "Farming, decorating, gifts, romance and seasonal routines."
     },
     {
       "id": "mamma-mia",
       "name": "Mamma Mia!",
       "category": "movies",
-      "prompt": "Greek island. ABBA. Three possible fathers. Case nearly closed."
+      "kind": "evergreen",
+      "prompt": "ABBA, a Greek island, a wedding and three possible fathers."
     },
     {
       "id": "pride-and-prejudice-2005",
       "name": "Pride & Prejudice (2005)",
       "category": "movies",
-      "prompt": "Hand flex. Rain. Muddy hems. Advanced yearning technology."
+      "kind": "evergreen",
+      "prompt": "Period romance, muddy hems, the hand flex and Keira Knightley."
     },
     {
       "id": "animal-crossing",
       "name": "Animal Crossing",
       "category": "games",
-      "prompt": "Debt, fruit economics, furniture placement, tiny animals."
-    },
-    {
-      "id": "sex-and-the-city",
-      "name": "Sex and the City",
-      "category": "television",
-      "prompt": "Shoes, friendship, restaurants, men, columns, decades of discourse."
-    },
-    {
-      "id": "gilmore-girls",
-      "name": "Gilmore Girls",
-      "category": "television",
-      "prompt": "Coffee, coats, autumn, impossible dialogue speed."
-    },
-    {
-      "id": "the-vampire-diaries",
-      "name": "The Vampire Diaries",
-      "category": "television",
-      "prompt": "Cheekbones, supernatural paperwork, love triangles, body count."
-    },
-    {
-      "id": "letterboxd",
-      "name": "Letterboxd",
-      "category": "activities",
-      "prompt": "Four lowercase words and a top four treated as constitutional law."
+      "kind": "evergreen",
+      "prompt": "Decorating, clothes, gifts, tiny animals and seasonal collecting."
     },
     {
       "id": "matcha",
       "name": "Matcha",
       "category": "food",
-      "prompt": "Green powder carrying several aesthetics on its back."
-    },
-    {
-      "id": "tinned-fish",
-      "name": "Tinned fish",
-      "category": "food",
-      "prompt": "A can, good bread, little plate, unreasonable visual authority."
+      "kind": "evergreen",
+      "prompt": "A drink that is now also an aesthetic object, color palette and personality marker."
     },
     {
       "id": "tiny-treat",
       "name": "A tiny treat",
       "category": "food",
-      "prompt": "Small purchase. Large emotional accounting department."
-    },
-    {
-      "id": "bunni",
-      "name": "The username bunni",
-      "category": "usernames",
-      "prompt": "One vowel mutation. Entire profile already visible in your head."
+      "kind": "evergreen",
+      "prompt": "A small snack or purchase justified as a reward for surviving the day."
     },
     {
       "id": "rottingangel",
-      "name": "The username rottingangel",
+      "name": "rottingangel",
       "category": "usernames",
-      "prompt": "Soft noun plus damage modifier. Textbook construction."
+      "kind": "evergreen",
+      "prompt": "Soft noun plus damage modifier. A standard foidslop username construction."
     },
     {
       "id": "romance-novels",
       "name": "Romance novels",
       "category": "books",
-      "prompt": "Yearning, tropes, annotations, tabs, increasingly specific men."
-    },
-    {
-      "id": "sad-girl-playlist",
-      "name": "A sad-girl playlist",
-      "category": "music",
-      "prompt": "Lowercase title. Rain photo. Twelve songs about the same mistake."
-    },
-    {
-      "id": "coquette-bedroom",
-      "name": "A coquette bedroom",
-      "category": "aesthetics",
-      "prompt": "Bows, lace, lamps, perfume bottles, zero undecorated surfaces."
-    },
-    {
-      "id": "claw-clip",
-      "name": "A claw clip",
-      "category": "aesthetics",
-      "prompt": "Plastic hair hardware promoted to cultural infrastructure."
-    },
-    {
-      "id": "booktok",
-      "name": "BookTok",
-      "category": "activities",
-      "prompt": "Tabs, tropes, special editions, annotations, twelve-book weekends."
+      "kind": "evergreen",
+      "prompt": "Tropes, yearning, annotations, special editions and highly specific male leads."
     },
     {
       "id": "dress-to-impress",
       "name": "Dress to Impress",
       "category": "games",
-      "prompt": "Runway competition with enough outfit discourse to qualify immediately."
-    },
-    {
-      "id": "vampire-boyfriend",
-      "name": "An impractical vampire boyfriend",
-      "category": "activities",
-      "prompt": "Not technically a hobby. Historically significant anyway."
+      "kind": "evergreen",
+      "prompt": "Dress-up competition, runway themes and relentless outfit discourse."
     }
   ]
 }
