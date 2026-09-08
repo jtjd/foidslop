@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T00:00:00.000Z",
+  "generated": "2026-09-08T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -8351,7 +8351,10 @@
       "imageAlt": "Photograph of matcha latte in a mug next to a plate of colorful mochi pieces",
       "seoTitle": "Mochi and Matcha Tea Recipe for One | foidslop",
       "seoDescription": "A sweet Japanese snack of chewy mochi served with a frothy matcha latte. A snack recipe for one, ready in 5 minutes with mochi pieces.",
-      "dateModified": "2026-09-07"
+      "dateModified": "2026-09-07",
+      "headnote": "Whisk the matcha with hot water before adding the frothed oat milk so the tea stays smooth and evenly suspended. Serve the mochi on the side so its chewy texture stays distinct from the drink.",
+      "substitutions": "Dairy milk, soy milk, or almond milk can replace oat milk. Strawberry, matcha, or another filled mochi all work, and maple syrup can replace honey if you want the latte slightly sweeter.",
+      "storage": "Matcha is best whisked and served immediately. Keep mochi and oat milk refrigerated or frozen according to their package directions, then prepare only the amount you plan to eat."
     },
     {
       "id": 131,
@@ -8388,10 +8391,11 @@
       "notes": "Butter mochi is made with coconut milk and glutinous rice flour. It is dense and incredibly buttery.",
       "photo_search": "plate of golden butter mochi cubes dusted with powdered sugar",
       "publishDate": "2026-09-08",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of plate of golden butter mochi cubes dusted with powdered sugar",
       "seoTitle": "Butter Mochi Bites Recipe for One | foidslop",
-      "seoDescription": "Sweet, chewy Hawaiian butter mochi cubes. A dense, satisfying treat. Butter mochi bites and fresh berries make this snack recipe for one in 5 minutes."
+      "seoDescription": "Sweet, chewy Hawaiian butter mochi cubes. A dense, satisfying treat. Butter mochi bites and fresh berries make this snack recipe for one in 5 minutes.",
+      "dateModified": "2026-09-08"
     },
     {
       "id": 132,
