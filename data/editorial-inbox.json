@@ -1,0 +1,347 @@
+{
+  "generatedAt": "2026-09-09T20:39:28.908Z",
+  "lookbackHours": 72,
+  "signalCount": 46,
+  "candidateCount": 8,
+  "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
+  "feedStatus": [
+    {
+      "id": "google-internet-slang",
+      "ok": true,
+      "itemCount": 40
+    },
+    {
+      "id": "google-tiktok-culture",
+      "ok": true,
+      "itemCount": 40
+    },
+    {
+      "id": "google-dating-relationships",
+      "ok": true,
+      "itemCount": 40
+    },
+    {
+      "id": "google-cases",
+      "ok": true,
+      "itemCount": 40
+    },
+    {
+      "id": "google-internet-subcultures",
+      "ok": true,
+      "itemCount": 40
+    },
+    {
+      "id": "google-fandom",
+      "ok": true,
+      "itemCount": 40
+    },
+    {
+      "id": "reddit-foidslop-adjacent",
+      "ok": true,
+      "itemCount": 22
+    },
+    {
+      "id": "reddit-internet-culture",
+      "ok": false,
+      "error": "HTTP 429"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "discovery-a5d746d30715",
+      "topic": "Viral Cat in the Hat trend sparks police, TikTok investigation in Gentry",
+      "score": 6.1,
+      "audienceTags": [
+        "internet"
+      ],
+      "matchedTerms": [
+        "viral",
+        "tiktok"
+      ],
+      "signalCount": 3,
+      "sourceCount": 3,
+      "firstSeenAt": "2026-09-08T14:17:00.000Z",
+      "lastSeenAt": "2026-09-09T09:00:00.000Z",
+      "reasons": [
+        "Audience terms: viral, tiktok.",
+        "3 independent source labels are carrying the story.",
+        "3 fresh signals were clustered into the same topic.",
+        "The newest signal is less than 24 hours old."
+      ],
+      "signals": [
+        {
+          "title": "Viral Cat in the Hat trend sparks police, TikTok investigation in Gentry",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPMjc4SmZ4NS1UTm80TGQyUHJveGVjckJBSzRKY0NNQktaSnhPc09NRFpHbjloM1JKeFlKaG1fa19JZ2hWaTd1WGppX1NwM1FkMjhpTm5CektHUldDUUllZzFmYktMRU1sTXoxX2ZXOVQ1OFdtblg3NTgteWtFU0NER1d2c19ycEFHVEhnZkpOUlhPZVYz?oc=5",
+          "publisher": "Northwest Arkansas Democrat-Gazette",
+          "publishedAt": "2026-09-09T09:00:00.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "AI-generated Cat in the Hat TikTok trend alarms North State parents, Redding police say",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQTGVaMmdVcjFoczAzbHZubjNxMzJSdXlLZzkxaGRuOU4wRVpNVlIxYTkzU0ZJeV90RFJ4OGo4U2M1RTJwRnhKZV9BdmxSODZCVWYyeHJsY2ZRTEREeG55MEd0Z0NLWE1PUk4xNXdjZ0F0SlZ5Z3lBbldVVjVnTThOOXota3B0YUllUjlYNk1wREJUYUZXeGJXa1hobWZVTjZjV1pMM0Vqcmt3ZnNrVlI4SFBTXzNqb1E?oc=5",
+          "publisher": "KRCR",
+          "publishedAt": "2026-09-08T23:34:49.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "Law enforcement agencies warn parents of concerning ‘Cat in the Hat’ trend",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOaEpEclo0UnNLelJpSjVicUlFZEo5bVlRREIzUDloWjJ0THFHOWpReWQySUhUUEFVQXl1bFBiR1d0NkRmZjNfWC1KNXViLWYwdTZmaGpGdUlBcHVQOFFibG92NGl0OXpsam5PeUpOamJ6YXBfdG5oZGJTVXo5MFhydmN1WHdSbHhkS19MYlFGSTV4eVhTcHZ2NmRMRTdkZw?oc=5",
+          "publisher": "New York Post",
+          "publishedAt": "2026-09-08T14:17:00.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        }
+      ]
+    },
+    {
+      "id": "discovery-26bd5ff48e2f",
+      "topic": "What I learned from going viral on TikTok",
+      "score": 5.38,
+      "audienceTags": [
+        "internet"
+      ],
+      "matchedTerms": [
+        "viral",
+        "tiktok"
+      ],
+      "signalCount": 2,
+      "sourceCount": 2,
+      "firstSeenAt": "2026-09-08T13:44:58.000Z",
+      "lastSeenAt": "2026-09-09T14:05:20.000Z",
+      "reasons": [
+        "Audience terms: viral, tiktok.",
+        "2 independent source labels are carrying the story.",
+        "The newest signal is less than 24 hours old."
+      ],
+      "signals": [
+        {
+          "title": "What I learned from going viral on TikTok",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE8zY0VfNHRMOC1sWkVxUkhFaW5vd0h6UFFCZFFOLXZSVVpMbEM4T0x0S1VXbHI0OUFyVW1SOXExSWZzRGp2MmNRdVdySkNTUS1XUGhISi1HUUV3aHJqdTVXOGlKVUVfMW9SSkJnRTNxVmxIUzNTa0E?oc=5",
+          "publisher": "SMA News Today",
+          "publishedAt": "2026-09-09T14:05:20.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "A Fake Quote Of Ella Langley “Breaking Her Silence On MAGA Allegations” Is Going Mega Viral On TikTok And People Are Actually Believing It: \"Gotta Burn My Ella Fella Shirt Now\"",
+          "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxOMVNvS1ZYNDFxekZOOGlsbURhY1FfckZGZlk0QnNWYTFPci03UmpEZGg1QndRdU5fRThBaE9wOWo2ek91bnBWVm9yckQyMDE2RFhRY2VwSUo2cWV4VVhoUWtkSlUxMnBaVEFoVFdmRUtMMDFZRTM1UjRjbVJ3NVBWVElNdkQtaUhoUDE3WDhINC1YY1NaVHZBTDlFV3NyQXNENk9GZll6SHh5MkJ2a2NKWlIwVWpXMkJOdk42VWRCaU5LbnVFYXhqQnh1SXpYSmwwTk9jZDlRdzluOEJERXJXMjJ3a0hXZFVrbDBoeDd6aFZDc3hIVFI2VXA2QXhHUFBPbnExSi1TUEhZM0dGY19qSGl1YVl2ME51WFd0OG9TSnhyNlU?oc=5",
+          "publisher": "countrychord.com",
+          "publishedAt": "2026-09-08T13:44:58.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        }
+      ]
+    },
+    {
+      "id": "discovery-0366f8392212",
+      "topic": "'No cap': Ireland's most searched slang words so far in 2026 confirmed",
+      "score": 4.93,
+      "audienceTags": [
+        "language"
+      ],
+      "matchedTerms": [
+        "slang"
+      ],
+      "signalCount": 2,
+      "sourceCount": 2,
+      "firstSeenAt": "2026-09-08T04:02:37.000Z",
+      "lastSeenAt": "2026-09-08T21:39:36.000Z",
+      "reasons": [
+        "Audience terms: slang.",
+        "2 independent source labels are carrying the story.",
+        "The newest signal is less than 24 hours old."
+      ],
+      "signals": [
+        {
+          "title": "From ’67’ to ‘unc’, these are Australia’s most searched slang words of 2026",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSnRnVUVQZE9XV1NFdHBtSk83UjhtcUNXVkQ2R1RNZk9MUHR4ekV6b0p3OThhUTNveXd5MlZCMHNiMXVEd01LNmltYi1KRmVIci02YXItLUhFeHFZTnpKVVBtN2xYd1JwRDFTNjlOUjJDbUcxc01qVmZGMlVoNGhUejV2MFZKN1ZCbUxrMUtfNTZpU0c4V0I0b2kwSXVjUnM?oc=5",
+          "publisher": "Glam Adelaide",
+          "publishedAt": "2026-09-08T21:39:36.000Z",
+          "feedId": "google-internet-slang",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / internet slang"
+        },
+        {
+          "title": "'No cap': Ireland's most searched slang words so far in 2026 confirmed",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOLU8wZF9MVzhLRGNZVlFXZUkyYUlRdUh6LWVLQ3VsT0ZlNGxhdUt3VjBVSGpjZXVmZmdsWHIzbFVTVnZyVkFkbmxHTXM3WGR5cUNnUjZzZXhmOUNWSE5FMlMtQjVxTzZ3T0pOQll0d2dyWmtFUlRoOHlGYnBORnluQWZTWUhVQW1o0gGOAUFVX3lxTE4zTkJ3MjhzRGhoaGtSSktzRDFGdGhxOFI2S1o4M09udnVlS2JfUnhVdDRzbGJnWDRjalV3LXl6b0RKNElySVFsY1pUZ0lVUy1WazlOWV9CTk1yMlN6NXMtMUFHeUJRRWJRS1I0VkZDSDlNSGxRUEs2RHhjdkNCU25lUFpYNGFQX3pyWHBsR1E?oc=5",
+          "publisher": "Irish Mirror",
+          "publishedAt": "2026-09-08T04:02:37.000Z",
+          "feedId": "google-internet-slang",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / internet slang"
+        }
+      ]
+    },
+    {
+      "id": "discovery-59f9cf44e480",
+      "topic": "National Trust woos Gen Z with viral TikTok videos",
+      "score": 4.88,
+      "audienceTags": [
+        "internet"
+      ],
+      "matchedTerms": [
+        "viral",
+        "tiktok"
+      ],
+      "signalCount": 2,
+      "sourceCount": 2,
+      "firstSeenAt": "2026-09-07T05:15:00.000Z",
+      "lastSeenAt": "2026-09-08T11:33:23.000Z",
+      "reasons": [
+        "Audience terms: viral, tiktok.",
+        "2 independent source labels are carrying the story."
+      ],
+      "signals": [
+        {
+          "title": "Mall of America courts Gen Z with viral TikTok brands",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOb0U4d252NDJXa3pjRTl2RzEySmhNakpTUjljRjl6bkVWZmVxUHBnM1p1RmhGOFRMd2I3NWRoYTA4YU1IQTN3NjdQc2JTUHEwZ2ZqSWd4RE1oNmpNcGlZbFVVNl9LLUdhcmpIbXMycy03U19oTExMRnhSeEwyQ3ZfNUVyd3kzRk9jUzRVN0EtZnc2MlppWmhGQWs1Q1g5YU5vU0xzWUlFcWJzUTk3?oc=5",
+          "publisher": "Axios",
+          "publishedAt": "2026-09-08T11:33:23.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "National Trust woos Gen Z with viral TikTok videos",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPMHQ2aGpPUTlrRkZjSDNfeFJFb19qN0lfY0hwS0dLVF9tNFBHYnQ2dGpKVnZ5X3BYR0VXZWlUSkFHUjFEZWZDQkpha2xSVTZ5M2VGMGg2LUtrMVlMV3ljOTlHVVBzcENlOElhQVpOOWQwQ2pEU2dBanU2bWtkVzBQX2FYOWR6blJxWUFNVHYwV3JWcjVjVzJNOFBaQQ?oc=5",
+          "publisher": "The Telegraph",
+          "publishedAt": "2026-09-07T05:15:00.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        }
+      ]
+    },
+    {
+      "id": "discovery-a044b5e5738d",
+      "topic": "Viral TikTok Meme Coin BIPOLAR Launches Tomorrow. But There’s a Trap",
+      "score": 4.72,
+      "audienceTags": [
+        "internet"
+      ],
+      "matchedTerms": [
+        "meme",
+        "viral",
+        "tiktok"
+      ],
+      "signalCount": 1,
+      "sourceCount": 1,
+      "firstSeenAt": "2026-09-07T16:58:46.000Z",
+      "lastSeenAt": "2026-09-07T16:58:46.000Z",
+      "reasons": [
+        "Audience terms: meme, viral, tiktok."
+      ],
+      "signals": [
+        {
+          "title": "Viral TikTok Meme Coin BIPOLAR Launches Tomorrow. But There’s a Trap",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOSFctcnd1UXdad2ZCODlSUDlpQ2VmM2ZvTW85WFFjWEhWRjVrQnFXRlA4ZUlSVFZialBpb1U3WHpZMWRNeFdieWlaWDNFQ0lpYmU0YW04Q2lLbDNEd2pNY3JvdzFSNXBRbk9MVWR1QVppcDdVemZ0Q0lndm5xNlEzOV9fc0dZN1dOUUFpZzM2N3dwbDU5ZzlQbWRWaw?oc=5",
+          "publisher": "Yahoo Finance",
+          "publishedAt": "2026-09-07T16:58:46.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        }
+      ]
+    },
+    {
+      "id": "discovery-301ed7e76fc8",
+      "topic": "These 10 viral TikTok trends are permanently damaging teeth, dentist warns",
+      "score": 4.5,
+      "audienceTags": [
+        "internet"
+      ],
+      "matchedTerms": [
+        "viral",
+        "tiktok"
+      ],
+      "signalCount": 1,
+      "sourceCount": 1,
+      "firstSeenAt": "2026-09-09T12:53:46.000Z",
+      "lastSeenAt": "2026-09-09T12:53:46.000Z",
+      "reasons": [
+        "Audience terms: viral, tiktok.",
+        "The newest signal is less than 24 hours old."
+      ],
+      "signals": [
+        {
+          "title": "These 10 viral TikTok trends are permanently damaging teeth, dentist warns",
+          "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPZUF5QkxQUENfR2hPN3lDOTFsRzRheXU0SkNXM19Cd3JfLTNzVUh2dkdBZlJVZUV4aEI2WW5EZHctUzNld3hPX2Z2T0F2WTJtN1F4a2lWWVRJakVCVHpGc2FTYTEzcVlDS3VCYWIyUFAxWDhRVHVhUzhleHA3MWFTcWdBUmNQejhJbV8tWDNBdVRyWWctNlRMcDYwbUtfRXhDVTEtc3VZVm5YQlFnSG1tSHJ3RTFpcHBfUFNlTmVmZTI0NkpEOE1aMHBkZjBtbXVTU3Y1TXJ1a1REdUZ6cDFyNFNIWQ?oc=5",
+          "publisher": "DrBicuspid.com",
+          "publishedAt": "2026-09-09T12:53:46.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        }
+      ]
+    },
+    {
+      "id": "discovery-2535d42a4dec",
+      "topic": "How Autotuned Vids Turned A Viral TikTok Format Into A Music Business",
+      "score": 4.5,
+      "audienceTags": [
+        "internet"
+      ],
+      "matchedTerms": [
+        "viral",
+        "tiktok"
+      ],
+      "signalCount": 1,
+      "sourceCount": 1,
+      "firstSeenAt": "2026-09-09T12:23:11.000Z",
+      "lastSeenAt": "2026-09-09T12:23:11.000Z",
+      "reasons": [
+        "Audience terms: viral, tiktok.",
+        "The newest signal is less than 24 hours old."
+      ],
+      "signals": [
+        {
+          "title": "How Autotuned Vids Turned A Viral TikTok Format Into A Music Business",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOV0tKajhfbkl0NGpHaF9Oc0ZzSGd4NmdNbERjRnRfNlMtNjV3bFc3WC0xQlZnOHRJQXE1T3RkS0NtdGtXaG9qc2hwa0NXaTVYbGlaTjRLRmhsTDZhdDUyb2ZRSnRTOWtPazFiTXNNTlBPZnpHaFVQY1BYWVYtRnpPbjlSQ2p0ZEF2TjVOTmtmU3R5Q3pQSDdnRUpwR29xYTk1ZUE?oc=5",
+          "publisher": "Net Influencer",
+          "publishedAt": "2026-09-09T12:23:11.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        }
+      ]
+    },
+    {
+      "id": "discovery-08484d06a5d8",
+      "topic": "California serial ‘butt sniffer’ gets slap-on-the-wrist after latest spree went viral on TikTok",
+      "score": 4.5,
+      "audienceTags": [
+        "internet"
+      ],
+      "matchedTerms": [
+        "viral",
+        "tiktok"
+      ],
+      "signalCount": 1,
+      "sourceCount": 1,
+      "firstSeenAt": "2026-09-09T04:11:00.000Z",
+      "lastSeenAt": "2026-09-09T04:11:00.000Z",
+      "reasons": [
+        "Audience terms: viral, tiktok.",
+        "The newest signal is less than 24 hours old."
+      ],
+      "signals": [
+        {
+          "title": "California serial ‘butt sniffer’ gets slap-on-the-wrist after latest spree went viral on TikTok",
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQa0ZoRWQ2dGJkYXlWUC1sTl9palowcVJJYmlHNXQ4OVZPb3BKdEZWZi1vUFhYR25xVEx2ZkxPLUlPX1ZIY1R3N1J1Z0pKc2UzR1AyQVRic2JXcG1ZdEVKYVJObEZLNnNkV3lnMVlneTJEQ0J1eXVKenlBZncyOS1sWlBkblc3UWlZSkQ3NUdKT3ZLdXNTOGJ3YkJVaHJja1F3bGZ0dHlwQmdzUUtBcG85RlNaZ3U4NTNFQ3FBZ0FHYW5IZ2VBcVZISXRNMW9DQQ?oc=5",
+          "publisher": "New York Post",
+          "publishedAt": "2026-09-09T04:11:00.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        }
+      ]
+    }
+  ]
+}
