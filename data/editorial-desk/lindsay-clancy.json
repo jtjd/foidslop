@@ -1,0 +1,26 @@
+{
+  "id": "lindsay-clancy-case",
+  "status": "candidate",
+  "kind": "case",
+  "workingTitle": "The Lindsay Clancy case and the internet argument around criminal responsibility",
+  "discoveredAt": "2026-09-09",
+  "updatedAt": "2026-09-09",
+  "audience": {
+    "relevanceScore": 9.1,
+    "reasons": [
+      "High overlap with true-crime, motherhood, mental-health, gender-discourse, and internet-reaction audiences.",
+      "The case creates strong explanatory search intent because readers need chronology, competing arguments, and current legal status separated cleanly.",
+      "Online discussion is polarized enough to support a foidslop culture angle without replacing reported facts with social-media claims."
+    ]
+  },
+  "sourcePlan": [
+    "Start with current court records or official court reporting where available.",
+    "Confirm chronology and current case status with AP, Reuters, and strong Massachusetts local reporting.",
+    "Use authoritative medical sources only for general postpartum-psychosis background, not to diagnose a person from afar.",
+    "Sample Reddit, X, TikTok, YouTube, and forums only to identify recurring discourse themes; never use them as sole support for criminal, legal, or medical facts."
+  ],
+  "angle": "",
+  "sources": [],
+  "claims": [],
+  "notes": "Candidate only. AI research must complete an evidence packet and a separate fact-check pass before a draft can move to approved."
+}
