@@ -15,6 +15,10 @@ const TOKEN_ALIASES = new Map([
   ['lawsuits', 'lawsuit'], ['suing', 'lawsuit'], ['sued', 'lawsuit'], ['memes', 'meme'],
   ['influencers', 'influencer'], ['relationships', 'relationship'], ['mothers', 'mother']
 ]);
+const GENERIC_CLUSTER_TOKENS = new Set([
+  'social', 'media', 'online', 'internet', 'viral', 'trend', 'discussion', 'debate',
+  'case', 'trial', 'lawsuit', 'dating', 'relationship', 'meme', 'news', 'report'
+]);
 
 function readJson(file) {
   return JSON.parse(fs.readFileSync(file, 'utf8'));
@@ -176,6 +180,21 @@ function titleSimilarity(a, b, df, total) {
   return { shared: shared.length, score: sharedWeight / Math.max(1, Math.min(weightA, weightB)) };
 }
 
+function hasDistinctiveSharedBigram(a, b) {
+  if (a.length < 2 || b.length < 2) return false;
+  const pairs = new Set();
+  for (let index = 0; index < a.length - 1; index += 1) {
+    const pair = [a[index], a[index + 1]];
+    if (pair.every(token => GENERIC_CLUSTER_TOKENS.has(token))) continue;
+    pairs.add(pair.join('\u0000'));
+  }
+  for (let index = 0; index < b.length - 1; index += 1) {
+    const pair = [b[index], b[index + 1]];
+    if (pairs.has(pair.join('\u0000'))) return true;
+  }
+  return false;
+}
+
 function clusterSignals(signals) {
   const df = documentFrequency(signals);
   const total = Math.max(1, signals.length);
@@ -186,7 +205,8 @@ function clusterSignals(signals) {
     let best = null;
     for (const cluster of clusters) {
       const match = titleSimilarity(tokens, cluster.anchorTokens, df, total);
-      const qualifies = (match.shared >= 2 && match.score >= 0.5) || (match.shared >= 3 && match.score >= 0.36);
+      const distinctivePhrase = cluster.signals.some(existing => hasDistinctiveSharedBigram(tokens, tokensFor(existing.title)));
+      const qualifies = distinctivePhrase || (match.shared >= 2 && match.score >= 0.5) || (match.shared >= 3 && match.score >= 0.36);
       if (qualifies && (!best || match.score > best.score)) best = { cluster, score: match.score };
     }
     if (best) {
