@@ -1,8 +1,40 @@
 # AI editorial desk
 
-The editorial desk is a staging layer between AI research and the checked-in public culture source.
+The editorial desk is a staging layer between automated discovery, AI research, and the checked-in public culture source.
 
-AI may discover, research, structure, and draft a story. It must not write directly to `data/culture-articles.json`.
+Automated discovery is deliberately zero-cost: it uses Node.js plus public RSS/Atom feeds and does not call OpenAI or any other paid AI API. AI may later research, structure, and draft a selected story through ChatGPT/Codex, but it must not write directly to `data/culture-articles.json`.
+
+## Zero-cost discovery
+
+`data/editorial-discovery.json` defines the public feeds and the mechanical audience-interest weights used by `scripts/editorial-discover.js`.
+
+The collector currently supports:
+
+- Google News RSS searches;
+- Reddit search RSS;
+- direct HTTPS RSS/Atom feeds added to the config later.
+
+Every six hours, `.github/workflows/editorial-discovery.yml`:
+
+1. fetches the configured feeds;
+2. keeps fresh items inside the configured lookback window;
+3. deduplicates URLs and near-identical titles;
+4. clusters repeated coverage using weighted title-token overlap;
+5. scores clusters using audience terms, source diversity, repetition, recency, and cross-feed discussion;
+6. writes the ranked result to `data/editorial-inbox.json`;
+7. commits only the inbox file back to `main`.
+
+The discovery score is a triage signal, not a claim that a story is important or true. The inbox explicitly says that candidates are not researched, fact-checked, or approved for publication.
+
+Feed failures are nonfatal. The collector records them in `feedStatus`, but it refuses to replace the existing inbox when fewer than `minimumSuccessfulFeeds` succeed or when zero signals are collected. This prevents a temporary Reddit or Google News failure from wiping a useful queue.
+
+No discovered candidate is auto-published or automatically turned into a story packet. The intended operator flow is to ask ChatGPT/Codex to "run the foidslop editorial desk"; the AI can then inspect `data/editorial-inbox.json`, choose worthwhile candidates, do full web research, and create or update a packet under `data/editorial-desk/`.
+
+Run discovery manually with:
+
+```sh
+npm run editorial:discover
+```
 
 ## Story packets
 
@@ -41,6 +73,7 @@ Claims must be labelled as `fact`, `allegation`, `argument`, `testimony`, `analy
 ## Commands
 
 ```sh
+npm run editorial:discover
 npm run editorial:check
 npm run editorial:list
 npm run editorial:materialize -- <story-id>
@@ -66,4 +99,4 @@ For a candidate such as the Lindsay Clancy case, the research agent should retur
 8. Run a separate fact-check pass against every factual sentence and URL.
 9. Set `review.humanApproved` and `review.factCheckComplete` only after a human has actually reviewed the result.
 
-The system is intentionally review-gated. The goal is to automate research and writing without turning the site into an unsourced rewrite farm.
+The system is intentionally review-gated. The goal is to automate discovery, research, and writing without turning the site into an unsourced rewrite farm.
