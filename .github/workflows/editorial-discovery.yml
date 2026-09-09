@@ -35,7 +35,7 @@ jobs:
 
       - name: Commit changed inbox
         run: |
-          if git diff --quiet -- data/editorial-inbox.json; then
+          if [ -z "$(git status --porcelain -- data/editorial-inbox.json)" ]; then
             echo "No editorial inbox changes."
             exit 0
           fi
