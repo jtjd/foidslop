@@ -1,26 +1,227 @@
 {
   "id": "lindsay-clancy-case",
-  "status": "candidate",
+  "status": "draft",
   "kind": "case",
-  "workingTitle": "The Lindsay Clancy case and the internet argument around criminal responsibility",
+  "workingTitle": "The Lindsay Clancy mistrial and what the jury was actually deciding",
   "discoveredAt": "2026-09-09",
   "updatedAt": "2026-09-09",
   "audience": {
     "relevanceScore": 9.1,
     "reasons": [
       "High overlap with true-crime, motherhood, mental-health, gender-discourse, and internet-reaction audiences.",
-      "The case creates strong explanatory search intent because readers need chronology, competing arguments, and current legal status separated cleanly.",
-      "Online discussion is polarized enough to support a foidslop culture angle without replacing reported facts with social-media claims."
+      "The mistrial creates strong explanatory search intent because readers need the legal question, competing arguments, and current status separated cleanly.",
+      "The case has generated unusually large online discussion, but the article can use that discussion as context without treating social posts as evidence of legal or medical facts."
     ]
   },
   "sourcePlan": [
-    "Start with current court records or official court reporting where available.",
-    "Confirm chronology and current case status with AP, Reuters, and strong Massachusetts local reporting.",
-    "Use authoritative medical sources only for general postpartum-psychosis background, not to diagnose a person from afar.",
-    "Sample Reddit, X, TikTok, YouTube, and forums only to identify recurring discourse themes; never use them as sole support for criminal, legal, or medical facts."
+    "Use Massachusetts model homicide instructions as the source of truth for the criminal-responsibility standard.",
+    "Use Reuters and AP for the mistrial, jury status, current prosecution decision, and post-trial juror interviews.",
+    "Use strong Massachusetts local reporting for trial testimony and the prosecution's expert case.",
+    "Use NIMH only for general postpartum-psychosis background, not to determine Clancy's diagnosis or legal responsibility.",
+    "Use Reddit only to show that the case generated broad and polarized online discussion."
   ],
-  "angle": "",
-  "sources": [],
-  "claims": [],
-  "notes": "Candidate only. AI research must complete an evidence packet and a separate fact-check pass before a draft can move to approved."
+  "angle": "Explain the case through the legal question the jury actually had to answer: not whether Lindsay Clancy killed her children, but whether Massachusetts proved beyond a reasonable doubt that she was criminally responsible when she did it.",
+  "sources": [
+    {
+      "id": "mass-criminal-responsibility",
+      "tier": 1,
+      "type": "government",
+      "publisher": "Massachusetts Court System",
+      "title": "Model Jury Instructions on Homicide: I. Criminal responsibility",
+      "url": "https://www.mass.gov/info-details/model-jury-instructions-on-homicide-i-criminal-responsibility",
+      "accessedAt": "2026-09-09"
+    },
+    {
+      "id": "nimh-postpartum-psychosis",
+      "tier": 1,
+      "type": "government",
+      "publisher": "National Institute of Mental Health",
+      "title": "Perinatal Depression",
+      "url": "https://www.nimh.nih.gov/health/publications/perinatal-depression",
+      "accessedAt": "2026-09-09"
+    },
+    {
+      "id": "reuters-mistrial",
+      "tier": 2,
+      "type": "wire",
+      "publisher": "Reuters",
+      "title": "Lindsay Clancy trial over killing her children ends in mistrial",
+      "url": "https://www.reuters.com/world/us/deadlocked-jury-lindsay-clancys-murder-trial-deliberate-seventh-day-2026-09-04/",
+      "publishedAt": "2026-09-04",
+      "accessedAt": "2026-09-09"
+    },
+    {
+      "id": "reuters-jurors",
+      "tier": 2,
+      "type": "wire",
+      "publisher": "Reuters",
+      "title": "Three jurors in Lindsay Clancy's US murder trial point fingers at holdout after mistrial",
+      "url": "https://www.reuters.com/legal/government/three-jurors-lindsay-clancys-us-murder-trial-point-fingers-holdout-after-2026-09-09/",
+      "publishedAt": "2026-09-09",
+      "accessedAt": "2026-09-09"
+    },
+    {
+      "id": "ap-holdout",
+      "tier": 2,
+      "type": "wire",
+      "publisher": "Associated Press",
+      "title": "Holdout in Lindsay Clancy trial said he had reasonable doubt but still wouldn't acquit, juror says",
+      "url": "https://apnews.com/article/999539982691ae345cadb90321243f96",
+      "publishedAt": "2026-09-09",
+      "accessedAt": "2026-09-09"
+    },
+    {
+      "id": "nbc-prosecution-experts",
+      "tier": 2,
+      "type": "local-news",
+      "publisher": "NBC10 Boston",
+      "title": "Prosecution's final witnesses at Lindsay Clancy's murder trial challenge postpartum psychosis claim",
+      "url": "https://www.nbcboston.com/news/local/lindsay-clancy-trial-final-days/4003323/",
+      "publishedAt": "2026-08-25",
+      "accessedAt": "2026-09-09"
+    },
+    {
+      "id": "reddit-megathread",
+      "tier": 4,
+      "type": "forum",
+      "publisher": "Reddit / r/TrueCrimeDiscussion",
+      "title": "Megathread: Lindsay Clancy Trial",
+      "url": "https://www.reddit.com/r/TrueCrimeDiscussion/comments/1w7cnw6/megathread_lindsay_clancy_trial/",
+      "publishedAt": "2026-09-04",
+      "accessedAt": "2026-09-09"
+    }
+  ],
+  "claims": [
+    {
+      "id": "mistrial-sept-four",
+      "text": "Judge William Sullivan declared a mistrial on September 4, 2026 after the jury failed to reach a unanimous verdict following seven days of deliberations.",
+      "classification": "fact",
+      "sensitivity": "legal",
+      "sourceIds": ["reuters-mistrial", "ap-holdout"]
+    },
+    {
+      "id": "central-legal-question",
+      "text": "Because Clancy did not dispute that she killed her children, the central live issue was whether the Commonwealth proved beyond a reasonable doubt that she was criminally responsible at the time.",
+      "classification": "fact",
+      "sensitivity": "legal",
+      "sourceIds": ["mass-criminal-responsibility", "reuters-mistrial"]
+    },
+    {
+      "id": "massachusetts-burden",
+      "text": "Massachusetts places the burden on the Commonwealth to prove criminal responsibility beyond a reasonable doubt once lack of criminal responsibility is in issue.",
+      "classification": "fact",
+      "sensitivity": "legal",
+      "sourceIds": ["mass-criminal-responsibility"]
+    },
+    {
+      "id": "defense-position",
+      "text": "The defense argued that Clancy was experiencing postpartum psychosis and lacked criminal responsibility when she killed the children.",
+      "classification": "argument",
+      "sensitivity": "medical",
+      "sourceIds": ["reuters-mistrial"]
+    },
+    {
+      "id": "prosecution-position",
+      "text": "Prosecutors argued that Clancy acted deliberately and retained the ability to understand the wrongfulness of her conduct.",
+      "classification": "argument",
+      "sensitivity": "legal",
+      "sourceIds": ["reuters-mistrial", "nbc-prosecution-experts"]
+    },
+    {
+      "id": "juror-account",
+      "text": "Three jurors who spoke publicly after the mistrial said a single holdout prevented a not-guilty-by-reason-of-insanity verdict and said the holdout acknowledged reasonable doubt.",
+      "classification": "testimony",
+      "sensitivity": "legal",
+      "sourceIds": ["reuters-jurors", "ap-holdout"]
+    },
+    {
+      "id": "retrial-undecided",
+      "text": "As of September 9, prosecutors had not announced whether they would retry the case, and a status hearing was scheduled for September 29.",
+      "classification": "fact",
+      "sensitivity": "legal",
+      "sourceIds": ["reuters-jurors", "reuters-mistrial"]
+    },
+    {
+      "id": "ppp-general",
+      "text": "Postpartum psychosis is a psychiatric emergency that can involve delusions, hallucinations, mania, paranoia, and confusion.",
+      "classification": "fact",
+      "sensitivity": "medical",
+      "sourceIds": ["nimh-postpartum-psychosis"]
+    },
+    {
+      "id": "online-division",
+      "text": "Large online discussion threads show that the case became a proxy argument about mental illness, maternal health care, punishment, and the meaning of reasonable doubt.",
+      "classification": "reaction",
+      "sensitivity": "none",
+      "sourceIds": ["reddit-megathread", "reuters-mistrial"]
+    }
+  ],
+  "draft": {
+    "slug": "lindsay-clancy-mistrial",
+    "title": "What the Lindsay Clancy Jury Was Actually Deciding",
+    "seoTitle": "Lindsay Clancy Mistrial: What the Jury Was Actually Deciding",
+    "description": "The Lindsay Clancy trial ended without a verdict. Here is what Massachusetts law required jurors to decide and what a mistrial means now.",
+    "eyebrow": "Cases / criminal responsibility",
+    "deck": "The killings were not the disputed part. Criminal responsibility was.",
+    "sections": [
+      {
+        "heading": "The mistrial did not answer the case",
+        "paragraphs": [
+          "A Massachusetts judge declared a mistrial in Lindsay Clancy's murder case on September 4 after the jury spent seven days deliberating without reaching a unanimous verdict. The result means there was no conviction and no acquittal. The prosecution can seek another trial.",
+          "That basic point gets lost easily because Clancy did not deny killing her three children, Cora, Dawson, and Callan, in January 2023. The unresolved question was whether she was criminally responsible when she did it."
+        ]
+      },
+      {
+        "heading": "What Massachusetts law required the jury to decide",
+        "paragraphs": [
+          "Massachusetts puts the burden on the Commonwealth to prove criminal responsibility beyond a reasonable doubt. A person can lack criminal responsibility if a mental disease or defect leaves them without the substantial capacity to appreciate the criminality or wrongfulness of their conduct or to conform their conduct to the law.",
+          "That is a legal standard, not simply a medical diagnosis. A jury can believe that a defendant was seriously mentally ill and still find criminal responsibility. It can also conclude that the Commonwealth failed to prove responsibility beyond a reasonable doubt even when the physical acts themselves are undisputed."
+        ]
+      },
+      {
+        "heading": "The defense and prosecution were arguing about the same moment",
+        "paragraphs": [
+          "Clancy's defense argued that she was experiencing postpartum psychosis and was not criminally responsible when she killed the children. Prosecutors disputed that conclusion and argued that her conduct showed deliberation and an understanding that what she was doing was wrong.",
+          "Postpartum psychosis is a real psychiatric emergency that can include delusions, hallucinations, mania, paranoia, and confusion. That general medical fact does not resolve Clancy's legal responsibility by itself. The trial turned on what her mental state was at the time of the killings and whether the Commonwealth met its legal burden."
+        ]
+      },
+      {
+        "heading": "Why the holdout juror became the post-trial story",
+        "paragraphs": [
+          "After the mistrial, three jurors, including the foreperson, told reporters that a single juror had blocked a verdict of not guilty by reason of lack of criminal responsibility. They said the holdout acknowledged having reasonable doubt but still would not vote to acquit on that basis.",
+          "That account comes from jurors speaking after the trial, not from a judicial finding about misconduct. It explains why so much of the conversation immediately shifted from Clancy's psychiatric evidence to the mechanics of reasonable doubt and jury deliberation."
+        ]
+      },
+      {
+        "heading": "Why the internet cannot agree about Lindsay Clancy",
+        "paragraphs": [
+          "The case maps onto several arguments the internet already has constantly: whether mental illness changes culpability, whether maternal mental-health care fails people in crisis, whether planning behavior disproves psychosis, and whether sympathy for a defendant sidelines the victims. Large true-crime discussion threads contain all of those positions at once.",
+          "That makes the case unusually easy to flatten into a moral referendum. The narrower legal question is less satisfying but more useful: did the Commonwealth prove criminal responsibility beyond a reasonable doubt under Massachusetts law? The first jury could not unanimously answer yes."
+        ]
+      },
+      {
+        "heading": "What happens next",
+        "paragraphs": [
+          "As of September 9, Plymouth County prosecutors had not announced whether they would retry Clancy. A status hearing is scheduled for September 29. Until prosecutors and the court decide the next step, the case remains unresolved.",
+          "A mistrial is not a finding that Clancy was innocent, guilty, sane, or insane. It means this jury did not return a unanimous verdict. Anything more specific has to come from whatever the Commonwealth, the defense, and the court do next."
+        ]
+      }
+    ],
+    "dictionaryLinks": [],
+    "sourceIds": [
+      "mass-criminal-responsibility",
+      "nimh-postpartum-psychosis",
+      "reuters-mistrial",
+      "reuters-jurors",
+      "ap-holdout",
+      "nbc-prosecution-experts",
+      "reddit-megathread"
+    ]
+  },
+  "review": {
+    "humanApproved": false,
+    "factCheckComplete": true,
+    "factCheckedAt": "2026-09-09"
+  },
+  "notes": "Research and draft completed from official legal guidance, Reuters, AP, NBC10 Boston, NIMH, and a large Reddit discussion thread. Social discussion is used only to characterize discourse. The packet remains draft because the human approval gate has not been satisfied."
 }
