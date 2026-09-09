@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-08T00:00:00.000Z",
+  "generated": "2026-09-09T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -8448,11 +8448,12 @@
       "notes": "If the cucumber breaks, just use shorter ribbons. They still taste amazing.",
       "photo_search": "plate of cucumber ribbons rolled up with smoked salmon and cream cheese",
       "publishDate": "2026-09-09",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of plate of cucumber ribbons rolled up with smoked salmon and cream cheese",
       "seoTitle": "Smoked Salmon and Cream Cheese Cucumber Rolls | foidslop",
       "seoDescription": "Thin ribbons of cucumber wrapped around smoked salmon and cream cheese. Made for one in 10 minutes, with English cucumber and smoked salmon.",
-      "substitutions": "Missing English cucumber? Any sturdy cracker-worthy substitute works. The point is contrast between bites, not exact replication. For smoked salmon and cream cheese cucumber rolls, make the swap in the same one-person portion and taste before adding more seasoning."
+      "substitutions": "Missing English cucumber? Any sturdy cracker-worthy substitute works. The point is contrast between bites, not exact replication. For smoked salmon and cream cheese cucumber rolls, make the swap in the same one-person portion and taste before adding more seasoning.",
+      "dateModified": "2026-09-09"
     },
     {
       "id": 133,
