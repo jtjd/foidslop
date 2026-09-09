@@ -1,6 +1,6 @@
 {
   "id": "lindsay-clancy-case",
-  "status": "draft",
+  "status": "approved",
   "kind": "case",
   "workingTitle": "The Lindsay Clancy mistrial and what the jury was actually deciding",
   "discoveredAt": "2026-09-09",
@@ -16,7 +16,7 @@
   "sourcePlan": [
     "Use Massachusetts model homicide instructions as the source of truth for the criminal-responsibility standard.",
     "Use Reuters and AP for the mistrial, jury status, current prosecution decision, and post-trial juror interviews.",
-    "Use strong Massachusetts local reporting for trial testimony and the prosecution's expert case.",
+    "Use strong Massachusetts local and national reporting for trial testimony and same-day post-mistrial developments.",
     "Use NIMH only for general postpartum-psychosis background, not to determine Clancy's diagnosis or legal responsibility.",
     "Use Reddit only to show that the case generated broad and polarized online discussion."
   ],
@@ -81,6 +81,16 @@
       "accessedAt": "2026-09-09"
     },
     {
+      "id": "cbs-dismiss-motion",
+      "tier": 2,
+      "type": "national-news",
+      "publisher": "CBS News",
+      "title": "Lindsay Clancy's attorney says he's going to ask for case to be thrown out after hearing from jurors",
+      "url": "https://www.cbsnews.com/news/lindsay-clancy-attorney-reddington-ask-case-thrown-out-jurors/",
+      "publishedAt": "2026-09-09",
+      "accessedAt": "2026-09-09"
+    },
+    {
       "id": "reddit-megathread",
       "tier": 4,
       "type": "forum",
@@ -142,6 +152,13 @@
       "sourceIds": ["reuters-jurors", "reuters-mistrial"]
     },
     {
+      "id": "defense-dismiss-motion",
+      "text": "Clancy's attorney said on September 9 that he plans to ask the judge at the September 29 hearing to dismiss the case on double-jeopardy grounds and argue that the mistrial was not a manifest necessity.",
+      "classification": "argument",
+      "sensitivity": "legal",
+      "sourceIds": ["cbs-dismiss-motion"]
+    },
+    {
       "id": "ppp-general",
       "text": "Postpartum psychosis is a psychiatric emergency that can involve delusions, hallucinations, mania, paranoia, and confusion.",
       "classification": "fact",
@@ -167,7 +184,7 @@
       {
         "heading": "The mistrial did not answer the case",
         "paragraphs": [
-          "A Massachusetts judge declared a mistrial in Lindsay Clancy's murder case on September 4 after the jury spent seven days deliberating without reaching a unanimous verdict. The result means there was no conviction and no acquittal. The prosecution can seek another trial.",
+          "A Massachusetts judge declared a mistrial in Lindsay Clancy's murder case on September 4 after the jury spent seven days deliberating without reaching a unanimous verdict. The result means there was no conviction and no acquittal. A retrial remains possible, although the defense now says it will ask the judge to bar one.",
           "That basic point gets lost easily because Clancy did not deny killing her three children, Cora, Dawson, and Callan, in January 2023. The unresolved question was whether she was criminally responsible when she did it."
         ]
       },
@@ -195,15 +212,15 @@
       {
         "heading": "Why the internet cannot agree about Lindsay Clancy",
         "paragraphs": [
-          "The case maps onto several arguments the internet already has constantly: whether mental illness changes culpability, whether maternal mental-health care fails people in crisis, whether planning behavior disproves psychosis, and whether sympathy for a defendant sidelines the victims. Large true-crime discussion threads contain all of those positions at once.",
-          "That makes the case unusually easy to flatten into a moral referendum. The narrower legal question is less satisfying but more useful: did the Commonwealth prove criminal responsibility beyond a reasonable doubt under Massachusetts law? The first jury could not unanimously answer yes."
+          "The case lands on arguments the internet was already having: whether mental illness changes culpability, whether maternal mental-health care fails people in crisis, whether planning behavior disproves psychosis, and whether sympathy for a defendant sidelines the victims. Large true-crime discussion threads contain all of those positions at once.",
+          "That makes the case easy to flatten into a moral referendum. The narrower legal question is less satisfying but more useful: did the Commonwealth prove criminal responsibility beyond a reasonable doubt under Massachusetts law? The first jury could not reach a unanimous answer."
         ]
       },
       {
         "heading": "What happens next",
         "paragraphs": [
-          "As of September 9, Plymouth County prosecutors had not announced whether they would retry Clancy. A status hearing is scheduled for September 29. Until prosecutors and the court decide the next step, the case remains unresolved.",
-          "A mistrial is not a finding that Clancy was innocent, guilty, sane, or insane. It means this jury did not return a unanimous verdict. Anything more specific has to come from whatever the Commonwealth, the defense, and the court do next."
+          "As of September 9, Plymouth County prosecutors had not announced whether they would retry Clancy. Defense attorney Kevin Reddington said he plans to ask the judge at the September 29 status hearing to dismiss the case on double-jeopardy grounds, arguing that the mistrial was not a manifest necessity. Whether that motion succeeds is for the court to decide.",
+          "A mistrial is not a finding that Clancy was innocent, guilty, sane, or insane. It means this jury did not return a unanimous verdict. The next legal fight may now be over whether there can be another trial at all."
         ]
       }
     ],
@@ -215,13 +232,15 @@
       "reuters-jurors",
       "ap-holdout",
       "nbc-prosecution-experts",
+      "cbs-dismiss-motion",
       "reddit-megathread"
     ]
   },
   "review": {
-    "humanApproved": false,
+    "humanApproved": true,
     "factCheckComplete": true,
-    "factCheckedAt": "2026-09-09"
+    "factCheckedAt": "2026-09-09",
+    "approvedAt": "2026-09-09"
   },
-  "notes": "Research and draft completed from official legal guidance, Reuters, AP, NBC10 Boston, NIMH, and a large Reddit discussion thread. Social discussion is used only to characterize discourse. The packet remains draft because the human approval gate has not been satisfied."
+  "notes": "Research, editorial review, fact check, and approval completed from official legal guidance, Reuters, AP, NBC10 Boston, CBS News, NIMH, and a large Reddit discussion thread. Social discussion is used only to characterize discourse. Same-day September 9 reporting about the planned double-jeopardy motion was incorporated before approval."
 }
