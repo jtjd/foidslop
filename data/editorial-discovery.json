@@ -1,0 +1,93 @@
+{
+  "revisionDate": "2026-09-09",
+  "lookbackHours": 72,
+  "maxSignalsPerFeed": 40,
+  "maxInboxItems": 30,
+  "minimumScore": 4.5,
+  "minimumSuccessfulFeeds": 2,
+  "feeds": [
+    {
+      "id": "google-internet-slang",
+      "kind": "google-news",
+      "label": "Google News / internet slang",
+      "query": "internet slang OR online slang OR meme slang"
+    },
+    {
+      "id": "google-tiktok-culture",
+      "kind": "google-news",
+      "label": "Google News / TikTok culture",
+      "query": "TikTok trend OR TikTok discourse OR viral TikTok"
+    },
+    {
+      "id": "google-dating-relationships",
+      "kind": "google-news",
+      "label": "Google News / dating and relationships",
+      "query": "viral dating trend OR relationship discourse OR dating app controversy"
+    },
+    {
+      "id": "google-cases",
+      "kind": "google-news",
+      "label": "Google News / cases",
+      "query": "trial OR mistrial OR lawsuit woman mother influencer"
+    },
+    {
+      "id": "google-internet-subcultures",
+      "kind": "google-news",
+      "label": "Google News / internet subcultures",
+      "query": "incel OR femcel OR looksmaxxing OR online subculture"
+    },
+    {
+      "id": "google-fandom",
+      "kind": "google-news",
+      "label": "Google News / fandom",
+      "query": "anime fandom controversy OR BookTok controversy OR fandom viral"
+    },
+    {
+      "id": "reddit-foidslop-adjacent",
+      "kind": "reddit-search",
+      "label": "Reddit / foidslop-adjacent language",
+      "query": "foidslop OR femcel OR incel OR looksmaxxing OR girl dinner"
+    },
+    {
+      "id": "reddit-internet-culture",
+      "kind": "reddit-search",
+      "label": "Reddit / internet culture",
+      "query": "viral TikTok OR internet slang OR dating discourse OR influencer drama"
+    }
+  ],
+  "interestTerms": [
+    { "term": "foidslop", "weight": 4.0, "tags": ["foidslop"] },
+    { "term": "foid", "weight": 3.0, "tags": ["foidslop", "language"] },
+    { "term": "femcel", "weight": 3.0, "tags": ["subculture", "gender"] },
+    { "term": "incel", "weight": 2.4, "tags": ["subculture", "gender"] },
+    { "term": "looksmaxxing", "weight": 2.8, "tags": ["subculture", "language"] },
+    { "term": "maxxing", "weight": 2.0, "tags": ["language"] },
+    { "term": "slang", "weight": 1.8, "tags": ["language"] },
+    { "term": "meme", "weight": 1.5, "tags": ["internet"] },
+    { "term": "viral", "weight": 1.0, "tags": ["internet"] },
+    { "term": "tiktok", "weight": 1.4, "tags": ["internet"] },
+    { "term": "reddit", "weight": 1.2, "tags": ["internet"] },
+    { "term": "influencer", "weight": 1.5, "tags": ["internet", "celebrity"] },
+    { "term": "dating", "weight": 1.6, "tags": ["relationships"] },
+    { "term": "relationship", "weight": 1.4, "tags": ["relationships"] },
+    { "term": "girl dinner", "weight": 2.5, "tags": ["food", "gender"] },
+    { "term": "booktok", "weight": 1.8, "tags": ["media", "internet"] },
+    { "term": "anime", "weight": 1.2, "tags": ["media", "fandom"] },
+    { "term": "fandom", "weight": 1.2, "tags": ["media", "fandom"] },
+    { "term": "trial", "weight": 1.5, "tags": ["case"] },
+    { "term": "mistrial", "weight": 2.0, "tags": ["case"] },
+    { "term": "lawsuit", "weight": 1.3, "tags": ["case"] },
+    { "term": "true crime", "weight": 1.8, "tags": ["case"] },
+    { "term": "postpartum", "weight": 1.8, "tags": ["case", "motherhood"] },
+    { "term": "mother", "weight": 0.8, "tags": ["motherhood"] },
+    { "term": "motherhood", "weight": 1.2, "tags": ["motherhood"] }
+  ],
+  "downrankTerms": [
+    { "term": "stock", "weight": 1.0 },
+    { "term": "earnings", "weight": 1.5 },
+    { "term": "weather", "weight": 1.5 },
+    { "term": "football", "weight": 1.0 },
+    { "term": "baseball", "weight": 1.0 },
+    { "term": "basketball", "weight": 1.0 }
+  ]
+}
