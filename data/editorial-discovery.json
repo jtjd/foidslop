@@ -3,7 +3,7 @@
   "lookbackHours": 72,
   "maxSignalsPerFeed": 40,
   "maxInboxItems": 30,
-  "minimumScore": 4.5,
+  "minimumScore": 4.75,
   "minimumSuccessfulFeeds": 2,
   "feeds": [
     {
@@ -64,8 +64,8 @@
     { "term": "maxxing", "weight": 2.0, "tags": ["language"] },
     { "term": "slang", "weight": 1.8, "tags": ["language"] },
     { "term": "meme", "weight": 1.5, "tags": ["internet"] },
-    { "term": "viral", "weight": 1.0, "tags": ["internet"] },
-    { "term": "tiktok", "weight": 1.4, "tags": ["internet"] },
+    { "term": "viral", "weight": 0.4, "tags": ["internet"] },
+    { "term": "tiktok", "weight": 0.7, "tags": ["internet"] },
     { "term": "reddit", "weight": 1.2, "tags": ["internet"] },
     { "term": "influencer", "weight": 1.5, "tags": ["internet", "celebrity"] },
     { "term": "dating", "weight": 1.6, "tags": ["relationships"] },
