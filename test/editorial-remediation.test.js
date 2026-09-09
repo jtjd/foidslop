@@ -36,11 +36,11 @@ test('editorial overrides only target real recipes and supported fields', () => 
 
 test('every published recipe has bespoke editorial coverage', () => {
   const published = db.meals.filter(meal => meal.status === 'published');
-  const entries = publishedConfig.entries || {};
-  assert.equal(Object.keys(entries).length, published.length, 'bespoke published copy count must match published recipe count');
+  const covered = published.filter(meal => mergedEntries[meal.slug]);
+  assert.equal(covered.length, published.length, 'every published recipe must have bespoke editorial coverage in the merged override source');
 
   for (const meal of published) {
-    const override = entries[meal.slug];
+    const override = mergedEntries[meal.slug];
     assert.ok(override, `missing bespoke copy for ${meal.slug}`);
     assert.ok(override.headnote && override.headnote.trim().length >= 60, `missing/thin bespoke headnote for ${meal.slug}`);
     assert.ok(override.substitutions || override.storage, `missing useful supplemental copy for ${meal.slug}`);

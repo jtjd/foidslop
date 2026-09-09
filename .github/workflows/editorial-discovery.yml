@@ -1,0 +1,52 @@
+name: Editorial Discovery
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/editorial-discover.js'
+      - 'data/editorial-discovery.json'
+      - '.github/workflows/editorial-discovery.yml'
+  schedule:
+    - cron: '20 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: editorial-discovery
+  cancel-in-progress: true
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Refresh editorial inbox
+        run: node scripts/editorial-discover.js
+
+      - name: Validate editorial desk
+        run: node scripts/editorial-desk.js check
+
+      - name: Commit changed inbox
+        run: |
+          if [ -z "$(git status --porcelain -- data/editorial-inbox.json)" ]; then
+            echo "No editorial inbox changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/editorial-inbox.json
+          git commit -m "Refresh editorial discovery inbox [skip ci]"
+          git push
