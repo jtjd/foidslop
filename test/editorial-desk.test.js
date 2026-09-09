@@ -13,10 +13,10 @@ test('editorial desk validates checked-in story packets', () => {
   assert.match(output, /Editorial desk OK:/);
 });
 
-test('editorial desk lists the seeded Lindsay Clancy candidate', () => {
+test('editorial desk lists the Lindsay Clancy packet at an active lifecycle stage', () => {
   const output = execFileSync(process.execPath, ['scripts/editorial-desk.js', 'list'], {
     cwd: ROOT,
     encoding: 'utf8'
   });
-  assert.match(output, /candidate\s+9\.1\s+lindsay-clancy-case/);
+  assert.match(output, /(?:candidate|researching|draft|approved|published)\s+9\.1\s+lindsay-clancy-case/);
 });
