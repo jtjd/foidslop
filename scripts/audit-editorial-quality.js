@@ -15,7 +15,11 @@ const overrides = {
   ...(config.entries || {}),
   ...(publishedConfig.entries || {})
 };
-const publishedOverrides = publishedConfig.entries || {};
+const publishedOverrides = Object.fromEntries(
+  (db.meals || [])
+    .filter(meal => meal.status === 'published' && overrides[meal.slug])
+    .map(meal => [meal.slug, overrides[meal.slug]])
+);
 
 const badPastaSwap = /^Different short pasta shapes swap freely here\. No ([^?]+)\? Pecorino, asiago, or extra-black-pepper parmesan covers the same role in the sauce\.$/;
 const suspiciousHeadnote = /\b(save some cooking water|save a little cooking water|finish in the sauce|brown or bloom|give .* enough heat or seasoning|cook the filling until hot)\b/i;
