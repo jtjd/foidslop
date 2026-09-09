@@ -10,6 +10,7 @@
     "culture:check": "node scripts/editorial-desk.js check && node scripts/publish-culture.js --check && node scripts/publish-culture-products.js --check && node scripts/sync-navigation.js --check",
     "editorial:check": "node scripts/editorial-desk.js check",
     "editorial:list": "node scripts/editorial-desk.js list",
+    "editorial:discover": "node scripts/editorial-discover.js",
     "editorial:materialize": "node scripts/editorial-desk.js materialize",
     "editorial:promote": "node scripts/editorial-desk.js promote",
     "optimize": "node scripts/optimize-images.js",
