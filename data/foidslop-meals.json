@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-09T00:00:00.000Z",
+  "generated": "2026-09-10T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -8395,7 +8395,10 @@
       "imageAlt": "Photograph of plate of golden butter mochi cubes dusted with powdered sugar",
       "seoTitle": "Butter Mochi Bites Recipe for One | foidslop",
       "seoDescription": "Sweet, chewy Hawaiian butter mochi cubes. A dense, satisfying treat. Butter mochi bites and fresh berries make this snack recipe for one in 5 minutes.",
-      "dateModified": "2026-09-08"
+      "dateModified": "2026-09-08",
+      "headnote": "Warm the butter mochi only enough to soften the center while keeping the edges pleasantly chewy. Serve the bites in a small pile with berries or ice cream alongside rather than underneath so the mochi does not turn wet.",
+      "substitutions": "Any plain or coconut-forward butter mochi works here, whether homemade or store-bought. Fresh mango, pineapple, or strawberries can replace berries, and whipped cream can replace ice cream for a lighter finish.",
+      "storage": "Keep butter mochi covered at room temperature for a day or refrigerated for several days depending on the recipe or package. Rewarm only the portion you plan to eat so repeated heating does not toughen the rice flour."
     },
     {
       "id": 132,
@@ -8452,8 +8455,10 @@
       "imageAlt": "Photograph of plate of cucumber ribbons rolled up with smoked salmon and cream cheese",
       "seoTitle": "Smoked Salmon and Cream Cheese Cucumber Rolls | foidslop",
       "seoDescription": "Thin ribbons of cucumber wrapped around smoked salmon and cream cheese. Made for one in 10 minutes, with English cucumber and smoked salmon.",
-      "substitutions": "Missing English cucumber? Any sturdy cracker-worthy substitute works. The point is contrast between bites, not exact replication. For smoked salmon and cream cheese cucumber rolls, make the swap in the same one-person portion and taste before adding more seasoning.",
-      "dateModified": "2026-09-09"
+      "substitutions": "Smoked trout can replace salmon, and labneh or plain whipped cream cheese both work for the filling. If cucumber ribbons keep tearing, use thick cucumber rounds and build the same ingredients as open-faced bites instead.",
+      "dateModified": "2026-09-09",
+      "headnote": "Peel the cucumber into long ribbons and blot them dry before spreading the cream cheese mixture. Keep the salmon layer thin enough that each strip can roll tightly, then add dill only at the end so it stays fresh.",
+      "storage": "These rolls are best assembled shortly before eating because cucumber releases water. Keep the smoked salmon, cream cheese mixture, and cucumber refrigerated separately for up to one day, then roll just before serving."
     },
     {
       "id": 133,
@@ -8494,10 +8499,11 @@
       "notes": "The crunch of the pickle against the creamy peanut butter is the whole point.",
       "photo_search": "white bread sandwich cut open to reveal peanut butter and dill pickle slices",
       "publishDate": "2026-09-10",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of white bread sandwich cut open to reveal peanut butter and dill pickle slices",
       "seoTitle": "Peanut Butter and Pickle Sandwich Recipe for One | foidslop",
-      "seoDescription": "The viral sweet, salty, and sour sandwich. Do not knock it until you try it. A sandwich recipe for one, ready in 3 minutes with soft white bread."
+      "seoDescription": "The viral sweet, salty, and sour sandwich. Do not knock it until you try it. A sandwich recipe for one, ready in 3 minutes with soft white bread.",
+      "dateModified": "2026-09-10"
     },
     {
       "id": 134,
