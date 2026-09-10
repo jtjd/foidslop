@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-10T16:28:31.788Z",
+  "generatedAt": "2026-09-10T20:54:56.537Z",
   "lookbackHours": 72,
-  "signalCount": 48,
-  "candidateCount": 3,
+  "signalCount": 50,
+  "candidateCount": 1,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -47,97 +47,6 @@
     }
   ],
   "candidates": [
-    {
-      "id": "discovery-9f21655ce8f4",
-      "topic": "My Shayla Meaning 2026: TikTok Meme, Origin & Viral Story",
-      "score": 5.53,
-      "audienceTags": [
-        "internet"
-      ],
-      "matchedTerms": [
-        "meme",
-        "viral",
-        "tiktok"
-      ],
-      "signalCount": 2,
-      "sourceCount": 2,
-      "firstSeenAt": "2026-09-07T16:58:46.000Z",
-      "lastSeenAt": "2026-09-10T07:22:24.000Z",
-      "reasons": [
-        "Audience terms: meme, viral, tiktok.",
-        "2 independent source labels are carrying the story.",
-        "The newest signal is less than 24 hours old."
-      ],
-      "signals": [
-        {
-          "title": "My Shayla Meaning 2026: TikTok Meme, Origin & Viral Story",
-          "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE93cE5qT0FuVXBjekNJdzcwTjlOeTZ1T1c0QndZdGg1RExHVXd4bXpIVWhuMmoyeDV0ZEJObTRMY1ZIVlZrR09FXzFrNkhSTjQ?oc=5",
-          "publisher": "tycoonstory.com",
-          "publishedAt": "2026-09-10T07:22:24.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "Viral TikTok Meme Coin BIPOLAR Launches Tomorrow. But There’s a Trap",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOSFctcnd1UXdad2ZCODlSUDlpQ2VmM2ZvTW85WFFjWEhWRjVrQnFXRlA4ZUlSVFZialBpb1U3WHpZMWRNeFdieWlaWDNFQ0lpYmU0YW04Q2lLbDNEd2pNY3JvdzFSNXBRbk9MVWR1QVppcDdVemZ0Q0lndm5xNlEzOV9fc0dZN1dOUUFpZzM2N3dwbDU5ZzlQbWRWaw?oc=5",
-          "publisher": "Yahoo Finance",
-          "publishedAt": "2026-09-07T16:58:46.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        }
-      ]
-    },
-    {
-      "id": "discovery-fd95949dcdc6",
-      "topic": "'No cap': Ireland's most searched slang words so far in 2026 confirmed",
-      "score": 5.15,
-      "audienceTags": [
-        "language"
-      ],
-      "matchedTerms": [
-        "slang"
-      ],
-      "signalCount": 3,
-      "sourceCount": 3,
-      "firstSeenAt": "2026-09-08T04:02:37.000Z",
-      "lastSeenAt": "2026-09-09T12:52:56.000Z",
-      "reasons": [
-        "Audience terms: slang.",
-        "3 independent source labels are carrying the story.",
-        "3 fresh signals were clustered into the same topic."
-      ],
-      "signals": [
-        {
-          "title": "Decoding Gen Z: the top 15 slang words Irish teens are googling right now",
-          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE8tLTFqTURHdDhhYTNMNWV1Vm5zdmhSTjRZc29ia280Qm54YldYUW10UDNEYS1rZF9wNmFuUjAyRlI3UjFqMm50UmVaLUF1c3Atc255VzJkWmZHOHcxRmlOQUJBeG5DbUN3NW4yU1NYSmJvVTZU0gF6QVVfeXFMTzh0d2t5NFJZZDlhTkVSbnI4SGdDNHBxWHh0alhfRWVacVVBU1BJbXptVXBlbG1RakphYnJWeGRxM01uWFlFbTdmMzFuY0lwMUZxN2g4WW5xQ21NXzhiTDIwREREVDBodjVjVERBbFpHM2QtOE45VnkxLUE?oc=5",
-          "publisher": "IrishCentral",
-          "publishedAt": "2026-09-09T12:52:56.000Z",
-          "feedId": "google-internet-slang",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / internet slang"
-        },
-        {
-          "title": "From ’67’ to ‘unc’, these are Australia’s most searched slang words of 2026",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSnRnVUVQZE9XV1NFdHBtSk83UjhtcUNXVkQ2R1RNZk9MUHR4ekV6b0p3OThhUTNveXd5MlZCMHNiMXVEd01LNmltYi1KRmVIci02YXItLUhFeHFZTnpKVVBtN2xYd1JwRDFTNjlOUjJDbUcxc01qVmZGMlVoNGhUejV2MFZKN1ZCbUxrMUtfNTZpU0c4V0I0b2kwSXVjUnM?oc=5",
-          "publisher": "Glam Adelaide",
-          "publishedAt": "2026-09-08T21:39:36.000Z",
-          "feedId": "google-internet-slang",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / internet slang"
-        },
-        {
-          "title": "'No cap': Ireland's most searched slang words so far in 2026 confirmed",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOLU8wZF9MVzhLRGNZVlFXZUkyYUlRdUh6LWVLQ3VsT0ZlNGxhdUt3VjBVSGpjZXVmZmdsWHIzbFVTVnZyVkFkbmxHTXM3WGR5cUNnUjZzZXhmOUNWSE5FMlMtQjVxTzZ3T0pOQll0d2dyWmtFUlRoOHlGYnBORnluQWZTWUhVQW1o0gGOAUFVX3lxTE4zTkJ3MjhzRGhoaGtSSktzRDFGdGhxOFI2S1o4M09udnVlS2JfUnhVdDRzbGJnWDRjalV3LXl6b0RKNElySVFsY1pUZ0lVUy1WazlOWV9CTk1yMlN6NXMtMUFHeUJRRWJRS1I0VkZDSDlNSGxRUEs2RHhjdkNCU25lUFpYNGFQX3pyWHBsR1E?oc=5",
-          "publisher": "Irish Mirror",
-          "publishedAt": "2026-09-08T04:02:37.000Z",
-          "feedId": "google-internet-slang",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / internet slang"
-        }
-      ]
-    },
     {
       "id": "discovery-ef403acdc9b2",
       "topic": "Apoorva Mukhija And Amin Jaz's Viral Kissing Video Has Fans Convinced They're Dating",
