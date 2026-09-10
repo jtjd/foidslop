@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-10T04:49:05.611Z",
+  "generatedAt": "2026-09-10T11:25:31.347Z",
   "lookbackHours": 72,
-  "signalCount": 50,
-  "candidateCount": 0,
+  "signalCount": 49,
+  "candidateCount": 1,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -46,5 +46,48 @@
       "error": "HTTP 429"
     }
   ],
-  "candidates": []
+  "candidates": [
+    {
+      "id": "discovery-c04a1ba8b16a",
+      "topic": "My Shayla Meaning 2026: TikTok Meme, Origin & Viral Story",
+      "score": 5.83,
+      "audienceTags": [
+        "internet"
+      ],
+      "matchedTerms": [
+        "meme",
+        "viral",
+        "tiktok"
+      ],
+      "signalCount": 2,
+      "sourceCount": 2,
+      "firstSeenAt": "2026-09-07T16:58:46.000Z",
+      "lastSeenAt": "2026-09-10T07:22:24.000Z",
+      "reasons": [
+        "Audience terms: meme, viral, tiktok.",
+        "2 independent source labels are carrying the story.",
+        "The newest signal is less than 24 hours old."
+      ],
+      "signals": [
+        {
+          "title": "My Shayla Meaning 2026: TikTok Meme, Origin & Viral Story",
+          "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE93cE5qT0FuVXBjekNJdzcwTjlOeTZ1T1c0QndZdGg1RExHVXd4bXpIVWhuMmoyeDV0ZEJObTRMY1ZIVlZrR09FXzFrNkhSTjQ?oc=5",
+          "publisher": "Tycoonstory Media",
+          "publishedAt": "2026-09-10T07:22:24.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "Viral TikTok Meme Coin BIPOLAR Launches Tomorrow. But There’s a Trap",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOSFctcnd1UXdad2ZCODlSUDlpQ2VmM2ZvTW85WFFjWEhWRjVrQnFXRlA4ZUlSVFZialBpb1U3WHpZMWRNeFdieWlaWDNFQ0lpYmU0YW04Q2lLbDNEd2pNY3JvdzFSNXBRbk9MVWR1QVppcDdVemZ0Q0lndm5xNlEzOV9fc0dZN1dOUUFpZzM2N3dwbDU5ZzlQbWRWaw?oc=5",
+          "publisher": "Yahoo Finance",
+          "publishedAt": "2026-09-07T16:58:46.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        }
+      ]
+    }
+  ]
 }
