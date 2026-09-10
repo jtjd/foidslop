@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-09T20:45:44.752Z",
+  "generatedAt": "2026-09-10T04:49:05.611Z",
   "lookbackHours": 72,
-  "signalCount": 46,
-  "candidateCount": 2,
+  "signalCount": 50,
+  "candidateCount": 0,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -46,97 +46,5 @@
       "error": "HTTP 429"
     }
   ],
-  "candidates": [
-    {
-      "id": "discovery-a5d746d30715",
-      "topic": "Viral Cat in the Hat trend sparks police, TikTok investigation in Gentry",
-      "score": 5.13,
-      "audienceTags": [
-        "internet"
-      ],
-      "matchedTerms": [
-        "viral",
-        "tiktok"
-      ],
-      "signalCount": 3,
-      "sourceCount": 3,
-      "firstSeenAt": "2026-09-08T14:17:00.000Z",
-      "lastSeenAt": "2026-09-09T09:00:00.000Z",
-      "reasons": [
-        "Audience terms: viral, tiktok.",
-        "3 independent source labels are carrying the story.",
-        "3 fresh signals were clustered into the same topic.",
-        "The newest signal is less than 24 hours old."
-      ],
-      "signals": [
-        {
-          "title": "Viral Cat in the Hat trend sparks police, TikTok investigation in Gentry",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPMjc4SmZ4NS1UTm80TGQyUHJveGVjckJBSzRKY0NNQktaSnhPc09NRFpHbjloM1JKeFlKaG1fa19JZ2hWaTd1WGppX1NwM1FkMjhpTm5CektHUldDUUllZzFmYktMRU1sTXoxX2ZXOVQ1OFdtblg3NTgteWtFU0NER1d2c19ycEFHVEhnZkpOUlhPZVYz?oc=5",
-          "publisher": "Northwest Arkansas Democrat-Gazette",
-          "publishedAt": "2026-09-09T09:00:00.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "AI-generated Cat in the Hat TikTok trend alarms North State parents, Redding police say",
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQTGVaMmdVcjFoczAzbHZubjNxMzJSdXlLZzkxaGRuOU4wRVpNVlIxYTkzU0ZJeV90RFJ4OGo4U2M1RTJwRnhKZV9BdmxSODZCVWYyeHJsY2ZRTEREeG55MEd0Z0NLWE1PUk4xNXdjZ0F0SlZ5Z3lBbldVVjVnTThOOXota3B0YUllUjlYNk1wREJUYUZXeGJXa1hobWZVTjZjV1pMM0Vqcmt3ZnNrVlI4SFBTXzNqb1E?oc=5",
-          "publisher": "KRCR",
-          "publishedAt": "2026-09-08T23:34:49.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "Law enforcement agencies warn parents of concerning ‘Cat in the Hat’ trend",
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOaEpEclo0UnNLelJpSjVicUlFZEo5bVlRREIzUDloWjJ0THFHOWpReWQySUhUUEFVQXl1bFBiR1d0NkRmZjNfWC1KNXViLWYwdTZmaGpGdUlBcHVQOFFibG92NGl0OXpsam5PeUpOamJ6YXBfdG5oZGJTVXo5MFhydmN1WHdSbHhkS19MYlFGSTV4eVhTcHZ2NmRMRTdkZw?oc=5",
-          "publisher": "New York Post",
-          "publishedAt": "2026-09-08T14:17:00.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        }
-      ]
-    },
-    {
-      "id": "discovery-0366f8392212",
-      "topic": "'No cap': Ireland's most searched slang words so far in 2026 confirmed",
-      "score": 4.93,
-      "audienceTags": [
-        "language"
-      ],
-      "matchedTerms": [
-        "slang"
-      ],
-      "signalCount": 2,
-      "sourceCount": 2,
-      "firstSeenAt": "2026-09-08T04:02:37.000Z",
-      "lastSeenAt": "2026-09-08T21:39:36.000Z",
-      "reasons": [
-        "Audience terms: slang.",
-        "2 independent source labels are carrying the story.",
-        "The newest signal is less than 24 hours old."
-      ],
-      "signals": [
-        {
-          "title": "From ’67’ to ‘unc’, these are Australia’s most searched slang words of 2026",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSnRnVUVQZE9XV1NFdHBtSk83UjhtcUNXVkQ2R1RNZk9MUHR4ekV6b0p3OThhUTNveXd5MlZCMHNiMXVEd01LNmltYi1KRmVIci02YXItLUhFeHFZTnpKVVBtN2xYd1JwRDFTNjlOUjJDbUcxc01qVmZGMlVoNGhUejV2MFZKN1ZCbUxrMUtfNTZpU0c4V0I0b2kwSXVjUnM?oc=5",
-          "publisher": "glamadelaide.com.au",
-          "publishedAt": "2026-09-08T21:39:36.000Z",
-          "feedId": "google-internet-slang",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / internet slang"
-        },
-        {
-          "title": "'No cap': Ireland's most searched slang words so far in 2026 confirmed",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOLU8wZF9MVzhLRGNZVlFXZUkyYUlRdUh6LWVLQ3VsT0ZlNGxhdUt3VjBVSGpjZXVmZmdsWHIzbFVTVnZyVkFkbmxHTXM3WGR5cUNnUjZzZXhmOUNWSE5FMlMtQjVxTzZ3T0pOQll0d2dyWmtFUlRoOHlGYnBORnluQWZTWUhVQW1o0gGOAUFVX3lxTE4zTkJ3MjhzRGhoaGtSSktzRDFGdGhxOFI2S1o4M09udnVlS2JfUnhVdDRzbGJnWDRjalV3LXl6b0RKNElySVFsY1pUZ0lVUy1WazlOWV9CTk1yMlN6NXMtMUFHeUJRRWJRS1I0VkZDSDlNSGxRUEs2RHhjdkNCU25lUFpYNGFQX3pyWHBsR1E?oc=5",
-          "publisher": "Irish Mirror",
-          "publishedAt": "2026-09-08T04:02:37.000Z",
-          "feedId": "google-internet-slang",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / internet slang"
-        }
-      ]
-    }
-  ]
+  "candidates": []
 }
