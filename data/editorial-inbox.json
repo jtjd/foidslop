@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-11T04:46:09.708Z",
+  "generatedAt": "2026-09-11T11:27:36.441Z",
   "lookbackHours": 72,
-  "signalCount": 52,
+  "signalCount": 48,
   "candidateCount": 1,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
@@ -48,9 +48,9 @@
   ],
   "candidates": [
     {
-      "id": "discovery-7adfb7b6f717",
-      "topic": "Viral video indian tiktok",
-      "score": 5.03,
+      "id": "discovery-a048b5009ec4",
+      "topic": "Judge calls Boca Raton nurse’s viral TikTok 'vile,' recommends $250 fine",
+      "score": 5.13,
       "audienceTags": [
         "internet"
       ],
@@ -58,58 +58,40 @@
         "viral",
         "tiktok"
       ],
-      "signalCount": 5,
+      "signalCount": 3,
       "sourceCount": 3,
-      "firstSeenAt": "2026-09-08T16:46:06.000Z",
-      "lastSeenAt": "2026-09-11T03:08:52.000Z",
+      "firstSeenAt": "2026-09-10T11:35:15.000Z",
+      "lastSeenAt": "2026-09-10T20:49:00.000Z",
       "reasons": [
         "Audience terms: viral, tiktok.",
         "3 independent source labels are carrying the story.",
-        "5 fresh signals were clustered into the same topic.",
+        "3 fresh signals were clustered into the same topic.",
         "The newest signal is less than 24 hours old."
       ],
       "signals": [
         {
-          "title": "++ORIGINAL+CLIP+XXX+!!Riya Viral Video , Tiktok Star Riya Viral Video Download Link",
-          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOWXpSbkpvTHhKSEE1R2dpQW9kb0lFZUxjM0JiX1ZDMC1VOWlUeWhzdW5EempTbVNDS3hlMDFjeUg1VHo1TUs3UGg3LTE0Y05xMzlSQVczNzlZdVp0OHlKS2c0ZVRLY0F3a2VPb3lISVFHbzgwVUJwNVE3dy1PV1VYWEFibFpFUUZQLV9rMG5JMnlKdTVGS1lrOF9JQk1pYUpkakptMFdUUTd0T01TM2dRWkVCbGJ3d2lGU3VJTFJhLTBEYmJmdWhpbXJwdFlZdzZ0LXc?oc=5",
-          "publisher": "Cal Poly Pomona",
-          "publishedAt": "2026-09-11T03:08:52.000Z",
+          "title": "Judge recommends $250 fine, reprimand for fired Florida nurse who targeted Karoline Leavitt in TikTok video",
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQN0M5a2hlM3MzT1hwTWVieG1yX2hWUGpLRUJqQ3VJQlFmX0gwQlR0Y0pCUUhZZWp4N01iV2dKX1NQUXVrb25menA2U0NHVG13OXdLT3dnNGZfWGVzY3ZuYXlVbXoyOVNwQVJlQWFDX1Z2a0RyeDBINzR3UUgxWEhtMjl1dFQyM2J5c3J3cnpOMW5udnZaeF9Ua1N4bTF4dlY2Wk1QaW90clNvejcydU02aVJmTE9sM3JZd2tiemN1RlVmVDZkckZVMmZB?oc=5",
+          "publisher": "Florida’s Voice",
+          "publishedAt": "2026-09-10T20:49:00.000Z",
           "feedId": "google-tiktok-culture",
           "feedKind": "google-news",
           "feedLabel": "Google News / TikTok culture"
         },
         {
-          "title": "++ORIGINAL+CLIP+XXX+!!Sofik Viral Video Bangla MMS , Tiktok Star Sofik Sonali Viral Video Instagram",
-          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNSXNJUW1vOE5KbTVRV29OTHlReXlFajVITjBEVFdBLTVBcndYdEtFa2EtSE1SSjZqc3RjcnFEWWFJUlU4aWZSd1E2a2x6NXIyWkkzeGc5S1FZRDBua09vOUQtWlJCWEVhU18xZ1BSSnlwVEY3aTRMMEN6aldrZWFIRUtEV0VPNnZCbk9JbllQZV91UG1BTEtRZW54MERvZXFZYWZiTTBadU1WMEtZU281UVdtTGl0aldmOHFtX2wzT0luQnAyMXZjVXM4dVBtZTNUbFE?oc=5",
-          "publisher": "Cal Poly Pomona",
-          "publishedAt": "2026-09-11T03:08:36.000Z",
+          "title": "Judge calls Boca Raton nurse’s viral TikTok 'vile,' recommends $250 fine",
+          "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQYjdrazNwd3NUWlc1UlVoazlHalo5R2tPQmlJaWFIYWZXdEI2REN3N2RlcnBERktob1YydklRaVg0R0gtUWR6MU5iZEpYbHNTMnZiS3VmZm93VThWbjRKTHYxa0ZwakpSYTZyV196SXEtRVdnVS1tYmU2RkV3LW9pZkIzZ0h0a0dKRlJtTmJqdHZuUnVQMmJqQUcyM1dIbU9EeXd0a1hhV0NLRzRPYmlDYmJaZzh6dmloc09DeW5NSm9EeWtOdThxTEpzdXlKM3N4SUpkS3BZQ184dXdNazA2ZnYydHFJZzJqTXBVWW04Nk5CVFhZTWp3SnUwWVFBLXhWYkE?oc=5",
+          "publisher": "WPEC",
+          "publishedAt": "2026-09-10T17:38:50.000Z",
           "feedId": "google-tiktok-culture",
           "feedKind": "google-news",
           "feedLabel": "Google News / TikTok culture"
         },
         {
-          "title": "Viral video indian tiktok",
-          "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQQWJTYzlITm8wN204VzNyMkdxaHhyZzEzU0lqNzVxaXY3OWEwbnY0YXM5Q3I0cFI3andBaDJGRXpUSUdMalJwQ0k5Z05SSE5nUTRKZE92ZWwzVGN1MUp5SlUtbE5PUV9GSjltQlZsN0RXSi1weVVUd0laYTlyVVZ5NHhzWDRxZ0F5cEswSnZweG0zT1Rac3hCQi1nRy05VnpDVVRPaGRCNllHQmpSZUZQalNFMEM4dGFLRW85b2oyVWs1Z091bUpFcExxNVZ2aHpUTzB2QmRpenliRFd1SzNUWGV6R1JaOWJFbTB4bk5FYWZzaE0xaXc?oc=5",
-          "publisher": "uv.es",
-          "publishedAt": "2026-09-10T16:42:15.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "++ORIGINAL+CLIP+XXX+!!Taspia Islam Viral Video , Bangladeshi Tiktok Star Taspia Islam Viral Video Download Link",
-          "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQLVJrRE9VXzdFdDRRVkpJcFVzZEs5cGZoejlIMVFTekhQbjFvcTJJZmdtWXNGN2gtT1lWMjlSSHJkSmNDVHFleWNRd2hkbURlbEs1VGhKbGNiWFhzejFpQWhFWEozUzVhbUlEVlo5andBUXpFTnNxZmNQZS1MM21xYWZYM0E3OGg2S2RoaTZVWGpGMTZpS3I0U3VYbWptUFFlbGNKZjdPRGV6MDBZRXhaR3NSWms0aXBxNzNnZ0JXckJZdlpZOHJLV2ZsSDJpLXFXemV3X2lSR2Iyd2xubUtQNTU5R2wtNG9kUU5JZEpvSTlHUnN1SFE?oc=5",
-          "publisher": "uv.es",
-          "publishedAt": "2026-09-10T10:08:24.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "Texas High School Football TikTok Star Isaiah Haynes Silenced The Haters With Advice From Dez Bryant",
-          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQcXU1bzZ0dmRQeTg3Z0ktT2NFSjJOcGl6bEtBZktVUnM0c2UwdWQ2RzRyY2llcmFGd3laSk8yMU9wZGxHVFZFdmxScXdJOTg0cG1iRFZlbGNOVEU5cTJVelBRbGM1MlY1LUJGUHh0X2xwdlJDV3NnTDlyMzFrbmlFSVc0cEhEb3FoeV9ycUZFRkQ0R1VjblhSNmRYaHhpQ0tFbFhDM204YmZTRk9scDBLYnQ1T3V2eVRiQVlKdUZpanhHODA1Njdr?oc=5",
-          "publisher": "BroBible",
-          "publishedAt": "2026-09-08T16:46:06.000Z",
+          "title": "Judge recommends fine, reprimand for nurse who wished Karoline Leavitt difficult birth",
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNS09qajRyY09lNFAwRFJCdDlfdjdoU3JJVm1wR0ZnaUdvTVRPdDNMUFJ1NTg0c0hCX0lHREJvSmVaR25CSW0zcktFMlpMRHFVdnpZZU9lb1VpdU1ZUlFzWWdFUGVXQ3I4QzdrQUNfeGFXU3ZEWHBFSVFuQ09PcTNGOUhteklubmRVVHdtUkEzOU4wTF8zZ3RINnVmMlpfdDctRlgzTXFfcFNhNmY2VnVybTBnWTdyQ2tSdVV5ZFRybmJnRG9HLXdtZzJB0gHSAUFVX3lxTE9nX0w5dVRVNkR4RkRIYk5idGo4T3lsUDhsZjAzRnJXWXh0d3VvRklBN1RGX1ZjV2RVZmJtVjBveTYtVFJlLW44WFRYREhPZjBVZHIzc1Fjd3d5S05vMTZ3NHRFUDNmM083N3BUZWloR0lZbmI2SkY4UEhTcHRJLXZKcm9yb2pzQXZDZEVSSjR1QjRRWThUUVI3TVZyWmFpR0xoZHc2dE9teGZNQVB3bk1LRVkxWWl5ZkJxWmF4eXNqbF85Vk1iRWVoUWNiM0Z0U2txZw?oc=5",
+          "publisher": "NBC 6 South Florida",
+          "publishedAt": "2026-09-10T11:35:15.000Z",
           "feedId": "google-tiktok-culture",
           "feedKind": "google-news",
           "feedLabel": "Google News / TikTok culture"
