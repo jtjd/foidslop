@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-10T20:54:56.537Z",
+  "generatedAt": "2026-09-11T04:46:09.708Z",
   "lookbackHours": 72,
-  "signalCount": 50,
+  "signalCount": 52,
   "candidateCount": 1,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
@@ -48,44 +48,71 @@
   ],
   "candidates": [
     {
-      "id": "discovery-ef403acdc9b2",
-      "topic": "Apoorva Mukhija And Amin Jaz's Viral Kissing Video Has Fans Convinced They're Dating",
-      "score": 5.08,
+      "id": "discovery-7adfb7b6f717",
+      "topic": "Viral video indian tiktok",
+      "score": 5.03,
       "audienceTags": [
-        "internet",
-        "relationships"
+        "internet"
       ],
       "matchedTerms": [
         "viral",
-        "dating"
+        "tiktok"
       ],
-      "signalCount": 2,
-      "sourceCount": 2,
-      "firstSeenAt": "2026-09-08T16:41:49.000Z",
-      "lastSeenAt": "2026-09-10T00:30:00.000Z",
+      "signalCount": 5,
+      "sourceCount": 3,
+      "firstSeenAt": "2026-09-08T16:46:06.000Z",
+      "lastSeenAt": "2026-09-11T03:08:52.000Z",
       "reasons": [
-        "Audience terms: viral, dating.",
-        "2 independent source labels are carrying the story.",
+        "Audience terms: viral, tiktok.",
+        "3 independent source labels are carrying the story.",
+        "5 fresh signals were clustered into the same topic.",
         "The newest signal is less than 24 hours old."
       ],
       "signals": [
         {
-          "title": "Apoorva Mukhija’s kissing video goes viral: Rumoured romance with Amin Jaz sparks ‘Hindu-Muslim’ debate; kn...",
-          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPSkxLMm00OVRCWjJKTU9sZXpIeDdMTXJqeklSMmktSkswdG1fNHJ3NEctT3FoSVpaQ2N3UnZ2RW1MQ1g1blA4d1Y4ZTVSZ1E3MjhRWDNvOURjMjUwRzRCQWNIdXFjLWR4X015bGNxTXlaZUtNZ0NuN0tfZTc4RDI3RDRBSHA5OHZrc190YkNJUHdyLWMyNWtoSjloNFgxa01UUEVUVDR5R2phb2RQNEl6TXlEcE8yWkJQb3VQSNIBwgFBVV95cUxNV3Jqd2wxZy1qZFViWDZDR0dpQzlubzFFdm1KNzQxOWJCNjJKWC12bHZKSThJbmtmOGx5RUVhdGlVRXIxR2F5YnBvc3loaWdfTFZuWnJfRnBXNV9OQWt4ZnlfYjZMREtxa0huZVFwMXpfRlE4REZaQmNnUzV4LVBxVVBnNDd2UHYyTTQ1ay0yc3pTSnExOHd6NnhrLWk5NFJPY2QtWklycUo0SHVZbHA3SkRWZm02TVRsdkhxVXNldjRMZw?oc=5",
-          "publisher": "Bhaskar English",
-          "publishedAt": "2026-09-10T00:30:00.000Z",
-          "feedId": "google-dating-relationships",
+          "title": "++ORIGINAL+CLIP+XXX+!!Riya Viral Video , Tiktok Star Riya Viral Video Download Link",
+          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOWXpSbkpvTHhKSEE1R2dpQW9kb0lFZUxjM0JiX1ZDMC1VOWlUeWhzdW5EempTbVNDS3hlMDFjeUg1VHo1TUs3UGg3LTE0Y05xMzlSQVczNzlZdVp0OHlKS2c0ZVRLY0F3a2VPb3lISVFHbzgwVUJwNVE3dy1PV1VYWEFibFpFUUZQLV9rMG5JMnlKdTVGS1lrOF9JQk1pYUpkakptMFdUUTd0T01TM2dRWkVCbGJ3d2lGU3VJTFJhLTBEYmJmdWhpbXJwdFlZdzZ0LXc?oc=5",
+          "publisher": "Cal Poly Pomona",
+          "publishedAt": "2026-09-11T03:08:52.000Z",
+          "feedId": "google-tiktok-culture",
           "feedKind": "google-news",
-          "feedLabel": "Google News / dating and relationships"
+          "feedLabel": "Google News / TikTok culture"
         },
         {
-          "title": "Apoorva Mukhija And Amin Jaz's Viral Kissing Video Has Fans Convinced They're Dating",
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOTEo4WG12Qno5amVxMUpHNlM5WWkyWG9yY2ROUFd3Qy1YMEpfNzNoYkY4OW5QZkFfck9aWm4wQS1MUWlQT2FOQnBqUlZuVVpaT2toOWZpMHkzdVU2UGM5eDA4TFNNbDY5ZWs4Z2psTEJ2Q0tyNS1HRmF6dG56WXlxZ0tPQk42TVp6WWo4dTh2YzVtUGdsTGxRRlY2LXhNN29hVWQzZ2pPb1BDSlM2a2tudGloRW5OYTNfem9RS3I0T2h1SmUw0gHMAUFVX3lxTE1Ic0dJX1Mxa1NlMXkwTVpxbFRTYnlVcTRVZlk0MWMzV2ZBZkVqYzRrdDR5TDJQNkYxZ3ZYeWFkQjE4TEcyZmJadEJibV84NWNNbmhuSUZ0UFlWVDdYdEUtdDNqSHJfaXRJb3NPbnRJWmNFTERRV2xsd3VjV0c0QkFTdUM4bDA5WTVOSV91cFdFUEY3dWZZYkJUeWx5dGRWQ183MmlSY1NmYTNYOGh4b1l0OTBhYV82MjRrQkNBLVBOb3FVb09VY0FMM3JxRw?oc=5",
-          "publisher": "NDTV",
-          "publishedAt": "2026-09-08T16:41:49.000Z",
-          "feedId": "google-dating-relationships",
+          "title": "++ORIGINAL+CLIP+XXX+!!Sofik Viral Video Bangla MMS , Tiktok Star Sofik Sonali Viral Video Instagram",
+          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNSXNJUW1vOE5KbTVRV29OTHlReXlFajVITjBEVFdBLTVBcndYdEtFa2EtSE1SSjZqc3RjcnFEWWFJUlU4aWZSd1E2a2x6NXIyWkkzeGc5S1FZRDBua09vOUQtWlJCWEVhU18xZ1BSSnlwVEY3aTRMMEN6aldrZWFIRUtEV0VPNnZCbk9JbllQZV91UG1BTEtRZW54MERvZXFZYWZiTTBadU1WMEtZU281UVdtTGl0aldmOHFtX2wzT0luQnAyMXZjVXM4dVBtZTNUbFE?oc=5",
+          "publisher": "Cal Poly Pomona",
+          "publishedAt": "2026-09-11T03:08:36.000Z",
+          "feedId": "google-tiktok-culture",
           "feedKind": "google-news",
-          "feedLabel": "Google News / dating and relationships"
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "Viral video indian tiktok",
+          "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQQWJTYzlITm8wN204VzNyMkdxaHhyZzEzU0lqNzVxaXY3OWEwbnY0YXM5Q3I0cFI3andBaDJGRXpUSUdMalJwQ0k5Z05SSE5nUTRKZE92ZWwzVGN1MUp5SlUtbE5PUV9GSjltQlZsN0RXSi1weVVUd0laYTlyVVZ5NHhzWDRxZ0F5cEswSnZweG0zT1Rac3hCQi1nRy05VnpDVVRPaGRCNllHQmpSZUZQalNFMEM4dGFLRW85b2oyVWs1Z091bUpFcExxNVZ2aHpUTzB2QmRpenliRFd1SzNUWGV6R1JaOWJFbTB4bk5FYWZzaE0xaXc?oc=5",
+          "publisher": "uv.es",
+          "publishedAt": "2026-09-10T16:42:15.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "++ORIGINAL+CLIP+XXX+!!Taspia Islam Viral Video , Bangladeshi Tiktok Star Taspia Islam Viral Video Download Link",
+          "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQLVJrRE9VXzdFdDRRVkpJcFVzZEs5cGZoejlIMVFTekhQbjFvcTJJZmdtWXNGN2gtT1lWMjlSSHJkSmNDVHFleWNRd2hkbURlbEs1VGhKbGNiWFhzejFpQWhFWEozUzVhbUlEVlo5andBUXpFTnNxZmNQZS1MM21xYWZYM0E3OGg2S2RoaTZVWGpGMTZpS3I0U3VYbWptUFFlbGNKZjdPRGV6MDBZRXhaR3NSWms0aXBxNzNnZ0JXckJZdlpZOHJLV2ZsSDJpLXFXemV3X2lSR2Iyd2xubUtQNTU5R2wtNG9kUU5JZEpvSTlHUnN1SFE?oc=5",
+          "publisher": "uv.es",
+          "publishedAt": "2026-09-10T10:08:24.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "Texas High School Football TikTok Star Isaiah Haynes Silenced The Haters With Advice From Dez Bryant",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQcXU1bzZ0dmRQeTg3Z0ktT2NFSjJOcGl6bEtBZktVUnM0c2UwdWQ2RzRyY2llcmFGd3laSk8yMU9wZGxHVFZFdmxScXdJOTg0cG1iRFZlbGNOVEU5cTJVelBRbGM1MlY1LUJGUHh0X2xwdlJDV3NnTDlyMzFrbmlFSVc0cEhEb3FoeV9ycUZFRkQ0R1VjblhSNmRYaHhpQ0tFbFhDM204YmZTRk9scDBLYnQ1T3V2eVRiQVlKdUZpanhHODA1Njdr?oc=5",
+          "publisher": "BroBible",
+          "publishedAt": "2026-09-08T16:46:06.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
         }
       ]
     }
