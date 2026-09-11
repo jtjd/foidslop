@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-10T00:00:00.000Z",
+  "generated": "2026-09-11T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -8552,10 +8552,11 @@
       "notes": "This is a refreshing palate cleanser of a meal. Use blood oranges if they are in season.",
       "photo_search": "plate of sliced oranges dressed with olive oil and black pepper",
       "publishDate": "2026-09-11",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of plate of sliced oranges dressed with olive oil and black pepper",
       "seoTitle": "Olive Oil and Orange Salad Recipe for One | foidslop",
-      "seoDescription": "Sliced oranges dressed with olive oil, salt, and black pepper. A Sicilian classic. Oranges and flaky sea salt make this salad recipe for one in 5 minutes."
+      "seoDescription": "Sliced oranges dressed with olive oil, salt, and black pepper. A Sicilian classic. Oranges and flaky sea salt make this salad recipe for one in 5 minutes.",
+      "dateModified": "2026-09-11"
     },
     {
       "id": 135,
