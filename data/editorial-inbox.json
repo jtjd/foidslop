@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-11T16:32:21.054Z",
+  "generatedAt": "2026-09-11T21:00:24.705Z",
   "lookbackHours": 72,
-  "signalCount": 55,
+  "signalCount": 51,
   "candidateCount": 2,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
@@ -48,9 +48,9 @@
   ],
   "candidates": [
     {
-      "id": "discovery-240f3a74cc6b",
-      "topic": "Viral video indian tiktok",
-      "score": 5.22,
+      "id": "discovery-0c2612abadd3",
+      "topic": "Florida Judge Recommends Fine for Nurse Over Viral TikTok Video",
+      "score": 5.42,
       "audienceTags": [
         "internet"
       ],
@@ -58,95 +58,26 @@
         "viral",
         "tiktok"
       ],
-      "signalCount": 6,
-      "sourceCount": 5,
-      "firstSeenAt": "2026-09-08T16:46:06.000Z",
-      "lastSeenAt": "2026-09-11T16:10:40.000Z",
-      "reasons": [
-        "Audience terms: viral, tiktok.",
-        "5 independent source labels are carrying the story.",
-        "6 fresh signals were clustered into the same topic.",
-        "The newest signal is less than 24 hours old."
-      ],
-      "signals": [
-        {
-          "title": "TikTok Star ‘Coop on a Stoop’ Has Followers Emotional as He Heads to First Day of School",
-          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNNHFaMEs1dXdCd3AwWUdyQ3o5TU9hYmlKUHdZWGlOX0FoeUJ4Ylk1LXhJSFN6aE8ydG5pbTZINENzdlBBdXI1QnFlUXlFQlRZOTNrUmFUQXJfV3dWclQ1dk42Ry1PRm5DQ2c3VXlpdkc2RUhyXzVoYnJUU0RrSmk0R2JLTlRtd2NLQ3o5dVdSM1MwZw?oc=5",
-          "publisher": "People.com",
-          "publishedAt": "2026-09-11T16:10:40.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "Viral TikTok Star Ann Douglas Has Unexpected — And Heartbreaking — Connection to 9/11",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNdjlqWjJFdjNvYTBmdFF3SGpUUjg2NzN5RVk0cVBhQnZZUmpEdGNHakE4c3JSOFNYZDJoc1VraVZtVXFsLTlSRThIYzktT2JVTWNPSmxxMkY5ZWZNaXdBcWFDWVpydlQ0VE0tUFZfblBReEJibkNaNHhQaldaRVQ1UTZZNE02cXByeW9rNS13U01nLVFSMGNJTmRobU1GRFYzNVg5VTQzRQ?oc=5",
-          "publisher": "Us Weekly",
-          "publishedAt": "2026-09-11T11:02:07.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "++ORIGINAL+CLIP+XXX+!!Riya Viral Video , Tiktok Star Riya Viral Video Download Link",
-          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOWXpSbkpvTHhKSEE1R2dpQW9kb0lFZUxjM0JiX1ZDMC1VOWlUeWhzdW5EempTbVNDS3hlMDFjeUg1VHo1TUs3UGg3LTE0Y05xMzlSQVczNzlZdVp0OHlKS2c0ZVRLY0F3a2VPb3lISVFHbzgwVUJwNVE3dy1PV1VYWEFibFpFUUZQLV9rMG5JMnlKdTVGS1lrOF9JQk1pYUpkakptMFdUUTd0T01TM2dRWkVCbGJ3d2lGU3VJTFJhLTBEYmJmdWhpbXJwdFlZdzZ0LXc?oc=5",
-          "publisher": "Cal Poly Pomona",
-          "publishedAt": "2026-09-11T03:08:52.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "++ORIGINAL+CLIP+XXX+!!Sofik Viral Video Bangla MMS , Tiktok Star Sofik Sonali Viral Video Instagram",
-          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQTkhQMUhvYkZpSGZsZTRqaDk3RlBCVXg1QWxhVXBSUS1RT1FRNW9WRHZBcS14YldpcnU4V2dPVTJubDFmVDBBaWJHWktzdVRpRTh4dVNSRW9kRlE2el80Y0stR0ZOMTlZcDlOeFQySV9sWWg4UkFrWjNna2RaM1lMdXl4VzNqTWhQRU1HbGhJY1lraExBckJpZHBDOUNYOFlmY0RLYU9nZnc2b1NBYlYwWFRHQjlwS2NfaWF3NmhYMzBQa182U2JxdzhZY2hyN3NOZ0E?oc=5",
-          "publisher": "Cal Poly Pomona",
-          "publishedAt": "2026-09-11T03:08:36.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "Viral video indian tiktok",
-          "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQQWJTYzlITm8wN204VzNyMkdxaHhyZzEzU0lqNzVxaXY3OWEwbnY0YXM5Q3I0cFI3andBaDJGRXpUSUdMalJwQ0k5Z05SSE5nUTRKZE92ZWwzVGN1MUp5SlUtbE5PUV9GSjltQlZsN0RXSi1weVVUd0laYTlyVVZ5NHhzWDRxZ0F5cEswSnZweG0zT1Rac3hCQi1nRy05VnpDVVRPaGRCNllHQmpSZUZQalNFMEM4dGFLRW85b2oyVWs1Z091bUpFcExxNVZ2aHpUTzB2QmRpenliRFd1SzNUWGV6R1JaOWJFbTB4bk5FYWZzaE0xaXc?oc=5",
-          "publisher": "uv.es",
-          "publishedAt": "2026-09-10T16:42:15.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "Texas High School Football TikTok Star Isaiah Haynes Silenced The Haters With Advice From Dez Bryant",
-          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQcXU1bzZ0dmRQeTg3Z0ktT2NFSjJOcGl6bEtBZktVUnM0c2UwdWQ2RzRyY2llcmFGd3laSk8yMU9wZGxHVFZFdmxScXdJOTg0cG1iRFZlbGNOVEU5cTJVelBRbGM1MlY1LUJGUHh0X2xwdlJDV3NnTDlyMzFrbmlFSVc0cEhEb3FoeV9ycUZFRkQ0R1VjblhSNmRYaHhpQ0tFbFhDM204YmZTRk9scDBLYnQ1T3V2eVRiQVlKdUZpanhHODA1Njdr?oc=5",
-          "publisher": "BroBible",
-          "publishedAt": "2026-09-08T16:46:06.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        }
-      ]
-    },
-    {
-      "id": "discovery-a048b5009ec4",
-      "topic": "Judge calls Boca Raton nurse’s viral TikTok 'vile,' recommends $250 fine",
-      "score": 5.13,
-      "audienceTags": [
-        "internet"
-      ],
-      "matchedTerms": [
-        "viral",
-        "tiktok"
-      ],
-      "signalCount": 3,
-      "sourceCount": 3,
+      "signalCount": 4,
+      "sourceCount": 4,
       "firstSeenAt": "2026-09-10T11:35:15.000Z",
-      "lastSeenAt": "2026-09-10T20:49:00.000Z",
+      "lastSeenAt": "2026-09-11T01:41:18.000Z",
       "reasons": [
         "Audience terms: viral, tiktok.",
-        "3 independent source labels are carrying the story.",
-        "3 fresh signals were clustered into the same topic.",
+        "4 independent source labels are carrying the story.",
+        "4 fresh signals were clustered into the same topic.",
         "The newest signal is less than 24 hours old."
       ],
       "signals": [
+        {
+          "title": "Florida Judge Recommends Fine for Nurse Over Viral TikTok Video",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE11bk94bVhEaGY1T0pPUUUxbTVZckdlbzVXRjdIUGlVbUtfYm9rclQyeGNVamYxRGxRR3FXaTJKLWN4QWc1M05kNnlTNGVZTk9mdVNPVGo4Z1BNV0lKTXZXRlRGWTNUcm5saTlLdw?oc=5",
+          "publisher": "SuaraGarut.ID",
+          "publishedAt": "2026-09-11T01:41:18.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
         {
           "title": "Judge recommends $250 fine, reprimand for fired Florida nurse who targeted Karoline Leavitt in TikTok video",
           "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQN0M5a2hlM3MzT1hwTWVieG1yX2hWUGpLRUJqQ3VJQlFmX0gwQlR0Y0pCUUhZZWp4N01iV2dKX1NQUXVrb25menA2U0NHVG13OXdLT3dnNGZfWGVzY3ZuYXlVbXoyOVNwQVJlQWFDX1Z2a0RyeDBINzR3UUgxWEhtMjl1dFQyM2J5c3J3cnpOMW5udnZaeF9Ua1N4bTF4dlY2Wk1QaW90clNvejcydU02aVJmTE9sM3JZd2tiemN1RlVmVDZkckZVMmZB?oc=5",
@@ -168,8 +99,67 @@
         {
           "title": "Judge recommends fine, reprimand for nurse who wished Karoline Leavitt difficult birth",
           "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNS09qajRyY09lNFAwRFJCdDlfdjdoU3JJVm1wR0ZnaUdvTVRPdDNMUFJ1NTg0c0hCX0lHREJvSmVaR25CSW0zcktFMlpMRHFVdnpZZU9lb1VpdU1ZUlFzWWdFUGVXQ3I4QzdrQUNfeGFXU3ZEWHBFSVFuQ09PcTNGOUhteklubmRVVHdtUkEzOU4wTF8zZ3RINnVmMlpfdDctRlgzTXFfcFNhNmY2VnVybTBnWTdyQ2tSdVV5ZFRybmJnRG9HLXdtZzJB0gHSAUFVX3lxTE9nX0w5dVRVNkR4RkRIYk5idGo4T3lsUDhsZjAzRnJXWXh0d3VvRklBN1RGX1ZjV2RVZmJtVjBveTYtVFJlLW44WFRYREhPZjBVZHIzc1Fjd3d5S05vMTZ3NHRFUDNmM083N3BUZWloR0lZbmI2SkY4UEhTcHRJLXZKcm9yb2pzQXZDZEVSSjR1QjRRWThUUVI3TVZyWmFpR0xoZHc2dE9teGZNQVB3bk1LRVkxWWl5ZkJxWmF4eXNqbF85Vk1iRWVoUWNiM0Z0U2txZw?oc=5",
-          "publisher": "NBC 6 South Florida",
+          "publisher": "nbcmiami.com",
           "publishedAt": "2026-09-10T11:35:15.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        }
+      ]
+    },
+    {
+      "id": "discovery-8ae6003b79de",
+      "topic": "Viral Cat in the Hat trend sparks police, TikTok investigation in Gentry",
+      "score": 4.92,
+      "audienceTags": [
+        "internet"
+      ],
+      "matchedTerms": [
+        "viral",
+        "tiktok"
+      ],
+      "signalCount": 4,
+      "sourceCount": 4,
+      "firstSeenAt": "2026-09-08T23:34:49.000Z",
+      "lastSeenAt": "2026-09-10T16:10:00.000Z",
+      "reasons": [
+        "Audience terms: viral, tiktok.",
+        "4 independent source labels are carrying the story.",
+        "4 fresh signals were clustered into the same topic."
+      ],
+      "signals": [
+        {
+          "title": "‘Cat in the Hat’ Trend Sparks New Warnings",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1faExsSDJkYmdlOFJSVXZEZEVTOVAxZnR2ck5DMWNNeTN3TUljSnBONEVaZjM5RkhOcGlvejQzTVFEbmtPZFlpdUdzM01lc1BFWUFOYXhkV1ZNdHBySTZtQzlvTnNVSG8zNzZqdTJRSlQyUGJNeGVfVjBuM3hGWU0?oc=5",
+          "publisher": "Newsweek",
+          "publishedAt": "2026-09-10T16:10:00.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "Viral Cat in the Hat trend sparks police, TikTok investigation in Gentry",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPMjc4SmZ4NS1UTm80TGQyUHJveGVjckJBSzRKY0NNQktaSnhPc09NRFpHbjloM1JKeFlKaG1fa19JZ2hWaTd1WGppX1NwM1FkMjhpTm5CektHUldDUUllZzFmYktMRU1sTXoxX2ZXOVQ1OFdtblg3NTgteWtFU0NER1d2c19ycEFHVEhnZkpOUlhPZVYz?oc=5",
+          "publisher": "Northwest Arkansas Democrat-Gazette",
+          "publishedAt": "2026-09-09T09:00:00.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "'Cat in the Hat' trend raises school safety concerns in Hardin",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNcThYMzZDdUtSSjNDZHRxUVhLTmlJcVlhNXdXNXFnX21icVV5V29PNlg4MDVjemFRZm1tcjZNWGYtemx1MWs2TjduZ2VYTjd3cHdrT21TQ3FNbFR3N2JlNmJzQWZxQ1p6WmItaDRSSWpRck9hdVhRc0NtMDhKZm9MUGp2SlVkSnZXcGQ0T29XYw?oc=5",
+          "publisher": "KTVQ",
+          "publishedAt": "2026-09-09T03:42:25.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "AI-generated Cat in the Hat TikTok trend alarms North State parents, Redding police say",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQTGVaMmdVcjFoczAzbHZubjNxMzJSdXlLZzkxaGRuOU4wRVpNVlIxYTkzU0ZJeV90RFJ4OGo4U2M1RTJwRnhKZV9BdmxSODZCVWYyeHJsY2ZRTEREeG55MEd0Z0NLWE1PUk4xNXdjZ0F0SlZ5Z3lBbldVVjVnTThOOXota3B0YUllUjlYNk1wREJUYUZXeGJXa1hobWZVTjZjV1pMM0Vqcmt3ZnNrVlI4SFBTXzNqb1E?oc=5",
+          "publisher": "KRCR",
+          "publishedAt": "2026-09-08T23:34:49.000Z",
           "feedId": "google-tiktok-culture",
           "feedKind": "google-news",
           "feedLabel": "Google News / TikTok culture"
