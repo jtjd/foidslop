@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T00:00:00.000Z",
+  "generated": "2026-09-12T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -8609,10 +8609,11 @@
       "notes": "The contrast of the salty, warm cheese with the sweet honey is incredible.",
       "photo_search": "small baking dish with warm baked feta drizzled with honey and sesame seeds",
       "publishDate": "2026-09-12",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of small baking dish with warm baked feta drizzled with honey and sesame seeds",
       "seoTitle": "Baked Feta with Honey and Sesame Recipe for One | foidslop",
-      "seoDescription": "A block of feta baked until soft, then drenched in honey and sesame seeds. Made for one in 17 minutes, with block feta cheese and honey."
+      "seoDescription": "A block of feta baked until soft, then drenched in honey and sesame seeds. Made for one in 17 minutes, with block feta cheese and honey.",
+      "dateModified": "2026-09-12"
     },
     {
       "id": 136,
