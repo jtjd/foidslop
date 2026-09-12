@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-12T15:34:54.290Z",
+  "generatedAt": "2026-09-12T20:40:49.514Z",
   "lookbackHours": 72,
-  "signalCount": 43,
-  "candidateCount": 1,
+  "signalCount": 39,
+  "candidateCount": 0,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -46,65 +46,5 @@
       "error": "HTTP 429"
     }
   ],
-  "candidates": [
-    {
-      "id": "discovery-0c2612abadd3",
-      "topic": "Florida Judge Recommends Fine for Nurse Over Viral TikTok Video",
-      "score": 4.92,
-      "audienceTags": [
-        "internet"
-      ],
-      "matchedTerms": [
-        "viral",
-        "tiktok"
-      ],
-      "signalCount": 4,
-      "sourceCount": 4,
-      "firstSeenAt": "2026-09-10T11:35:15.000Z",
-      "lastSeenAt": "2026-09-11T01:41:18.000Z",
-      "reasons": [
-        "Audience terms: viral, tiktok.",
-        "4 independent source labels are carrying the story.",
-        "4 fresh signals were clustered into the same topic."
-      ],
-      "signals": [
-        {
-          "title": "Florida Judge Recommends Fine for Nurse Over Viral TikTok Video",
-          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE11bk94bVhEaGY1T0pPUUUxbTVZckdlbzVXRjdIUGlVbUtfYm9rclQyeGNVamYxRGxRR3FXaTJKLWN4QWc1M05kNnlTNGVZTk9mdVNPVGo4Z1BNV0lKTXZXRlRGWTNUcm5saTlLdw?oc=5",
-          "publisher": "suaragarut.id",
-          "publishedAt": "2026-09-11T01:41:18.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "Judge recommends $250 fine, reprimand for fired Florida nurse who targeted Karoline Leavitt in TikTok video",
-          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQN0M5a2hlM3MzT1hwTWVieG1yX2hWUGpLRUJqQ3VJQlFmX0gwQlR0Y0pCUUhZZWp4N01iV2dKX1NQUXVrb25menA2U0NHVG13OXdLT3dnNGZfWGVzY3ZuYXlVbXoyOVNwQVJlQWFDX1Z2a0RyeDBINzR3UUgxWEhtMjl1dFQyM2J5c3J3cnpOMW5udnZaeF9Ua1N4bTF4dlY2Wk1QaW90clNvejcydU02aVJmTE9sM3JZd2tiemN1RlVmVDZkckZVMmZB?oc=5",
-          "publisher": "Florida’s Voice",
-          "publishedAt": "2026-09-10T20:49:00.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "Judge calls Boca Raton nurse’s viral TikTok 'vile,' recommends $250 fine",
-          "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOenc5QVYxRWVjNnU2dHAtTjJsNjBpc3BCUHVXbnBEWVJXNGZWV3pzQzFvY2dzMDkxY1M2Mm00aTlzQ1VjNmNYbGFKVnU0YS02X2ZwMjNmUXQydG44dng2dWQtRlpfNlpRSVNVTkRfSzFrWWlsS2sxQ0Z1Q1YxOTluUWhUalk4bWZ6TlY0NkkyM0pIaUFQX0J3VmpXdlA3ZWVmdkd0aS1LNWd4UFVWMUhIMGphRk9RQkFPUlduM3QzTl9waTdCc3dpNFZnNm95bFgzZXBvZG9PdzFwYXJtZXhVVXVIcDdNaDk3ak1vT00xbDVzV042UlpR?oc=5",
-          "publisher": "WPEC",
-          "publishedAt": "2026-09-10T17:33:34.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "Judge recommends fine, reprimand for nurse who wished Karoline Leavitt difficult birth",
-          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNS09qajRyY09lNFAwRFJCdDlfdjdoU3JJVm1wR0ZnaUdvTVRPdDNMUFJ1NTg0c0hCX0lHREJvSmVaR25CSW0zcktFMlpMRHFVdnpZZU9lb1VpdU1ZUlFzWWdFUGVXQ3I4QzdrQUNfeGFXU3ZEWHBFSVFuQ09PcTNGOUhteklubmRVVHdtUkEzOU4wTF8zZ3RINnVmMlpfdDctRlgzTXFfcFNhNmY2VnVybTBnWTdyQ2tSdVV5ZFRybmJnRG9HLXdtZzJB0gHSAUFVX3lxTE9nX0w5dVRVNkR4RkRIYk5idGo4T3lsUDhsZjAzRnJXWXh0d3VvRklBN1RGX1ZjV2RVZmJtVjBveTYtVFJlLW44WFRYREhPZjBVZHIzc1Fjd3d5S05vMTZ3NHRFUDNmM083N3BUZWloR0lZbmI2SkY4UEhTcHRJLXZKcm9yb2pzQXZDZEVSSjR1QjRRWThUUVI3TVZyWmFpR0xoZHc2dE9teGZNQVB3bk1LRVkxWWl5ZkJxWmF4eXNqbF85Vk1iRWVoUWNiM0Z0U2txZw?oc=5",
-          "publisher": "NBC 6 South Florida",
-          "publishedAt": "2026-09-10T11:35:15.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        }
-      ]
-    }
-  ]
+  "candidates": []
 }
