@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-11T21:00:24.705Z",
+  "generatedAt": "2026-09-12T04:40:44.647Z",
   "lookbackHours": 72,
-  "signalCount": 51,
-  "candidateCount": 2,
+  "signalCount": 47,
+  "candidateCount": 1,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -50,7 +50,7 @@
     {
       "id": "discovery-0c2612abadd3",
       "topic": "Florida Judge Recommends Fine for Nurse Over Viral TikTok Video",
-      "score": 5.42,
+      "score": 4.92,
       "audienceTags": [
         "internet"
       ],
@@ -65,8 +65,7 @@
       "reasons": [
         "Audience terms: viral, tiktok.",
         "4 independent source labels are carrying the story.",
-        "4 fresh signals were clustered into the same topic.",
-        "The newest signal is less than 24 hours old."
+        "4 fresh signals were clustered into the same topic."
       ],
       "signals": [
         {
@@ -81,7 +80,7 @@
         {
           "title": "Judge recommends $250 fine, reprimand for fired Florida nurse who targeted Karoline Leavitt in TikTok video",
           "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQN0M5a2hlM3MzT1hwTWVieG1yX2hWUGpLRUJqQ3VJQlFmX0gwQlR0Y0pCUUhZZWp4N01iV2dKX1NQUXVrb25menA2U0NHVG13OXdLT3dnNGZfWGVzY3ZuYXlVbXoyOVNwQVJlQWFDX1Z2a0RyeDBINzR3UUgxWEhtMjl1dFQyM2J5c3J3cnpOMW5udnZaeF9Ua1N4bTF4dlY2Wk1QaW90clNvejcydU02aVJmTE9sM3JZd2tiemN1RlVmVDZkckZVMmZB?oc=5",
-          "publisher": "Florida’s Voice",
+          "publisher": "flvoicenews.com",
           "publishedAt": "2026-09-10T20:49:00.000Z",
           "feedId": "google-tiktok-culture",
           "feedKind": "google-news",
@@ -99,67 +98,8 @@
         {
           "title": "Judge recommends fine, reprimand for nurse who wished Karoline Leavitt difficult birth",
           "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNS09qajRyY09lNFAwRFJCdDlfdjdoU3JJVm1wR0ZnaUdvTVRPdDNMUFJ1NTg0c0hCX0lHREJvSmVaR25CSW0zcktFMlpMRHFVdnpZZU9lb1VpdU1ZUlFzWWdFUGVXQ3I4QzdrQUNfeGFXU3ZEWHBFSVFuQ09PcTNGOUhteklubmRVVHdtUkEzOU4wTF8zZ3RINnVmMlpfdDctRlgzTXFfcFNhNmY2VnVybTBnWTdyQ2tSdVV5ZFRybmJnRG9HLXdtZzJB0gHSAUFVX3lxTE9nX0w5dVRVNkR4RkRIYk5idGo4T3lsUDhsZjAzRnJXWXh0d3VvRklBN1RGX1ZjV2RVZmJtVjBveTYtVFJlLW44WFRYREhPZjBVZHIzc1Fjd3d5S05vMTZ3NHRFUDNmM083N3BUZWloR0lZbmI2SkY4UEhTcHRJLXZKcm9yb2pzQXZDZEVSSjR1QjRRWThUUVI3TVZyWmFpR0xoZHc2dE9teGZNQVB3bk1LRVkxWWl5ZkJxWmF4eXNqbF85Vk1iRWVoUWNiM0Z0U2txZw?oc=5",
-          "publisher": "nbcmiami.com",
+          "publisher": "NBC 6 South Florida",
           "publishedAt": "2026-09-10T11:35:15.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        }
-      ]
-    },
-    {
-      "id": "discovery-8ae6003b79de",
-      "topic": "Viral Cat in the Hat trend sparks police, TikTok investigation in Gentry",
-      "score": 4.92,
-      "audienceTags": [
-        "internet"
-      ],
-      "matchedTerms": [
-        "viral",
-        "tiktok"
-      ],
-      "signalCount": 4,
-      "sourceCount": 4,
-      "firstSeenAt": "2026-09-08T23:34:49.000Z",
-      "lastSeenAt": "2026-09-10T16:10:00.000Z",
-      "reasons": [
-        "Audience terms: viral, tiktok.",
-        "4 independent source labels are carrying the story.",
-        "4 fresh signals were clustered into the same topic."
-      ],
-      "signals": [
-        {
-          "title": "‘Cat in the Hat’ Trend Sparks New Warnings",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1faExsSDJkYmdlOFJSVXZEZEVTOVAxZnR2ck5DMWNNeTN3TUljSnBONEVaZjM5RkhOcGlvejQzTVFEbmtPZFlpdUdzM01lc1BFWUFOYXhkV1ZNdHBySTZtQzlvTnNVSG8zNzZqdTJRSlQyUGJNeGVfVjBuM3hGWU0?oc=5",
-          "publisher": "Newsweek",
-          "publishedAt": "2026-09-10T16:10:00.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "Viral Cat in the Hat trend sparks police, TikTok investigation in Gentry",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPMjc4SmZ4NS1UTm80TGQyUHJveGVjckJBSzRKY0NNQktaSnhPc09NRFpHbjloM1JKeFlKaG1fa19JZ2hWaTd1WGppX1NwM1FkMjhpTm5CektHUldDUUllZzFmYktMRU1sTXoxX2ZXOVQ1OFdtblg3NTgteWtFU0NER1d2c19ycEFHVEhnZkpOUlhPZVYz?oc=5",
-          "publisher": "Northwest Arkansas Democrat-Gazette",
-          "publishedAt": "2026-09-09T09:00:00.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "'Cat in the Hat' trend raises school safety concerns in Hardin",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNcThYMzZDdUtSSjNDZHRxUVhLTmlJcVlhNXdXNXFnX21icVV5V29PNlg4MDVjemFRZm1tcjZNWGYtemx1MWs2TjduZ2VYTjd3cHdrT21TQ3FNbFR3N2JlNmJzQWZxQ1p6WmItaDRSSWpRck9hdVhRc0NtMDhKZm9MUGp2SlVkSnZXcGQ0T29XYw?oc=5",
-          "publisher": "KTVQ",
-          "publishedAt": "2026-09-09T03:42:25.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "AI-generated Cat in the Hat TikTok trend alarms North State parents, Redding police say",
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQTGVaMmdVcjFoczAzbHZubjNxMzJSdXlLZzkxaGRuOU4wRVpNVlIxYTkzU0ZJeV90RFJ4OGo4U2M1RTJwRnhKZV9BdmxSODZCVWYyeHJsY2ZRTEREeG55MEd0Z0NLWE1PUk4xNXdjZ0F0SlZ5Z3lBbldVVjVnTThOOXota3B0YUllUjlYNk1wREJUYUZXeGJXa1hobWZVTjZjV1pMM0Vqcmt3ZnNrVlI4SFBTXzNqb1E?oc=5",
-          "publisher": "KRCR",
-          "publishedAt": "2026-09-08T23:34:49.000Z",
           "feedId": "google-tiktok-culture",
           "feedKind": "google-news",
           "feedLabel": "Google News / TikTok culture"
