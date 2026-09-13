@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-12T00:00:00.000Z",
+  "generated": "2026-09-13T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -8666,10 +8666,11 @@
       "notes": "Make this in the morning so it is ready for dinner. It keeps for up to 3 days in the fridge.",
       "photo_search": "glass of layered chia pudding with coconut milk and bright yellow mango",
       "publishDate": "2026-09-13",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of glass of layered chia pudding with coconut milk and bright yellow mango",
       "seoTitle": "Chia Pudding with Coconut and Mango Recipe for One | foidslop",
-      "seoDescription": "Coconut chia pudding topped with ripe mango makes a cool, creamy bowl with a little tropical sweetness."
+      "seoDescription": "Coconut chia pudding topped with ripe mango makes a cool, creamy bowl with a little tropical sweetness.",
+      "dateModified": "2026-09-13"
     },
     {
       "id": 137,
