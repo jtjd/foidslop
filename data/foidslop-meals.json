@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-13T00:00:00.000Z",
+  "generated": "2026-09-14T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -8723,10 +8723,11 @@
       "notes": "Squeeze the kimchi a little before chopping so the quesadilla does not get soggy.",
       "photo_search": "golden quesadilla cut open to reveal melted cheese and red kimchi",
       "publishDate": "2026-09-14",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of golden quesadilla cut open to reveal melted cheese and red kimchi",
       "seoTitle": "Kimchi and Cheese Quesadilla Recipe for One | foidslop",
-      "seoDescription": "Tangy kimchi and melted cheese fill a crisp flour tortilla for a quick dinner with heat and plenty of crunch."
+      "seoDescription": "Tangy kimchi and melted cheese fill a crisp flour tortilla for a quick dinner with heat and plenty of crunch.",
+      "dateModified": "2026-09-14"
     },
     {
       "id": 138,
