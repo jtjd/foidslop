@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-14T21:52:33.043Z",
+  "generatedAt": "2026-09-15T04:58:51.937Z",
   "lookbackHours": 72,
-  "signalCount": 39,
+  "signalCount": 40,
   "candidateCount": 1,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
@@ -50,7 +50,7 @@
     {
       "id": "discovery-febb010adbb8",
       "topic": "Australia’s most searched slang words of 2026 listed",
-      "score": 5.23,
+      "score": 4.93,
       "audienceTags": [
         "language"
       ],
@@ -79,7 +79,7 @@
         {
           "title": "Australia’s most searched slang words of 2026 listed",
           "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNRkppUi1LUWttUmpsb1BvM1FrQ3Fubmw2b3hncDRjWDdUWEVRaWVvdXZWWW1nM1F3d0ppcElCUDY1NUFIVi0zZUdOZFNtY2ZlZjR5TFVmQ2FELTZrT1huajRXQXpwQ3F3LVc4RGE3ZGlHZWh2UUNuYXBKTHMyRl9ZN0hLdzl4WHVraVhBeHNkak9CYXpCLTAzUzZLM2pEN0c4T2tMME1YaS04aERrOFRid2pYTFBod0x3SnNHVDlaMUlVNVlDYzhudktGOXNqX1RaQVo1UzY2c21ab1JsaTVLUS1rZzBYdw?oc=5",
-          "publisher": "kidsnews.com.au",
+          "publisher": "Kids News",
           "publishedAt": "2026-09-14T14:11:06.000Z",
           "feedId": "google-internet-slang",
           "feedKind": "google-news",
