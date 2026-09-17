@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-17T11:47:37.663Z",
+  "generatedAt": "2026-09-17T17:03:57.955Z",
   "lookbackHours": 72,
-  "signalCount": 43,
+  "signalCount": 41,
   "candidateCount": 2,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
@@ -48,7 +48,7 @@
   ],
   "candidates": [
     {
-      "id": "discovery-b2378519bf21",
+      "id": "discovery-da2b14313323",
       "topic": "‘Etymology Nerd’ defends Internet slang at crowded YPU debate",
       "score": 5.23,
       "audienceTags": [
@@ -88,7 +88,7 @@
       ]
     },
     {
-      "id": "discovery-88dddf12bb0e",
+      "id": "discovery-c4cdc1b66603",
       "topic": "We’re vocab-maxxing! Merriam-Webster adds whopping 1,400 new words to the dictionary",
       "score": 5.08,
       "audienceTags": [
