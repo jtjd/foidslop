@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-18T11:21:48.243Z",
+  "generatedAt": "2026-09-18T16:28:16.460Z",
   "lookbackHours": 72,
-  "signalCount": 49,
+  "signalCount": 50,
   "candidateCount": 1,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
@@ -48,9 +48,9 @@
   ],
   "candidates": [
     {
-      "id": "discovery-ceef0a5196df",
+      "id": "discovery-8a8452cfaf4e",
       "topic": "We’re vocab-maxxing! Merriam-Webster adds whopping 1,400 new words to the dictionary",
-      "score": 8.05,
+      "score": 7.95,
       "audienceTags": [
         "language"
       ],
@@ -58,14 +58,14 @@
         "maxxing",
         "slang"
       ],
-      "signalCount": 5,
-      "sourceCount": 5,
+      "signalCount": 6,
+      "sourceCount": 6,
       "firstSeenAt": "2026-09-16T06:50:28.000Z",
       "lastSeenAt": "2026-09-18T06:48:40.000Z",
       "reasons": [
         "Audience terms: maxxing, slang.",
-        "5 independent source labels are carrying the story.",
-        "5 fresh signals were clustered into the same topic.",
+        "6 independent source labels are carrying the story.",
+        "6 fresh signals were clustered into the same topic.",
         "The newest signal is less than 24 hours old."
       ],
       "signals": [
@@ -79,9 +79,18 @@
           "feedLabel": "Google News / internet slang"
         },
         {
+          "title": "Merriam-Webster adds 1,400 new words in 2026: Vibe…",
+          "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNcE55dXNZMG15UVozMEhoZWpucFo1UUpSR3U3TnhQOWpyRTBSOE53bnlpTjFqMDFJTDJpS05CSkRZMjRNS2dRdU1MUVpQMzNSY0Q5eTFSaUlCT0VXNHZNd3NvVWZYcFQyRy1mUWkxeUo5WUtNZnhVbjNWeFdCZUxKV3dITzBNaEZqeDdDb3JTbnVuRVJlbm4tclFMazMtWmRNWkkzMjYxakxhbjN1V3ZqLVhLOUlDOXNVX0xKTERkalJ6bF9FdXFuZ0hUYk51YVoxZ21Nb1BNVEFLbEpYaXZyeTU5eDIwaUE2bHhVejNCYi1neXFPMVE?oc=5",
+          "publisher": "inkl",
+          "publishedAt": "2026-09-18T03:15:50.000Z",
+          "feedId": "google-internet-slang",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / internet slang"
+        },
+        {
           "title": "Sorry, Webster. Most People Don’t Want Internet Slang in the Dictionary.",
           "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9UVjRNMHAwODRxMnk0VnJHVnotS25mTW1UQXRYQV9LT0xldVNJbFpYZ0JEc3RxUEJ3R2dhUTZaNU42dnVPd1k2RTduZGROcVBYemZuQzdsYVNDMFhiOTNnOU5qYjNYVmMwc2c0blBrRGtzU1k0OUh5VjZDejNCSWM?oc=5",
-          "publisher": "The New York Times",
+          "publisher": "nytimes.com",
           "publishedAt": "2026-09-17T11:11:02.000Z",
           "feedId": "google-internet-slang",
           "feedKind": "google-news",
@@ -90,7 +99,7 @@
         {
           "title": "We’re vocab-maxxing! Merriam-Webster adds whopping 1,400 new words to the dictionary",
           "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNTE1JRkd6aW50RGx3RFdhY2dYU2wtWEpIb2JIZmFqMjVha3hKZkZRVGtFTGhqdEtzSkRrUXk4QUMtaE83TWhJNnc0LUFtOUQ2MDhTV3VzR01qeXNKVlcxenp0SFVHa2RTb2paT2tHVWs0Ml9MVF9BVTlpZVZRd3hDd2pPY3d3VWJWeEdHUlhIeTZ3V0pfX2xzWWhPVQ?oc=5",
-          "publisher": "nypost.com",
+          "publisher": "New York Post",
           "publishedAt": "2026-09-16T18:09:00.000Z",
           "feedId": "google-internet-slang",
           "feedKind": "google-news",
