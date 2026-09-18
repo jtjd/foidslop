@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-17T21:26:14.445Z",
+  "generatedAt": "2026-09-18T04:49:06.101Z",
   "lookbackHours": 72,
-  "signalCount": 43,
-  "candidateCount": 2,
+  "signalCount": 47,
+  "candidateCount": 1,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -48,7 +48,7 @@
   ],
   "candidates": [
     {
-      "id": "discovery-80db0129449b",
+      "id": "discovery-da2b14313323",
       "topic": "‘Etymology Nerd’ defends Internet slang at crowded YPU debate",
       "score": 4.93,
       "audienceTags": [
@@ -84,37 +84,6 @@
           "feedId": "google-internet-slang",
           "feedKind": "google-news",
           "feedLabel": "Google News / internet slang"
-        }
-      ]
-    },
-    {
-      "id": "discovery-0489af244900",
-      "topic": "Blindsided when fiancé ghosted me, sad girl dinner 👻",
-      "score": 4.88,
-      "audienceTags": [
-        "food",
-        "gender"
-      ],
-      "matchedTerms": [
-        "girl dinner"
-      ],
-      "signalCount": 1,
-      "sourceCount": 1,
-      "firstSeenAt": "2026-09-17T21:20:24.000Z",
-      "lastSeenAt": "2026-09-17T21:20:24.000Z",
-      "reasons": [
-        "Audience terms: girl dinner.",
-        "The newest signal is less than 24 hours old."
-      ],
-      "signals": [
-        {
-          "title": "Blindsided when fiancé ghosted me, sad girl dinner 👻",
-          "url": "https://www.reddit.com/r/GirlDinnerCircleJerk/comments/1wj6pt9/blindsided_when_fiancé_ghosted_me_sad_girl_dinner/",
-          "publisher": "Reddit",
-          "publishedAt": "2026-09-17T21:20:24.000Z",
-          "feedId": "reddit-foidslop-adjacent",
-          "feedKind": "reddit-search",
-          "feedLabel": "Reddit / foidslop-adjacent language"
         }
       ]
     }
