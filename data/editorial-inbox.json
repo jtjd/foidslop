@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-18T16:28:16.460Z",
+  "generatedAt": "2026-09-18T20:56:53.459Z",
   "lookbackHours": 72,
-  "signalCount": 50,
+  "signalCount": 53,
   "candidateCount": 1,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
@@ -90,7 +90,7 @@
         {
           "title": "Sorry, Webster. Most People Don’t Want Internet Slang in the Dictionary.",
           "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9UVjRNMHAwODRxMnk0VnJHVnotS25mTW1UQXRYQV9LT0xldVNJbFpYZ0JEc3RxUEJ3R2dhUTZaNU42dnVPd1k2RTduZGROcVBYemZuQzdsYVNDMFhiOTNnOU5qYjNYVmMwc2c0blBrRGtzU1k0OUh5VjZDejNCSWM?oc=5",
-          "publisher": "nytimes.com",
+          "publisher": "The New York Times",
           "publishedAt": "2026-09-17T11:11:02.000Z",
           "feedId": "google-internet-slang",
           "feedKind": "google-news",
