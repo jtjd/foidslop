@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-19T15:55:36.678Z",
+  "generatedAt": "2026-09-19T20:45:06.385Z",
   "lookbackHours": 72,
-  "signalCount": 50,
+  "signalCount": 47,
   "candidateCount": 2,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
@@ -48,25 +48,23 @@
   ],
   "candidates": [
     {
-      "id": "discovery-e67e1a8bfdbc",
-      "topic": "We’re vocab-maxxing! Merriam-Webster adds whopping 1,400 new words to the dictionary",
-      "score": 7.75,
+      "id": "discovery-18a747ec9840",
+      "topic": "Merriam-Webster's latest update adds 1,400 words, mostly internet slang",
+      "score": 5.15,
       "audienceTags": [
         "language"
       ],
       "matchedTerms": [
-        "maxxing",
         "slang"
       ],
-      "signalCount": 5,
-      "sourceCount": 5,
-      "firstSeenAt": "2026-09-16T17:04:19.000Z",
+      "signalCount": 3,
+      "sourceCount": 3,
+      "firstSeenAt": "2026-09-18T03:15:50.000Z",
       "lastSeenAt": "2026-09-18T19:57:00.000Z",
       "reasons": [
-        "Audience terms: maxxing, slang.",
-        "5 independent source labels are carrying the story.",
-        "5 fresh signals were clustered into the same topic.",
-        "The newest signal is less than 24 hours old."
+        "Audience terms: slang.",
+        "3 independent source labels are carrying the story.",
+        "3 fresh signals were clustered into the same topic."
       ],
       "signals": [
         {
@@ -95,30 +93,12 @@
           "feedId": "google-internet-slang",
           "feedKind": "google-news",
           "feedLabel": "Google News / internet slang"
-        },
-        {
-          "title": "We’re vocab-maxxing! Merriam-Webster adds whopping 1,400 new words to the dictionary",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNTE1JRkd6aW50RGx3RFdhY2dYU2wtWEpIb2JIZmFqMjVha3hKZkZRVGtFTGhqdEtzSkRrUXk4QUMtaE83TWhJNnc0LUFtOUQ2MDhTV3VzR01qeXNKVlcxenp0SFVHa2RTb2paT2tHVWs0Ml9MVF9BVTlpZVZRd3hDd2pPY3d3VWJWeEdHUlhIeTZ3V0pfX2xzWWhPVQ?oc=5",
-          "publisher": "New York Post",
-          "publishedAt": "2026-09-16T18:09:00.000Z",
-          "feedId": "google-internet-slang",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / internet slang"
-        },
-        {
-          "title": "Merriam-Webster Adds 1,400 New Words: See What Made The Dictionary",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPN0ZCZnY4b1dIeE5XM3lzZERLMVRtRjFaNWMzMEExbmJoaXdqU2I0VlU4VzBVOERmQ2Q2R0UzeHZPejdvSUNHR3lIWDQ0RzdFNHlmZWo4SUpMdTM2NUxUT0ZYdm8zU2FOdlZpc1E0X0xUUm5Ib3hIQlVGNHdaaHB5Yks2S3NrWk5rRXp6SEthcThqY3hBS1RkVVhtaEU?oc=5",
-          "publisher": "DailyVoice.com",
-          "publishedAt": "2026-09-16T17:04:19.000Z",
-          "feedId": "google-internet-slang",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / internet slang"
         }
       ]
     },
     {
-      "id": "discovery-06591f7699b2",
-      "topic": "Thirst Trap (super salty Girl Dinner)",
+      "id": "discovery-9f26326b90ff",
+      "topic": "Love “Girl Dinner”? Here's How to Make It Even More Satisfying This Fall - Real Simple",
       "score": 4.88,
       "audienceTags": [
         "food",
@@ -129,18 +109,18 @@
       ],
       "signalCount": 1,
       "sourceCount": 1,
-      "firstSeenAt": "2026-09-19T15:49:20.000Z",
-      "lastSeenAt": "2026-09-19T15:49:20.000Z",
+      "firstSeenAt": "2026-09-19T20:31:34.000Z",
+      "lastSeenAt": "2026-09-19T20:31:34.000Z",
       "reasons": [
         "Audience terms: girl dinner.",
         "The newest signal is less than 24 hours old."
       ],
       "signals": [
         {
-          "title": "Thirst Trap (super salty Girl Dinner)",
-          "url": "https://www.reddit.com/r/GirlDinner/comments/1wkpn4k/thirst_trap_super_salty_girl_dinner/",
+          "title": "Love “Girl Dinner”? Here's How to Make It Even More Satisfying This Fall - Real Simple",
+          "url": "https://www.reddit.com/r/Health2020/comments/1wkwrts/love_girl_dinner_heres_how_to_make_it_even_more/",
           "publisher": "Reddit",
-          "publishedAt": "2026-09-19T15:49:20.000Z",
+          "publishedAt": "2026-09-19T20:31:34.000Z",
           "feedId": "reddit-foidslop-adjacent",
           "feedKind": "reddit-search",
           "feedLabel": "Reddit / foidslop-adjacent language"
