@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-19T04:42:11.188Z",
+  "generatedAt": "2026-09-19T11:05:07.161Z",
   "lookbackHours": 72,
-  "signalCount": 55,
+  "signalCount": 52,
   "candidateCount": 1,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
@@ -48,9 +48,9 @@
   ],
   "candidates": [
     {
-      "id": "discovery-8a8452cfaf4e",
+      "id": "discovery-a35262581169",
       "topic": "We’re vocab-maxxing! Merriam-Webster adds whopping 1,400 new words to the dictionary",
-      "score": 7.95,
+      "score": 7.25,
       "audienceTags": [
         "language"
       ],
@@ -58,26 +58,16 @@
         "maxxing",
         "slang"
       ],
-      "signalCount": 6,
-      "sourceCount": 6,
-      "firstSeenAt": "2026-09-16T06:50:49.000Z",
-      "lastSeenAt": "2026-09-18T19:57:00.000Z",
+      "signalCount": 5,
+      "sourceCount": 5,
+      "firstSeenAt": "2026-09-16T17:04:19.000Z",
+      "lastSeenAt": "2026-09-18T06:48:40.000Z",
       "reasons": [
         "Audience terms: maxxing, slang.",
-        "6 independent source labels are carrying the story.",
-        "6 fresh signals were clustered into the same topic.",
-        "The newest signal is less than 24 hours old."
+        "5 independent source labels are carrying the story.",
+        "5 fresh signals were clustered into the same topic."
       ],
       "signals": [
-        {
-          "title": "Sorry, Webster. Most People Don’t Want Internet Slang in the Dictionary.",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9UVjRNMHAwODRxMnk0VnJHVnotS25mTW1UQXRYQV9LT0xldVNJbFpYZ0JEc3RxUEJ3R2dhUTZaNU42dnVPd1k2RTduZGROcVBYemZuQzdsYVNDMFhiOTNnOU5qYjNYVmMwc2c0blBrRGtzU1k0OUh5VjZDejNCSWM?oc=5",
-          "publisher": "The New York Times",
-          "publishedAt": "2026-09-18T19:57:00.000Z",
-          "feedId": "google-internet-slang",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / internet slang"
-        },
         {
           "title": "Merriam-Webster's latest update adds 1,400 words, mostly internet slang",
           "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNVDJyNEcxMWtmZVBxUGNrZEFqNEJxOXhPbUdqaEhSZEplYThUQTJLaEdNNTJBU0ZKaGxIR0xJel9ydUhBS2Fvb0I2eGJnSVNIUGk2clJ4RWZ1a2JyUVQ4blpmUl9HQ1JMZzlCNjF4Z29BUmdLelVRak55RzVrRC13TTU4MlJpQWsxR0RQMkRvYzdrbVh0T09jUm9xeThsSDJMMnUtWVdaWnd3MHV0R2wxR0kzUnlPQS1fX2fSAb8BQVVfeXFMTnB0UG41MXNoOWZubEdtOGNQVG92OVpRTmJCLVNabEpxMHFCWFVlWlZfSjJyQXBRTjBKWFhkNjdBNC1lcnZJRnR3RHJ3LVV4RW5SRHd5VzFZdWJ2c2hHU3M0VE9TTDFYMUhIekkzX3hIaHc1Sm4ya0FmSmhwXzhOREhBTWpKcEZ5b2NCcTdHWk9aNTJ4Wm5tYUdkeEp4NUhyaG1XbXFNV3Q0VlhNVUQyTEl3R1piSC1KRzIyMFpBUHc?oc=5",
@@ -97,6 +87,15 @@
           "feedLabel": "Google News / internet slang"
         },
         {
+          "title": "Sorry, Webster. Most People Don’t Want Internet Slang in the Dictionary.",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9UVjRNMHAwODRxMnk0VnJHVnotS25mTW1UQXRYQV9LT0xldVNJbFpYZ0JEc3RxUEJ3R2dhUTZaNU42dnVPd1k2RTduZGROcVBYemZuQzdsYVNDMFhiOTNnOU5qYjNYVmMwc2c0blBrRGtzU1k0OUh5VjZDejNCSWM?oc=5",
+          "publisher": "The New York Times",
+          "publishedAt": "2026-09-17T11:16:34.000Z",
+          "feedId": "google-internet-slang",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / internet slang"
+        },
+        {
           "title": "We’re vocab-maxxing! Merriam-Webster adds whopping 1,400 new words to the dictionary",
           "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNTE1JRkd6aW50RGx3RFdhY2dYU2wtWEpIb2JIZmFqMjVha3hKZkZRVGtFTGhqdEtzSkRrUXk4QUMtaE83TWhJNnc0LUFtOUQ2MDhTV3VzR01qeXNKVlcxenp0SFVHa2RTb2paT2tHVWs0Ml9MVF9BVTlpZVZRd3hDd2pPY3d3VWJWeEdHUlhIeTZ3V0pfX2xzWWhPVQ?oc=5",
           "publisher": "New York Post",
@@ -110,15 +109,6 @@
           "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPN0ZCZnY4b1dIeE5XM3lzZERLMVRtRjFaNWMzMEExbmJoaXdqU2I0VlU4VzBVOERmQ2Q2R0UzeHZPejdvSUNHR3lIWDQ0RzdFNHlmZWo4SUpMdTM2NUxUT0ZYdm8zU2FOdlZpc1E0X0xUUm5Ib3hIQlVGNHdaaHB5Yks2S3NrWk5rRXp6SEthcThqY3hBS1RkVVhtaEU?oc=5",
           "publisher": "DailyVoice.com",
           "publishedAt": "2026-09-16T17:04:19.000Z",
-          "feedId": "google-internet-slang",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / internet slang"
-        },
-        {
-          "title": "‘Etymology Nerd’ defends Internet slang at crowded YPU debate",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOemNQbHV1ZFA3UFBTNWczWDNFenpzb0k4anMzZlFmMDh1ZVpCR2xZel9CTk53QVF2NENzRDE4ODJVWXhYeEJ1LWNLQXFUellONlZqYXJuZjhVLS1FTXNIdU9pZTB6TXRFNmZxUUNBbG1ZV2hhd1BrWnJqVUE1dXBIcVh4a3NjdjBSanc5NmY3QlFhTDFfMkV0SDR3?oc=5",
-          "publisher": "Yale Daily News",
-          "publishedAt": "2026-09-16T06:50:49.000Z",
           "feedId": "google-internet-slang",
           "feedKind": "google-news",
           "feedLabel": "Google News / internet slang"
