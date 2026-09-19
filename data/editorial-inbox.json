@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-19T11:05:07.161Z",
+  "generatedAt": "2026-09-19T15:55:36.678Z",
   "lookbackHours": 72,
-  "signalCount": 52,
-  "candidateCount": 1,
+  "signalCount": 50,
+  "candidateCount": 2,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -48,9 +48,9 @@
   ],
   "candidates": [
     {
-      "id": "discovery-a35262581169",
+      "id": "discovery-e67e1a8bfdbc",
       "topic": "We’re vocab-maxxing! Merriam-Webster adds whopping 1,400 new words to the dictionary",
-      "score": 7.25,
+      "score": 7.75,
       "audienceTags": [
         "language"
       ],
@@ -61,13 +61,23 @@
       "signalCount": 5,
       "sourceCount": 5,
       "firstSeenAt": "2026-09-16T17:04:19.000Z",
-      "lastSeenAt": "2026-09-18T06:48:40.000Z",
+      "lastSeenAt": "2026-09-18T19:57:00.000Z",
       "reasons": [
         "Audience terms: maxxing, slang.",
         "5 independent source labels are carrying the story.",
-        "5 fresh signals were clustered into the same topic."
+        "5 fresh signals were clustered into the same topic.",
+        "The newest signal is less than 24 hours old."
       ],
       "signals": [
+        {
+          "title": "Sorry, Webster. Most People Don’t Want Internet Slang in the Dictionary.",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9UVjRNMHAwODRxMnk0VnJHVnotS25mTW1UQXRYQV9LT0xldVNJbFpYZ0JEc3RxUEJ3R2dhUTZaNU42dnVPd1k2RTduZGROcVBYemZuQzdsYVNDMFhiOTNnOU5qYjNYVmMwc2c0blBrRGtzU1k0OUh5VjZDejNCSWM?oc=5",
+          "publisher": "The New York Times",
+          "publishedAt": "2026-09-18T19:57:00.000Z",
+          "feedId": "google-internet-slang",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / internet slang"
+        },
         {
           "title": "Merriam-Webster's latest update adds 1,400 words, mostly internet slang",
           "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNVDJyNEcxMWtmZVBxUGNrZEFqNEJxOXhPbUdqaEhSZEplYThUQTJLaEdNNTJBU0ZKaGxIR0xJel9ydUhBS2Fvb0I2eGJnSVNIUGk2clJ4RWZ1a2JyUVQ4blpmUl9HQ1JMZzlCNjF4Z29BUmdLelVRak55RzVrRC13TTU4MlJpQWsxR0RQMkRvYzdrbVh0T09jUm9xeThsSDJMMnUtWVdaWnd3MHV0R2wxR0kzUnlPQS1fX2fSAb8BQVVfeXFMTnB0UG41MXNoOWZubEdtOGNQVG92OVpRTmJCLVNabEpxMHFCWFVlWlZfSjJyQXBRTjBKWFhkNjdBNC1lcnZJRnR3RHJ3LVV4RW5SRHd5VzFZdWJ2c2hHU3M0VE9TTDFYMUhIekkzX3hIaHc1Sm4ya0FmSmhwXzhOREhBTWpKcEZ5b2NCcTdHWk9aNTJ4Wm5tYUdkeEp4NUhyaG1XbXFNV3Q0VlhNVUQyTEl3R1piSC1KRzIyMFpBUHc?oc=5",
@@ -82,15 +92,6 @@
           "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNcE55dXNZMG15UVozMEhoZWpucFo1UUpSR3U3TnhQOWpyRTBSOE53bnlpTjFqMDFJTDJpS05CSkRZMjRNS2dRdU1MUVpQMzNSY0Q5eTFSaUlCT0VXNHZNd3NvVWZYcFQyRy1mUWkxeUo5WUtNZnhVbjNWeFdCZUxKV3dITzBNaEZqeDdDb3JTbnVuRVJlbm4tclFMazMtWmRNWkkzMjYxakxhbjN1V3ZqLVhLOUlDOXNVX0xKTERkalJ6bF9FdXFuZ0hUYk51YVoxZ21Nb1BNVEFLbEpYaXZyeTU5eDIwaUE2bHhVejNCYi1neXFPMVE?oc=5",
           "publisher": "inkl",
           "publishedAt": "2026-09-18T03:15:50.000Z",
-          "feedId": "google-internet-slang",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / internet slang"
-        },
-        {
-          "title": "Sorry, Webster. Most People Don’t Want Internet Slang in the Dictionary.",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9UVjRNMHAwODRxMnk0VnJHVnotS25mTW1UQXRYQV9LT0xldVNJbFpYZ0JEc3RxUEJ3R2dhUTZaNU42dnVPd1k2RTduZGROcVBYemZuQzdsYVNDMFhiOTNnOU5qYjNYVmMwc2c0blBrRGtzU1k0OUh5VjZDejNCSWM?oc=5",
-          "publisher": "The New York Times",
-          "publishedAt": "2026-09-17T11:16:34.000Z",
           "feedId": "google-internet-slang",
           "feedKind": "google-news",
           "feedLabel": "Google News / internet slang"
@@ -112,6 +113,37 @@
           "feedId": "google-internet-slang",
           "feedKind": "google-news",
           "feedLabel": "Google News / internet slang"
+        }
+      ]
+    },
+    {
+      "id": "discovery-06591f7699b2",
+      "topic": "Thirst Trap (super salty Girl Dinner)",
+      "score": 4.88,
+      "audienceTags": [
+        "food",
+        "gender"
+      ],
+      "matchedTerms": [
+        "girl dinner"
+      ],
+      "signalCount": 1,
+      "sourceCount": 1,
+      "firstSeenAt": "2026-09-19T15:49:20.000Z",
+      "lastSeenAt": "2026-09-19T15:49:20.000Z",
+      "reasons": [
+        "Audience terms: girl dinner.",
+        "The newest signal is less than 24 hours old."
+      ],
+      "signals": [
+        {
+          "title": "Thirst Trap (super salty Girl Dinner)",
+          "url": "https://www.reddit.com/r/GirlDinner/comments/1wkpn4k/thirst_trap_super_salty_girl_dinner/",
+          "publisher": "Reddit",
+          "publishedAt": "2026-09-19T15:49:20.000Z",
+          "feedId": "reddit-foidslop-adjacent",
+          "feedKind": "reddit-search",
+          "feedLabel": "Reddit / foidslop-adjacent language"
         }
       ]
     }
