@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-19T20:45:06.385Z",
+  "generatedAt": "2026-09-20T04:58:05.737Z",
   "lookbackHours": 72,
-  "signalCount": 47,
+  "signalCount": 43,
   "candidateCount": 2,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
@@ -48,7 +48,47 @@
   ],
   "candidates": [
     {
-      "id": "discovery-18a747ec9840",
+      "id": "discovery-ec88816e3cc0",
+      "topic": "The Top 24 Gen Alpha Slang Terms of 2026",
+      "score": 5.23,
+      "audienceTags": [
+        "language"
+      ],
+      "matchedTerms": [
+        "slang"
+      ],
+      "signalCount": 2,
+      "sourceCount": 2,
+      "firstSeenAt": "2026-09-18T14:41:00.000Z",
+      "lastSeenAt": "2026-09-19T23:00:01.000Z",
+      "reasons": [
+        "Audience terms: slang.",
+        "2 independent source labels are carrying the story.",
+        "The newest signal is less than 24 hours old."
+      ],
+      "signals": [
+        {
+          "title": "The Top 24 Gen Alpha Slang Terms of 2026",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBtVU4yZld3VS1NVkhEejRHNWs4dzlEQ2xNRXBkUkxZNmJiWEVrN2tlRERDNnNQOVhzQWRlQ2dSaGtCd2lOQ20xRFZwcDVybjJValZzYUJqbk0yeDdBSXVMOXkwcUliYXI0UHJNUlkxWXVmZktjOUE?oc=5",
+          "publisher": "Mental Floss",
+          "publishedAt": "2026-09-19T23:00:01.000Z",
+          "feedId": "google-internet-slang",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / internet slang"
+        },
+        {
+          "title": "Chat, it's time to lock in and learn some Gen Alpha slang",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPOEFadTdONlFfT2xRRjh3V0ZVR09UQ1dkOVN2UjZsTXdDNmk1VkFyOHNISWJkaldvWHZsNnQ0LVFFSEVwNTBKeTU5Z2NNR2M3ZGlCeEdXemRLaXVpYVFNbU9kcmNiVFBuTGJMTFJ6VUQzNzVOU3B3eUxlbms3YXJwZGFQa1hoYVdtZXJLM2lMYVJBYlBsZ2hpSENVenoyRnlCcXBfM2ExOA?oc=5",
+          "publisher": "The Columbus Dispatch",
+          "publishedAt": "2026-09-18T14:41:00.000Z",
+          "feedId": "google-internet-slang",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / internet slang"
+        }
+      ]
+    },
+    {
+      "id": "discovery-7e48ab253762",
       "topic": "Merriam-Webster's latest update adds 1,400 words, mostly internet slang",
       "score": 5.15,
       "audienceTags": [
@@ -59,23 +99,14 @@
       ],
       "signalCount": 3,
       "sourceCount": 3,
-      "firstSeenAt": "2026-09-18T03:15:50.000Z",
-      "lastSeenAt": "2026-09-18T19:57:00.000Z",
+      "firstSeenAt": "2026-09-17T11:16:34.000Z",
+      "lastSeenAt": "2026-09-18T06:48:40.000Z",
       "reasons": [
         "Audience terms: slang.",
         "3 independent source labels are carrying the story.",
         "3 fresh signals were clustered into the same topic."
       ],
       "signals": [
-        {
-          "title": "Sorry, Webster. Most People Don’t Want Internet Slang in the Dictionary.",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9UVjRNMHAwODRxMnk0VnJHVnotS25mTW1UQXRYQV9LT0xldVNJbFpYZ0JEc3RxUEJ3R2dhUTZaNU42dnVPd1k2RTduZGROcVBYemZuQzdsYVNDMFhiOTNnOU5qYjNYVmMwc2c0blBrRGtzU1k0OUh5VjZDejNCSWM?oc=5",
-          "publisher": "The New York Times",
-          "publishedAt": "2026-09-18T19:57:00.000Z",
-          "feedId": "google-internet-slang",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / internet slang"
-        },
         {
           "title": "Merriam-Webster's latest update adds 1,400 words, mostly internet slang",
           "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNVDJyNEcxMWtmZVBxUGNrZEFqNEJxOXhPbUdqaEhSZEplYThUQTJLaEdNNTJBU0ZKaGxIR0xJel9ydUhBS2Fvb0I2eGJnSVNIUGk2clJ4RWZ1a2JyUVQ4blpmUl9HQ1JMZzlCNjF4Z29BUmdLelVRak55RzVrRC13TTU4MlJpQWsxR0RQMkRvYzdrbVh0T09jUm9xeThsSDJMMnUtWVdaWnd3MHV0R2wxR0kzUnlPQS1fX2fSAb8BQVVfeXFMTnB0UG41MXNoOWZubEdtOGNQVG92OVpRTmJCLVNabEpxMHFCWFVlWlZfSjJyQXBRTjBKWFhkNjdBNC1lcnZJRnR3RHJ3LVV4RW5SRHd5VzFZdWJ2c2hHU3M0VE9TTDFYMUhIekkzX3hIaHc1Sm4ya0FmSmhwXzhOREhBTWpKcEZ5b2NCcTdHWk9aNTJ4Wm5tYUdkeEp4NUhyaG1XbXFNV3Q0VlhNVUQyTEl3R1piSC1KRzIyMFpBUHc?oc=5",
@@ -93,37 +124,15 @@
           "feedId": "google-internet-slang",
           "feedKind": "google-news",
           "feedLabel": "Google News / internet slang"
-        }
-      ]
-    },
-    {
-      "id": "discovery-9f26326b90ff",
-      "topic": "Love “Girl Dinner”? Here's How to Make It Even More Satisfying This Fall - Real Simple",
-      "score": 4.88,
-      "audienceTags": [
-        "food",
-        "gender"
-      ],
-      "matchedTerms": [
-        "girl dinner"
-      ],
-      "signalCount": 1,
-      "sourceCount": 1,
-      "firstSeenAt": "2026-09-19T20:31:34.000Z",
-      "lastSeenAt": "2026-09-19T20:31:34.000Z",
-      "reasons": [
-        "Audience terms: girl dinner.",
-        "The newest signal is less than 24 hours old."
-      ],
-      "signals": [
+        },
         {
-          "title": "Love “Girl Dinner”? Here's How to Make It Even More Satisfying This Fall - Real Simple",
-          "url": "https://www.reddit.com/r/Health2020/comments/1wkwrts/love_girl_dinner_heres_how_to_make_it_even_more/",
-          "publisher": "Reddit",
-          "publishedAt": "2026-09-19T20:31:34.000Z",
-          "feedId": "reddit-foidslop-adjacent",
-          "feedKind": "reddit-search",
-          "feedLabel": "Reddit / foidslop-adjacent language"
+          "title": "Sorry, Webster. Most People Don’t Want Internet Slang in the Dictionary.",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9UVjRNMHAwODRxMnk0VnJHVnotS25mTW1UQXRYQV9LT0xldVNJbFpYZ0JEc3RxUEJ3R2dhUTZaNU42dnVPd1k2RTduZGROcVBYemZuQzdsYVNDMFhiOTNnOU5qYjNYVmMwc2c0blBrRGtzU1k0OUh5VjZDejNCSWM?oc=5",
+          "publisher": "The New York Times",
+          "publishedAt": "2026-09-17T11:16:34.000Z",
+          "feedId": "google-internet-slang",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / internet slang"
         }
       ]
     }
