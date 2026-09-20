@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-20T16:11:34.613Z",
+  "generatedAt": "2026-09-20T20:52:17.892Z",
   "lookbackHours": 72,
-  "signalCount": 41,
-  "candidateCount": 2,
+  "signalCount": 37,
+  "candidateCount": 1,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -91,55 +91,6 @@
           "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPOEFadTdONlFfT2xRRjh3V0ZVR09UQ1dkOVN2UjZsTXdDNmk1VkFyOHNISWJkaldvWHZsNnQ0LVFFSEVwNTBKeTU5Z2NNR2M3ZGlCeEdXemRLaXVpYVFNbU9kcmNiVFBuTGJMTFJ6VUQzNzVOU3B3eUxlbms3YXJwZGFQa1hoYVdtZXJLM2lMYVJBYlBsZ2hpSENVenoyRnlCcXBfM2ExOA?oc=5",
           "publisher": "The Columbus Dispatch",
           "publishedAt": "2026-09-18T14:41:00.000Z",
-          "feedId": "google-internet-slang",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / internet slang"
-        }
-      ]
-    },
-    {
-      "id": "discovery-ae73eeda005b",
-      "topic": "Merriam-Webster's latest update adds 1,400 words, mostly internet slang",
-      "score": 4.75,
-      "audienceTags": [
-        "language"
-      ],
-      "matchedTerms": [
-        "slang"
-      ],
-      "signalCount": 3,
-      "sourceCount": 3,
-      "firstSeenAt": "2026-09-17T16:32:18.000Z",
-      "lastSeenAt": "2026-09-18T06:48:40.000Z",
-      "reasons": [
-        "Audience terms: slang.",
-        "3 independent source labels are carrying the story.",
-        "3 fresh signals were clustered into the same topic."
-      ],
-      "signals": [
-        {
-          "title": "Merriam-Webster's latest update adds 1,400 words, mostly internet slang",
-          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNVDJyNEcxMWtmZVBxUGNrZEFqNEJxOXhPbUdqaEhSZEplYThUQTJLaEdNNTJBU0ZKaGxIR0xJel9ydUhBS2Fvb0I2eGJnSVNIUGk2clJ4RWZ1a2JyUVQ4blpmUl9HQ1JMZzlCNjF4Z29BUmdLelVRak55RzVrRC13TTU4MlJpQWsxR0RQMkRvYzdrbVh0T09jUm9xeThsSDJMMnUtWVdaWnd3MHV0R2wxR0kzUnlPQS1fX2fSAb8BQVVfeXFMTnB0UG41MXNoOWZubEdtOGNQVG92OVpRTmJCLVNabEpxMHFCWFVlWlZfSjJyQXBRTjBKWFhkNjdBNC1lcnZJRnR3RHJ3LVV4RW5SRHd5VzFZdWJ2c2hHU3M0VE9TTDFYMUhIekkzX3hIaHc1Sm4ya0FmSmhwXzhOREhBTWpKcEZ5b2NCcTdHWk9aNTJ4Wm5tYUdkeEp4NUhyaG1XbXFNV3Q0VlhNVUQyTEl3R1piSC1KRzIyMFpBUHc?oc=5",
-          "publisher": "Firstpost",
-          "publishedAt": "2026-09-18T06:48:40.000Z",
-          "feedId": "google-internet-slang",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / internet slang"
-        },
-        {
-          "title": "Merriam-Webster adds 1,400 new words in 2026: Vibe…",
-          "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNcE55dXNZMG15UVozMEhoZWpucFo1UUpSR3U3TnhQOWpyRTBSOE53bnlpTjFqMDFJTDJpS05CSkRZMjRNS2dRdU1MUVpQMzNSY0Q5eTFSaUlCT0VXNHZNd3NvVWZYcFQyRy1mUWkxeUo5WUtNZnhVbjNWeFdCZUxKV3dITzBNaEZqeDdDb3JTbnVuRVJlbm4tclFMazMtWmRNWkkzMjYxakxhbjN1V3ZqLVhLOUlDOXNVX0xKTERkalJ6bF9FdXFuZ0hUYk51YVoxZ21Nb1BNVEFLbEpYaXZyeTU5eDIwaUE2bHhVejNCYi1neXFPMVE?oc=5",
-          "publisher": "inkl",
-          "publishedAt": "2026-09-18T03:15:50.000Z",
-          "feedId": "google-internet-slang",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / internet slang"
-        },
-        {
-          "title": "‘Glow-up,’ ‘cuffing season’ among 1,400 new words added to Merriam-Webster dictionary",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQaXpfby1vbi1jRDFkd01fMEttLVExcWRJQXdtSHI4ZWxnLWk2LWVMM01XWTcwNFVETnpsMjgtSzZqRWFZYVRJM0hfczZPZE55UHVqeWg2M0xvTVVKUzZKaUdTcHFzS0F0NFlvQTBSbkZMZjA5QzlpZkotSktRb3lBQ0Q2Ymc4eXJRUXpYajhUaF9XaUZibU5MX2ZFVXMyMmfSAaQBQVVfeXFMTlRUV3BmSGlhVEc1RFROaW1JSTRVVkctQWdkbXdGZzFZR2MxZ1k4ODZlVG5EMjlKNWFvNkoxbjlvS3VsYTBIQ0gtUUc3N0c5Sl90bFU2a1QzYzFOSGhteXkyQ3FKVEgwT0gwV3JqSUk1NHFwaENEZEFkdlZWcFNIMVNvbXlhSGpoNWNLQ0tzWE1JS0Z3Y0YyelUwU1Jpd0tMWHpDVDg?oc=5",
-          "publisher": "ABC News - Breaking News, Latest News and Videos",
-          "publishedAt": "2026-09-17T16:32:18.000Z",
           "feedId": "google-internet-slang",
           "feedKind": "google-news",
           "feedLabel": "Google News / internet slang"
