@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T20:52:17.892Z",
+  "generatedAt": "2026-09-21T05:02:23.683Z",
   "lookbackHours": 72,
   "signalCount": 37,
   "candidateCount": 1,
@@ -48,9 +48,9 @@
   ],
   "candidates": [
     {
-      "id": "discovery-64f5b9c13509",
+      "id": "discovery-52a6dfd370de",
       "topic": "The Top 24 Gen Alpha Slang Terms of 2026",
-      "score": 5.95,
+      "score": 5.65,
       "audienceTags": [
         "language"
       ],
