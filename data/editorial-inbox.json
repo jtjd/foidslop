@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-21T12:54:55.223Z",
+  "generatedAt": "2026-09-21T22:00:46.189Z",
   "lookbackHours": 72,
   "signalCount": 34,
-  "candidateCount": 2,
+  "candidateCount": 0,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -46,87 +46,5 @@
       "error": "HTTP 429"
     }
   ],
-  "candidates": [
-    {
-      "id": "discovery-64f5b9c13509",
-      "topic": "The Top 24 Gen Alpha Slang Terms of 2026",
-      "score": 5.65,
-      "audienceTags": [
-        "language"
-      ],
-      "matchedTerms": [
-        "slang"
-      ],
-      "signalCount": 3,
-      "sourceCount": 3,
-      "firstSeenAt": "2026-09-18T14:41:00.000Z",
-      "lastSeenAt": "2026-09-20T15:30:00.000Z",
-      "reasons": [
-        "Audience terms: slang.",
-        "3 independent source labels are carrying the story.",
-        "3 fresh signals were clustered into the same topic.",
-        "The newest signal is less than 24 hours old."
-      ],
-      "signals": [
-        {
-          "title": "From ‘6-7’ to ‘aura farming’: 10 Gen Z slang terms you’ll keep seeing online in 2026 and what they mean",
-          "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQTjlPTkw1Ymx6MlF2bmU3dVdHT3hFNnQzVGNMM3FaR0dRdS0zZ3VDTHpwa1dGZEtQMzA0ck5XMUV6SlYwc2VxeEpacVJyb3ZCaXJfNDcteFZCWEZSeGQ4Z0xwN1RJT19YUE1xX3JjcGxIcjl5dmx5Z2pYUERJS29yYU9xczcxczlyUE1ScWRBVnZpNnZaejR1REZKT2xWNFRtaWdNdzlvM2YzMWZka0FJNGdvNnlrMlZGakpqVFRWVm44aHBMa0FfUnlvOEEyY3ZNY2VvLUxJSWFqR0Zoa1c1akRMMUl6NGNya251dVNuMk10cDl4OHBidnQxZzU0M1JDV1QzbUln0gGLAkFVX3lxTFBNRjlyXzBEVzlSY3dlT2xzZEExTlFWQVhPcllEc0RpTGpPQm9SMkduRk9DakpJeXNsOWtvWUh4enhfblUyZW9qVGlzU3lXbnJ5ZEdiNTZ0dlY3TUtiUU1BaTAxYlBHeVhGUlRyVEFmNXFaNGk5aUxGNXUzVEtBV2VGSVJzOHF3UXowMC04UEN4TlhiNnZqUVVNdWdIOEhOSURKTzNsc0t2S1IxWEYzRnBCZDdla2FMMHFCTU1CdDhCMXVyMmQyaHRxZEhodklaRi10OS1MR1RZdzUyTURmYWNDcHh5ZjF2ZUNkNk1xUzZZd0JXOWxPNkJmMGhMcEFrcFk4UE93amJZcVdabw?oc=5",
-          "publisher": "The Times of India",
-          "publishedAt": "2026-09-20T15:30:00.000Z",
-          "feedId": "google-internet-slang",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / internet slang"
-        },
-        {
-          "title": "The Top 24 Gen Alpha Slang Terms of 2026",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBtVU4yZld3VS1NVkhEejRHNWs4dzlEQ2xNRXBkUkxZNmJiWEVrN2tlRERDNnNQOVhzQWRlQ2dSaGtCd2lOQ20xRFZwcDVybjJValZzYUJqbk0yeDdBSXVMOXkwcUliYXI0UHJNUlkxWXVmZktjOUE?oc=5",
-          "publisher": "Mental Floss",
-          "publishedAt": "2026-09-19T23:00:01.000Z",
-          "feedId": "google-internet-slang",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / internet slang"
-        },
-        {
-          "title": "Chat, it's time to lock in and learn some Gen Alpha slang",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPOEFadTdONlFfT2xRRjh3V0ZVR09UQ1dkOVN2UjZsTXdDNmk1VkFyOHNISWJkaldvWHZsNnQ0LVFFSEVwNTBKeTU5Z2NNR2M3ZGlCeEdXemRLaXVpYVFNbU9kcmNiVFBuTGJMTFJ6VUQzNzVOU3B3eUxlbms3YXJwZGFQa1hoYVdtZXJLM2lMYVJBYlBsZ2hpSENVenoyRnlCcXBfM2ExOA?oc=5",
-          "publisher": "The Columbus Dispatch",
-          "publishedAt": "2026-09-18T14:41:00.000Z",
-          "feedId": "google-internet-slang",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / internet slang"
-        }
-      ]
-    },
-    {
-      "id": "discovery-fdaa6c7d1fb1",
-      "topic": "27M | Dating → Relationship",
-      "score": 5.25,
-      "audienceTags": [
-        "relationships"
-      ],
-      "matchedTerms": [
-        "dating",
-        "relationship"
-      ],
-      "signalCount": 1,
-      "sourceCount": 1,
-      "firstSeenAt": "2026-09-21T12:41:02.000Z",
-      "lastSeenAt": "2026-09-21T12:41:02.000Z",
-      "reasons": [
-        "Audience terms: dating, relationship.",
-        "The newest signal is less than 24 hours old."
-      ],
-      "signals": [
-        {
-          "title": "27M | Dating → Relationship",
-          "url": "https://www.reddit.com/r/reddmatch/comments/1wmbo9v/27m_dating_relationship/",
-          "publisher": "Reddit",
-          "publishedAt": "2026-09-21T12:41:02.000Z",
-          "feedId": "reddit-foidslop-adjacent",
-          "feedKind": "reddit-search",
-          "feedLabel": "Reddit / foidslop-adjacent language"
-        }
-      ]
-    }
-  ]
+  "candidates": []
 }
