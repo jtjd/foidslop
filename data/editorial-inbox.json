@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-21T05:02:23.683Z",
+  "generatedAt": "2026-09-21T12:54:55.223Z",
   "lookbackHours": 72,
-  "signalCount": 37,
-  "candidateCount": 1,
+  "signalCount": 34,
+  "candidateCount": 2,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -48,7 +48,7 @@
   ],
   "candidates": [
     {
-      "id": "discovery-52a6dfd370de",
+      "id": "discovery-64f5b9c13509",
       "topic": "The Top 24 Gen Alpha Slang Terms of 2026",
       "score": 5.65,
       "audienceTags": [
@@ -94,6 +94,37 @@
           "feedId": "google-internet-slang",
           "feedKind": "google-news",
           "feedLabel": "Google News / internet slang"
+        }
+      ]
+    },
+    {
+      "id": "discovery-fdaa6c7d1fb1",
+      "topic": "27M | Dating → Relationship",
+      "score": 5.25,
+      "audienceTags": [
+        "relationships"
+      ],
+      "matchedTerms": [
+        "dating",
+        "relationship"
+      ],
+      "signalCount": 1,
+      "sourceCount": 1,
+      "firstSeenAt": "2026-09-21T12:41:02.000Z",
+      "lastSeenAt": "2026-09-21T12:41:02.000Z",
+      "reasons": [
+        "Audience terms: dating, relationship.",
+        "The newest signal is less than 24 hours old."
+      ],
+      "signals": [
+        {
+          "title": "27M | Dating → Relationship",
+          "url": "https://www.reddit.com/r/reddmatch/comments/1wmbo9v/27m_dating_relationship/",
+          "publisher": "Reddit",
+          "publishedAt": "2026-09-21T12:41:02.000Z",
+          "feedId": "reddit-foidslop-adjacent",
+          "feedKind": "reddit-search",
+          "feedLabel": "Reddit / foidslop-adjacent language"
         }
       ]
     }
