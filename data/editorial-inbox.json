@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-22T05:03:27.725Z",
+  "generatedAt": "2026-09-22T11:44:40.613Z",
   "lookbackHours": 72,
-  "signalCount": 33,
+  "signalCount": 32,
   "candidateCount": 1,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
@@ -48,52 +48,42 @@
   ],
   "candidates": [
     {
-      "id": "discovery-1af1e495b08c",
-      "topic": "Can you bring iced coffee to a job interview? TikTok ignites debate",
-      "score": 4.83,
+      "id": "discovery-815f79dea43c",
+      "topic": "From 'glow-up', 'meme coin' to 'Sunday scaries', Merriam-Webster dictionary adds 1,400 new words",
+      "score": 5.01,
       "audienceTags": [
         "internet"
       ],
       "matchedTerms": [
-        "tiktok"
+        "meme"
       ],
-      "signalCount": 3,
-      "sourceCount": 3,
-      "firstSeenAt": "2026-09-21T10:31:30.000Z",
-      "lastSeenAt": "2026-09-21T20:22:00.000Z",
+      "signalCount": 2,
+      "sourceCount": 2,
+      "firstSeenAt": "2026-09-21T21:15:00.000Z",
+      "lastSeenAt": "2026-09-22T11:27:45.000Z",
       "reasons": [
-        "Audience terms: tiktok.",
-        "3 independent source labels are carrying the story.",
-        "3 fresh signals were clustered into the same topic.",
+        "Audience terms: meme.",
+        "2 independent source labels are carrying the story.",
         "The newest signal is less than 24 hours old."
       ],
       "signals": [
         {
-          "title": "Can you bring iced coffee to a job interview? TikTok ignites debate",
-          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQMU9OcVNSbEdQam1fa25xSy0tVXp2WEpSWFBLc1F6UWtyaHl6d3ZJbzRYbjVhOTI2ZGJpci1iQkNJc2E2TVpyMXZHS0xfSGo2a1Q5SFBDQ01acDdfZFhTbnNzcmRhcTEyVVZkM1F6LVZ6alJYc2hEMWZwU2FyQm1saGF4elloM1ZDaWg3bEZOd2VNa1NYUUQwbWN0TFh5amNidE45SUZSREhkM0RuTVdLMG5DLXJ3VkxKNFZGNlNabHBQdlVTLW5iaWU4STJicEpr?oc=5",
-          "publisher": "USA Today",
-          "publishedAt": "2026-09-21T20:22:00.000Z",
-          "feedId": "google-tiktok-culture",
+          "title": "From 'glow-up', 'meme coin' to 'Sunday scaries', Merriam-Webster dictionary adds 1,400 new words",
+          "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPX1VUQ01waklxWEtWNGpqMmRJZ1luWDFvUzVKeXBQdlU1U1lrTkpfTzBvLUxhX0xGaTlCQUt4cGdjS0dlN1I4OTVEZ1pkbFRxY2M1OXB5emYxWFU4M1hveEI1aU9vZlBjcm4wdnhrdzBPMjNvNGUzeE1feEwwMGZEN1o1R3libi1raVRHMDdHYXFIdk5XN1U3eHY5X081TmpCWWNMaXpvMTFDd1dIZUNUbUhvWVhUVFF4dnl2LTJ0SHQtZ0dGUmRfeFNucWstaXpCYl9XT3hCWUdrZERQU0pjb3c0d9IB6AFBVV95cUxOM0RydkpmdFp5aUxEa2FSckJYSDFwcFNEbU80Q2RGTk52SjRiZ1FiLUxMYXI4Zk91VlFBNGFOd2t2RlpNVDZrVTNrV3JMWWItdk1DUVpQdGhybU41SXpTd3JrMm1veGtTaHh2MFlFRWl3VnZLYmJoT25HMDJXUVlXLXZ0SkFpZ0NDYWRvNDZtakJKRlFCYUxtRGM4Rng2Y1VzNk9XZk4ydnVHaUZTXzdOQXpHUm1hdG5HTjZiU0NYVDJKa3p4c2VPd05WRXE1a0ZrRWpUcFBRcjRRbm1zcHV6bXFfV2JKVFBQ?oc=5",
+          "publisher": "Moneycontrol.com",
+          "publishedAt": "2026-09-22T11:27:45.000Z",
+          "feedId": "google-internet-slang",
           "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
+          "feedLabel": "Google News / internet slang"
         },
         {
-          "title": "What the Great Iced Coffee Debate says about job hunting in 2026",
-          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9mSTZiay03eHNwM1R5UVA0SEMtRHRiZGlId3oxT2drZjgxREQ3bUJ2QmpaLXRTc3ZqZHBwWWlwSWI5OER3cl9uYm9aR2dYYzBQZlZMaEh3V3I2bC1kb3B3MlVlVEt1bTZjczY1Zl9KQmY5cjI0UG9KR0NzYw?oc=5",
-          "publisher": "Yahoo Style UK",
-          "publishedAt": "2026-09-21T19:37:39.000Z",
-          "feedId": "google-tiktok-culture",
+          "title": "Merriam Webster adds 1,400 new words. See definitions",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOdXNzbmRxZkhFaHNQTFotY2p2bnFIY1hCLUU2cmVuejEzTDk1VUdqT0FuMWowRHZUdEhSaTlBTzlwSW1TeFZrcjl4dHRKaGhubU9XblZodUtPb0VUY3BFYXB0V2g0aTdCZXcyTG9OYUJYaTl4TGg2bUNYbXVQOHp6ejBTOVBSU0FCUlVJSjlITU1DQU5KNFltdzltTjJZZDY4TEQ3Y293?oc=5",
+          "publisher": "usatoday.com",
+          "publishedAt": "2026-09-21T21:15:00.000Z",
+          "feedId": "google-internet-slang",
           "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "'I would never': Bringing an iced coffee to a job interview sparks TikTok debate",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1xakNVa0dOR2dCTk55aFR6VFJhU29jMHNsTjRrQWx4eXkzakY2UHVhVEppckVLTkQ0U1ZuMVR5UV9rOWhfZnVHNjU3blFvVU5TM2E3WWpkSjQyWjRmaGZLZGFSNHJQeEoyLXo4VUdyaWUwekd6eGhr?oc=5",
-          "publisher": "Indy100 | News",
-          "publishedAt": "2026-09-21T10:31:30.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
+          "feedLabel": "Google News / internet slang"
         }
       ]
     }
