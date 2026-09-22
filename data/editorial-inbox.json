@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-21T22:00:46.189Z",
+  "generatedAt": "2026-09-22T05:03:27.725Z",
   "lookbackHours": 72,
-  "signalCount": 34,
-  "candidateCount": 0,
+  "signalCount": 33,
+  "candidateCount": 1,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -46,5 +46,56 @@
       "error": "HTTP 429"
     }
   ],
-  "candidates": []
+  "candidates": [
+    {
+      "id": "discovery-1af1e495b08c",
+      "topic": "Can you bring iced coffee to a job interview? TikTok ignites debate",
+      "score": 4.83,
+      "audienceTags": [
+        "internet"
+      ],
+      "matchedTerms": [
+        "tiktok"
+      ],
+      "signalCount": 3,
+      "sourceCount": 3,
+      "firstSeenAt": "2026-09-21T10:31:30.000Z",
+      "lastSeenAt": "2026-09-21T20:22:00.000Z",
+      "reasons": [
+        "Audience terms: tiktok.",
+        "3 independent source labels are carrying the story.",
+        "3 fresh signals were clustered into the same topic.",
+        "The newest signal is less than 24 hours old."
+      ],
+      "signals": [
+        {
+          "title": "Can you bring iced coffee to a job interview? TikTok ignites debate",
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQMU9OcVNSbEdQam1fa25xSy0tVXp2WEpSWFBLc1F6UWtyaHl6d3ZJbzRYbjVhOTI2ZGJpci1iQkNJc2E2TVpyMXZHS0xfSGo2a1Q5SFBDQ01acDdfZFhTbnNzcmRhcTEyVVZkM1F6LVZ6alJYc2hEMWZwU2FyQm1saGF4elloM1ZDaWg3bEZOd2VNa1NYUUQwbWN0TFh5amNidE45SUZSREhkM0RuTVdLMG5DLXJ3VkxKNFZGNlNabHBQdlVTLW5iaWU4STJicEpr?oc=5",
+          "publisher": "USA Today",
+          "publishedAt": "2026-09-21T20:22:00.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "What the Great Iced Coffee Debate says about job hunting in 2026",
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9mSTZiay03eHNwM1R5UVA0SEMtRHRiZGlId3oxT2drZjgxREQ3bUJ2QmpaLXRTc3ZqZHBwWWlwSWI5OER3cl9uYm9aR2dYYzBQZlZMaEh3V3I2bC1kb3B3MlVlVEt1bTZjczY1Zl9KQmY5cjI0UG9KR0NzYw?oc=5",
+          "publisher": "Yahoo Style UK",
+          "publishedAt": "2026-09-21T19:37:39.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "'I would never': Bringing an iced coffee to a job interview sparks TikTok debate",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1xakNVa0dOR2dCTk55aFR6VFJhU29jMHNsTjRrQWx4eXkzakY2UHVhVEppckVLTkQ0U1ZuMVR5UV9rOWhfZnVHNjU3blFvVU5TM2E3WWpkSjQyWjRmaGZLZGFSNHJQeEoyLXo4VUdyaWUwekd6eGhr?oc=5",
+          "publisher": "Indy100 | News",
+          "publishedAt": "2026-09-21T10:31:30.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        }
+      ]
+    }
+  ]
 }
