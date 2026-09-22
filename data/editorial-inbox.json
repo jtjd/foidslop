@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-22T11:44:40.613Z",
+  "generatedAt": "2026-09-22T17:00:27.747Z",
   "lookbackHours": 72,
-  "signalCount": 32,
+  "signalCount": 41,
   "candidateCount": 1,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
@@ -79,7 +79,7 @@
         {
           "title": "Merriam Webster adds 1,400 new words. See definitions",
           "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOdXNzbmRxZkhFaHNQTFotY2p2bnFIY1hCLUU2cmVuejEzTDk1VUdqT0FuMWowRHZUdEhSaTlBTzlwSW1TeFZrcjl4dHRKaGhubU9XblZodUtPb0VUY3BFYXB0V2g0aTdCZXcyTG9OYUJYaTl4TGg2bUNYbXVQOHp6ejBTOVBSU0FCUlVJSjlITU1DQU5KNFltdzltTjJZZDY4TEQ3Y293?oc=5",
-          "publisher": "usatoday.com",
+          "publisher": "USA Today",
           "publishedAt": "2026-09-21T21:15:00.000Z",
           "feedId": "google-internet-slang",
           "feedKind": "google-news",
