@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-23T17:07:36.717Z",
+  "generatedAt": "2026-09-23T21:32:56.708Z",
   "lookbackHours": 72,
   "signalCount": 48,
-  "candidateCount": 1,
+  "candidateCount": 3,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -78,6 +78,96 @@
           "feedId": "google-internet-subcultures",
           "feedKind": "google-news",
           "feedLabel": "Google News / internet subcultures"
+        }
+      ]
+    },
+    {
+      "id": "discovery-6f3e1595f3a1",
+      "topic": "Can you bring iced coffee to a job interview? TikTok ignites debate",
+      "score": 5.13,
+      "audienceTags": [
+        "internet"
+      ],
+      "matchedTerms": [
+        "tiktok"
+      ],
+      "signalCount": 4,
+      "sourceCount": 4,
+      "firstSeenAt": "2026-09-21T19:37:00.000Z",
+      "lastSeenAt": "2026-09-23T09:29:47.000Z",
+      "reasons": [
+        "Audience terms: tiktok.",
+        "4 independent source labels are carrying the story.",
+        "4 fresh signals were clustered into the same topic.",
+        "The newest signal is less than 24 hours old."
+      ],
+      "signals": [
+        {
+          "title": "'I would never': Bringing an iced coffee to a job interview sparks generational TikTok debate",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNclNhNk5XMHRlVnMwcE5XMy1HazJYd3hJSFpOOThRMUF1TVBGZGptV09KZ0dVUGJSM29BaVJGX25IT1BCczB6Wm1USGZ2a3NFRzB1Zlh3MXJhY1BTNTJlNDl2ODBudDVSOHRhenZ2Nmtpbk5vS3I1OUJZeUhYWmhLU2VxeDVRQQ?oc=5",
+          "publisher": "Indy100",
+          "publishedAt": "2026-09-23T09:29:47.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "Is It OK to Bring Iced Coffee to a Job Interview? Recruiter Sparks Generational Debate",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOUXU3MVlOQnd3bnpoY1lOMEN6VTcwY2FTTGNOSHltVUVTN2k5QnAxVjh6S3VGX2hSa2gxT3Z6Zm80STZDeXA2Wm9Ic2k4cDVCOG1YYzUtQ3hKR25oVG5wSDFoUzdxSmJkbjlPT1hsVXVjbjZYc1VvdEtRN2RWem1VVjF1UC1adTNiQWlkRkxtOV8?oc=5",
+          "publisher": "TODAY.com",
+          "publishedAt": "2026-09-22T16:01:41.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "Can you bring iced coffee to a job interview? TikTok ignites debate",
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQMU9OcVNSbEdQam1fa25xSy0tVXp2WEpSWFBLc1F6UWtyaHl6d3ZJbzRYbjVhOTI2ZGJpci1iQkNJc2E2TVpyMXZHS0xfSGo2a1Q5SFBDQ01acDdfZFhTbnNzcmRhcTEyVVZkM1F6LVZ6alJYc2hEMWZwU2FyQm1saGF4elloM1ZDaWg3bEZOd2VNa1NYUUQwbWN0TFh5amNidE45SUZSREhkM0RuTVdLMG5DLXJ3VkxKNFZGNlNabHBQdlVTLW5iaWU4STJicEpr?oc=5",
+          "publisher": "USA Today",
+          "publishedAt": "2026-09-21T20:23:43.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "What the Great Iced Coffee Debate says about job hunting in 2026",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNUkdxX0d5Vk5Gdno1WjVEZDdrc2Z0XzV0T0FpUVZ5cTd1dWd6VmlSdl9kakduN29ZaF83R0lnek9RMmExUDlvMmsxQ1B1NWQ4dTVOQlNFbnIzN25nRHlhRjVwZkV0N3RTc3N1NnptN3pSbWhLZzdpcnF4UFB6bmtHVHpmU05QZGt1ek9PcDIwZ1dGVlcwZkRwN21HS3V5bU5WbEZSdQ?oc=5",
+          "publisher": "Business Insider",
+          "publishedAt": "2026-09-21T19:37:00.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        }
+      ]
+    },
+    {
+      "id": "discovery-c4bb140e2031",
+      "topic": "Girl Dinner [OC]",
+      "score": 4.88,
+      "audienceTags": [
+        "food",
+        "gender"
+      ],
+      "matchedTerms": [
+        "girl dinner"
+      ],
+      "signalCount": 1,
+      "sourceCount": 1,
+      "firstSeenAt": "2026-09-23T21:29:09.000Z",
+      "lastSeenAt": "2026-09-23T21:29:09.000Z",
+      "reasons": [
+        "Audience terms: girl dinner.",
+        "The newest signal is less than 24 hours old."
+      ],
+      "signals": [
+        {
+          "title": "Girl Dinner [OC]",
+          "url": "https://www.reddit.com/r/HollowKnight/comments/1woiubf/girl_dinner_oc/",
+          "publisher": "Reddit",
+          "publishedAt": "2026-09-23T21:29:09.000Z",
+          "feedId": "reddit-foidslop-adjacent",
+          "feedKind": "reddit-search",
+          "feedLabel": "Reddit / foidslop-adjacent language"
         }
       ]
     }
