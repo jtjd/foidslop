@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-22T21:23:04.627Z",
+  "generatedAt": "2026-09-23T04:49:37.474Z",
   "lookbackHours": 72,
-  "signalCount": 42,
-  "candidateCount": 1,
+  "signalCount": 45,
+  "candidateCount": 2,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -48,7 +48,7 @@
   ],
   "candidates": [
     {
-      "id": "discovery-d5a87e109667",
+      "id": "discovery-ceae729d19f6",
       "topic": "Chuchu, a TikTok cat viral for 'sundo serye,' passes away",
       "score": 5.43,
       "audienceTags": [
@@ -61,7 +61,7 @@
       "signalCount": 3,
       "sourceCount": 3,
       "firstSeenAt": "2026-09-22T06:58:37.000Z",
-      "lastSeenAt": "2026-09-22T20:33:54.000Z",
+      "lastSeenAt": "2026-09-23T03:00:21.000Z",
       "reasons": [
         "Audience terms: viral, tiktok.",
         "3 independent source labels are carrying the story.",
@@ -73,7 +73,7 @@
           "title": "‘MY BIGGEST HEARTBREAK’💔 Chuchu, the viral cat featured in the TikTok “Sundo Serye,” has died, prompting an outpouring of grief from his owner and online followers. Owner Mark Anthony Petalbo Borcelo announced the death in a Facebook post, calling",
           "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOam1abXcwS3ZXNVhiNWRkQ2ozbmRhUmtJWG5HNldIUXpKVW5DUlI5ZDkxYXJBdGJvZHNyRVU3RDAzRGM2bllVOF9iTEx1ZEJQQUJCcHBza1RMaVpjX1UzVDVoV2dZWmNTYldiOTNxVXFMbnpWQTBLLVBhbk9PdXhOZHBBcFQxdUJSSW1xOEUxNnI1UGhZR0E4RENsS0dDT3lMbXljcmZiT2xNX3l2U252VmZ0VmY4ZTd3S25Bby03Y1FpX1hzRFlqSW9LcnFSRGthVEhsNFVSNTFDekRhcktj?oc=5",
           "publisher": "facebook.com",
-          "publishedAt": "2026-09-22T20:33:54.000Z",
+          "publishedAt": "2026-09-23T03:00:21.000Z",
           "feedId": "google-tiktok-culture",
           "feedKind": "google-news",
           "feedLabel": "Google News / TikTok culture"
@@ -92,6 +92,56 @@
           "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPXzloWndDTnZqZk0wS1RWT1duTVc0RFpZakdFVk9LNjcxZE9IbVBNcm9RdmtGSnZWMWpEeWV4YUUzcTZZekgzaGhFSllwVS15M1RweWlrbEFtUHhVaC1zdzNBeXdRaUpET3hYZnVTM2ZwaEdWLVpFOXVzdFNha1VRU0w1aFdFWW9XVGUtS1lhTHJ6QWJnRHFEYXNBLUl0TS1OYVVXQVdkc2Y0azRqN1NxSjJINlJ3MUlobVHSAb8BQVVfeXFMTkhBa09wZU9kd3FEV1Branl6VF9XcTk0cFhqN0w4M3d2bnB2NDFFVnhLVWhMX0VRdDlkaWRWQlhyaXhtS1lKR2VFVjFzaUo3Q2ljV0YxZnd4WUx5VGhhN0phZ2E5cWlMbkZWaTNmZGNXNTFrUnVuNDltd1A0NFZIbWUxdkJ4V2ItemhYTGFReG40a3RTbVdTc1V1OWQ3dUZZbndxU24zZHl3YXdVZWp3Z3lad095Z2lhMnNtTjU1ODg?oc=5",
           "publisher": "GMA Network",
           "publishedAt": "2026-09-22T06:58:37.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        }
+      ]
+    },
+    {
+      "id": "discovery-1462c5fa7ba5",
+      "topic": "Can you bring iced coffee to a job interview? TikTok ignites debate",
+      "score": 4.83,
+      "audienceTags": [
+        "internet"
+      ],
+      "matchedTerms": [
+        "tiktok"
+      ],
+      "signalCount": 3,
+      "sourceCount": 3,
+      "firstSeenAt": "2026-09-21T19:37:00.000Z",
+      "lastSeenAt": "2026-09-22T16:01:41.000Z",
+      "reasons": [
+        "Audience terms: tiktok.",
+        "3 independent source labels are carrying the story.",
+        "3 fresh signals were clustered into the same topic.",
+        "The newest signal is less than 24 hours old."
+      ],
+      "signals": [
+        {
+          "title": "Is It OK to Bring Iced Coffee to a Job Interview? Recruiter Sparks Generational Debate",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOUXU3MVlOQnd3bnpoY1lOMEN6VTcwY2FTTGNOSHltVUVTN2k5QnAxVjh6S3VGX2hSa2gxT3Z6Zm80STZDeXA2Wm9Ic2k4cDVCOG1YYzUtQ3hKR25oVG5wSDFoUzdxSmJkbjlPT1hsVXVjbjZYc1VvdEtRN2RWem1VVjF1UC1adTNiQWlkRkxtOV8?oc=5",
+          "publisher": "TODAY.com",
+          "publishedAt": "2026-09-22T16:01:41.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "Can you bring iced coffee to a job interview? TikTok ignites debate",
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQMU9OcVNSbEdQam1fa25xSy0tVXp2WEpSWFBLc1F6UWtyaHl6d3ZJbzRYbjVhOTI2ZGJpci1iQkNJc2E2TVpyMXZHS0xfSGo2a1Q5SFBDQ01acDdfZFhTbnNzcmRhcTEyVVZkM1F6LVZ6alJYc2hEMWZwU2FyQm1saGF4elloM1ZDaWg3bEZOd2VNa1NYUUQwbWN0TFh5amNidE45SUZSREhkM0RuTVdLMG5DLXJ3VkxKNFZGNlNabHBQdlVTLW5iaWU4STJicEpr?oc=5",
+          "publisher": "usatoday.com",
+          "publishedAt": "2026-09-21T20:23:43.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "What the Great Iced Coffee Debate says about job hunting in 2026",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNUkdxX0d5Vk5Gdno1WjVEZDdrc2Z0XzV0T0FpUVZ5cTd1dWd6VmlSdl9kakduN29ZaF83R0lnek9RMmExUDlvMmsxQ1B1NWQ4dTVOQlNFbnIzN25nRHlhRjVwZkV0N3RTc3N1NnptN3pSbWhLZzdpcnF4UFB6bmtHVHpmU05QZGt1ek9PcDIwZ1dGVlcwZkRwN21HS3V5bU5WbEZSdQ?oc=5",
+          "publisher": "Business Insider",
+          "publishedAt": "2026-09-21T19:37:00.000Z",
           "feedId": "google-tiktok-culture",
           "feedKind": "google-news",
           "feedLabel": "Google News / TikTok culture"
