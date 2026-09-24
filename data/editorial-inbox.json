@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-24T04:57:39.168Z",
+  "generatedAt": "2026-09-24T11:52:51.382Z",
   "lookbackHours": 72,
-  "signalCount": 47,
+  "signalCount": 45,
   "candidateCount": 2,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
@@ -82,31 +82,40 @@
       ]
     },
     {
-      "id": "discovery-02c93814f2fa",
+      "id": "discovery-70f3a6aaf0af",
       "topic": "Can you bring iced coffee to a job interview? TikTok ignites debate",
-      "score": 5.13,
+      "score": 5.72,
       "audienceTags": [
         "internet"
       ],
       "matchedTerms": [
         "tiktok"
       ],
-      "signalCount": 4,
-      "sourceCount": 4,
+      "signalCount": 5,
+      "sourceCount": 5,
       "firstSeenAt": "2026-09-21T19:37:00.000Z",
-      "lastSeenAt": "2026-09-23T09:29:47.000Z",
+      "lastSeenAt": "2026-09-24T09:00:00.000Z",
       "reasons": [
         "Audience terms: tiktok.",
-        "4 independent source labels are carrying the story.",
-        "4 fresh signals were clustered into the same topic.",
+        "5 independent source labels are carrying the story.",
+        "5 fresh signals were clustered into the same topic.",
         "The newest signal is less than 24 hours old."
       ],
       "signals": [
         {
-          "title": "'I would never': Bringing an iced coffee to a job interview sparks generational TikTok debate",
-          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNclNhNk5XMHRlVnMwcE5XMy1HazJYd3hJSFpOOThRMUF1TVBGZGptV09KZ0dVUGJSM29BaVJGX25IT1BCczB6Wm1USGZ2a3NFRzB1Zlh3MXJhY1BTNTJlNDl2ODBudDVSOHRhenZ2Nmtpbk5vS3I1OUJZeUhYWmhLU2VxeDVRQQ?oc=5",
-          "publisher": "Indy100",
-          "publishedAt": "2026-09-23T09:29:47.000Z",
+          "title": "‘Too casual’: Job recruiter responds after TikTok on iced coffee and Gen Z sparks debate",
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxONERhZ2tDdnR1VmhlMERRbDRyTlBYalhMamJqeG83bjk1VDYwWlRscWh2N0E2SGdRRVlIZ3BFV3FpS1hXQUE2MExtSHVOVEUtS0RqTE1HWUhSTWtOR2pkR1pfeTl2UjNzNTFSdUw3T0JPalNHSHdQbmF2clcyRzVhOUF5dk52WFhKaUx5LXpKbm1iLUpMTUp6djd4Q1lkdEZ3blo1eEpyR0NmWjBCdTUxSU8tM3Q2REcwUWtrcWhSZUxHaHY1?oc=5",
+          "publisher": "CTV News",
+          "publishedAt": "2026-09-24T09:00:00.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "Bringing iced coffee in a job interview? The debate is more than TikTok froth",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPYnR5eXpkZ3VOb0Z2SWpIMFFRMEdSQXhNbTFmaTBKTlJPTEtpLUFvY0ZHajMtOExGbkJpQW1TZ0d5VVF3V3hmdGxTUUdxMHVwYldabnd0eDRjS2hkR0taY1liUEp6T1dQSElMa0lkT3ZXUEwzU3M3VDJtRUU4d2lLLTJmQ3RtTWRyNjhYQzdXQUw2X2ZpcmViaGF0WUdKY010bG80OHlKTUhjQmJJLUU0VWtxQ0ZNTTFpZDExbg?oc=5",
+          "publisher": "smartcompany.com.au",
+          "publishedAt": "2026-09-24T02:01:51.000Z",
           "feedId": "google-tiktok-culture",
           "feedKind": "google-news",
           "feedLabel": "Google News / TikTok culture"
@@ -114,7 +123,7 @@
         {
           "title": "Is It OK to Bring Iced Coffee to a Job Interview? Recruiter Sparks Generational Debate",
           "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOUXU3MVlOQnd3bnpoY1lOMEN6VTcwY2FTTGNOSHltVUVTN2k5QnAxVjh6S3VGX2hSa2gxT3Z6Zm80STZDeXA2Wm9Ic2k4cDVCOG1YYzUtQ3hKR25oVG5wSDFoUzdxSmJkbjlPT1hsVXVjbjZYc1VvdEtRN2RWem1VVjF1UC1adTNiQWlkRkxtOV8?oc=5",
-          "publisher": "TODAY.com",
+          "publisher": "today.com",
           "publishedAt": "2026-09-22T16:01:41.000Z",
           "feedId": "google-tiktok-culture",
           "feedKind": "google-news",
@@ -132,7 +141,7 @@
         {
           "title": "What the Great Iced Coffee Debate says about job hunting in 2026",
           "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNUkdxX0d5Vk5Gdno1WjVEZDdrc2Z0XzV0T0FpUVZ5cTd1dWd6VmlSdl9kakduN29ZaF83R0lnek9RMmExUDlvMmsxQ1B1NWQ4dTVOQlNFbnIzN25nRHlhRjVwZkV0N3RTc3N1NnptN3pSbWhLZzdpcnF4UFB6bmtHVHpmU05QZGt1ek9PcDIwZ1dGVlcwZkRwN21HS3V5bU5WbEZSdQ?oc=5",
-          "publisher": "businessinsider.com",
+          "publisher": "Business Insider",
           "publishedAt": "2026-09-21T19:37:00.000Z",
           "feedId": "google-tiktok-culture",
           "feedKind": "google-news",
