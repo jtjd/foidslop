@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-24T17:16:10.918Z",
+  "generatedAt": "2026-09-24T21:33:58.939Z",
   "lookbackHours": 72,
-  "signalCount": 52,
-  "candidateCount": 2,
+  "signalCount": 36,
+  "candidateCount": 1,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -48,87 +48,9 @@
   ],
   "candidates": [
     {
-      "id": "discovery-288148ec283b",
-      "topic": "Viral TikTok Sparks Debate: Is Iced Coffee Unprofessional At A Job Interview?",
-      "score": 6.22,
-      "audienceTags": [
-        "internet"
-      ],
-      "matchedTerms": [
-        "viral",
-        "tiktok"
-      ],
-      "signalCount": 6,
-      "sourceCount": 6,
-      "firstSeenAt": "2026-09-22T14:00:00.000Z",
-      "lastSeenAt": "2026-09-24T14:47:00.000Z",
-      "reasons": [
-        "Audience terms: viral, tiktok.",
-        "6 independent source labels are carrying the story.",
-        "6 fresh signals were clustered into the same topic.",
-        "The newest signal is less than 24 hours old."
-      ],
-      "signals": [
-        {
-          "title": "Viral TikTok Sparks Debate: Is Iced Coffee Unprofessional At A Job Interview?",
-          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNYVV2MGNDZ1d2eUFPbE5sN1J5Sl9hbk9vcVJ0eldqRHpFcTl2V3pqWTdhY0FZOUdqRzZjUmh0d0RncDlfM0Q2WU9EZ180bFNJOF9VWUpqbGI5WmJjNWIwR2RPX2JieHlFYXZzSDJ4NDFlMmpsXzNDUHBzMVF1X2hrNXlNNkZtRTRnWUFLalM3ZnQ3eXdlaWRZMUVUYmVKc2tNT2I3Q3Z2amlyZUZ2MkR1VjJkQXlDUG80MFRpYWdPZlFFVWZPX0lpYkEtY3JWSXJqajdVMmgySmFGSWlubHNGVXhWVjM?oc=5",
-          "publisher": "KWWL",
-          "publishedAt": "2026-09-24T14:47:00.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "‘Too casual’: Job recruiter responds after TikTok on iced coffee and Gen Z sparks debate",
-          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOWGdzOWoyLU44bVZaaXluRW84Uk5DZGZkX3ZjaGxtaUJpXzlTSXB4dzJkTkRTUTMtVzVGZWxnT0JPbzdrcktlTE43dnV2bGJaUWNncnBDN3FOZnQxQ1Y5b1p3cDVWeXhNYVFoME9RelIzaDdhel9SVXdoZXV4bVYxeTJlbG14XzlyVlNFeEVMOTFNdVJBUm1sS0FuM2dTYXlpeHRsN0ZkNWN2N2xxcmI5NHJJZVowTFR5NlU2ZHBxcTZTZ3BVRXVEdjJiV0ZycThSTUtoUk9IMGRzYVdp?oc=5",
-          "publisher": "BNN Bloomberg",
-          "publishedAt": "2026-09-24T11:36:23.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "Meet the job recruiter whose TikTok on iced coffee sparked a generational debate",
-          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNYm5wbUJUVDM4ZjB0cWFpY0ItU2RyV1dwam9fb2R1ZFVOZVQtc3N1NnFNOEVydFBybzl4YVVNV2dWaHZaY3hNNXk3bFNqREV1aVp4bXhRYVY4c21CU0J2VVB0LV9tVUJPaUZ6cDlUZ0NWV0ZLTDNIWjBIYV80Smh4RDljUzQydGNWblZuSkxra05mOC1mMFFlcEtwdGlQa2NBbUtfNDZyM2RtR1RXV24zS2pJblVxZ0RXSTBLb0hnRW5DX1E?oc=5",
-          "publisher": "cp24.com",
-          "publishedAt": "2026-09-24T09:07:13.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "Bringing iced coffee in a job interview? The debate is more than TikTok froth",
-          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPYnR5eXpkZ3VOb0Z2SWpIMFFRMEdSQXhNbTFmaTBKTlJPTEtpLUFvY0ZHajMtOExGbkJpQW1TZ0d5VVF3V3hmdGxTUUdxMHVwYldabnd0eDRjS2hkR0taY1liUEp6T1dQSElMa0lkT3ZXUEwzU3M3VDJtRUU4d2lLLTJmQ3RtTWRyNjhYQzdXQUw2X2ZpcmViaGF0WUdKY010bG80OHlKTUhjQmJJLUU0VWtxQ0ZNTTFpZDExbg?oc=5",
-          "publisher": "SmartCompany",
-          "publishedAt": "2026-09-24T02:01:51.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "Is It OK to Bring Iced Coffee to a Job Interview? Recruiter Sparks Generational Debate",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOUXU3MVlOQnd3bnpoY1lOMEN6VTcwY2FTTGNOSHltVUVTN2k5QnAxVjh6S3VGX2hSa2gxT3Z6Zm80STZDeXA2Wm9Ic2k4cDVCOG1YYzUtQ3hKR25oVG5wSDFoUzdxSmJkbjlPT1hsVXVjbjZYc1VvdEtRN2RWem1VVjF1UC1adTNiQWlkRkxtOV8?oc=5",
-          "publisher": "TODAY.com",
-          "publishedAt": "2026-09-22T16:01:41.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "Can you bring iced coffee to a job interview? TikTok ignites debate",
-          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQMU9OcVNSbEdQam1fa25xSy0tVXp2WEpSWFBLc1F6UWtyaHl6d3ZJbzRYbjVhOTI2ZGJpci1iQkNJc2E2TVpyMXZHS0xfSGo2a1Q5SFBDQ01acDdfZFhTbnNzcmRhcTEyVVZkM1F6LVZ6alJYc2hEMWZwU2FyQm1saGF4elloM1ZDaWg3bEZOd2VNa1NYUUQwbWN0TFh5amNidE45SUZSREhkM0RuTVdLMG5DLXJ3VkxKNFZGNlNabHBQdlVTLW5iaWU4STJicEpr?oc=5",
-          "publisher": "USA Today",
-          "publishedAt": "2026-09-22T14:00:00.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        }
-      ]
-    },
-    {
-      "id": "discovery-b7cc0af52f7d",
+      "id": "discovery-cdf048148713",
       "topic": "'Looksmaxxing' influencer Clavicular charged with rape in Massachusetts",
-      "score": 5.42,
+      "score": 6.31,
       "audienceTags": [
         "subculture",
         "language",
@@ -139,12 +61,13 @@
         "looksmaxxing",
         "influencer"
       ],
-      "signalCount": 1,
-      "sourceCount": 1,
-      "firstSeenAt": "2026-09-23T16:20:37.000Z",
+      "signalCount": 2,
+      "sourceCount": 2,
+      "firstSeenAt": "2026-09-22T15:08:11.000Z",
       "lastSeenAt": "2026-09-23T16:20:37.000Z",
       "reasons": [
-        "Audience terms: looksmaxxing, influencer."
+        "Audience terms: looksmaxxing, influencer.",
+        "2 independent source labels are carrying the story."
       ],
       "signals": [
         {
@@ -152,6 +75,15 @@
           "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQbllXNTN1d1ZYWkItcmZCeEhJUWplRnlPVjhiU1lJYm4zRFhvWk5sMlA3RjlLUzVBTFUyMDl4ZjhEOERhcWJBeVVMazJFZW9rVUVveTFCVmtUdU12U3RXdG5xSW1kdzdtaWZyeHkteDdWekFyMnVaZFBsa3hnVnVQVThoWllFQVFXT0d6ajkxb0FkSFQ4UGpLQ2xUUnczQVliMl9pU0NvRG1kd9IBsgFBVV95cUxPT09MTTlFRDVhaFN3VmdOUTJ5M1JnZk1FbHducERuWGo1NTB1N1IxdkNkRjlYYlExeVB1aFdQNUFpcmhEN3dRdUx5TzdIU1pfQ0NKdEZIX2hJM0NvbnVlTUhPTmlROWxlMmk2cGF4NWp0cWw5SWtRLXd6ZG4teVdCcmg3cl80azhtMGdHVG9MMDhwNDVwWllpSTNLQ1dlYlY2b1doT19HTmRBc1BJWVJBc0Vn?oc=5",
           "publisher": "The Express Tribune",
           "publishedAt": "2026-09-23T16:20:37.000Z",
+          "feedId": "google-internet-subcultures",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / internet subcultures"
+        },
+        {
+          "title": "'Looksmaxxing' influencer Clavicular charged with rape and drugging a person for sex",
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9uZ3BmUXU2aDk0UURYbmY1a1U5VS1nMTV2bVpULWs1UnZtNVVPVmZwRGFSZ3E2TkR1QXJqSmlEVlMtaGJ4djVvb01GNG5DeG9rYTNpY1FUZm5yMXRL?oc=5",
+          "publisher": "Out Magazine",
+          "publishedAt": "2026-09-22T15:08:11.000Z",
           "feedId": "google-internet-subcultures",
           "feedKind": "google-news",
           "feedLabel": "Google News / internet subcultures"
