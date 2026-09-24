@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-23T21:32:56.708Z",
+  "generatedAt": "2026-09-24T04:57:39.168Z",
   "lookbackHours": 72,
-  "signalCount": 48,
-  "candidateCount": 3,
+  "signalCount": 47,
+  "candidateCount": 2,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -50,7 +50,7 @@
     {
       "id": "discovery-b7cc0af52f7d",
       "topic": "'Looksmaxxing' influencer Clavicular charged with rape in Massachusetts",
-      "score": 6.22,
+      "score": 5.92,
       "audienceTags": [
         "subculture",
         "language",
@@ -82,7 +82,7 @@
       ]
     },
     {
-      "id": "discovery-6f3e1595f3a1",
+      "id": "discovery-02c93814f2fa",
       "topic": "Can you bring iced coffee to a job interview? TikTok ignites debate",
       "score": 5.13,
       "audienceTags": [
@@ -132,42 +132,11 @@
         {
           "title": "What the Great Iced Coffee Debate says about job hunting in 2026",
           "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNUkdxX0d5Vk5Gdno1WjVEZDdrc2Z0XzV0T0FpUVZ5cTd1dWd6VmlSdl9kakduN29ZaF83R0lnek9RMmExUDlvMmsxQ1B1NWQ4dTVOQlNFbnIzN25nRHlhRjVwZkV0N3RTc3N1NnptN3pSbWhLZzdpcnF4UFB6bmtHVHpmU05QZGt1ek9PcDIwZ1dGVlcwZkRwN21HS3V5bU5WbEZSdQ?oc=5",
-          "publisher": "Business Insider",
+          "publisher": "businessinsider.com",
           "publishedAt": "2026-09-21T19:37:00.000Z",
           "feedId": "google-tiktok-culture",
           "feedKind": "google-news",
           "feedLabel": "Google News / TikTok culture"
-        }
-      ]
-    },
-    {
-      "id": "discovery-c4bb140e2031",
-      "topic": "Girl Dinner [OC]",
-      "score": 4.88,
-      "audienceTags": [
-        "food",
-        "gender"
-      ],
-      "matchedTerms": [
-        "girl dinner"
-      ],
-      "signalCount": 1,
-      "sourceCount": 1,
-      "firstSeenAt": "2026-09-23T21:29:09.000Z",
-      "lastSeenAt": "2026-09-23T21:29:09.000Z",
-      "reasons": [
-        "Audience terms: girl dinner.",
-        "The newest signal is less than 24 hours old."
-      ],
-      "signals": [
-        {
-          "title": "Girl Dinner [OC]",
-          "url": "https://www.reddit.com/r/HollowKnight/comments/1woiubf/girl_dinner_oc/",
-          "publisher": "Reddit",
-          "publishedAt": "2026-09-23T21:29:09.000Z",
-          "feedId": "reddit-foidslop-adjacent",
-          "feedKind": "reddit-search",
-          "feedLabel": "Reddit / foidslop-adjacent language"
         }
       ]
     }
