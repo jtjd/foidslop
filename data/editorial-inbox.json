@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-25T11:55:34.938Z",
+  "generatedAt": "2026-09-25T17:16:12.418Z",
   "lookbackHours": 72,
-  "signalCount": 41,
-  "candidateCount": 2,
+  "signalCount": 36,
+  "candidateCount": 1,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -48,9 +48,9 @@
   ],
   "candidates": [
     {
-      "id": "discovery-cdf048148713",
+      "id": "discovery-b7cc0af52f7d",
       "topic": "'Looksmaxxing' influencer Clavicular charged with rape in Massachusetts",
-      "score": 6.31,
+      "score": 5.02,
       "audienceTags": [
         "subculture",
         "language",
@@ -61,13 +61,12 @@
         "looksmaxxing",
         "influencer"
       ],
-      "signalCount": 2,
-      "sourceCount": 2,
-      "firstSeenAt": "2026-09-22T15:08:11.000Z",
+      "signalCount": 1,
+      "sourceCount": 1,
+      "firstSeenAt": "2026-09-23T16:20:37.000Z",
       "lastSeenAt": "2026-09-23T16:20:37.000Z",
       "reasons": [
-        "Audience terms: looksmaxxing, influencer.",
-        "2 independent source labels are carrying the story."
+        "Audience terms: looksmaxxing, influencer."
       ],
       "signals": [
         {
@@ -78,66 +77,6 @@
           "feedId": "google-internet-subcultures",
           "feedKind": "google-news",
           "feedLabel": "Google News / internet subcultures"
-        },
-        {
-          "title": "'Looksmaxxing' influencer Clavicular charged with rape and drugging a person for sex",
-          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9uZ3BmUXU2aDk0UURYbmY1a1U5VS1nMTV2bVpULWs1UnZtNVVPVmZwRGFSZ3E2TkR1QXJqSmlEVlMtaGJ4djVvb01GNG5DeG9rYTNpY1FUZm5yMXRL?oc=5",
-          "publisher": "out.com",
-          "publishedAt": "2026-09-22T15:08:11.000Z",
-          "feedId": "google-internet-subcultures",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / internet subcultures"
-        }
-      ]
-    },
-    {
-      "id": "discovery-4b2454fbaf24",
-      "topic": "Viral TikTok Sparks Debate: Is Iced Coffee Unprofessional At A Job Interview?",
-      "score": 5.13,
-      "audienceTags": [
-        "internet"
-      ],
-      "matchedTerms": [
-        "viral",
-        "tiktok"
-      ],
-      "signalCount": 3,
-      "sourceCount": 3,
-      "firstSeenAt": "2026-09-24T09:00:00.000Z",
-      "lastSeenAt": "2026-09-24T14:47:00.000Z",
-      "reasons": [
-        "Audience terms: viral, tiktok.",
-        "3 independent source labels are carrying the story.",
-        "3 fresh signals were clustered into the same topic.",
-        "The newest signal is less than 24 hours old."
-      ],
-      "signals": [
-        {
-          "title": "Viral TikTok Sparks Debate: Is Iced Coffee Unprofessional At A Job Interview?",
-          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNbkt1ZlRCUURSdnJlWlFvNmFGek5wNi1MaXdSbk5vdEpZQW4zM0lWTmtBb2o3eWFYNkMxX2x2QlF5d21ublRTaVJkOWVHV2hvRkNkYjU0ZXNTTE9mS3NTU21oNWJnQXY3OGVVQ1lQMGJYZ3R6NXJZa19GcDFlQXFNZjR5WHJ5cnZTWGVVXzF2elkwUEJCSG44bWxReFdkbU83bVYzMG1oeFE1TlZmNU5hM0RSVTBkSWdYOEtWMW9kVk1GeEdPc1hvRmQ5TTRCTmxKX3kxSGxuSTZ1dGRCUmh1SkxDQ3I?oc=5",
-          "publisher": "KEZI",
-          "publishedAt": "2026-09-24T14:47:00.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "Meet the job recruiter whose TikTok on iced coffee sparked a generational debate",
-          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNYm5wbUJUVDM4ZjB0cWFpY0ItU2RyV1dwam9fb2R1ZFVOZVQtc3N1NnFNOEVydFBybzl4YVVNV2dWaHZaY3hNNXk3bFNqREV1aVp4bXhRYVY4c21CU0J2VVB0LV9tVUJPaUZ6cDlUZ0NWV0ZLTDNIWjBIYV80Smh4RDljUzQydGNWblZuSkxra05mOC1mMFFlcEtwdGlQa2NBbUtfNDZyM2RtR1RXV24zS2pJblVxZ0RXSTBLb0hnRW5DX1E?oc=5",
-          "publisher": "CP24",
-          "publishedAt": "2026-09-24T09:07:13.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "‘Too casual’: Job recruiter responds after TikTok on iced coffee and Gen Z sparks debate",
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxONERhZ2tDdnR1VmhlMERRbDRyTlBYalhMamJqeG83bjk1VDYwWlRscWh2N0E2SGdRRVlIZ3BFV3FpS1hXQUE2MExtSHVOVEUtS0RqTE1HWUhSTWtOR2pkR1pfeTl2UjNzNTFSdUw3T0JPalNHSHdQbmF2clcyRzVhOUF5dk52WFhKaUx5LXpKbm1iLUpMTUp6djd4Q1lkdEZ3blo1eEpyR0NmWjBCdTUxSU8tM3Q2REcwUWtrcWhSZUxHaHY1?oc=5",
-          "publisher": "CTV News",
-          "publishedAt": "2026-09-24T09:00:00.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
         }
       ]
     }
