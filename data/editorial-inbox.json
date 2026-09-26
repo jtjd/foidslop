@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-26T05:04:48.974Z",
+  "generatedAt": "2026-09-26T11:30:01.170Z",
   "lookbackHours": 72,
-  "signalCount": 42,
+  "signalCount": 60,
   "candidateCount": 3,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
@@ -42,15 +42,15 @@
     },
     {
       "id": "reddit-internet-culture",
-      "ok": false,
-      "error": "HTTP 429"
+      "ok": true,
+      "itemCount": 22
     }
   ],
   "candidates": [
     {
-      "id": "discovery-8c2120068c0a",
+      "id": "discovery-3c09797ffea8",
       "topic": "Viral TikTok Sparks Debate: Is Iced Coffee Unprofessional At A Job Interview?",
-      "score": 5.42,
+      "score": 5.13,
       "audienceTags": [
         "internet"
       ],
@@ -58,21 +58,21 @@
         "viral",
         "tiktok"
       ],
-      "signalCount": 4,
-      "sourceCount": 4,
+      "signalCount": 3,
+      "sourceCount": 3,
       "firstSeenAt": "2026-09-24T09:07:13.000Z",
       "lastSeenAt": "2026-09-25T19:00:00.000Z",
       "reasons": [
         "Audience terms: viral, tiktok.",
-        "4 independent source labels are carrying the story.",
-        "4 fresh signals were clustered into the same topic.",
+        "3 independent source labels are carrying the story.",
+        "3 fresh signals were clustered into the same topic.",
         "The newest signal is less than 24 hours old."
       ],
       "signals": [
         {
           "title": "To slurp or not? The great iced coffee debate dividing generations",
           "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPSnVmMC1FenJMVjY4RWNzQzItaGo2R3ZvV1F0MndTRGpFSmVOYTNMcW4wVDJWbml4Uk1oSGxpaGdoSE9pa0lSTmNtZGVQSngwWlJ3bEFQbXQ2VXlMR2tZM2NnT3dPaVdaNWhTOTRKMWlJTURfVFJwWGVXTEJoekhaUDJaYmtBVktPOWgtMjlaSzhhSm5IM3dkTE9oVlhFS201NGF3Q3dqMGcwNzJCdi14OV9xRjU3NDA3ZGxRVy1LVEd4Yjg?oc=5",
-          "publisher": "AFR",
+          "publisher": "afr.com",
           "publishedAt": "2026-09-25T19:00:00.000Z",
           "feedId": "google-tiktok-culture",
           "feedKind": "google-news",
@@ -80,18 +80,9 @@
         },
         {
           "title": "Viral TikTok Sparks Debate: Is Iced Coffee Unprofessional At A Job Interview?",
-          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNYVV2MGNDZ1d2eUFPbE5sN1J5Sl9hbk9vcVJ0eldqRHpFcTl2V3pqWTdhY0FZOUdqRzZjUmh0d0RncDlfM0Q2WU9EZ180bFNJOF9VWUpqbGI5WmJjNWIwR2RPX2JieHlFYXZzSDJ4NDFlMmpsXzNDUHBzMVF1X2hrNXlNNkZtRTRnWUFLalM3ZnQ3eXdlaWRZMUVUYmVKc2tNT2I3Q3Z2amlyZUZ2MkR1VjJkQXlDUG80MFRpYWdPZlFFVWZPX0lpYkEtY3JWSXJqajdVMmgySmFGSWlubHNGVXhWVjM?oc=5",
-          "publisher": "KWWL",
+          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOcVNKVTVkc2NGbVc2MlBFTVJFU3QwSTVjMVYtV1lQZy1KeVdrT2RxQ0YzMmNvMU40dUQ1SzRNOGNTSkZxTXBqT01HTTk0eGVkNUg1NDFTSjRiV0V5ZFNBUzk1c0tZNHItazA2RUNuU0tOSVRjcUtFQmpZc295ZnJmSE4xbWdpamNBWGkwV2Z3RDJTNTdPTHlhRkg1bXZDTXBaX2M1a0J2c1FGSEE4UjBXMS1naE5qc0tybjhadWNPVFIwLTVVVHJnUkV1bmNvX2hCUG4zbjVRckpsTlhkbEhHSVdMa18?oc=5",
+          "publisher": "WKOW",
           "publishedAt": "2026-09-24T14:47:00.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "‘Too casual’: Job recruiter responds after TikTok on iced coffee and Gen Z sparks debate",
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxONERhZ2tDdnR1VmhlMERRbDRyTlBYalhMamJqeG83bjk1VDYwWlRscWh2N0E2SGdRRVlIZ3BFV3FpS1hXQUE2MExtSHVOVEUtS0RqTE1HWUhSTWtOR2pkR1pfeTl2UjNzNTFSdUw3T0JPalNHSHdQbmF2clcyRzVhOUF5dk52WFhKaUx5LXpKbm1iLUpMTUp6djd4Q1lkdEZ3blo1eEpyR0NmWjBCdTUxSU8tM3Q2REcwUWtrcWhSZUxHaHY1?oc=5",
-          "publisher": "CTV News",
-          "publishedAt": "2026-09-24T11:37:26.000Z",
           "feedId": "google-tiktok-culture",
           "feedKind": "google-news",
           "feedLabel": "Google News / TikTok culture"
@@ -141,7 +132,7 @@
       ]
     },
     {
-      "id": "discovery-a51559d3fba4",
+      "id": "discovery-b539a148106d",
       "topic": "WORLDWIDE WEDNESDAY: Internet Slang",
       "score": 4.93,
       "audienceTags": [
