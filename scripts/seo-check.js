@@ -382,6 +382,14 @@ const volumeTwo = primaryData.meals.filter(meal => meal.id >= 201 && meal.id <= 
 }
 
 if (!homepage.includes('class="zine-today-image"') || !homepage.includes('<picture>')) errors.push('index.html: missing responsive today-recipe artwork');
+{
+  const flagship = fs.readFileSync(path.join(ROOT, 'what-is-foidslop.html'), 'utf8');
+  if (!flagship.includes('<title>What Is Foidslop (Foid Slop)?')) errors.push('what-is-foidslop.html: title must connect foidslop and Foid Slop');
+  if (!flagship.includes('Foidslop or foid slop?')) errors.push('what-is-foidslop.html: missing visible foid slop spelling explanation');
+  if (!flagship.includes('"alternateName": "foid slop"')) errors.push('what-is-foidslop.html: DefinedTerm schema is missing foid slop alternateName');
+  if (!homepage.includes('What is foidslop / foid slop?')) errors.push('index.html: missing visible foid slop alias link to flagship definition');
+  if (!homepage.includes('foidslop | Foid Slop Culture, Slang & Daily Recipes')) errors.push('index.html: search title is missing Foid Slop culture positioning');
+}
 for (const slug of [...requiredCollections, 'quick', 'no-cook', 'for-one', 'vegetarian']) {
   const html = fs.readFileSync(path.join(ROOT, 'recipes', `${slug}.html`), 'utf8');
   if (!html.includes('class="collection-guide"')) errors.push(`recipes/${slug}.html: missing collection guide`);
