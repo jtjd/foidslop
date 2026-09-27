@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-26T21:14:09.723Z",
+  "generatedAt": "2026-09-27T05:23:14.472Z",
   "lookbackHours": 72,
-  "signalCount": 43,
+  "signalCount": 45,
   "candidateCount": 2,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
@@ -48,9 +48,60 @@
   ],
   "candidates": [
     {
-      "id": "discovery-5ce580bddff3",
+      "id": "discovery-a1df03209c84",
+      "topic": "WORLDWIDE WEDNESDAY: Internet Slang",
+      "score": 6.6,
+      "audienceTags": [
+        "language"
+      ],
+      "matchedTerms": [
+        "slang"
+      ],
+      "signalCount": 3,
+      "sourceCount": 3,
+      "firstSeenAt": "2026-09-24T13:13:00.000Z",
+      "lastSeenAt": "2026-09-27T05:11:18.000Z",
+      "reasons": [
+        "Audience terms: slang.",
+        "3 independent source labels are carrying the story.",
+        "3 fresh signals were clustered into the same topic.",
+        "The newest signal is less than 24 hours old.",
+        "The topic appears in both reporting and Reddit discussion."
+      ],
+      "signals": [
+        {
+          "title": "My hubs can’t stop drinking once he starts.",
+          "url": "https://www.reddit.com/r/GirlDinnerDiaries/comments/1wrbhkb/my_hubs_cant_stop_drinking_once_he_starts/",
+          "publisher": "Reddit",
+          "publishedAt": "2026-09-27T05:11:18.000Z",
+          "feedId": "reddit-foidslop-adjacent",
+          "feedKind": "reddit-search",
+          "feedLabel": "Reddit / foidslop-adjacent language"
+        },
+        {
+          "title": "From ‘67’ to ‘clock it’: Internet slang Filipinos can’t stop searching",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOUnc1ajVUQWo1MXVuNDl3RGZpaUN3ZFJFU0tIQnMtbERYUW5pRnhhenVuY29ydVZTbmFPdmNhbTBhTnVFaWFnM0xhYmtXanBReGYwekgtaDF6QzdVVHA2Q3o2Ti1VSV9RS0Q3U2tQWHVFMjVvNGFVZUxuWmwyQXN4TUZkdjJJZjYzRTg2a044cmg5TTBKRDhxQzd4ZmRNcEU?oc=5",
+          "publisher": "Daily Tribune",
+          "publishedAt": "2026-09-25T21:03:47.000Z",
+          "feedId": "google-internet-slang",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / internet slang"
+        },
+        {
+          "title": "WORLDWIDE WEDNESDAY: Internet Slang",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFA3bGh0V1dTc05uZU5lZnRYWWgweDRiMGh1emV1WWNVVTRTTnNqZy13Z1JXNFhKRkdMeFcxV201cUdFNVIxZWFHTjB4OF85WFVuWXEyYjlaZWtWQzJUb0JvdENIcVNoWUMyLXBUNklJaXJXWFpFUFHSAYoBQVVfeXFMTnF1NmRjdGh3VGxZTDRac3FjZ3pVLW9HaUxnS2JnazBkSnJMSDE4YUFtdHJSMnBQY3cwLTNoeWxUYVhvWnYycDJJcVZ1ZktaZVFILVlTQW8xUjRsVzlpYUJjcGVtZ1dnLWlDQk5XX2JBczFaYXczS3RnTlhXOElaLVJIaG9Yc05VQmlR?oc=5",
+          "publisher": "WJHG",
+          "publishedAt": "2026-09-24T13:13:00.000Z",
+          "feedId": "google-internet-slang",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / internet slang"
+        }
+      ]
+    },
+    {
+      "id": "discovery-8cc864de85a2",
       "topic": "Viral TikTok Sparks Debate: Is Iced Coffee Unprofessional At A Job Interview?",
-      "score": 5.43,
+      "score": 5.13,
       "audienceTags": [
         "internet"
       ],
@@ -60,7 +111,7 @@
       ],
       "signalCount": 3,
       "sourceCount": 3,
-      "firstSeenAt": "2026-09-24T09:07:13.000Z",
+      "firstSeenAt": "2026-09-24T14:47:00.000Z",
       "lastSeenAt": "2026-09-26T19:53:53.000Z",
       "reasons": [
         "Audience terms: viral, tiktok.",
@@ -72,67 +123,26 @@
         {
           "title": "Can you bring iced coffee to a job interview? Here's what recruiters think.",
           "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOWHFpbGJuU25fM2s1ZUx4SnFSdktmRzlPQV81MWgzQnVjYnNidVFRcVZJYUVOUVRHMkUzRXg2bVR6WFp1WEVuUkNqZVFIQ0JNZjVhQkZkUW56dTUtTDNrSWRmcVI4b2ZtZ2RoVzhzT1hVUWs4djNLczBidW1BTlktelVtaks1bmhtaWJJRW53cW1ncElaM2k5X3p2ZlV2c2IyVzdFaw?oc=5",
-          "publisher": "expressnews.com",
+          "publisher": "San Antonio Express-News",
           "publishedAt": "2026-09-26T19:53:53.000Z",
           "feedId": "google-tiktok-culture",
           "feedKind": "google-news",
           "feedLabel": "Google News / TikTok culture"
         },
         {
+          "title": "Should you bring iced coffee to a job interview? Question brews generational debate",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPTWo0SldEV3Mwb2dtVjQzWUIxaXNaeURDSl9GeTlFWndYWGxpY3MyUEtIQVg1Ty10WE1xSTkyR2ZRcUprSUh0TzFnQUdDekttOWdCYmF0VTRhYi1QVXJlclVOX011eVlwemJJMGN1NU1CM25zTFdsaktOOUplWjJKZk43TzJHcGJZTGMxbVZDcHcyWEx2UjltOERmMDlBOEdOZmk2b0FIb05uRDFtOVRB?oc=5",
+          "publisher": "NBC News",
+          "publishedAt": "2026-09-25T19:20:36.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
           "title": "Viral TikTok Sparks Debate: Is Iced Coffee Unprofessional At A Job Interview?",
-          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOcVNKVTVkc2NGbVc2MlBFTVJFU3QwSTVjMVYtV1lQZy1KeVdrT2RxQ0YzMmNvMU40dUQ1SzRNOGNTSkZxTXBqT01HTTk0eGVkNUg1NDFTSjRiV0V5ZFNBUzk1c0tZNHItazA2RUNuU0tOSVRjcUtFQmpZc295ZnJmSE4xbWdpamNBWGkwV2Z3RDJTNTdPTHlhRkg1bXZDTXBaX2M1a0J2c1FGSEE4UjBXMS1naE5qc0tybjhadWNPVFIwLTVVVHJnUkV1bmNvX2hCUG4zbjVRckpsTlhkbEhHSVdMa18?oc=5",
-          "publisher": "WKOW",
+          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOakJGa09OZlJXQ0ctRjRtZVg5NmVNTVRCdlZJZzNfMFBGYmFYd3BnLTVlZ01DM3pnZWlRalVpcWYwVDVLMm9Yd2tLMXBMUUpMU1Y1Q2plQ2h0dlN2UllOdDgxNE9XNjVJUWlZbThJOGZ0SVNjQkxLTzBwM0RXMHV4TF9KTlFvNVZmZURadkREUU9pellFV05pc2E0Nms1MUJSdHVuWGdBTWpzM2pWR0pDR2lsVlJDcGdva2wwUFJiak1uUHFUXy1KN3lXc1JWWGo1aDRiTVB2ajlXU3JndlpEczBpQVA?oc=5",
+          "publisher": "KITV",
           "publishedAt": "2026-09-24T14:47:00.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "Meet the job recruiter whose TikTok on iced coffee sparked a generational debate",
-          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNYm5wbUJUVDM4ZjB0cWFpY0ItU2RyV1dwam9fb2R1ZFVOZVQtc3N1NnFNOEVydFBybzl4YVVNV2dWaHZaY3hNNXk3bFNqREV1aVp4bXhRYVY4c21CU0J2VVB0LV9tVUJPaUZ6cDlUZ0NWV0ZLTDNIWjBIYV80Smh4RDljUzQydGNWblZuSkxra05mOC1mMFFlcEtwdGlQa2NBbUtfNDZyM2RtR1RXV24zS2pJblVxZ0RXSTBLb0hnRW5DX1E?oc=5",
-          "publisher": "CP24",
-          "publishedAt": "2026-09-24T09:07:13.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        }
-      ]
-    },
-    {
-      "id": "discovery-6015a125423e",
-      "topic": "14-Year-Old Arrested After Police Say He Kicked in Phoenix Home’s Door as Part of TikTok Trend",
-      "score": 5.06,
-      "audienceTags": [
-        "internet"
-      ],
-      "matchedTerms": [
-        "tiktok"
-      ],
-      "signalCount": 2,
-      "sourceCount": 2,
-      "firstSeenAt": "2026-09-25T20:00:00.000Z",
-      "lastSeenAt": "2026-09-26T21:11:46.000Z",
-      "reasons": [
-        "Audience terms: tiktok.",
-        "2 independent source labels are carrying the story.",
-        "The newest signal is less than 24 hours old.",
-        "The topic appears in both reporting and Reddit discussion."
-      ],
-      "signals": [
-        {
-          "title": "Translation on 90 year old note",
-          "url": "https://www.reddit.com/r/Kurrent/comments/1wr1rko/translation_on_90_year_old_note/",
-          "publisher": "Reddit",
-          "publishedAt": "2026-09-26T21:11:46.000Z",
-          "feedId": "reddit-foidslop-adjacent",
-          "feedKind": "reddit-search",
-          "feedLabel": "Reddit / foidslop-adjacent language"
-        },
-        {
-          "title": "14-Year-Old Arrested After Police Say He Kicked in Phoenix Home’s Door as Part of TikTok Trend",
-          "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQT1J5c2g3Y2xITXUxZVJyUUUyUTlmM1ZSSGF5TkRsU0xMNWFlWlVRWTIyWlA5VFFHUHJ2a1EzeGxZVWtNaEVCWmJfdW9uVVlkcjlranM0OU9uNDVBRHgzMl9Xb0l2NzJBQy04NGZ5a203aGZBenE4Q0NWcFFjODlILUl6ZGtoaV9oaDdxTmZmeWtJcjhlVGhsRWpCRG9nYjcwd3dydXZ1cTNlY2d1TEpwTF8zQXl5eE0tM09CUEM0aWlDc3g1Z2tzS21PdGl3VmZtSEN0SV83LXlPTGJqWmVvVHkyWQ?oc=5",
-          "publisher": "NBC Palm Springs",
-          "publishedAt": "2026-09-25T20:00:00.000Z",
           "feedId": "google-tiktok-culture",
           "feedKind": "google-news",
           "feedLabel": "Google News / TikTok culture"
