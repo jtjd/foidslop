@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-27T12:08:03.850Z",
+  "generatedAt": "2026-09-27T17:00:57.988Z",
   "lookbackHours": 72,
-  "signalCount": 47,
-  "candidateCount": 1,
+  "signalCount": 45,
+  "candidateCount": 0,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -46,57 +46,5 @@
       "error": "HTTP 429"
     }
   ],
-  "candidates": [
-    {
-      "id": "discovery-d03eec819b89",
-      "topic": "Viral TikTok Sparks Debate: Is Iced Coffee Unprofessional At A Job Interview?",
-      "score": 5.13,
-      "audienceTags": [
-        "internet"
-      ],
-      "matchedTerms": [
-        "viral",
-        "tiktok"
-      ],
-      "signalCount": 3,
-      "sourceCount": 3,
-      "firstSeenAt": "2026-09-24T14:47:00.000Z",
-      "lastSeenAt": "2026-09-26T19:53:53.000Z",
-      "reasons": [
-        "Audience terms: viral, tiktok.",
-        "3 independent source labels are carrying the story.",
-        "3 fresh signals were clustered into the same topic.",
-        "The newest signal is less than 24 hours old."
-      ],
-      "signals": [
-        {
-          "title": "Can you bring iced coffee to a job interview? Here's what recruiters think.",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOWHFpbGJuU25fM2s1ZUx4SnFSdktmRzlPQV81MWgzQnVjYnNidVFRcVZJYUVOUVRHMkUzRXg2bVR6WFp1WEVuUkNqZVFIQ0JNZjVhQkZkUW56dTUtTDNrSWRmcVI4b2ZtZ2RoVzhzT1hVUWs4djNLczBidW1BTlktelVtaks1bmhtaWJJRW53cW1ncElaM2k5X3p2ZlV2c2IyVzdFaw?oc=5",
-          "publisher": "expressnews.com",
-          "publishedAt": "2026-09-26T19:53:53.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "Should you bring iced coffee to a job interview? Question brews generational debate",
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPTWo0SldEV3Mwb2dtVjQzWUIxaXNaeURDSl9GeTlFWndYWGxpY3MyUEtIQVg1Ty10WE1xSTkyR2ZRcUprSUh0TzFnQUdDekttOWdCYmF0VTRhYi1QVXJlclVOX011eVlwemJJMGN1NU1CM25zTFdsaktOOUplWjJKZk43TzJHcGJZTGMxbVZDcHcyWEx2UjltOERmMDlBOEdOZmk2b0FIb05uRDFtOVRB?oc=5",
-          "publisher": "NBC News",
-          "publishedAt": "2026-09-25T19:20:36.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "Viral TikTok Sparks Debate: Is Iced Coffee Unprofessional At A Job Interview?",
-          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOcVNKVTVkc2NGbVc2MlBFTVJFU3QwSTVjMVYtV1lQZy1KeVdrT2RxQ0YzMmNvMU40dUQ1SzRNOGNTSkZxTXBqT01HTTk0eGVkNUg1NDFTSjRiV0V5ZFNBUzk1c0tZNHItazA2RUNuU0tOSVRjcUtFQmpZc295ZnJmSE4xbWdpamNBWGkwV2Z3RDJTNTdPTHlhRkg1bXZDTXBaX2M1a0J2c1FGSEE4UjBXMS1naE5qc0tybjhadWNPVFIwLTVVVHJnUkV1bmNvX2hCUG4zbjVRckpsTlhkbEhHSVdMa18?oc=5",
-          "publisher": "WKOW",
-          "publishedAt": "2026-09-24T14:47:00.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        }
-      ]
-    }
-  ]
+  "candidates": []
 }
