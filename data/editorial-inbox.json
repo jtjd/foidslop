@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-28T14:02:49.182Z",
+  "generatedAt": "2026-09-28T23:20:02.842Z",
   "lookbackHours": 72,
   "signalCount": 40,
-  "candidateCount": 0,
+  "candidateCount": 1,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -46,5 +46,56 @@
       "error": "HTTP 429"
     }
   ],
-  "candidates": []
+  "candidates": [
+    {
+      "id": "discovery-8843a2c26061",
+      "topic": "Mezzetta recalls pepperoncini variety after TikTok user claims she found mouse in jar",
+      "score": 5.13,
+      "audienceTags": [
+        "internet"
+      ],
+      "matchedTerms": [
+        "tiktok"
+      ],
+      "signalCount": 3,
+      "sourceCount": 3,
+      "firstSeenAt": "2026-09-28T16:55:59.000Z",
+      "lastSeenAt": "2026-09-28T22:50:00.000Z",
+      "reasons": [
+        "Audience terms: tiktok.",
+        "3 independent source labels are carrying the story.",
+        "3 fresh signals were clustered into the same topic.",
+        "The newest signal is less than 24 hours old."
+      ],
+      "signals": [
+        {
+          "title": "Peperoncini jar allegedly containing dead mouse unearthed by TikTok user prompts mass recall",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPRjRIYUFaNEc4TDNjQTNKSkk1aTRvN3l1MkVQQ0tNaUNCcVVDM1l1dXVJN2dXamtzc1NEeW1laVl0Y0RxeHJzV2J2OVpxSzRSTHN2LW10ZzJpRmdQWUVUYVpkN0FIX2drNllvcEtPM2doaWJtaFhfZ0gtN2dSMFRRT1RzMm9YRDJSTTRsbjA2Z1FVVDVKTXhXSXpyMWZIZWZY?oc=5",
+          "publisher": "New York Post",
+          "publishedAt": "2026-09-28T22:50:00.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "Mezzetta recalls pepperoncini variety after TikTok user claims she found mouse in jar",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQQkM5NjNocGxvY01QdFBGVE9WNGZfN3UzSFpjMEhkbGlKY0pYeW5LdDE4Mlh6NXlOR19DZC1WRE0tN25yRGVqVUpFakJ0YXdoR0lkTloxUUlneTllOXp6aWhrQ3JlaEw4ZkJPYVkzM3cxVHNhUkVaN2JaWFF3VWVCUlpwU1FFQk1jY0tGVndWV29UcGNYYmtPZGM3anZ4NllSdVpIREVvLXJ6TGVGZW1LY0lEQ2hFMFNsTXd3OWxjdmFqZkXSAcgBQVVfeXFMT1BMU3BwdzRPSC1QRGFKcU5GLTJFWmN6M2Zjdll1TFBGdGFPU2xVWTRaQ2RjcDFibFFxVmo1MTZLbTRjWHBzRTZEY0RKb3JBdzdlOTI3bW5aSU5VWG1PX0p2U2pZd3diQ1ZxT2V5RmdPeGJiUnd5WVE3d0lIVk5tUTZDWU4zOVcxZVIxb1FZUDNVTHZSd2pzc0xoN3VNRUp5eGp3aHgyNHdtMUZuZk9vdGxHaUJYc0pFQ1pHcmE4UWExbG1GZVlwR3A?oc=5",
+          "publisher": "WSYR",
+          "publishedAt": "2026-09-28T20:15:03.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "Dead Mouse Found in Jar of Mezzetta Peppers Prompts Recall",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQTXBQUWxmd2k0OGZSdkNqVEVVMGlzU1lyNU5Ddm5OMFJKb2tWY2tKa2FvbXF5eGU3aF9mUmNITVg2d1FaeXRmWHZYNldGOTZrd3JTZG9iVW1taUZUMmpiVE54MjgtT2Q5SkszNkRFS2lYSjdxOUU1Y0hEalphQjAydjg3QzVURnJGblFrX25fZDNHQVU?oc=5",
+          "publisher": "Gizmodo",
+          "publishedAt": "2026-09-28T16:55:59.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        }
+      ]
+    }
+  ]
 }
