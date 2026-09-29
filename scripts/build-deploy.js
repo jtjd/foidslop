@@ -3,16 +3,19 @@
 const fs = require('fs');
 const path = require('path');
 const { KEY } = require('./lib/ping-config');
+const { isEditorialPageActive, recipesThroughDate } = require('./lib/editorial-pages');
 
 const ROOT = process.cwd();
 const OUTPUT = path.join(ROOT, '.deploy');
 const meals = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'foidslop-meals.json'), 'utf8')).meals;
 const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
-const editorialSlugs = fs.existsSync(path.join(ROOT, 'data', 'editorial-pages.json'))
+const editorialPages = fs.existsSync(path.join(ROOT, 'data', 'editorial-pages.json'))
   ? JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'editorial-pages.json'), 'utf8'))
-    .filter(page => page.slug && !(page.notBefore && today < page.notBefore))
-    .map(page => page.slug)
   : [];
+const publishedMeals = recipesThroughDate(meals, today);
+const editorialSlugs = editorialPages
+  .filter(page => isEditorialPageActive(page, today, publishedMeals))
+  .map(page => page.slug);
 const publishedSlugs = new Set(meals
   .filter(meal => meal.publishDate <= today && meal.status !== 'retired')
   .filter(meal => fs.existsSync(path.join(ROOT, 'slop', `${meal.slug}.html`)))

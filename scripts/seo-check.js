@@ -14,6 +14,7 @@ const homepageConfig = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'homep
 const weeklyQueue = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'weekly-polls.json'), 'utf8'));
 const { validateQueue } = require('./weekly-community');
 const { chooseArchivePick } = require('./lib/archive-pick');
+const { isEditorialPageActive, recipesThroughDate } = require('./lib/editorial-pages');
 
 for (const [directory, files] of Object.entries({
   'assets/js': ['archive.js', 'cookie-consent.js', 'home.js', 'recipe-tools.js', 'theme.js'],
@@ -427,11 +428,16 @@ try {
   errors.push('data/editorial-pages.json is missing, invalid, or lists no roundup pages');
   editorialPages = [];
 }
-const editorialLive = page => page.slug && !(page.notBefore && nyToday < page.notBefore);
+const editorialMeals = recipesThroughDate(primaryData.meals, nyToday);
+const editorialLive = page => isEditorialPageActive(page, nyToday, editorialMeals);
+const editorialDormantReason = page => page.notBefore && nyToday < page.notBefore
+  ? `until ${page.notBefore}`
+  : 'until its minimum recipe inventory is ready';
 for (const page of editorialPages) {
   if (!editorialLive(page)) {
     const leakedSitemap = locations.includes(`${BASE}/${page.slug}`);
-    if (leakedSitemap) errors.push(`sitemap.xml: scheduled page ${page.slug} must stay out of the sitemap until ${page.notBefore}`);
+    if (leakedSitemap) errors.push(`sitemap.xml: dormant page ${page.slug} must stay out of the sitemap ${editorialDormantReason(page)}`);
+    if (fs.existsSync(path.join(ROOT, `${page.slug}.html`))) errors.push(`${page.slug}.html: dormant roundup must not be generated ${editorialDormantReason(page)}`);
     continue;
   }
   const file = path.join(ROOT, `${page.slug}.html`);
@@ -483,7 +489,7 @@ const llms = fs.readFileSync(path.join(ROOT, 'llms.txt'), 'utf8');
 for (const page of editorialPages) {
   const listed = llms.includes(`${BASE}/${page.slug}`);
   if (editorialLive(page) && !listed && page.slug !== 'girl-dinner-ideas') errors.push(`llms.txt: missing live roundup ${page.slug}`);
-  if (!editorialLive(page) && listed) errors.push(`llms.txt: dormant roundup ${page.slug} must not be listed until ${page.notBefore}`);
+  if (!editorialLive(page) && listed) errors.push(`llms.txt: dormant roundup ${page.slug} must not be listed ${editorialDormantReason(page)}`);
 }
 if (!fs.existsSync(path.join(ROOT, '_headers'))) {
   errors.push('missing _headers file (caching and security headers)');

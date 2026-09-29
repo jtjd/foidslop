@@ -13,6 +13,11 @@ const crypto = require('crypto');
 const { chronological, releaseDate, ARCHIVE_CHUNK } = require('./lib/publication-order');
 const { chooseArchivePick } = require('./lib/archive-pick');
 const { sitemapFingerprint } = require('./lib/sitemap-fingerprint');
+const {
+  isEditorialPageActive,
+  minimumEditorialRecipes: editorialMinimum,
+  selectEditorialRecipes
+} = require('./lib/editorial-pages');
 const ratings = require('./lib/ratings');
 
 const ROOT = process.cwd();
@@ -151,29 +156,11 @@ function editorialNavLinks(excludeSlug = null) {
 }
 
 function editorialSelection(page) {
-  const match = page.match || {};
-  const includeSlugs = Array.isArray(match.slugs) ? match.slugs : [];
-  const includeTags = Array.isArray(match.tags) ? match.tags : [];
-  const includeCategories = Array.isArray(match.categories) ? match.categories : [];
-  const excludeTags = Array.isArray(match.excludeTags) ? match.excludeTags : [];
-  if (!includeSlugs.length && !includeTags.length && !includeCategories.length) return [];
-  return published.filter(meal => {
-    if (includeSlugs.length && !includeSlugs.includes(meal.slug)) return false;
-    if (excludeTags.some(tag => meal.tags.includes(tag))) return false;
-    if (includeTags.length && !includeTags.some(tag => meal.tags.includes(tag))) return false;
-    if (includeCategories.length && !includeCategories.includes(meal.category)) return false;
-    if (match.maxTotalMinutes != null && minutes(meal.prep) + minutes(meal.cook) > match.maxTotalMinutes) return false;
-    return true;
-  }).slice().reverse();
-}
-
-function editorialMinimum(page) {
-  return Number.isInteger(page.minRecipes) ? page.minRecipes : 8;
+  return selectEditorialRecipes(page, published);
 }
 
 function editorialActiveToday(page) {
-  if (page.notBefore && today < page.notBefore) return false;
-  return editorialSelection(page).length >= editorialMinimum(page);
+  return isEditorialPageActive(page, today, published);
 }
 
 function validateEditorialConfig() {
