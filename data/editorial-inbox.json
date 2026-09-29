@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-28T23:20:02.842Z",
+  "generatedAt": "2026-09-29T05:48:37.124Z",
   "lookbackHours": 72,
-  "signalCount": 40,
+  "signalCount": 36,
   "candidateCount": 1,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
@@ -50,7 +50,7 @@
     {
       "id": "discovery-8843a2c26061",
       "topic": "Mezzetta recalls pepperoncini variety after TikTok user claims she found mouse in jar",
-      "score": 5.13,
+      "score": 4.83,
       "audienceTags": [
         "internet"
       ],
