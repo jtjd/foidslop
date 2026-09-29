@@ -167,6 +167,15 @@ function editorialSelection(page) {
   }).slice().reverse();
 }
 
+function editorialMinimum(page) {
+  return Number.isInteger(page.minRecipes) ? page.minRecipes : 8;
+}
+
+function editorialActiveToday(page) {
+  if (page.notBefore && today < page.notBefore) return false;
+  return editorialSelection(page).length >= editorialMinimum(page);
+}
+
 function validateEditorialConfig() {
   const errors = [];
   const seen = new Set();
@@ -187,11 +196,11 @@ function validateEditorialConfig() {
     if (!Array.isArray(page.faqs) || page.faqs.length < 3 || page.faqs.some(item => !item.q || !item.a)) {
       errors.push(`editorial page ${page.slug}: needs at least three complete FAQ entries`);
     }
-    // Scheduled pages skip the inventory check until they activate; a dormant
-    // config must never break the daily build.
-    if (page.notBefore && today < page.notBefore) continue;
+    // A scheduled page stays dormant until both its date and recipe inventory
+    // are ready. Holiday releases can arrive after the page's earliest date.
+    if (page.notBefore && !editorialActiveToday(page)) continue;
     const listed = editorialSelection(page);
-    const minimum = Number.isInteger(page.minRecipes) ? page.minRecipes : 8;
+    const minimum = editorialMinimum(page);
     if (listed.length < minimum) errors.push(`editorial page ${page.slug}: needs ${minimum} matching recipes, found ${listed.length}`);
   }
   return errors;
@@ -201,11 +210,6 @@ function validateEditorialConfig() {
 function roundupInSeason(page, month) {
   if (!Array.isArray(page.seasonMonths) || !page.seasonMonths.length) return true;
   return page.seasonMonths.includes(month);
-}
-
-/** Scheduled pages (notBefore) stay fully configured but dormant until the date. */
-function editorialActiveToday(page) {
-  return !page.notBefore || today >= page.notBefore;
 }
 
 function visibleEditorialPages() {
@@ -988,13 +992,13 @@ function buildHubs() {
 function buildEditorialPages() {
   for (const page of loadEditorialConfig()) {
     const file = path.join(ROOT, `${page.slug}.html`);
-    // Dormant scheduled pages must never linger from a future-dated build.
-    if (page.notBefore && today < page.notBefore) {
+    // Dormant scheduled pages must never linger before their date or inventory threshold.
+    if (!editorialActiveToday(page)) {
       if (fs.existsSync(file)) fs.unlinkSync(file);
       continue;
     }
     const listed = editorialSelection(page);
-    const minimum = Number.isInteger(page.minRecipes) ? page.minRecipes : 8;
+    const minimum = editorialMinimum(page);
     if (listed.length < minimum) throw new Error(`editorial page ${page.slug}: needs ${minimum} matching recipes, found ${listed.length}`);
     fs.writeFileSync(path.join(ROOT, `${page.slug}.html`), renderListingPage({
       title: page.title,
