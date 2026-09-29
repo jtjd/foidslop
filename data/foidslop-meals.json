@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-14T00:00:00.000Z",
+  "generated": "2026-09-29T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -8784,12 +8784,13 @@
       "notes": "Adding sesame oil at the end gives it a rich, nutty flavor that instant ramen lacks.",
       "photo_search": "bowl of spicy red ramen with spinach, a halved soft boiled egg, and sesame seeds",
       "publishDate": "2026-09-15",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of bowl of spicy red ramen with spinach, a halved soft boiled egg, and sesame seeds",
       "seoTitle": "Spicy Ramen with Egg and Spinach Recipe for One | foidslop",
       "seoDescription": "Upgraded instant ramen with wilted spinach and a soft boiled egg. Made for one in 10 minutes, with egg and baby spinach.",
       "substitutions": "Instant ramen, soba, rice noodles, or wheat noodles all work interchangeably. No egg? Chilli oil alone with scallions still makes the bowl interesting. For spicy ramen with egg and spinach, make the swap in the same one-person portion and taste before adding more seasoning.",
-      "storage": "Keep leftovers covered for one day, with wet sauce separate when possible. Loosen the noodles with hot water and add egg after warming. For spicy ramen with egg and spinach, keep the named finish separate until serving."
+      "storage": "Keep leftovers covered for one day, with wet sauce separate when possible. Loosen the noodles with hot water and add egg after warming. For spicy ramen with egg and spinach, keep the named finish separate until serving.",
+      "dateModified": "2026-09-29"
     },
     {
       "id": 139,
@@ -8846,10 +8847,11 @@
       "notes": "Do not toss too hard or the watermelon will break down and get mushy.",
       "photo_search": "bowl of bright red watermelon cubes with white feta and green mint",
       "publishDate": "2026-09-16",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of bowl of bright red watermelon cubes with white feta and green mint",
       "seoTitle": "Watermelon and Feta Salad Recipe for One | foidslop",
-      "seoDescription": "Juicy watermelon, salty feta, fresh mint, and lime make a bright salad with a clean sweet-savory contrast."
+      "seoDescription": "Juicy watermelon, salty feta, fresh mint, and lime make a bright salad with a clean sweet-savory contrast.",
+      "dateModified": "2026-09-29"
     },
     {
       "id": 140,
@@ -8914,10 +8916,11 @@
       "notes": "These are called syrniki. They are a staple Russian breakfast or dessert.",
       "photo_search": "plate of golden cottage cheese pancakes served with sour cream and berry jam",
       "publishDate": "2026-09-17",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of plate of golden cottage cheese pancakes served with sour cream and berry jam",
       "seoTitle": "Cottage Cheese Pancakes (Syrniki) Recipe for One | foidslop",
-      "seoDescription": "Russian style cottage cheese pancakes. Crispy on the outside, creamy inside. Cottage cheese and egg make this main recipe for one in 20 minutes."
+      "seoDescription": "Russian style cottage cheese pancakes. Crispy on the outside, creamy inside. Cottage cheese and egg make this main recipe for one in 20 minutes.",
+      "dateModified": "2026-09-29"
     },
     {
       "id": 141,
@@ -8970,10 +8973,11 @@
       "notes": "The combination of apple and cheddar is a New England tradition for a reason.",
       "photo_search": "toasted sourdough with melted cheddar, apple slices, and honey",
       "publishDate": "2026-09-18",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of toasted sourdough with melted cheddar, apple slices, and honey",
       "seoTitle": "Apple and Cheddar Toast Recipe for One | foidslop",
-      "seoDescription": "Toasted bread with sharp cheddar and crisp apple slices. A Fall classic. Made for one in 6 minutes, with sharp cheddar and crisp apple."
+      "seoDescription": "Toasted bread with sharp cheddar and crisp apple slices. A Fall classic. Made for one in 6 minutes, with sharp cheddar and crisp apple.",
+      "dateModified": "2026-09-29"
     },
     {
       "id": 142,
@@ -9030,10 +9034,11 @@
       "notes": "Paneer is a firm Indian cheese that does not melt. It is perfect for grilling.",
       "photo_search": "skewers of grilled golden paneer cubes with charred peppers and onions",
       "publishDate": "2026-09-19",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of skewers of grilled golden paneer cubes with charred peppers and onions",
       "seoTitle": "Paneer Tikka Skewers Recipe for One | foidslop",
-      "seoDescription": "Spiced, grilled paneer cheese on skewers. A restaurant style Indian appetizer. A snack recipe for one, ready in 20 minutes with paneer."
+      "seoDescription": "Spiced, grilled paneer cheese on skewers. A restaurant style Indian appetizer. A snack recipe for one, ready in 20 minutes with paneer.",
+      "dateModified": "2026-09-29"
     },
     {
       "id": 143,
@@ -9094,10 +9099,11 @@
       "notes": "Scoring the eggplant helps it cook evenly and absorb the glaze.",
       "photo_search": "eggplant halves with a golden bubbly miso glaze, scored in a crosshatch",
       "publishDate": "2026-09-20",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of eggplant halves with a golden bubbly miso glaze, scored in a crosshatch",
       "seoTitle": "Miso Glazed Eggplant Recipe for One | foidslop",
-      "seoDescription": "Soft, custardy eggplant broiled with a sweet and savory miso glaze. Eggplant and white miso paste make this main recipe for one in 20 minutes."
+      "seoDescription": "Soft, custardy eggplant broiled with a sweet and savory miso glaze. Eggplant and white miso paste make this main recipe for one in 20 minutes.",
+      "dateModified": "2026-09-29"
     },
     {
       "id": 144,
@@ -9166,10 +9172,11 @@
       "notes": "Pressing the tofu is crucial for getting it crispy. Use a clean towel to squeeze the water out.",
       "photo_search": "bowl of rice topped with golden crispy tofu cubes and peanut sauce",
       "publishDate": "2026-09-21",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of bowl of rice topped with golden crispy tofu cubes and peanut sauce",
       "seoTitle": "Tofu and Peanut Sauce Bowl Recipe for One | foidslop",
-      "seoDescription": "Crisp-edged tofu, warm rice, vegetables, and a spicy peanut sauce make a substantial bowl for one. A bowl recipe for one, ready in 20 minutes with firm tofu."
+      "seoDescription": "Crisp-edged tofu, warm rice, vegetables, and a spicy peanut sauce make a substantial bowl for one. A bowl recipe for one, ready in 20 minutes with firm tofu.",
+      "dateModified": "2026-09-29"
     },
     {
       "id": 145,
@@ -9222,10 +9229,11 @@
       "notes": "Score the top of the camembert with a knife before baking so it is easy to open.",
       "photo_search": "baking dish with molten baked camembert drizzled with honey and surrounded by pears",
       "publishDate": "2026-09-22",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of baking dish with molten baked camembert drizzled with honey and surrounded by pears",
       "seoTitle": "Baked Camembert with Pears Recipe for One | foidslop",
-      "seoDescription": "A wheel of camembert baked until molten, served with crisp pear slices. A snack plate recipe for one, ready in 20 minutes with camembert cheese."
+      "seoDescription": "A wheel of camembert baked until molten, served with crisp pear slices. A snack plate recipe for one, ready in 20 minutes with camembert cheese.",
+      "dateModified": "2026-09-29"
     },
     {
       "id": 146,
@@ -9282,10 +9290,11 @@
       "notes": "Make sure to drain the mozzarella well so the quesadilla does not get soggy.",
       "photo_search": "golden quesadilla cut open to reveal melted mozzarella, tomatoes, and basil",
       "publishDate": "2026-09-23",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of golden quesadilla cut open to reveal melted mozzarella, tomatoes, and basil",
       "seoTitle": "Caprese Quesadilla Recipe for One | foidslop",
-      "seoDescription": "Melted mozzarella, tomatoes, and basil stuffed inside a crispy tortilla. Fresh mozzarella and cherry tomatoes make this main recipe for one in 10 minutes."
+      "seoDescription": "Melted mozzarella, tomatoes, and basil stuffed inside a crispy tortilla. Fresh mozzarella and cherry tomatoes make this main recipe for one in 10 minutes.",
+      "dateModified": "2026-09-29"
     },
     {
       "id": 147,
@@ -9342,10 +9351,11 @@
       "notes": "This is a classic Australian cafe breakfast. It is fresh and vibrant.",
       "photo_search": "sourdough toast spread with white ricotta and topped with bright green smashed peas",
       "publishDate": "2026-09-24",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of sourdough toast spread with white ricotta and topped with bright green smashed peas",
       "seoTitle": "Smashed Pea and Ricotta Toast Recipe for One | foidslop",
-      "seoDescription": "Bright green smashed peas over creamy ricotta on sourdough toast. Made for one in 10 minutes, with frozen peas and ricotta cheese."
+      "seoDescription": "Bright green smashed peas over creamy ricotta on sourdough toast. Made for one in 10 minutes, with frozen peas and ricotta cheese.",
+      "dateModified": "2026-09-29"
     },
     {
       "id": 148,
@@ -9406,10 +9416,11 @@
       "notes": "Using tuna packed in olive oil is essential for the authentic Tuscan flavor.",
       "photo_search": "toasted crusty bread topped with tuna, white beans, and parsley",
       "publishDate": "2026-09-25",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of toasted crusty bread topped with tuna, white beans, and parsley",
       "seoTitle": "Tuscan Tuna and White Bean Toast Recipe for One | foidslop",
-      "seoDescription": "A lemony Tuscan tuna and cannellini bean salad piled onto crisp toast. A toast recipe for one, ready in 10 minutes with tuna."
+      "seoDescription": "A lemony Tuscan tuna and cannellini bean salad piled onto crisp toast. A toast recipe for one, ready in 10 minutes with tuna.",
+      "dateModified": "2026-09-29"
     },
     {
       "id": 149,
@@ -9461,10 +9472,11 @@
       "notes": "Cut the sweet potato into even slices so the centers soften before the edges get too dark.",
       "photo_search": "slices of toasted sweet potato topped with almond butter, banana, and cinnamon",
       "publishDate": "2026-09-26",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of slices of toasted sweet potato topped with almond butter, banana, and cinnamon",
       "seoTitle": "Sweet Potato Toast with Almond Butter Recipe for One | foidslop",
-      "seoDescription": "Roasted sweet potato slices topped with almond butter and banana make a crisp-edged alternative to bread."
+      "seoDescription": "Roasted sweet potato slices topped with almond butter and banana make a crisp-edged alternative to bread.",
+      "dateModified": "2026-09-29"
     },
     {
       "id": 150,
@@ -9524,10 +9536,11 @@
       "notes": "Do not overcook the squash or the strands will become soft and lose their shape.",
       "photo_search": "bowl of spaghetti squash strands in red marinara sauce with parmesan",
       "publishDate": "2026-09-27",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of bowl of spaghetti squash strands in red marinara sauce with parmesan",
       "seoTitle": "Spaghetti Squash with Marinara Recipe for One | foidslop",
-      "seoDescription": "Roasted spaghetti squash strands tossed with marinara and parmesan make a cozy vegetable-forward dinner."
+      "seoDescription": "Roasted spaghetti squash strands tossed with marinara and parmesan make a cozy vegetable-forward dinner.",
+      "dateModified": "2026-09-29"
     },
     {
       "id": 151,
@@ -9588,11 +9601,12 @@
       "notes": "Letting it sit for a few minutes allows the beans to absorb the dressing.",
       "photo_search": "bowl of tuna, white beans, red onion, and parsley in a light vinaigrette",
       "publishDate": "2026-09-28",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of bowl of tuna, white beans, red onion, and parsley in a light vinaigrette",
       "seoTitle": "Tuna and White Bean Salad Recipe for One | foidslop",
       "seoDescription": "Tuna, white beans, red onion, and parsley make a bright Mediterranean-style salad with a lemony dressing.",
-      "storage": "The vegetables keep for two days when dry and covered. Hold the dressing apart, then add tuna and taste again just before eating. For tuna and white bean salad, keep the named finish separate until serving."
+      "storage": "The vegetables keep for two days when dry and covered. Hold the dressing apart, then add tuna and taste again just before eating. For tuna and white bean salad, keep the named finish separate until serving.",
+      "dateModified": "2026-09-29"
     },
     {
       "id": 152,
@@ -9641,11 +9655,12 @@
       "notes": "Using a ripe, in season peach makes this feel like a dessert.",
       "photo_search": "bowl of cottage cheese topped with sliced peaches, honey, and cinnamon",
       "publishDate": "2026-09-29",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of bowl of cottage cheese topped with sliced peaches, honey, and cinnamon",
       "seoTitle": "Cottage Cheese and Peach Bowl Recipe for One | foidslop",
       "seoDescription": "Creamy cottage cheese topped with ripe peach, honey, cinnamon, and almonds makes a quick sweet-savory bowl.",
-      "substitutions": "Rice, farro, couscous, or frozen grains all make the base. No full fat cottage cheese? Any roasted vegetable or canned bean drops straight in. For cottage cheese and peach bowl, make the swap in the same one-person portion and taste before adding more seasoning."
+      "substitutions": "Rice, farro, couscous, or frozen grains all make the base. No full fat cottage cheese? Any roasted vegetable or canned bean drops straight in. For cottage cheese and peach bowl, make the swap in the same one-person portion and taste before adding more seasoning.",
+      "dateModified": "2026-09-29"
     },
     {
       "id": 153,

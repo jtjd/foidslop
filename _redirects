@@ -1,4 +1,4 @@
-/slop/today  /slop/kimchi-cheese-quesadilla  302
+/slop/today  /slop/cottage-cheese-peach-bowl  302
 /index.html  /  301
 /slop/archive.html  /slop/archive  301
 /privacy.html  /privacy  301
@@ -17,6 +17,7 @@
 /high-protein-meals-for-one.html  /high-protein-meals-for-one  301
 /slop/archive/page-2.html  /slop/archive/page-2  301
 /slop/archive/page-3.html  /slop/archive/page-3  301
+/slop/archive/page-4.html  /slop/archive/page-4  301
 /recipes/quick.html  /recipes/quick  301
 /recipes/no-cook.html  /recipes/no-cook  301
 /recipes/for-one.html  /recipes/for-one  301
@@ -163,9 +164,25 @@
 /slop/baked-feta-honey-sesame.html  /slop/baked-feta-honey-sesame  301
 /slop/chia-pudding-coconut-mango.html  /slop/chia-pudding-coconut-mango  301
 /slop/kimchi-cheese-quesadilla.html  /slop/kimchi-cheese-quesadilla  301
+/slop/spicy-ramen-egg-spinach.html  /slop/spicy-ramen-egg-spinach  301
+/slop/watermelon-feta-salad.html  /slop/watermelon-feta-salad  301
+/slop/cottage-cheese-pancakes.html  /slop/cottage-cheese-pancakes  301
+/slop/apple-cheddar-toast.html  /slop/apple-cheddar-toast  301
+/slop/paneer-tikka-skewers.html  /slop/paneer-tikka-skewers  301
+/slop/miso-glazed-eggplant.html  /slop/miso-glazed-eggplant  301
+/slop/tofu-peanut-sauce-bowl.html  /slop/tofu-peanut-sauce-bowl  301
+/slop/baked-camembert-pears.html  /slop/baked-camembert-pears  301
+/slop/caprese-quesadilla.html  /slop/caprese-quesadilla  301
+/slop/smashed-pea-ricotta-toast.html  /slop/smashed-pea-ricotta-toast  301
+/slop/tuscan-tuna-white-bean-toast.html  /slop/tuscan-tuna-white-bean-toast  301
+/slop/sweet-potato-toast-almond-butter.html  /slop/sweet-potato-toast-almond-butter  301
+/slop/spaghetti-squash-marinara.html  /slop/spaghetti-squash-marinara  301
+/slop/tuna-white-bean-salad.html  /slop/tuna-white-bean-salad  301
+/slop/cottage-cheese-peach-bowl.html  /slop/cottage-cheese-peach-bowl  301
 
 # culture-expansion:start
 /culture.html /culture 301
+/culture/lindsay-clancy-mistrial.html /culture/lindsay-clancy-mistrial 301
 /culture/foidslop-media.html /culture/foidslop-media 301
 /culture/foidslop-usernames.html /culture/foidslop-usernames 301
 /culture/why-everything-is-slop.html /culture/why-everything-is-slop 301
