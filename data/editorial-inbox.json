@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-30T12:41:16.407Z",
+  "generatedAt": "2026-09-30T22:20:05.992Z",
   "lookbackHours": 72,
-  "signalCount": 43,
-  "candidateCount": 0,
+  "signalCount": 52,
+  "candidateCount": 2,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -46,5 +46,97 @@
       "error": "HTTP 429"
     }
   ],
-  "candidates": []
+  "candidates": [
+    {
+      "id": "discovery-9c73b71bb0a9",
+      "topic": "Nearly 95% of Viral Korean Skincare TikTok Videos Contain Misleading Claims",
+      "score": 5.43,
+      "audienceTags": [
+        "internet"
+      ],
+      "matchedTerms": [
+        "viral",
+        "tiktok"
+      ],
+      "signalCount": 3,
+      "sourceCount": 3,
+      "firstSeenAt": "2026-09-29T22:01:00.000Z",
+      "lastSeenAt": "2026-09-30T19:01:35.000Z",
+      "reasons": [
+        "Audience terms: viral, tiktok.",
+        "3 independent source labels are carrying the story.",
+        "3 fresh signals were clustered into the same topic.",
+        "The newest signal is less than 24 hours old."
+      ],
+      "signals": [
+        {
+          "title": "Nearly 95% of Viral Korean Skincare TikTok Videos Contain Misleading Claims",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOcHdsYzlXb3pmRHp3UW92Si1BUDRYNUp5WGRUSTBWRGRxOWJ2ZmRxay02M2FwUWhxZnA0QlRuQ0xucVpGTUhkZUJ2YWlpdkdIZEg5RllPSmh2RjhUVnphUlY0WUtEVTNIcm5oa1VxdlV5czBTX2RuY01sUGZlTmowTFVLZzJ4NmtJdXliOEpkOTRDWWRTV2ZKb05Fb3BjX0RIaE9fZkF4dm5yV1hKNjMzY1d3?oc=5",
+          "publisher": "Dermatology Times",
+          "publishedAt": "2026-09-30T19:01:35.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "Study Finds Nearly 95 Percent of Viral Korean Skincare TikTok Videos Make Misleading Claims",
+          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPS0xMemVaQlhQb3l6VEJIVEZSY2xhTUNhcGVWVUFMSjFsY1pweGJ4eFFhM0xQNVJvNVFRV3FNRThlSXMzTDM4alBUZXo4VHdkRjdNWUVvV0ZYOW9LYXE1U0l4dUhPWjIxcVdUX2c0SmYxd3h2YjRaVHc5N29ma2NJTy1TaGQ3MkZVZkMxcW5fb3kwSEJWRlNwSGZUUGdGbDVMdTV2dFRLVGtBSE5WMWRRREFRblBSRkRLaXRRd0FnemhheERZYWQ0ZWdKaFg5SWpwMUJEMWVWLUdqU0U3R0FWR2tMcDLSAeoBQVVfeXFMT0hPTkxEXzI4bEtucXpWU0ZXZjZTSUY4bXh1NFdtS3I1UDJQT0RfSXJYQWNpdjVtOElHc1g5ektXMFFqOHNIZmFocFpDYVFCallYUHEzQVMtcGRieUR5T2prNHpTekZfYzhTUHQ3VGVNUWI0eHJjWTdLcFJtbkItYlUtYnNqX19McVlWcHBRLThKWDVlSHpDaHlOeUd5bGhuOTd1QTRXbTNVYkI4NkMwanRVQU02OTlsRGRnVFJhQjhNQUNrWWpPNTUwT3VtWU5EVzB3QXdlV2NPSGxiWTZnS0JCUnNpZHhtVFRB?oc=5",
+          "publisher": "Medical Dialogues",
+          "publishedAt": "2026-09-30T02:30:01.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "Almost 95% of viral Korean skincare and 'glass skin' TikTok videos contain misleading claims, new study shows",
+          "url": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxOU0lqaURyMGNIOHZQMjM3elZLTG9oc3dQMXNleDZvaWlXOFFmdUkwNGVJOGRGQ3hCVmRsdjBLNVpBUXRSX2lDN1BsUDVqN19TakV2V0RjS0NaRXZGWTZQOHBweEU2b3lILWlmRWJya2pRNVh2Y3hFS3FPcWZfbEs3RmJYOHF4TlV5UVl3cTQwb3c4VlMyYWplbzVPTlh3NUlxNUctemhJVU9MY0Fjd3FOanM4R0RYamhrQm5aMl8wdFJzZDl6RlZUTXpiNWE2MXVCWWduT3IwbDZpMHFzSzEwbmMtSlFyaGJhVnA1ZXg4NmdBc2U5Vl8ySUROWGc3RE5IUkNjMWRhUl9tSDB0TGx2OUcxdVZyR01QOEM3c0REWERMMmRtMTFJVg?oc=5",
+          "publisher": "mtairynews.com",
+          "publishedAt": "2026-09-29T22:01:00.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        }
+      ]
+    },
+    {
+      "id": "discovery-5e5762a9ea68",
+      "topic": "Google searches reveal most confusing Gen Alpha slang terms of 2026",
+      "score": 4.93,
+      "audienceTags": [
+        "language"
+      ],
+      "matchedTerms": [
+        "slang"
+      ],
+      "signalCount": 2,
+      "sourceCount": 2,
+      "firstSeenAt": "2026-09-28T10:33:14.000Z",
+      "lastSeenAt": "2026-09-30T11:51:04.000Z",
+      "reasons": [
+        "Audience terms: slang.",
+        "2 independent source labels are carrying the story.",
+        "The newest signal is less than 24 hours old."
+      ],
+      "signals": [
+        {
+          "title": "Google searches reveal most confusing Gen Alpha slang terms of 2026",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNTEs3Q1dkaUU4bnFPaGFQcFpGdUd4b25qWHNhNWxxbU1DNVFLX2VoMm96OU1ZY0pJN3dXUzByRUUySmhzaXRCS1FfdTNneVZvVXEwUExpTV9LYUg3WjJ0Y3hXbTRySktaY0c2bnJkbXF2YkhHWFlJYm5GMHBRY0dIRnBQVEtlSDRzZTJvUGJVTFo1azNRUE1RNDFYNA?oc=5",
+          "publisher": "traveltomorrow.com",
+          "publishedAt": "2026-09-30T11:51:04.000Z",
+          "feedId": "google-internet-slang",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / internet slang"
+        },
+        {
+          "title": "From 'Chud' to 'Bop': Most searched Gen Alpha slang terms of 2026 (so far) revealed",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQLUNLRl9lNVN4U1BQTnk0QlJGSnM2NnhfQWtWRUVDUFZhMDEtS1gwR2cyLUtVTzZTUXdjMDFHWHZJaHJqdDNWbXRpcmtyVE80clBGeDdqbjR2Z2ZFUzM2OUpfU29oajNjMFZycmhDT0owVC10bUdlUUl1TlUyYV9BVXVMTnV3anJTSXNMWERzX21BS18xcGVGeGpQMlZlSVlTUW5WbzEyY09tbTZlVWJFdXRn?oc=5",
+          "publisher": "Euronews.com",
+          "publishedAt": "2026-09-28T10:33:14.000Z",
+          "feedId": "google-internet-slang",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / internet slang"
+        }
+      ]
+    }
+  ]
 }
