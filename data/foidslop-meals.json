@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T00:00:00.000Z",
+  "generated": "2026-09-30T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -9717,10 +9717,11 @@
       "notes": "The everything bagel seasoning ties the avocado and salmon together perfectly.",
       "photo_search": "sourdough toast topped with mashed avocado, smoked salmon, and capers",
       "publishDate": "2026-09-30",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of sourdough toast topped with mashed avocado, smoked salmon, and capers",
       "seoTitle": "Smoked Salmon and Avocado Toast Recipe for One | foidslop",
-      "seoDescription": "Creamy avocado and salty smoked salmon sit on crisp sourdough with lemon, capers, and everything seasoning."
+      "seoDescription": "Creamy avocado and salty smoked salmon sit on crisp sourdough with lemon, capers, and everything seasoning.",
+      "dateModified": "2026-09-30"
     },
     {
       "id": 154,
