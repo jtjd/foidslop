@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { syncGoogleTag } = require('./lib/google-tag');
 const { KEY } = require('./lib/ping-config');
 const { isEditorialPageActive, recipesThroughDate } = require('./lib/editorial-pages');
 
@@ -24,6 +25,10 @@ const publishedSlugs = new Set(meals
 function copyFile(sourceRelative, destinationRelative = sourceRelative) {
   const source = path.join(ROOT, sourceRelative);
   if (!fs.existsSync(source)) throw new Error(`Missing public file: ${sourceRelative}`);
+  if (sourceRelative.endsWith('.html')) {
+    const html = fs.readFileSync(source, 'utf8');
+    if (syncGoogleTag(html) !== html) throw new Error(`Google tag needs synchronization: ${sourceRelative}`);
+  }
   const destination = path.join(OUTPUT, destinationRelative);
   fs.mkdirSync(path.dirname(destination), { recursive: true });
   fs.copyFileSync(source, destination);

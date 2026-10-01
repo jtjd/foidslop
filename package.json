@@ -2,8 +2,8 @@
   "name": "foidslop-site",
   "private": true,
   "scripts": {
-    "build": "node scripts/editorial-desk.js check && node scripts/sync-approved-editorial.js --write && node scripts/publish-culture.js && node scripts/publish-culture-products.js && node scripts/sync-navigation.js && node scripts/seo-check.js && node scripts/build-deploy.js",
-    "check": "node scripts/daily-publish.js --check && node scripts/editorial-desk.js check && node scripts/sync-approved-editorial.js && node scripts/publish-culture.js --check && node scripts/publish-culture-products.js --check && node scripts/sync-navigation.js --check && node scripts/seo-check.js",
+    "build": "node scripts/editorial-desk.js check && node scripts/sync-approved-editorial.js --write && node scripts/publish-culture.js && node scripts/publish-culture-products.js && node scripts/sync-navigation.js && node scripts/sync-analytics.js && node scripts/seo-check.js && node scripts/build-deploy.js",
+    "check": "node scripts/daily-publish.js --check && node scripts/editorial-desk.js check && node scripts/sync-approved-editorial.js && node scripts/publish-culture.js --check && node scripts/publish-culture-products.js --check && node scripts/sync-navigation.js --check && node scripts/seo-check.js && node scripts/sync-analytics.js --check",
     "preview": "node scripts/preview.js",
     "publish": "node scripts/daily-publish.js && node scripts/sync-approved-editorial.js --write && node scripts/publish-culture.js && node scripts/publish-culture-products.js && node scripts/sync-navigation.js",
     "culture:publish": "node scripts/sync-approved-editorial.js --write && node scripts/publish-culture.js && node scripts/publish-culture-products.js && node scripts/sync-navigation.js",
@@ -27,6 +27,8 @@
     "weekly:dry-run": "node scripts/weekly-community.js dry-run --operation queue-check",
     "upgrade-content": "node scripts/upgrade-recipe-content.js",
     "products:publish": "node scripts/publish-culture-products.js && node scripts/sync-navigation.js",
-    "products:check": "node scripts/publish-culture-products.js --check && node scripts/sync-navigation.js --check"
+    "products:check": "node scripts/publish-culture-products.js --check && node scripts/sync-navigation.js --check",
+    "sync:analytics": "node scripts/sync-analytics.js",
+    "check:analytics": "node scripts/sync-analytics.js --check"
   }
 }

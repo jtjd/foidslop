@@ -1,8 +1,8 @@
 /* ══════════════════════════════════════════
  *  cookie-consent.js — foidslop
- *  Loads Google Analytics with Consent Mode v2.
+ *  Updates Google Analytics Consent Mode v2.
  *  Analytics cookies require the visitor to accept.
- *  Include on every page via:
+ *  Include after the Google tag snippet on every page via:
  *    <script src="/cookie-consent.js" data-ga-id="G-VT527DETQ2"></script>
  *  (use ../cookie-consent.js from /slop/ pages)
  * ══════════════════════════════════════════ */

@@ -1,4 +1,29 @@
 <!DOCTYPE html><html lang="en"><head>
+<!-- google-tag:start -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var accepted = false;
+  try { accepted = localStorage.getItem('foidslop_consent') === 'accepted'; } catch (e) {}
+  window.__foidslopGATagInitialized = true;
+  window.__foidslopGALoaded = accepted;
+  gtag('consent', 'default', {
+    analytics_storage: accepted ? 'granted' : 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied'
+  });
+})();
+gtag('set', 'ads_data_redaction', true);
+gtag('js', new Date());
+gtag('config', 'G-VT527DETQ2', {
+  allow_google_signals: false,
+  allow_ad_personalization_signals: false
+});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VT527DETQ2"></script>
+<!-- google-tag:end -->
 <script src="cookie-consent.js?v=20261001-1" data-ga-id="G-VT527DETQ2" defer></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">

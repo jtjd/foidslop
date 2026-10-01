@@ -3,14 +3,15 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
+const { googleTagSnippet, syncGoogleTag } = require('../scripts/lib/google-tag');
 
 const source = fs.readFileSync(path.join(__dirname, '../assets/js/cookie-consent.js'), 'utf8');
 
-function visit(choice, storageBlocked = false) {
+function visit(choice, storageBlocked = false, staticTag = false) {
   const clicks = {};
   const scripts = [];
   const banners = [];
-  const window = {};
+  let window = {};
   const banner = {
     setAttribute() {},
     classList: { add() {}, remove() {} },
@@ -36,6 +37,12 @@ function visit(choice, storageBlocked = false) {
       body: { appendChild: element => banners.push(element) }
     }
   });
+  window = context;
+  context.window = context;
+  if (staticTag) {
+    const inline = googleTagSnippet().match(/<script>([\s\S]*?)<\/script>/)[1];
+    vm.runInContext(inline, context);
+  }
   vm.runInContext(source, context);
   return { window, scripts, banners, clicks, context, choice: () => choice,
     commands: () => JSON.parse(JSON.stringify(window.dataLayer.map(command => Array.from(command)))) };
@@ -87,4 +94,28 @@ test('blocked local storage still defaults to denied and permits acceptance for 
   assert.equal(page.commands()[0][2].analytics_storage, 'denied');
   page.clicks['.cookie-consent-accept']();
   assert.equal(page.commands().at(-1)[2].analytics_storage, 'granted');
+});
+
+for (const choice of [null, 'declined', 'accepted']) {
+  test(`static Google tag with ${choice || 'no'} consent does not get loaded or configured twice by the banner`, () => {
+    const page = visit(choice, false, true);
+    assert.equal(page.scripts.length, 0, 'banner must not insert a second loader');
+    assert.equal(page.commands().filter(command => command[0] === 'config').length, 1);
+    assert.equal(page.commands()[0][2].analytics_storage, choice === 'accepted' ? 'granted' : 'denied');
+    if (choice === null) {
+      page.clicks['.cookie-consent-accept']();
+      assert.equal(page.commands().at(-1)[2].analytics_storage, 'granted');
+      assert.equal(page.commands().filter(command => command[0] === 'config').length, 1);
+    }
+  });
+}
+
+test('Google loader is directly discoverable in HTML, with synchronous consent first', () => {
+  const html = syncGoogleTag('<html><head>\n<script src="/cookie-consent.js" defer></script></head></html>');
+  const loader = '<script async src="https://www.googletagmanager.com/gtag/js?id=G-VT527DETQ2"></script>';
+  assert.ok(html.includes(loader));
+  assert.ok(html.indexOf("gtag('consent', 'default'") < html.indexOf(loader));
+  assert.ok(html.indexOf(loader) < html.indexOf('/cookie-consent.js'));
+  assert.equal(syncGoogleTag(html), html);
+  assert.equal((html.match(/gtag\('config'/g) || []).length, 1);
 });
