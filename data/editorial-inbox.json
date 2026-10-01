@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-01T13:25:03.729Z",
+  "generatedAt": "2026-10-01T22:44:18.105Z",
   "lookbackHours": 72,
-  "signalCount": 42,
+  "signalCount": 53,
   "candidateCount": 2,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
@@ -48,9 +48,9 @@
   ],
   "candidates": [
     {
-      "id": "discovery-86ba7aff45bb",
+      "id": "discovery-714c72a57af4",
       "topic": "Nearly 95% of Viral Korean Skincare TikTok Videos Contain Misleading Claims",
-      "score": 5.13,
+      "score": 5.73,
       "audienceTags": [
         "internet"
       ],
@@ -58,17 +58,35 @@
         "viral",
         "tiktok"
       ],
-      "signalCount": 3,
-      "sourceCount": 3,
+      "signalCount": 5,
+      "sourceCount": 5,
       "firstSeenAt": "2026-09-30T13:26:34.000Z",
-      "lastSeenAt": "2026-10-01T00:00:01.000Z",
+      "lastSeenAt": "2026-10-01T13:52:49.000Z",
       "reasons": [
         "Audience terms: viral, tiktok.",
-        "3 independent source labels are carrying the story.",
-        "3 fresh signals were clustered into the same topic.",
+        "5 independent source labels are carrying the story.",
+        "5 fresh signals were clustered into the same topic.",
         "The newest signal is less than 24 hours old."
       ],
       "signals": [
+        {
+          "title": "Chasing 'Glass Skin'? 95% Of Korean Skincare Videos Had At Least One Misleading Claim, Study Warns",
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOel83UVpXM090bXVyajFWNHkxaFdnSEF1NGZlSDIzcTJMbkJ0cHBRRC1DU0xVUmRqSGNZS3FhQ19pckVHRUR2ZHpaUnF6LWtYaGFRQlRyV2tSMldWRFJIUEstWEV0VW1WdEJ5bzJ5Qkw1N3VmVUlyQjc0MWZYenNSQkNpaTZCSXl4a0tIS3N5LV9rMWxOOE9aZU42ZzE0WlNkVElkaWJ6dl94a2FRaG1CakpyWURtbm1rNTd0VVpIVkVENFFJV0I0VWxDdUx1UdIB2gFBVV95cUxOWk1LSnBDazVvY3ZSQ3ZMZ0UzVU9EQW5IVUNQdjdzNk1WaW9uU0JsZUY5aTItdjY5UTg3cWphNmZWOUhyZDk2YVRDT2E2WWRBVXlac1QxbXpTcE01U3pMRl9kMlhyMTV3YnRXMHZWODc4MVlmcXJsRlhYblZRMWxPNlVRS0tBSDUzNV91bkNsTjdNaFY1SmwyRkRTOGNMZ2MwZ0FQaE80ZW9jTG5hMXQ5WHN3OElTd3JVNUFETmFHeWpVSXNrVlBiRXJpRldiUVoyQTFudUplb2wwZw?oc=5",
+          "publisher": "NDTV",
+          "publishedAt": "2026-10-01T13:52:49.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "Korean Skincare TikTok Videos Contain Misleading Claims: EADV 2026",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNalJaekNSWWxaUGN1Y1hvTEYxZF9wU0VzSDcwdG9ZRnpVano1dmNzSGRwN3hIN19KZllJU1VDa0o4Q29sbXVWaXZsd290MkVINUctSUVNRDBvZjh5bFV0YVJVZHZ5SjhsVy1YczcyYzRVb01nTUF1YVVGWkxHMld5WV9ReGZBcS1QSGx2LXpXU2tNQzZvampPcWM5RnhLaVJXX1E3SlJlc1R6bGFvSkpR?oc=5",
+          "publisher": "European Medical Journal",
+          "publishedAt": "2026-10-01T13:47:22.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
         {
           "title": "Almost 95% of viral Korean skincare and 'glass skin' TikTok videos contain misleading claims, new study shows",
           "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNb0VCVWFoTkt0TWRMZHpIUkJWck1xYkJhd3BuZEFsZ0dENTJhZk9rQU1BSmVxaTV6M1NrUnp3cUJMMlB2RGNfSGlIN0NobkJpeVg0UjJvMDEtdjA3UmFPcHcxV1Q1OS16azh3OTZYMVBoSnh4MjhRNU5ZNHZsWS1xZXp3?oc=5",
