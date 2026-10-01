@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-30T00:00:00.000Z",
+  "generated": "2026-10-01T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -9774,10 +9774,11 @@
       "notes": "Use American cheese for the ultimate melt. It is the best cheese for grilled cheese.",
       "photo_search": "bowl of tomato soup next to a golden grilled cheese sandwich",
       "publishDate": "2026-10-01",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of bowl of tomato soup next to a golden grilled cheese sandwich",
       "seoTitle": "Tomato Basil Soup with Grilled Cheese Recipe for One | foidslop",
-      "seoDescription": "The classic comfort combo. A creamy tomato basil soup with a crispy grilled cheese. A soup recipe for one, ready in 20 minutes with tomato basil soup."
+      "seoDescription": "The classic comfort combo. A creamy tomato basil soup with a crispy grilled cheese. A soup recipe for one, ready in 20 minutes with tomato basil soup.",
+      "dateModified": "2026-10-01"
     },
     {
       "id": 155,

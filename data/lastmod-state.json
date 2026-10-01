@@ -1,7 +1,7 @@
 {
  "": {
-  "hash": "1a7682102a06513e6714efcb612fc17eb7411ed6",
-  "lastmod": "2026-09-30"
+  "hash": "8c8eb1ce93e2ff9f901f5eafe35aa027b5a64492",
+  "lastmod": "2026-10-01"
  },
  "cheap-meals-for-one": {
   "hash": "29157626e7a71d8b1c6e441f2f0b55236a9696af",
@@ -48,12 +48,12 @@
   "lastmod": "2026-09-30"
  },
  "recipes/comfort-food": {
-  "hash": "4ecdecdfdbe9f11ded0e0099ddea62284cfabe20",
-  "lastmod": "2026-09-29"
+  "hash": "2af0a86ed482ed80b6cdd5f6bcd59843c09d67b4",
+  "lastmod": "2026-10-01"
  },
  "recipes/for-one": {
-  "hash": "dfc79b7560ce01e752a629671255720186d4d041",
-  "lastmod": "2026-09-30"
+  "hash": "fb31598b4ce09fb45106cb9e5d193cc4268a1a58",
+  "lastmod": "2026-10-01"
  },
  "recipes/no-cook": {
   "hash": "fb290e43dc8865e4f39198758b31389c22f8d02b",
@@ -80,12 +80,12 @@
   "lastmod": "2026-09-29"
  },
  "slop/archive": {
-  "hash": "e27b7bf07d7b737c709e63ea87228cde0baf6337",
-  "lastmod": "2026-09-30"
+  "hash": "601c529113f530c91baf325c7dd4e678d7c04517",
+  "lastmod": "2026-10-01"
  },
  "soup-for-one": {
-  "hash": "ee9ddc29103183c91edbdbb046b1d6c7d7e2eb68",
-  "lastmod": "2026-08-27"
+  "hash": "74df87ea01b8703e514783e83d06e76fe69873f8",
+  "lastmod": "2026-10-01"
  },
  "thanksgiving-dinner-for-one": {
   "hash": "27125180ff5a5c7925bc024855a810d44fcc631d",
