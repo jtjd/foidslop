@@ -385,7 +385,7 @@ fs.writeFileSync(DB_FILE, `${JSON.stringify(db, null, 2)}\n`);
 function commonHead({ title, description, canonical, image = `${BASE_URL}/og-image.png`, type = 'website', root = '' }) {
   const [ogWidth, ogHeight] = /-wide\.jpg$/.test(image) ? [1280, 720] : [1200, 630];
   return `
-<script src="${root}cookie-consent.js?v=20260713-4" data-ga-id="G-VT527DETQ2" defer></script>
+<script src="${root}cookie-consent.js?v=20261001-1" data-ga-id="G-VT527DETQ2" defer></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="p:domain_verify" content="7bdfbfde1745ec62bc759913fcc45642">
