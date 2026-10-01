@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-01T06:02:37.302Z",
+  "generatedAt": "2026-10-01T13:25:03.729Z",
   "lookbackHours": 72,
-  "signalCount": 52,
+  "signalCount": 42,
   "candidateCount": 2,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
@@ -48,59 +48,9 @@
   ],
   "candidates": [
     {
-      "id": "discovery-c88bc73231fc",
-      "topic": "From ‘67’ to ‘rizz’: PH’s most searched slang terms",
-      "score": 5.95,
-      "audienceTags": [
-        "language"
-      ],
-      "matchedTerms": [
-        "slang"
-      ],
-      "signalCount": 3,
-      "sourceCount": 3,
-      "firstSeenAt": "2026-09-28T10:33:14.000Z",
-      "lastSeenAt": "2026-10-01T03:40:00.000Z",
-      "reasons": [
-        "Audience terms: slang.",
-        "3 independent source labels are carrying the story.",
-        "3 fresh signals were clustered into the same topic.",
-        "The newest signal is less than 24 hours old."
-      ],
-      "signals": [
-        {
-          "title": "From ‘67’ to ‘rizz’: PH’s most searched slang terms",
-          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQek9IOGdHcXFjYjUzcVVqcUdXUGl3cEVKZy03S2EyUWlsUUZ0bUdmVmtWWFV5Nlp2QjhwQWNUejUzZzViU1JYdjdnbVF0em4zOFI3Ymg0VFlvaWVRUXJqTVRhTE1idW43eFhCTzJpdUptX2FOTXZjZ3BWdmlMeEZmdkdpOHdBZ1BkUGc40gGQAUFVX3lxTE9oSGdYR2Y3NjZYQVpDeHpPRTZ1MXJYdUlrU3VtZXM2dFFVTG5DTVBQSzRTX2ZxdFE1V2thblFGNVhBNzBtbVJKSVY3MVQ4RFZrWXUzVl9HbGdDRDdrMG5wUTBnNXRqQnZtX2Vzd1RyWUNRWDBjTUNJU2pKRUlTMGdORXJvSmxCQmVQcTNCeTQ5Ug?oc=5",
-          "publisher": "Inquirer.net",
-          "publishedAt": "2026-10-01T03:40:00.000Z",
-          "feedId": "google-internet-slang",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / internet slang"
-        },
-        {
-          "title": "Google searches reveal most confusing Gen Alpha slang terms of 2026",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNTEs3Q1dkaUU4bnFPaGFQcFpGdUd4b25qWHNhNWxxbU1DNVFLX2VoMm96OU1ZY0pJN3dXUzByRUUySmhzaXRCS1FfdTNneVZvVXEwUExpTV9LYUg3WjJ0Y3hXbTRySktaY0c2bnJkbXF2YkhHWFlJYm5GMHBRY0dIRnBQVEtlSDRzZTJvUGJVTFo1azNRUE1RNDFYNA?oc=5",
-          "publisher": "Travel Tomorrow",
-          "publishedAt": "2026-09-30T11:51:04.000Z",
-          "feedId": "google-internet-slang",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / internet slang"
-        },
-        {
-          "title": "From 'Chud' to 'Bop': Most searched Gen Alpha slang terms of 2026 (so far) revealed",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQLUNLRl9lNVN4U1BQTnk0QlJGSnM2NnhfQWtWRUVDUFZhMDEtS1gwR2cyLUtVTzZTUXdjMDFHWHZJaHJqdDNWbXRpcmtyVE80clBGeDdqbjR2Z2ZFUzM2OUpfU29oajNjMFZycmhDT0owVC10bUdlUUl1TlUyYV9BVXVMTnV3anJTSXNMWERzX21BS18xcGVGeGpQMlZlSVlTUW5WbzEyY09tbTZlVWJFdXRn?oc=5",
-          "publisher": "Euronews.com",
-          "publishedAt": "2026-09-28T10:33:14.000Z",
-          "feedId": "google-internet-slang",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / internet slang"
-        }
-      ]
-    },
-    {
-      "id": "discovery-5b327168d394",
+      "id": "discovery-86ba7aff45bb",
       "topic": "Nearly 95% of Viral Korean Skincare TikTok Videos Contain Misleading Claims",
-      "score": 5.42,
+      "score": 5.13,
       "audienceTags": [
         "internet"
       ],
@@ -108,14 +58,14 @@
         "viral",
         "tiktok"
       ],
-      "signalCount": 4,
-      "sourceCount": 4,
-      "firstSeenAt": "2026-09-30T02:30:01.000Z",
+      "signalCount": 3,
+      "sourceCount": 3,
+      "firstSeenAt": "2026-09-30T13:26:34.000Z",
       "lastSeenAt": "2026-10-01T00:00:01.000Z",
       "reasons": [
         "Audience terms: viral, tiktok.",
-        "4 independent source labels are carrying the story.",
-        "4 fresh signals were clustered into the same topic.",
+        "3 independent source labels are carrying the story.",
+        "3 fresh signals were clustered into the same topic.",
         "The newest signal is less than 24 hours old."
       ],
       "signals": [
@@ -145,15 +95,46 @@
           "feedId": "google-tiktok-culture",
           "feedKind": "google-news",
           "feedLabel": "Google News / TikTok culture"
+        }
+      ]
+    },
+    {
+      "id": "discovery-6c616a02308b",
+      "topic": "From ‘67’ to ‘rizz’: PH’s most searched slang terms",
+      "score": 4.93,
+      "audienceTags": [
+        "language"
+      ],
+      "matchedTerms": [
+        "slang"
+      ],
+      "signalCount": 2,
+      "sourceCount": 2,
+      "firstSeenAt": "2026-09-30T11:51:04.000Z",
+      "lastSeenAt": "2026-10-01T03:40:00.000Z",
+      "reasons": [
+        "Audience terms: slang.",
+        "2 independent source labels are carrying the story.",
+        "The newest signal is less than 24 hours old."
+      ],
+      "signals": [
+        {
+          "title": "From ‘67’ to ‘rizz’: PH’s most searched slang terms",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQek9IOGdHcXFjYjUzcVVqcUdXUGl3cEVKZy03S2EyUWlsUUZ0bUdmVmtWWFV5Nlp2QjhwQWNUejUzZzViU1JYdjdnbVF0em4zOFI3Ymg0VFlvaWVRUXJqTVRhTE1idW43eFhCTzJpdUptX2FOTXZjZ3BWdmlMeEZmdkdpOHdBZ1BkUGc40gGQAUFVX3lxTE9oSGdYR2Y3NjZYQVpDeHpPRTZ1MXJYdUlrU3VtZXM2dFFVTG5DTVBQSzRTX2ZxdFE1V2thblFGNVhBNzBtbVJKSVY3MVQ4RFZrWXUzVl9HbGdDRDdrMG5wUTBnNXRqQnZtX2Vzd1RyWUNRWDBjTUNJU2pKRUlTMGdORXJvSmxCQmVQcTNCeTQ5Ug?oc=5",
+          "publisher": "Inquirer.net",
+          "publishedAt": "2026-10-01T03:40:00.000Z",
+          "feedId": "google-internet-slang",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / internet slang"
         },
         {
-          "title": "Study Finds Nearly 95 Percent of Viral Korean Skincare TikTok Videos Make Misleading Claims",
-          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPS0xMemVaQlhQb3l6VEJIVEZSY2xhTUNhcGVWVUFMSjFsY1pweGJ4eFFhM0xQNVJvNVFRV3FNRThlSXMzTDM4alBUZXo4VHdkRjdNWUVvV0ZYOW9LYXE1U0l4dUhPWjIxcVdUX2c0SmYxd3h2YjRaVHc5N29ma2NJTy1TaGQ3MkZVZkMxcW5fb3kwSEJWRlNwSGZUUGdGbDVMdTV2dFRLVGtBSE5WMWRRREFRblBSRkRLaXRRd0FnemhheERZYWQ0ZWdKaFg5SWpwMUJEMWVWLUdqU0U3R0FWR2tMcDLSAeoBQVVfeXFMT0hPTkxEXzI4bEtucXpWU0ZXZjZTSUY4bXh1NFdtS3I1UDJQT0RfSXJYQWNpdjVtOElHc1g5ektXMFFqOHNIZmFocFpDYVFCallYUHEzQVMtcGRieUR5T2prNHpTekZfYzhTUHQ3VGVNUWI0eHJjWTdLcFJtbkItYlUtYnNqX19McVlWcHBRLThKWDVlSHpDaHlOeUd5bGhuOTd1QTRXbTNVYkI4NkMwanRVQU02OTlsRGRnVFJhQjhNQUNrWWpPNTUwT3VtWU5EVzB3QXdlV2NPSGxiWTZnS0JCUnNpZHhtVFRB?oc=5",
-          "publisher": "Medical Dialogues",
-          "publishedAt": "2026-09-30T02:30:01.000Z",
-          "feedId": "google-tiktok-culture",
+          "title": "Google searches reveal most confusing Gen Alpha slang terms of 2026",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNTEs3Q1dkaUU4bnFPaGFQcFpGdUd4b25qWHNhNWxxbU1DNVFLX2VoMm96OU1ZY0pJN3dXUzByRUUySmhzaXRCS1FfdTNneVZvVXEwUExpTV9LYUg3WjJ0Y3hXbTRySktaY0c2bnJkbXF2YkhHWFlJYm5GMHBRY0dIRnBQVEtlSDRzZTJvUGJVTFo1azNRUE1RNDFYNA?oc=5",
+          "publisher": "Travel Tomorrow",
+          "publishedAt": "2026-09-30T11:51:04.000Z",
+          "feedId": "google-internet-slang",
           "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
+          "feedLabel": "Google News / internet slang"
         }
       ]
     }
