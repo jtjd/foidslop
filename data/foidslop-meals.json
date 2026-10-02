@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01T00:00:00.000Z",
+  "generated": "2026-10-02T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -9839,10 +9839,11 @@
       "notes": "Adding a squeeze of lemon juice at the end brightens up the pesto.",
       "photo_search": "bowl of green pesto pasta with bright red burst cherry tomatoes",
       "publishDate": "2026-10-02",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of bowl of green pesto pasta with bright red burst cherry tomatoes",
       "seoTitle": "Pesto and Tomato Pasta Recipe for One | foidslop",
-      "seoDescription": "Basil pesto coats a single bowl of pasta with burst cherry tomatoes, parmesan, and plenty of black pepper."
+      "seoDescription": "Basil pesto coats a single bowl of pasta with burst cherry tomatoes, parmesan, and plenty of black pepper.",
+      "dateModified": "2026-10-02"
     },
     {
       "id": 156,
