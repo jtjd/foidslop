@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-02T12:42:47.967Z",
+  "generatedAt": "2026-10-02T22:17:55.596Z",
   "lookbackHours": 72,
-  "signalCount": 50,
+  "signalCount": 38,
   "candidateCount": 2,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
@@ -50,7 +50,7 @@
     {
       "id": "discovery-61ae333c6fa4",
       "topic": "Nearly 95% of Viral Korean Skincare TikTok Videos Contain Misleading Claims",
-      "score": 5.42,
+      "score": 4.92,
       "audienceTags": [
         "internet"
       ],
@@ -65,8 +65,7 @@
       "reasons": [
         "Audience terms: viral, tiktok.",
         "4 independent source labels are carrying the story.",
-        "4 fresh signals were clustered into the same topic.",
-        "The newest signal is less than 24 hours old."
+        "4 fresh signals were clustered into the same topic."
       ],
       "signals": [
         {
@@ -110,7 +109,7 @@
     {
       "id": "discovery-0276a1dc820d",
       "topic": "Cuban influencer, mother convicted over video of security officer",
-      "score": 5.31,
+      "score": 4.81,
       "audienceTags": [
         "internet",
         "celebrity",
@@ -126,8 +125,7 @@
       "lastSeenAt": "2026-10-01T21:49:03.000Z",
       "reasons": [
         "Audience terms: influencer, mother.",
-        "2 independent source labels are carrying the story.",
-        "The newest signal is less than 24 hours old."
+        "2 independent source labels are carrying the story."
       ],
       "signals": [
         {
