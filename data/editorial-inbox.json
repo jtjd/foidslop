@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-01T22:44:18.105Z",
+  "generatedAt": "2026-10-02T05:45:03.569Z",
   "lookbackHours": 72,
   "signalCount": 53,
-  "candidateCount": 2,
+  "candidateCount": 3,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -48,7 +48,7 @@
   ],
   "candidates": [
     {
-      "id": "discovery-714c72a57af4",
+      "id": "discovery-e349f717644f",
       "topic": "Nearly 95% of Viral Korean Skincare TikTok Videos Contain Misleading Claims",
       "score": 5.73,
       "audienceTags": [
@@ -117,42 +117,85 @@
       ]
     },
     {
-      "id": "discovery-6c616a02308b",
-      "topic": "From ‘67’ to ‘rizz’: PH’s most searched slang terms",
-      "score": 4.93,
+      "id": "discovery-f2f6b9ae9b96",
+      "topic": "Cuban influencer, mother convicted over video of security officer",
+      "score": 5.31,
       "audienceTags": [
-        "language"
+        "internet",
+        "celebrity",
+        "motherhood"
       ],
       "matchedTerms": [
-        "slang"
+        "influencer",
+        "mother"
       ],
       "signalCount": 2,
       "sourceCount": 2,
-      "firstSeenAt": "2026-09-30T11:51:04.000Z",
-      "lastSeenAt": "2026-10-01T03:40:00.000Z",
+      "firstSeenAt": "2026-10-01T16:54:29.000Z",
+      "lastSeenAt": "2026-10-01T21:49:03.000Z",
       "reasons": [
-        "Audience terms: slang.",
+        "Audience terms: influencer, mother.",
         "2 independent source labels are carrying the story.",
         "The newest signal is less than 24 hours old."
       ],
       "signals": [
         {
-          "title": "From ‘67’ to ‘rizz’: PH’s most searched slang terms",
-          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQek9IOGdHcXFjYjUzcVVqcUdXUGl3cEVKZy03S2EyUWlsUUZ0bUdmVmtWWFV5Nlp2QjhwQWNUejUzZzViU1JYdjdnbVF0em4zOFI3Ymg0VFlvaWVRUXJqTVRhTE1idW43eFhCTzJpdUptX2FOTXZjZ3BWdmlMeEZmdkdpOHdBZ1BkUGc40gGQAUFVX3lxTE9oSGdYR2Y3NjZYQVpDeHpPRTZ1MXJYdUlrU3VtZXM2dFFVTG5DTVBQSzRTX2ZxdFE1V2thblFGNVhBNzBtbVJKSVY3MVQ4RFZrWXUzVl9HbGdDRDdrMG5wUTBnNXRqQnZtX2Vzd1RyWUNRWDBjTUNJU2pKRUlTMGdORXJvSmxCQmVQcTNCeTQ5Ug?oc=5",
-          "publisher": "Inquirer.net",
-          "publishedAt": "2026-10-01T03:40:00.000Z",
-          "feedId": "google-internet-slang",
+          "title": "Cuban Activist Anna Bensi and Mother Convicted & Sentenced",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNam5uMVNkeXlyYkNyNV9FTS0ySVBaQU11YTFRczZwX1NKd2tFT1NjTXZ4Z3R6cnltaWU4MWNwcUMtMk9OSzlHbTFRTnBWWXVSQUI2eHJCRWxLNF84c3J6cUFWVDlCNExyUXMtNi1TY3lsQkpBQjJxSTk3ZElSSGZXU1lNczFDM05lSF84aHJqcw?oc=5",
+          "publisher": "Havana Times",
+          "publishedAt": "2026-10-01T21:49:03.000Z",
+          "feedId": "google-cases",
           "feedKind": "google-news",
-          "feedLabel": "Google News / internet slang"
+          "feedLabel": "Google News / cases"
         },
         {
-          "title": "Google searches reveal most confusing Gen Alpha slang terms of 2026",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNTEs3Q1dkaUU4bnFPaGFQcFpGdUd4b25qWHNhNWxxbU1DNVFLX2VoMm96OU1ZY0pJN3dXUzByRUUySmhzaXRCS1FfdTNneVZvVXEwUExpTV9LYUg3WjJ0Y3hXbTRySktaY0c2bnJkbXF2YkhHWFlJYm5GMHBRY0dIRnBQVEtlSDRzZTJvUGJVTFo1azNRUE1RNDFYNA?oc=5",
-          "publisher": "Travel Tomorrow",
-          "publishedAt": "2026-09-30T11:51:04.000Z",
-          "feedId": "google-internet-slang",
+          "title": "Cuban influencer, mother convicted over video of security officer",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQUEpJaFpTNWJLZVl6ZVVpQWdDS2gzeUIwdTJVRm9Oa0J0a204RFl1UkQxRzRWME00ZVJtaWlUNEhIc2RCNi1idWs2czF1Z2RuRUpzRFJMMy1jeE9YaFB3akVnLTZTVnBTNXJULWFsc29LcHhZa1Yzb0QwVWdIS3RWQ0d6M2pIeG1Ed1ZBUVRGbzVENGhpWUlBbDVoNGxxeEg10gGmAUFVX3lxTE9ZZFVPQk01aGRUWVNXS1pPOVp4S205eEpjZUtLRWVtNVVSWW15bm01aGkwN3pMRmFrZmMwZ2lUUVZpTTFlZ0V6ek1USGowQnk4dWpJMUFyREhPN1lYQXVJRTlka29MeXV1ZUFzR2FqeDVFUWpBcnlBeFhWTUhERE5iY05QX2JSSFhzUnR3M0hZcmVFUmJlOWctbG0yeGpUMThRMFFsWWc?oc=5",
+          "publisher": "upi.com",
+          "publishedAt": "2026-10-01T16:54:29.000Z",
+          "feedId": "google-cases",
           "feedKind": "google-news",
-          "feedLabel": "Google News / internet slang"
+          "feedLabel": "Google News / cases"
+        }
+      ]
+    },
+    {
+      "id": "discovery-bc0823d0c0f8",
+      "topic": "My girl dinner.",
+      "score": 5.17,
+      "audienceTags": [
+        "food",
+        "gender"
+      ],
+      "matchedTerms": [
+        "girl dinner"
+      ],
+      "signalCount": 2,
+      "sourceCount": 1,
+      "firstSeenAt": "2026-10-02T05:30:40.000Z",
+      "lastSeenAt": "2026-10-02T05:32:05.000Z",
+      "reasons": [
+        "Audience terms: girl dinner.",
+        "The newest signal is less than 24 hours old."
+      ],
+      "signals": [
+        {
+          "title": "My girl dinner.",
+          "url": "https://www.reddit.com/r/RealGirlDinner/comments/1wvlnf8/my_girl_dinner/",
+          "publisher": "Reddit",
+          "publishedAt": "2026-10-02T05:32:05.000Z",
+          "feedId": "reddit-foidslop-adjacent",
+          "feedKind": "reddit-search",
+          "feedLabel": "Reddit / foidslop-adjacent language"
+        },
+        {
+          "title": "Tonight’s girl dinner.",
+          "url": "https://www.reddit.com/r/BoyDinner/comments/1wvlmjr/tonights_girl_dinner/",
+          "publisher": "Reddit",
+          "publishedAt": "2026-10-02T05:30:40.000Z",
+          "feedId": "reddit-foidslop-adjacent",
+          "feedKind": "reddit-search",
+          "feedLabel": "Reddit / foidslop-adjacent language"
         }
       ]
     }
