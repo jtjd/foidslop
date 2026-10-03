@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-02T22:17:55.596Z",
+  "generatedAt": "2026-10-03T05:23:15.348Z",
   "lookbackHours": 72,
-  "signalCount": 38,
+  "signalCount": 45,
   "candidateCount": 2,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
@@ -48,7 +48,7 @@
   ],
   "candidates": [
     {
-      "id": "discovery-61ae333c6fa4",
+      "id": "discovery-dffcc9c61c57",
       "topic": "Nearly 95% of Viral Korean Skincare TikTok Videos Contain Misleading Claims",
       "score": 4.92,
       "audienceTags": [
@@ -80,7 +80,7 @@
         {
           "title": "Almost 95% of viral Korean skincare and 'glass skin' TikTok videos contain misleading claims, new study shows",
           "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNb0VCVWFoTkt0TWRMZHpIUkJWck1xYkJhd3BuZEFsZ0dENTJhZk9rQU1BSmVxaTV6M1NrUnp3cUJMMlB2RGNfSGlIN0NobkJpeVg0UjJvMDEtdjA3UmFPcHcxV1Q1OS16azh3OTZYMVBoSnh4MjhRNU5ZNHZsWS1xZXp3?oc=5",
-          "publisher": "Medical Xpress",
+          "publisher": "medicalxpress.com",
           "publishedAt": "2026-10-01T00:00:01.000Z",
           "feedId": "google-tiktok-culture",
           "feedKind": "google-news",
