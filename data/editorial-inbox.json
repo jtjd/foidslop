@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-03T16:26:07.899Z",
+  "generatedAt": "2026-10-03T21:21:44.455Z",
   "lookbackHours": 72,
   "signalCount": 43,
-  "candidateCount": 1,
+  "candidateCount": 2,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -47,6 +47,49 @@
     }
   ],
   "candidates": [
+    {
+      "id": "discovery-c02c8f8616cf",
+      "topic": "Christian influencer and her mother found guilty",
+      "score": 5.31,
+      "audienceTags": [
+        "internet",
+        "celebrity",
+        "motherhood"
+      ],
+      "matchedTerms": [
+        "influencer",
+        "mother"
+      ],
+      "signalCount": 2,
+      "sourceCount": 2,
+      "firstSeenAt": "2026-10-02T11:10:34.000Z",
+      "lastSeenAt": "2026-10-02T21:21:57.000Z",
+      "reasons": [
+        "Audience terms: influencer, mother.",
+        "2 independent source labels are carrying the story.",
+        "The newest signal is less than 24 hours old."
+      ],
+      "signals": [
+        {
+          "title": "Nicole Linton found guilty of second-degree murder in deadly 2022 Windsor Hills crash that killed 6",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQY1hWUndnNG5OZVllM0loV0lWcmhmdzh1aUw4YjR4cHg3SnFOU1hhXzd3UHhhQlVPUjMtWjROSGVJNWVJdVF1ZFE4VVV6WUVHRE9la01QV0VLazhjbU03bXhRUExobkhOcXJxM1FBWXA1SjRDcTE0MGJEVjl3UU9OSGhIQWZvZks1dXNVX0t2SDVoYkM2OVNoRFJEc2p5QXJkWndLQ19idkp1X3p1RV9pVnlmT1ptQdIBuwFBVV95cUxNZ29yZ0wwV1N0Z1JZREtFTzVQbXNjblFIejhnY2t0bkE4U216QlVmVTFvc2k2YVlCbjlIdFk5SW9hNTE1YmEwRlpzM0VPRVRKYUNQUDhwN2Vva0VjU21PRVVkMU00N04wcHN4SmZNcFMyX0JQaTYxT3l2N0NBYVZnQTlCTFF2VnBxOWU0NVRhd05hUGlQWWFXcVA5SmtxdHNOQ2pFYnExX2x4RlNrVWtjQVM0YTkzTFgxcGJV?oc=5",
+          "publisher": "ABC7 Los Angeles",
+          "publishedAt": "2026-10-02T21:21:57.000Z",
+          "feedId": "google-cases",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / cases"
+        },
+        {
+          "title": "Christian influencer and her mother found guilty",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPWGdNNWhDNzdhUURSQVRvWkNRam94akkybG1Ud1hwMVF4UERvVlA4TlFGcjI4WjZVbG8tYVAtLXh4MWs3QlZTcFpiM3NKODU0U01ZRlVRLXZXU29nUU5UTXF5LUw4M2JBaHpDVzZMS0VJcFFZV1o4aEd2cUFiWmRCR3FmdGk?oc=5",
+          "publisher": "Christian Solidarity Worldwide",
+          "publishedAt": "2026-10-02T11:10:34.000Z",
+          "feedId": "google-cases",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / cases"
+        }
+      ]
+    },
     {
       "id": "discovery-0276a1dc820d",
       "topic": "Cuban influencer, mother convicted over video of security officer",
