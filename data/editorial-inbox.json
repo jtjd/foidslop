@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-03T11:44:19.642Z",
+  "generatedAt": "2026-10-03T16:26:07.899Z",
   "lookbackHours": 72,
-  "signalCount": 44,
-  "candidateCount": 2,
+  "signalCount": 43,
+  "candidateCount": 1,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -47,65 +47,6 @@
     }
   ],
   "candidates": [
-    {
-      "id": "discovery-dffcc9c61c57",
-      "topic": "Nearly 95% of Viral Korean Skincare TikTok Videos Contain Misleading Claims",
-      "score": 4.92,
-      "audienceTags": [
-        "internet"
-      ],
-      "matchedTerms": [
-        "viral",
-        "tiktok"
-      ],
-      "signalCount": 4,
-      "sourceCount": 4,
-      "firstSeenAt": "2026-09-30T13:26:34.000Z",
-      "lastSeenAt": "2026-10-01T13:47:22.000Z",
-      "reasons": [
-        "Audience terms: viral, tiktok.",
-        "4 independent source labels are carrying the story.",
-        "4 fresh signals were clustered into the same topic."
-      ],
-      "signals": [
-        {
-          "title": "Korean Skincare TikTok Videos Contain Misleading Claims: EADV 2026",
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNalJaekNSWWxaUGN1Y1hvTEYxZF9wU0VzSDcwdG9ZRnpVano1dmNzSGRwN3hIN19KZllJU1VDa0o4Q29sbXVWaXZsd290MkVINUctSUVNRDBvZjh5bFV0YVJVZHZ5SjhsVy1YczcyYzRVb01nTUF1YVVGWkxHMld5WV9ReGZBcS1QSGx2LXpXU2tNQzZvampPcWM5RnhLaVJXX1E3SlJlc1R6bGFvSkpR?oc=5",
-          "publisher": "European Medical Journal",
-          "publishedAt": "2026-10-01T13:47:22.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "Almost 95% of viral Korean skincare and 'glass skin' TikTok videos contain misleading claims, new study shows",
-          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNb0VCVWFoTkt0TWRMZHpIUkJWck1xYkJhd3BuZEFsZ0dENTJhZk9rQU1BSmVxaTV6M1NrUnp3cUJMMlB2RGNfSGlIN0NobkJpeVg0UjJvMDEtdjA3UmFPcHcxV1Q1OS16azh3OTZYMVBoSnh4MjhRNU5ZNHZsWS1xZXp3?oc=5",
-          "publisher": "Medical Xpress",
-          "publishedAt": "2026-10-01T00:00:01.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "Nearly 95% of Viral Korean Skincare TikTok Videos Contain Misleading Claims",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOcHdsYzlXb3pmRHp3UW92Si1BUDRYNUp5WGRUSTBWRGRxOWJ2ZmRxay02M2FwUWhxZnA0QlRuQ0xucVpGTUhkZUJ2YWlpdkdIZEg5RllPSmh2RjhUVnphUlY0WUtEVTNIcm5oa1VxdlV5czBTX2RuY01sUGZlTmowTFVLZzJ4NmtJdXliOEpkOTRDWWRTV2ZKb05Fb3BjX0RIaE9fZkF4dm5yV1hKNjMzY1d3?oc=5",
-          "publisher": "Dermatology Times",
-          "publishedAt": "2026-09-30T19:03:40.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "K-beauty glass-skin trend exposes safety gaps in viral skin care",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPV0tvVWpzNGQxUm56SnBLS3NsMVNtMnRURDVsMU51OG1fdmNxeUx3anhha19LOGtQZ0VCSkxONUZTRlVrRi14RXZ4WWg0OEcwUlV5T18tTVdfdHBRY3dQeWJqdVVrcVROSUduOFRtd1FXd2ZkTmtyM3RpcHpSMFRKTTlFdXZOdTg?oc=5",
-          "publisher": "Personal Care Insights",
-          "publishedAt": "2026-09-30T13:26:34.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        }
-      ]
-    },
     {
       "id": "discovery-0276a1dc820d",
       "topic": "Cuban influencer, mother convicted over video of security officer",
