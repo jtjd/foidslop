@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T00:00:00.000Z",
+  "generated": "2026-10-03T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -9896,10 +9896,11 @@
       "notes": "Swiss cheese has a great melting quality and pairs perfectly with mushrooms.",
       "photo_search": "golden quesadilla cut open to reveal melted Swiss cheese and brown mushrooms",
       "publishDate": "2026-10-03",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of golden quesadilla cut open to reveal melted Swiss cheese and brown mushrooms",
       "seoTitle": "Mushroom and Swiss Quesadilla Recipe for One | foidslop",
-      "seoDescription": "Earth mushrooms and nutty Swiss cheese melted in a crispy tortilla. Made for one in 15 minutes, with mushrooms and Swiss cheese."
+      "seoDescription": "Earth mushrooms and nutty Swiss cheese melted in a crispy tortilla. Made for one in 15 minutes, with mushrooms and Swiss cheese.",
+      "dateModified": "2026-10-03"
     },
     {
       "id": 157,
