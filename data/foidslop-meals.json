@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T00:00:00.000Z",
+  "generated": "2026-10-04T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -9965,10 +9965,11 @@
       "notes": "This salsa is even better the next day after the flavors have melded.",
       "photo_search": "bowl of colorful black bean and corn salsa with tortilla chips",
       "publishDate": "2026-10-04",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of bowl of colorful black bean and corn salsa with tortilla chips",
       "seoTitle": "Black Bean and Corn Salsa with Chips Recipe for One | foidslop",
-      "seoDescription": "Black beans, sweet corn, jalapeño, cilantro, and lime make a fresh, sturdy salsa to scoop up with chips."
+      "seoDescription": "Black beans, sweet corn, jalapeño, cilantro, and lime make a fresh, sturdy salsa to scoop up with chips.",
+      "dateModified": "2026-10-04"
     },
     {
       "id": 158,
