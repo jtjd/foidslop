@@ -18,26 +18,26 @@
   "community": {
     "enabled": true,
     "formId": "EkE4QX",
-    "pollId": "2026-09-18",
+    "pollId": "2026-10-09",
     "status": "open",
     "question": "Pick Friday's dinner",
-    "deadline": "Voting closes Thursday, September 17 at 6 PM ET.",
+    "deadline": "Voting closes Thursday, October 8 at 6 PM ET.",
     "promise": "The most popular choice becomes Friday's recipe.",
-    "submissionUrl": "https://tally.so/r/EkE4QX?poll_id=2026-09-18",
+    "submissionUrl": "https://tally.so/r/EkE4QX?poll_id=2026-10-09",
     "providerName": "Tally",
     "providerPrivacyUrl": "https://tally.so/help/privacy-policy",
     "choices": [
       {
         "slot": "A",
-        "label": "Omelette night"
+        "label": "Cottage cheese toast"
       },
       {
         "slot": "B",
-        "label": "Stuffed mushroom"
+        "label": "Pesto skewers"
       },
       {
         "slot": "C",
-        "label": "Something on toast"
+        "label": "Cheese and crackers"
       }
     ],
     "lastResult": {

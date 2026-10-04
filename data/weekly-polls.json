@@ -279,7 +279,7 @@
     {
       "id": "2026-10-09",
       "targetFriday": "2026-10-09",
-      "status": "pending",
+      "status": "open",
       "dispatchNote": null,
       "choices": [
         {
@@ -297,7 +297,8 @@
           "label": "Cheese and crackers",
           "recipeSlug": "cheese-crackers-apple"
         }
-      ]
+      ],
+      "openedAt": "2026-10-04T16:49:23.325Z"
     }
   ]
 }
