@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T00:00:00.000Z",
+  "generated": "2026-10-05T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -10026,10 +10026,11 @@
       "notes": "The apple should be tender enough for a knife to slide in easily while still holding its shape.",
       "photo_search": "baked apple split open and filled with melted butter, cinnamon, and walnuts",
       "publishDate": "2026-10-05",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of baked apple split open and filled with melted butter, cinnamon, and walnuts",
       "seoTitle": "Baked Apple with Cinnamon and Walnuts Recipe for One | foidslop",
-      "seoDescription": "A warm baked apple with cinnamon, brown sugar, and walnuts delivers crisp-like flavor in a single portion. Made for one in 35 minutes, with apple and butter."
+      "seoDescription": "A warm baked apple with cinnamon, brown sugar, and walnuts delivers crisp-like flavor in a single portion. Made for one in 35 minutes, with apple and butter.",
+      "dateModified": "2026-10-05"
     },
     {
       "id": 159,
