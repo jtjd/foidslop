@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-05T00:00:00.000Z",
+  "generated": "2026-10-06T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -10095,10 +10095,11 @@
       "notes": "This is a variation of pasta puttanesca with tuna instead of anchovies.",
       "photo_search": "bowl of spaghetti with tuna, black olives, and capers",
       "publishDate": "2026-10-06",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of bowl of spaghetti with tuna, black olives, and capers",
       "seoTitle": "Tuna and Olive Pasta Recipe for One | foidslop",
-      "seoDescription": "Tuna, olives, capers, and garlic make a salty, briny pasta sauce that comes together while the spaghetti cooks."
+      "seoDescription": "Tuna, olives, capers, and garlic make a salty, briny pasta sauce that comes together while the spaghetti cooks.",
+      "dateModified": "2026-10-06"
     },
     {
       "id": 160,
