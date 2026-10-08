@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-08T06:11:24.993Z",
+  "generatedAt": "2026-10-08T13:36:50.518Z",
   "lookbackHours": 72,
-  "signalCount": 46,
-  "candidateCount": 2,
+  "signalCount": 43,
+  "candidateCount": 1,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -48,9 +48,9 @@
   ],
   "candidates": [
     {
-      "id": "discovery-77e380d8533a",
-      "topic": "Stockton child custody incident goes viral in TikTok video",
-      "score": 5.42,
+      "id": "discovery-8e3c8b5b63a8",
+      "topic": "The best October Prime Day Owala deals: The TikTok-viral Owala FreeSip water bottle is on sale",
+      "score": 5.13,
       "audienceTags": [
         "internet"
       ],
@@ -58,83 +58,43 @@
         "viral",
         "tiktok"
       ],
-      "signalCount": 4,
-      "sourceCount": 4,
-      "firstSeenAt": "2026-10-05T16:33:00.000Z",
-      "lastSeenAt": "2026-10-07T16:45:00.000Z",
+      "signalCount": 3,
+      "sourceCount": 3,
+      "firstSeenAt": "2026-10-07T08:28:53.000Z",
+      "lastSeenAt": "2026-10-07T14:17:00.000Z",
       "reasons": [
         "Audience terms: viral, tiktok.",
-        "4 independent source labels are carrying the story.",
-        "4 fresh signals were clustered into the same topic.",
+        "3 independent source labels are carrying the story.",
+        "3 fresh signals were clustered into the same topic.",
         "The newest signal is less than 24 hours old."
       ],
       "signals": [
         {
-          "title": "Mouse found swimming in Starbucks cold brew in viral TikTok video",
-          "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQck1zRjRKQnQ0cWRoUkpyQXFtWV9XempNYlJubVEtM1dvUkVRMS01dGR2Vl9Qd0RRWU1xOFQ2OFpsRmExcFJZc0ItWlFmcWdUNDJrLVhMRElwbmFIenBuc2NCNHlMWGx6LTJBRzFXY0hfcVY4U1N5RkY3djl3OGx5Z0tEaWRqTmdKZW9qS00yaTZoNjhPODJ3cTdINU5xQmNQOWM1anFrZU85QTJsemZPQmYwYkZhNjRuZjNrU0FwSmV0TExpMVh6WGZhM0N4amVsWXZhR1RGelVCdjV1UVNxMWs4ZXpLUlNZQWRtakhvOA?oc=5",
-          "publisher": "Attack of the Fanboy",
-          "publishedAt": "2026-10-07T16:45:00.000Z",
+          "title": "The Tiktok-Viral Pencil Case Bag Everyone’s Obsessed With Is on Sale for Prime Day—And It’s Selling Out Fast",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQUjdRMG8weHZWZXI4SWc1MFFOYTl2TXc0S2NHcWpjTVlkUHJHRlRGQ3l3bng3Z2lBc3ViMVZmZjhlT3ZLM2JucHdBSXlKRzhVZ0hQOVM3QWhKYjRSblNfcW1USWtuUlhBZkpFT3h1VmpzNkxXRG5xek8zbEQ1MkI1YmNvMHNZQ01sTXU0REVxa1RvaVI5dEJ3cHdMR0dic2FwSWJDNzhQaw?oc=5",
+          "publisher": "Cosmopolitan",
+          "publishedAt": "2026-10-07T14:17:00.000Z",
           "feedId": "google-tiktok-culture",
           "feedKind": "google-news",
           "feedLabel": "Google News / TikTok culture"
         },
         {
-          "title": "Alleged Madonna University Student Expelled Over Viral TikTok Video Breaks Silence",
-          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxORldYakdaMHpmQmo2cEt4TGVEX2wzb1RKMXZSZ2hwUHM4YWNCSzhlT0FvdzFWS3lhd1Nyd20zTzZNQjBEcUZMSEZxZW9ZT29iczNVWTRqRE1YTFctWjc4RjdxRHhGYmE0bUxqQ2JHV1hPSzNLOW1kSWI1TDF1Nm5DVW1VbG5jNjNmZG1wamJUZUktOGNoZ2VEbTlWTTUtVEFkNVRiRDZIMUkzTFRGeVd5UHlrRXJwT3dfUENFcDVyMnlkcldFVWM2VHYzMmYxZw?oc=5",
-          "publisher": "Legit News",
-          "publishedAt": "2026-10-07T13:33:56.000Z",
+          "title": "TikTok’s Viral Mascara Is Just £9 In The Amazon Prime Day Sale",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNQ1kyRHctUW12ZExiOXo4eGdCWWsxNm95dXVlMVhRV3VqbEFMeVF2ZHgzMjB4LXlDcGFqb28ySG16SWg3ZzFoc0xpWkxzTHpITmdzWXlYZW81a215VGFwZkJZVUFvMWxiNHNwS21TVnlyQThXc1UzZlpLMGhkVDg1RQ?oc=5",
+          "publisher": "Vogue",
+          "publishedAt": "2026-10-07T11:43:38.000Z",
           "feedId": "google-tiktok-culture",
           "feedKind": "google-news",
           "feedLabel": "Google News / TikTok culture"
         },
         {
-          "title": "Stockton child custody incident goes viral in TikTok video",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPamFZbk1oQkdLQjBnNUpSQ1RKSzhQeE5xVVV6MzhmdE82VjhHVW1ORU4zM0pwMHlTM1V4QmdLZ3YtQTBJc1dFb1YxSEthU3ViRi1PM29PVmR3XzNEbkFqaEtzVW43cWE4T0RMQmw4c0RYZXJuczVuNDdhUW5Hem90aDRGMmtRX3ZKd3RXWVlIN3R5MGxyUFBiRnJNN1dlanpVbkIxTHo0bG9sb0NEWVVLdmlR?oc=5",
-          "publisher": "Stocktonia News",
-          "publishedAt": "2026-10-05T16:40:16.000Z",
+          "title": "The best October Prime Day Owala deals: The TikTok-viral Owala FreeSip water bottle is on sale",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFA1azFoNHlmMExibVh4XzVYbUxYVW9XT0tybkR5dHh1eDZmbG56cUdTck9yMkRvUGFUN0pzV1lNRVVwVy0tX2lyNjd3VTNaUnBBV292V3E4ck42RVBPd0Z5cDl6bjJJbWNRVUU4amRQTU1wcEk?oc=5",
+          "publisher": "Mashable",
+          "publishedAt": "2026-10-07T08:28:53.000Z",
           "feedId": "google-tiktok-culture",
           "feedKind": "google-news",
           "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "Grand Forks Police launch review over officer’s TikTok video",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNNmJJaHV3MThQbTZaanJnQVpyQ0tWN0piMWp5TFNDcjMzcVh2eVUyUS0wcERBaFBYSzNNTk45R3dfM0VwcGkzb19kOGNLN1RDWGkzZ3JOV2pWblRuNldXalUzWnJfN3Zabm05MmUwS3gzcFhIRm1WUmstSnhvcEgyQTVHSEZiYVdWRTRRYTlzc2l2YlJqTU5zZTJ0dV9vMzM0RXU0WtIBuAFBVV95cUxQVGNoWlFkSGNCXzh6UnhlcnhiRlBBSDBSSGtuTHNuNm9PYmgxaG9jeWZhYnhWd1ZqZ2R5aEFwOXhlcGVkY1RaeHIxSm9obEpNRGgxRUw3dVBHX1lSaGRLTFdndnFzSU9nNklXN2hEWG1iVklqMnpNOVQ1c3Z5aElISzlPREpoY2R3RkEwa2JEaTdvck5jcnZuNjdaRGU2V0xUdEFQRTI1Y09Ya3p1b3h3aWUyUzRiUU1P?oc=5",
-          "publisher": "Valley News Live",
-          "publishedAt": "2026-10-05T16:33:00.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        }
-      ]
-    },
-    {
-      "id": "discovery-50d986cda4f1",
-      "topic": "girl dinner at 2am",
-      "score": 4.88,
-      "audienceTags": [
-        "food",
-        "gender"
-      ],
-      "matchedTerms": [
-        "girl dinner"
-      ],
-      "signalCount": 1,
-      "sourceCount": 1,
-      "firstSeenAt": "2026-10-08T06:07:44.000Z",
-      "lastSeenAt": "2026-10-08T06:07:44.000Z",
-      "reasons": [
-        "Audience terms: girl dinner.",
-        "The newest signal is less than 24 hours old."
-      ],
-      "signals": [
-        {
-          "title": "girl dinner at 2am",
-          "url": "https://www.reddit.com/r/GirlDinner/comments/1x0jcb9/girl_dinner_at_2am/",
-          "publisher": "Reddit",
-          "publishedAt": "2026-10-08T06:07:44.000Z",
-          "feedId": "reddit-foidslop-adjacent",
-          "feedKind": "reddit-search",
-          "feedLabel": "Reddit / foidslop-adjacent language"
         }
       ]
     }
