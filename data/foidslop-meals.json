@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-07T00:00:00.000Z",
+  "generated": "2026-10-08T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -10198,10 +10198,11 @@
       "notes": "This is the perfect way to use up leftover cranberry sauce from Thanksgiving.",
       "photo_search": "toasted sourdough with melted brie and red cranberry sauce",
       "publishDate": "2026-10-08",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of toasted sourdough with melted brie and red cranberry sauce",
       "seoTitle": "Brie and Cranberry Sauce Toast Recipe for One | foidslop",
-      "seoDescription": "Creamy brie and tart cranberry sauce melt into crisp toast, with black pepper to keep the sweetness in check."
+      "seoDescription": "Creamy brie and tart cranberry sauce melt into crisp toast, with black pepper to keep the sweetness in check.",
+      "dateModified": "2026-10-08"
     },
     {
       "id": 162,
