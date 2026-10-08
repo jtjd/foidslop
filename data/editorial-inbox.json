@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-08T13:36:50.518Z",
+  "generatedAt": "2026-10-08T23:24:02.694Z",
   "lookbackHours": 72,
-  "signalCount": 43,
-  "candidateCount": 1,
+  "signalCount": 39,
+  "candidateCount": 0,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -46,57 +46,5 @@
       "error": "HTTP 429"
     }
   ],
-  "candidates": [
-    {
-      "id": "discovery-8e3c8b5b63a8",
-      "topic": "The best October Prime Day Owala deals: The TikTok-viral Owala FreeSip water bottle is on sale",
-      "score": 5.13,
-      "audienceTags": [
-        "internet"
-      ],
-      "matchedTerms": [
-        "viral",
-        "tiktok"
-      ],
-      "signalCount": 3,
-      "sourceCount": 3,
-      "firstSeenAt": "2026-10-07T08:28:53.000Z",
-      "lastSeenAt": "2026-10-07T14:17:00.000Z",
-      "reasons": [
-        "Audience terms: viral, tiktok.",
-        "3 independent source labels are carrying the story.",
-        "3 fresh signals were clustered into the same topic.",
-        "The newest signal is less than 24 hours old."
-      ],
-      "signals": [
-        {
-          "title": "The Tiktok-Viral Pencil Case Bag Everyone’s Obsessed With Is on Sale for Prime Day—And It’s Selling Out Fast",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQUjdRMG8weHZWZXI4SWc1MFFOYTl2TXc0S2NHcWpjTVlkUHJHRlRGQ3l3bng3Z2lBc3ViMVZmZjhlT3ZLM2JucHdBSXlKRzhVZ0hQOVM3QWhKYjRSblNfcW1USWtuUlhBZkpFT3h1VmpzNkxXRG5xek8zbEQ1MkI1YmNvMHNZQ01sTXU0REVxa1RvaVI5dEJ3cHdMR0dic2FwSWJDNzhQaw?oc=5",
-          "publisher": "Cosmopolitan",
-          "publishedAt": "2026-10-07T14:17:00.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "TikTok’s Viral Mascara Is Just £9 In The Amazon Prime Day Sale",
-          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNQ1kyRHctUW12ZExiOXo4eGdCWWsxNm95dXVlMVhRV3VqbEFMeVF2ZHgzMjB4LXlDcGFqb28ySG16SWg3ZzFoc0xpWkxzTHpITmdzWXlYZW81a215VGFwZkJZVUFvMWxiNHNwS21TVnlyQThXc1UzZlpLMGhkVDg1RQ?oc=5",
-          "publisher": "Vogue",
-          "publishedAt": "2026-10-07T11:43:38.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "The best October Prime Day Owala deals: The TikTok-viral Owala FreeSip water bottle is on sale",
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFA1azFoNHlmMExibVh4XzVYbUxYVW9XT0tybkR5dHh1eDZmbG56cUdTck9yMkRvUGFUN0pzV1lNRVVwVy0tX2lyNjd3VTNaUnBBV292V3E4ck42RVBPd0Z5cDl6bjJJbWNRVUU4amRQTU1wcEk?oc=5",
-          "publisher": "Mashable",
-          "publishedAt": "2026-10-07T08:28:53.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        }
-      ]
-    }
-  ]
+  "candidates": []
 }
