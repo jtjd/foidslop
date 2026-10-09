@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-09T06:15:01.698Z",
+  "generatedAt": "2026-10-09T13:23:10.911Z",
   "lookbackHours": 72,
-  "signalCount": 45,
-  "candidateCount": 1,
+  "signalCount": 39,
+  "candidateCount": 0,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -46,48 +46,5 @@
       "error": "HTTP 429"
     }
   ],
-  "candidates": [
-    {
-      "id": "discovery-d96a938a3f6e",
-      "topic": "I Tried the Viral TikTok Flight Time-Blocking Hack—and I'll Never Fly Long-Haul Without It Again",
-      "score": 5.36,
-      "audienceTags": [
-        "internet"
-      ],
-      "matchedTerms": [
-        "viral",
-        "tiktok"
-      ],
-      "signalCount": 2,
-      "sourceCount": 2,
-      "firstSeenAt": "2026-10-06T18:00:39.000Z",
-      "lastSeenAt": "2026-10-09T05:56:27.000Z",
-      "reasons": [
-        "Audience terms: viral, tiktok.",
-        "2 independent source labels are carrying the story.",
-        "The newest signal is less than 24 hours old.",
-        "The topic appears in both reporting and Reddit discussion."
-      ],
-      "signals": [
-        {
-          "title": "If I have to move down because of side effects does that mean I’ll never be able to move up?",
-          "url": "https://www.reddit.com/r/mounjarouk/comments/1x1dibn/if_i_have_to_move_down_because_of_side_effects/",
-          "publisher": "Reddit",
-          "publishedAt": "2026-10-09T05:56:27.000Z",
-          "feedId": "reddit-foidslop-adjacent",
-          "feedKind": "reddit-search",
-          "feedLabel": "Reddit / foidslop-adjacent language"
-        },
-        {
-          "title": "I Tried the Viral TikTok Flight Time-Blocking Hack—and I'll Never Fly Long-Haul Without It Again",
-          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPcDNWd3NyYTA5OVpvZDc4d0pGR1M3QVJaQ1VTR0tsT2lOMlJXSWs3blZ0ZXFMdnZKRDlrVmVQSWpwaVc2Mjl1dTBEMUF6UWstVkttaFB1QndKSlJ2M3Vxbkw2TVREMU9kcmVfOXRaekRDUkpMS3hRQ2Izc2Y5czA1SXZFUDVLT0I2TlVxdEhpNGE4SnNMWXlYRUt2dUFlUTFqRkh4eWd6TFZ1V2R2dXplODNnZy0xMlVSa2pYc0RMME5VM3hLbkNxUnNfal84cHNLS1VIZGxoazRXc2dIOTkwSkQ0TlBPREE?oc=5",
-          "publisher": "Yahoo Creators",
-          "publishedAt": "2026-10-06T18:00:39.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        }
-      ]
-    }
-  ]
+  "candidates": []
 }
