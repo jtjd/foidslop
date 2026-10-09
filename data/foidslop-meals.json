@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-08T00:00:00.000Z",
+  "generated": "2026-10-09T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -10259,10 +10259,11 @@
       "notes": "Mashing the avocado first ensures it stays inside the quesadilla when you flip it.",
       "photo_search": "golden quesadilla cut open to reveal avocado, black beans, and melted cheese",
       "publishDate": "2026-10-09",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of golden quesadilla cut open to reveal avocado, black beans, and melted cheese",
       "seoTitle": "Avocado and Black Bean Quesadilla Recipe for One | foidslop",
-      "seoDescription": "A hearty vegetarian quesadilla with mashed avocado and black beans. Made for one in 10 minutes, with avocado and black beans."
+      "seoDescription": "A hearty vegetarian quesadilla with mashed avocado and black beans. Made for one in 10 minutes, with avocado and black beans.",
+      "dateModified": "2026-10-09"
     },
     {
       "id": 163,
