@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-09T13:23:10.911Z",
+  "generatedAt": "2026-10-09T22:42:06.607Z",
   "lookbackHours": 72,
   "signalCount": 39,
-  "candidateCount": 0,
+  "candidateCount": 1,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -46,5 +46,37 @@
       "error": "HTTP 429"
     }
   ],
-  "candidates": []
+  "candidates": [
+    {
+      "id": "discovery-8c327c0e9e6c",
+      "topic": "Sad girl dinner.",
+      "score": 4.88,
+      "audienceTags": [
+        "food",
+        "gender"
+      ],
+      "matchedTerms": [
+        "girl dinner"
+      ],
+      "signalCount": 1,
+      "sourceCount": 1,
+      "firstSeenAt": "2026-10-09T22:18:24.000Z",
+      "lastSeenAt": "2026-10-09T22:18:24.000Z",
+      "reasons": [
+        "Audience terms: girl dinner.",
+        "The newest signal is less than 24 hours old."
+      ],
+      "signals": [
+        {
+          "title": "Sad girl dinner.",
+          "url": "https://www.reddit.com/r/GirlDinnerDiaries/comments/1x1yp6a/sad_girl_dinner/",
+          "publisher": "Reddit",
+          "publishedAt": "2026-10-09T22:18:24.000Z",
+          "feedId": "reddit-foidslop-adjacent",
+          "feedKind": "reddit-search",
+          "feedLabel": "Reddit / foidslop-adjacent language"
+        }
+      ]
+    }
+  ]
 }
