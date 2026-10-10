@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-10T12:37:58.423Z",
+  "generatedAt": "2026-10-10T21:48:22.398Z",
   "lookbackHours": 72,
-  "signalCount": 42,
-  "candidateCount": 1,
+  "signalCount": 37,
+  "candidateCount": 0,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -46,38 +46,5 @@
       "error": "HTTP 429"
     }
   ],
-  "candidates": [
-    {
-      "id": "discovery-ff12609cea53",
-      "topic": "Anime Fandom roleplay request",
-      "score": 4.8,
-      "audienceTags": [
-        "media",
-        "fandom"
-      ],
-      "matchedTerms": [
-        "anime",
-        "fandom"
-      ],
-      "signalCount": 1,
-      "sourceCount": 1,
-      "firstSeenAt": "2026-10-10T12:33:47.000Z",
-      "lastSeenAt": "2026-10-10T12:33:47.000Z",
-      "reasons": [
-        "Audience terms: anime, fandom.",
-        "The newest signal is less than 24 hours old."
-      ],
-      "signals": [
-        {
-          "title": "Anime Fandom roleplay request",
-          "url": "https://www.reddit.com/r/AdvLiterateRP/comments/1x2e7ot/anime_fandom_roleplay_request/",
-          "publisher": "Reddit",
-          "publishedAt": "2026-10-10T12:33:47.000Z",
-          "feedId": "reddit-foidslop-adjacent",
-          "feedKind": "reddit-search",
-          "feedLabel": "Reddit / foidslop-adjacent language"
-        }
-      ]
-    }
-  ]
+  "candidates": []
 }
