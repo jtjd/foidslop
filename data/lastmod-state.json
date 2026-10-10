@@ -1,7 +1,7 @@
 {
  "": {
-  "hash": "723163dcf4a41b2cc20f7436f7ef6cefb133ccfe",
-  "lastmod": "2026-10-09"
+  "hash": "d9926c7bb3acd270c296d82b1d8d1895a60265ca",
+  "lastmod": "2026-10-10"
  },
  "cheap-meals-for-one": {
   "hash": "29157626e7a71d8b1c6e441f2f0b55236a9696af",
@@ -40,20 +40,20 @@
   "lastmod": "2027-01-15"
  },
  "noodle-recipes-for-one": {
-  "hash": "87477ce15977ece3a693cb206f79ac710f6c9ab3",
-  "lastmod": "2026-09-29"
+  "hash": "efecbfa671805066ef4ae4938d01c3f24d081174",
+  "lastmod": "2026-10-10"
  },
  "recipes/15-minute": {
-  "hash": "259d4e60cae9b5a3b675326d1816a1f1cf4aedff",
-  "lastmod": "2026-10-09"
+  "hash": "166dfd2112f060635f85946946579f8ce4d4c962",
+  "lastmod": "2026-10-10"
  },
  "recipes/comfort-food": {
   "hash": "79216fb4e08a55ecd9ad303dfef442e1fe172aa0",
   "lastmod": "2026-10-05"
  },
  "recipes/for-one": {
-  "hash": "0e3b9c783befdc60b13d39e7470191086917e87b",
-  "lastmod": "2026-10-09"
+  "hash": "54f2f1c889d3555cac6ad8e22589fd8323d51b1b",
+  "lastmod": "2026-10-10"
  },
  "recipes/no-cook": {
   "hash": "5731ee076c806ae53f90dc365114410534e336ad",
@@ -64,8 +64,8 @@
   "lastmod": "2026-10-06"
  },
  "recipes/quick": {
-  "hash": "550f42f1d0bfcfb2877f9591b77296c39cb713dc",
-  "lastmod": "2026-10-09"
+  "hash": "d46a64dcb4b54c5773ecb7b75a4c95ca774b1832",
+  "lastmod": "2026-10-10"
  },
  "recipes/snack-plates": {
   "hash": "ce03d261728aae9026162e67007c6c563d7f53a7",
@@ -80,8 +80,8 @@
   "lastmod": "2026-10-09"
  },
  "slop/archive": {
-  "hash": "fea6d7e04ffe99584fabadde52d995e23b7d0260",
-  "lastmod": "2026-10-09"
+  "hash": "bdad7d013ef3a5607b7d5c3cf03a5fda6c42f8d1",
+  "lastmod": "2026-10-10"
  },
  "soup-for-one": {
   "hash": "74df87ea01b8703e514783e83d06e76fe69873f8",

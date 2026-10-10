@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-09T00:00:00.000Z",
+  "generated": "2026-10-10T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -10332,12 +10332,13 @@
       "notes": "The crisp cucumber cools down the spicy peanut sauce perfectly.",
       "photo_search": "bowl of cold noodles in spicy peanut sauce with cucumber ribbons",
       "publishDate": "2026-10-10",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of bowl of cold noodles in spicy peanut sauce with cucumber ribbons",
       "seoTitle": "Spicy Peanut Noodles with Cucumber Recipe for One | foidslop",
       "seoDescription": "Cold noodles in a spicy peanut sauce with crisp cucumber ribbons. A noodles recipe for one, ready in 15 minutes with peanut butter.",
       "substitutions": "Sauce bases swap freely if you are out of peanut butter: peanut butter thinned with hot water, tahini plus soy, or simply more chilli oil each carry a bowl. For spicy peanut noodles with cucumber, make the swap in the same one-person portion and taste before adding more seasoning.",
-      "storage": "Refrigerate the noodles for up to one day and protect peanut butter and soy sauce from moisture. They can be eaten cold or revived briefly in hot water before serving. For spicy peanut noodles with cucumber, keep the named finish separate until serving."
+      "storage": "Refrigerate the noodles for up to one day and protect peanut butter and soy sauce from moisture. They can be eaten cold or revived briefly in hot water before serving. For spicy peanut noodles with cucumber, keep the named finish separate until serving.",
+      "dateModified": "2026-10-10"
     },
     {
       "id": 164,
