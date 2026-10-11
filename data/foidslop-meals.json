@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-10T00:00:00.000Z",
+  "generated": "2026-10-11T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -10395,10 +10395,11 @@
       "notes": "If you do not have a panini press, a heavy pan on top of the sandwich works perfectly.",
       "photo_search": "golden pressed panini cut in half, showing melted mozzarella and tomatoes",
       "publishDate": "2026-10-11",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of golden pressed panini cut in half, showing melted mozzarella and tomatoes",
       "seoTitle": "Tomato and Mozzarella Panini Recipe for One | foidslop",
-      "seoDescription": "A warm, pressed sandwich with melted mozzarella and ripe tomatoes. Crusty bread and fresh mozzarella make this main recipe for one in 8 minutes."
+      "seoDescription": "A warm, pressed sandwich with melted mozzarella and ripe tomatoes. Crusty bread and fresh mozzarella make this main recipe for one in 8 minutes.",
+      "dateModified": "2026-10-11"
     },
     {
       "id": 165,
