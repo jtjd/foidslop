@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-12T06:04:44.383Z",
+  "generatedAt": "2026-10-12T15:34:44.653Z",
   "lookbackHours": 72,
-  "signalCount": 37,
-  "candidateCount": 0,
+  "signalCount": 31,
+  "candidateCount": 1,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -46,5 +46,39 @@
       "error": "HTTP 429"
     }
   ],
-  "candidates": []
+  "candidates": [
+    {
+      "id": "discovery-d94c5ef6af59",
+      "topic": "Would Your Partner Give Up First Class? Viral TikTok Calls It the Ultimate Relationship Test",
+      "score": 4.88,
+      "audienceTags": [
+        "internet",
+        "relationships"
+      ],
+      "matchedTerms": [
+        "viral",
+        "tiktok",
+        "relationship"
+      ],
+      "signalCount": 1,
+      "sourceCount": 1,
+      "firstSeenAt": "2026-10-12T10:00:18.000Z",
+      "lastSeenAt": "2026-10-12T10:00:18.000Z",
+      "reasons": [
+        "Audience terms: viral, tiktok, relationship.",
+        "The newest signal is less than 24 hours old."
+      ],
+      "signals": [
+        {
+          "title": "Would Your Partner Give Up First Class? Viral TikTok Calls It the Ultimate Relationship Test",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPbkw1V3c2aERQOEl6dFZZQkZRYnJMaE5XZzU0ZUpYelY2dHQyX0Rla2pGT0V2ZTlUNzZSMFdUTVhJSXBnOUFkMmhLQ21qdnpiQlRadGt3QmtPNHhyV3hzR2pEbDk1UGVOMjRHby0tek9VSjRQckRCaWpYdzJIZlBla19TY1NaZlF5TU1ZbnREd2FtUQ?oc=5",
+          "publisher": "Yahoo",
+          "publishedAt": "2026-10-12T10:00:18.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        }
+      ]
+    }
+  ]
 }
