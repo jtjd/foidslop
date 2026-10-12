@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-11T00:00:00.000Z",
+  "generated": "2026-10-12T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -10452,10 +10452,11 @@
       "notes": "You can toast this in a pan for a minute per side to make it warm and crispy.",
       "photo_search": "cut wrap showing hummus, roasted red peppers, and greens",
       "publishDate": "2026-10-12",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of cut wrap showing hummus, roasted red peppers, and greens",
       "seoTitle": "Hummus and Roasted Red Pepper Wrap Recipe for One | foidslop",
-      "seoDescription": "A quick vegetarian wrap with creamy hummus and tangy roasted red peppers. Made for one in 5 minutes, with hummus and roasted red peppers from a jar."
+      "seoDescription": "A quick vegetarian wrap with creamy hummus and tangy roasted red peppers. Made for one in 5 minutes, with hummus and roasted red peppers from a jar.",
+      "dateModified": "2026-10-12"
     },
     {
       "id": 166,
