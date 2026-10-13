@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-12T00:00:00.000Z",
+  "generated": "2026-10-13T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -10517,10 +10517,11 @@
       "notes": "This is a great way to use up leftover chili. The potato acts as an edible bowl.",
       "photo_search": "baked potato split open and loaded with chili, cheese, and sour cream",
       "publishDate": "2026-10-13",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of baked potato split open and loaded with chili, cheese, and sour cream",
       "seoTitle": "Baked Potato with Chili Recipe for One | foidslop",
-      "seoDescription": "A crisp-skinned baked potato loaded with warm chili, sharp cheddar, sour cream, and black pepper makes a full dinner."
+      "seoDescription": "A crisp-skinned baked potato loaded with warm chili, sharp cheddar, sour cream, and black pepper makes a full dinner.",
+      "dateModified": "2026-10-13"
     },
     {
       "id": 167,
