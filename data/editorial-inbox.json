@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-13T14:17:44.660Z",
+  "generatedAt": "2026-10-13T22:49:38.572Z",
   "lookbackHours": 72,
-  "signalCount": 35,
-  "candidateCount": 0,
+  "signalCount": 39,
+  "candidateCount": 1,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -46,5 +46,57 @@
       "error": "HTTP 429"
     }
   ],
-  "candidates": []
+  "candidates": [
+    {
+      "id": "discovery-5ed3678b00a6",
+      "topic": "++ORIGINAL+!!Sofik Viral Video Bangla MMS , Tiktok Star Sofik Sonali Viral Video Instagram 7963",
+      "score": 5.01,
+      "audienceTags": [
+        "internet"
+      ],
+      "matchedTerms": [
+        "viral",
+        "tiktok"
+      ],
+      "signalCount": 3,
+      "sourceCount": 2,
+      "firstSeenAt": "2026-10-10T23:45:12.000Z",
+      "lastSeenAt": "2026-10-13T20:14:22.000Z",
+      "reasons": [
+        "Audience terms: viral, tiktok.",
+        "2 independent source labels are carrying the story.",
+        "3 fresh signals were clustered into the same topic.",
+        "The newest signal is less than 24 hours old."
+      ],
+      "signals": [
+        {
+          "title": "++ORIGINAL+!!Sofik Viral Video Bangla MMS , Tiktok Star Sofik Sonali Viral Video Instagram 7963",
+          "url": "https://news.google.com/rss/articles/CBMi9gJBVV95cUxNTWhDaS1qQ2pRakxfdFk2R0dMcWZfQnp5UXh0b3ZOXzNLNEgxZDZmQXVRdXktT01YNzhnNzI4OXNrX09zQ1FwSkNoY01XZjJxMzlmOEZ2MkhWVHZTcFJCQzFjMXYzalNmR2VzVGlRc1B4VWxyNVBQSm93OG5aOEFhRFVHTEk3N3loeElGcXJQVmtZclZFX3lHV3Rfa3Rfa3hGM2FzcjI2cjNnLVBfcHhlWTYxUFEzcVI5Ri01Q3p0cGRkN3BOZW5zeVVtTXNFd21wV0M4cGczeGRaa1lpYXo1bXNpNjFnMTVGRmRMZ0dsT1NETUFjNjF4XzRvWGFkdG14QjU5V2k1dUVCbFFrNkVUR1RBWjkyRVRjSGZEODJsMjV0UlNsaTFvZzA5Um9UbmVvZmlYTFRyQ0g1VEp1RWxNTzdfZUhYNmt2ZzU4X0JOWmVRSl9wcTdKM0pEQTE0dkEwRkI3QnZIcUF0WXlxejhoNnNUQUpkUQ?oc=5",
+          "publisher": "Universidad de Córdoba (UCO)",
+          "publishedAt": "2026-10-13T20:14:22.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "++ORIGINAL+!!Sofik Viral Video Bangla MMS , Tiktok Star Sofik Sonali Viral Video Instagram 11464",
+          "url": "https://news.google.com/rss/articles/CBMi7wJBVV95cUxQenc5ajBfVWtJbWNCZ24zSWQ5R1h6UXN1WUZvMzZZa2RCRFVVQkRVVlpsdjNCa0pnb2puOXpCNnpJUVJNOHljV1V0LXpMNXlmTFJkVnlIU3ZVanNvLVRhb1ZzSm5PcThvdjhHRTJJNDhzdW51aVFyQUpRTEVwM25lQ0pyWkRpbnlVVm1SZ2Z3bGpQUGF6bXEwYk1rZEx0WGtWQkpmZzg4REVEQmVoMVF2Y19PcVBablNCSU9KNUNoVloxRjlKWUNzS2hweUR3RE54Qk9XemxrQjlnWDZlMG9IMWpEMnp5RnVEcGtFQUZZV1RpWEZneVhUZDJoVl9POU5qTXplLVB3SHRiTVkyclZSQktheV82Z2lOUGN6N3ZlODYwWGFDVk5Candsb3BJZG5DWFhLdktyRHlhSVIzWkctWC14dE53QTFBODhId19UVVMwRXBReXVMakRRTzYydUdzcGJUSk9lZE5OY3hnNEww?oc=5",
+          "publisher": "Universidad de Córdoba (UCO)",
+          "publishedAt": "2026-10-13T20:06:25.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "TikTok Star Braedon Peltier Dead at 31",
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1MN0w0NnBEbHB2SGhRaHpaMDY4bVNmQ2s1Q1dMMzZla3N6Z2IwRXh4Y05NYTRHYkZYTkF2SVdULXVsNFYxb2k0a1plMy0zNTM3UnZsbTViNHNTbndmaFlvYUNB?oc=5",
+          "publisher": "TMZ",
+          "publishedAt": "2026-10-10T23:45:12.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        }
+      ]
+    }
+  ]
 }
