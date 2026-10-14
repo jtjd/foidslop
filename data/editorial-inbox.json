@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-14T11:59:06.151Z",
+  "generatedAt": "2026-10-14T17:16:46.991Z",
   "lookbackHours": 72,
-  "signalCount": 43,
-  "candidateCount": 3,
+  "signalCount": 45,
+  "candidateCount": 1,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -48,9 +48,9 @@
   ],
   "candidates": [
     {
-      "id": "discovery-40b55d4ace90",
+      "id": "discovery-7550ca747b02",
       "topic": "[[VIRAL VIDEOS]] pakistani tiktok girls viral video",
-      "score": 5.03,
+      "score": 5.22,
       "audienceTags": [
         "internet"
       ],
@@ -58,16 +58,34 @@
         "viral",
         "tiktok"
       ],
-      "signalCount": 5,
+      "signalCount": 7,
       "sourceCount": 1,
       "firstSeenAt": "2026-10-13T20:06:25.000Z",
-      "lastSeenAt": "2026-10-14T11:05:29.000Z",
+      "lastSeenAt": "2026-10-14T17:05:43.000Z",
       "reasons": [
         "Audience terms: viral, tiktok.",
-        "5 fresh signals were clustered into the same topic.",
+        "7 fresh signals were clustered into the same topic.",
         "The newest signal is less than 24 hours old."
       ],
       "signals": [
+        {
+          "title": "~XXXX~SEX~XXX!) Sofik Viral Video Bangla MMS , Tiktok Star Sofik Sonali Viral Video Instagram hd-xnx",
+          "url": "https://news.google.com/rss/articles/CBMi4AJBVV95cUxNX21DdzlxRW85ZTAzcGtJTWx3MWJVSncyeXlmSElTdEh4eXNCY1pHaDNfUWpESXhDcmJSUUdSZC0yYUxGU2JlazE5VFFYSnE4Wm5YYzdkTzBzbEphckduTktRRnU4M3pYTzU4dFBlRkhTendST1NwU1djWW9kQU81bVk0V2dJQjA1eXhNSVBRT2NYc2ZERDJ4WEZHTXhKN0kydng0MHBvWFdHNDJJdER4VElrWVg1bTVoNndKTTVBNFhUV25kT0Q5aFBMWEVxUzR1YWpfUTl5WEd1dHRwQ3hkNTJ3S1l5WWg0MDN0RUw2RHJ5MElubHFxWEZrQXBZanZjVmZxTEZyTk9UMVlIX3l2VzFVMGx2U280ZjVMYlJaaVdrRFhGVGZlbzdqbW5sMmctb3pRWDduZ1V0UjZFekp4SlNvTDQ5MDhwNFc4ZGlpWElqVG5RSUdVNlRETEZvaW50?oc=5",
+          "publisher": "Universidad de Córdoba (UCO)",
+          "publishedAt": "2026-10-14T17:05:43.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "®️√viralkand MMS* ▷☀️Prajakta Mali Viral Video Original Link , TikTok Star Clip Full SEX VIDEOS ON HD!HQx10808",
+          "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxPM1ZXWUItcEFLVFluRnR6WXpNQ0kySzF0aEM5bjhUMW9malFKOUZmd2dzQXIzUEU0d2xVbnJjdTlXUXFfLUdtQ0N6RVBVNzN3U2xVQ0FUQUtJV2lVSUtQdE9TcUhfLTRhY1JucVBRV1pKR195eEVMa0pQNWJLS2VmUmpYbzM0VUNZQnBMV1hPNUM1VHNOZTNqM1JKRU9CdUhYZURwNk1YNXQ0VWtnM2RDcUxkM1E1ZUR6ODliSzZjcGJEdTBDeUV1MDc4SXMzb3YxOW9INzcyb0x0R1Q3UTVuOS1Ka2RiZ25NOXp2ZGRfSTduQjkyN18yMEVyVldwZDVRbmFMVEV4am5PaHpvOExZRnFsZjl1Z3M?oc=5",
+          "publisher": "Universidad de Córdoba (UCO)",
+          "publishedAt": "2026-10-14T12:30:16.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
         {
           "title": "NEW(18+VIDEOS!)!* Indian College Girl Mms Viral Video Full SEX VIDEOS | TikTok",
           "url": "https://news.google.com/rss/articles/CBMikwNBVV95cUxOdU52Y0FzVnFONC0xb1hETG5xbUFiRmUxRTRiWXdydDYtZXRWcC14R3hkY2o5c3E1M2lLbmQ1dk5zOUIxZy10SDZsREdJWndWNUVNTVBQTnU4aEdHQ05DYjRfZlpfYk5reFRNbnMzSkpYTGJkSkl4REp2RTJzRThkdWhiUnlNWnFna0RBUk1NeTZ3SjBjdFZ5TjBhVTZNMDY2VWQ4Rld5aXc4SUtnN0NBT2hBSmZtT3JFQVZFSkE5bmo4Q1V4c2hIeU5HWUlXbzgyekJzNDFqNVF6TzFiOG1vemVxVGpMQjZkYTczM3VpLTdUNzdqUHNOWW9iQlJvODdkZWdpcE10dFh6MXlxX3hwSDY1Rzk3aFlwcC1QejlkWjhPZEMwcW40ckJGV3RUVVl6dVBlLW9KbU9KcGlvZjAwZnltVGNvVS1WNXNTVnRmY2w0SXY1R3VWaUxOMUdmaGtiZmdwOHBYYzFrQWdibVBJdVJVZ2s4QlZ0eTlUNU15WWlCZF8wTjFSY0RFa1lvRl9vQTgw?oc=5",
@@ -78,10 +96,10 @@
           "feedLabel": "Google News / TikTok culture"
         },
         {
-          "title": "~XXXX~SEX~XXX!) Sofik Viral Video Bangla MMS , Tiktok Star Sofik Sonali Viral Video Instagram hd-xnx",
-          "url": "https://news.google.com/rss/articles/CBMi-AJBVV95cUxPaURucG9mUnBEbVF2d3JRdElTWExLdFFVTGZicGVrdVJPUHl6SmtBeXFDVHNGS1RzX1ZoLUZEcUJ6bWZFWU1mMF93Vk5TeFU3NnN3czhBaWp3SW9TNWtiaUhfWFhabXcyQTFZSUIyX2NGUGlHVkNsZEJhZ3JETnFCRXB4Q3hacnJjUU9CdEZISXBKUXVOb1JwUk40S2tuclhtUnRQZ0lhVkdia0Q4S2w4QjZNNXlxZU9VSndzU2RWSkFZVUpVTUswMXpuTkdESmVyYzdtb0R0NmFqVkdOOWhqS0NqZ3ZtRU9fVWxrOFd6dDJabTNSVVZoUVlXdGUtQ3hXUW5Jb3BNbjQxNnljbWgxNW1PV1BDeldndTNLS2xKSVlBQ25PbkRld2RsRldzVVNid0EtckpDbjhQLTQ5U01GcnBWZzdoQUhTeldObWdsWnZ2anVIWDNXcnBZMzhLOGFvd1VOVjFSV0ZjZ3RsTjB1bEpYZ04xb05s?oc=5",
+          "title": "[[VIRAL VIDEOS]] teacher viral video link",
+          "url": "https://news.google.com/rss/articles/CBMiiANBVV95cUxPUm95ZVoxLTF5Q2JqaDNsWXhzeHBHRmtGQmJUOTN2Nm42dS1SdXJwNzJYb25NbFhKaTR2R0taU21keG5kQmdtUzhleVdoQTJEZFQxVjIyUXFtaDctUzYwSDdhRkxlVW9sUGxYRnRWSl8yVTU2c0o4cXRqSk43dWdodTRpazlEbVpfZFZyZlRvQ3p1ZGl5NzhqeG9jNTdhZ3NqOE50VEtoTG1SVkxBc2diRk5PUXZiQ19GTURENlZBdnNPVjVROWdQcjZJVVpld1l1anIzWHViYjY0c0E0UGxGN2dRX2FBYXg5Y2NGRTFyei1MQ3VDam02T19jTl9nbUp1VVhpYTdFdkRwZmFJdXhMU1ZpRE9rdUFNeXI0bFRReTVRS0ZveFpHX2pPc3BWWVlvcWlSS2NENFcxUl9JTFUwZUt0SnVnaVllQnprLVJPVktXbWlYYm1vdG8yakpkMjdzVjl2elA0UVJRTWJ0MEFqX1ZmUC0zZUsxQUtoRkNrTGdXTjBaWXZrUQ?oc=5",
           "publisher": "Universidad de Córdoba (UCO)",
-          "publishedAt": "2026-10-14T06:29:29.000Z",
+          "publishedAt": "2026-10-14T00:07:10.000Z",
           "feedId": "google-tiktok-culture",
           "feedKind": "google-news",
           "feedLabel": "Google News / TikTok culture"
@@ -109,69 +127,6 @@
           "url": "https://news.google.com/rss/articles/CBMi7wJBVV95cUxQenc5ajBfVWtJbWNCZ24zSWQ5R1h6UXN1WUZvMzZZa2RCRFVVQkRVVlpsdjNCa0pnb2puOXpCNnpJUVJNOHljV1V0LXpMNXlmTFJkVnlIU3ZVanNvLVRhb1ZzSm5PcThvdjhHRTJJNDhzdW51aVFyQUpRTEVwM25lQ0pyWkRpbnlVVm1SZ2Z3bGpQUGF6bXEwYk1rZEx0WGtWQkpmZzg4REVEQmVoMVF2Y19PcVBablNCSU9KNUNoVloxRjlKWUNzS2hweUR3RE54Qk9XemxrQjlnWDZlMG9IMWpEMnp5RnVEcGtFQUZZV1RpWEZneVhUZDJoVl9POU5qTXplLVB3SHRiTVkyclZSQktheV82Z2lOUGN6N3ZlODYwWGFDVk5Candsb3BJZG5DWFhLdktyRHlhSVIzWkctWC14dE53QTFBODhId19UVVMwRXBReXVMakRRTzYydUdzcGJUSk9lZE5OY3hnNEww?oc=5",
           "publisher": "Universidad de Córdoba (UCO)",
           "publishedAt": "2026-10-13T20:06:25.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        }
-      ]
-    },
-    {
-      "id": "discovery-6afd417ffb8e",
-      "topic": "classic girl dinner",
-      "score": 4.88,
-      "audienceTags": [
-        "food",
-        "gender"
-      ],
-      "matchedTerms": [
-        "girl dinner"
-      ],
-      "signalCount": 1,
-      "sourceCount": 1,
-      "firstSeenAt": "2026-10-14T11:54:53.000Z",
-      "lastSeenAt": "2026-10-14T11:54:53.000Z",
-      "reasons": [
-        "Audience terms: girl dinner.",
-        "The newest signal is less than 24 hours old."
-      ],
-      "signals": [
-        {
-          "title": "classic girl dinner",
-          "url": "https://www.reddit.com/r/girldinnervegan/comments/1x5p883/classic_girl_dinner/",
-          "publisher": "Reddit",
-          "publishedAt": "2026-10-14T11:54:53.000Z",
-          "feedId": "reddit-foidslop-adjacent",
-          "feedKind": "reddit-search",
-          "feedLabel": "Reddit / foidslop-adjacent language"
-        }
-      ]
-    },
-    {
-      "id": "discovery-b3503e446bae",
-      "topic": "BookTok: The ever-controversial realm within TikTok",
-      "score": 4.88,
-      "audienceTags": [
-        "internet",
-        "media"
-      ],
-      "matchedTerms": [
-        "tiktok",
-        "booktok"
-      ],
-      "signalCount": 1,
-      "sourceCount": 1,
-      "firstSeenAt": "2026-10-14T09:02:53.000Z",
-      "lastSeenAt": "2026-10-14T09:02:53.000Z",
-      "reasons": [
-        "Audience terms: tiktok, booktok.",
-        "The newest signal is less than 24 hours old."
-      ],
-      "signals": [
-        {
-          "title": "BookTok: The ever-controversial realm within TikTok",
-          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQenYtNU5mLVREYmxnUnZzRTlySE1yUVNvLTVqbGl1N0lldHdPNGtLWXlOLWgwQWVfcFdtVnJGSjFFb3p3bTlQa2pvdlR4NjJRSWI1NTROUFJJcFB3c3Z4NGpQYmlfelZVa2RKQVUtQUxzbE90N3oxYnFJblJTbFhTeDVxMFpwdw?oc=5",
-          "publisher": "The Boar",
-          "publishedAt": "2026-10-14T09:02:53.000Z",
           "feedId": "google-tiktok-culture",
           "feedKind": "google-news",
           "feedLabel": "Google News / TikTok culture"
