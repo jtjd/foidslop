@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-14T17:16:46.991Z",
+  "generatedAt": "2026-10-14T21:45:07.387Z",
   "lookbackHours": 72,
-  "signalCount": 45,
-  "candidateCount": 1,
+  "signalCount": 51,
+  "candidateCount": 0,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -46,92 +46,5 @@
       "error": "HTTP 429"
     }
   ],
-  "candidates": [
-    {
-      "id": "discovery-7550ca747b02",
-      "topic": "[[VIRAL VIDEOS]] pakistani tiktok girls viral video",
-      "score": 5.22,
-      "audienceTags": [
-        "internet"
-      ],
-      "matchedTerms": [
-        "viral",
-        "tiktok"
-      ],
-      "signalCount": 7,
-      "sourceCount": 1,
-      "firstSeenAt": "2026-10-13T20:06:25.000Z",
-      "lastSeenAt": "2026-10-14T17:05:43.000Z",
-      "reasons": [
-        "Audience terms: viral, tiktok.",
-        "7 fresh signals were clustered into the same topic.",
-        "The newest signal is less than 24 hours old."
-      ],
-      "signals": [
-        {
-          "title": "~XXXX~SEX~XXX!) Sofik Viral Video Bangla MMS , Tiktok Star Sofik Sonali Viral Video Instagram hd-xnx",
-          "url": "https://news.google.com/rss/articles/CBMi4AJBVV95cUxNX21DdzlxRW85ZTAzcGtJTWx3MWJVSncyeXlmSElTdEh4eXNCY1pHaDNfUWpESXhDcmJSUUdSZC0yYUxGU2JlazE5VFFYSnE4Wm5YYzdkTzBzbEphckduTktRRnU4M3pYTzU4dFBlRkhTendST1NwU1djWW9kQU81bVk0V2dJQjA1eXhNSVBRT2NYc2ZERDJ4WEZHTXhKN0kydng0MHBvWFdHNDJJdER4VElrWVg1bTVoNndKTTVBNFhUV25kT0Q5aFBMWEVxUzR1YWpfUTl5WEd1dHRwQ3hkNTJ3S1l5WWg0MDN0RUw2RHJ5MElubHFxWEZrQXBZanZjVmZxTEZyTk9UMVlIX3l2VzFVMGx2U280ZjVMYlJaaVdrRFhGVGZlbzdqbW5sMmctb3pRWDduZ1V0UjZFekp4SlNvTDQ5MDhwNFc4ZGlpWElqVG5RSUdVNlRETEZvaW50?oc=5",
-          "publisher": "Universidad de Córdoba (UCO)",
-          "publishedAt": "2026-10-14T17:05:43.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "®️√viralkand MMS* ▷☀️Prajakta Mali Viral Video Original Link , TikTok Star Clip Full SEX VIDEOS ON HD!HQx10808",
-          "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxPM1ZXWUItcEFLVFluRnR6WXpNQ0kySzF0aEM5bjhUMW9malFKOUZmd2dzQXIzUEU0d2xVbnJjdTlXUXFfLUdtQ0N6RVBVNzN3U2xVQ0FUQUtJV2lVSUtQdE9TcUhfLTRhY1JucVBRV1pKR195eEVMa0pQNWJLS2VmUmpYbzM0VUNZQnBMV1hPNUM1VHNOZTNqM1JKRU9CdUhYZURwNk1YNXQ0VWtnM2RDcUxkM1E1ZUR6ODliSzZjcGJEdTBDeUV1MDc4SXMzb3YxOW9INzcyb0x0R1Q3UTVuOS1Ka2RiZ25NOXp2ZGRfSTduQjkyN18yMEVyVldwZDVRbmFMVEV4am5PaHpvOExZRnFsZjl1Z3M?oc=5",
-          "publisher": "Universidad de Córdoba (UCO)",
-          "publishedAt": "2026-10-14T12:30:16.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "NEW(18+VIDEOS!)!* Indian College Girl Mms Viral Video Full SEX VIDEOS | TikTok",
-          "url": "https://news.google.com/rss/articles/CBMikwNBVV95cUxOdU52Y0FzVnFONC0xb1hETG5xbUFiRmUxRTRiWXdydDYtZXRWcC14R3hkY2o5c3E1M2lLbmQ1dk5zOUIxZy10SDZsREdJWndWNUVNTVBQTnU4aEdHQ05DYjRfZlpfYk5reFRNbnMzSkpYTGJkSkl4REp2RTJzRThkdWhiUnlNWnFna0RBUk1NeTZ3SjBjdFZ5TjBhVTZNMDY2VWQ4Rld5aXc4SUtnN0NBT2hBSmZtT3JFQVZFSkE5bmo4Q1V4c2hIeU5HWUlXbzgyekJzNDFqNVF6TzFiOG1vemVxVGpMQjZkYTczM3VpLTdUNzdqUHNOWW9iQlJvODdkZWdpcE10dFh6MXlxX3hwSDY1Rzk3aFlwcC1QejlkWjhPZEMwcW40ckJGV3RUVVl6dVBlLW9KbU9KcGlvZjAwZnltVGNvVS1WNXNTVnRmY2w0SXY1R3VWaUxOMUdmaGtiZmdwOHBYYzFrQWdibVBJdVJVZ2s4QlZ0eTlUNU15WWlCZF8wTjFSY0RFa1lvRl9vQTgw?oc=5",
-          "publisher": "Universidad de Córdoba (UCO)",
-          "publishedAt": "2026-10-14T11:05:29.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "[[VIRAL VIDEOS]] teacher viral video link",
-          "url": "https://news.google.com/rss/articles/CBMiiANBVV95cUxPUm95ZVoxLTF5Q2JqaDNsWXhzeHBHRmtGQmJUOTN2Nm42dS1SdXJwNzJYb25NbFhKaTR2R0taU21keG5kQmdtUzhleVdoQTJEZFQxVjIyUXFtaDctUzYwSDdhRkxlVW9sUGxYRnRWSl8yVTU2c0o4cXRqSk43dWdodTRpazlEbVpfZFZyZlRvQ3p1ZGl5NzhqeG9jNTdhZ3NqOE50VEtoTG1SVkxBc2diRk5PUXZiQ19GTURENlZBdnNPVjVROWdQcjZJVVpld1l1anIzWHViYjY0c0E0UGxGN2dRX2FBYXg5Y2NGRTFyei1MQ3VDam02T19jTl9nbUp1VVhpYTdFdkRwZmFJdXhMU1ZpRE9rdUFNeXI0bFRReTVRS0ZveFpHX2pPc3BWWVlvcWlSS2NENFcxUl9JTFUwZUt0SnVnaVllQnprLVJPVktXbWlYYm1vdG8yakpkMjdzVjl2elA0UVJRTWJ0MEFqX1ZmUC0zZUsxQUtoRkNrTGdXTjBaWXZrUQ?oc=5",
-          "publisher": "Universidad de Córdoba (UCO)",
-          "publishedAt": "2026-10-14T00:07:10.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "++ORIGINAL+!!Sofik Viral Video Bangla MMS , Tiktok Star Sofik Sonali Viral Video Instagram 7963",
-          "url": "https://news.google.com/rss/articles/CBMi9gJBVV95cUxNTWhDaS1qQ2pRakxfdFk2R0dMcWZfQnp5UXh0b3ZOXzNLNEgxZDZmQXVRdXktT01YNzhnNzI4OXNrX09zQ1FwSkNoY01XZjJxMzlmOEZ2MkhWVHZTcFJCQzFjMXYzalNmR2VzVGlRc1B4VWxyNVBQSm93OG5aOEFhRFVHTEk3N3loeElGcXJQVmtZclZFX3lHV3Rfa3Rfa3hGM2FzcjI2cjNnLVBfcHhlWTYxUFEzcVI5Ri01Q3p0cGRkN3BOZW5zeVVtTXNFd21wV0M4cGczeGRaa1lpYXo1bXNpNjFnMTVGRmRMZ0dsT1NETUFjNjF4XzRvWGFkdG14QjU5V2k1dUVCbFFrNkVUR1RBWjkyRVRjSGZEODJsMjV0UlNsaTFvZzA5Um9UbmVvZmlYTFRyQ0g1VEp1RWxNTzdfZUhYNmt2ZzU4X0JOWmVRSl9wcTdKM0pEQTE0dkEwRkI3QnZIcUF0WXlxejhoNnNUQUpkUQ?oc=5",
-          "publisher": "Universidad de Córdoba (UCO)",
-          "publishedAt": "2026-10-13T20:14:22.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "[[VIRAL VIDEOS]] pakistani tiktok girls viral video",
-          "url": "https://news.google.com/rss/articles/CBMinAJBVV95cUxPakZ3Q1lWWVZpOHpwdEVWTi1TSEJhMjE3MXdUM2pnRzdMM0dISEJRbW5vNmY3X2VjaF83ZnFvQ0EtZ0s2NVdjNnR5Z3h1Wkl3TlZjWmVJcjBsMUpYMGVKLThlV2FuZkh4VmdvOWlOR0ZHNS1LZ2dUUlhaTTFrbl9BcXRaMDVFd0xWVERzcWlRZUoyTThyNTc3NzV1VW1GVTVVRjlLVmF2SHVnV195c1BSNklmZmJ1YUxGVzZoQnRiYjJiVTZ6X2lVaXlNSl9EZEc1bE0wSjIyRW1qSjBXYXRJRGM3X0tWXzgya01hQlhZWnA4ekY0Y0hXdzRRREUtZWtxdTBLbjJyanlEazIxNzRVOU5PMWtJZWRybURCaA?oc=5",
-          "publisher": "Universidad de Córdoba (UCO)",
-          "publishedAt": "2026-10-13T20:09:32.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        },
-        {
-          "title": "++ORIGINAL+!!Sofik Viral Video Bangla MMS , Tiktok Star Sofik Sonali Viral Video Instagram 11464",
-          "url": "https://news.google.com/rss/articles/CBMi7wJBVV95cUxQenc5ajBfVWtJbWNCZ24zSWQ5R1h6UXN1WUZvMzZZa2RCRFVVQkRVVlpsdjNCa0pnb2puOXpCNnpJUVJNOHljV1V0LXpMNXlmTFJkVnlIU3ZVanNvLVRhb1ZzSm5PcThvdjhHRTJJNDhzdW51aVFyQUpRTEVwM25lQ0pyWkRpbnlVVm1SZ2Z3bGpQUGF6bXEwYk1rZEx0WGtWQkpmZzg4REVEQmVoMVF2Y19PcVBablNCSU9KNUNoVloxRjlKWUNzS2hweUR3RE54Qk9XemxrQjlnWDZlMG9IMWpEMnp5RnVEcGtFQUZZV1RpWEZneVhUZDJoVl9POU5qTXplLVB3SHRiTVkyclZSQktheV82Z2lOUGN6N3ZlODYwWGFDVk5Candsb3BJZG5DWFhLdktyRHlhSVIzWkctWC14dE53QTFBODhId19UVVMwRXBReXVMakRRTzYydUdzcGJUSk9lZE5OY3hnNEww?oc=5",
-          "publisher": "Universidad de Córdoba (UCO)",
-          "publishedAt": "2026-10-13T20:06:25.000Z",
-          "feedId": "google-tiktok-culture",
-          "feedKind": "google-news",
-          "feedLabel": "Google News / TikTok culture"
-        }
-      ]
-    }
-  ]
+  "candidates": []
 }
