@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-13T00:00:00.000Z",
+  "generated": "2026-10-14T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -10570,10 +10570,11 @@
       "notes": "Make sure the cantaloupe is ripe and sweet for the best flavor contrast.",
       "photo_search": "plate of cantaloupe wrapped in prosciutto with balsamic glaze and mint",
       "publishDate": "2026-10-14",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of plate of cantaloupe wrapped in prosciutto with balsamic glaze and mint",
       "seoTitle": "Cantaloupe and Prosciutto Plate Recipe for One | foidslop",
-      "seoDescription": "Sweet cantaloupe wrapped in salty prosciutto with a balsamic drizzle. Cantaloupe and prosciutto make this snack plate recipe for one in 5 minutes."
+      "seoDescription": "Sweet cantaloupe wrapped in salty prosciutto with a balsamic drizzle. Cantaloupe and prosciutto make this snack plate recipe for one in 5 minutes.",
+      "dateModified": "2026-10-14"
     },
     {
       "id": 168,
