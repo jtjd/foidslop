@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-14T04:59:22.764Z",
+  "generatedAt": "2026-10-14T11:59:06.151Z",
   "lookbackHours": 72,
-  "signalCount": 42,
-  "candidateCount": 0,
+  "signalCount": 43,
+  "candidateCount": 3,
   "note": "Mechanical discovery only. No AI API was used. Candidates are not researched, fact-checked, or approved for publication.",
   "feedStatus": [
     {
@@ -46,5 +46,137 @@
       "error": "HTTP 429"
     }
   ],
-  "candidates": []
+  "candidates": [
+    {
+      "id": "discovery-40b55d4ace90",
+      "topic": "[[VIRAL VIDEOS]] pakistani tiktok girls viral video",
+      "score": 5.03,
+      "audienceTags": [
+        "internet"
+      ],
+      "matchedTerms": [
+        "viral",
+        "tiktok"
+      ],
+      "signalCount": 5,
+      "sourceCount": 1,
+      "firstSeenAt": "2026-10-13T20:06:25.000Z",
+      "lastSeenAt": "2026-10-14T11:05:29.000Z",
+      "reasons": [
+        "Audience terms: viral, tiktok.",
+        "5 fresh signals were clustered into the same topic.",
+        "The newest signal is less than 24 hours old."
+      ],
+      "signals": [
+        {
+          "title": "NEW(18+VIDEOS!)!* Indian College Girl Mms Viral Video Full SEX VIDEOS | TikTok",
+          "url": "https://news.google.com/rss/articles/CBMikwNBVV95cUxOdU52Y0FzVnFONC0xb1hETG5xbUFiRmUxRTRiWXdydDYtZXRWcC14R3hkY2o5c3E1M2lLbmQ1dk5zOUIxZy10SDZsREdJWndWNUVNTVBQTnU4aEdHQ05DYjRfZlpfYk5reFRNbnMzSkpYTGJkSkl4REp2RTJzRThkdWhiUnlNWnFna0RBUk1NeTZ3SjBjdFZ5TjBhVTZNMDY2VWQ4Rld5aXc4SUtnN0NBT2hBSmZtT3JFQVZFSkE5bmo4Q1V4c2hIeU5HWUlXbzgyekJzNDFqNVF6TzFiOG1vemVxVGpMQjZkYTczM3VpLTdUNzdqUHNOWW9iQlJvODdkZWdpcE10dFh6MXlxX3hwSDY1Rzk3aFlwcC1QejlkWjhPZEMwcW40ckJGV3RUVVl6dVBlLW9KbU9KcGlvZjAwZnltVGNvVS1WNXNTVnRmY2w0SXY1R3VWaUxOMUdmaGtiZmdwOHBYYzFrQWdibVBJdVJVZ2s4QlZ0eTlUNU15WWlCZF8wTjFSY0RFa1lvRl9vQTgw?oc=5",
+          "publisher": "Universidad de Córdoba (UCO)",
+          "publishedAt": "2026-10-14T11:05:29.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "~XXXX~SEX~XXX!) Sofik Viral Video Bangla MMS , Tiktok Star Sofik Sonali Viral Video Instagram hd-xnx",
+          "url": "https://news.google.com/rss/articles/CBMi-AJBVV95cUxPaURucG9mUnBEbVF2d3JRdElTWExLdFFVTGZicGVrdVJPUHl6SmtBeXFDVHNGS1RzX1ZoLUZEcUJ6bWZFWU1mMF93Vk5TeFU3NnN3czhBaWp3SW9TNWtiaUhfWFhabXcyQTFZSUIyX2NGUGlHVkNsZEJhZ3JETnFCRXB4Q3hacnJjUU9CdEZISXBKUXVOb1JwUk40S2tuclhtUnRQZ0lhVkdia0Q4S2w4QjZNNXlxZU9VSndzU2RWSkFZVUpVTUswMXpuTkdESmVyYzdtb0R0NmFqVkdOOWhqS0NqZ3ZtRU9fVWxrOFd6dDJabTNSVVZoUVlXdGUtQ3hXUW5Jb3BNbjQxNnljbWgxNW1PV1BDeldndTNLS2xKSVlBQ25PbkRld2RsRldzVVNid0EtckpDbjhQLTQ5U01GcnBWZzdoQUhTeldObWdsWnZ2anVIWDNXcnBZMzhLOGFvd1VOVjFSV0ZjZ3RsTjB1bEpYZ04xb05s?oc=5",
+          "publisher": "Universidad de Córdoba (UCO)",
+          "publishedAt": "2026-10-14T06:29:29.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "++ORIGINAL+!!Sofik Viral Video Bangla MMS , Tiktok Star Sofik Sonali Viral Video Instagram 7963",
+          "url": "https://news.google.com/rss/articles/CBMi9gJBVV95cUxNTWhDaS1qQ2pRakxfdFk2R0dMcWZfQnp5UXh0b3ZOXzNLNEgxZDZmQXVRdXktT01YNzhnNzI4OXNrX09zQ1FwSkNoY01XZjJxMzlmOEZ2MkhWVHZTcFJCQzFjMXYzalNmR2VzVGlRc1B4VWxyNVBQSm93OG5aOEFhRFVHTEk3N3loeElGcXJQVmtZclZFX3lHV3Rfa3Rfa3hGM2FzcjI2cjNnLVBfcHhlWTYxUFEzcVI5Ri01Q3p0cGRkN3BOZW5zeVVtTXNFd21wV0M4cGczeGRaa1lpYXo1bXNpNjFnMTVGRmRMZ0dsT1NETUFjNjF4XzRvWGFkdG14QjU5V2k1dUVCbFFrNkVUR1RBWjkyRVRjSGZEODJsMjV0UlNsaTFvZzA5Um9UbmVvZmlYTFRyQ0g1VEp1RWxNTzdfZUhYNmt2ZzU4X0JOWmVRSl9wcTdKM0pEQTE0dkEwRkI3QnZIcUF0WXlxejhoNnNUQUpkUQ?oc=5",
+          "publisher": "Universidad de Córdoba (UCO)",
+          "publishedAt": "2026-10-13T20:14:22.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "[[VIRAL VIDEOS]] pakistani tiktok girls viral video",
+          "url": "https://news.google.com/rss/articles/CBMinAJBVV95cUxPakZ3Q1lWWVZpOHpwdEVWTi1TSEJhMjE3MXdUM2pnRzdMM0dISEJRbW5vNmY3X2VjaF83ZnFvQ0EtZ0s2NVdjNnR5Z3h1Wkl3TlZjWmVJcjBsMUpYMGVKLThlV2FuZkh4VmdvOWlOR0ZHNS1LZ2dUUlhaTTFrbl9BcXRaMDVFd0xWVERzcWlRZUoyTThyNTc3NzV1VW1GVTVVRjlLVmF2SHVnV195c1BSNklmZmJ1YUxGVzZoQnRiYjJiVTZ6X2lVaXlNSl9EZEc1bE0wSjIyRW1qSjBXYXRJRGM3X0tWXzgya01hQlhZWnA4ekY0Y0hXdzRRREUtZWtxdTBLbjJyanlEazIxNzRVOU5PMWtJZWRybURCaA?oc=5",
+          "publisher": "Universidad de Córdoba (UCO)",
+          "publishedAt": "2026-10-13T20:09:32.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        },
+        {
+          "title": "++ORIGINAL+!!Sofik Viral Video Bangla MMS , Tiktok Star Sofik Sonali Viral Video Instagram 11464",
+          "url": "https://news.google.com/rss/articles/CBMi7wJBVV95cUxQenc5ajBfVWtJbWNCZ24zSWQ5R1h6UXN1WUZvMzZZa2RCRFVVQkRVVlpsdjNCa0pnb2puOXpCNnpJUVJNOHljV1V0LXpMNXlmTFJkVnlIU3ZVanNvLVRhb1ZzSm5PcThvdjhHRTJJNDhzdW51aVFyQUpRTEVwM25lQ0pyWkRpbnlVVm1SZ2Z3bGpQUGF6bXEwYk1rZEx0WGtWQkpmZzg4REVEQmVoMVF2Y19PcVBablNCSU9KNUNoVloxRjlKWUNzS2hweUR3RE54Qk9XemxrQjlnWDZlMG9IMWpEMnp5RnVEcGtFQUZZV1RpWEZneVhUZDJoVl9POU5qTXplLVB3SHRiTVkyclZSQktheV82Z2lOUGN6N3ZlODYwWGFDVk5Candsb3BJZG5DWFhLdktyRHlhSVIzWkctWC14dE53QTFBODhId19UVVMwRXBReXVMakRRTzYydUdzcGJUSk9lZE5OY3hnNEww?oc=5",
+          "publisher": "Universidad de Córdoba (UCO)",
+          "publishedAt": "2026-10-13T20:06:25.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        }
+      ]
+    },
+    {
+      "id": "discovery-6afd417ffb8e",
+      "topic": "classic girl dinner",
+      "score": 4.88,
+      "audienceTags": [
+        "food",
+        "gender"
+      ],
+      "matchedTerms": [
+        "girl dinner"
+      ],
+      "signalCount": 1,
+      "sourceCount": 1,
+      "firstSeenAt": "2026-10-14T11:54:53.000Z",
+      "lastSeenAt": "2026-10-14T11:54:53.000Z",
+      "reasons": [
+        "Audience terms: girl dinner.",
+        "The newest signal is less than 24 hours old."
+      ],
+      "signals": [
+        {
+          "title": "classic girl dinner",
+          "url": "https://www.reddit.com/r/girldinnervegan/comments/1x5p883/classic_girl_dinner/",
+          "publisher": "Reddit",
+          "publishedAt": "2026-10-14T11:54:53.000Z",
+          "feedId": "reddit-foidslop-adjacent",
+          "feedKind": "reddit-search",
+          "feedLabel": "Reddit / foidslop-adjacent language"
+        }
+      ]
+    },
+    {
+      "id": "discovery-b3503e446bae",
+      "topic": "BookTok: The ever-controversial realm within TikTok",
+      "score": 4.88,
+      "audienceTags": [
+        "internet",
+        "media"
+      ],
+      "matchedTerms": [
+        "tiktok",
+        "booktok"
+      ],
+      "signalCount": 1,
+      "sourceCount": 1,
+      "firstSeenAt": "2026-10-14T09:02:53.000Z",
+      "lastSeenAt": "2026-10-14T09:02:53.000Z",
+      "reasons": [
+        "Audience terms: tiktok, booktok.",
+        "The newest signal is less than 24 hours old."
+      ],
+      "signals": [
+        {
+          "title": "BookTok: The ever-controversial realm within TikTok",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQenYtNU5mLVREYmxnUnZzRTlySE1yUVNvLTVqbGl1N0lldHdPNGtLWXlOLWgwQWVfcFdtVnJGSjFFb3p3bTlQa2pvdlR4NjJRSWI1NTROUFJJcFB3c3Z4NGpQYmlfelZVa2RKQVUtQUxzbE90N3oxYnFJblJTbFhTeDVxMFpwdw?oc=5",
+          "publisher": "The Boar",
+          "publishedAt": "2026-10-14T09:02:53.000Z",
+          "feedId": "google-tiktok-culture",
+          "feedKind": "google-news",
+          "feedLabel": "Google News / TikTok culture"
+        }
+      ]
+    }
+  ]
 }
