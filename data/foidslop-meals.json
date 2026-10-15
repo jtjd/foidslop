@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-14T00:00:00.000Z",
+  "generated": "2026-10-15T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -10619,10 +10619,11 @@
       "notes": "The combination of sharp cheese and sweet apple is timeless.",
       "photo_search": "plate of cheddar slices, crackers, and apple slices",
       "publishDate": "2026-10-15",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of plate of cheddar slices, crackers, and apple slices",
       "seoTitle": "Cheese and Crackers with Apple Recipe for One | foidslop",
-      "seoDescription": "A simple, classic snack plate with cheese, crackers, and crisp apple. Made for one in 3 minutes, with sharp cheddar and crackers."
+      "seoDescription": "A simple, classic snack plate with cheese, crackers, and crisp apple. Made for one in 3 minutes, with sharp cheddar and crackers.",
+      "dateModified": "2026-10-15"
     },
     {
       "id": 169,
