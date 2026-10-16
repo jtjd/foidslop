@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-15T00:00:00.000Z",
+  "generated": "2026-10-16T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -10684,10 +10684,11 @@
       "notes": "The turmeric gives it a yellow color, and the nutritional yeast adds a cheesy flavor.",
       "photo_search": "plate of yellow tofu scramble with wilted spinach",
       "publishDate": "2026-10-16",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of plate of yellow tofu scramble with wilted spinach",
       "seoTitle": "Tofu Scramble with Spinach Recipe for One | foidslop",
-      "seoDescription": "A vegan alternative to scrambled eggs, with soft tofu and wilted spinach. A eggs recipe for one, ready in 15 minutes with soft tofu."
+      "seoDescription": "A vegan alternative to scrambled eggs, with soft tofu and wilted spinach. A eggs recipe for one, ready in 15 minutes with soft tofu.",
+      "dateModified": "2026-10-16"
     },
     {
       "id": 170,
