@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-16T00:00:00.000Z",
+  "generated": "2026-10-17T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -10745,10 +10745,11 @@
       "notes": "Using an everything bagel means you do not need any extra seasoning.",
       "photo_search": "toasted everything bagel with cream cheese, smoked salmon, and capers",
       "publishDate": "2026-10-17",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of toasted everything bagel with cream cheese, smoked salmon, and capers",
       "seoTitle": "Smoked Salmon and Cream Cheese Bagel Recipe for One | foidslop",
-      "seoDescription": "The classic deli bagel with smoked salmon, cream cheese, and capers. Everything bagel and cream cheese make this sandwich recipe for one in 8 minutes."
+      "seoDescription": "The classic deli bagel with smoked salmon, cream cheese, and capers. Everything bagel and cream cheese make this sandwich recipe for one in 8 minutes.",
+      "dateModified": "2026-10-17"
     },
     {
       "id": 171,
