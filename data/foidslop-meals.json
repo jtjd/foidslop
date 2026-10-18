@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-17T00:00:00.000Z",
+  "generated": "2026-10-18T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -10814,10 +10814,11 @@
       "notes": "Do not overmix the dough or the biscuits will be tough.",
       "photo_search": "basket of warm golden cheddar and chive biscuits",
       "publishDate": "2026-10-18",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of basket of warm golden cheddar and chive biscuits",
       "seoTitle": "Cheddar and Chive Biscuits Recipe for One | foidslop",
-      "seoDescription": "Warm, flaky biscuits studded with sharp cheddar and fresh chives. Made for one in 25 minutes, with baking powder and cold butter."
+      "seoDescription": "Warm, flaky biscuits studded with sharp cheddar and fresh chives. Made for one in 25 minutes, with baking powder and cold butter.",
+      "dateModified": "2026-10-18"
     },
     {
       "id": 172,
