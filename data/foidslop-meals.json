@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-18T00:00:00.000Z",
+  "generated": "2026-10-19T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -10875,11 +10875,12 @@
       "notes": "Olive tapenade is a briny paste made from olives, capers, and anchovies. It is a pantry staple.",
       "photo_search": "toasted crusty bread topped with tuna and dark olive tapenade",
       "publishDate": "2026-10-19",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of toasted crusty bread topped with tuna and dark olive tapenade",
       "seoTitle": "Tuna and Olive Tapenade Toast Recipe for One | foidslop",
       "seoDescription": "Tuna dressed with lemon and olive oil sits over crisp bread spread with salty olive tapenade and parsley.",
-      "storage": "Store the topping separately for up to two days and keep the bread dry. Re-toast until crisp before adding tuna so the last bite still has structure. For tuna and olive tapenade toast, keep the named finish separate until serving."
+      "storage": "Store the topping separately for up to two days and keep the bread dry. Re-toast until crisp before adding tuna so the last bite still has structure. For tuna and olive tapenade toast, keep the named finish separate until serving.",
+      "dateModified": "2026-10-19"
     },
     {
       "id": 173,
