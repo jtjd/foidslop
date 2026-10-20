@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-<url><loc>https://foidslop.com/</loc><lastmod>2026-10-19</lastmod></url>
-<url><loc>https://foidslop.com/slop/archive</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://foidslop.com/</loc><lastmod>2026-10-20</lastmod></url>
+<url><loc>https://foidslop.com/slop/archive</loc><lastmod>2026-10-20</lastmod></url>
 <url><loc>https://foidslop.com/what-is-foidslop</loc><lastmod>2026-08-27</lastmod></url>
 <url><loc>https://foidslop.com/what-does-foid-mean</loc><lastmod>2026-08-27</lastmod></url>
 <url><loc>https://foidslop.com/editorial-standards</loc><lastmod>2026-08-27</lastmod></url>
@@ -15,9 +15,9 @@
 <url><loc>https://foidslop.com/high-protein-meals-for-one</loc><lastmod>2026-08-27</lastmod><image:image><image:loc>https://foidslop.com/slop/social/baked-eggs-avocado-wide.jpg</image:loc><image:title>High-Protein Meals for One</image:title></image:image></url>
 <url><loc>https://foidslop.com/recipes/quick</loc><lastmod>2026-10-18</lastmod><image:image><image:loc>https://foidslop.com/slop/social/cheddar-chive-biscuits-wide.jpg</image:loc><image:title>Quick Recipes for One</image:title></image:image></url>
 <url><loc>https://foidslop.com/recipes/no-cook</loc><lastmod>2026-10-19</lastmod><image:image><image:loc>https://foidslop.com/slop/social/tuna-olive-tapenade-toast-wide.jpg</image:loc><image:title>No-Cook Recipes for One</image:title></image:image></url>
-<url><loc>https://foidslop.com/recipes/for-one</loc><lastmod>2026-10-19</lastmod><image:image><image:loc>https://foidslop.com/slop/social/tuna-olive-tapenade-toast-wide.jpg</image:loc><image:title>Easy Dinner Ideas for One</image:title></image:image></url>
-<url><loc>https://foidslop.com/recipes/vegetarian</loc><lastmod>2026-10-12</lastmod><image:image><image:loc>https://foidslop.com/slop/social/hummus-roasted-red-pepper-wrap-wide.jpg</image:loc><image:title>Vegetarian Recipes for One</image:title></image:image></url>
-<url><loc>https://foidslop.com/recipes/pasta</loc><lastmod>2026-10-06</lastmod><image:image><image:loc>https://foidslop.com/slop/social/tuna-olive-pasta-wide.jpg</image:loc><image:title>Easy Pasta Recipes for One</image:title></image:image></url>
+<url><loc>https://foidslop.com/recipes/for-one</loc><lastmod>2026-10-20</lastmod><image:image><image:loc>https://foidslop.com/slop/social/burrata-tomato-pasta-wide.jpg</image:loc><image:title>Easy Dinner Ideas for One</image:title></image:image></url>
+<url><loc>https://foidslop.com/recipes/vegetarian</loc><lastmod>2026-10-20</lastmod><image:image><image:loc>https://foidslop.com/slop/social/burrata-tomato-pasta-wide.jpg</image:loc><image:title>Vegetarian Recipes for One</image:title></image:image></url>
+<url><loc>https://foidslop.com/recipes/pasta</loc><lastmod>2026-10-20</lastmod><image:image><image:loc>https://foidslop.com/slop/social/burrata-tomato-pasta-wide.jpg</image:loc><image:title>Easy Pasta Recipes for One</image:title></image:image></url>
 <url><loc>https://foidslop.com/recipes/toast</loc><lastmod>2026-10-19</lastmod><image:image><image:loc>https://foidslop.com/slop/social/tuna-olive-tapenade-toast-wide.jpg</image:loc><image:title>Toast Recipes for One</image:title></image:image></url>
 <url><loc>https://foidslop.com/recipes/snack-plates</loc><lastmod>2026-10-15</lastmod><image:image><image:loc>https://foidslop.com/slop/social/cheese-crackers-apple-wide.jpg</image:loc><image:title>Snack Plate Ideas for One</image:title></image:image></url>
 <url><loc>https://foidslop.com/recipes/comfort-food</loc><lastmod>2026-10-18</lastmod><image:image><image:loc>https://foidslop.com/slop/social/cheddar-chive-biscuits-wide.jpg</image:loc><image:title>Comfort Food Recipes for One</image:title></image:image></url>
@@ -194,6 +194,7 @@
 <url><loc>https://foidslop.com/slop/smoked-salmon-cream-cheese-bagel</loc><lastmod>2026-10-17</lastmod><image:image><image:loc>https://foidslop.com/slop/img/smoked-salmon-cream-cheese-bagel.png</image:loc><image:title>Smoked Salmon and Cream Cheese Bagel</image:title></image:image></url>
 <url><loc>https://foidslop.com/slop/cheddar-chive-biscuits</loc><lastmod>2026-10-18</lastmod><image:image><image:loc>https://foidslop.com/slop/img/cheddar-chive-biscuits.png</image:loc><image:title>Cheddar and Chive Biscuits</image:title></image:image></url>
 <url><loc>https://foidslop.com/slop/tuna-olive-tapenade-toast</loc><lastmod>2026-10-19</lastmod><image:image><image:loc>https://foidslop.com/slop/img/tuna-olive-tapenade-toast.png</image:loc><image:title>Tuna and Olive Tapenade Toast</image:title></image:image></url>
+<url><loc>https://foidslop.com/slop/burrata-tomato-pasta</loc><lastmod>2026-10-20</lastmod><image:image><image:loc>https://foidslop.com/slop/img/burrata-tomato-pasta.png</image:loc><image:title>Burrata and Tomato Pasta</image:title></image:image></url>
 <url><loc>https://foidslop.com/culture</loc><lastmod>2026-09-09</lastmod></url>
 <url><loc>https://foidslop.com/culture/lindsay-clancy-mistrial</loc><lastmod>2026-09-09</lastmod></url>
 <url><loc>https://foidslop.com/culture/foidslop-media</loc><lastmod>2026-09-09</lastmod></url>
@@ -220,8 +221,8 @@
 <url><loc>https://foidslop.com/dictionary/wifechow</loc><lastmod>2026-09-06</lastmod></url>
 <url><loc>https://foidslop.com/dictionary/girl-breakfast</loc><lastmod>2026-09-06</lastmod></url>
 <url><loc>https://foidslop.com/dictionary/content-slop</loc><lastmod>2026-09-06</lastmod></url>
-<url><loc>https://foidslop.com/culture/is-it-foidslop</loc><lastmod>2026-10-19</lastmod></url>
-<url><loc>https://foidslop.com/culture/username-generator</loc><lastmod>2026-10-19</lastmod></url>
-<url><loc>https://foidslop.com/culture/slop-taxonomy</loc><lastmod>2026-10-19</lastmod></url>
-<url><loc>https://foidslop.com/about</loc><lastmod>2026-10-19</lastmod></url>
+<url><loc>https://foidslop.com/culture/is-it-foidslop</loc><lastmod>2026-10-20</lastmod></url>
+<url><loc>https://foidslop.com/culture/username-generator</loc><lastmod>2026-10-20</lastmod></url>
+<url><loc>https://foidslop.com/culture/slop-taxonomy</loc><lastmod>2026-10-20</lastmod></url>
+<url><loc>https://foidslop.com/about</loc><lastmod>2026-10-20</lastmod></url>
 </urlset>

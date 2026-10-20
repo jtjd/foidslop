@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-19T00:00:00.000Z",
+  "generated": "2026-10-20T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -10945,11 +10945,12 @@
       "notes": "The heat from the pasta will soften the burrata, creating a rich sauce.",
       "photo_search": "bowl of pasta with burst tomatoes and a ball of creamy burrata on top",
       "publishDate": "2026-10-20",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of bowl of pasta with burst tomatoes and a ball of creamy burrata on top",
       "seoTitle": "Burrata and Tomato Pasta Recipe for One | foidslop",
       "seoDescription": "Hot pasta tossed with burst tomatoes, topped with a ball of creamy burrata. Cherry tomatoes and fresh burrata make this pasta recipe for one in 20 minutes.",
-      "substitutions": "Sauce components swap freely: if cherry tomatoes is out, any bold condiment thinned with pasta water (pesto, tapenade, chilli crisp) leads the bowl instead. For burrata and tomato pasta, make the swap in the same one-person portion and taste before adding more seasoning."
+      "substitutions": "Sauce components swap freely: if cherry tomatoes is out, any bold condiment thinned with pasta water (pesto, tapenade, chilli crisp) leads the bowl instead. For burrata and tomato pasta, make the swap in the same one-person portion and taste before adding more seasoning.",
+      "dateModified": "2026-10-20"
     },
     {
       "id": 174,
