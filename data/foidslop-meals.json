@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-20T00:00:00.000Z",
+  "generated": "2026-10-21T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -10999,10 +10999,11 @@
       "notes": "Use the best tomatoes you can find. This is all about simple, fresh ingredients.",
       "photo_search": "plate of cottage cheese with sliced tomatoes, olive oil, and oregano",
       "publishDate": "2026-10-21",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of plate of cottage cheese with sliced tomatoes, olive oil, and oregano",
       "seoTitle": "Cottage Cheese and Tomato Plate Recipe for One | foidslop",
-      "seoDescription": "Cool cottage cheese, juicy tomato slices, olive oil, and oregano make a simple plate that depends on good produce."
+      "seoDescription": "Cool cottage cheese, juicy tomato slices, olive oil, and oregano make a simple plate that depends on good produce.",
+      "dateModified": "2026-10-21"
     },
     {
       "id": 175,
