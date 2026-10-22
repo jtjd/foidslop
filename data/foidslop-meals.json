@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-21T00:00:00.000Z",
+  "generated": "2026-10-22T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -11056,10 +11056,11 @@
       "notes": "Use a ripe but firm banana so the slices hold their shape on the warm toast. Flaky salt is also good here.",
       "photo_search": "toasted whole wheat bread with peanut butter, banana slices, and honey",
       "publishDate": "2026-10-22",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of toasted whole wheat bread with peanut butter, banana slices, and honey",
       "seoTitle": "Peanut Butter and Banana Toast Recipe for One | foidslop",
-      "seoDescription": "Crisp toast with peanut butter, banana, honey, and cinnamon is simple, warm, and ready in five minutes."
+      "seoDescription": "Crisp toast with peanut butter, banana, honey, and cinnamon is simple, warm, and ready in five minutes.",
+      "dateModified": "2026-10-22"
     },
     {
       "id": 176,
