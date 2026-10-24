@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-23T00:00:00.000Z",
+  "generated": "2026-10-24T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -11175,11 +11175,12 @@
       "notes": "Make sure to drain any excess liquid from the filling so the quesadilla does not get soggy.",
       "photo_search": "golden quesadilla cut open to reveal mushrooms, spinach, and melted cheese",
       "publishDate": "2026-10-24",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of golden quesadilla cut open to reveal mushrooms, spinach, and melted cheese",
       "seoTitle": "Mushroom and Spinach Quesadilla Recipe for One | foidslop",
       "seoDescription": "A vegetarian quesadilla filled with earthy mushrooms, spinach, and cheese. Made for one in 15 minutes, with mushrooms and baby spinach.",
-      "storage": "Refrigerate leftovers covered for up to three days. Reheat gently until hot throughout, adding a splash of water if mushrooms or the sauce looks dry. For mushroom and spinach quesadilla, keep the named finish separate until serving."
+      "storage": "Refrigerate leftovers covered for up to three days. Reheat gently until hot throughout, adding a splash of water if mushrooms or the sauce looks dry. For mushroom and spinach quesadilla, keep the named finish separate until serving.",
+      "dateModified": "2026-10-24"
     },
     {
       "id": 178,
