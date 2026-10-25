@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-24T00:00:00.000Z",
+  "generated": "2026-10-25T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -11229,10 +11229,11 @@
       "notes": "Invest in good quality sardines. They are a completely different experience than cheap ones.",
       "photo_search": "plate of tinned sardines with lemon wedges and rustic crackers",
       "publishDate": "2026-10-25",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of plate of tinned sardines with lemon wedges and rustic crackers",
       "seoTitle": "Tinned Sardines with Lemon and Crackers | foidslop",
-      "seoDescription": "High quality sardines served with lemon wedges and crisp crackers. A snack plate recipe for one, ready in 2 minutes with quality sardines."
+      "seoDescription": "High quality sardines served with lemon wedges and crisp crackers. A snack plate recipe for one, ready in 2 minutes with quality sardines.",
+      "dateModified": "2026-10-25"
     },
     {
       "id": 179,
