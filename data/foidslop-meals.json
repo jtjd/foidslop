@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-25T00:00:00.000Z",
+  "generated": "2026-10-26T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -11294,10 +11294,11 @@
       "notes": "The runny yolk mixing with the avocado is the best part.",
       "photo_search": "sourdough toast with avocado and fried eggs with runny yolks",
       "publishDate": "2026-10-26",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of sourdough toast with avocado and fried eggs with runny yolks",
       "seoTitle": "Avocado and Egg Toast Recipe for One | foidslop",
-      "seoDescription": "Mashed avocado, lemon, and chilli flakes top crisp sourdough beneath fried eggs with set whites and soft yolks."
+      "seoDescription": "Mashed avocado, lemon, and chilli flakes top crisp sourdough beneath fried eggs with set whites and soft yolks.",
+      "dateModified": "2026-10-26"
     },
     {
       "id": 180,
