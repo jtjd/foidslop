@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-26T00:00:00.000Z",
+  "generated": "2026-10-27T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -11351,10 +11351,11 @@
       "notes": "These are perfect for eating while standing in the kitchen.",
       "photo_search": "small skewers with mozzarella balls, cherry tomatoes, and basil",
       "publishDate": "2026-10-27",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of small skewers with mozzarella balls, cherry tomatoes, and basil",
       "seoTitle": "Mozzarella and Tomato Skewers Recipe for One | foidslop",
-      "seoDescription": "Fresh mozzarella, cherry tomatoes, and basil turn caprese salad into skewers finished with olive oil and balsamic."
+      "seoDescription": "Fresh mozzarella, cherry tomatoes, and basil turn caprese salad into skewers finished with olive oil and balsamic.",
+      "dateModified": "2026-10-27"
     },
     {
       "id": 181,
