@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-27T00:00:00.000Z",
+  "generated": "2026-10-28T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -11416,10 +11416,11 @@
       "notes": "The heat from the potato will melt the cheese perfectly.",
       "photo_search": "baked potato split open and loaded with broccoli, cheddar, and sour cream",
       "publishDate": "2026-10-28",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of baked potato split open and loaded with broccoli, cheddar, and sour cream",
       "seoTitle": "Cheddar and Broccoli Baked Potato Recipe for One | foidslop",
-      "seoDescription": "A classic baked potato loaded with steamed broccoli and melted cheddar. A main recipe for one, ready in 55 minutes with russet potato."
+      "seoDescription": "A classic baked potato loaded with steamed broccoli and melted cheddar. A main recipe for one, ready in 55 minutes with russet potato.",
+      "dateModified": "2026-10-28"
     },
     {
       "id": 182,
