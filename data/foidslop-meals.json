@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-28T00:00:00.000Z",
+  "generated": "2026-10-29T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -11473,12 +11473,13 @@
       "notes": "Using a panini press is ideal, but a heavy pan works fine.",
       "photo_search": "golden pressed panini with melted mozzarella, pesto, and tomatoes",
       "publishDate": "2026-10-29",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of golden pressed panini with melted mozzarella, pesto, and tomatoes",
       "seoTitle": "Pesto and Mozzarella Panini Recipe for One | foidslop",
       "seoDescription": "A warm, pressed sandwich with pesto, fresh mozzarella, and tomatoes. Crusty bread and basil pesto make this main recipe for one in 8 minutes.",
       "substitutions": "No crusty bread? Choose a filling with a similar texture, keep the same seasoning, and adjust the cooking time to its own doneness cues rather than the clock. For pesto and mozzarella panini, make the swap in the same one-person portion and taste before adding more seasoning.",
-      "storage": "Save leftovers in a sealed container for up to three days. Reheat slowly and finish with crusty bread at the table rather than cooking the fresh element twice. For pesto and mozzarella panini, keep the named finish separate until serving."
+      "storage": "Save leftovers in a sealed container for up to three days. Reheat slowly and finish with crusty bread at the table rather than cooking the fresh element twice. For pesto and mozzarella panini, keep the named finish separate until serving.",
+      "dateModified": "2026-10-29"
     },
     {
       "id": 183,
