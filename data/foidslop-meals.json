@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-29T00:00:00.000Z",
+  "generated": "2026-10-30T00:00:00.000Z",
   "count": 300,
   "about": "300 low-effort, single-serving recipe ideas published daily by foidslop.",
   "meals": [
@@ -11524,11 +11524,12 @@
       "notes": "This is a retro diet classic for a reason. It is refreshing and satisfying.",
       "photo_search": "bowl of cottage cheese with pineapple chunks and honey",
       "publishDate": "2026-10-30",
-      "status": "scheduled",
+      "status": "published",
       "imageAlt": "Photograph of bowl of cottage cheese with pineapple chunks and honey",
       "seoTitle": "Cottage Cheese and Pineapple Bowl Recipe for One | foidslop",
       "seoDescription": "Cottage cheese with pineapple, honey, and coconut makes a cool, creamy bowl with a little retro charm.",
-      "substitutions": "This bowl survives substitutions well. Trade full fat cottage cheese for tofu, a fried egg, or last night's vegetables and keep the sauce constant. For cottage cheese and pineapple bowl, make the swap in the same one-person portion and taste before adding more seasoning."
+      "substitutions": "This bowl survives substitutions well. Trade full fat cottage cheese for tofu, a fried egg, or last night's vegetables and keep the sauce constant. For cottage cheese and pineapple bowl, make the swap in the same one-person portion and taste before adding more seasoning.",
+      "dateModified": "2026-10-30"
     },
     {
       "id": 184,
